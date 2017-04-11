@@ -87,5 +87,11 @@
 			<mvc:exclude-mapping path="/mgr/recover/**" />
 			<bean class="com.panfeng.web.wearable.filter.ManagerInterceptor" />
 		</mvc:interceptor>
+		
+		<mvc:interceptor>
+			<mvc:mapping path="/product/order/loadWithTeamName"/>
+			<mvc:mapping path="/product/loadProduct"/>
+			<bean class="com.panfeng.web.wearable.intercepter.SearchResourceInterceptor" />
+		</mvc:interceptor>
 	</mvc:interceptors>
 </beans>

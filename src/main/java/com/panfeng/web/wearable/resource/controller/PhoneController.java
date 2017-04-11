@@ -7,18 +7,17 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.paipianwang.pat.common.config.PublicConfig;
 import com.paipianwang.pat.common.constant.PmsConstant;
 import com.paipianwang.pat.common.entity.SessionInfo;
 import com.paipianwang.pat.facade.user.entity.PmsUser;
-import com.panfeng.web.wearable.util.HttpUtil;
-import com.panfeng.web.wearable.util.JsonUtil;
+import com.paipianwang.pat.facade.user.service.PmsUserFacade;
 
 @RestController
 @RequestMapping("/phone")
@@ -27,6 +26,9 @@ public class PhoneController extends BaseController {
 	final Logger serLogger = LoggerFactory.getLogger("service"); // service log
 
 	final Logger logger = LoggerFactory.getLogger("error");
+	
+	@Autowired
+	private final PmsUserFacade pmsUserFacade = null;
 
 	/**
 	 * 活动页面 下单
@@ -75,17 +77,11 @@ public class PhoneController extends BaseController {
 		SessionInfo sessionInfo = getCurrentInfo(request);
 		String userType = sessionInfo.getSessionType();
 		long id = sessionInfo.getReqiureId();
-		final String url;
 		switch (userType) {
 		case PmsConstant.ROLE_CUSTOMER:
-			url = PublicConfig.URL_PREFIX + "/portal/user/info/" + id;
-			String json = HttpUtil.httpGet(url, request);
-			if (json != null && !"".equals(json)) {
-				PmsUser user = JsonUtil.toBean(json, PmsUser.class);
-				modelMap.put("userinfo", user);
-				return new ModelAndView("/customer/customerInfo", modelMap);
-			}
-			break;
+			final PmsUser user = pmsUserFacade.findUserById(id);
+			modelMap.put("userinfo", user);
+			return new ModelAndView("/customer/customerInfo", modelMap);
 		case PmsConstant.ROLE_EMPLOYEE:
 			return null;
 		case PmsConstant.ROLE_PROVIDER:
