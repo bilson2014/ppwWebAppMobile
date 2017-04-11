@@ -1,0 +1,288 @@
+var InterValObj; // timer变量，控制时间  
+var count = 60; // 间隔函数，1秒执行  
+var curCount; // 当前剩余秒数 
+var swiper;
+var reSet = false;
+var indentId = 0;
+$().ready(function() {
+
+	 init();
+	 controlActive();
+	 getVerificationCode();
+	 controlCost();
+	// submit();
+
+});
+
+function controlCost(){
+	$('.start').off('click').on('click',function(){
+		$('#step1').hide();
+		$('#step2').show();
+	 	setTimeout(function() {
+		 		$('#bar').addClass('proWidth'); 
+			}, 500);
+	 	
+	 	setTimeout(function() {
+			$('#step2').hide();
+			$('#step3').show();
+		}, 3000);
+	});
+	
+//	$('#step1').hide();
+//	$('#step2').show();
+// 	setTimeout(function() {
+//	 		$('#bar').addClass('proWidth'); 
+//		}, 500);
+// 	
+// 	setTimeout(function() {
+//		$('#step2').hide();
+//		$('#step3').show();
+//	}, 3000);
+
+}
+
+
+function init() {
+
+	 var swiper = new Swiper('.swiper-container', {
+	        pagination: '.swiper-pagination',
+	        slidesPerView: 'auto',
+	        paginationClickable: true,
+	        spaceBetween:0,
+	        onSlideNextEnd: function(swiper){
+	        	var index = swiper.activeIndex;
+	        	console.info(index);
+	        	switch (index){
+	        	case 1:
+	        		initStep1(swiper);
+	        		break;
+	        	case 2:
+	        		initStep2(swiper);
+	        		break;
+	        	case 3:
+	        		initStep3(swiper);
+	        		break;
+	        	case 4:
+	        		initStep4(swiper);
+	        		break;
+	        	case 5:
+	        		initStep5(swiper);
+	        		break;
+
+	        	}
+	        	
+	        }
+//	        onSlideChangeEnd: function(swiper) {
+//	            var number = swiper.activeIndex; //每次切换时，提示现在是第几个slide
+//	            var url = 'url(/resources/images/index/back'+number+'.jpg) no-repeat'
+//                $('.swiper-container').css('background',url);
+//	            $('.swiper-container').css('background-size','100% 100%');
+//	            if(number >5){
+//	            	$('.swiper-container').addClass('showOp');
+//	            	$('.costResult').show();
+//	            }
+//	            console.info(number);
+//	            
+//	        },
+	    });
+	 
+	 $('.reCost').on('click',function(){
+		 swiper.slideTo(0, 1000, false);//切换到第一个slide，速度为1秒
+		 $('#step1').show();
+		 $('#step2').hide();
+		 $('#step3').hide();
+	 });
+	
+}
+
+function controlActive(){
+	
+	$('.tags1').off('click').on('click',function(){
+		$('.tags1').removeClass('type');
+		$(this).addClass('type');
+	});
+	
+	$('.tags2').off('click').on('click',function(){
+		$('.tags2').removeClass('team');
+		$(this).addClass('team');
+	});
+	
+	$('.tags3').off('click').on('click',function(){
+		$('.tags3').removeClass('equipment');
+		$(this).addClass('equipment');
+	});
+	
+	$('.tags4').off('click').on('click',function(){
+		$('.tags4').removeClass('actor');
+		$(this).addClass('actor');
+	});
+	
+	$('.tags5').off('click').on('click',function(){
+		$('.tags5').removeClass('animation');
+		$(this).addClass('animation');
+	});
+	
+	$('.closeInfo').off('click').on('click',function(){
+		$('#noInfo').hide();
+	});
+	
+
+		
+}
+
+function initStep1(swiper){
+	if($('.tags1').hasClass('type')){
+	}else{
+		$('#noInfo').show();
+		swiper.slidePrev();
+	}
+}
+function initStep2(swiper){
+	if($('.tags2').hasClass('team')){
+	}else{
+		$('#noInfo').show();
+		swiper.slidePrev();
+	}
+}
+function initStep3(swiper){
+	if($('.tags3').hasClass('equipment')){
+	}else{
+		$('#noInfo').show();
+		swiper.slidePrev();
+	}
+}
+function initStep4(swiper){
+	if($('.tags4').hasClass('actor')){
+	}else{
+		$('#noInfo').show();
+		swiper.slidePrev();
+	}
+}
+function initStep5(swiper){
+	if($('.tags5').hasClass('animation')){
+	}else{
+		$('#noInfo').show();
+		swiper.slidePrev();
+	}
+}
+
+function checkData(){
+	var phone = $('#phone').val();
+	var code = $('#phoneCode').val();
+	var phoneError = $('#phoneError');
+	var codeError = $('#codeError');
+	var indentId = $('#phone').attr('data-content');
+	if(phone == null || phone == '' || phone == undefined){
+		$('#phone').addClass('errorPhone');
+		phoneError.text('请输入手机号');
+		phoneError.show();
+		return false;
+	}
+	if (!checkMobile(phone)) {
+		$('#phone').addClass('errorPhone');
+		phoneError.text('手机格式不正确');
+		phoneError.show();
+		return false;
+	}
+	if( indentId == 0 ){//只有第一次计算需要验证码
+		if(code == null || code == '' || code == undefined){
+			$('#phoneCode').addClass('errorPhone');
+			codeError.text('请填写验证码');
+			codeError.show();
+			return false;
+		}
+	}
+	
+	return true;
+}
+
+//点击获取手机验证码
+function getVerificationCode(){
+	// 点击获取手机验证码发送按钮
+	$('#checkCode').off('click').on('click',function(){
+		curCount = count;
+		var phone = $('#phone').val();
+		var code = $('#phoneCode').val();
+		var phoneError = $('#phoneError');
+		var codeError = $('#codeError');
+		if(phone == null || phone == '' || phone == undefined){
+			$('#phone').addClass('errorPhone');
+			phoneError.text('请输入手机号');
+			phoneError.show();
+			return false;
+		}
+		if (!checkMobile(phone)) {
+			$('#phone').addClass('errorPhone');
+			phoneError.text('手机格式不正确');
+			phoneError.show();
+			return false;
+		}
+		$('#checkCode').text('已发送('+ curCount +')');
+		$('#checkCode').attr('disabled','disabled');
+		InterValObj = window.setInterval(setRemainTime, 1000); // 启动计时器，1秒钟执行一次
+		loadData(function(flag){
+			if(!flag){
+				window.clearInterval(InterValObj);
+				$('#checkCode').text('重新获取');
+				$('#checkCode').removeAttr('disabled');
+			}
+		}, getContextPath() + '/login/verification/' + $('#phone').val().trim(), null);
+	});
+}
+
+function submit() {
+	$('.start').off("click").on('click', function() {
+		if(checkData()){
+			var videoType = $('.type').text();
+			var team = $('.team').text();
+			var equipment = $('.equipment').text();
+			var actor = $('.actor').text();
+			var animation = $('.animation').text();
+			var indentId = $('#phone').attr('data-content');
+			var description = [ "视频类别:" + videoType,",导演团队:" + team,
+					",拍摄设备:" + equipment, ",演员:" + actor, ",动画:" + animation ].join("");
+			var phone = $('#phone').val();
+			var verification_code = $('#phoneCode').val();
+			
+			loadData(function(result) {
+					if(result.code == 1){
+						$('#price').text(thousandCount(result.cost));
+						$('#phone').attr('data-content', result.indentId);
+						controlCost();
+					}else if(result.code == 0 && result.msg == '手机号不匹配'){
+						$('#errorPhone').text('手机号不匹配');
+						$('#errorPhone').show();
+					}else{
+						$('#errorCode').text(result.msg);
+						$('#errorCode').show();
+					}
+				}, getContextPath() + '/calculate/cost', $.toJSON({
+					videoType : $('.type').attr('data-content'),
+					team : $('.team').attr('data-content'),
+					equipment : $('.equipment').attr('data-content'),
+					actor : $('.actor').attr('data-content'),
+					animation : $('.animation').attr('data-content'),
+					phone : phone,
+					indentId : indentId,
+					description : description,
+					verification_code:verification_code
+				}));
+		}
+	});
+}
+
+//timer 处理函数 - 注册
+function setRemainTime(){
+	if(curCount == 0){
+		window.clearInterval(InterValObj); // 停止计时器
+		$('#checkCode').text('重新获取');
+		$('#checkCode').removeAttr('disabled')
+		// 清除session code
+		getData(function(data){
+			// 清除session code
+		}, getContextPath() + '/login/clear/code');
+	}else{
+		curCount--;  
+		$("#checkCode").text('已发送('+ curCount +')');
+	}
+}

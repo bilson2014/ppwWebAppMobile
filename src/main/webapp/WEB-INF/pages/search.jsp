@@ -6,7 +6,7 @@
 <%@ taglib prefix="r" uri="/mytaglib"%>
 <%@ page import="java.lang.Integer"%>
 <%@ page import="java.util.List"%>
-<%@ page import="com.paipianwang.pat.facade.information.entity.PmsProductSolr"%>
+<%-- <%@ page import="com.panfeng.film.resource.model.Solr"%> --%>
 
 <%-- import CSS --%>
 <spring:url value="/resources/lib/Bootstrap/css/bootstrap.min.css"
@@ -26,6 +26,7 @@
 <spring:url value="/resources/js/imgLazyLoad.js" var="imgLazyLoadingJs" />
 <spring:url value="/resources/js/common.js" var="commonJs" />
 <spring:url value="/resources/js/search.js" var="searchJs" />
+<spring:url value="/resources/js/remSet.js" var="remSetJs" />
 
 <!-- imgPath -->
 <spring:url value="/resources/images" var="imgPath" />
@@ -55,131 +56,122 @@
 <!--[if lt IE 9]>
 		<script>window.html5 || document.write('<script src="html5shivJs"><\/script>')</script>
 	<![endif]-->
-<script src="${jqueryJs }"></script>
+<%-- 
 <script src="${imgLazyLoadingJs }"></script>
 <script src="${pluginJs }"></script>
 <script src="${jsonJs }"></script>
 <script src="${mmenuJs }"></script>
 <script src="${commonJs }"></script>
-<script src="${searchJs }"></script>
+ --%>
 </head>
 <body>
+
+
 	<input type="hidden" id="storage_node" value="${file_locate_storage_path }" />
-	<div class="wrap" style="overflow: auto">
-		<div class="header">
-			<!-- logo -->
-			<dl class="header-ul">
-				<dd>
-					<a href="javascript:history.back(-1);">
-						<div class="back"></div>
-					</a>
-				</dd>
-				<dd>
-					<a href="/" target="_self">
-						<div class="logo"></div>
-					</a>
-				</dd>
-			</dl>
-		</div>
-
-		<div class="content-wrap">
-			<input type="hidden" id="q" value="${q }" /> <input type="hidden"
-				id="sequence" value="${sequence }" /> <input type="hidden"
-				id="sortord" value="${sortord }" /> <input type="hidden" id="item"
-				value="${item }" />
-			<div class="search-section">
-				<div class="header-search-wrap">
-					<form method="get" action="/search" id="s-form"
-						accept-charset="utf-8">
-						<input type="text" size="16" autocomplete="off" id="search-q"
-							name="q" placeholder="搜索" value="${q }" /> <input type="hidden"
-							id="search-sortord" name="sortord" value="0" /> <input
-							type="hidden" id="search-sequence" name="sequence" value="" /> <input
-							type="hidden" id="item" name="item" value="${item }" /> <a
-							href="javascript:void(0);" class="go bk_gray"
-							onclick="return false;" id="s-btn"></a>
-					</form>
-				</div>
-			</div>
-			<div class="condition-section">
-				<a href="#menu"><label id="filtrate">筛选 <img
-						src="<spring:url value='/resources/images/icons/filtrate-icon.png' />"></label></a><label
-					id="price-lb" data-sortord="${sortord }" data-sequence="price">价格
-					<img id="price-img"
-					src="<spring:url value='/resources/images/icons/unchange-icon.png' />" />
-				</label><label id="length-lb" data-sortord="${sortord }"
-					data-sequence="length">时长 <img id="length-img"
-					src="<spring:url value='/resources/images/icons/unchange-icon.png' />" /></label>
-			</div>
-
-			<div class="video-content">
-				<c:if test="${!empty list}">
-					<!-- not empty -->
-					<c:forEach items="${list }" var="solr" varStatus="status">
-						<div class="contain-row">
-							<a href="<spring:url value='/play/${solr.teamId}_${solr.productId }.html'/>">
-								<div class="video-col">
-									<div class="video-post">
-										<img class="lazy"
-											src="/resources/images/icons/lazyloading1.png"
-											data-original="${file_locate_storage_path }${solr.picLDUrl }"
-											alt="搜索影片_拍片网">
-									</div>
-									<div class="video-desc">
-										<dl>
-											<dt>
-												<h2>${solr.productName }</h2>
-											</dt>
-											<dd>${solr.pDescription }</dd>
-											<dt>
-												<c:if test="${solr.price < solr.orignalPrice}">
-													<label>￥</label>
-													<fmt:formatNumber value="${solr.price }" pattern="#,#00" />元<label
-														class="doraction"><fmt:formatNumber
-															value="${solr.orignalPrice }" pattern="#,#00" /></label>
-												</c:if>
-												<c:if test="${solr.price >= solr.orignalPrice}">
-													<label>￥</label>
-													<fmt:formatNumber value="${solr.price }" pattern="#,#00" />元
-												</c:if>
-											</dt>
-											<dd>
-												<a href="<spring:url value='/play/${solr.teamId}_${solr.productId }.html'/>"><div
-														class="detail-btn">查看详情</div></a>
-											</dd>
-										</dl>
-									</div>
-								</div>
-							</a>
-						</div>
-					</c:forEach>
-				</c:if>
-				<c:if test="${empty list}">
-					<div class="empty-content">
-						<img alt="未搜索到想要的结果_拍片网" src="${imgPath }/icons/not-found.png">
-						<p>抱歉未搜索到您想要的结果</p>
-					</div>
-				</c:if>
-				<r:noLogin>
-					<div class="bottomDiv">
-						请<a href="<spring:url value='/login' />"> 登陆 </a>拍片网，观看更多作品!
-					</div>
-				</r:noLogin>
-				<r:noLevel>
-					<div class="bottomDiv">
-						如需观看更多作品<br>请拨打 400 660 9728 与我们取得联系!
-					</div>
-				</r:noLevel>
-
-				<r:noIdentification>
-					<div class="bottomDiv">待审核通过，可观看更多作品!</div>
-				</r:noIdentification>
-			</div>
-		</div>
+	<div class="phoneHeader">
+	     <a id="openMenu"><img src="${imgPath }/index/toMenu.png"></a>
+	     <a href="/searchview">  
+		  <img  src="${imgPath}/index/toSearch.png">
+		 </a> 
+	     <img class="searchType" src="${imgPath }/index/searchBox.png">
+	     <div>精品案例</div>
 	</div>
-
-	<nav id="menu">
-		<ul id="menu-ul"></ul>
-	</nav>
+	
+	 <jsp:include flush="true" page="menu.jsp"></jsp:include> 
+	
+	<div class="pagePhone">
+	
+    <c:if test="${!empty list}">
+					<!-- not empty -->
+	    <c:forEach items="${list }" var="solr" varStatus="status">
+		   <div class="contentItem" style="background:url(${file_locate_storage_path }${solr.picLDUrl }) no-repeat">
+		                     <div class="itemTitle">${solr.productName}</div>
+		                     <div class="itemTag">${solr.tags}</div>
+		   </div>
+	    </c:forEach>
+	</c:if>
+		    
+    <jsp:include flush="true" page="foot.jsp"></jsp:include> 
+		  
+	</div>
+	
+	<div class="searchBox searchInit">
+	    <div class="searchItem">
+		     <div class="typeTitle" id="typeTags">
+		        <div>类型 :</div>
+		        <img id="qType" src="${imgPath }/index/flow.png">
+		     </div>
+		     <div class="itemTags">
+		        <div class="tags">的十大</div>
+		        <div class="tags">的十大</div>
+		        <div class="tags">的十大</div>
+		        <div class="tags">的十大</div>
+		        <div class="tags">的十大</div>
+		        <div class="tags">的十大</div>
+		    </div>    
+		       
+		     <div class="itemTags noShow" id="typeTagsShow">
+		        <div class="tags">的十大</div>
+		        <div class="tags">的十大</div>
+		        <div class="tags">的十大</div>
+		        <div class="tags">的十大</div>
+		        <div class="tags">的十大</div>
+		        <div class="tags">的十大</div>
+		    </div>   
+	     </div>
+	     
+	     <div class="searchItem">
+		     <div class="typeTitle" id="workTags">
+		        <div>行业 :</div>
+		        <img src="${imgPath }/index/flow.png" id="wType">
+		     </div>
+		     <div class="itemTags">
+		        <div class="tags" >的十大</div>
+		        <div class="tags" >的十大</div>
+		        <div class="tags" >的十大</div>
+		        <div class="tags" >的十大</div>
+		        <div class="tags" >的十大</div>
+		        <div class="tags" >的十大</div>
+		     </div>
+		     <div class="itemTags noShow" id="workTagsShow">
+		        <div class="tags">的十大</div>
+		        <div class="tags">的十大</div>
+		        <div class="tags">的十大</div>
+		        <div class="tags">的十大</div>
+		        <div class="tags">的十大</div>
+		        <div class="tags">的十大</div>
+		    </div>
+	     </div>
+	     
+	     <div class="searchItem noborder">
+		     <div class="typeTitle">
+		        <div>价格区间(元) :</div>
+		     </div>
+		     <div class="priceTags">
+		           <div class="priceRate">
+		               <input placeholder="最低价"  id="lowPrice" >最低价</input>
+		               <div>  -  </div>
+		               <input placeholder="最高价" id="heightPrice">最高价</input>
+		           </div>
+		           <div class="price">
+		               <div data-low="0" data-content="30000" class="tagsPrice">0 ~ 3万</div>
+		               <div data-low="30000" data-content="60000" class="tagsPrice">3 ~ 6万 </div>
+		               <div data-low="60000" data-content="100000" class="tagsPrice">6 ~ 10万</div>
+		               <div data-low="100000" class="tagsPrice">10万以上</div>
+		           </div>
+		     </div>
+	     </div>
+	</div>
+	
+	     <div class="checkBtn" id="checkBtn">
+	        <div id="cancle">取消</div>
+	        <div>完成</div>
+	     </div>
+	
+	
+	<script src="${jqueryJs}"></script>
+	<script src="${remSetJs}"></script>
+	<script src="${searchJs}"></script>
+    <script src="${commonJs}"></script>
 </body>
 </html>

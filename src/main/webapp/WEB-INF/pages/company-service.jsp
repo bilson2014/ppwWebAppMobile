@@ -1,7 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8"%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
+<%-- <%@ page import="com.panfeng.film.resource.model.User"%> --%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
-<%@ page import="com.paipianwang.pat.facade.user.entity.PmsUser"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="r" uri="/mytaglib" %>
 <%-- import CSS --%>

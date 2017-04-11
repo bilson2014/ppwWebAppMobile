@@ -1,6 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8"%>
-<%@ page import="com.paipianwang.pat.facade.user.entity.PmsUser"%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+<%-- <%@ page import="com.panfeng.film.resource.model.User"%> --%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="r" uri="/mytaglib"%>
@@ -28,7 +28,7 @@
 <spring:url value="/resources/js/imgLazyLoad.js" var="imgLazyLoadingJs" />
 <spring:url value="/resources/js/common.js" var="commonJs" />
 <spring:url value="/resources/js/company/member.js" var="memberJs" />
-
+<spring:url value="/resources/js/remSet.js" var="remSetJs" />
 
 
 
@@ -71,6 +71,8 @@
 <script src="${commonJs }"></script>
 <script src="${memberJs}"></script>
 <script src="${mmenuJs }"></script>
+<script src="${remSetJs }"></script>
+
 
 <style>
 html {
@@ -87,39 +89,28 @@ html {
 </head>
 <body>
 <input type="hidden" id="storage_node" value="${file_locate_storage_path }" />
-	<div class="wrap">
-		<div class="header">
-			<!-- logo -->
-			<dl class="header-ul">
-				<dd>
-					<a href="javascript:history.back(-1);">
-						<div class="back"></div>
-					</a>
-				</dd>
-				<dd>
-					<a href="<spring:url value="/"/>" target="_self">
-						<div class="logo"></div>
-					</a>
-				</dd>
-				<dd>
-					<a href="<spring:url value="/searchview"/>" target="_self">
-						<div class="search"></div>
-					</a>
-				</dd>
-			</dl>
-		</div>
 
 
+	<div class="phoneHeader">
+	     <a id="openMenu"><img src="${imgPath }/index/toMenu.png"></a>
+	     <a href="/searchview">  
+		     <img  src="${imgPath}/index/toSearch.png">
+		</a> 
+	     <div>团队介绍</div>
+	</div>
+	
+	 <jsp:include flush="true" page="menu.jsp"></jsp:include> 
 
-
-		<div class="title">关于我们</div>
+	<div class="pagePhone">
+	
+	    <video id="video"  preload="auto" controls="controls" poster="${imgPath }/company/poster.jpg">
+	        <source src="${file_locate_storage_path }group1/M00/00/20/CgqNZViiqe2ANmqIAZ-Ai8Au-R8971.mp4">
+	    </video>
+	
 		<c:if test="${!empty list}">
 			<c:forEach items="${list}" var="staff" varStatus="status">
 				<div class="memberInfo">
-
 					<div class="memberCard open checkOpen" id="${staff.staffId}">
-
-
 						<div class="infoHeadSide contentImg${status.index}">
 							<img class="infoHead lazy" width="79" height="79"
 								alt="${staff.staffName}_拍片网"
@@ -183,118 +174,18 @@ html {
 			<ul>
 				<li>作品如人品</li>
 				<li><a href="<spring:url value='/order-flow.html'/>">
-						<div class="btn-red-common">服务流程</div>
+						<div>加入我们 </div>
 				</a></li>
 			</ul>
 		</div>
-		<div class="topHeaderBottom"></div>
+		
+		<jsp:include flush="true" page="foot.jsp"></jsp:include> 
+		
+		
+	</div>	
 
 
-		<div class="footerBar">
-
-			
 
 
-		<div class="commonDiv">
-			<r:noLogin>
-				<a href="/login" target="_self">
-					<ul>
-						<li>
-							<img src="/resources/images/portal/mySelf.png">
-						</li>
-						<li class="wordLeftRight"
-							style="font-size:12px; text-shadow: none">登录
-						</li>
-					</ul>
-				</a>
-			</r:noLogin>
-			<r:identity role="provider">
-			
-				<a href="<spring:url value='/provider/info_0.html'/>">
-					<ul>
-						<li>
-							<img src="/resources/images/portal/mySelf.png">
-						</li>
-						<li class="wordLeftRight"
-							style="font-size:12px; text-shadow: none">我的</li>
-					</ul>
-				</a>
-			</r:identity>
-			<r:identity role="customer">
-				<a href="/phone/user/index" target="_self">
-					<ul>
-						<li>
-							<img src="/resources/images/portal/mySelf.png">
-						</li>
-						<li class="wordLeftRight"
-							style="font-size:12px; text-shadow: none">我的</li>
-					</ul>
-				</a>
-			</r:identity>
-			<r:identity role="employee">
-				<a href="/login/mgr/loginout" target="_self">
-					<ul>
-						<li>
-							<img src="/resources/images/portal/loginOut.png">
-						</li>
-						<li class="wordLeftRight"
-							style="font-size:12px; text-shadow: none">登出</li>
-					</ul>
-				</a>
-			</r:identity>
-		</div>
-
-
-		<div class="commonDiv">
-
-			<r:identity role="provider">
-				
-				<%-- <a href="<spring:url value='/provider/info_0.html'/>"> --%>
-				<%-- <a href="<spring:url value='/author/${product.teamId}'/>"> --%>
-				<a href="/provider/index" target="_self">
-					<ul>
-						<li><img src="/resources/images/portal/project.png"></li>
-						<li class="wordMid" style="font-size: 12px; text-shadow: none">我的项目</li>
-					</ul>
-				</a>
-			</r:identity>
-
-			<r:identity role="employee">
-				<a href="/mgr/index" target="_self">
-					<ul>
-						<li><img src="/resources/images/portal/project.png"></li>
-						<li class="wordMid" style="font-size: 12px; text-shadow: none">我的项目</li>
-					</ul>
-				</a>
-			</r:identity>
-
-			<r:identity role="customer">
-				<a href="<spring:url value="/direct/order"/>" target="_self">
-					<ul>
-						<li><img src="/resources/images/portal/order.png"></li>
-						<li class="wordMid" style="font-size: 12px; text-shadow: none">我要拍片</li>
-					</ul>
-				</a>
-			</r:identity>
-			<r:noLogin>
-				<a href="<spring:url value="/direct/order"/>" target="_self">
-					<ul>
-						<li><img src="/resources/images/portal/order.png"></li>
-						<li class="wordMid" style="font-size: 12px; text-shadow: none">我要拍片</li>
-					</ul>
-				</a>
-			</r:noLogin>
-		</div>
-
-		<div class="commonDiv">		
-			<a href="<spring:url value="/"/>" target="_self">
-				<ul>
-					<li><img src="/resources/images/portal/portal.png"></li>
-					<li class="wordLeftRight"
-						style="font-size: 12px;text-shadow: none">首页</li>
-				</ul>
-			</a> 
-		</div>
-	</div>
 </body>
 </html>

@@ -1,3 +1,6 @@
+var InterValObj; // timer变量，控制时间  
+var PopInterValObj, oTimer, successIntervalObj;
+
 $().ready(function(){
 	// 弹出电话预约界面
 	$('.common-icons-tele-client').click(function(){
@@ -47,6 +50,9 @@ $().ready(function(){
 			$('#s-form').submit();
 		}
 	});
+	
+	menuInit();
+	
 });
 
 function debug(obj) {
@@ -382,3 +388,52 @@ window._vds = _vds;
     s.parentNode.insertBefore(vds, s);
   })();
 })();
+
+
+function menuInit(){
+	$('#openMenu').off('click').on('click',function(){
+		 $('#menu').show();
+		 setTimeout(function(){
+			 $('#menu').addClass('menuActive'); 
+		 },100)			 
+	 });
+	 
+$('#closeMenu').off('click').on('click',function(){
+		 $('#menu').removeClass('menuActive'); 
+		 setTimeout(function(){
+			 $('#menu').hide();
+		 },1500)			 
+	 });
+
+$('#editInfo').off('click').on('click',function(){
+	 if($('#showMore').hasClass('toShow')){
+		 $('#showMore').slideUp();
+		 $('#showMore').removeClass('toShow');
+	 }else{
+		 $('#showMore').slideDown();
+		 $('#showMore').addClass('toShow');
+	 }
+});
+
+$('#showSafeSet').off('click').on('click',function(){
+	 $('.safeSet').show();
+	 $('#showMore').slideUp();
+});
+
+$('#safeClose').off('click').on('click',function(){
+	 $('.safeSet').hide();
+});
+}
+
+//成功信息 提示框弹出方法
+function successToolTipShow(word) {
+	window.clearInterval(successIntervalObj);
+	$('#errorDiv').text(word);
+	$('#errorDiv').slideDown('normal');
+	successIntervalObj = window.setInterval(hideSuccessTooltip, 3000);
+}
+
+function hideSuccessTooltip() {
+	$('#errorDiv').hide('normal');
+}
+

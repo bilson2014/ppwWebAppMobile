@@ -1,6 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8"%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
-<%@ page import="com.paipianwang.pat.facade.user.entity.PmsUser"%>
+<%-- <%@ page import="com.panfeng.film.resource.model.User"%> --%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="r" uri="/mytaglib" %>
@@ -21,11 +21,7 @@
 <spring:url value="/resources/lib/mMenu/jquery.mmenu.min.js" var="mmenuJs"/>
 <spring:url value="/resources/js/common.js" var="commonJs"/>
 <spring:url value="/resources/js/imgLazyLoad.js" var="imgLazyLoadingJs"/>
-
-
-
-
-
+<spring:url value="/resources/js/remSet.js" var="remSetJs" />
 
 
 <!-- imgPath -->
@@ -56,6 +52,7 @@
 
 	
 	<script src="${jqueryJs }"></script>
+	<script src="${remSetJs }"></script>
 	<script src="${pluginJs }"></script>
 	<script src="${jsonJs }"></script>
 	<script src="${bootstrapJs }"></script>
@@ -77,42 +74,24 @@
 <script type="text/javascript" src="http://player.youku.com/jsapi"></script>
 </head>
 <body>
-<div class="wrap">
-	<div class="header">
-			<!-- logo -->
-			<dl class="header-ul">
-				<dd>
-					<a href="javascript:history.back(-1);">
-						<div class="back"></div>
-					</a>
-				</dd>
-				<dd>
-					<a href="<spring:url value="/"/>" target="_self">
-						<div class="logo"></div>
-					</a>
-				</dd>
-				<dd>
-					<a href="<spring:url value="/searchview"/>" target="_self">
-						<div class="search"></div>
-					</a>
-				</dd>
-			</dl>
-		</div>
-		
-		
+
 
 		
-			<div class="title">
-			             流程步骤
-			</div>
+	<div class="phoneHeader">
+	     <a id="openMenu"><img src="${imgPath }/index/toMenu.png"></a>
+	     <a href="/searchview">  
+		  <img  src="${imgPath}/index/toSearch.png">
+		 </a> 
+	     <div>服务流程</div>
+	</div>
+	
+	<jsp:include flush="true" page="menu.jsp"></jsp:include>
 		
-		
-		
-		
-		<video controls poster="/resources/images/video/portal.jpg">
-		   <source  src="/product/video/paipianwangMovie.mp4"  id="source" type="video/mp4">
+	<div class="pagePhone">
+		<video controls poster="/resources/images/banner/moreInfo.JPG">
+		   <source  src="http://www.apaipian.com/product/video/paipianwangMovie.mp4"  id="source" type="video/mp4">
 		</video>
-		<img src="${imgPath }/company/step1.png">
+<%-- 	<img src="${imgPath }/company/step1.png">
 		<img src="${imgPath }/company/step2.png">
 		<img src="${imgPath }/company/step3.png">
 		<img src="${imgPath }/company/step4.png">
@@ -120,23 +99,17 @@
 		<img src="${imgPath }/company/step6.png">
 		<img src="${imgPath }/company/step7.png">
 		<img src="${imgPath }/company/step8.png">
-		<img src="${imgPath }/company/step9.png">
+		<img src="${imgPath }/company/step9.png"> --%>
+		<img class="stepImg" src="${imgPath }/company/step.png">
 		
-		<div class="topHeader cmd">
-		        <ul>
-		           <li>
-		                                    作品如人品
-		           </li>
-		           <li>
-		           <a href="/member.html#0">
-		              <div class="btn-red-common">团队介绍</div>
-		             </a> 
-		           </li>
-		        </ul>
-		    </div>
+   
+   
+    <jsp:include flush="true" page="foot.jsp"></jsp:include> 
+		     
+	</div>	     
 		
 		
-</div>		
+		
 		
 			 
 		

@@ -1,0 +1,316 @@
+@import "common";
+@import "buttons";
+@import "video";
+@import "model";
+@import "fontSize";
+@import "common_portal";
+@import "compass/typography/text/ellipsis";
+$video-height: 250px; // 视频播放区域高度
+$video-height320: 170px; // 视频播放区域高度(320px)
+$video-height360: 192px; // 视频播放区域高度(360px)
+$video-height390: 210px; // 视频播放区域高度(390px)
+$video-height640: 351px; // 视频播放区域高度(640px)
+$video-height720: 396px; // 视频播放区域高度(720px)
+@media (max-device-width: 1024px) and (orientation: landscape) {}
+
+body {
+    height: 100% !important;
+    width: 100% !important;
+    background: url(/resources/images/index/index.jpg) no-repeat !important;
+    background-size: 100% 100% !important;
+}
+
+.errorDiv{
+    height: 1.3rem;
+    width: 100%;
+    text-align: center;
+    color:white;
+    background: $red-base;
+    font-size: 0.42rem;
+    position: fixed;
+    top:1.3rem;
+    line-height: 1.3rem;
+}
+
+
+.phoneHeader{
+    background: transparent !important;
+    border:none !important;
+}
+
+
+.loginItem {
+    margin-bottom: 1.3rem;
+    background: transparent;
+    text-align: center;
+    div:nth-child(1) {
+        color: #e3e3e3;
+        font-size: 0.42rem;
+        margin-bottom: 0.3rem;
+        font-weight: bold;
+    }
+    div:nth-child(2) {
+        color: $border-line;
+        font-size: 0.3rem;
+    }
+    div:nth-child(3) {
+        color: $border-line;
+        font-size: 0.3rem;
+        margin-top: 0.1rem;
+    }
+    img {
+        margin-top: 0.6rem;
+        width: 3.25rem;
+    }
+}
+
+.toLogin {
+    width: 100%;
+    text-align: center;
+    font-size: 0.3rem;
+    color: white;
+    span {
+        color: $red-base;
+    }
+}
+
+.cusLogin {
+    width: 8rem;
+    margin: 0 auto;
+    margin-top: 2.3rem;
+    .loginTopActive {
+        div:nth-child(1) {
+            color: $gray-light !important;
+        }
+        div:nth-child(2) {
+            width: 50%;
+            color: $red-base !important;
+        }
+        div:nth-child(3) {
+            left: 50% !important;
+        }
+    }
+    .loginTop {
+        font-size: 0;
+        height: 2.3rem;
+        line-height: 2.3rem;
+        text-align: center;
+        position: relative;
+        border-bottom: 2px solid $gray-dark;
+        margin-top: 2.3rem;
+        div {
+            -webkit-transition: all .2s linear .1s;
+            -moz-transition: all .2s linear .1s;
+            -o-transition: all .2s linear .1s;
+            transition: all .2s linear .1s;
+        }
+        div:nth-child(1) {
+            width: 50%;
+            display: inline-block;
+            vertical-align: top;
+            color: $red-base;
+            font-size: 0.4rem;
+        }
+        div:nth-child(2) {
+            width: 50%;
+            display: inline-block;
+            vertical-align: top;
+            color: $gray-light;
+            font-size: 0.4rem;
+        }
+        div:nth-child(3) {
+            width: 50%;
+            height: 2px;
+            background: $red-base;
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+        }
+    }
+    .loginItemPhone {
+        width: 100%;
+        height: 2rem;
+        border-bottom: 1px solid $gray-dark;
+        position: relative;
+        margin-top: 0.2rem;
+        .image {
+            width: 2rem;
+            height: 0.8rem;
+            position: absolute;
+            right: 0px;
+            top: 0.35rem;
+            right: 0.8rem;
+        }
+        .code {
+            color: white;
+            font-size: 0.34rem;
+            position: absolute;
+            right: 0.5rem;
+            top: 0.95rem;
+            button {
+                background: transparent;
+                border: none;
+            }
+        }
+        input {
+            width: 100%;
+            height: 100%;
+            line-height: 0.99rem;
+            padding-right: 0.3rem;
+            color: #e3e3e3;
+            font-size: 0.34rem;
+            background: transparent;
+            border: none;
+            outline: none;
+            padding-left: 5px;
+        }
+    }
+}
+
+.forgetPw {
+    color: $red-base;
+    font-size: 0.34rem;
+    position: relative;
+    left: 5px;
+    div {
+        margin-top: 1rem;
+    }
+}
+
+.loginIng {
+    width: 8rem;
+    height: 1rem;
+    line-height: 1rem;
+    color: white;
+    font-size: 0.36rem;
+    background: $red-base;
+    border-radius: 100px;
+    text-align: center;
+    margin-top: 1.3rem;
+}
+
+.noLogin {
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 0.3rem;
+    margin-top: 0.8rem;
+    span {
+        color: $red-base;
+        margin-left: 3px;
+    }
+}
+
+.active {
+    display: none;
+}
+
+.loginTitle {
+    width: 100%;
+    font-size: 0;
+    margin-top: 0.8rem;
+    div {
+        display: inline-block;
+        vertical-align: middle;
+    }
+    div:nth-child(1) {
+        width: 2.5rem;
+        height: 1px;
+        background: $gray-dark;
+    }
+    div:nth-child(2) {
+        width: 3rem;
+        color: white;
+        font-size: 0.3rem;
+        text-align: center;
+    }
+    div:nth-child(3) {
+        width: 2.5rem;
+        height: 1px;
+        background: $gray-dark;
+    }
+}
+
+.loginIcon {
+    width: 8rem;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 0.8rem;
+    margin-bottom: 4rem;
+    position: relative;
+    img:nth-child(1) {
+        position: absolute;
+        left: 0px;
+    }
+    img:nth-child(2) {
+        position: absolute;
+        right: 0px;
+    }
+    img {
+        width: 1.1rem;
+    }
+}
+
+//忘记密码
+.title {
+    position: relative;
+    font-size: 0;
+    margin-bottom: 0.4rem;
+    div {
+        width: 33.33%;
+        display: inline-block;
+        position: relative;
+    }
+    .gray {
+        width: 33.33%;
+        display: inline-block;
+        position: relative;
+        div {
+            position: relative;
+            height: 0.4rem;
+            width: 0.4rem !important;
+            color: white;
+            font-size: $font-size-sm;
+            text-align: center;
+            line-height: 16px;
+            border-radius: 90px;
+            background: $gray-light;
+            z-index: 5;
+        }
+    }
+    .red {
+        width: 33.33%;
+        display: inline-block;
+        position: relative;
+        div {
+            position: relative;
+            height: 16px;
+            width: 16px !important;
+            color: white;
+            font-size: 0.3rem;
+            text-align: center;
+            line-height: 16px;
+            border-radius: 90px;
+            background: $red-base;
+            z-index: 5;
+        }
+    }
+    .gray:after {
+        content: '';
+        background: $gray-light;
+        position: absolute;
+        height: 3px;
+        width: 100%;
+        z-index: 4;
+        top: 7px;
+    }
+    .red:after {
+        content: '';
+        background: $red-base;
+        position: absolute;
+        height: 3px;
+        width: 100%;
+        z-index: 4;
+        top: 7px;
+    }
+}

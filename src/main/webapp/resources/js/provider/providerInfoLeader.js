@@ -11,8 +11,22 @@ $().ready(function() {
 	initPrice();
 	initInfoResource();
 	returnFirst();
-	
+	checkStep();	
 });
+
+function checkStep(){
+	
+	$('#step1').off('click').on('click',function(){
+		checkStepOne();
+	});
+	
+	$('#step2').off('click').on('click',function(){
+		checkStepTwo();
+	});
+	
+}
+
+
 function initAddrSelector() {
 	$('.AddrSelector').on(
 			'click',
@@ -176,18 +190,14 @@ function initInfoResource() {
 }
 
 function stepOneFinish(){
-	
-	$('#step1').addClass('hide');
-	$('#step2').removeClass('hide');
-	$('#step-bar').addClass('step-2');
+	$('#titleInfo').text('详细信息');
+	$('.stepOne').addClass('hide');
+	$('.stepTwo').removeClass('hide');
 }
 
 function stepTwoFinish(num){
-	
-	$('#step2').addClass('hide');
-	$('#step3').removeClass('hide');
-	$('#step-bar').removeClass('step-2');
-	$('#step-bar').addClass('step-3');
+	$('.stepTwo').addClass('hide');
+	$('.model').show();
 	SetLastTime(num);
 }
 
@@ -197,6 +207,7 @@ function returnFirst(){
 		$('#step1').removeClass('hide');
 		$('#step2').addClass('hide');
 		$('#step-bar').removeClass('step-2');
+		
 	});
 	 
 }
@@ -259,9 +270,7 @@ function checkStepOne(){
 
 
 function checkStepTwo(){
-	var teamDesc = $('#company-teamDesc').val().trim(); // 公司简介
-	var scale = $('#company-scale').val().trim(); // 公司规模
-	var demand = $('#company-demand').val().trim(); // 客户要求
+
 	var sheng = $('#sheng').val().trim(); // 省
 	var shi = $('#shi').val().trim(); // 市
 	
@@ -278,30 +287,7 @@ function checkStepTwo(){
 	}
 
     
-	if(teamDesc == '' || teamDesc == null || teamDesc == undefined){
-        successToolTipShow('请输入公司简介!');
-		$('#company-teamDesc').focus();
-		return false;
-	}
 	
-	if(scale == '' || scale == null || scale == undefined){
-        successToolTipShow('请输入公司规模!');
-		$('#company-teamDesc').focus();
-		return false;
-	}
-	
-	if(demand == '' || demand == null || demand == undefined){
-        successToolTipShow('客户要求!');
-		$('#company-teamDesc').focus();
-		return false;
-	}
-    
-	var type =getBusiness();
-	
-	if(type == '' || type == null || type == undefined){
-        successToolTipShow('业务范围!');
-		return false;
-	}
 	
 	
 	infoSave();
@@ -331,7 +317,7 @@ function SetLastTime() {
 function SetRemainTime() {
 	if (curCount == 0) {
 		window.clearInterval(InterValObj); // 停止计时器
-		window.location.href = getContextPath() + '/provider/info_'+teamId+'.html';
+		window.location.href = getContextPath() + '/';
 	} else {
 		curCount--;
 		$('#lasttime').text(curCount);
@@ -355,17 +341,14 @@ function infoSave(){
 			teamName : $('#company-name').val().trim(),
 			email : $('#company-email').val().trim(),
 			address : $('#company-address').val().trim(),
-			teamDescription : $('#company-teamDesc').val().trim(),
 			webchat : $('#company-webchat').val().trim(),
 			qq : $('#company-qq').val().trim(),
-			business : getBusiness(),
-			scale : $('#company-scale').val().trim(),
-			demand : $('#company-demand').val().trim(),
 			city : '1',
 			linkman: $('#company-linkman').val().trim(),
-			priceRange : $('#company-priceRange').attr('data-id'),
 			infoResource : $('#company-infoResource').attr('data-id'),
 			teamProvince : $("#shengID").val(),
 			teamCity : $("#shiID").val()
 		}));
 	}
+
+

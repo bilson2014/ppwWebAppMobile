@@ -1,579 +1,922 @@
-    /* 手机端 主页 */
-    
-    @import "compass/css3";
-    @import "constant";
-    @import "mixin";
-    @import "common_portal";
-
-    @import "variables";
-    //@import "compass/css3/box-shadow";
-    @import "compass/typography/text/ellipsis";
-    $flexslider-section-height: 210px; // 轮播图区域高度(280px)
-    $flexslider-section-height320: 190px; // 轮播图区域高度(320px)
-    $flexslider-section-height640: 230px; // 轮播图区域高度(640px)
-    $flexslider-section-height720: 250px; // 轮播图区域高度(720px)
-    $activity-section-height: 315px; // 活动区域高度 
-    $activity-section-height320: 241px; // 活动区域高度(320px)
-    $activity-section-height360: 262px; // 活动区域高度(360px)
-    $activity-section-height390: 278px; // 活动区域高度(390px)
-    $activity-section-height640: 412px; // 活动区域高度(640px)
-    $activity-section-height720: 455px; // 活动区域高度(720px)
-    $split-desc-height: 70px; // 区域介绍描述高度
-    $activity-video-section-width: 400px; // 活动、视频区域宽度
-    $activity-video-section-width320: 274px; // 活动、视频区域宽度(320px)
-    $activity-video-section-width360: 306px; // 活动、视频区域宽度(350px)
-    $activity-video-section-width390: 338px; // 活动、视频区域宽度(390px)
-    $activity-video-section-width640: 562px; // 活动、视频区域宽度(640px)
-    $activity-video-section-width720: 636px; // 活动、视频区域宽度(720px)
-    $video-content-height: 421px; // 一行视频的高度
-    $video-content-height320: 334px; // 一行视频的高度(320px)
-    $video-content-height360: 356px; // 一行视频的高度(360px)
-    $video-content-height390: 372px; // 视频图片的高度(390px)
-    $video-content-height640: 511px; // 一行视频的高度(640px)
-    $video-content-height720: 558px; // 一行视频的高度(720px)
-    $video-image-height: 270px; // 视频图片的高度
-    $video-image-height320: 180px; // 视频图片的高度(320px)
-    $video-image-height360: 202px; // 视频图片的高度(360px)
-    $video-image-height390: 220px; // 视频图片的高度(320px)
-    $video-image-height640: 360px; // 视频图片的高度(640px)
-    $video-image-height720: 405px; // 视频图片的高度(720px)
-
-    a {
-        text-decoration: none;
-    }
-
-   .wrap{
-   	overflow-scrolling:touch;
-   	-webkit-overflow-scrolling:touch;
-   }
-
-    
-    %split-section {
-        position: relative;
-        top: 20px;
-        width: 96%;
-        height: $split-desc-height;
-        @include margin-auto;
-        text-align: center;
-        color: $fe5453;
-        h3 {
-            width: 118px;
-            height: 28px;
-            @include margin-auto;
-            letter-spacing: 1px;
-            font: {
-                size: $big-font-size;
-                weight: 600;
+        /* 手机端 主页 */
+        
+        @import "compass/css3";
+        @import "constant";
+        @import "mixin";
+        @import "common_portal";
+        @import "variables";
+        //@import "compass/css3/box-shadow";
+        @import "compass/typography/text/ellipsis";
+        @import "normalize";
+        $video-video-height: 270px; // 视频图片的高度
+        $video-video-height320: 180px; // 视频图片的高度(320px)
+        $video-video-height360: 202px; // 视频图片的高度(360px)
+        $video-video-height390: 220px; // 视频图片的高度(320px)
+        $video-video-height640: 360px; // 视频图片的高度(640px)
+        $video-video-height720: 405px; // 视频图片的高度(720px)
+        $video-play-section-height: 250px; // 视频播放区域高度
+        $video-play-section-height320: 170px; // 视频播放区域高度(320px)
+        $video-play-section-height360: 192px; // 视频播放区域高度(360px)
+        $video-play-section-height390: 210px; // 视频播放区域高度(390px)
+        $video-play-section-height640: 351px; // 视频播放区域高度(640px)
+        $video-play-section-height720: 396px; // 视频播放区域高度(720px)
+        a {
+            text-decoration: none;
+        }
+        
+        body {
+            overflow: hidden;
+            background: black;
+            /* background: url(/resources/video/indexVideo.gif) no-repeat;            
+            background-size: 100% 100%; */
+        }
+        
+        .backImg {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0px;
+            div {
+                position: absolute;
+                background-color: rgba(51, 51, 51, 0.6);
+                width: 100%;
+                height: 100%;
+                z-index: 3;
             }
-            border-bottom: solid 2px $fe5453;
+            img {
+                position: absolute;
+                width: 100%;
+                // -webkit-transition: all 1.2s ease-in .1s;
+                // -moz-transition: all 1.2s ease-in .1s;
+                // -o-transition: all 1.2s ease-in .1s;
+                // transition: all 1.2s ease-in .1s;
+                -webkit-transform: scale(1);
+                -moz-transform: scale(1);
+                -o-transform: scale(1);
+                transform: scale(1);
+                opacity: 0;
+                -webkit-transition: transform 4s, opacity 1.2s;
+                -moz-transition: transform 4s, opacity 1.2s;
+                -o-transition: transform 4s, opacity 1.2s;
+                transition: transform 4s, opacity 1.2s;
+            }
+            .activeImg {
+                -webkit-transform: scale(1.2);
+                -moz-transform: scale(1.2);
+                -o-transform: scale(1.2);
+                transform: scale(1.2);
+                opacity: 1;
+            }
         }
-        .spilt-line {
-            height: 2px;
-            border-top: solid 1px $fe5453;
+        
+        .indexVideo {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0px;
+            left: 0px;
         }
-    }
-    
-    .wrap {
-        /* 轮播图 start */
-        .flexslider-section {
+        
+        .indexBack {
+            width: 100%;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+        }
+        
+        .pagePhone {
+            -webkit-overflow-scrolling: touch;
+            background: transparent;
+            overflow: auto;
+            position: relative;
+            z-index: 10;
+            height: 100%;
+            margin-top: 1.5rem;
+            padding-bottom: 1.5rem;
+        }
+        
+        .headerCom {
+            width: 100%;
+            height: 0.5rem;
+            position: fixed;
+            top: 0px;
+            z-index: 11;
+            text-align: center;
+            .ppwLogo {}
+            img {
+                width: 0.5rem;
+            }
+            a:nth-child(1) {
+                position: absolute;
+                left: 0.54rem;
+            }
+            a:nth-child(2) {
+                position: absolute;
+                right: 0.54rem;
+            }
+            a:nth-child(3) {
+                img {
+                    width: 2.1rem;
+                    position: relative;
+                    top: 0.15rem;
+                }
+            }
+        }
+        
+        //第一区域
+        .logo {
+            text-align: center;
+            margin-top: 2.42rem;
+            img {
+                width: 2.03rem;
+            }
+            color:white;
+            font-size: 0.67rem;
+            margin-bottom: 1.95rem;
+        }
+        
+        .swiper-container {
+            width: 100%;
+            height: auto;
+        }
+        
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            width: 100%;
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+            color: white;
+            .title {
+                font-size: 0.54rem;
+            }
+            .desc {
+                font-size: 0.47rem;
+            }
+            .line {
+                width: 2.2rem;
+                height: 2px;
+                background: white;
+                margin: 0 auto;
+                margin-top: 0.35rem;
+                margin-bottom: 0.35rem;
+            }
+            .icon {
+                margin-top: 1rem;
+                img {
+                    width: 1.4rem;
+                }
+            }
+        }
+        
+        .getPhone {
+            color: white;
+            font-size: 0.36rem;
+            width: 7rem;
+            margin: 0 auto;
+            input {
+                background: none;
+                width: 7rem;
+                height: 1rem;
+                line-height: 1rem;
+                text-align: center;
+                border-color: $red-base;
+                border-radius: 61px;
+                margin: 0 auto;
+                outline: none;
+                padding-left: 10px;
+            }
+            .error {
+                font-size: 0.2rem;
+                color: $red-base;
+                position: relative;
+                top: 0.2rem;
+                display: none;
+            }
+        }
+        
+        .order {
+            color: white;
+            font-size: 0.36rem;
+            width: 7rem;
+            height: 1rem;
+            line-height: 1rem;
+            text-align: center;
+            background: $red-base;
+            border-radius: 61px;
+            margin: 0 auto;
+            margin-top: 0.4rem;
+            margin-bottom: 2rem;
+        }
+        
+        .bannerAni {
+            position: relative;
+            -webkit-animation: ba .6s infinite linear;
+            -moz-animation: ba .6s infinite linear;
+            -o-animation: ba .6s infinite linear;
+            animation: ba .6s infinite linear;
+        }
+        
+        @-webkit-keyframes ba {
+            0% {
+                bottom: 0.5rem;
+                //     opacity: 1;
+            }
+            50% {
+                bottom: 0px;
+                //      opacity: 0;
+            }
+            100% {
+                bottom: 0.5rem;
+                //     opacity: 1;
+            }
+        }
+        
+        ////第一区域end
+        //第二区域
+        .secondContent {
+            .title {
+                width: 100%;
+                color: white;
+                font-size: 0.4rem;
+                text-align: center;
+                margin-bottom: 0.8rem;
+            }
+            .service {
+                width: 100%;
+                color: white;
+                font-size: 0.4rem;
+                text-align: center;
+                margin-top: 1rem;
+                margin-bottom: 0.8rem;
+            }
+        }
+        
+        .conDiv {
+            width: 8rem;
+            height: 3.6rem;
+            border-bottom: 1px solid #e3e3e3;
+            font-size: 0px;
+            margin: 0 auto;
+            a {
+                .conItem {
+                    width: 50% !important;
+                    height: 100%;
+                    display: inline-block;
+                    vertical-align: top;
+                    text-align: center;
+                }
+                img {
+                    margin-top: 0.8rem;
+                    width: 1.8rem;
+                    margin-bottom: 0.3rem;
+                }
+                .type {
+                    color: white;
+                    width: 100%;
+                    font-size: 0.36rem;
+                    height: auto !important;
+                }
+            }
+            .leftItem {
+                border-right: 1px solid #e3e3e3;
+            }
+        }
+        
+        .noBot {
+            border-bottom: none;
+        }
+        
+        .serviceItem {
+            width: 100%;
+            text-align: center;
+            font-size: 0;
+            margin-bottom: 1rem;
+            li {
+                width: 33%;
+                display: inline-block;
+                vertical-align: top;
+                img {
+                    width: 1.14rem;
+                    margin-bottom: 0.3rem;
+                }
+                .wordItem {
+                    margin-bottom: 0.3rem;
+                    div {
+                        display: inline-block;
+                        vertical-align: middle;
+                    }
+                    div:nth-child(1) {
+                        width: 0.4rem;
+                        height: 0.4rem;
+                        line-height: 0.38rem;
+                        border: 1px solid white;
+                        color: white;
+                        font-size: 0.2rem;
+                        margin-right: 0.1rem;
+                        border-radius: 90%;
+                    }
+                    div:nth-child(2) {
+                        color: white;
+                        font-size: 0.28rem;
+                    }
+                }
+            }
+        }
+        
+        .freeTel {
+            color: white;
+            font-size: 0.36rem;
+            width: 7rem;
+            height: 1rem;
+            line-height: 1rem;
+            text-align: center;
+            background: $red-base;
+            border-radius: 61px;
+            margin: 0 auto;
+            margin-top: 0.4rem;
+            margin-bottom: 2rem;
+        }
+        
+        //第二区域end
+        //第三区域
+        .ourCusTitle {
+            color: white;
+            font-size: 0.4rem;
+            margin-bottom: 0.8rem;
+            width: 100%;
+            text-align: center;
+        }
+        
+        .join {
+            width: 4rem;
+            height: 0.9rem;
+            font-size: 0.36rem;
+            color: white;
+            line-height: 0.9rem;
+            text-align: center;
+            position: relative;
+            top: -0.5rem;
+            left: 50%;
+            margin-left: -2rem;
+            background: $red-base;
+            border-radius: 100px;
+            z-index: 4;
+        }
+        
+        .ourCus {
+            white-space: nowrap;
+            overflow-x: auto;
+            overflow-y: hidden;
+            position: relative;
+            font-size: 0;
+            .item:first-child {
+                margin-left: 0.4rem;
+            }
+            .item {
+                width: 10rem;
+                height: 4.08rem;
+                vertical-align: top;
+                display: inline-block;
+                background-color: rgba(51, 51, 51, 0.6);
+                margin-right: 0.1rem;
+                padding-top: 0.5rem;
+                padding-left: 0.4rem;
+                position: relative;
+                border-radius: 16px;
+                .proLogo {
+                    width: 2.46rem;
+                    height: 2.46rem;
+                    padding: 0.06rem;
+                    background: white;
+                    border-radius: 90%;
+                    position: relative;
+                    display: inline-block;
+                    vertical-align: top;
+                    margin-right: 0.3rem;
+                    img:nth-child(1) {
+                        width: 100%;
+                    }
+                    img:nth-child(2) {
+                        width: 0.43rem;
+                        position: absolute;
+                        bottom: 0px;
+                        right: 0.35rem;
+                    }
+                }
+                .proContent {
+                    display: inline-block;
+                    vertical-align: top;
+                    height: 2.46rem;
+                    position: relative;
+                    .title {
+                        width: 6rem;
+                        color: white;
+                        font-size: 0.36rem;
+                        @include ellipsis;
+                    }
+                    .des {
+                        width: 6rem;
+                        height: 0.75rem;
+                        color: #e3e3e3;
+                        font-size: 0.32rem;
+                        line-height: 0.4rem;
+                        overflow: hidden;
+                        white-space: initial;
+                        margin-top: 0.3rem;
+                    }
+                    .tags {
+                        width: 6rem;
+                        overflow: hidden;
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        height: 0.5rem;
+                        font-size: 0;
+                        .tagsItem {
+                            width: 1.3rem;
+                            height: 0.5rem;
+                            line-height: 0.48rem;
+                            border-radius: 49px;
+                            font-size: 0.26rem;
+                            color: $gray-light;
+                            text-align: center;
+                            border: 1px solid $gray-light;
+                            margin-right: 0.2rem;
+                            display: inline-block;
+                            vertical-align: top;
+                        }
+                    }
+                }
+            }
+        }
+        
+        .ourCus::-webkit-scrollbar {
+            width: 0px;
+        }
+        
+        .ourCus::-webkit-scrollbar {
+            display: none
+        }
+        
+        .showLogo::-webkit-scrollbar {
+            width: 0px;
+        }
+        
+        .showLogo::-webkit-scrollbar {
+            display: none
+        }
+        
+        .showLogo {
+            white-space: nowrap;
+            overflow-x: auto;
+            overflow-y: hidden;
+            font-size: 0;
+            margin-bottom: 1rem;
+            img:first-child {
+                margin-left: 0.4rem;
+            }
+            img {
+                width: 2.4rem;
+                height: 2.4rem;
+                display: inline-block;
+                vertical-align: top;
+                margin-right: 0.1rem;
+            }
+        }
+        
+        //底部
+        .rightContent,
+        .leftContent {
+            display: inline-block;
+            vertical-align: top;
+        }
+        
+        .rightContent {
+            text-align: center;
+            margin-left: 0.3rem;
+            img {
+                width: 2.4rem;
+                height: 2.4rem;
+                display: block;
+            }
+            div {
+                font-size: 0.24rem;
+                color: $border-line;
+                margin-top: 0.2rem;
+            }
+        }
+        
+        .footPhone {
+            border-top: 1px solid $gray-light;
+            background: $gray-dark;
+            padding-left: 0.8rem;
+            padding-right: 0.8rem;
+            font-size: 0;
+            padding-top: 0.3rem;
+            .logoFoot {
+                width: 2rem;
+                display: block;
+            }
+            .service {
+                position: relative;
+                &:before {
+                    content: '';
+                    position: absolute;
+                    width: 0.3rem;
+                    height: 0.3rem;
+                    background: url(/resources/images/index/footPhone.png);
+                    background-size: 0.3rem 0.3rem;
+                    left: -0.35rem;
+                }
+            }
+            .cMail {
+                position: relative;
+                &:before {
+                    content: '';
+                    position: absolute;
+                    width: 0.3rem;
+                    height: 0.3rem;
+                    background: url(/resources/images/index/footMail.png);
+                    background-size: 0.3rem 0.3rem;
+                    left: -0.35rem;
+                }
+            }
+            .cAddress {
+                position: relative;
+                &:before {
+                    content: '';
+                    position: absolute;
+                    width: 0.3rem;
+                    height: 0.3rem;
+                    background: url(/resources/images/index/footAddress.png);
+                    background-size: 0.3rem 0.3rem;
+                    left: -0.35rem;
+                    top: 0.01rem;
+                }
+            }
+            div {
+                vertical-align: top;
+                display: inline-block;
+            }
+            .footItem {
+                font-size: 0.32rem;
+                color: $border-line;
+                padding-left: 0.4rem;
+                display: block;
+                margin-top: 0.3rem;
+                margin-bottom: 0.3rem;
+                line-height: 15px;
+                div:nth-child(2) {
+                    width: 4.6rem;
+                }
+            }
+        }
+        
+        .footBottom {
+            width: 100%;
+            border-top: 1px dashed $gray-light;
+            color: $gray-light;
+            font-size: 0.26rem;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            line-height: 0.5rem;
+            text-align: center;
+        }
+        
+        //下单成功
+        .model {
+            background-color: rgba(0, 0, 0, 0.7);
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            z-index: 20;
+            display: none;
+            .success {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                margin-top: -4.5rem;
+                margin-left: -4.5rem;
+                width: 9rem;
+                height: 9rem;
+                background: white;
+                text-align: center;
+                border-radius: 18px;
+                img {
+                    width: 2.4rem;
+                    margin-top: 1.2rem;
+                }
+                a {
+                    color: $red-base !important;
+                }
+                div:nth-child(2) {
+                    color: $gray-dark;
+                    font-size: 0.4rem;
+                    margin-top: 0.6rem;
+                    margin-bottom: 0.4rem;
+                }
+                div:nth-child(3) {
+                    color: $gray-light;
+                    font-size: 0.34rem;
+                }
+                div:nth-child(4) {
+                    color: $red-base;
+                    font-size: 0.34rem;
+                    margin-top: 0.3rem;
+                    margin-bottom: 0.8rem;
+                }
+                div:nth-child(5) {
+                    color: white;
+                    font-size: 0.36rem;
+                    width: 4rem;
+                    height: 1rem;
+                    line-height: 1rem;
+                    text-align: center;
+                    border-radius: 100px;
+                    background: $red-base;
+                    box-shadow: 0 4px 8px 0;
+                    margin: 0 auto;
+                }
+            }
+        }
+        
+        //视频
+        .video-play-sections {
             position: relative;
             width: 100%;
-            height: $flexslider-section-height;
-            @media screen and (max-width: 320px) {
-                height: $flexslider-section-height320;
+            background: #000;
+            top: 50%;
+            height: $video-video-height;
+            @media screen and (max-width: 360px) {
+                height: $video-video-height320;
+                margin-top: -($video-video-height320 / 2);
+            }
+            @media screen and (min-width: 360px) and (max-width: 390px) {
+                height: $video-video-height360;
+                margin-top: -($video-video-height360 / 2);
+            }
+            @media screen and (min-width: 390px) and (max-width: 460px) {
+                height: $video-video-height390;
+                margin-top: -($video-video-height390 / 2);
             }
             @media screen and (min-width: 640px) and (max-width: 720px) {
-                height: $flexslider-section-height640;
+                height: $video-video-height640;
+                margin-top: -($video-video-height640 / 2);
             }
             @media screen and (min-width: 720px) {
-                height: $flexslider-section-height720;
+                height: $video-video-height720;
+                margin-top: -($video-video-height720 / 2);
             }
-            @include margin-auto;
-            /* ------ slide begin ------- */
-            .flexslider-wrap {
+            .video-play {
                 width: 100%;
                 height: 100%;
             }
-            .flexslider {
-                position: relative;
-                top: -4px;
-                height: $flexslider-section-height;
+            video {
                 width: 100%;
-                margin: 0 auto;
-                overflow: hidden;
-                border-bottom: solid 1px #ccc;
-                @media screen and (max-width: 320px) {
-                    height: $flexslider-section-height320;
-                }
-                @media screen and (min-width: 640px) and (max-width: 720px) {
-                    height: $flexslider-section-height640;
-                }
-                @media screen and (min-width: 720px) {
-                    height: $flexslider-section-height720;
-                }
+                height: 100%;
             }
-            .slides {
-                position: relative;
-                z-index: 1;
-                margin-bottom: 0px;
-            }
-
-            .slides li {
-                height: $flexslider-section-height;
-                /* background-size: 100% $flexslider-section-height;
-            background-position: center 0; */
-                @media screen and (max-width: 320px) {
-                    height: $flexslider-section-height320;
-                }
-                @media screen and (min-width: 640px) and (max-width: 720px) {
-                    height: $flexslider-section-height640;
-                }
-                @media screen and (min-width: 720px) {
-                    height: $flexslider-section-height720;
-                }
-            }
-            .slides li:first-child {
-                background: image-url("/resources/images/portal/flex1.jpg") no-repeat;
-                background-position: center 0;
-                background-size: cover;
-            }
-            .slides li:nth-child(2) {
-                background: image-url("/resources/images/portal/flex2.jpg") no-repeat;
-                background-position: center 0;
-                background-size: cover;
-            }
-            .slides li:nth-child(3) {
-                background: image-url("/resources/images/portal/flex3.jpg") no-repeat;
-                background-position: center 0;
-                background-size: cover;
-            }
-            .flex-control-nav {
-                display: none;
-                position: absolute;
-                bottom: 10px;
-                z-index: 2;
-                width: 100%;
-                text-align: center;
-            }
-            .flex-control-nav li {
-                display: inline-block;
-                width: 14px;
-                height: 14px;
-                margin: 0 5px;
-                *display: inline;
-                zoom: 1;
-            }
-            .flex-control-nav a {
-                display: inline-block;
-                width: 14px;
-                height: 14px;
-                line-height: 40px;
-                overflow: hidden;
-            }
-            .flex-control-nav .flex-active {
-                background-position: 0 0;
-            }
-            .flex-direction-nav {
-                position: absolute;
-                z-index: 3;
-                width: 100%;
-                top: 42%;
-            }
-            .flex-direction-nav li a {
-                display: block;
-                width: 30px;
-                height: 28px;
-                overflow: hidden;
-                cursor: pointer;
-                position: absolute;
-            }
-            .flex-direction-nav li a.flex-prev {
-                left: 0;
-                background: url("/resources/images/portal/prev.png") center center no-repeat;
-                background-size: 15px;
-            }
-            .flex-direction-nav li a.flex-next {
-                right: 0;
-                background: url("/resources/images/portal/next.png") center center no-repeat;
-                background-size: 15px;
-            }
-            /* ------ slide end ------- */
         }
-        /* 轮播图 end */
-        /* 活动 start */
-        .activity-section {
+        
+        #closeBtn {
+            position: absolute;
+            top: 5%;
+            right: 5%;
+            margin-right: 5%;
+            color: #fff;
+            font-size: 30px;
+            margin-top: 20px;
+            border: none;
+            outline: none;
+            background: transparent;
+        }
+        
+        //菜单
+        .menu {
+            //opacity: 0;
+            background-color: $gray-dark !important;
+            -webkit-transition: all .2s linear .1s;
+            -moz-transition: all .2s linear .1s;
+            -o-transition: all .2s linear .1s;
+            transition: all .2s linear .1s;
+            -webkit-transform: scale(0);
+            -moz-transform: scale(0);
+            -o-transform: scale(0);
+            transform: scale(0);
             position: relative;
+            left: -20%;
+            top: -20%;
+        }
+        
+        .menuActive {
+            //opacity: 1;
+            -webkit-transform: scale(1);
+            -moz-transform: scale(1);
+            -o-transform: scale(1);
+            transform: scale(1);
+            left: 0;
+            top: 0;
+        }
+        
+        .menuBack {
             width: 100%;
-            //height: $activity-section-height;
-            height: 100%;
-            @include margin-auto;
-            .activity-guide {
-                @extend %split-section;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+        }
+        
+        .menuTop {
+            height: 5.3rem;
+            width: 9rem;
+            border-bottom: 1px solid $gray-light;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            div {
+                color: white;
+                font-size: 0.4rem;
+                position: absolute;
+                width: 100%;
+                bottom: 0.6rem;
             }
-            $activity-col-width: 95%;
-            .activity-content {
-                width: $activity-col-width;
-                height: ($activity-section-height - $split-desc-height);
+            .userLogo {
+                margin-top: 1.3rem;
+                width: 2.52rem;
+                height: 2.52rem;
                 margin: 0 auto;
+                border-radius: 100%;
+                position: relative;
+                top: 1.4rem;
+            }
+            .close {
+                position: absolute;
+                width: 0.45rem;
+                left: 2rem;
+                top: 2.4rem;
+            }
+            .edit {
+                position: absolute;
+                width: 0.45rem;
+                right: 2rem;
+                top: 2.4rem;
+            }
+            margin-bottom: 1rem;
+        }
+        
+        .menuContent {
+            font-size: 0;
+            position: relative;
+            z-index: 5;
+            width: 9rem;
+            margin: 0 auto;
+            .menuItem {
+                width: 33%;
+                display: inline-block;
+                vertical-align: top;
+                text-align: center;
+                margin-bottom: 0.6rem;
                 img {
-                    width: 100%;
-                    height: ($activity-section-height - $split-desc-height);
-                    @extend %phone-border;
-                    @include border-radius(6px);
+                    width: 1.15rem;
                 }
-                @media screen and (max-width: 360px) {
-                    //width: $activity-video-section-width320;
-                    height: ($activity-section-height320 - $split-desc-height);
-                    //background-size: $activity-video-section-width320  ($activity-section-height320 - $split-desc-height);
-                    img {
-                        width: 100%;
-                        height: ($activity-section-height320 - $split-desc-height);
-                    }
-                }
-                @media screen and (min-width: 360px) and (max-width: 390px) {
-                    //width: $activity-video-section-width360;
-                    height: ($activity-section-height360 - $split-desc-height);
-                    //background-size: $activity-video-section-width320  ($activity-section-height320 - $split-desc-height);
-                    img {
-                        width: 100%;
-                        height: ($activity-section-height360 - $split-desc-height);
-                    }
-                }
-                @media screen and (min-width: 390px) and (max-width: 460px) {
-                    //width: $activity-video-section-width390;
-                    height: ($activity-section-height390 - $split-desc-height);
-                    //background-size: $activity-video-section-width390  ($activity-section-height390 - $split-desc-height);
-                    img {
-                        width: 100%;
-                        height: ($activity-section-height390 - $split-desc-height);
-                    }
-                }
-                @media screen and (min-width: 640px) and (max-width: 720px) {
-                    //width: $activity-video-section-width640;
-                    height: ($activity-section-height640 - $split-desc-height);
-                    //background-size: $activity-video-section-width640  ($activity-section-height640 - $split-desc-height);
-                    img {
-                        width: 100%;
-                        height: ($activity-section-height640 - $split-desc-height);
-                    }
-                }
-                @media screen and (min-width: 720px) {
-                    //width: $activity-video-section-width720;
-                    height: ($activity-section-height720 - $split-desc-height);
-                    //background-size: $activity-video-section-width720  ($activity-section-height720 - $split-desc-height);
-                    img {
-                        width: 100%;
-                        height: ($activity-section-height720 - $split-desc-height);
-                    }
+                div {
+                    margin-top: 0.3rem;
+                    color: $border-line;
+                    font-size: 0.34rem;
                 }
             }
         }
-        /* 活动 end */
-        /* 视频 start */
-        .video-section {
-            position: relative;
+        
+        .closeMenu {
+            width: 1.4rem;
+            position: absolute;
+            bottom: 1rem;
+            right: 1rem;
+            z-index: 10;
+        }
+        
+        .showMore {
+            background: #4c4c4c;
+            height: 3.2rem;
+            font-size: 0;
+            text-align: center;
+            color: white;
+            position: absolute;
+            bottom: 0px;
             width: 100%;
-            @include margin-auto;
-            .recomment-line {
-                position: relative;
-                padding: 22px 0;
-                text-align: center;
-                clear: both;
-                cursor: default;
-                width: 90%;
-                @include margin-auto;
-                &:before,
-                &:after {
-                    display: block;
-                    position: absolute;
-                    top: 30px;
-                    width: 32%;
-                    content: "";
-                    border-top: 1px solid #dddddd;
-                }
-                ;
-                &:before {
-                    left: 0;
-                }
-                &:after {
-                    right: 0;
-                }
-                & a {
-                    text-decoration: none;
-                    color: #999;
-                    cursor: default;
-                    font: {
-                        size: $big-font-size;
-                        weight: 600;
-                    }
-                }
+            z-index: 20;
+            display: none;
+            div {
+                height: 1.6rem;
+                width: 7rem;
+                margin: 0 auto;
+                font-size: 0.36rem;
             }
-            .video-content {
+            div:nth-child(1) {
+                border-bottom: 1px solid $gray-light;
+                line-height: 1.9rem;
+            }
+            div:nth-child(2) {
+                line-height: 1.2rem;
+            }
+            .loginOut {
+                border: none !important;
+            }
+        }
+        
+        .safeSet {
+            width: 9.6rem;
+            height: auto;
+            border-radius: 16px;
+            position: absolute;
+            left: 50%;
+            margin-left: -4.8rem;
+            top: 4rem;
+            z-index: 10;
+            background: white;
+            display: none;
+            .safeTitle {
                 width: 100%;
-                $col-width: 95%;
-                .contain-row {
-                    width: $col-width;
-                    height: $video-content-height;
-                    background-color: #ffffff;
-                    margin: 0 auto;
-                    margin-bottom: 10px;
-                    @extend %phone-border;
-                    //@include box-shadow(lighten(#000,85%) 0 2px 2px);
-                    @include clearfix();
-                    @media screen and (max-width: 360px) {
-                        width: $col-width;
-                        //max-width: $activity-video-section-width320;
-                        height: $video-content-height320;
-                    }
-                    @media screen and (min-width: 360px) and (max-width: 390px) {
-                        width: $col-width;
-                        //max-width: $activity-video-section-width360;
-                        height: $video-content-height360;
-                    }
-                    @media screen and (min-width: 390px) and (max-width: 460px) {
-                        width: $col-width;
-                        //max-width: $activity-video-section-width390;
-                        height: $video-content-height390;
-                    }
-                    @media screen and (min-width: 640px) and (max-width: 720px) {
-                        width: $col-width;
-                        //max-width: $activity-video-section-width640;
-                        height: $video-content-height640;
-                    }
-                    @media screen and (min-width: 720px) {
-                        width: $col-width;
-                        //max-width: $activity-video-section-width720;
-                        height: $video-content-height720;
-                    }
-                    .video-col {
-                        position: relative;
-                        width: 100%;
-                        height: 100%;
-                        @include clearfix();
-                        .video-post {
-                            img {
-                                width: 100%;
-                                height: $video-image-height;
-                                @media screen and (max-width: 360px) {
-                                    height: $video-image-height320;
-                                }
-                                @media screen and (min-width: 360px) and (max-width: 390px) {
-                                    height: $video-image-height360;
-                                }
-                                @media screen and (min-width: 390px) and (max-width: 460px) {
-                                    height: $video-image-height390;
-                                }
-                                @media screen and (min-width: 640px) and (max-width: 720px) {
-                                    height: $video-image-height640;
-                                }
-                                @media screen and (min-width: 720px) {
-                                    height: $video-image-height720;
-                                }
-                            }
-                        }
-                        
-                        .video-desc {
-                            position: relative;
-                            width: 100%;
-                            margin: 0;
-                            padding: 0;
-                            @include clearfix();
-                            height: ($video-content-height - $video-image-height - 3);
-                            dl {
-                                position: relative;
-                                top: 15px;
-                                width: 90%;
-                                height: ($video-content-height - $video-image-height - 3) - 15;
-                                @include margin-auto;
-                                dt:nth-child(1) {
-                                    margin-bottom: 15px;
-                                    h2 {
-                                        color: #333;
-                                        font: {
-                                            size: $big-font-size;
-                                            weight: 600;
-                                        }
-                                        letter-spacing: 1px;
-                                    }
-                                }
-                                dd:nth-child(2) {
-                                    color: #666;
-                                    font: {
-                                        size: $small-font-size;
-                                        weight: normal;
-                                    }
-                                    line-height: 20px;
-                                    letter-spacing: 1px;
-                                    height: 56px;
-                                    word-break: break-all;
-                                    word-wrap: break-word;
-                                    white-space: normal;
-                                    text-overflow: ellipsis;
-                                    overflow: hidden;
-                                }
-                                dt:nth-child(3) {
-                                    display: inline-block;
-                                    float: left;
-                                    margin-top: 15px;
-                                    color: $fe5453;
-                                    font: {
-                                        size: $bigger-font-size;
-                                        weight: 600;
-                                    }
-                                    label {
-                                        font: {
-                                            size: $normal-font-size;
-                                            weight: normal;
-                                        }
-                                    }
-                                    .doraction {
-                                        color: #333;
-                                        margin-left: 4px;
-                                        text-decoration: line-through;
-                                    }
-                                }
-                                dd:last-child {
-                                    display: inline-block;
-                                    float: right;
-                                    margin-top: 10px;
-                                    .detail-btn {
-                                        width: 102px;
-                                        height: 26px;
-                                        line-height: 26px;
-                                        @include border-radius(25px);
-                                        background-color: #fff;
-                                        color: $fe5453;
-                                        border: solid 1px #fe5453;
-                                        text-align: center;
-                                        font: {
-                                            size: $small-font-size;
-                                            weight: normal;
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        /* 视频 end */
-        .flow-section {
-            position: relative;
-            width: 100%;
-            height: $activity-section-height;
-            @include margin-auto;
-            .flow-guide {
-                @extend %split-section;
-            }
-            $flow-col-width: 95%;
-            .flow-content {
-                //width: $activity-video-section-width;
-                width: $flow-col-width;
-                height: ($activity-section-height - $split-desc-height);
-                background-color: #ffffff;
+                height: 2.2rem;
+                line-height: 2.2rem;
+                color: $gray-dark;
+                font-size: 0.5rem;
+                border-top-left-radius: 16px;
+                border-top-right-radius: 16px;
+                background: #e3e3e3;
                 text-align: center;
-                @extend %phone-border;
-                @include margin-auto;
-                @include border-radius(6px);
-                @media screen and (max-width: 360px) {
-                    //width: $activity-video-section-width320;
-                    //height: ($activity-section-height320 - $split-desc-height);
-                }
-                @media screen and (min-width: 360px) and (max-width: 390px) {
-                    //width: $activity-video-section-width360;
-                    //height: ($activity-section-height360 - $split-desc-height);
-                }
-                @media screen and (min-width: 390px) and (max-width: 460px) {
-                    //width: $activity-video-section-width390;
-                    //height: ($activity-section-height390 - $split-desc-height);
-                }
-                @media screen and (min-width: 640px) and (max-width: 720px) {
-                    //width: $activity-video-section-width640;
-                    //height: ($activity-section-height640 - $split-desc-height);
-                }
-                @media screen and (min-width: 720px) {
-                    //width: $activity-video-section-width720;
-                    //height: ($activity-section-height720 - $split-desc-height);
-                }
-                dl {
+                padding-left: 0.6rem;
+                margin-bottom: 1rem;
+            }
+            .safeItem {
+                font-size: 0.34rem;
+                color: $gray-dark;
+                margin-bottom: 0.4rem;
+                padding-left: 0.6rem;
+                position: relative;
+                .error {
                     position: relative;
-                    top: 12%;
-                    width: 33%;
-                    height: 90%;
-                    display: inline-block;
-                    float: left;
-                    dt:first-child {
-                        width: 48px;
-                        height: 30px;
-                        margin: 0 auto;
-                        color: #333;
-                        font-weight: 500;
-                    }
-                    dt:nth-child(2) {
-                        margin: 0 auto;
-                        img {
-                            width: 48px;
-                            height: 48px;
-                        }
-                    }
-                    dd {
-                        color: #999;
-                        font-size: $small-font-size;
-                        margin: 10px auto;
-                    }
+                    left: 2.4rem;
+                    color: $red-base;
+                    top: 0.2rem;
                 }
-                /* @media screen and (min-width: 390px) {
-                background: url(/resources/images/portal/flow.png) no-repeat;
-                background-size: cover;
-                background-position: center 0;
+                div,
+                input {
+                    display: inline-block;
+                    vertical-align: middle !important;
+                    position: relative;
+                    outline: none;
+                }
+                div {
+                    width: 2.4rem;
+                    color: $gray-dark;
+                    font-size: 0.34rem;
+                }
+                input {
+                    width: 6rem;
+                    height: 0.9rem;
+                    border-radius: 4px;
+                    background: transparent;
+                    border: 1px solid $gray-dark;
+                    padding-left: 10px;
+                }
+                img {
+                    position: absolute;
+                    right: 0.8rem;
+                    top: 0.2rem;
+                    width: 0.45rem;
+                    display: none;
+                }
             }
-
-            @media screen and (max-width: 390px) {
-                background: url(/resources/images/portal/flow@1.png) no-repeat;
-                background-size: cover;
-                background-position: center 0;
-            } */
+            .cancleBtn {
+                background: $red-base;
+                width: 4rem;
+                height: 1rem;
+                color: white;
+                font-size: 0.36rem;
+                line-height: 1rem;
+                text-align: center;
+                border-radius: 100px;
+                margin: 0 auto;
+                margin-top: 1rem;
+                margin-bottom: 1rem;
+            }
+            .safeClose {
+                position: absolute;
+                width: 1rem;
+                left: 50%;
+                margin-left: -0.5rem;
+                bottom: -1.6rem;
             }
         }
-    }
-    
-    .checkPos {
-        position: fixed;
-        top: 65%;
-        right: 10px;
-        width: 30px;
-        img {
-            width: 30px;
-            height: 30px;
-            border-bottom: 1px solid none;
-            display: block;
-            margin-top: 10px;
-        }
-    }
-    
-    .managerLogin {
-        width: 80%;
-        margin: 0 auto;
-        text-align: left;
-        color: $gray;
-        font-size: 1.0rem;
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-   
-
-
-

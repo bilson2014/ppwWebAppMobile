@@ -13,6 +13,7 @@
 <spring:url value="/resources/js/play.js" var="playJs"/>
 <!-- img path -->
 <spring:url value="/resources/images" var="imgPath" />
+<spring:url value="/resources/js/remSet.js" var="remSetJs" />
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -52,85 +53,87 @@
 	<input type="hidden" id="second" value="${product.mcoms }"/>
 	<input type="hidden" id="yk-play" value="<spring:url value="${product.hret}"/>" />
 	
-	<div class="wrap">
-		<div class="header">
-			<!-- logo -->
-			<dl>
-				<dd>
-					<a href="javascript:history.back(-1);">
-						<div class="back"></div>
-					</a>
-				</dd>
-				<dd>
-					<a href="<spring:url value="/"/>" target="_self">
-						<div class="logo"></div>
-					</a>
-				</dd>
-				<dd>
-					<a href="javascript:void(0);">
-						<div class="share -mob-share-ui-button -mob-share-open"></div>
-						<div class="-mob-share-ui -mob-share-ui-theme -mob-share-ui-theme-slide-bottom" style="display: none">
-							<ul class="-mob-share-list">
-						        <li class="-mob-share-weixin" id="weixin"><p>微信</p></li>
-						        <li class="-mob-share-qzone"><p>QQ空间</p></li>
-						        <li class="-mob-share-qq" id="qq"><p>QQ好友</p></li>
-							    <li class="-mob-share-weibo"><p>新浪微博</p></li>
-					       	</ul>
-						    <div class="-mob-share-close">取消</div>
-						</div>
-						<div class="-mob-share-ui-bg"></div>
-					</a>
-				</dd>
-			</dl>
-		</div>
-		
-		<div class="video-play-section">
-			<video controls id="recomment-video" src="" poster="" preload="auto" style="display: none;"></video>
-			<div id="video-play" class="video-play">
-				<!-- video play -->
-			</div>
-		</div>
-
-		<div class="video-content-section">
-			<div class="video-title-col">
-				<h1>${product.productName }</h1>
-			</div>
-
-			<div class="video-price-col">
-				<dl>
-					<dt><h3 id="price-col"></h3></dt>
-					<dd><p>标准时长:  <span>${product.mcoms }秒</span></p></dd>
-				</dl>
-			</div>
-			
-			<a href="javascript:void(0);"><div class="order-col" id="order-btn">我要拍片</div></a>
-			
-			<div class="video-detail-content">
-				<dl>
-					<dt>产品详情：</dt>
-					<dd>${product.pDescription }</dd>
-				</dl>
-			</div>
-			
-			<div class="split-content"></div>
-			
-			<div class="film-flow">
-				<dl style="width:250px;background:white;">  							
-					<dt ><a href="<spring:url value='/provider/info_${product.teamId }.html'/>"><img id="teamPhoto" src="" alt="${product.teamName }_拍片网 " /></a></dt>
-					<dd style="width:150px;overflow:hidden;background:white;">${product.teamName }</dd>
-				</dl>
-				
-				<a href="<spring:url value='/provider/info_${product.teamId }.html'/>"><div class="team-Btn">更多作品</div></a>
-			</div>
-		</div>
-
+	<div class="phoneHeader">
+	     <a><img src="${imgPath }/index/toMenu.png"></a>
+	     <a href="/searchview">  
+		 <img  src="${imgPath}/index/toSearch.png">
+		 </a> 
+	     <div>案例</div>
 	</div>
+	
+	 <jsp:include flush="true" page="menu.jsp"></jsp:include> 
+	
+       <div class="pagePhone">
+	       <div class="videoShow">
+				<video id="showVideo" class="setVideo" preload="${imgPath}/index/index.jpg" muted>
+			        <source src="http://www.apaipian.com/product/video/paipianwangMovie.mp4" type="video/mp4">
+			    </video> 
+	       </div>
+	       <div class="videoTitle">
+	                          视频标题
+	       </div>
+	       <div class="videoTag">
+	           <div>标签</div>
+	           <div>一个标签</div>
+	           <div>超级大标签</div>
+	           <div>超级大标签</div>
+	       </div>
+	       <div class="videoPrice">
+	              ￥369900
+	       </div>
+	       
+	       <!-- 影片简介 -->
+	       <div class="videoInfo">影片简介 Project Summary</div>
+	       <div class="videoContent">
+	            <div class="content">影片简介影片简介影片简介影片简介影片简介影片简介影片简介影片简介影片简介</div>
+	            <div class="orderVideo">预约拍片</div>
+	            <div class="videoCompany">
+	                 <div class="cLogo">
+	                       <img src="${imgPath}/index/test.png">
+	                       <img src="${imgPath}/index/true.png">
+	                 </div>
+	                 <div>某某影视单位</div>
+	                 <div>更多作品</div>
+	            </div>
+	       </div>
+	       
+	       <!-- 相关推荐-->
+	       
+	       <div class="anli">
+	            <div class="title"></div>
+	            <div class="line"></div>
+	       </div>
+	       <div class="anliContent">
+	             <div class="contentItem" style="background:url(/resources/images/index/index.jpg) no-repeat">
+	                	 <div class="itemTitle">介影片简介标题要介影片简介标题要长介影片简介标题要长介影片简介标题要长介影片简介标题要长介影片简介标题要长介影片简介标题要长长</div>
+	                     <div class="itemTag">介影片简介</div>
+	             </div>
+	             <div class="contentItem" style="background:url(/resources/images/index/index.jpg) no-repeat">
+	                     <div class="itemTitle">介影片简介标题要介影片简介标题要长介影片简介标题要</div>
+	                     <div class="itemTag">介影片简介</div>
+	             </div>
+	             <div class="contentItem" style="background:url(/resources/images/index/index.jpg) no-repeat">
+	                     <div class="itemTitle">介影片简介标题要介影片简介标题要长介影片简介标题要长介影片简介标题要长介影片简介标题要长介影片简介标题要长介影片简介标题要长长</div>
+	                     <div class="itemTag">介影片简介</div>
+	             </div>
+	             <div class="moreAnli">
+	                                                更多相关推荐
+	             </div>
+	       </div>
+	       
+	       <jsp:include flush="true" page="foot.jsp"></jsp:include> 
+		     
+	       
+       </div>
+
+
 <script src="${jqueryJs }"></script>
 <script src="${pluginJs }"></script>
 <script src="${jsonJs }"></script>
 <script src="${commonJs }"></script>
 <script src="${ykJs }"></script>
 <script src="${playJs }"></script>
+<script src="${remSetJs}"></script>
 <!-- 加载Mob share 控件 -->
 <script id="-mob-share" src="http://f1.webshare.mob.com/code/mob-share.js?appkey=8c49c537a706"></script>
 <script type="text/javascript" src="http://player.youku.com/jsapi"></script>

@@ -5,8 +5,7 @@ $().ready(function() {
 	loadVideoList();
 	closeVideo();
 	showOhideImg();
-   
-
+  
 });
 
 function showOhideImg(){

@@ -1,0 +1,491 @@
+@import "common";
+@import "buttons";
+@import "video";
+@import "bootstrap-grid";
+@import "fontSize";
+@import "variables";
+@import "compass/typography/text/ellipsis";
+$header-height-460: 48px; // 头部高度（分辨路低于460
+$header-height-top: 13px; // 头部top
+
+input{
+      -webkit-appearance: none;
+}
+
+textarea{
+      -webkit-appearance: none;
+}
+.headerNew {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: $header-height-460;
+    background-color: #ffffff;
+    z-index: 2000;
+    bottom: 1px;
+    border-bottom: solid 1px #ccc;
+    .leftHeader {
+        position: relative;
+        float: left;
+        height: $header-height-460;
+        width: 33.3%;
+    }
+    .rightHeader {
+        position: relative;
+        float: right;
+        height: $header-height-460;
+        width: 30%;
+    }
+    .midHeader {
+        margin: 0 auto;
+        width: 20%;
+    }
+    .back {
+        height: 22px;
+        width: 22px;
+        background: image-url("/resources/images/icons/back.png") no-repeat;
+        background-size: 12px;
+        top: $header-height-top;
+        position: relative;
+        left: 30px;
+    }
+    .commit {
+        height: 22px;
+        width: 22px;
+        background: image-url("/resources/images/icons/commit.png") no-repeat;
+        background-size: 22px;
+        top: $header-height-top;
+        position: relative;
+        right: 30px;
+        float: right;
+    }
+    .logo {
+        width: 90px;
+        height: 30px;
+        background: image-url("/resources/images/icons/logo_black.png") no-repeat;
+        background-size: 76px;
+        margin: 0px auto;
+        position: relative;
+        top: $header-height-top;
+    }
+}
+
+.errorDiv {
+    position: fixed;
+    top: 48px;
+    height: 48px;
+    width: 100%;
+    background: $red-base;
+    text-align: center;
+    line-height: 48px;
+    color: white;
+    font-size: $font-size-base;
+    z-index: 99;
+}
+
+.step {
+    margin-top:40px;
+    ul {
+        text-align: center;
+        img {
+            width: 50px;
+        }
+        li {
+            margin: 0 auto;
+            margin-top: 15px;
+        }
+        .step-three-title {
+            color: $gray;
+            
+            font-size: $font-size;
+        }
+        .stepThreeLi {
+            margin-top: 10px;
+            color: $gray-light;
+            font-size: $font-size-sm;
+        }
+    }
+}
+
+.contentHeight {
+    height: 65px !important;
+}
+
+.contentInput {
+    margin: 0 auto;
+    width: 85%;
+    height: 35px;
+    margin-bottom: 20px;
+    @extend .commonContentInput;
+}
+
+.service {
+    margin: 0 auto;
+    border-top: 1px solid $border-line;
+    border-bottom: 1px solid $border-line;
+    width: 85%;
+    height: auto;
+    margin-bottom: 15px;
+    .firstDiv {
+        margin-top: 10px;
+        width: 85px;
+        height: 30px;
+        display: inline-block;
+        line-height: 30px;
+        vertical-align: baseline;
+    }
+    .firstSpan {
+        color: $red-base;
+        font-size: $font-size-sm;
+        margin-right: 5px;
+    }
+    .secondSpan {
+        color: $gray-dark;
+        font-size: $font-size-base;
+    }
+    .content {
+        width: 101%;
+        height: auto;
+        text-align: left;
+        margin-bottom: 20px;
+        margin-left: 15px;
+        .checkWord {
+            background: $red-base;
+            color: white;
+        }
+        div {
+            margin: 0 auto;
+            height: 25px;
+            width: auto;
+            border: 1px solid $border-line;
+            font-size: $font-size-base;
+            display: inline-block;
+            text-align: center;
+            line-height: 24px;
+            padding-right: 8px;
+            padding-left: 8px;
+            border-radius: 4px;
+            margin-right: 5px;
+            color: $gray-light;
+            margin-top: 10px;
+        }
+    }
+}
+
+.commonContentInput {
+    select {
+        width: 100%;
+        width: 100%;
+        height: 31px;
+        border: 1px solid $border-line;
+        border-radius: 5px;
+        background: none;
+        padding-left: 10px;
+        color: $gray-dark;
+        font-size: $font-size-base;
+    }
+
+    .up{
+        background: none;
+        height: 20px;
+        width: 20px;
+        position: relative;
+        left: 73%;
+        left: calc(100% - 15px);
+        img {
+            width: 20px;
+        }
+    }
+
+        .down{
+            height: 25px;
+            width: 23px;
+            border-left: 1px solid $border-line;
+            position: relative;
+            left: 73%;
+            left: calc(100% - 38px);
+            top: -31px;
+        img {
+            width: 20px;
+            position: relative;
+            left: 5px;
+            top: 5px;
+        }
+    }
+
+    // .down {
+    //     background: white;
+    //     border-left: 1px solid $border-line;
+    //     height: 20px;
+    //     width: 20px;
+    //     position: relative;
+    //     top: -26px;
+    //     left: 73%;
+    //     left: calc(100% - 42px);
+    //     img {
+    //         width: 15px;
+    //         height: 12px;
+    //         position: relative;
+    //         left: 5px;
+    //         top: 5px;
+    //     }
+    // }
+    input {
+        width: 100%;
+        height: 40px;
+        border: 1px solid $border-line;
+        border-radius: 5px;
+        background: none;
+        padding-left: 10px;
+        color: $gray-dark;
+        font-size: $font-size-base;
+    }
+    textarea {
+        width: 100%;
+        height: 70px;
+        border: 1px solid $border-line;
+        border-radius: 5px;
+        background: none;
+        padding-left: 10px;
+        color: $gray-dark;
+        font-size: $font-size-base;
+        resize: none;
+        vertical-align: top;
+        position: relative;
+        top: -5px;
+        line-height: 20px;
+    }
+    .firstDiv {
+        width: 85px;
+        height: 30px;
+        display: inline-block;
+        line-height: 30px;
+        vertical-align: baseline;
+    }
+    .secondDiv {
+        width: 50%;
+        width: calc(100% - 105px);
+        height: 30px;
+        display: inline-block;
+
+      
+      .imgUD{
+        width:20px;
+        position: absolute;
+        left: 77%;
+        left: calc(90% - 33px);
+        top:-30px;
+      }
+
+    .imgUU{
+        width:16px;
+        height: 9px;
+        position: absolute;
+        top:8px;
+        left: 77%;
+        left: calc(90% - 10px);
+      }
+
+        .ul-option-source {
+            text-align: center;
+            line-height: 20px;
+            width: calc(85% - 105px);
+            font-size: $font-size-base;
+            position: absolute;
+            z-index: 999;
+            border: 1px solid $border-line;
+            background-color: #fff;
+            img{
+              width: 10px;
+              height: 10px;
+              background: red;
+            }
+            li {
+                border-bottom: 1px solid $border-line;
+                height: 25px;
+                line-height: 25px;
+                width: 80%;
+                margin: 0 auto;
+                @include ellipsis;
+                border-bottom: 1px solid $border-line;
+                height: 25px;
+                line-height: 25px;
+                width: 80%;
+                margin: 0 auto;
+                &:hover {
+                    background-color: $gray;
+                    color: #fff;
+                    cursor: pointer;
+                }
+            }
+        }
+        .positionAdd {
+            position: relative;
+            top: 10px;
+            float: right;
+        }
+        .add {
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            background: image-url("/resources/images/manager/add.png") no-repeat;
+            position: relative;
+            top: 10px;
+            cursor: pointer;
+            background-size: 12px 12px;
+        }
+        .addPeople {
+            display: inline-block;
+            height: 20px;
+            width: 72px;
+            color: $gray-light;
+            position: relative;
+            top: 1px;
+            font-size: $font-size-sm;
+        }
+        .openDiv {
+            width: 20px;
+            height: 20px;
+            background: image-url("/resources/images/manager/jian.png") no-repeat;
+            position: relative;
+            top: 6px;
+            cursor: pointer;
+            background-size: 9px 16px;
+            left: 2px;
+        }
+    }
+    .firstSpan {
+        color: $red-base;
+        font-size: $font-size-sm;
+        margin-right: 5px;
+    }
+    .secondSpan {
+        color: $gray-dark;
+        font-size: $font-size-base;
+    }
+}
+
+.bottomBot {
+    width:90%;
+    height: 60px;
+    padding-bottom: 20px;
+    margin: 0 auto;
+    .cancleBtn {
+        float: left;
+        width: 47%;
+        height: 40px;
+        background: $gray;
+        color: white;
+        font-size: $font-size-base;
+        position: relative;
+        border-radius: 5px;
+        line-height: 40px;
+        text-align: center;
+        cursor: pointer;
+        margin: 0 auto;
+        margin-top: 30px;
+        &:hover {
+            background: $gray-light;
+        }
+    }
+    .sureBtn {
+        float: right;
+        width: 47%;
+        height: 40px;
+        background: $red-base;
+        color: white;
+        font-size: $font-size-base;
+        position: relative;
+        border-radius: 5px;
+        line-height: 40px;
+        text-align: center;
+        cursor: pointer;
+        margin: 0 auto;
+        margin-top: 30px;
+        &:hover {
+            background: $gray;
+        }
+    }
+}
+
+.stepBtn1 {
+    width: 90%;
+    height: 40px;
+    background: $red-base;
+    color: white;
+    font-size: $font-size-base;
+    position: relative;
+    border-radius: 5px;
+    line-height:40px;
+    text-align: center;
+    cursor: pointer;
+    margin: 0 auto;
+    margin-top: 60px;
+    &:hover {
+        background: $gray;
+    }
+}
+
+.line {
+    background: $border-line;
+    height: 1px;
+    width: 85%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.step-three-div {
+    position: relative;
+    top: 100px;
+    margin-bottom: 50px;
+    height: 560px;
+}
+
+$width-min:260px;
+$width-mid: 300px;
+$width-lg: 460px;
+$width-lgg: 720px;
+.step-bar {
+    height: 25px;
+    width: 90%;
+    // @media screen and (max-width: 320px) {
+    //     width: 260px;
+    // }
+    // @media screen and (min-width: 320px) and (max-width: 480px) {
+    //     width: 300px;
+    // }
+    // @media screen and (min-width: 480px) and (max-width: 720px) {
+    //     width: 460px;
+    // }
+    margin: 0 auto 30px;
+    background: url('/resources/images/provder/clicePhone.png');
+    background-size: 100% 75px;
+    line-height: 25px;
+    margin-top:70px;
+    .first {
+        color: #fff;
+        font-size: $font-size-sm;
+       // width: ($width-lgg)/3;
+        width:33.33%;
+        width:calc(100% / 3);
+        float:left;
+        text-align: center;
+        // @media screen and (max-width: 320px) {
+        //     width: ($width-min)/3;
+        // }
+        // @media screen and (min-width: 320px) and (max-width: 480px) {
+        //     width: ($width-mid)/3;
+        // }
+        // @media screen and (min-width: 480px) and (max-width: 720px) {
+        //     width: ($width-lg)/3;
+        // }
+    }
+}
+
+.step-2 {
+    background-position: 0 -25px;
+}
+
+.step-3 {
+    background-position: 0 -50px;
+}

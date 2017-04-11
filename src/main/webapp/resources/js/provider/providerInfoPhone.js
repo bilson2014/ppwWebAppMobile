@@ -1,6 +1,12 @@
 $().ready(function(){
 	
-	showHeadImg();
+	 var screenWidth = document.documentElement.clientWidth;
+	 var setHeight= screenWidth/16*9;
+	 $('.contentItem').css('height',setHeight + "px");
+	
+});
+	
+	/*showHeadImg();
 	//namePos();
 	var providerInfoPhone = {
 			init:function(){
@@ -54,9 +60,9 @@ $().ready(function(){
 				// 初始化 分享空间
 				$('.share').click(function(){
 					if(typeof WeixinJSBridge != "undefined"){
-						/*$('#qq').click(function(){
+						$('#qq').click(function(){
 							$('#weixin').click();
-						});*/
+						});
 					}
 					//var title = $('#videoName').val();
 					var shareUrl = getHostName() + getContextPath() + '/play/';
@@ -156,4 +162,4 @@ function namePos(){
 	$('.nameSize').css('left',stateWidth);
 }
 
-
+*/

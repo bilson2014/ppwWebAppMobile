@@ -283,7 +283,6 @@ function getVerificationCode(){
 	// 点击获取手机验证码发送按钮
 	
 	$('#getPhoneCode').off('click').on('click',function(){
-		
 		curCount = count;
 		$('#phone').removeClass('errorPhone');
 		$("#errorPhone").attr('data-content','');
@@ -298,8 +297,6 @@ function getVerificationCode(){
 			return false;
 		}
 		$('#errorCode').text('');
-		
-		
 		$('#getPhoneCode').text('已发送('+ curCount +')');
 		$('#getPhoneCode').attr('disabled','disabled');
 		InterValObj = window.setInterval(setRemainTime, 1000); // 启动计时器，1秒钟执行一次
@@ -312,7 +309,6 @@ function getVerificationCode(){
 		}, getContextPath() + '/login/verification/' + $('#phone').val().trim(), null);
 	});
 }
-
 
 function initTools(){
 	share();
