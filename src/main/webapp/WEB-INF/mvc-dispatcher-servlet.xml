@@ -141,5 +141,12 @@
 			<mvc:mapping path="/product/loadProduct"/>
 			<bean class="com.panfeng.web.wearable.intercepter.SearchResourceInterceptor" />
 		</mvc:interceptor>
+		
+		<mvc:interceptor>
+			<mvc:mapping path="/suggest/**"/>
+			<bean class="com.panfeng.web.wearable.intercepter.SuggestResourceInterceptor" />
+		</mvc:interceptor>
+		
 	</mvc:interceptors>
+	
 </beans>
