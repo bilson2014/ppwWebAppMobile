@@ -78,7 +78,7 @@
 			                  </div>
 		                 </a>
 		             </r:identity>     
-	                 <a href="/search?q=&sortord=0&item=*">
+	                 <a href="/search?q=*">
 		                  <div class="menuItem">
 		                       <img src="${imgPath}/menu/editMenu.png">
 		                       <div>精品案例</div>

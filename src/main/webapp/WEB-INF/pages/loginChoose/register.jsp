@@ -59,7 +59,7 @@
 	     <a href="/searchview">  
 		 <img  src="${imgPath}/index/toSearch.png">
 		</a> 
-	     <div>供应商注册</div>
+	     <div>用户注册</div>
 	</div>
 	
 	 <jsp:include flush="true" page="../menu.jsp"></jsp:include> 
