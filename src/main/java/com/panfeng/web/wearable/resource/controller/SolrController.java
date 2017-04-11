@@ -18,7 +18,6 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.paipianwang.pat.common.config.PublicConfig;
-import com.paipianwang.pat.common.util.ValidateUtil;
 import com.paipianwang.pat.facade.information.entity.PmsNewsSolr;
 import com.panfeng.web.wearable.resource.model.Solr;
 import com.panfeng.web.wearable.resource.view.SolrView;
@@ -99,7 +98,7 @@ public class SolrController extends BaseController {
 	 * 
 	 * @param q
 	 * @param model
-	 * @param request
+	 * @param requestz
 	 * @return
 	 * @throws Exception
 	 */

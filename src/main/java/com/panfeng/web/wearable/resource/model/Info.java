@@ -9,6 +9,15 @@ public class Info extends BaseObject {
 	private boolean key = false;
 	
 	private String value = null;
+	
+	public Info() {
+		
+	}
+
+	public Info(boolean key, String value) {
+		this.key = key;
+		this.value = value;
+	}
 
 	public boolean isKey() {
 		return key;
