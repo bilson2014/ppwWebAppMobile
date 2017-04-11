@@ -1,13 +1,13 @@
 package com.panfeng.web.wearable.resource.controller;
 
 import java.io.UnsupportedEncodingException;
-import java.net.URLEncoder;
 
 import javax.servlet.http.HttpServletRequest;
 
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -15,10 +15,15 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.paipianwang.pat.common.config.PublicConfig;
 import com.paipianwang.pat.common.constant.PmsConstant;
+import com.paipianwang.pat.common.util.DateUtils;
 import com.paipianwang.pat.facade.indent.entity.PmsIndent;
-import com.panfeng.web.wearable.domain.Result;
+import com.paipianwang.pat.facade.indent.service.PmsIndentFacade;
+import com.paipianwang.pat.facade.product.entity.PmsProduct;
+import com.paipianwang.pat.facade.product.entity.PmsService;
+import com.paipianwang.pat.facade.product.service.PmsProductFacade;
+import com.paipianwang.pat.facade.product.service.PmsServiceFacade;
+import com.panfeng.web.wearable.mq.service.SmsMQService;
 import com.panfeng.web.wearable.security.AESUtil;
-import com.panfeng.web.wearable.util.HttpUtil;
 import com.panfeng.web.wearable.util.JsonUtil;
 
 @RestController
@@ -26,48 +31,82 @@ import com.panfeng.web.wearable.util.JsonUtil;
 public class IndentController extends BaseController {
 
 	final Logger serLogger = LoggerFactory.getLogger("service"); // service log
-	
+
 	final Logger logger = LoggerFactory.getLogger("error");
-	
+
+	@Autowired
+	final private SmsMQService smsMQService = null;
+
+	@Autowired
+	final private PmsProductFacade pmsProductFacade = null;
+
+	@Autowired
+	final private PmsServiceFacade pmsServiceFacade = null;
+
+	@Autowired
+	final private PmsIndentFacade pmsIndentFacade = null;
+
 	/**
 	 * 移动端-提交订单
-	 * @throws UnsupportedEncodingException 
+	 * 
+	 * @throws UnsupportedEncodingException
 	 */
 	@RequestMapping(value = "/phone/submit", method = RequestMethod.POST, produces = "application/json; charset=UTF-8")
-	public ModelAndView successViewOnPhone(final PmsIndent indent,final HttpServletRequest request) throws UnsupportedEncodingException {
-		
+	public ModelAndView successViewOnPhone(final PmsIndent indent, final HttpServletRequest request)
+			throws UnsupportedEncodingException {
+
 		request.setCharacterEncoding("UTF-8");
-		final String url = PublicConfig.URL_PREFIX + "portal/indent/order";
 		try {
-			if(indent.getIndent_recomment() != null && !"".equals(indent.getIndent_recomment())) {
-				indent.setIndent_recomment(URLEncoder.encode(indent.getIndent_recomment(), "UTF-8"));
-			}
-			
 			String token = indent.getToken();
 			// token 解密
 			token = AESUtil.Decrypt(token, PmsConstant.ORDER_TOKEN_UNIQUE_KEY);
-			
+
 			final PmsIndent nIndent = JsonUtil.toBean(token, PmsIndent.class);
 			indent.setTeamId(nIndent.getTeamId());
 			indent.setProductId(nIndent.getProductId());
 			indent.setServiceId(nIndent.getServiceId());
-			if(StringUtils.isNotBlank(nIndent.getProduct_name())){
-				String productName =nIndent.getProduct_name();
+			if (StringUtils.isNotBlank(nIndent.getProduct_name())) {
+				String productName = nIndent.getProduct_name();
 				indent.setIndent_recomment("样片名称:" + productName);
 			}
-			String str = HttpUtil.httpPost(url, indent,request);
-			// 更改为Dubbo下单方式
-			if(str != null && !"".equals(str)){
-				final Result result = JsonUtil.toBean(str, Result.class);
-				if(result.isRet()){
-					return new ModelAndView("redirect:/success");
+
+			final long teamId = indent.getTeamId();
+			final long productId = indent.getProductId();
+			final long serviceId = indent.getServiceId();
+			String productName = null;
+			// 如果按产品下单，那么下单之后的订单信息需要与数据库进行对比
+			if (teamId != -1 && productId != -1 && serviceId != -1) {
+				// 产品下单
+				final PmsProduct product = pmsProductFacade.findProductById(productId);
+				productName = product.getProductName();
+				final PmsService ser = pmsServiceFacade.getServiceById(serviceId);
+				indent.setSecond(ser.getMcoms());
+				indent.setIndentPrice(ser.getServiceRealPrice());
+			}
+
+			boolean res = pmsIndentFacade.saveOrder(indent);
+			if (res) {
+				String telephone = PublicConfig.PHONENUMBER_ORDER;
+				if (indent.getSendToStaff()) {
+					if (StringUtils.isBlank(productName)) {
+						smsMQService.sendMessage("131844", telephone,
+								new String[] { indent.getIndent_tele(), DateUtils.nowTime(), "【未指定具体影片】" });
+					} else {
+						smsMQService.sendMessage("131844", telephone,
+								new String[] { indent.getIndent_tele(), DateUtils.nowTime(), "【" + productName + "】" });
+					}
 				}
+				// 发送短信给用户下单成功
+				if (indent.getSendToUser()) {
+					smsMQService.sendMessage("131329", indent.getIndent_tele(), null);
+				}
+				return new ModelAndView("redirect:/success");
 			}
 		} catch (Exception e) {
-			logger.error("IndentController method:successViewOnPhone() Order encode Failure ...");
 			e.printStackTrace();
 		}
+
 		return new ModelAndView("redirect:/error");
 	}
-	
+
 }

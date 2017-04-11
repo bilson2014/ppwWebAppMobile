@@ -1,8 +1,6 @@
 package com.panfeng.web.wearable.resource.controller;
 
-import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
-import java.net.URLEncoder;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -19,6 +17,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.paipianwang.pat.common.config.PublicConfig;
 import com.paipianwang.pat.facade.information.entity.PmsNewsSolr;
+import com.paipianwang.pat.facade.information.entity.PmsProductSolr;
 import com.panfeng.web.wearable.resource.model.Solr;
 import com.panfeng.web.wearable.resource.view.SolrView;
 import com.panfeng.web.wearable.service.SolrService;
@@ -38,38 +37,48 @@ public class SolrController extends BaseController {
 	final private SolrService solrService = null;
 
 	@RequestMapping("/search")
-	public ModelAndView phoneSearchView(String q, final String sequence, final int sortord, final String item,
-			final ModelMap model, final HttpServletRequest request) throws Exception {
-		if ("".equals(q)) {
-			q = "*";
-		}
+	public ModelAndView searchView(String q, final String industry, final String genre, final String length,
+			final String price, final boolean isMore, final ModelMap model, final HttpServletRequest request)
+			throws Exception {
+
 		model.addAttribute("q", q);
-		model.addAttribute("sequence", sequence);
-		model.addAttribute("sortord", sortord);
-		model.addAttribute("item", item);
-		SolrView view = new SolrView();
-		view.setCondition(URLEncoder.encode(q, "UTF-8"));
-		view.setItemFq(item);
-		view.setSequence(sequence);
-		view.setSortord(sortord);
-		try {
-			String url = PublicConfig.URL_PREFIX + "portal/solr/phone/query";
-			final String json = HttpUtil.httpPost(url, view, request);
-			if (json != null && !"".equals(json)) {
-				List<Solr> list = JsonUtil.fromJsonArray(json, Solr.class);
-				
-				model.addAttribute("list", list);
+		model.addAttribute("price", price);
+		model.addAttribute("length", length);
+		model.addAttribute("industry", industry);
+		model.addAttribute("genre", genre);
+		model.addAttribute("isMore", isMore);
+
+		final SolrView view = new SolrView();
+		view.setCondition(q);
+		view.setIndustry(industry);
+		view.setGenre(genre);
+		view.setLengthFq(length);
+		view.setPriceFq(price);
+		// 设置是否是从相关性推荐过来的
+		view.setMore(isMore);
+		view.setLimit(20l);
+
+		final List<PmsProductSolr> list = solrService.listWithPagination(view, request);
+
+		long total = 0l;
+		if (list != null && !list.isEmpty()) {
+			final PmsProductSolr s = list.get(0);
+			if (s != null) {
+				total = s.getTotal(); // 设置总数
 			}
-		} catch (UnsupportedEncodingException e) {
-			e.printStackTrace();
-			logger.error("SolrController method:phoneSearchView() encode failue,q=" + q);
 		}
-		
-		if("*".equals(q)) {
-			String cdn = q.trim().replaceAll("(\\s*)(,|，|\\s+)(\\s*)", ",");
-			keywordsLogger.info("q=" + cdn);
-		}
-		return new ModelAndView("/search");
+
+		model.addAttribute("list", list);
+		model.addAttribute("total", total);
+		return new ModelAndView("search", model);
+	}
+
+	// 搜索分页
+	@RequestMapping("/search/pagination")
+	public List<PmsProductSolr> searchPagination(@RequestBody final SolrView view, final HttpServletRequest request)
+			throws Exception {
+		final List<PmsProductSolr> list = solrService.listWithPagination(view, request);
+		return list;
 	}
 
 	@RequestMapping("/suggest/{token}")
