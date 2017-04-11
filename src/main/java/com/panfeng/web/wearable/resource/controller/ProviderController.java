@@ -38,8 +38,11 @@ import com.paipianwang.pat.facade.right.service.PmsRoleFacade;
 import com.paipianwang.pat.facade.team.entity.PmsCity;
 import com.paipianwang.pat.facade.team.entity.PmsProvince;
 import com.paipianwang.pat.facade.team.entity.PmsTeam;
+import com.paipianwang.pat.facade.team.service.PmsCityFacade;
+import com.paipianwang.pat.facade.team.service.PmsProvinceFacade;
 import com.paipianwang.pat.facade.team.service.PmsTeamFacade;
 import com.panfeng.web.wearable.domain.BaseMsg;
+import com.panfeng.web.wearable.mq.service.SmsMQService;
 import com.panfeng.web.wearable.resource.model.Info;
 import com.panfeng.web.wearable.resource.model.Wechat;
 import com.panfeng.web.wearable.security.AESUtil;
@@ -69,7 +72,7 @@ public class ProviderController extends BaseController {
 
 	@Autowired
 	private final PmsTeamFacade pmsTeamFacade = null;
-	
+
 	@Autowired
 	private final PmsProductFacade pmsProductFacade = null;
 
@@ -78,6 +81,15 @@ public class ProviderController extends BaseController {
 
 	@Autowired
 	private final PmsRightFacade pmsRightFacade = null;
+
+	@Autowired
+	private final PmsProvinceFacade pmsProvinceFacade = null;
+
+	@Autowired
+	private final PmsCityFacade pmsCityFacade = null;
+	
+	@Autowired
+	private final SmsMQService smsMQService = null;
 
 	static String UNIQUE = "unique_s"; // 三方登录凭证
 	static String LINKMAN = "username_s";// 用户名
@@ -300,43 +312,6 @@ public class ProviderController extends BaseController {
 	}
 
 	/**
-	 * 更改密码
-	 * 
-	 * @param original
-	 *            供应商信息
-	 * @return 成功返回 true, 失败返回 false
-	 */
-	/*
-	 * @RequestMapping("/info/recover") public Info recoverPassword(final
-	 * HttpServletRequest request, @RequestBody final PmsTeam original) {
-	 * 
-	 * final String code = (String) request.getSession().getAttribute("code");
-	 * Info info = new Info(); // 信息载体 // 判断验证码 if (!"".equals(code) && code !=
-	 * null) { if (code.equals(original.getVerification_code())) { if (original
-	 * != null && original.getPassword() != null &&
-	 * !"".equals(original.getPassword())) { try { // AES 解密 final String
-	 * password = AESUtil.Decrypt(original.getPassword(), UNIQUE_KEY);
-	 * 
-	 * // MD5 加密 original.setPassword(DataUtil.md5(password));
-	 * 
-	 * // 转码 original.setPassword(URLEncoder.encode(original.getPassword(),
-	 * "UTF-8"));
-	 * 
-	 * // 连接远程服务器，传输数据 final String url = URL_PREFIX +
-	 * "portal/team/static/recoverPassword"; final String json =
-	 * HttpUtil.httpPost(url, original, request); if (json != null &&
-	 * !"".equals(json)) { final boolean flag = JsonUtil.toBean(json,
-	 * Boolean.class); info.setKey(flag); return info; } } catch (Exception e) {
-	 * logger.error(
-	 * "ProviderController method:recoverPassword() Provider Password Decrypt Error On Provider Register ..."
-	 * ); e.printStackTrace(); } } info.setKey(false); return info; } else {
-	 * info.setKey(false); info.setValue("短信验证码不正确"); return info; } } else {
-	 * info.setKey(false); info.setValue("短信验证码错误"); return info; }
-	 * 
-	 * }
-	 */
-
-	/**
 	 * 更新供应商基本信息
 	 * 
 	 * @param team
@@ -365,15 +340,16 @@ public class ProviderController extends BaseController {
 	 *            团队信息(供应商名称、简介、地址、邮箱等)
 	 * @return 成功返回 true, 失败返回 false
 	 */
-	/*
-	 * @RequestMapping("/update/leaderInfomation") public Long
-	 * leadUserupdateInformation(final HttpServletRequest request, @RequestBody
-	 * final PmsTeam team) { if (team != null) { try { final Long ret =
-	 * updateInfo_register(team, request); return ret; } catch
-	 * (UnsupportedEncodingException e) { logger.error(
-	 * "ProviderController method:updateTeamInformation() Privder infomartion encode error On updateTeamInformation Method ..."
-	 * ); e.printStackTrace(); } } return -1L; }
-	 */
+
+	@RequestMapping("/update/leaderInfomation")
+	public Long leadUserupdateInformation(final HttpServletRequest request, @RequestBody final PmsTeam team) {
+		if (team != null) {
+			final Long ret = updateInfo_register(team, request);
+			if(ret > 0) 
+				return ret;
+		}
+		return -1L;
+	}
 
 	/**
 	 * 检验密码是否正确
@@ -462,27 +438,6 @@ public class ProviderController extends BaseController {
 		}
 		return msg;
 	}
-
-	/**
-	 * 更新 供应商审核状态为 审核中
-	 * 
-	 * @param team
-	 *            包含 供应商唯一编号
-	 */
-	/*
-	 * @RequestMapping("/change/status") public boolean updateStatus(final
-	 * HttpServletRequest request, @RequestBody final PmsTeam team) { if (team
-	 * != null) { final String url = URL_PREFIX +
-	 * "portal/team/static/data/updateStatus"; final String json =
-	 * HttpUtil.httpPost(url, team, request); final boolean flag =
-	 * JsonUtil.toBean(json, Boolean.class);
-	 * 
-	 * final PmsTeam sTeam = (PmsTeam) request.getSession().getAttribute(
-	 * PROVIDER_SESSION); if (sTeam != null) { if (flag) { sTeam.setFlag(0);
-	 * request.getSession().setAttribute(PROVIDER_SESSION, sTeam); } }
-	 * 
-	 * return flag; } return false; }
-	 */
 
 	/**
 	 * 带有短信验证的供应商用户名密码注册
@@ -734,19 +689,11 @@ public class ProviderController extends BaseController {
 	@RequestMapping("/leader")
 	public ModelAndView leader(final HttpServletRequest request, final ModelMap model) throws Exception {
 
-		String url = PublicConfig.URL_PREFIX + "portal/get/provinces";
-		String str = HttpUtil.httpGet(url, request);
-		if (str != null && !"".equals(str)) {
-			List<PmsProvince> provinces = JsonUtil.fromJsonArray(str, PmsProvince.class);
-			model.addAttribute("provinces", provinces);
-			if (ValidateUtil.isValid(provinces)) {
-				url = PublicConfig.URL_PREFIX + "portal/get/citys/" + provinces.get(0).getProvinceID();
-				String str1 = HttpUtil.httpGet(url, request);
-				if (str1 != null && !"".equals(str1)) {
-					List<PmsCity> citys = JsonUtil.fromJsonArray(str1, PmsCity.class);
-					model.addAttribute("citys", citys);
-				}
-			}
+		List<PmsProvince> list = pmsProvinceFacade.getAll();
+		if (ValidateUtil.isValid(list)) {
+			model.addAttribute("provinces", list);
+			List<PmsCity> citys = pmsCityFacade.findCitysByProvinceId(list.get(0).getProvinceID());
+			model.addAttribute("citys", citys);
 		}
 
 		HttpSession httpSession = request.getSession();
@@ -760,13 +707,11 @@ public class ProviderController extends BaseController {
 
 	public PmsTeam getCurrentTeam(final HttpServletRequest request) {
 		final SessionInfo info = getCurrentInfo(request);
-		final String url = PublicConfig.URL_PREFIX + "portal/team/static/data/" + info.getReqiureId();
-		final String json = HttpUtil.httpGet(url, request);
-		if (ValidateUtil.isValid(json)) {
-			final PmsTeam team = JsonUtil.toBean(json, PmsTeam.class);
+		if (info != null) {
+			final PmsTeam team = pmsTeamFacade.findTeamById(info.getReqiureId());
+			team.setPassword(null);
 			return team;
 		}
-
 		return null;
 	}
 
@@ -1038,5 +983,44 @@ public class ProviderController extends BaseController {
 		info.setSuperAdmin(team.isSuperAdmin()); // 判断是否是超级管理员
 		session.setAttribute(PmsConstant.SESSION_INFO, info);
 		return true;
+	}
+
+	public Long updateInfo_register(@RequestBody final PmsTeam team, final HttpServletRequest request) {
+		try {
+			HttpSession httpSession = request.getSession();
+			String type = (String) httpSession.getAttribute(TYPE);
+			String original_str = (String) httpSession.getAttribute(ORIGINAL);
+			Gson gson = new Gson();
+			PmsTeam original = gson.fromJson(original_str, PmsTeam.class);
+			if (original != null && ValidateUtil.isValid(type) && type.equals(REGISTER_KET)) {
+				team.setPhoneNumber(original.getPhoneNumber());
+				if (ValidateUtil.isValid(original.getThirdLoginType())) {
+					switch (original.getThirdLoginType()) {
+					case PmsTeam.LTYPE_QQ:
+						team.setQqUnique(original.getQqUnique());
+						break;
+					case PmsTeam.LTYPE_WECHAT:
+						team.setQqUnique(original.getWechatUnique());
+						break;
+					case PmsTeam.LTYPE_WEIBO:
+						team.setQqUnique(original.getWbUnique());
+						break;
+					}
+				}
+				team.setFlag(0);// 设置审核状态为审核中
+
+				PmsTeam dbteam = pmsTeamFacade.register(team);
+				if (dbteam != null && dbteam.getTeamId() > 0) {
+					smsMQService.sendMessage("132269", team.getPhoneNumber(), null);
+					final boolean ret = initSessionInfo(dbteam, request);
+					if(ret) {
+						return dbteam.getTeamId();
+					}
+				}
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return -1l;
 	}
 }
