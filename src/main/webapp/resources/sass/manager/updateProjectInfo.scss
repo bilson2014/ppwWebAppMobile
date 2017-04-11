@@ -1,0 +1,672 @@
+@import "common";
+@import "buttons";
+@import "video";
+@import "model";
+@import "fontSize";
+@import "compass/typography/text/ellipsis";
+$header-height-460: 48px; // 头部高度（分辨路低于460
+$header-height-top: 13px; // 头部top
+body {
+    background: white;
+}
+
+.headerNew {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: $header-height-460;
+    background-color: #ffffff;
+    z-index: 2000;
+    bottom: 1px;
+    border-bottom: solid 1px #ccc;
+    .leftHeader {
+        position: relative;
+        float: left;
+        height: $header-height-460;
+        width: 33.3%;
+    }
+    .rightHeader {
+        position: relative;
+        float: right;
+        height: $header-height-460;
+        width: 30%;
+    }
+    .midHeader {
+        margin: 0 auto;
+        width: 20%;
+    }
+    .back {
+        height: 22px;
+        width: 22px;
+        background: image-url("/resources/images/icons/back.png") no-repeat;
+        background-size: 12px;
+        top: $header-height-top;
+        position: relative;
+        left: 30px;
+    }
+    .commit {
+        height: 22px;
+        width: 22px;
+        background: image-url("/resources/images/icons/commit.png") no-repeat;
+        background-size: 22px;
+        top: $header-height-top;
+        position: relative;
+        right: 30px;
+        float: right;
+    }
+    .logo {
+        width: 90px;
+        height: 30px;
+        background: image-url("/resources/images/icons/logo_black.png") no-repeat;
+        background-size: 76px;
+        margin: 0px auto;
+        position: relative;
+        top: $header-height-top;
+    }
+}
+
+.errorDiv {
+    position: fixed;
+    top: 48px;
+    height: 48px;
+    width: 100%;
+    background: $red-base;
+    text-align: center;
+    line-height: 48px;
+    color: white;
+    font-size: $font-size-base;
+    z-index: 99;
+}
+
+.contentTextArea {
+    margin: 0 auto;
+    width: 85%;
+    height: 90px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    .firstSpan {
+        color: $red-base;
+        font-size: $font-size-sm;
+        margin-right: 5px;
+    }
+    .secondSpan {
+        color: $gray-dark;
+        font-size: $font-size-base;
+    }
+    .firstDiv {
+
+        width: 90px;
+        height: 30px;
+        display: inline-block;
+        line-height: 30px;
+        vertical-align: top;
+    }
+    .secondDiv {
+        width: 50%;
+        width: calc(100% - 105px);
+        height: 30px;
+        display: inline-block;
+        .textareaSize {
+            width: 100%;
+            height: 80px;
+            border-radius: 5px;
+            resize: none;
+            background: none;
+            padding: 10px;
+            line-height: 20px;
+            border-color: $border-line;
+        }
+    }
+}
+
+
+.contentInput {
+    margin: 0 auto;
+    width: 85%;
+    height: 35px;
+    //margin-bottom: 20px;
+    margin-top: 1px;
+    margin-bottom: 20px;
+    @extend .commonContentInput;
+}
+
+.commonContentInput {
+    select {
+        width: 100%;
+        width: 100%;
+        height: 41px;
+        border: 1px solid $border-line;
+        border-radius: 5px;
+        background: none;
+        padding-left: 10px;
+        color: $gray-dark;
+        font-size: $font-size-base;
+    }
+    .down {
+        background: white;
+        border-left: 1px solid $border-line;
+        height: 25px;
+        width: 25px;
+       position: relative;
+       top: -27px;
+        left: 73%;
+        left: calc(100% - 47px);
+
+        img {
+             width: 16px;
+    height: 9px;
+    position: relative;
+    left: 6px;
+    top: 5px;
+        }
+    }
+    input {
+        width: 100%;
+        height: 40px;
+        border: 1px solid $border-line;
+        border-radius: 5px;
+        background: none;
+        padding-left: 10px;
+        color: $gray-dark;
+        font-size: $font-size-base;
+    }
+    .firstDiv {
+        width: 90px;
+        height: 30px;
+        display: inline-block;
+        line-height: 30px;
+        vertical-align: middle;
+    }
+
+
+    .secondDiv {
+        width: 50%;
+        width: calc(100% - 105px);
+        height: 30px;
+        display: inline-block;
+        .ul-option-source {
+            text-align: center;
+            line-height: 20px;
+            width: calc(85% - 105px);
+            font-size: $font-size-base;
+            position: absolute;
+            z-index: 999;
+            border: 1px solid $border-line;
+            background-color: #fff;
+            li {
+                border-bottom: 1px solid $border-line;
+                height: 25px;
+                line-height: 25px;
+                width: 80%;
+                margin: 0 auto;
+                @include ellipsis;
+                border-bottom: 1px solid $border-line;
+                height: 25px;
+                line-height: 25px;
+                width: 80%;
+                margin: 0 auto;
+                &:hover {
+                    background-color: $gray;
+                    color: #fff;
+                    cursor: pointer;
+                }
+            }
+        }
+        .positionAdd {
+            position: relative;
+            top: 10px;
+            float: right;
+        }
+        .add {
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            background: image-url("/resources/images/manager/add.png") no-repeat;
+            position: relative;
+            top: 10px;
+            cursor: pointer;
+            background-size: 12px 12px;
+        }
+        .addPeople {
+            display: inline-block;
+            height: 20px;
+            width: 72px;
+            color: $gray-light;
+            position: relative;
+            top: 1px;
+            font-size: $font-size-sm;
+        }
+        .openDiv {
+            width: 20px;
+            height: 20px;
+            background: image-url("/resources/images/manager/jian.png") no-repeat;
+            position: relative;
+            top: 6px;
+            cursor: pointer;
+            background-size: 9px 16px;
+            left: 2px;
+        }
+    }
+    .firstSpan {
+        color: $red-base;
+        font-size: $font-size-sm;
+        margin-right: 5px;
+    }
+    .secondSpan {
+        color: $gray-dark;
+        font-size: $font-size-base;
+    }
+}
+
+.updateContent {
+    position: relative;
+    top: 90px;
+}
+
+
+
+.keBianShiDiv {
+    width: 100%;
+    height: auto;
+    .autoDiv {
+        border-top: 1px solid $border-line-light;
+        border-bottom: 1px solid $border-line-light;
+        width: 85%;
+        margin: 0 auto;
+        padding-top: 15px;
+        padding-bottom: 0px;
+    }
+    .autoContent {
+        width: 100%;
+        
+        span {
+            width: 15px;
+            color: $gray-light;
+            font-size: $font-size-base;
+            float: right;
+            cursor: pointer;
+            display: inline-flex;
+            position: relative;
+            right:30px;
+            top:6px;
+            div {
+                height: 2px;
+                width: 11px !important;
+                background: $gray-light;
+                position: relative;
+                top: 13px;
+
+            }
+
+           
+        }
+
+       
+         .bfb{
+                position: relative;
+                left:5px;
+                color:$gray-light;
+                width:10px !important;
+            }
+
+        .divPosition {
+            position: relative;
+            //width: calc(100% - 105px);
+            width:100%;
+            height: 45px;
+            margin-bottom: 10px;
+            margin-left: 15px;
+            .ul-option-common {
+                text-align: center;
+                line-height: 20px;
+                width: 25%;
+                position: absolute;
+                font-size: $font-size-base;
+                left:77px;
+                z-index: 999;
+                border: 1px solid $border-line;
+                background-color: #fff;
+                li {
+                    height: 25px;
+                    line-height: 25px;
+                    width: 80%;
+                    margin: 0 auto;
+                    @include ellipsis;
+                    &:hover {
+                        background-color: $gray;
+                        color: #fff;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            div{
+                display: inline-block;
+                width:70px;
+                font-size:1.3rem;
+                color:$gray-light;
+            }
+
+            .ul-option {
+                text-align: center;
+                line-height: 20px;
+                width: 70%;
+                width: calc(100% - 105px);
+                font-size: $font-size-base;
+                position: absolute;
+                left:75px;
+                z-index: 999;
+                border: 1px solid $border-line;
+                background-color: #fff;
+
+                 li:last-child{
+                    height: 25px;
+                    line-height: 25px;
+                    width: 80%;
+                    margin: 0 auto;
+                    @include ellipsis;
+                    &:hover {
+                        background-color: $gray;
+                        color: #fff;
+                        cursor: pointer;
+                    }
+                 }
+
+                li {
+                    border-bottom: 1px solid $border-line;
+                    height: 25px;
+                    line-height: 25px;
+                    width: 80%;
+                    margin: 0 auto;
+                    @include ellipsis;
+                    &:hover {
+                        background-color: $gray;
+                        color: #fff;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+        .name {
+            width: 25%;
+            margin-right: 10px;
+            height: 40px;
+            border: 1px solid $border-line;
+            border-radius: 5px;
+            background: none;
+            padding-left: 10px;
+            color: $gray-dark;
+            font-size: $font-size-base;
+            margin-left: 7px;
+        }
+        .bl {
+            width: 15%;
+            height: 40px;
+            border: 1px solid $border-line;
+            border-radius: 5px;
+            background: none;
+            padding-left: 10px;
+            color: $gray-dark;
+            font-size: $font-size-base;
+        }
+        .info {
+            width:55%;
+            width: calc(100% - 135px);
+            height: 40px;
+            border: 1px solid $border-line;
+            border-radius: 5px;
+            background: none;
+            padding-left: 10px;
+            color: $gray-dark;
+            font-size: $font-size-base;
+        }
+            .infos {
+            width: 70%;
+            width: calc(100% - 105px);
+            height: 40px;
+            border: 1px solid $border-line;
+            border-radius: 5px;
+            background: none;
+            padding-left: 10px;
+            color: $gray-dark;
+            font-size: $font-size-base;
+        }
+        .leftPrice {
+            display: inline-block;
+            width: 25%;
+            width: calc(50% - 75px);
+            height: 40px;
+            border: 1px solid $border-line;
+            border-radius: 5px;
+            background: none;
+            padding-left: 10px;
+            color: $gray-dark;
+            font-size: $font-size-base;
+        }
+        .midPrice {
+            display: inline-block;
+            width: 20px !important;
+            text-align: center;
+        }
+        .rightPrice {
+            display: inline-block;
+            width: 20%;
+            width: calc(50% - 90px);
+            height: 40px;
+            border: 1px solid $border-line;
+            border-radius: 5px;
+            background: none;
+            padding-left: 10px;
+            color: $gray-dark;
+            font-size: $font-size-base;
+        }
+        .timeContent {
+            margin-left:90px;
+            width: 79%;
+            height: auto;
+            padding-bottom: 5px;
+            .title {
+                color: $gray-dark;
+                font-size: $font-size-base;
+            }
+            .timeImg {
+                display: inline-block;
+                vertical-align: top;
+                position: relative;
+                top: 27px;
+                margin-left: 20px;
+                img {
+                    width: 19px;
+                    height: 18px;
+                    display: block;
+                    margin-bottom: 37px;
+                    position: relative;
+                    z-index: 20;
+                }
+                .vLine {
+                    width: 2px;
+                    height: 230px;
+                    background: #999;
+                    position: absolute;
+                    left: 8px;
+                    top: 5px;
+                }
+            }
+            .timeWord {
+                display: inline-block;
+                vertical-align: top;
+                margin-left: 20px;
+                li {
+                    margin-top: 15px;
+                    height: 40px;
+                    color: $gray-light;
+                    font-size: $font-size-base;
+                    line-height: 40px;
+                }
+            }
+            .timeInput {
+                display: inline-block;
+                li {
+                    margin-top: 15px;
+                }
+                input {
+                    width: 100px;
+                    height: 40px;
+                    border: 1px solid $border-line;
+                    border-radius: 5px;
+                    background: none;
+                    padding-left: 10px;
+                    color: $gray-dark;
+                    font-size: $font-size-base;
+                }
+            }
+        }
+    }
+}
+
+.borderLine {
+    width: 85%;
+    height: 1px;
+    margin: 0 auto;
+    background: $border-line-light;
+}
+
+.white {
+    background: white;
+}
+
+.transform {
+    -moz-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    left: -5px !important;
+    top:11px !important;
+
+}
+
+.completeDiv {
+    width: 85%;
+    height: 70px;
+    margin: 0 auto;
+    margin-top: 40px;
+    .save {
+        width: 45%;
+        width: calc(50% - 10px);
+        height: 40px;
+        line-height: 50px;
+        background: $red-base;
+        color: white;
+        font-size: $font-size-base;
+        float: right;
+        position: relative;
+        border-radius: 5px;
+        line-height: 40px;
+        text-align: center;
+        cursor: pointer;
+    }
+    .cancle {
+        width: 45%;
+        width: calc(50% - 10px);
+        height: 40px;
+        line-height: 50px;
+        background: $gray-light;
+        color: white;
+        font-size: $font-size-base;
+        float: left;
+        position: relative;
+        border-radius: 5px;
+        line-height: 40px;
+        text-align: center;
+        cursor: pointer;
+    }
+}
+
+
+.color1 {
+    background: #f1b059;
+}
+
+.color2 {
+    background: #4cdbf8;
+}
+
+.color3 {
+    background: #d339c6;
+}
+
+.color4 {
+    background: #929292;
+}
+
+.color5 {
+    background: #2c71a8;
+}
+
+.gifImgDiv {
+    position: relative;
+    position: fixed;
+    top:45%;
+    z-index: 998;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    img{
+        margin: 0 auto;
+    }
+}
+
+.syeName{
+    width:70px !important;
+}
+.syeBl{
+    width:30px !important;
+    margin-left: -5px;
+}
+
+.newInput{
+    height: 30px !important;
+    margin-top: 1px !important;
+    margin-bottom: 15px !important;
+    position: relative;
+    top: -4px;
+}
+
+input{
+      -webkit-appearance: none;
+}
+
+textarea{
+      -webkit-appearance: none;
+}
+
+.dtpicker-compButton{
+    height: 50px !important;
+}
+
+
+a{
+    text-decoration: none;
+}
+
+a:link {
+    text-decoration: none;
+    /* 指正常的未被访问过的链接*/
+}
+
+a:visited {
+    text-decoration: none;
+    /*指已经访问过的链接*/
+}
+
+a:hover {
+    text-decoration: none;
+    /*指鼠标在链接*/
+}
+
+a:active {
+    text-decoration: none;
+    /* 指正在点的链接*/
+}
+

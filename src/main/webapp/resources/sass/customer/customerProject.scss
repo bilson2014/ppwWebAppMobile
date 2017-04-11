@@ -1,0 +1,1211 @@
+@import "common";
+@import "buttons";
+@import "video";
+@import "model";
+@import "fontSize";
+@import "compass/typography/text/ellipsis";
+$flexslider-section-height: 80px; // 轮播图区域高度(280px)
+$flexslider-section-height320: 120px; // 轮播图区域高度(320px)
+$flexslider-section-height380: 160px; // 轮播图区域高度(320px)
+$flexslider-section-height420: 200px; // 轮播图区域高度(320px)
+$flexslider-section-height640: 350px; // 轮播图区域高度(640px)
+$flexslider-section-height720: 350px; // 轮播图区域高度(720px)
+box {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    position: relative;
+    height: 100%;
+    background: #F0F2F5;
+}
+
+body {
+    background: #eee;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+
+//选项卡
+.swiper-container {
+    width: 100%;
+    height: auto;
+    background: url('/resources/images/introduce/about-us/about-us-1.jpg') no-repeat;
+    background-size: 100% 100%;
+}
+
+.swiper-slide {
+    height: auto;
+    // /* Center slide text vertically */
+    // display: -webkit-box;
+    // display: -ms-flexbox;
+    // display: -webkit-flex;
+    // display: flex;
+    // -webkit-box-pack: center;
+    // -ms-flex-pack: center;
+    // -webkit-justify-content: center;
+    // justify-content: center;
+    // -webkit-box-align: center;
+    // -ms-flex-align: center;
+    // -webkit-align-items: center;
+    // align-items: center;
+}
+
+.headerNew {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: 48px;
+    background-color: #ffffff;
+    z-index: 2000;
+    bottom: 1px;
+    border-bottom: solid 1px $border-line;
+    .leftHeader {
+        position: relative;
+        float: left;
+        height: 48px;
+        width: 30%;
+    }
+    .rightHeader {
+        position: relative;
+        float: right;
+        height: 48px;
+        width: 30%;
+    }
+    .midHeader {
+        margin: 0 auto;
+        width: 20%;
+    }
+    .back {
+        height: 22px;
+        width: 22px;
+        background: image-url("/resources/images/icons/back.png") no-repeat;
+        background-size: 12px;
+        top: 10px;
+        position: relative;
+        left: 20px;
+    }
+    .logo {
+        width: 90px;
+        height: 30px;
+        background: image-url("/resources/images/icons/logo_black.png") no-repeat;
+        background-size: 76px;
+        margin: 0px auto;
+        position: relative;
+        top: 10px;
+    }
+    .add {
+        width: 22px;
+        height: 30px;
+        background: image-url("/resources/images/customer/addProject.png") no-repeat;
+        background-size: 22px 22px;
+        margin: 0px auto;
+        position: relative;
+        top: 10px;
+        right: 20px;
+        float: right;
+    }
+    .share {
+        width: 22px;
+        height: 30px;
+        background: image-url("/resources/images/icons/share.png") no-repeat;
+        background-size: 22px 22px;
+        margin: 0px auto;
+        position: relative;
+        top: 10px;
+        right: 20px;
+        float: right;
+    }
+}
+
+.topHeader {
+    position: relative;
+    margin-top: 48px;
+    width: 100%;
+    height: 70px;
+    background: white;
+    border-bottom: 1px solid $border-line;
+    .topContent {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .sameLine {
+        display: inline-block;
+    }
+    .toInfo {
+        width: 50px;
+        height: 70px;
+        float: right;
+
+        img {
+            width: 14px;
+            height: 14px;
+            position: relative;
+            top: 25px;
+        }
+    }
+    ul {
+        position: relative;
+        width: 50%;
+        div {
+            display: inline-block;
+        }
+        li {
+            line-height: 20px;
+        }
+        li:first-child {
+            font-size: $font-size;
+            color: $gray-dark;
+        }
+        li:nth-child(2) {
+            font-size: $font-size-base;
+            color: $gray-light;
+        }
+        .male {
+            height: 14px;
+            width: 14px;
+            position: relative;
+            top: 1px;
+        }
+    }
+    .infoHead {
+        position: relative;
+        height: 46px;
+        width: 46px;
+        border-radius: 70px;
+        position: relative;
+        top: 5px;
+        left: 4px;
+        border-radius: 70px;
+        @media screen and (max-width: 320px) {
+            height: 46px;
+            width: 46px;
+            border-radius: 70px;
+            position: relative;
+            top: 5px;
+            left: 4px;
+        }
+        @media screen and (min-width: 320px) and (max-width: 380px) {
+            height: 46px;
+            width: 46px;
+            border-radius: 70px;
+            position: relative;
+            top: 5px;
+            left: 4px;
+        }
+        @media screen and (min-width: 380px) and (max-width: 420px) {
+            height: 46px;
+            width: 46px;
+            border-radius: 70px;
+            position: relative;
+            top: 5px;
+            left: 4px;
+        }
+    }
+    .infoHeadSide {
+        position: relative;
+        top: 5px;
+        background: image-url('/resources/images/provder/providerHeadSide.png') no-repeat;
+        height: 55px;
+        width: 55px;
+        background-size: 55px 55px;
+        @media screen and (max-width: 320px) {
+            height: 55px;
+            width: 55px;
+            background-size: 55px 55px;
+        }
+        @media screen and (min-width: 320px) and (max-width: 380px) {
+            height: 55px;
+            width: 55px;
+            background-size: 55px 55px;
+        }
+        @media screen and (min-width: 380px) and (max-width: 420px) {
+            height: 55px;
+            width: 55px;
+            background-size: 55px 55px;
+        }
+    }
+}
+
+.optionCard {
+    height: 55px;
+    width: 100%;
+    font-size: $font-size;
+    color: $gray-light;
+    background: white;
+    .doProject {
+        height: 60px;
+    }
+    .doing {
+        color: $gray;
+        border-bottom: 3px solid $gray;
+        width: 65px;
+        height: 30px;
+        text-align: center;
+        margin: 0 auto;
+        position: relative;
+        top: 15px;
+        font-size: $font-size;
+    }
+    .noDoing {
+        width: 65px;
+        height: 30px;
+        text-align: center;
+        margin: 0 auto;
+        position: relative;
+        top: 15px;
+        font-size: $font-size-base;
+    }
+}
+
+.projectCard {
+    position: relative;
+    display: block;
+    width: 95%;
+    height: auto;
+    border: 1px solid $border-line;
+    border-radius: 4px;
+    margin: 0 auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    background: white;
+    .open {
+        border-bottom: 1px solid $border-line;
+    }
+    .opens{
+    border-bottom: 1px solid $border-line;
+   }
+
+    .cardTitle {
+        width: 90%;
+        height: 50px;
+        margin: 0 auto;
+        .cardTitleWord {
+            display: inline-block;
+            width: 160px;
+              @media screen and (min-width: 380px) and (max-width: 420px) {
+             width: 180px;
+        }
+            height: 50px;
+            font-size: $font-size;
+            color: $gray-dark;
+            position: relative;
+            line-height: 53px;
+            @include ellipsis;
+        }
+        .cardStatues {
+            display: inline-block;
+            font-size: 2rem;
+            color: $gray-light;
+            float: right;
+            width: 80px;
+            height: 50px;
+            text-align: center;
+            line-height: 53px;
+            position: relative;
+            border-radius: 4px;
+            span {
+                color: $red-base;
+            }
+        }
+        .cardStatuesRed {
+            display: inline-block;
+            font-size: 2.2rem;
+            color: $gray-light;
+            float: right;
+            width: 80px;
+            height: 50px;
+            text-align: center;
+            line-height: 53px;
+            position: relative;
+            border-radius: 4px;
+        }
+        .update {
+            width: 30px;
+            height: 50px;
+            background: image-url("/resources/images/customer/updateProject.png") no-repeat center center;
+            background-size: 25px 25px;
+            float: right;
+        }
+    }
+    .step {
+        width: 100%;
+        height: auto;
+        border-top: 1px solid $border-line;
+        border-bottom: 1px solid $border-line;
+        .content {
+            width: 100%;
+            height: auto;
+        }
+        .stepTime {
+            width: 100%;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            float: left;
+            div {
+                display: inline-block;
+                width: calc(20% - 4px);
+                font-size: $font-size-sm;
+                color: $gray-light;
+                text-align: center;
+            }
+        }
+        .timeStep {
+            width: 100%;
+            img {
+                width: 20%;
+                height: 20px;
+                background-color: #333;
+                float: left;
+                background: $gray;
+            }
+            .doRed {
+                background: $red-base;
+            }
+            .pauseGreen {
+                background: green;
+            }
+        }
+        .stepBtn {
+        	width: calc(96% - 2px);
+            width: 96%;
+            margin: 0 auto;
+            height: auto;
+            margin-bottom:15px;
+            text-align: center;
+		    position: relative;
+      
+            button {
+                margin-left: 5px;
+                margin-right: 5px;
+                display: inline-block;
+                width: 23%;
+                width: calc(25% - 15);
+                font-size: $font-size-base;
+                color: white;
+                text-align: center;
+                height: 36px;
+                line-height:36px;
+                margin: 0 auto;
+            }
+            .btn-gray-common {
+                background: $border-line;
+                &:hover{
+                    background:$red-base !important;
+                }
+            }
+        }
+        .stepName {
+            width: 100%;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            div {
+                display: inline-block;
+                width: calc(20% - 4px);
+                font-size: $font-size;
+                color: $gray;
+                text-align: center;
+            }
+            .finishStep {
+                color: $gray-light;
+            }
+        }
+        .stepLine {
+            width: 100%;
+            height: 24px;
+            .borderDiv {
+                position: absolute;
+                width: 85%;
+                left: 7%;
+                height: 24px;
+                border: 1px solid $border-line;
+                border-radius: 120px;
+                background: none;
+            }
+            div {
+                position: relative;
+                float: left;
+                width: 20%;
+                height: 24px;
+                background: image-url("/resources/images/customer/noClean.png") no-repeat center center;
+                background-size: 102% 15px;
+            }
+            .firstStep {
+                background: image-url("/resources/images/customer/firstStep.png") no-repeat center center;
+                background-size: 55% 15px;
+                background-position: right;
+            }
+            .lastStep {
+                background: image-url("/resources/images/customer/lastNoClean.png") no-repeat center center;
+                background-size: 50% 15px;
+                background-position: left;
+            }
+        }
+    }
+    .getMoreInfo {
+        .sameLine {
+            display: inline-block;
+        }
+        .autoDiv {
+            width: 100%;
+            height: auto;
+        }
+        .openDiv {
+            @extend .commonOpen;
+        }
+        .openLastDiv {
+            @extend .commonOpen;
+        }
+        .commonOpen {
+            width: 90%;
+            height: 50px;
+            margin: 0 auto;
+        }
+        .infoTitle {
+            color: $gray-dark;
+            font-size: $font-size-base;
+            position: relative;
+            top: 15px;
+            left: 10px;
+        }
+        img {
+            width: 14px;
+            height: 14px;
+            position: relative;
+            top: 17px;
+        }
+        .imgright {
+            float: right;
+        }
+        .openContent {
+            width: 100%;
+            height: auto;
+            border-bottom: 1px solid $border-line;
+            border-top: 1px solid $border-line;
+            .openArea {
+                width: 90%;
+                width: calc(90% - 54px);
+                height: auto;
+                margin: 0 auto;
+                margin-top: 15px;
+                .openInfo {
+                    height: 30px;
+                    div {
+                        display: inline-block;
+                        color: $gray-light;
+                        font-size: $font-size-base;
+                        margin-right: 10px;
+                    }
+                    .projectWidth {
+                        width: 100px;
+                        position: relative;
+                        top: 2px;
+                        font-size: $font-size-sm;
+                        @media screen and (max-width: 360px) {
+                            width: 50px;
+                        }
+                        @media screen and (min-width: 360px) and (max-width: 390px) {
+                            width: 100px;
+                        }
+                        @media screen and (min-width: 390px) and (max-width: 460px) {
+                            width: 150px;
+                        }
+                        @include ellipsis;
+                    }
+                }
+            }
+        }
+        .proPriceDiv {
+            width: 100%;
+            height: auto;
+            border-top: 1px solid $border-line;
+            border-bottom: 1px solid $border-line;
+            padding-bottom: 10px;
+            .payStyle {
+                width: 90%;
+                height: 40px;
+                margin: 0 auto;
+                margin-top: 20px;
+                position: relative;
+                top: -3px;
+                .leftBtn {
+                    float: left;
+                    @extend .commonBtn;
+                }
+                .rightBtn {
+                    float: right;
+                    @extend .commonBtn;
+                }
+                .commonBtn {
+                    width: 45%;
+                    width: calc(50% - 10px);
+                    height: 36px;
+                    border: 1px solid $border-line;
+                    color: $gray-light;
+                    background: none;
+                    text-align: center;
+                    line-height:36px;
+                    border-radius: 4px;
+                    font-size:$font-size-base; 
+                    &:hover {
+                        color: white;
+                        background: $red-base;
+                        border: none;
+                    }
+                }
+            }
+            .proPriceCard {
+                width: 90%;
+                height: auto;
+                border: 1px solid $border-line;
+                border-radius: 8px;
+                margin: 0 auto;
+                margin-top: 10px;
+                .proPriceContent {
+                    width:90%;
+                    width: calc(100% - 45px);
+                    height: auto;
+                    margin: 0 auto;
+                    font-size: $font-size-base;
+                    color: $gray-light;
+                    ul {
+                        width: 100%;
+                        height: auto;
+                        margin: 0 auto;
+                        line-height: 22px;
+                        margin-top: 10px;
+                        margin-bottom: 10px;
+                    }
+                    li {
+                        height: 23px;
+                    }
+                    div {
+                        display: inline-block;
+                    }
+                    .state {
+                        border: 1px solid $gray-light;
+                        float: right;
+                        border-radius: 4px;
+                        width: 50px;
+                        height: 23px;
+                        text-align: center;
+                        position: relative;
+                        left:5px;
+                    }
+
+                    .stateWait {
+                        border: 1px solid $red-base;
+                        color: $red-base;
+                        float: right;
+                        border-radius: 4px;
+                        width: 50px;
+                        height: 23px;
+                        text-align: center;
+                        position: relative;
+                        left:5px;
+                    }
+                    .contentTitle {
+                        width: 66px;
+                        @media screen and (max-width: 360px) {
+                            width: 56px;
+                        }
+                        @media screen and (min-width: 360px) and (max-width: 390px) {
+                            width: 66px;
+                        }
+                        @media screen and (min-width: 390px) and (max-width: 460px) {
+                            width: 66px;
+                        }
+                        @include ellipsis;
+                    }
+                    .contentInfo {
+                        @include ellipsis;
+                    }
+                    .last {
+                        color: $gray;
+                        float: right;
+                    }
+                }
+            }
+        }
+        .proJectDiv {
+            width: 100%;
+            height: auto;
+            border-top: 1px solid $border-line;
+            border-bottom: 1px solid $border-line;
+            padding-bottom: 15px;
+            img {
+                height: 40px;
+                width: 40px;
+                position: relative;
+                top: 0px;
+                margin-right: 10px;
+            }
+            .line {
+                width: 90%;
+                height: 1px;
+                margin: 0 auto;
+                background: $border-line;
+            }
+            .proJectArea {
+            	width: calc(90% + 11px);
+                width: 90%;
+			    height: 40px;
+			    margin: 0 auto;
+			    margin-top: 15px;
+                .png {
+                    background: image-url("/resources/images/customer/png.png") no-repeat;
+                    @extend .commonImg;
+                }
+                .share {
+                    width: 40px;
+                    height: 40px;
+                    display: inline-block;
+                    background: image-url("/resources/images/customer/share.png") no-repeat center center;
+                    background-size: 25px;
+                }
+                .find {
+                    width: 40px;
+                    height: 40px;
+                    display: inline-block;
+                    background: image-url("/resources/images/customer/find.png") no-repeat center center;
+                    background-size: 25px;
+                }
+                .commonImg {
+                    height: 40px;
+                    width: 40px;
+                    background-size: 40px;
+                    margin-left: 22px;
+                }
+                .line {
+                    width: 100%;
+                    height: 1px;
+                    background: $border-line;
+                }
+                .icon {
+                    display: inline-block;
+                    height: 40px;
+                    width: auto;
+                    float: right;
+                }
+                ul {
+                    vertical-align: top;
+                    margin-left: 5px;
+                    margin-top: 2px;
+                }
+                li {
+                    line-height: 20px;
+                }
+                li:first-child {
+                    font-size: $font-size;
+                    color: $gray-dark;
+                    width:100px;
+                    @include ellipsis;
+                }
+                li:nth-child(2) {
+                    font-size: $font-size-base;
+                    color: $gray-light;
+                    width: 100px;
+                    @media screen and (max-width: 360px) {
+                        width: 60px;
+                    }
+                    @media screen and (min-width: 360px) and (max-width: 390px) {
+                        width: 100px;
+                    }
+                    @media screen and (min-width: 390px) and (max-width: 460px) {
+                        width: 120px;
+                    }
+                    @include ellipsis;
+                }
+            }
+        }
+        .board {
+            width: 100%;
+            height: auto;
+            border-top: 1px solid $border-line;
+            .boardArea {
+                width: 100%;
+                height: auto;
+                margin: 0 auto;
+                margin-top: 15px;
+                display: block;
+                textarea {
+                    width: 100%;
+                    height: 90px;
+                    resize: none;
+                    border-radius: 6px;
+                    border-color: $border-line;
+                    line-height: 20px;
+                    padding: 5px;
+                }
+                .btn-red-common {
+                    width: 90%;
+                    height: 40px;
+                    margin: 0 auto;
+                    margin-top: 15px;
+                    line-height: 40px;
+                    text-align: center;
+                }
+                .historyNote {
+                    width: 90%;
+                    height: auto;
+                    margin: 0 auto;
+                    margin-top: 15px;
+                    margin-bottom: 10px;
+                    .noteArea {
+                        width: 100%;
+                        height: 50px;
+                        margin-top: 10px;
+                        div {
+                            display: inline-block;
+                            height: 40px;
+                            width: 40px;
+                        }
+                        img {
+                            width: 40px;
+                            height: 40px;
+                            border-radius: 120px;
+                            background: green;
+                            display: table-footer-group;
+                        }
+                        ul {
+                            vertical-align: top;
+                            margin-left: 5px;
+                            margin-top: 2px;
+                        }
+                        li {
+                            line-height: 20px;
+                        }
+                        li:first-child {
+                            font-size: $font-size-base;
+                            color: $gray-dark;
+                        }
+                        li:nth-child(2) {
+                            font-size: $font-size-base;
+                            color: $gray;
+                            width: 100px;
+                            @media screen and (max-width: 360px) {
+                                width: 100px;
+                            }
+                            @media screen and (min-width: 360px) and (max-width: 390px) {
+                                width: 120px;
+                            }
+                            @media screen and (min-width: 390px) and (max-width: 460px) {
+                                width: 140px;
+                            }
+                            @include ellipsis;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.deg0 {
+    background-image: linear-gradient(left, red 10%, transparent 10%);
+    //background-image: linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15)
+}
+
+.deg1 {
+    background-image: linear-gradient(left, red 35%, transparent 10%);
+}
+
+.deg2 {
+    background-image: linear-gradient(left, red 70%, transparent 10%);
+}
+
+.deg3 {
+    background-image: linear-gradient(left, red 85%, transparent 10%);
+}
+
+.deg4 {
+    background-image: linear-gradient(left, red 100%, transparent 10%);
+}
+
+.phoneModel {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+    background: rgba(0, 0, 0, 0.4);
+    .modelContent {
+        position: relative;
+        top: 10%;
+        margin: 0 auto;
+        width: 90%;
+        height: auto;
+        background: white;
+        border-radius: 4px;
+        padding-bottom: 30px;
+
+
+        #phoneModelErrorList{
+            padding-top: 15px;
+        }
+
+        .infoimgG {
+            color: red;
+             font-size: $font-size;
+        }
+        .infoimgR {
+            color: green;
+             font-size: $font-size;
+        }
+        .info {
+            width: 120px;
+            text-align: left;
+            margin-left: 5px;
+            @include ellipsis;
+            font-size: $font-size;
+            color:$gray;
+        }
+          ._infoimgG {
+            color: red;
+             font-size: $font-size;
+        }
+        ._infoimgR {
+            color: green;
+             font-size: $font-size;
+        }
+        ._info {
+            width: 120px;
+            text-align: left;
+            margin-left: 5px;
+            @include ellipsis;
+            font-size: $font-size;
+            color:$red-base;
+        }
+        .index{
+             font-size: $font-size;
+            color:$gray;
+        }
+         
+
+         .before{
+            li{
+                list-style-position: inside;
+                list-style-type:disc;
+            }
+         }
+
+         a{
+            div{
+                background: $red-base;
+                border-radius: 4px;
+                color:white;
+                height: 20px;
+                line-height: 20px;
+                padding-left: 5px;
+                padding-right: 5px;
+
+            }
+         }
+ 
+
+        .checkList{
+            div{
+                display: inline-block;
+                vertical-align: top;
+            }
+            ul {
+                text-align: center;
+                margin-top: 20px;
+            }
+            li {
+                padding-top: 10px;
+                color: $gray;
+                font-size: $font-size-base;
+            }
+        }
+        .topModal {
+            background: $red-base;
+            color: white;
+            text-align: center;
+            border-top-left-radius: 4px;
+            border-top-right-radius: 4px;
+            width: 100%;
+            height: auto;
+            ul {
+                padding-top: 10px;
+                li {
+                    margin-top: 10px;
+                    font-size: $font-size-lg;
+                }
+                li:nth-child(2) {
+                    margin-top: 10px;
+                    font-size: $font-size-sm;
+                }
+                img {
+                    width: 59%;
+                    background: $red-base;
+                    position: relative;
+                    top: 2px;
+                }
+            }
+        }
+        .cancle {
+            width: 40px;
+            height: 40px;
+            padding: 5px;
+            position: absolute;
+            left:90%;
+            left: calc(100% - 22px);
+            top: -20px;
+        }
+        .modalError {
+            width: 80%;
+            margin: 0 auto;
+            height: 60px;
+            line-height: 60px;
+            font-size: $font-size;
+            color: $gray-dark;
+            text-align: center;
+        }
+        .bottom-btn {
+            height: 40px;
+            width: 100%;
+        }
+        .btn-red-common {
+            width: 80%;
+            height: 40px;
+            margin: 0 auto;
+            line-height: 40px;
+            text-align: center;
+        }
+        .red {
+            width: 40%;
+            float: right;
+            margin-right: 20px;
+        }
+        .btn-gray-common {
+            width: 40%;
+            height: 40px;
+            margin: 0 auto;
+            margin-left: 20px;
+            line-height: 40px;
+            text-align: center;
+            float: left;
+        }
+        textarea {
+            width: 80%;
+            height: 80px;
+            margin: 0 auto;
+            margin-left: 10%;
+            margin-bottom: 30px;
+            line-height: 20px;
+            resize:none;
+        }
+        .modalInfo {
+            width: 90%;
+            margin: 0 auto;
+            margin-top: 25px;
+            margin-bottom: 25px;
+            ul {
+                background: white;
+                font-size: $font-size-base;
+                color: $gray;
+            }
+            div {
+                display: inline-block;
+                width: 70px;
+            }
+            li {
+                margin-top: 10px;
+                height: 35px;
+                line-height: 35px;
+                input {
+                    display: inline-block;
+                    width:73%;
+                    width: calc(100% - 73px);
+                    height: 35px;
+                    float: right;
+                    border: 1px solid #ccc;
+                    border-radius: 4px;
+                    padding-left: 10px;
+                }
+            }
+            li:last-child {
+                margin-top: 10px;
+                height: 35px;
+                line-height: 35px;
+                input {
+                    display: inline-block;
+                    width:67%;
+                    width: calc(100% - 92px);
+                    height: 35px;
+                    float: right;
+                    border: 1px solid #ccc;
+                    border-radius: 4px;
+                    padding-left: 10px;
+                }
+                span {
+                    float: right;
+                    margin-left: 5px;
+                }
+            }
+        }
+    }
+}
+
+.top {
+    position: relative !important;
+    top: 35% !important;
+}
+
+.flow-finish-img {
+    background-color: #33d8b5;
+    text-align: center;
+}
+
+.flow-doing-img {
+    background-color: #33d8b5;
+    text-align: center;
+}
+
+.flow-notstart-img {
+    background-color:$border-line;
+    text-align: center;
+}
+
+.flow-finish-text {
+    color: $gray-light !important;
+    text-align: center;
+}
+
+.flow-doing-text {
+    color: $gray-light;
+    text-align: center;
+}
+
+.flow-notstart-text {
+    color: $border-line;
+    text-align: center;
+    margin-top: 10px;
+}
+
+
+/* 资源位置，大小控制 */
+
+.flow-item {
+    width: 20%;
+    display: inline-block;
+    vertical-align: top;
+    li {
+        margin-top: 15px;
+    }
+    img {
+        width: 100%;
+    }
+}
+
+.flow-item-date {
+    font-size: 10px;
+    position: relative;
+    font-size: 1.1rem !important;
+    margin-top: -10px !important;
+     @media screen and (min-width: 380px) and (max-width: 420px) {
+            font-size: 1.3rem !important;
+        }
+}
+
+.gifImgDiv {
+    position: relative;
+    position: fixed;
+    top:45%;
+    z-index: 998;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    img{
+        margin: 0 auto;
+    }
+}
+
+.awqeqe{
+    background: $red-base;
+}
+
+.timeWord{
+	width: 100%;
+	height: 10px;
+	font-size: $font-size-sm10;
+	position: relative;
+    margin-top: -8px !important;
+}
+
+.toOreder{
+    position: fixed;
+    top:40%;
+    font-size: $font-size-base;
+    color:$gray-light;
+    width: 100%;
+    text-align: center;
+    z-index:99;
+    line-height: 20px;
+}
+
+
+
+.errorDiv {
+    position: fixed;
+    top: 48px;
+    height: 48px;
+    width: 100%;
+    background: $red-base;
+    text-align: center;
+    line-height: 48px;
+    color: white;
+    font-size: $font-size-base;
+    z-index: 99999999999999999999999;
+}
+
+
+.errorMsg{
+    font-size:$font-size;
+    color:$red-base;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+
+#checkListUL{
+    margin-left: 30%;padding-top: 20px;
+}
+
+.checkModel{
+    display: block; 
+    text-align: center; 
+    color: red;
+    padding-bottom: 20px;
+}
+
+.buttonLeft{
+    margin-left:10%;
+    width: 128px;
+    height: 35px;
+    background-color: #999;
+    border-color: #fff;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    font-size: 1.4rem;
+}
+
+.buttonRight{
+
+    margin-left:5%; 
+    width: 128px;
+    height: 35px;
+    background-color: #999;
+    border-color: #fff;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    font-size: 1.4rem;
+}

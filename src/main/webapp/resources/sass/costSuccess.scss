@@ -1,0 +1,157 @@
+@import "common";
+@import "buttons";
+@import "video";
+@import "flexslider";
+@import "compass/typography/text/ellipsis";
+.backGround {
+    width: 100%;
+    height: 100%;
+    background: url(/resources/images/cost/successB.jpg) no-repeat;
+    background-size: 100% 100%;
+}
+
+.shareWay {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    position: absolute;
+    bottom: 4.5rem;
+    img {
+        width: 4.13rem;
+        height: 0.89rem;
+    }
+}
+
+.priceResult {
+    text-align: center;
+    position: absolute;
+    bottom: 6.5rem;
+    width: 100%;
+    .getPrisce {
+        span {
+            font-size: 0.3rem;
+            color: $gray-dark;
+        }
+    }
+    .reCost {
+        margin-top: 0.3rem;
+        font-size: 0.2rem;
+        color: $red-base;
+        text-decoration: underline;
+    }
+}
+
+.tools {
+    position: absolute;
+    bottom: 0.5rem;
+    ;
+    text-align: center;
+    width: 100%;
+    img {
+        width: 2.98rem;
+        height: 3.84rem;
+    }
+    img:nth-child(1) {
+        position: absolute;
+        left: 0.7rem;
+    }
+    img:nth-child(3) {
+        position: absolute;
+        right: 0.7rem;
+    }
+}
+
+.-mob-share-ui-button {
+    padding: 0px !important;
+    background: transparent !important;
+}
+
+.modalShow {
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 5;
+    top: 0px;
+    display: none;
+    .sOrder {
+        width: 10.20rem;
+        height: 10.54rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -5.27rem;
+        margin-left: -5.10rem;
+        display: none;
+    }
+    .phoneCard {
+        width: 10.52rem;
+        height: 10.32rem;
+        background: white;
+        border-radius: 6px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -5.26rem;
+        margin-left: -5.16rem;
+        .errorInfo {
+            font-size: 0.36rem;
+            color: $red-base;
+            width: 100%;
+            text-align: center;
+            position: relative;
+            top: 0.5rem;
+        }
+        .errorPhone {
+            width: 7.96rem;
+            height: 2rem;
+            margin: 0 auto;
+            margin-top: 2.5rem;
+            position: relative;
+        }
+        input {
+            width: 7.96rem;
+            height: 2rem;
+            text-align: center;
+            color: $gray-dark;
+            font-size: 0.42rem;
+            line-height: 2rem;
+            border: none;
+            border-bottom: 1px solid #d1d1d1;
+        }
+        .toOrderDiv {
+            position: absolute;
+            bottom: 1.78rem;
+            text-align: center;
+            width: 100%;
+        }
+        .toOrder {
+            width: 8.03rem;
+            height: 1.75rem;
+        }
+        .close {
+            width: .56rem;
+            height: .56rem;
+            position: absolute;
+            top: 0.6rem;
+            right: 0.6rem;
+        }
+    }
+}
+
+input {
+    -moz-appearance: button;
+    /* Firefox */
+    -webkit-appearance: button;
+    /* Safari 和 Chrome */
+}
+
+.sCode {
+    width: 7.2rem;
+    height: 7.2rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -3.6rem;
+    margin-left: -3.6rem;
+}

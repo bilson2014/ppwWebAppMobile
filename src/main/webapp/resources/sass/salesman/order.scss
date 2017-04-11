@@ -1,0 +1,218 @@
+/* 手机端-播放页 */
+
+@import "compass/css3";
+@import "constant";
+@import "mixin";
+@import "common_portal";
+$section-height: 126px;
+$dt-font-color: #333;
+$dd-font-color: #666;
+$background-color: #ffffff;
+.wrap {
+    font-size: 0;
+    height: auto !important;
+}
+
+.content-wrap {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    background-color: $background-color;
+    overflow: hidden;
+}
+
+%section-wrap {
+    width: 100%;
+    height: $section-height;
+    margin: 0 auto;
+    .left-part {
+        display: inline-block;
+        width: 50%;
+        height: 100%;
+        float: left;
+    }
+    .right-part {
+        display: inline-block;
+        float: right;
+        width: 50%;
+        height: 100%;
+    }
+}
+
+@mixin dl-delay() {
+    dl {
+        display: inline-block;
+        $height: 80px;
+        position: relative;
+        top: 50%;
+        width: 142px;
+        left: 50%;
+        margin-left: -38px;
+        height: $height;
+        margin-top: -($height / 2);
+        dt {
+            height: 26px;
+            padding-bottom: 2px;
+            font: {
+                size: $big-font-size;
+                weight: 600;
+            }
+            color: $fe5453;
+            line-height: 26px;
+            span {
+                width: 26px;
+                height: 26px;
+                color: #ffffff;
+                background-color: $fe5453;
+                display: inline-block;
+                line-height: 26px;
+                margin-right: 8px;
+                text-align: center;
+                @include border-radius(25px);
+            }
+        }
+        dd {
+            height: 16px;
+            margin-top: 8px;
+            font: {
+                size: $normal-font-size;
+                weight: normal;
+            }
+            color: $dd-font-color;
+            //margin-left: 30px;
+        }
+    }
+}
+
+@mixin img-delay() {
+    img {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        width: 88px;
+        height: 100px;
+        margin-top: -48px;
+        margin-left: -65px;
+    }
+}
+
+.first-section-wrap {
+    @extend %section-wrap;
+    .left-part {
+        @include dl-delay();
+    }
+    .right-part {
+        @include img-delay();
+        img {
+            width: 68px;
+            height: 100px;
+        }
+    }
+}
+
+.second-section-wrap {
+    @extend %section-wrap;
+    .left-part {
+        @include img-delay();
+        img {
+            margin-left: -48px;
+        }
+    }
+    .right-part {
+        @include dl-delay();
+        dl {
+            margin-left: -48px;
+        }
+    }
+}
+
+.third-section-wrap {
+    @extend %section-wrap;
+    .left-part {
+        @include dl-delay();
+    }
+    .right-part {
+        @include img-delay();
+    }
+}
+
+.order-section {
+    width: 100%;
+    height: 7.4rem;
+    background: url(/resources/images/goodGod/orderBottom.jpg);
+    background-size: 100% 7.4rem;
+    .order-input-wrap {
+        position: relative;
+        top: 0.5rem;
+        width:7.71rem;
+        height: auto;
+        margin: 0 auto;
+        input {
+            height: 1.5rem;
+            width: 7.71rem;
+            line-height: 1.5rem;
+            font-size: 0.54rem;
+            text-indent: 0.8em;
+            background: url(/resources/images/goodGod/inputImage.png);
+            background-size: 7.71rem 1.5rem;
+            border: none;
+            text-align: center;
+            color:black;
+            outline: none;
+        }
+        button {
+            height: 1.5rem;
+            width: 7.71rem;
+            line-height: 1.5rem;
+            font-size: 0.54rem;
+            text-indent: 0.8em;
+            background: url(/resources/images/goodGod/btn.png);
+            background-size: 7.71rem 1.5rem;
+            margin-top: 0.3rem;
+            text-align: center;
+            border:none;
+            color:black;
+            outline: none;
+            font-weight: bold;
+            &:focus{
+            	color:white;
+            }
+        }
+    }
+    .order-phone-wrap {
+        width: 80%;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        border: solid 1px #fe5453;
+        margin: 25px auto;
+        @include border-radius(25px);
+        a {
+            text-decoration: none;
+            color: $fe5453;
+            span {
+                width: 100%;
+                height: 100%;
+                color: $fe5453;
+            }
+        }
+    }
+}
+
+.errorMessage{
+	 width: 7.71rem;
+	 margin: 0 auto;
+	 text-align: center;
+	 font-size: 0.3rem;
+	 color:white;
+	 margin-bottom: 0.2rem;
+	 display: none;
+}
+
+
+.btnborder {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}

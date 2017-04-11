@@ -1,0 +1,407 @@
+@import "variables";
+@import "compass/css3";
+@import "constant";
+@import "mixin";
+@import "common_portal";
+@import "compass/typography/text/ellipsis";
+$video-video-height: 270px; // 视频图片的高度
+$video-video-height320: 180px; // 视频图片的高度(320px)
+$video-video-height360: 202px; // 视频图片的高度(360px)
+$video-video-height390: 220px; // 视频图片的高度(320px)
+$video-video-height640: 360px; // 视频图片的高度(640px)
+$video-video-height720: 405px; // 视频图片的高度(720px)
+$video-play-section-height: 250px; // 视频播放区域高度
+$video-play-section-height320: 170px; // 视频播放区域高度(320px)
+$video-play-section-height360: 192px; // 视频播放区域高度(360px)
+$video-play-section-height390: 210px; // 视频播放区域高度(390px)
+$video-play-section-height640: 351px; // 视频播放区域高度(640px)
+$video-play-section-height720: 396px; // 视频播放区域高度(720px)
+body {
+    font-size: 0;
+    background:#E32600;
+}
+
+.header {
+    position: fixed!important;
+}
+
+.wrap {
+    overflow: scroll !important;
+    -webkit-overflow-scrolling: touch;
+}
+
+video {
+    position: relative;
+    z-index: 0;
+}
+
+.topMargin {
+    margin-top: 45px;
+}
+
+.closeVideo {
+    width: 100%;
+    height: 20%;
+}
+
+.outside-div {
+    width: 90%;
+    margin: 0 auto;
+    height: auto;
+    background: url(/resources/images/goodGod/topMid.png);
+    background-size: 100%;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.logo-width {
+    width: 100%;
+}
+
+.logo {
+    width: 90px;
+    height: 30px;
+    background: image-url("/resources/images/icons/logo_black.png") no-repeat;
+    background-size: 76px;
+    margin: 20px auto;
+}
+
+.video-play-sections {
+    position: relative;
+    width: 100%;
+    background: #000;
+    height: $video-video-height;
+    @media screen and (max-width: 360px) {
+        height: $video-video-height320;
+    }
+    @media screen and (min-width: 360px) and (max-width: 390px) {
+        height: $video-video-height360;
+    }
+    @media screen and (min-width: 390px) and (max-width: 460px) {
+        height: $video-video-height390;
+    }
+    @media screen and (min-width: 640px) and (max-width: 720px) {
+        height: $video-video-height640;
+    }
+    @media screen and (min-width: 720px) {
+        height: $video-video-height720;
+    }
+    .video-play {
+        width: 100%;
+        height: 100%;
+    }
+    video {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.top-div {
+    width: 100%;
+    height: auto;
+    padding-top: 22px;
+    .title-word {
+        padding-left: 10px;
+        font-size: 18px;
+        font-weight: bold;
+        color: black;
+    }
+    .title-content {
+        margin-top: 19px;
+        height: 70px;
+    }
+}
+
+.left-content {
+    width: 50%;
+    height: 45px;
+    padding-top: 15px;
+    float: left;
+    position: relative;
+    border-right: 3px solid $gold-yellow;
+    .left-price {
+        margin-left: 10px;
+        font-size: 34px;
+        font-weight: bold;
+        color: yellow;
+        position: absolute;
+        top:-3px;
+    }
+    .left-desc {
+        font-size: 16px;
+        color: black;
+        margin-left: 5px;
+        font-weight: 300;
+        position: absolute;
+        bottom: 0px;
+        left:8px;
+    }
+}
+
+.right-content {
+    display: inline-block;
+    width: 49%;
+    height: 60px;
+    position: relative;
+    top:-5px;
+    .right-price {
+        display: block;
+        margin-left: 10px;
+        font-size: 18px;
+        font-weight: bold;
+        color: black;
+        font-weight: bold;
+        padding-top: 8px;
+    }
+    .right-desc {
+        font-size: 16px;
+        color: black;
+        font-weight: 300;
+    }
+}
+
+.inside-div {
+    width: 100%;
+    height: auto;
+    white-space: nowrap;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+
+.upload-window {
+    position: fixed;
+    z-index: 999999;
+    height: 100%;
+    width: 100%;
+    display: none;
+    overflow: hidden;
+}
+
+.closeVideo {
+    height: 30%;
+    background: #000;
+    opacity: 0.75;
+}
+
+.closeVideoBot {
+    height: 100%;
+    background: #000;
+    opacity: 0.75;
+}
+
+#closeBtn {
+    float: right;
+    margin-right: 5%;
+    color: #fff;
+    font-size: 30px;
+    margin-top: 20px;
+    background: #000;
+    border: none;
+    outline: none;
+}
+
+.close-icon {
+    font-size: 3.0rem;
+    font-weight: lighter;
+}
+
+.margin-div {
+    margin-top: 22px !important;
+}
+
+
+
+
+.video-area-card {
+    margin-top: 5px;
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    margin-right: 10px;
+    //border: 1px solid #ccc;
+    //background: $white;
+    .video-play-section {
+        position: relative;
+        width: 100%;
+        //height: $video-play-section-height;
+        // @media screen and (max-width: 360px) {
+        //     height: $video-play-section-height320;
+        // }
+        // @media screen and (min-width: 360px) and (max-width: 390px) {
+        //     height: $video-play-section-height360;
+        // }
+        // @media screen and (min-width: 390px) and (max-width: 460px) {
+        //     height: $video-play-section-height390;
+        // }
+        // @media screen and (min-width: 640px) and (max-width: 720px) {
+        //     height: $video-play-section-height640;
+        // }
+        // @media screen and (min-width: 720px) {
+        //     height: $video-play-section-height720;
+        // }
+    }
+    &:last-child {
+        margin-right: 10px;
+    }
+}
+
+.video-content {
+    position: relative;
+    margin-top: 20px;
+    .font-title {
+        text-align: center;
+        font-size: 18px;
+        color: white;
+    }
+    .font-content {
+        padding-top: 10px;
+        width: 80%;
+        margin: 0 auto;
+        color: white;
+        height: 50px;
+        white-space: normal;
+        text-align: center;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        font-size: 14px;
+        line-height: 17px;
+    }
+    .video-btn {
+        margin: 20px 10% 20px 10%;
+        width: 80%;
+        // display: block;
+        // text-align: center;
+        //height: 50px;
+        // background-color: $red-base;
+        // border-color: $white;
+        // border-radius: 5px;
+        // border: none;
+        // color: $white;
+        // font-size: 20px;
+        // line-height: 50px;
+        text-align: center;
+        // background: url(/resources/images/goodGod/btn.png)no-repeat;
+        // background-size: 100% 50px;
+        //  @media screen and (max-width: 360px) {
+        //  	      line-height: 50px;
+        //           background-size: 100% 50px;
+        // }
+        // @media screen and (min-width: 360px) and (max-width: 390px) {
+        // 	        line-height: 50px;
+        //            background-size: 100% 50px;
+        // }
+        // @media screen and (min-width: 390px) and (max-width: 460px) {
+        // 	       height: 60px;
+        // 	       line-height: 60px;
+        //            background-size: 100% 60px;
+        // }
+        &:hover {
+            // background-color: $gray;
+            // color: $white;
+            // cursor: pointer;
+        }
+    }
+}
+
+.bigBackGround {
+    width: 100%;
+    height: auto;
+    background: url(/resources/images/goodGod/bigRed.jpg);
+    background-size: 100% auto;
+}
+
+.topImg {
+    width: 90%;
+    margin: 0 auto;
+    img {
+        width: 100%;
+    }
+}
+
+.botImg{
+	width: 30px;
+	position: fixed;
+	bottom: 50px;
+	left:50%;
+	margin-left: -15px;
+	z-index: 10;
+	img{
+		width: 100%;
+	}
+}
+
+.bannerAni {
+    -webkit-animation: ba .8s infinite linear;
+    -moz-animation: ba .8s infinite linear;
+    -o-animation: ba .8s infinite linear;
+    animation: ba .8s infinite linear;
+}
+
+@-webkit-keyframes ba {
+    0% {
+        bottom: 53px;
+        opacity: 1;
+    }
+    50% {
+        bottom: 0px;
+        opacity: 0;
+    }
+    100% {
+        bottom: 53px;
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes ba {
+       0% {
+        bottom: 53px;
+        opacity: 1;
+    }
+    50% {
+        bottom: 0px;
+        opacity: 0;
+    }
+    100% {
+        bottom: 53px;
+        opacity: 1;
+    }
+}
+
+@-o-keyframes ba {
+     0% {
+        bottom: 53px;
+        opacity: 1;
+    }
+    50% {
+        bottom: 0px;
+        opacity: 0;
+    }
+    100% {
+        bottom: 53px;
+        opacity: 1;
+    }
+}
+
+@keyframes ba {
+  0% {
+        bottom: 53px;
+        opacity: 1;
+    }
+    50% {
+        bottom: 0px;
+        opacity: 0;
+    }
+    100% {
+        bottom: 53px;
+        opacity: 1;
+    }
+}
+
+
+.pLogo{
+width: 20%;
+position: absolute;
+top:10px;
+left:10px;
+}

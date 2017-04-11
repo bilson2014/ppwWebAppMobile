@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+		                http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd
+		                http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd
+		                http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd">
+
+	<mvc:view-controller path="/login" view-name="/phoneLogin" />
+
+	<mvc:view-controller path="/provider/login" view-name="/phoneLogin" />
+	
+	<mvc:view-controller path="/mgr/login" view-name="/managerLogin" />
+
+	<mvc:view-controller path="/member" view-name="/company/member" />
+
+	<mvc:view-controller path="/order-flow.html" view-name="/service" />
+
+	<mvc:view-controller path="/company-service.html" view-name="/company-service" />
+
+	<mvc:view-controller path="/testRem/rem" view-name="/testRem/rem" />
+
+	<mvc:view-controller path="/provider/providerInfoLeader" view-name="/provider/providerInfoLeader" />
+
+	<mvc:view-controller path="/manager/updateProjectInfo" view-name="/manager/updateProjectInfo" />
+
+	<mvc:view-controller path="/about-us.html" view-name="/about-us" />
+
+	<mvc:view-controller path="/company-activity.html" view-name="/company-activity" />
+
+	<mvc:view-controller path="/mgr/recover" view-name="/manager/recover" />
+
+	<mvc:view-controller path="/payment/payList" view-name="/payment/payList" />
+
+	<mvc:view-controller path="/payment/success" view-name="/payment/success" />
+
+	<mvc:view-controller path="/error" view-name="/error" />
+
+	<mvc:view-controller path="/threeLogin" view-name="/threeLogin" />
+
+	<!-- cost -->
+	<mvc:view-controller path="/costcode" view-name="/cost/costcalculate" />
+	<mvc:view-controller path="/costweixin" view-name="/costcalculateweixin" />
+	<mvc:view-controller path="/costtoutiao" view-name="/costcalculatetoutiao" />
+
+
+	<mvc:resources location="/resources/" mapping="/resources/**" />
+
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver"
+		p:prefix="/WEB-INF/pages/" p:suffix=".jsp" />
+
+	<context:component-scan base-package="com.panfeng.web.wearable.resource.controller" />
+
+	<context:annotation-config />
+
+	<mvc:annotation-driven />
+
+	<mvc:interceptors>
+		<mvc:interceptor>
+			<mvc:mapping path="/**" />
+			<mvc:exclude-mapping path="/resources/**" />
+			<bean class="com.panfeng.web.wearable.filter.TokenInterceptor" />
+		</mvc:interceptor>
+
+		<mvc:interceptor>
+			<mvc:mapping path="/order/submit" />
+			<mvc:mapping path="/phone/submit" />
+			<bean class="com.panfeng.web.wearable.filter.ValidateTokenInterceptor" />
+		</mvc:interceptor>
+
+		<mvc:interceptor>
+			<mvc:mapping path="/phone/user/**" />
+			<bean class="com.panfeng.web.wearable.filter.UserInfoInterceptor" />
+		</mvc:interceptor>
+
+		<!-- 视频管家登陆拦截器 -->
+		<mvc:interceptor>
+			<mvc:mapping path="/mgr/**" />
+			<mvc:exclude-mapping path="/mgr/login" />
+			<mvc:exclude-mapping path="/mgr/doLogin" />
+			<mvc:exclude-mapping path="/mgr/thirdLogin" />
+			<mvc:exclude-mapping path="/mgr/bind" />
+			<mvc:exclude-mapping path="/mgr/loginout" />
+			<mvc:exclude-mapping path="/mgr/doc/video/**" />
+			<mvc:exclude-mapping path="/mgr/recover/**" />
+			<bean class="com.panfeng.web.wearable.filter.ManagerInterceptor" />
+		</mvc:interceptor>
+	</mvc:interceptors>
+</beans>

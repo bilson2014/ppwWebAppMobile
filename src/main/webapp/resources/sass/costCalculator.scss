@@ -1,0 +1,1471 @@
+@import "common";
+@import "buttons";
+@import "video";
+@import "flexslider";
+@import "compass/typography/text/ellipsis";
+body {
+    background: #FDFFFF;
+}
+
+img {
+    vertical-align: top !important;
+}
+
+.page {
+    top: 0 !important;
+    padding: 0.5rem;
+}
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+.banner {
+    background: url(/resources/images/cost/cBanner.jpg) no-repeat;
+    background-size: 100% 100%;
+    text-align: center;
+    .bLogoDiv {
+        width: 100%;
+        text-align: left;
+    }
+    .bLogo {
+        width: 3.5rem;
+    }
+    .bWord {
+        width: 8.73rem;
+        margin-top: 2.5rem;
+    }
+    .bInfo {
+        width: 8.91rem;
+        margin-top: 0.6rem;
+        margin-bottom: 0.5rem;
+    }
+    .bBtn {
+        width: 5.16rem;
+    }
+}
+
+.step2 {
+    background: url(/resources/images/cost/step2B.jpg) no-repeat;
+    background-size: 100% 100%;
+}
+
+.step2TB {
+    width: 100%;
+    height: 6.25rem;
+    background: url(/resources/images/cost/step2TB.png) no-repeat;
+    background-size: 100% 6.25rem;
+}
+
+.step2A {
+    div {
+        margin: 0 auto;
+        width: 7.45rem;
+        height: 1.35rem;
+        background: url(/resources/images/cost/step2A.png) no-repeat;
+        background-size: 7.45rem 1.35rem;
+    }
+    .red-2 {
+        width: 7.45rem;
+        height: 1.35rem;
+        background: url(/resources/images/cost/step2AR.png) no-repeat !important;
+        background-size: 7.45rem 1.35rem !important;
+    }
+    margin-bottom: 0.2rem;
+}
+
+.step2B {
+    div {
+        margin: 0 auto;
+        width: 7.45rem;
+        height: 1.35rem;
+        background: url(/resources/images/cost/step2B.png) no-repeat;
+        background-size: 7.45rem 1.35rem;
+    }
+    .red-2 {
+        width: 7.45rem;
+        height: 1.35rem;
+        background: url(/resources/images/cost/step2BR.png) no-repeat !important;
+        background-size: 7.45rem 1.35rem !important;
+    }
+    margin-bottom: 0.2rem;
+}
+
+.step2C {
+    div {
+        margin: 0 auto;
+        width: 7.45rem;
+        height: 1.35rem;
+        background: url(/resources/images/cost/step2C.png) no-repeat;
+        background-size: 7.45rem 1.35rem;
+    }
+    .red-2 {
+        width: 7.45rem;
+        height: 1.35rem;
+        background: url(/resources/images/cost/step2CR.png) no-repeat !important;
+        background-size: 7.45rem 1.35rem !important;
+    }
+    margin-bottom: 0.2rem;
+}
+
+.step2D {
+    div {
+        margin: 0 auto;
+        width: 7.45rem;
+        height: 1.35rem;
+        background: url(/resources/images/cost/step2D.png) no-repeat;
+        background-size: 7.45rem 1.35rem;
+    }
+    .red-2 {
+        width: 7.45rem;
+        height: 1.35rem;
+        background: url(/resources/images/cost/step2DR.png) no-repeat !important;
+        background-size: 7.45rem 1.35rem !important;
+    }
+    margin-bottom: 0.2rem;
+}
+
+.step2E {
+    div {
+        margin: 0 auto;
+        width: 7.45rem;
+        height: 1.35rem;
+        background: url(/resources/images/cost/step2E.png) no-repeat;
+        background-size: 7.45rem 1.35rem;
+    }
+    .red-2 {
+        width: 7.45rem;
+        height: 1.35rem;
+        background: url(/resources/images/cost/step2ER.png) no-repeat !important;
+        background-size: 7.45rem 1.35rem !important;
+    }
+    margin-bottom: 0.2rem;
+}
+
+.step2F {
+    div {
+        margin: 0 auto;
+        width: 7.45rem;
+        height: 1.35rem;
+        background: url(/resources/images/cost/step2F.png) no-repeat;
+        background-size: 7.45rem 1.35rem;
+    }
+    .red-2 {
+        width: 7.45rem;
+        height: 1.35rem;
+        background: url(/resources/images/cost/step2FR.png) no-repeat !important;
+        background-size: 7.45rem 1.35rem !important;
+    }
+}
+
+.step3 {
+    background: url(/resources/images/cost/step3B.jpg) no-repeat;
+    background-size: 100% 100%;
+}
+
+.step3Q {
+    margin: 0 auto;
+    width: 9.61rem;
+    height: 1rem;
+    background: url(/resources/images/cost/step3Q.png) no-repeat;
+    background-size: 9.61rem 1rem;
+    margin-top: 0.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.step3TB {
+    width: 100%;
+    height: 7.74rem;
+    background: url(/resources/images/cost/step3TB.png) no-repeat;
+    background-size: 100% 7.74rem;
+}
+
+.step3A {
+    div {
+        margin: 0 auto;
+        width: 7.45rem;
+        height: 1.35rem;
+        background: url(/resources/images/cost/step3A.png) no-repeat;
+        background-size: 7.45rem 1.35rem;
+    }
+    .red-3 {
+        width: 7.45rem;
+        height: 1.35rem;
+        background: url(/resources/images/cost/step3AR.png) no-repeat !important;
+        background-size: 7.45rem 1.35rem !important;
+    }
+    margin-bottom: 0.1rem;
+}
+
+.step3B {
+    div {
+        margin: 0 auto;
+        width: 7.45rem;
+        height: 1.35rem;
+        background: url(/resources/images/cost/step3B.png) no-repeat;
+        background-size: 7.45rem 1.35rem;
+    }
+    .red-3 {
+        width: 7.45rem;
+        height: 1.35rem;
+        background: url(/resources/images/cost/step3BR.png) no-repeat !important;
+        background-size: 7.45rem 1.35rem !important;
+    }
+    margin-bottom: 0.1rem;
+}
+
+.step3C {
+    div {
+        margin: 0 auto;
+        width: 7.45rem;
+        height: 1.35rem;
+        background: url(/resources/images/cost/step3C.png) no-repeat;
+        background-size: 7.45rem 1.35rem;
+    }
+    .red-3 {
+        width: 7.45rem;
+        height: 1.35rem;
+        background: url(/resources/images/cost/step3CR.png) no-repeat !important;
+        background-size: 7.45rem 1.35rem !important;
+    }
+    margin-bottom: 0.1rem;
+}
+
+.step3AI {
+    margin: 0 auto;
+    width: 5.01rem;
+    height: 0.41rem;
+    background: url(/resources/images/cost/step3AI.png) no-repeat !important;
+    background-size: 5.01rem 0.41rem !important;
+    margin-bottom: .2rem;
+}
+
+.step3BI {
+    margin: 0 auto;
+    width: 5.85rem;
+    height: 0.4rem;
+    background: url(/resources/images/cost/step3BI.png) no-repeat !important;
+    background-size: 5.85rem 0.4rem !important;
+    margin-bottom: .2rem;
+}
+
+.step3CI {
+    margin: 0 auto;
+    width: 5.85rem;
+    height: 0.4rem;
+    background: url(/resources/images/cost/step3CI.png) no-repeat !important;
+    background-size: 5.85rem 0.4rem !important;
+    margin-bottom: .2rem;
+}
+
+//step4
+.step4 {
+    background: url(/resources/images/cost/step4B.jpg) no-repeat;
+    background-size: 100% 100%;
+}
+
+.step4Q {
+    margin: 0 auto;
+    width: 9.12rem;
+    height: 2.08rem;
+    background: url(/resources/images/cost/step4Q.png) no-repeat;
+    background-size: 9.12rem 2.08rem;
+    margin-top: 0.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.step4TB {
+    width: 100%;
+    height: 7.2rem;
+    background: url(/resources/images/cost/step4TB.png) no-repeat;
+    background-size: 100% 7.2rem;
+}
+
+.step4A {
+    div {
+        margin: 0 auto;
+        width: 7.45rem;
+        height: 1.35rem;
+        background: url(/resources/images/cost/step4A.png) no-repeat;
+        background-size: 7.45rem 1.35rem;
+    }
+    .red-4 {
+        width: 7.45rem;
+        height: 1.35rem;
+        background: url(/resources/images/cost/step4AR.png) no-repeat !important;
+        background-size: 7.45rem 1.35rem !important;
+    }
+    margin-bottom: 0.1rem;
+}
+
+.step4B {
+    div {
+        margin: 0 auto;
+        width: 7.45rem;
+        height: 1.35rem;
+        background: url(/resources/images/cost/step4B.png) no-repeat;
+        background-size: 7.45rem 1.35rem;
+    }
+    .red-4 {
+        width: 7.45rem;
+        height: 1.35rem;
+        background: url(/resources/images/cost/step4BR.png) no-repeat !important;
+        background-size: 7.45rem 1.35rem !important;
+    }
+    margin-bottom: 0.1rem;
+}
+
+.step4C {
+    div {
+        margin: 0 auto;
+        width: 7.45rem;
+        height: 1.35rem;
+        background: url(/resources/images/cost/step4C.png) no-repeat;
+        background-size: 7.45rem 1.35rem;
+    }
+    .red-4 {
+        width: 7.45rem;
+        height: 1.35rem;
+        background: url(/resources/images/cost/step4CR.png) no-repeat !important;
+        background-size: 7.45rem 1.35rem !important;
+    }
+    margin-bottom: 0.1rem;
+}
+
+.step4AI {
+    margin: 0 auto;
+    width: 4.59rem;
+    height: 0.4rem;
+    background: url(/resources/images/cost/step4AI.png) no-repeat !important;
+    background-size: 4.59rem 0.4rem !important;
+    margin-bottom: 0.2rem;
+}
+
+.step4BI {
+    margin: 0 auto;
+    width: 6.78rem;
+    height: 0.4rem;
+    background: url(/resources/images/cost/step4BI.png) no-repeat !important;
+    background-size: 6.78rem 0.4rem !important;
+    margin-bottom: 0.2rem;
+}
+
+.step4CI {
+    margin: 0 auto;
+    width: 6.27rem;
+    height: 0.4rem;
+    background: url(/resources/images/cost/step4CI.png) no-repeat !important;
+    background-size: 6.24rem 0.4rem !important;
+    margin-bottom: 0.2rem;
+}
+
+//step5
+.step5 {
+    background: url(/resources/images/cost/step4B.jpg) no-repeat;
+    background-size: 100% 100%;
+}
+
+.step5Q {
+    margin: 0 auto;
+    width: 9.98rem;
+    height: 2.08rem;
+    background: url(/resources/images/cost/step5Q.png) no-repeat;
+    background-size: 9.98rem 2.08rem;
+    margin-top: 0.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.step5TB {
+    width: 100%;
+    height: 7.2rem;
+    background: url(/resources/images/cost/step5TB.png) no-repeat;
+    background-size: 100% 7.2rem;
+}
+
+.step5A {
+    div {
+        margin: 0 auto;
+        width: 7.45rem;
+        height: 1.35rem;
+        background: url(/resources/images/cost/step5A.png) no-repeat;
+        background-size: 7.45rem 1.35rem;
+    }
+    .red-5 {
+        width: 7.45rem;
+        height: 1.35rem;
+        background: url(/resources/images/cost/step5AR.png) no-repeat !important;
+        background-size: 7.45rem 1.35rem !important;
+    }
+    margin-bottom: 0.2rem;
+}
+
+.step5B {
+    div {
+        margin: 0 auto;
+        width: 7.45rem;
+        height: 1.35rem;
+        background: url(/resources/images/cost/step5B.png) no-repeat;
+        background-size: 7.45rem 1.35rem;
+    }
+    .red-5 {
+        width: 7.45rem;
+        height: 1.35rem;
+        background: url(/resources/images/cost/step5BR.png) no-repeat !important;
+        background-size: 7.45rem 1.35rem !important;
+    }
+    margin-bottom: 0.2rem;
+}
+
+.step5C {
+    div {
+        margin: 0 auto;
+        width: 7.45rem;
+        height: 1.35rem;
+        background: url(/resources/images/cost/step5C.png) no-repeat;
+        background-size: 7.45rem 1.35rem;
+    }
+    .red-5 {
+        width: 7.45rem;
+        height: 1.35rem;
+        background: url(/resources/images/cost/step5CR.png) no-repeat !important;
+        background-size: 7.45rem 1.35rem !important;
+    }
+    margin-bottom: 0.2rem;
+}
+
+.step5D {
+    div {
+        margin: 0 auto;
+        width: 7.45rem;
+        height: 1.35rem;
+        background: url(/resources/images/cost/step5D.png) no-repeat;
+        background-size: 7.45rem 1.35rem;
+    }
+    .red-5 {
+        width: 7.45rem;
+        height: 1.35rem;
+        background: url(/resources/images/cost/step5DR.png) no-repeat !important;
+        background-size: 7.45rem 1.35rem !important;
+    }
+    margin-bottom: 0.2rem;
+}
+
+//step6
+.step6 {
+    background: url(/resources/images/cost/step6B.jpg) no-repeat;
+    background-size: 100% 100%;
+}
+
+.step6Q {
+    margin: 0 auto;
+    width: 10.3rem;
+    height: 1rem;
+    background: url(/resources/images/cost/step6Q.png) no-repeat;
+    background-size: 10.3rem 1rem;
+    margin-top: 0.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.step6TB {
+    width: 100%;
+    height: 7.2rem;
+    background: url(/resources/images/cost/step6TB.png) no-repeat;
+    background-size: 100% 7.2rem;
+}
+
+.step6A {
+    div {
+        margin: 0 auto;
+        width: 7.45rem;
+        height: 1.35rem;
+        background: url(/resources/images/cost/step6A.png) no-repeat;
+        background-size: 7.45rem 1.35rem;
+    }
+    .red-6 {
+        width: 7.45rem;
+        height: 1.35rem;
+        background: url(/resources/images/cost/step6AR.png) no-repeat !important;
+        background-size: 7.45rem 1.35rem !important;
+    }
+    margin-bottom: 0.2rem;
+}
+
+.step6B {
+    div {
+        margin: 0 auto;
+        width: 7.45rem;
+        height: 1.35rem;
+        background: url(/resources/images/cost/step6B.png) no-repeat;
+        background-size: 7.45rem 1.35rem;
+    }
+    .red-6 {
+        width: 7.45rem;
+        height: 1.35rem;
+        background: url(/resources/images/cost/step6BR.png) no-repeat !important;
+        background-size: 7.45rem 1.35rem !important;
+    }
+    margin-bottom: 0.2rem;
+}
+
+.step6C {
+    div {
+        margin: 0 auto;
+        width: 7.45rem;
+        height: 1.35rem;
+        background: url(/resources/images/cost/step6C.png) no-repeat;
+        background-size: 7.45rem 1.35rem;
+    }
+    .red-6 {
+        width: 7.45rem;
+        height: 1.35rem;
+        background: url(/resources/images/cost/step6CR.png) no-repeat !important;
+        background-size: 7.45rem 1.35rem !important;
+    }
+    margin-bottom: 0.2rem;
+}
+
+.step6D {
+    div {
+        margin: 0 auto;
+        width: 7.45rem;
+        height: 1.35rem;
+        background: url(/resources/images/cost/step6D.png) no-repeat;
+        background-size: 7.45rem 1.35rem;
+    }
+    .red-6 {
+        width: 7.45rem;
+        height: 1.35rem;
+        background: url(/resources/images/cost/step6DR.png) no-repeat !important;
+        background-size: 7.45rem 1.35rem !important;
+    }
+    margin-bottom: 0.2rem;
+}
+
+.stepFinish {
+    margin: 0 auto;
+    width: 8.35rem;
+    height: 1.79rem;
+    background: url(/resources/images/cost/tepFinish.png) no-repeat;
+    background-size: 8.35rem 1.79rem;
+}
+
+// .stepBtn-1,
+// .stepBtn-2,
+// .stepBtn-3,
+// .stepBtn-4,
+// .stepBtn-5,
+// .stepBtn-6 {
+//     width: 0.5rem;
+//     height: 0.3rem;
+//     color: white;
+//     background: $gray;
+//     text-align: center;
+//     line-height: 0.3rem;
+//     font-size: 0.3rem;
+//     margin-right: 30px;
+//     cursor: pointer;
+// }
+// .red-1,
+// .red-2,
+// .red-3,
+// .red-4,
+// .red-5,
+// .red-6 {
+//     background: $red-base;
+// }
+div {
+    font-size: 0.3rem;
+}
+
+.swiper-slide {
+    font-size: 0;
+}
+
+.dsdd {
+    font-size: 1rem !important;
+    color: blue !important;
+}
+
+.stepBtn-6 {
+    color: green;
+}
+
+.test {
+    -webkit-animation: hideShow 1s infinite linear;
+    -moz-animation: hideShow 1s infinite linear;
+    -o-animation: hideShow 1s infinite linear;
+    animation: hideShow 1s infinite linear;
+}
+
+@-webkit-keyframes hideShow {
+    0% {
+        top: 0px;
+        opacity: 0;
+    }
+    100% {
+        top: -0.3rem;
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes hideShow {
+    0% {
+        top: 0px;
+        opacity: 0;
+    }
+    100% {
+        top: -0.3rem;
+        opacity: 1;
+    }
+}
+
+@-o-keyframes hideShow {
+    0% {
+        top: 0px;
+        opacity: 0;
+    }
+    100% {
+        top: -0.3rem;
+        opacity: 1;
+    }
+}
+
+@keyframes hideShow {
+    0% {
+        top: 0px;
+        opacity: 0;
+    }
+    100% {
+        top: -0.3rem;
+        opacity: 1;
+    }
+}
+
+.spIcon {
+    //bottom: 0.8rem !important;
+}
+
+.icon {
+    position: absolute;
+    bottom: 1.5rem;
+    z-index: 5;
+    width: 100%;
+    text-align: center;
+    img {
+        position: relative;
+        width: 0.62rem;
+        height: 0.66rem;
+        -webkit-animation: hideShow 1s infinite linear;
+        -moz-animation: hideShow 1s infinite linear;
+        -o-animation: hideShow 1s infinite linear;
+        animation: hideShow 1s infinite linear;
+    }
+}
+
+.backGround {
+    width: 100%;
+    height: 100%;
+    /*   background: url(/resources/images/cost/successB.jpg) no-repeat;
+  background-size: 100% 100%; */
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -o-transform: scale(0);
+    transfosrm: scale(0);
+    transition: all 2s ease-in-out .2s !important;
+    -moz-transition: all 2s ease-in-out .2s !important;
+    /* Firefox 4 */
+    -webkit-transition: all 2s ease-in-out .2s !important;
+    /* Safari 和 Chrome */
+    -o-transition: all 2s ease-in-out .2s !important;
+}
+
+.shareWay {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    position: absolute;
+    bottom: -1.5rem;
+    img {
+        width: 4.47rem;
+    }
+}
+
+.priceResult {
+    text-align: center;
+    position: absolute;
+    bottom: 0.2rem;
+    width: 100%;
+    .getPrice {
+        span {
+            font-size: 1rem;
+            color: $gray-dark;
+        }
+    }
+    .priceInfo {
+        img {
+            width: 4.64rem;
+        }
+    }
+    // .reCost {
+    //     margin-top: 0.3rem;
+    //     font-size: 0.2rem;
+    //     color: $red-base;
+    //     text-decoration: underline;
+    //     img {
+    //         width: 2rem;
+    //     }
+    // }
+}
+
+.shareTo {
+    width: 5.54rem !important; 
+    margin: 0 auto;
+    position: relative;
+    bottom:-3rem;
+    img {
+        width: 100%;
+    }
+}
+
+.time{
+     width: 3.36rem !important; 
+    margin: 0 auto;
+    img{
+        width: 100%;
+    }
+}
+
+
+.tools {
+    position: absolute;
+    bottom: 0.5rem;
+    text-align: center;
+    width: 100%;
+    img {
+        width: 2rem;
+        @media screen and (max-width: 360px) {
+            width: 2.2rem;
+        }
+        @media screen and (min-width: 360px) and (max-width: 390px) {
+            width: 2.5rem;
+        }
+        @media screen and (min-width: 391px) {
+            width: 2.5rem;
+        }
+    }
+    .share {
+        position: absolute;
+        left: 0.7rem;
+    }
+    .img3 {
+        position: absolute !important;
+        right: 0.7rem !important;
+    }
+}
+
+.-mob-share-ui-button {
+    padding: 0px !important;
+    background: transparent !important;
+}
+
+.modalShow {
+    background: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 5;
+    top: 0px;
+    display: none;
+}
+
+.sOrderEnd {
+    left: 50% !important;
+}
+
+.sOrder {
+    width: 10.20rem;
+    height: 10.54rem;
+    position: absolute;
+    top: 50%;
+    left: 200%;
+    margin-top: -5.27rem;
+    margin-left: -5.10rem;
+    background: url(/resources/images/cost/sOrder.png) no-repeat;
+    background-size: 10.20rem 10.54rem;
+    transition: all 1.5s ease-in-out .2s !important;
+    -moz-transition: all 1.5s ease-in-out .2s !important;
+    /* Firefox 4 */
+    -webkit-transition: all 1.5s ease-in-out .2s !important;
+    /* Safari 和 Chrome */
+    -o-transition: all 1.5s ease-in-out .2s !important;
+}
+
+.cardBack {
+    background: white;
+}
+
+.phoneCard {
+    width: 10.52rem;
+    height: 10.32rem;
+    border-radius: 6px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -5.16rem;
+    margin-left: -5.26rem;
+    .errorInfo {
+        font-size: 0.36rem;
+        color: $red-base;
+        width: 7.96rem;
+        margin: 0 auto;
+        text-align: left;
+        margin-top: 0.3rem;
+    }
+    .codePhone {
+        margin-top: 10px !important;
+    }
+    .errorPhoneReset {
+        bottom: 45% !important;
+    }
+    .errorPhone {
+        width: 7.96rem;
+        height: 2rem;
+        margin: 0 auto;
+        margin-top: 0.8rem;
+        position: relative;
+    }
+    button {
+        width: 3rem;
+        font-size: 0.42rem;
+        position: absolute;
+        right: 0px;
+        bottom: 0px;
+        background: transparent;
+        border: none;
+        color: $red-base;
+        border: 1px solid $gray-dark;
+        height: 1.5rem;
+        line-height: 1rem;
+        top: 0.2rem;
+        outline: none;
+        border-radius: 6px;
+        text-align: center;
+        &:hover {
+            border: 1px solid $gray-light;
+        }
+    }
+    input {
+        width: 7.96rem;
+        height: 2rem;
+        text-align: left;
+        color: $gray-dark;
+        font-size: 0.42rem;
+        line-height: 2rem;
+        border: none;
+        border-bottom: 1px solid #d1d1d1;
+        outline: none;
+        border-radius: 0 !important;
+        &:focus {
+            border-color: #d1d1d1 !important;
+        }
+    }
+    .toOrderDiv {
+        position: absolute;
+        bottom: 1.5rem;
+        text-align: center;
+        width: 100%;
+    }
+    .toOrder {
+        width: 8.35rem;
+        height: 1.79rem;
+    }
+    .close {
+        width: .56rem;
+        height: .56rem;
+        position: absolute;
+        top: 0.6rem;
+        right: 0.6rem;
+    }
+}
+
+input {
+    -moz-appearance: button;
+    /* Firefox */
+    -webkit-appearance: button;
+    /* Safari 和 Chrome */
+}
+
+.sCode {
+    width: 7.2rem;
+    height: 7.2rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -3.6rem;
+    margin-left: -3.6rem;
+}
+
+.upProgress {
+    font-size: $font-size-sm;
+    color: $gray;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.progress {
+    height: 10px;
+    border-radius: 90px !important;
+    position: relative;
+    top: 6.5rem;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.progress-bar {
+    width: 0%;
+    background-color: #337ab7;
+    background-image: none !important;
+    transition: all 2s ease-in-out .2s !important;
+    -moz-transition: all 2s ease-in-out .2s !important;
+    /* Firefox 4 */
+    -webkit-transition: all 2s ease-in-out .2s !important;
+    /* Safari 和 Chrome */
+    -o-transition: all 2s ease-in-out .2s !important;
+}
+
+.proWidth {
+    width: 100% !important;
+}
+
+#showOrder {
+    transition: all 2s ease-in-out .2s !important;
+    -moz-transition: all 2s ease-in-out .2s !important;
+    /* Firefox 4 */
+    -webkit-transition: all 2s ease-in-out .2s !important;
+    /* Safari 和 Chrome */
+    -o-transition: all 2s ease-in-out .2s !important;
+}
+
+.scaleSmall {
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -o-transform: scale(0);
+    transform: scale(0);
+}
+
+.scaleBig {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+}
+
+.f2 {
+    width: 100%;
+    height: 6.4rem;
+    background: url(/resources/images/cost/f2.jpg) no-repeat;
+    background-size: 100% 6.4rem;
+    position: relative;
+}
+
+.showWeixin {
+    width: 100%;
+    text-align: center;
+    text-align: right;
+    position: relative;
+    right: 1rem;
+    top: 1rem;
+    img {
+        width: 8.36rem;
+    }
+}
+
+// .animTop {
+//     top: 0 !important;
+//     opacity: 1 !important;
+// }
+// .anA {
+//     position: relative;
+//     top: 5rem;
+//     opacity: 0;
+//     transition: all .5s ease-in-out .2s !important;
+//     -moz-transition: all .5s ease-in-out .2s !important;
+//     /* Firefox 4 */
+//     -webkit-transition: all .5s ease-in-out .2s !important;
+//     /* Safari 和 Chrome */
+//     -o-transition: all .5s ease-in-out .2s !important;
+// }
+// .anB {
+//     position: relative;
+//     top: 5rem;
+//     transition: all .8s ease-in-out .2s !important;
+//     -moz-transition: all .8s ease-in-out .2s !important;
+//     /* Firefox 4 */
+//     -webkit-transition: all .8s ease-in-out .2s !important;
+//     /* Safari 和 Chrome */
+//     -o-transition: all .8s ease-in-out .2s !important;
+// }
+// .anC {
+//     position: relative;
+//     top: 5rem;
+//     transition: all 1.1s ease-in-out .2s !important;
+//     -moz-transition: all 1.1s ease-in-out .2s !important;
+//     /* Firefox 4 */
+//     -webkit-transition: all 1.1s ease-in-out .2s !important;
+//     /* Safari 和 Chrome */
+//     -o-transition: all 1.1s ease-in-out .2s !important;
+// }
+// .anD {
+//     position: relative;
+//     top: 5rem;
+//     transition: all 1.3s ease-in-out .2s !important;
+//     -moz-transition: all 1.3s ease-in-out .2s !important;
+//     /* Firefox 4 */
+//     -webkit-transition: all 1.3s ease-in-out .2s !important;
+//     /* Safari 和 Chrome */
+//     -o-transition: all 1.3s ease-in-out .2s !important;
+// }
+// .anE {
+//     position: relative;
+//     top: 5rem;
+//     transition: all 1.5s ease-in-out .2s !important;
+//     -moz-transition: all 1.5s ease-in-out .2s !important;
+//     /* Firefox 4 */
+//     -webkit-transition: all 1.5s ease-in-out .2s !important;
+//     /* Safari 和 Chrome */
+//     -o-transition: all 1.5s ease-in-out .2s !important;
+// }
+// .anF {
+//     position: relative;
+//     top: 5rem;
+//     transition: all 1.7s ease-in-out .2s !important;
+//     -moz-transition: all 1.7s ease-in-out .2s !important;
+//     /* Firefox 4 */
+//     -webkit-transition: all 1.7s ease-in-out .2s !important;
+//     /* Safari 和 Chrome */
+//     -o-transition: all 1.7s ease-in-out .2s !important;
+// }
+.noInfo {
+    width: 7.2rem;
+    height: 7.2rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -3.6rem;
+    margin-left: -3.6rem;
+    background: white;
+    border-radius: 6px;
+    .noInfoF {
+        color: $gray-dark;
+        font-size: 0.5rem;
+        width: 100%;
+        text-align: center;
+        margin-top: 2rem;
+    }
+    .justDoIt {
+        width: 3.5rem;
+        height: 1rem;
+        line-height: 1rem;
+        text-align: center;
+        color: white;
+        font-size: 0.4rem;
+        background: $red-base;
+        bottom: 1.5rem;
+        margin: 0 auto;
+        margin-top: 1.5rem;
+        border-radius: 6px;
+    }
+}
+
+//anmion
+.bannerAni {
+    position: relative;
+    -webkit-animation: ba .5s infinite linear;
+    -moz-animation: ba .5s infinite linear;
+    -o-animation: ba .5s infinite linear;
+    animation: ba .5s infinite linear;
+}
+
+@-webkit-keyframes ba {
+    0% {
+        top: -.5rem;
+    }
+    50% {
+        top: 0rem;
+    }
+    100% {
+        top: -.5rem;
+    }
+}
+
+@-moz-keyframes ba {
+    0% {
+        top: -.5rem;
+    }
+    50% {
+        top: 0rem;
+    }
+    100% {
+        top: -.5rem;
+    }
+}
+
+@-o-keyframes ba {
+    0% {
+        top: -.5rem;
+    }
+    50% {
+        top: 0rem;
+    }
+    100% {
+        top: -.5rem;
+    }
+}
+
+@keyframes ba {
+    0% {
+        top: -.5rem;
+    }
+    50% {
+        top: 0rem;
+    }
+    100% {
+        top: -.5rem;
+    }
+}
+
+.step2Ani {
+    position: absolute;
+    top: 0rem;
+    left: 0rem;
+    z-index: 1;
+    -webkit-animation: plant .6s infinite linear;
+    -moz-animation: plant .6s infinite linear;
+    -o-animation: plant .6s infinite linear;
+    animation: plant .6s infinite linear;
+}
+
+@-webkit-keyframes plant {
+    0% {
+        top: -0.5rem;
+        left: 0.5rem
+    }
+    50% {
+        top: 0rem;
+        left: 0rem;
+    }
+    100% {
+        top: -0.5rem;
+        left: 0.5rem
+    }
+}
+
+@-moz-keyframes plant {
+    0% {
+        top: -0.5rem;
+        left: 0.5rem
+    }
+    50% {
+        top: 0rem;
+        left: 0rem;
+    }
+    100% {
+        top: -0.5rem;
+        left: 0.5rem
+    }
+}
+
+@-o-keyframes plant {
+    0% {
+        top: -0.5rem;
+        left: 0.5rem
+    }
+    50% {
+        top: 0rem;
+        left: 0rem;
+    }
+    100% {
+        top: -0.5rem;
+        left: 0.5rem
+    }
+}
+
+@keyframes plant {
+    0% {
+        top: -0.5rem;
+        left: 0.5rem
+    }
+    50% {
+        top: 0rem;
+        left: 0rem;
+    }
+    100% {
+        top: -0.5rem;
+        left: 0.5rem
+    }
+}
+
+.rotate {
+    -webkit-animation: rotate .6s infinite linear;
+    -moz-animation: rotate .6s infinite linear;
+    -o-animation: rotate .6s infinite linear;
+    animation: rotate .6s infinite linear;
+}
+
+@-webkit-keyframes rotate {
+   0% {
+        -webkit-transform: rotate(8deg);
+        -moz-transform: rotate(8deg);
+        -o-transform: rotate(8deg);
+        transform: rotate(8deg);
+    }
+    50% {
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+       -webkit-transform: rotate(8deg);
+        -moz-transform: rotate(8deg);
+        -o-transform: rotate(8deg);
+        transform: rotate(8deg);
+    }
+}
+
+@-moz-keyframes rotate {
+    0% {
+        -webkit-transform: rotate(8deg);
+        -moz-transform: rotate(8deg);
+        -o-transform: rotate(8deg);
+        transform: rotate(8deg);
+    }
+    50% {
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+       -webkit-transform: rotate(8deg);
+        -moz-transform: rotate(8deg);
+        -o-transform: rotate(8deg);
+        transform: rotate(8deg);
+    }
+}
+
+@-o-keyframes rotate {
+     0% {
+        -webkit-transform: rotate(8deg);
+        -moz-transform: rotate(8deg);
+        -o-transform: rotate(8deg);
+        transform: rotate(8deg);
+    }
+    50% {
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+       -webkit-transform: rotate(8deg);
+        -moz-transform: rotate(8deg);
+        -o-transform: rotate(8deg);
+        transform: rotate(8deg);
+    }
+}
+
+@keyframes rotate {
+    0% {
+        -webkit-transform: rotate(8deg);
+        -moz-transform: rotate(8deg);
+        -o-transform: rotate(8deg);
+        transform: rotate(8deg);
+    }
+    50% {
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+       -webkit-transform: rotate(8deg);
+        -moz-transform: rotate(8deg);
+        -o-transform: rotate(8deg);
+        transform: rotate(8deg);
+    }
+}
+
+.step5L {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    -webkit-animation: step5L .6s infinite linear;
+    -moz-animation: step5L .6s infinite linear;
+    -o-animation: step5L .6s infinite linear;
+    animation: step5L .6s infinite linear;
+}
+
+@-webkit-keyframes step5L {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes step5L {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes step5L {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes step5L {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.tb {
+    position: relative;
+    -webkit-animation: tb 1s infinite linear;
+    -moz-animation: tb 1s infinite linear;
+    -o-animation: tb 1s infinite linear;
+    animation: tb 1s infinite linear;
+}
+
+@-webkit-keyframes tb {
+    0% {
+        left: -0.3rem
+    }
+    50% {
+        left: 0rem;
+    }
+    100% {
+        left: -0.3rem
+    }
+}
+
+@-moz-keyframes tb {
+    0% {
+        left: -0.3rem
+    }
+    50% {
+        left: 0rem;
+    }
+    100% {
+        left: -0.3rem
+    }
+}
+
+@-o-keyframes tb {
+    0% {
+        left: -0.3rem
+    }
+    50% {
+        left: 0rem;
+    }
+    100% {
+        left: -0.3rem
+    }
+}
+
+@keyframes tb {
+    0% {
+        left: -0.3rem
+    }
+    50% {
+        left: 0rem;
+    }
+    100% {
+        left: -0.3rem
+    }
+}
+
+.tt {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+    -webkit-animation: tt 1s infinite linear;
+    -moz-animation: tt 1s infinite linear;
+    -o-animation: tt 1s infinite linear;
+    animation: tt 1s infinite linear;
+}
+
+@-webkit-keyframes tt {
+    0% {
+        left: 0.5rem
+    }
+    50% {
+        left: 0rem;
+    }
+    100% {
+        left: 0.5rem
+    }
+}
+
+@-moz-keyframes tt {
+    0% {
+        left: 0.5rem
+    }
+    50% {
+        left: 0rem;
+    }
+    100% {
+        left: 0.5rem
+    }
+}
+
+@-o-keyframes tt {
+    0% {
+        left: 0.5rem
+    }
+    50% {
+        left: 0rem;
+    }
+    100% {
+        left: 0.5rem
+    }
+}
+
+@keyframes tt {
+    0% {
+        left: 0.5rem
+    }
+    50% {
+        left: 0rem;
+    }
+    100% {
+        left: 0.5rem
+    }
+}
