@@ -100,7 +100,6 @@ public class ProviderController extends BaseController {
 	static String REGISTER_KET = "register";
 
 	// 手机端项目主页
-
 	@RequestMapping("/index")
 	public ModelAndView goToIndex(ModelMap modelMap, HttpServletRequest request) {
 		SessionInfo sessionInfo = getCurrentInfo(request);
