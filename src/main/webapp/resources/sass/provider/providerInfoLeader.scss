@@ -4,18 +4,213 @@
 @import "bootstrap-grid";
 @import "fontSize";
 @import "variables";
+@import "common_portal";
 @import "compass/typography/text/ellipsis";
 $header-height-460: 48px; // 头部高度（分辨路低于460
 $header-height-top: 13px; // 头部top
-
-input{
-      -webkit-appearance: none;
+body {
+    background: $gray-dark;
 }
 
-textarea{
-      -webkit-appearance: none;
+input {
+    -webkit-appearance: none;
 }
-.headerNew {
+
+textarea {
+    -webkit-appearance: none;
+}
+
+
+.errorDiv {
+    height: 1.3rem;
+    width: 100%;
+    text-align: center;
+    color: white;
+    background: $red-base;
+    font-size: 0.42rem;
+    position: fixed;
+    top: 1.3rem;
+    line-height: 1.3rem;
+    z-index: 20;
+}
+
+
+     //下单成功
+        .model {
+            background-color: rgba(0, 0, 0, 0.7);
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            z-index: 20;
+            .success {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                margin-top: -4.5rem;
+                margin-left: -4.5rem;
+                width: 9rem;
+                height: 9rem;
+                background: white;
+                text-align: center;
+                border-radius: 18px;
+                img {
+                    width: 2.4rem;
+                    margin-top: 1.2rem;
+                }
+                a {
+                    color: $red-base !important;
+                }
+                div:nth-child(2) {
+                    color: $gray-dark;
+                    font-size: 0.4rem;
+                    margin-top: 0.6rem;
+                    margin-bottom: 0.4rem;
+                }
+                div:nth-child(3) {
+                    color: $gray-light;
+                    font-size: 0.34rem;
+                    margin-bottom: 1rem;
+                }
+                div:nth-child(4) {
+                    color: white;
+                    font-size: 0.36rem;
+                    width: 4rem;
+                    height: 1rem;
+                    line-height: 1rem;
+                    text-align: center;
+                    border-radius: 100px;
+                    background: $red-base;
+                    box-shadow: 0 4px 8px 0;
+                    margin: 0 auto;
+                }
+            }
+        }
+
+
+
+.stepTopDiv{
+    width: 9rem;
+    margin: 0 auto;
+    margin-top: 1.6rem;
+    font-size: 0;
+}
+
+
+.stepOne {
+    width: 9rem;
+    margin: 0 auto;
+    font-size: 0;
+}
+
+.stepTwo {
+    width: 9rem;
+    margin: 0 auto;
+    font-size: 0;
+}
+
+.titleTop {
+    width: 100%;
+    height: 1rem;
+    line-height: 1rem;
+    border-bottom: 1px solid $gray-light;
+    color: #e3e3e3;
+    font-size: 0.36rem;
+    text-align: left;
+    margin-bottom: 0.6rem;
+    span {
+        color: $red-base;
+        position: relative;
+        top: 0.05rem;
+        margin-right: 0.5rem;
+    }
+}
+
+.area {
+    div,
+    input {
+        display: inline-block;
+        vertical-align: top !important;
+        position: relative;
+        top: 0.2rem;
+    }
+    textarea {
+        width: 5.8rem;
+        color: $border-line;
+        font-size: 0.34rem;
+        height: 2.7rem;
+        border: 1px solid $border-line;
+        padding-left: 5px;
+        border-radius: 8px;
+        background: transparent;
+        border-radius: 4px;
+        background: none;
+        padding-left: 10px;
+        color: $border-line;
+        font-size: 0.34rem;
+        resize: none;
+        line-height: 20px;
+    }
+}
+
+.item {
+    position: relative;
+    margin-bottom: 0.4rem;
+    padding-left: 0.7rem;
+    div,
+    input {
+        display: inline-block;
+        vertical-align: middle;
+    }
+    div {
+        width: 2rem;
+        color: $border-line;
+        font-size: 0.34rem;
+    }
+    input {
+        width: 5.8rem;
+        color: $border-line;
+        font-size: 0.34rem;
+        height: 0.9rem;
+        border: 1px solid $border-line;
+        padding-left: 5px;
+        border-radius: 4px;
+        background: transparent;
+    }
+}
+
+.nextBtn {
+    width: 8rem;
+    height: 1rem;
+    color: white;
+    font-size: 0.36rem;
+    border-radius: 100px;
+    background: $red-base;
+    text-align: center;
+    line-height: 1rem;
+    position: absolute;
+    bottom: 2rem;
+    left:50%;
+    margin-left: -4rem;
+
+}
+
+.up {
+    position: absolute;
+    top: 0;
+    right: 0.5rem;
+    width: 0.9rem !important;
+    height: 0.9rem;
+    border-left: 1px solid $border-line;
+    img {
+        width: 0.7rem;
+        position: relative;
+        top: 0.1rem;
+        left: 0.05rem;
+    }
+}
+
+
+/* .headerNew {
     position: fixed;
     top: 0px;
     width: 100%;
@@ -84,7 +279,7 @@ textarea{
 }
 
 .step {
-    margin-top:40px;
+    margin-top: 40px;
     ul {
         text-align: center;
         img {
@@ -96,7 +291,6 @@ textarea{
         }
         .step-three-title {
             color: $gray;
-            
             font-size: $font-size;
         }
         .stepThreeLi {
@@ -184,8 +378,7 @@ textarea{
         color: $gray-dark;
         font-size: $font-size-base;
     }
-
-    .up{
+    .up {
         background: none;
         height: 20px;
         width: 20px;
@@ -196,15 +389,14 @@ textarea{
             width: 20px;
         }
     }
-
-        .down{
-            height: 25px;
-            width: 23px;
-            border-left: 1px solid $border-line;
-            position: relative;
-            left: 73%;
-            left: calc(100% - 38px);
-            top: -31px;
+    .down {
+        height: 25px;
+        width: 23px;
+        border-left: 1px solid $border-line;
+        position: relative;
+        left: 73%;
+        left: calc(100% - 38px);
+        top: -31px;
         img {
             width: 20px;
             position: relative;
@@ -212,7 +404,6 @@ textarea{
             top: 5px;
         }
     }
-
     // .down {
     //     background: white;
     //     border-left: 1px solid $border-line;
@@ -267,25 +458,21 @@ textarea{
         width: calc(100% - 105px);
         height: 30px;
         display: inline-block;
-
-      
-      .imgUD{
-        width:20px;
-        position: absolute;
-        left: 77%;
-        left: calc(90% - 33px);
-        top:-30px;
-      }
-
-    .imgUU{
-        width:16px;
-        height: 9px;
-        position: absolute;
-        top:8px;
-        left: 77%;
-        left: calc(90% - 10px);
-      }
-
+        .imgUD {
+            width: 20px;
+            position: absolute;
+            left: 77%;
+            left: calc(90% - 33px);
+            top: -30px;
+        }
+        .imgUU {
+            width: 16px;
+            height: 9px;
+            position: absolute;
+            top: 8px;
+            left: 77%;
+            left: calc(90% - 10px);
+        }
         .ul-option-source {
             text-align: center;
             line-height: 20px;
@@ -295,10 +482,10 @@ textarea{
             z-index: 999;
             border: 1px solid $border-line;
             background-color: #fff;
-            img{
-              width: 10px;
-              height: 10px;
-              background: red;
+            img {
+                width: 10px;
+                height: 10px;
+                background: red;
             }
             li {
                 border-bottom: 1px solid $border-line;
@@ -366,7 +553,7 @@ textarea{
 }
 
 .bottomBot {
-    width:90%;
+    width: 90%;
     height: 60px;
     padding-bottom: 20px;
     margin: 0 auto;
@@ -416,7 +603,7 @@ textarea{
     font-size: $font-size-base;
     position: relative;
     border-radius: 5px;
-    line-height:40px;
+    line-height: 40px;
     text-align: center;
     cursor: pointer;
     margin: 0 auto;
@@ -461,14 +648,14 @@ $width-lgg: 720px;
     background: url('/resources/images/provder/clicePhone.png');
     background-size: 100% 75px;
     line-height: 25px;
-    margin-top:70px;
+    margin-top: 70px;
     .first {
         color: #fff;
         font-size: $font-size-sm;
-       // width: ($width-lgg)/3;
-        width:33.33%;
-        width:calc(100% / 3);
-        float:left;
+        // width: ($width-lgg)/3;
+        width: 33.33%;
+        width: calc(100% / 3);
+        float: left;
         text-align: center;
         // @media screen and (max-width: 320px) {
         //     width: ($width-min)/3;
@@ -489,3 +676,4 @@ $width-lgg: 720px;
 .step-3 {
     background-position: 0 -50px;
 }
+ */

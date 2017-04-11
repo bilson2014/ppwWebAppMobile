@@ -5,7 +5,7 @@
 <spring:url value="/resources/lib/mMenu/jquery.mmenu.all.css"
 	var="mmenuCss" />
 <spring:url value="/resources/css/portal.css" var="portalCss" />
-
+<spring:url value="/resources/lib/swiper/swiper-3.3.1.min.css" var="swiperCss" />
 <%-- import JS --%>
 <spring:url value="/resources/lib/jquery/jquery-2.0.3.min.js"
 	var="jqueryJs" />
@@ -18,6 +18,9 @@
 <spring:url value="/resources/js/imgLazyLoad.js" var="imgLazyLoadingJs" />
 <spring:url value="/resources/js/common.js" var="commonJs" />
 <spring:url value="/resources/js/portal.js" var="portalJs" />
+<spring:url value="/resources/js/remSet.js" var="remSetJs" />
+<spring:url value="/resources/lib/swiper/swiper.min.js" var="swiperJs" />
+<spring:url value="/resources/lib/jquery/waypoints.min.js" var="waypointsJs" />
 <!-- imgPath -->
 <spring:url value="/resources/images" var="imgPath" />
 <!DOCTYPE html>
@@ -42,276 +45,444 @@
 
 <link rel="shortcut icon" href="${imgPath }/favicon.ico">
 <link rel="stylesheet" href="${mmenuCss }">
-<link rel="stylesheet"
-	href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css">
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css">
 <link rel="stylesheet" href="${portalCss }">
+<link rel="stylesheet" href="${swiperCss }">
+
+
 <!--[if lt IE 9]>
 		<script>window.html5 || document.write('<script src="html5shivJs"><\/script>')</script>
 	<![endif]-->
 
 </head>
-<body >
+<body>
 	<input type="hidden" id="storage_node" value="${file_locate_storage_path }" />
-	<div class="footerBar">
-		<div class="commonDiv">
-			<r:noLogin>
-				<a href="/login" target="_self">
-					<ul>
-						<li>
-							<img src="/resources/images/portal/mySelf.png">
-						</li>
-						<li class="wordLeftRight"
-							style="font-size:12px; text-shadow: none">登录
-						</li>
-					</ul>
-				</a>
-			</r:noLogin>
-			<r:identity role="provider">
-			
-				<a href="<spring:url value='/provider/info_${sessionInfo.reqiureId}.html'/>">
-					<ul>
-						<li>
-							<img src="/resources/images/portal/mySelf.png">
-						</li>
-						<li class="wordLeftRight"
-							style="font-size:12px; text-shadow: none">我的</li>
-					</ul>
-				</a>
-			</r:identity>
-			<r:identity role="customer">
-				<a href="/phone/user/index" target="_self">
-					<ul>
-						<li>
-							<img src="/resources/images/portal/mySelf.png">
-						</li>
-						<li class="wordLeftRight"
-							style="font-size:12px; text-shadow: none">我的</li>
-					</ul>
-				</a>
-			</r:identity>
-			<r:identity role="employee">
-				<a href="/login/mgr/loginout" target="_self">
-					<ul>
-						<li>
-							<img src="/resources/images/portal/loginOut.png">
-						</li>
-						<li class="wordLeftRight"
-							style="font-size:12px; text-shadow: none">登出</li>
-					</ul>
-				</a>
-			</r:identity>
-		</div>
+<%-- 	<img class="indexBack" src="${imgPath}/index/index.jpg"> --%>
+	
+	<div class="model" id="orderSuccess">
+	         <div class="success">
+	            <img src="${imgPath}/index/success.png">
+	            <div>恭喜您下单成功</div>
+	            <div>视频管家将会在两个小时内与您沟通</div>
+	            <div><a href="/">返回首页</a></div>
+	            <div id="checkSuccess">确认</div>
+	         </div>
+	</div>
+	
+		<div class="model" id="showVideo">
+			<div class="closeVideo">
+	     	  <button id="closeBtn" type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="close-icon" aria-hidden="true">&times;</span></button>
+	        </div>
+			<div class="video-play-sections">
+			      <%--  <video controls="" loop="" poster="${imgPath}/index/moreInfo.JPG" name="media" id="header3Video" class="active"> 
+			         <source src="http://www.apaipian.com/product/video/paipianwangMovie.mp4" id="source" type="video/mp4">
+			       </video> --%>
+		    </div> 
+	    </div>
+	    
+	    
+	    <jsp:include flush="true" page="menu.jsp"></jsp:include> 
+	    
+	    <%-- <div class="model menu" id="menu">
+	           <img class="menuBack" src="${imgPath}/menu/menuBack.jpg">
+	           <div class="menuTop">
+	                  <a href="/loginSele"><img class="userLogo" src="${imgPath}/menu/defultLogin.png"></a>
+	                  <img class="close" id="editInfo" src="${imgPath}/menu/edit.png">
+	                  <a href="/userInfo" ><img class="edit"  src="${imgPath}/menu/editMenu.png"></a>
+	                  <div>昵称</div>
+	           </div>
+	           <div class="menuContent">
+	                 <a href="/">
+		                  <div class="menuItem">
+		                       <img src="${imgPath}/menu/menu.png">
+		                       <div>首页</div>
+		                  </div>
+	                 </a>
+	                 <r:identity role="provider">
+		                 <a href="/provider/index">
+			                  <div class="menuItem">
+			                       <img src="${imgPath}/menu/myPro.png">
+			                       <div>我的项目</div>
+			                  </div>
+		                 </a>
+		             </r:identity>
+		             <r:identity role="customer">
+		                 <a href="">
+			                  <div class="menuItem">
+			                       <img src="${imgPath}/menu/myPro.png">
+			                       <div>我的项目</div>
+			                  </div>
+		                 </a>
+		             </r:identity> 
+		             <r:identity role="employee">
+		                 <a href="/mgr/index">
+			                  <div class="menuItem">
+			                       <img src="${imgPath}/menu/myPro.png">
+			                       <div>我的项目</div>
+			                  </div>
+		                 </a>
+		             </r:identity>     
+	                 <a href="/search?q=&sortord=0&item=*">
+		                  <div class="menuItem">
+		                       <img src="${imgPath}/menu/editMenu.png">
+		                       <div>精品案例</div>
+		                  </div>
+	                 </a>
+	                 <a href="/phoneCost">
+		                  <div class="menuItem">
+		                       <img src="${imgPath}/menu/cost.png">
+		                       <div>成本估算</div>
+		                  </div>
+	                 </a>
+	                 <a href="/order-flow.html">
+		                  <div class="menuItem">
+		                       <img src="${imgPath}/menu/order.png">
+		                       <div>服务流程</div>
+		                  </div>
+	                 </a>
+	                    <a href="/about">
+		                  <div class="menuItem">
+		                       <img src="${imgPath}/menu/about.png">
+		                       <div>关于我们</div>
+		                  </div>
+	                    </a>
+	                 <a href="/newsInfo">
+		                  <div class="menuItem">
+		                       <img src="${imgPath}/menu/newsInfo.png">
+		                       <div>新闻资讯</div>
+		                  </div>
+	                 </a>
+	                    <a href="/member.html">
+		                  <div class="menuItem">
+		                       <img src="${imgPath}/menu/member.png">
+		                       <div>团队介绍</div>
+		                  </div>
+	                 </a>
+	                    <a>
+		                  <div class="menuItem">
+		                       <img src="${imgPath}/menu/help.png">
+		                       <div>帮助</div>
+		                  </div>
+	                    </a> 
+	           </div>
+	           <img class="closeMenu" id="closeMenu" src="${imgPath}/menu/cMenu.png">
+	           <div class="showMore" id="showMore">
+	                                 <div id="showSafeSet">安全设置</div>
+	                              <a><div class="loginOut">退出登录</div></a>
+	           </div>
+	           <div class="safeSet">
+	                   <div class="safeTitle">安全设置</div>
+			           <div class="safeItem">    
+					       <div class="title">请输入原密码</div>
+			               <input id="repwd">
+			               <img class="orTrue" src="${imgPath}/menu/psTrue.png">
+			               <img class="orError" src="${imgPath}/menu/psError.png">
+			               <div class="error"></div>
+		           	   </div>
+		           	   <div class="safeItem">    
+					       <div class="title">请输入密码</div>
+			               <input id="newpwd">
+			               <img class="orTrue" src="${imgPath}/menu/psTrue.png">
+			               <img class="orError" src="${imgPath}/menu/psError.png">
+			               <div class="error"></div>
+		           	   </div>
+		           	   <div class="safeItem">    
+					       <div class="title">再次输入密码</div>
+			               <input id="cpwd">
+			               <img class="orTrue" src="${imgPath}/menu/psTrue.png">
+			               <img class="orError" src="${imgPath}/menu/psError.png">
+			               <div class="error"></div>
+		           	   </div>
+		           	   <div class="cancleBtn">取消</div>
+		           	   <img class="safeClose" id="safeClose" src="${imgPath}/menu/cMenu.png">
+	           </div>
+	    </div>   --%>
+	    
+	 <div class="headerCom">
+		<a>
+		 <img id="openMenu" src="${imgPath}/index/toMenu.png">
+		</a>
+		<a href="/searchview">  
+		 <img  src="${imgPath}/index/toSearch.png">
+		</a> 
+		<a>
+		  <img class="ppwLogo" src="${imgPath}/index/logoW.png">
+		</a>
+	</div>
 
+	<div class="backImg">
+	        <img  id="img1" src="${imgPath}/index/back1.jpg">
+	        <img  id="img2" src="${imgPath}/index/back2.jpg">
+	        <img  id="img3" src="${imgPath}/index/back3.jpg">
+	        <img  id="img4" src="${imgPath}/index/back4.jpg">
+	        <img  id="img5" src="${imgPath}/index/back5.jpg">
+	        <div></div>
+	</div>
+	
+	<div class="pagePhone">
+	
+	<!--第一区域 -->
+	<div class="firstContent">
+	
+	
+<!-- 	<div class="Vidage" style="z-index:99">
+    <div class="Vidage__image"></div>
 
-		<div class="commonDiv">
+    <video id="VidageVideo" style="display:none" class="Vidage__video" preload="metadata" loop autoplay muted>
+        <source src="http://www.apaipian.com/product/video/paipianwangMovie.mp4" type="video/mp4">
+    </video>
 
-			<r:identity role="provider">
-				
-				<%-- <a href="<spring:url value='/provider/info_0.html'/>"> --%>
-				<%-- <a href="<spring:url value='/author/${product.teamId}'/>"> --%>
-				<a href="/provider/index" target="_self">
-					<ul>
-						<li><img src="/resources/images/portal/project.png"></li>
-						<li class="wordMid" style="font-size: 12px; text-shadow: none">我的项目</li>
-					</ul>
-				</a>
-			</r:identity>
-
-			<r:identity role="employee">
-				<a href="/mgr/index" target="_self">
-					<ul>
-						<li><img src="/resources/images/portal/project.png"></li>
-						<li class="wordMid" style="font-size: 12px; text-shadow: none">我的项目</li>
-					</ul>
-				</a>
-			</r:identity>
-
-			<r:identity role="customer">
-				<a href="<spring:url value="/direct/order"/>" target="_self">
-					<ul>
-						<li><img src="/resources/images/portal/order.png"></li>
-						<li class="wordMid" style="font-size: 12px; text-shadow: none">我要拍片</li>
-					</ul>
-				</a>
-			</r:identity>
-			<r:noLogin>
-				<a href="<spring:url value="/direct/order"/>" target="_self">
-					<ul>
-						<li><img src="/resources/images/portal/order.png"></li>
-						<li class="wordMid" style="font-size: 12px; text-shadow: none">我要拍片</li>
-					</ul>
-				</a>
-			</r:noLogin>
-		</div>
-
-
-		<div class="commonDiv">
+    <div class="Vidage__backdrop"></div>
+</div> -->
 		
-			<a href="<spring:url value="/"/>" target="_self">
-				<ul>
-					<li><img src="/resources/images/portal/portalBg.png"></li>
-					<li class="wordLeftRight"
-						style="font-size: 12px; color:#fe5453; text-shadow: none">首页</li>
-				</ul>
-			</a> 
+		
+		
+		<div class="logo">
+		  <img src="${imgPath}/index/logo.png">
+		  <div id="logoPos" style="width:1px;"></div>
 		</div>
-	</div>
-
-
-	<div class="wrap" >
-
-		<div class="header" id="top">
-			<!-- logo -->
-			<dl class="header-ul">
-				<dd>
-					<a href="#menu">
-						<div class="classify"></div>
-					</a>
-				</dd>
-				<dd>
-					<a href="/" target="_self">
-						<div class="logo"></div>
-					</a>
-				</dd>
-				<dd>
-					<a href="/searchview" target="_self">
-						<div class="search"></div>
-					</a>
-				</dd>
-			</dl>
-		</div>
-		<nav id="menu">
-			<ul id="menu-ul">
-				<!-- <li><a href="javascript:void(0);">Home</a></li>
-				<li><a href="#contact">Contact</a></li> -->
-			</ul>
-		</nav>
-
-		<div class="flexslider-section" >
-			<div class="flexslider-wrap">
-				<!-- 轮播图 -->
-				<div class="flexslider">
-					<a href='<spring:url value="/direct/order"/>'>
-						<ul class="slides">
-							<li></li>
-							<li></li>
-							<li></li>
-						</ul>
-					</a>
-				</div>
-			</div>
-		</div>
-
-		<!-- 活动会场 -->
-		<%-- <div class="activity-section">
-			<div class="activity-guide">
-				<h3>热门活动</h3>
-				<div class="spilt-line"></div>
-			</div>
-
-			<div class="activity-content">
-				<!-- 活动页面 -->
-				<img src="${imgPath }/portal/activity.png" alt="活动专场_拍片网">
-				<a href='<spring:url value="/active/12" />' target="_self">
-					<img src="${imgPath }/active/d12/active-phone-12-entry.png" alt="双12专场_拍片网">
-				</a>
-			</div>
-		</div> --%>
-
-		<div class="video-section">
-			<!-- 视频列表 -->
-			<div class="recomment-line">
-				<a href="javascript: void(0);">热门爆款</a>
-			</div>
-
-			<!-- 第一块视频区域 -->
-			<div class="video-content" id="first-video-section">
-				<%-- <div class="contain-row">
-					<a href="<spring:url value='/play/7'/>">
-						<div class="video-col">
-							<div class="video-post">
-								<img src="http://www.apaipian.com/product/img/product7-201510281611495342.jpg" alt="智能硬件专场_拍片网">
-							</div>
-							
-							<div class="video-desc">
-								<dl>
-									<dt><h2>精致的智能硬件宣传影片</h2></dt>
-									<dd>逼真的工业级渲染，家庭的使用场景展示，通过高科技的视觉元素渲染产品特点，完美呈现产品精致的一面，国际市场取得了惊人的销量。</dd>
-									<dt><label>￥</label>56,880元<label class="doraction">113,760</label></dt>
-									<dd><a href="<spring:url value='/play/7'/>"><div class="detail-btn">查看详情</div></a></dd>
-								</dl>
-							</div>
-						</div>
-					</a>
-				</div> --%>
-			</div>
-			<div class="recomment-line">
-				<a href="javascript: void(0);">经济型创业视频</a>
-			</div>
-
-			<!-- 第二块视频 -->
-			<div class="video-content" id="second-video-section"></div>
-<!--
-			<div class="recomment-line">
-				<a href="javascript: void(0);">高性价比企业视频</a>
-			</div>
-
-			 第三块视频区域 
-			<div class="video-content" id="third-video-section"></div>
--->		
-<!--
-			<div class="recomment-line">
-				<a href="javascript: void(0);">定制原创视频</a>
-			</div>
 			
-			 第四块视频区域 
-			<div class="video-content" id="forth-video-section"></div>
--->
-		</div>
-
-		<div class="footer" style="height:200px" >
-			<div class="footer-content">
-				<div class="content-header" style="border-bottom: none;">
-					<ul style="width:80%;margin:0 auto">
-						<li style="text-align: left;"><a href="/member.html#0" style="text-aligin:left">关于我们</a></li>
-						<li><a href="/order-flow.html">流程步骤</a></li>
-						<li style="text-align: right;"><a href="/company-service.html" style="text-aligin:right">服务协议</a></li>
-					</ul>
-				</div>
-					<div class="content-header" style="height:40px;">
-					<ul style="width:80%;margin:0 auto">
-						<li style="width:48%;text-align:left"> <a href="/mgr/login">视频管家登录</a></li>
-						<li style="width:48%;text-align:right"><a href="tel:4006609728"><img src='/resources/images/portal/phone.png' style="width: 15px;position: relative;top: 3px;right: 5px;">400-660-9728</a></li>
-					</ul>
-				</div>
-				<div class="content-footer" id="footer">
-					<label>&copy; 2014 攀峰文化 京ICP备 14036662号-1</label>
-				</div>
-			</div>
-		</div>
-				
-		<div class="checkPos">
-		    <a class="hide" href="/#top" id="toTop">
-		       <img src="/resources/images/portal/toTop.png">
-		    </a>
-		     <a href="/#footer" id="toFooter">
-		        <img src="/resources/images/portal/toBot.png">
-		    </a>
-		</div>
+		<div class="swiper-container">
+	        <div class="swiper-wrapper">
+	            <div class="swiper-slide">
+		            <video style="width:0px;opacity:0" controls="" loop="" poster="${imgPath}/index/moreInfo.JPG" name="media" id="header3Video" class="active"> 
+			          <source src="/resources/video/test.mov" id="source" type="video/mp4">
+			        </video>
+	                 <ul>
+		                  <li class="title">专业商业视频服务</li>
+		                  <li class="line"></li>
+		                  <li class="desc">35800+导演/编剧/摄影师/影视专家为您服务</li>
+		                  <li class="icon bannerAni playVideo" id="playVideo"><img src="${imgPath}/index/playIcon.png"></li>
+	                 </ul>
+	            </div>
+	            <div class="swiper-slide">
+	                  <ul>
+		                  <li class="title">低预算拍大片 不满意全额退款</li>
+		                  <li class="line"></li>
+		                  <li class="desc">低于行业均价30%以上 平台托管制作费</li>
+		                  <a  href="/phoneCost"> <li class="icon bannerAni"><img src="${imgPath}/index/calc.png"></li></a>
+	                 </ul>
+	             </div>
+	            <div class="swiper-slide">
+	                   <ul>
+		                  <li class="title">免费创意策划 72小时极速出片</li>
+		                  <li class="line"></li>
+		                  <li class="desc">专业视频管家 一站式视频服务 全流程质量监管</li>
+		                  <li class="icon bannerAni"><a href="tel:4006609728"><img src="${imgPath}/index/phone.png"></a></li>
+	                 </ul>
+	            </div>
+	        </div>
+    	</div>
+    	
+    	<form id="order-form" role="form" method="post" autocomplete="off" accept-charset="UTF-8">
+				<c:if test="${activity == 1 }">
+					<r:noLogin>
+					<input type="hidden" id="indentName" name="indentName" value="新订单-手机下单"/>
+					</r:noLogin>
+					<r:identity role="provider">
+						<input type="hidden" id="indentName" name="indentName" value="${sessionInfo.realName }-手机下单"/>
+					</r:identity>
+					<r:identity role="customer">
+						<input type="hidden" id="indentName" name="indentName" value="${sessionInfo.realName }-手机下单"/>
+					</r:identity>
+					<r:identity role="employee">
+						<input type="hidden" id="indentName" name="indentName" value="${sessionInfo.realName }-手机下单"/>
+					</r:identity>
+				</c:if>
+				<c:if test="${activity != 1 }">
+					<r:noLogin>
+					<input type="hidden" id="indentName" name="indentName" value="微信底部广告"/>
+					</r:noLogin>
+					<r:identity role="provider">
+						<input type="hidden" id="indentName" name="indentName" value="${sessionInfo.realName }-手机下单"/>
+					</r:identity>
+					<r:identity role="customer">
+						<input type="hidden" id="indentName" name="indentName" value="${sessionInfo.realName }-手机下单"/>
+					</r:identity>
+					<r:identity role="employee">
+						<input type="hidden" id="indentName" name="indentName" value="${sessionInfo.realName }-手机下单"/>
+					</r:identity>
+				</c:if>
+				<input type="hidden" id="csrftoken" name="csrftoken" value="${csrftoken}"/>
+				<input type="hidden" id="token" name="token" value="${token}"/>
+    	<div class="getPhone">
+    		<input type="number" maxlength="16" id="indent_tele"  placeholder="填写手机号">
+    		<div class="error" id="error">手机号错误</div>
+    	</div>
+    	<div class="order" id="order-btn">预约拍片</div>
+    	</form>
 	</div>
 	
-
-	 
 	
+	<div class="secondContent">
+	      <div class="title">热门案例</div>
+	      <div class="conDiv">
+	              <a href='/search?q=宣传片&sortord=0'>
+			          <div class="conItem leftItem">
+			             <img src="${imgPath}/index/video.png">
+			             <div class="type">宣传片</div>
+			          </div>
+		          </a>
+		           <a href="/search?q=微电影&sortord=0">
+			          <div class="conItem">
+			             <img src="${imgPath}/index/sVideo.png">
+			             <div class="type">微电影</div>
+			          </div>
+		          </a>
+	      </div>
+	       <div class="conDiv noBot">
+	              <a href="/search?q=广告片&sortord=0">
+			          <div class="conItem leftItem">
+			             <img src="${imgPath}/index/ad.png">
+			             <div class="type">广告片</div>
+			          </div>
+		          </a>
+		           <a href="/search?q=病毒视频&sortord=0">
+			          <div class="conItem">
+			             <img src="${imgPath}/index/spread.png">
+			             <div class="type">病毒视频</div>
+			          </div>
+		          </a>
+	      </div>
+	      <div class="service">服务流程</div>
+	      <ul class="serviceItem">
+	         <li>
+	             <img src="${imgPath}/index/talk.png">
+	             <div class="wordItem">
+	                    <div>1</div>
+	                    <div>沟通拍片需求</div>
+	             </div>
+	             <div class="wordItem">
+	                    <div>2</div>
+	                    <div>免费创意策划</div>
+	             </div>
+	         </li>
+	         <li>
+	             <img src="${imgPath}/index/help.png">
+	             <div class="wordItem">
+	                    <div>1</div>
+	                    <div>平台托管制作费</div>
+	             </div>
+	             <div class="wordItem">
+	                    <div>2</div>
+	                    <div>甄选最佳导演&nbsp&nbsp&nbsp&nbsp</div>
+	             </div>
+	         </li>
+	         <li>
+	             <img src="${imgPath}/index/replay.png">
+	             <div class="wordItem">
+	                    <div>1</div>
+	                    <div>拍摄制作全程监管</div>
+	             </div>
+	             <div class="wordItem">
+	                    <div>2</div>
+	                    <div>不满意免单或重拍</div>
+	             </div>
+	         </li>
+	      </ul>
+	      <a href="tel:4006609728"><div class="freeTel">免费咨询</div></a>
+	</div>
+	
+	<div class="thirdContent">
+	        <div class="ourCusTitle">导演工作室</div>
+		    <div class="ourCus">
+
+		        <div class="item">
+		            <div class="proLogo">
+		               <img src="${imgPath}/index/test.png">
+		               <img src="${imgPath}/index/true.png">
+		            </div>
+		            <div class="proContent">
+		                <div class="title">大大所大大多所大叔大叔大所大</div>
+		                <div class="des">大大所大大多所大叔大叔大所大大大所大大多所大叔大叔大所</div>
+		                <div class="tags">
+		                      <div class="tagsItem">宣传片</div>
+		                      <div class="tagsItem">宣传片</div>
+		                      <div class="tagsItem">宣传片</div>
+		                      <div class="tagsItem">宣传片</div>
+		                      <div class="tagsItem">宣传片</div>
+		                      <div class="tagsItem">宣传片</div>
+		                </div>
+		            </div>
+		        </div>
+		        <div class="item">
+		            <div class="proLogo">
+		               <img src="${imgPath}/index/test.png">
+		               <img src="${imgPath}/index/true.png">
+		            </div>
+		            <div class="proContent">
+		                <div class="title">大大所大大多所大叔大叔大所大</div>
+		                <div class="des">大大所大大多所大叔大叔大所大大大所大大多所大叔大叔大所</div>
+		                <div class="tags">
+		                      <div class="tagsItem">宣传片</div>
+		                      <div class="tagsItem">宣传片</div>
+		                      <div class="tagsItem">宣传片</div>
+		                      <div class="tagsItem">宣传片</div>
+		                      <div class="tagsItem">宣传片</div>
+		                      <div class="tagsItem">宣传片</div>
+		                </div>
+		            </div>
+		        </div>
+		        <div class="item">
+		            <div class="proLogo">
+		               <img src="${imgPath}/index/test.png">
+		               <img src="${imgPath}/index/true.png">
+		            </div>
+		            <div class="proContent">
+		                <div class="title">大大所大大多所大叔大叔大所大</div>
+		                <div class="des">大大所大大多所大叔大叔大所大大大所大大多所大叔大叔大所</div>
+		                <div class="tags">
+		                      <div class="tagsItem">宣传片</div>
+		                      <div class="tagsItem">宣传片</div>
+		                      <div class="tagsItem">宣传片</div>
+		                      <div class="tagsItem">宣传片</div>
+		                      <div class="tagsItem">宣传片</div>
+		                      <div class="tagsItem">宣传片</div>
+		                </div>
+		            </div>
+		        </div>
+		    </div>
+		       
+	       <a href="/proRegister">
+	    		<div class="join">
+                                                      加入我们
+                </div>
+           </a>
+	               
+		     <div class="ourCusTitle">我们的客户</div>
+		     
+		     <div class="showLogo">
+		          <img src="${imgPath}/index/logo1.png">
+		          <img src="${imgPath}/index/logo2.png">
+		          <img src="${imgPath}/index/logo3.png">
+		          <img src="${imgPath}/index/logo4.png">
+		          <img src="${imgPath}/index/logo5.png">
+		          <img src="${imgPath}/index/logo6.png">
+		     </div>
+		     
+		     <jsp:include flush="true" page="foot.jsp"></jsp:include> 
+		     
+		     
+	</div>	    
+ </div>
+
 </body>
+
+
 <script src="${jqueryJs }"></script>
+<script src="${waypointsJs}"></script>
+<script src="${swiperJs}"></script>
 <script src="${pluginJs }"></script>
 <script src="${flexsliderJs }"></script>
 <script src="${jsonJs }"></script>
 <script src="${imgLazyLoadingJs }"></script>
 <script src="${commonJs }"></script>
 <script src="${portalJs }"></script>
-<script src="${mmenuJs }"></script>
+<script src="${mmenuJs}"></script>
+<script src="${remSetJs}"></script>
+
+
+
 <!-- 加载Mob share 控件 -->
 <script id="-mob-share"
 	src="http://f1.webshare.mob.com/code/mob-share.js?appkey=8c49c537a706"></script>

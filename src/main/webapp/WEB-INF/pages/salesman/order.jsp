@@ -49,7 +49,7 @@
 	<div class="wrap">
 		<input type="hidden" id="storage_node" value="${file_locate_storage_path }" />
 		<div class="content-wrap">
-		    <a href="tel:4006609728">
+		    <a href="tel:59005941">
 		    <img style="width:100%" src="/resources/images/goodGod/orderTop.jpg">
 		    </a>
 		    

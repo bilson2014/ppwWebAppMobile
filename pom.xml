@@ -120,11 +120,6 @@
 		</dependency>
 
 		<dependency>
-			<groupId>net.sf</groupId>
-			<artifactId>log4jdbc-remix</artifactId>
-			<version>0.2.7</version>
-		</dependency>
-		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>
 			<version>3.1.0</version>
@@ -445,11 +440,11 @@
 			<version>1.6</version>
 			<scope>provided</scope>
 		</dependency>
-		<dependency>
+		 <dependency>
 			<groupId>com.paipianwang.fastdfs-client</groupId>
 			<artifactId>FastDFS-Client</artifactId>
 			<version>3.0</version>
-		</dependency>
+		</dependency> 
 		<dependency>
 			<groupId>com.alibaba</groupId>
 			<artifactId>fastjson</artifactId>

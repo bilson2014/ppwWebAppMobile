@@ -1,0 +1,89 @@
+/* 手机端-播放页 */
+
+@import "compass/css3";
+@import "constant";
+@import "mixin";
+@import "common_portal";
+@import "compass/typography/text/ellipsis";
+body {
+    overflow: hidden;
+    background: $gray-dark;
+}
+
+
+
+
+
+.newsTags {
+    height: 1.3rem;
+    background: $gray-dark;
+    overflow: hidden;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+    line-height: 1.3rem;
+    position: fixed;
+    top: 1.3rem;
+    z-index: 20;
+    background: $gray-dark;
+    width: 100%;
+    div {
+        display: inline-block;
+        vertical-align: top;
+        margin-left: 0.8rem;
+        color: $gray-light;
+        font-size: 0.36rem;
+    }
+    .active {
+        color: $red-base;
+    }
+}
+
+.newsTags::-webkit-scrollbar {
+    width: 0px;
+}
+
+.newsTags::-webkit-scrollbar {
+    display: none
+}
+
+.newsContent {
+    padding-left: 0.8rem;
+    width: 100%;
+    margin-top: 3.4rem;
+    .newsItem {
+        height: 1.99rem;
+        font-size: 0;
+        margin-bottom: 0.8rem;
+        img {
+            display: inline-block;
+            vertical-align: top;
+            width: 3.55rem;
+            height: 1.9rem;
+        }
+        .itemContent {
+            display: inline-block;
+            vertical-align: top;
+            height: 1.9rem;
+            position: relative;
+            width: 5.6rem;
+            margin-left: 0.3rem;
+            div:nth-child(1) {
+                color: $border-line;
+                font-size: 0.36rem;
+                position: absolute;
+                left: 0;
+                top: 0.05rem;
+                width: 5.5rem;
+                @include ellipsis;
+            }
+            div:nth-child(2) {
+                color: $gray-light;
+                font-size: 0.26rem;
+                position: absolute;
+                left: 0;
+                bottom: 0rem;
+            }
+        }
+    }
+}

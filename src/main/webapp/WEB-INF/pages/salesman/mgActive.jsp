@@ -28,13 +28,15 @@
 	<meta name="format-detection" content="telephone=no" />
 	<meta name="keywords" content="拍片网,视频播放,视频详情,影片播放,影片介绍">
 	<meta name="description" content="拍片网">
-	<title>MG活动</title>
+	<title>MG动画活动页-拍片网</title>
 	
 	<link rel="shortcut icon" href="${imgPath }/favicon.ico" >
 	<link rel="stylesheet" href="${activeCss}">
+	
 	<!--[if lt IE 9]>
 		<script>window.html5 || document.write('<script src="html5shivJs"><\/script>')</script>
 	<![endif]-->
+	
 </head>
 <body>
 	   <input type="hidden" id="storage_node" value="${file_locate_storage_path }" />

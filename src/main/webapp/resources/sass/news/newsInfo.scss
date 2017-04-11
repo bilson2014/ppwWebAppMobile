@@ -1,0 +1,62 @@
+/* 手机端-播放页 */
+
+@import "compass/css3";
+@import "constant";
+@import "mixin";
+@import "common_portal";
+@import "compass/typography/text/ellipsis";
+body {
+    overflow: hidden;
+    background: $gray-dark;
+}
+
+.bannerImg {
+    width: 100%;
+    margin-top: 1.3rem;
+}
+
+.pagePhone {
+    .infoContents {
+        width: 9.2rem;
+        height: auto;
+        margin: 0 auto;
+        font-size: 0;
+        .title {
+            width: 9.2rem;
+            height: 1.2rem;
+            line-height: 0.5rem;
+            color: #e3e3e3;
+            font-size: 0.4rem;
+            height: auto;
+            margin-bottom: 0.8rem;
+            margin-top: 0.8rem;
+        }
+        .tags {
+            margin-bottom: 0.8rem;
+            div {
+                text-align: center;
+                font-size: 0.26rem;
+                border: 1px solid $gray-light;
+                color: $gray-light;
+                border-radius: 71px;
+                display: inline-block;
+                vertical-align: top;
+                width: 2rem;
+                height: 0.6rem;
+                line-height: 0.6rem;
+                margin-bottom: 0.3rem;
+                margin-right: 0.2rem;
+            }
+        }
+    }
+}
+
+.setContent {
+    color: $border-line;
+    font-size: 0.34rem;
+    img {
+        width: 100%;
+    }
+    margin-bottom: 1.3rem;
+    line-height: 0.5rem;
+}

@@ -1,0 +1,183 @@
+@import "common";
+@import "buttons";
+@import "video";
+@import "bootstrap-grid";
+@import "fontSize";
+@import "variables";
+@import "common_portal";
+@import "compass/typography/text/ellipsis";
+$header-height-460: 48px; // 头部高度（分辨路低于460
+$header-height-top: 13px; // 头部top
+body {
+    background: $gray-dark;
+}
+
+input {
+    -webkit-appearance: none;
+}
+
+textarea {
+    -webkit-appearance: none;
+}
+
+.pageheader {
+    width: 100%;
+    text-align: center;
+    margin-top: 2.2rem;
+    div {
+        width: 100%;
+    }
+    img {
+        width: 2.45rem;
+    }
+    .file {
+        width: 2.8rem;
+        height: 0.6rem;
+        position: relative;
+        display: inline-block;
+        background: transparent;
+        border: 1px solid $gray;
+        border-radius: 100px;
+        overflow: hidden;
+        color: white;
+        text-decoration: none;
+        text-indent: 0;
+        line-height: 0.58rem;
+        font-size: 0.34rem;
+    }
+    .file input {
+        position: absolute;
+        font-size: 0.34rem;
+        right: 0;
+        top: 0;
+        opacity: 0;
+    }
+}
+
+.errorDiv {
+    height: 1.3rem;
+    width: 100%;
+    text-align: center;
+    color: white;
+    background: $red-base;
+    font-size: 0.42rem;
+    position: fixed;
+    top: 1.3rem;
+    line-height: 1.3rem;
+    z-index: 20;
+}
+
+.stepTopDiv {
+    width: 9rem;
+    margin: 0 auto;
+    margin-top: 1.6rem;
+    font-size: 0;
+}
+
+.stepOne {
+    width: 9rem;
+    margin: 0 auto;
+    font-size: 0;
+}
+
+.titleTop {
+    width: 100%;
+    height: 1rem;
+    line-height: 1rem;
+    border-bottom: 1px solid $gray-light;
+    color: #e3e3e3;
+    font-size: 0.36rem;
+    text-align: left;
+    margin-bottom: 0.6rem;
+    img {
+        position: relative;
+        top: 0.05rem;
+        margin-right: 0.5rem;
+        width: 0.35rem;
+    }
+}
+
+.area {
+    div,
+    input {
+        display: inline-block;
+        vertical-align: top !important;
+        position: relative;
+        top: 0.2rem;
+        outline: none;
+    }
+    textarea {
+        width: 5.8rem;
+        color: $border-line;
+        font-size: 0.34rem;
+        height: 2.7rem;
+        border: 1px solid $border-line;
+        padding-left: 5px;
+        border-radius: 8px;
+        background: transparent;
+        border-radius: 4px;
+        background: none;
+        padding-left: 10px;
+        color: $border-line;
+        font-size: 0.34rem;
+        resize: none;
+        line-height: 20px;
+    }
+}
+
+.item {
+    position: relative;
+    margin-bottom: 0.4rem;
+    padding-left: 0.9rem;
+    div,
+    input {
+        display: inline-block;
+        vertical-align: middle;
+    }
+    div {
+        width: 2rem;
+        color: $border-line;
+        font-size: 0.34rem;
+    }
+    input {
+        width: 5.8rem;
+        color: $border-line;
+        font-size: 0.34rem;
+        height: 0.9rem;
+        border: 1px solid $border-line;
+        padding-left: 5px;
+        border-radius: 4px;
+        background: transparent;
+    }
+}
+
+.nextBtn {
+    width: 8rem;
+    height: 1rem;
+    color: white;
+    font-size: 0.36rem;
+    border-radius: 100px;
+    background: $red-base;
+    text-align: center;
+    line-height: 1rem;
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    left: 50%;
+    margin-left: -4rem;
+}
+
+.up {
+    position: absolute;
+    top: 0;
+    right: 0.5rem;
+    width: 0.9rem !important;
+    height: 0.9rem;
+    border-left: 1px solid $border-line;
+    img {
+        width: 0.7rem;
+        position: relative;
+        top: 0.1rem;
+        left: 0.05rem;
+    }
+}

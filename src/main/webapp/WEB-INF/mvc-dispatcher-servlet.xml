@@ -4,50 +4,77 @@
 	xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
 	xmlns:p="http://www.springframework.org/schema/p"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
-		                http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd
-		                http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd
-		                http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd">
+		                   http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd
+		                   http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd
+		                   http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd">
 
-	<mvc:view-controller path="/login" view-name="/phoneLogin" />
+	<mvc:view-controller path="/login" view-name="/loginChoose/phoneLogin" />
 
-	<mvc:view-controller path="/provider/login" view-name="/phoneLogin" />
-	
 	<mvc:view-controller path="/mgr/login" view-name="/managerLogin" />
 
 	<mvc:view-controller path="/member" view-name="/company/member" />
 
-	<mvc:view-controller path="/order-flow.html" view-name="/service" />
+	<mvc:view-controller path="/order-flow.html"
+		view-name="/service" />
 
-	<mvc:view-controller path="/company-service.html" view-name="/company-service" />
+	<mvc:view-controller path="/company-service.html"
+		view-name="/company-service" />
 
 	<mvc:view-controller path="/testRem/rem" view-name="/testRem/rem" />
 
-	<mvc:view-controller path="/provider/providerInfoLeader" view-name="/provider/providerInfoLeader" />
+	<mvc:view-controller path="/provider/providerInfoLeader"
+		view-name="/provider/providerInfoLeader" />
 
-	<mvc:view-controller path="/manager/updateProjectInfo" view-name="/manager/updateProjectInfo" />
+	<mvc:view-controller path="/manager/updateProjectInfo"
+		view-name="/manager/updateProjectInfo" />
 
-	<mvc:view-controller path="/about-us.html" view-name="/about-us" />
+	<mvc:view-controller path="/about-us.html"
+		view-name="/about-us" />
 
-	<mvc:view-controller path="/company-activity.html" view-name="/company-activity" />
+	<mvc:view-controller path="/company-activity.html"
+		view-name="/company-activity" />
+
+	<!-- <mvc:view-controller path="/member.html" view-name="/member" /> -->
 
 	<mvc:view-controller path="/mgr/recover" view-name="/manager/recover" />
 
-	<mvc:view-controller path="/payment/payList" view-name="/payment/payList" />
+	<mvc:view-controller path="/payment/payList"
+		view-name="/payment/payList" />
 
-	<mvc:view-controller path="/payment/success" view-name="/payment/success" />
+	<mvc:view-controller path="/payment/success"
+		view-name="/payment/success" />
 
 	<mvc:view-controller path="/error" view-name="/error" />
 
 	<mvc:view-controller path="/threeLogin" view-name="/threeLogin" />
-
+	
 	<!-- cost -->
 	<mvc:view-controller path="/costcode" view-name="/cost/costcalculate" />
 	<mvc:view-controller path="/costweixin" view-name="/costcalculateweixin" />
 	<mvc:view-controller path="/costtoutiao" view-name="/costcalculatetoutiao" />
-
-
+	
+	
+	<!-- test -->
+	<mvc:view-controller path="/repwd" view-name="/repwd" />
+	<mvc:view-controller path="/play" view-name="/play" />
+	<mvc:view-controller path="/searchs" view-name="/searchs" />
+	<mvc:view-controller path="/newsList" view-name="/news/newsList" />
+	<mvc:view-controller path="/newsInfo" view-name="/news/newsInfo" />
+	<mvc:view-controller path="/test" view-name="/portalTest" />
 	<mvc:resources location="/resources/" mapping="/resources/**" />
-
+	<mvc:view-controller path="/about" view-name="/about" />
+	<mvc:view-controller path="/pif" view-name="/provider/providerInfoPhones" />
+	<mvc:view-controller path="/mg" view-name="/salesman/mgActive" />
+	<mvc:view-controller path="/register" view-name="/loginChoose/register" />
+	<mvc:view-controller path="/proRegister" view-name="/loginChoose/proRegister" />
+	<mvc:view-controller path="/loginSele" view-name="/loginChoose/loginSele" />
+	<mvc:view-controller path="/regSele" view-name="/loginChoose/regSele" />
+	<mvc:view-controller path="/pLogin" view-name="/loginChoose/proPhoneLogin" />
+    <mvc:view-controller path="/test" view-name="/test" />
+    <mvc:view-controller path="/userInfo" view-name="/customer/userInfo" />
+    <mvc:view-controller path="/phoneCost" view-name="/cost/phoneCost" />
+    
+    
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver"
 		p:prefix="/WEB-INF/pages/" p:suffix=".jsp" />
 
@@ -67,13 +94,34 @@
 		<mvc:interceptor>
 			<mvc:mapping path="/order/submit" />
 			<mvc:mapping path="/phone/submit" />
+			<!-- <mvc:mapping path="/pay/income" /> -->
 			<bean class="com.panfeng.web.wearable.filter.ValidateTokenInterceptor" />
 		</mvc:interceptor>
+
+		<!-- 匹配URL路径，如果不配置或配置 /**,将拦截所有的controller -->
+		<!-- 验证作品分类需要登陆才能使用 -->
+		<!-- <mvc:interceptor> <mvc:mapping path="/list.html"/> <bean class="com.panfeng.web.wearable.filter.LoginInterceptor"/> 
+			</mvc:interceptor> -->
+
 
 		<mvc:interceptor>
 			<mvc:mapping path="/phone/user/**" />
 			<bean class="com.panfeng.web.wearable.filter.UserInfoInterceptor" />
 		</mvc:interceptor>
+
+		<!-- 当设置多个拦截器时,先按顺序调用 preHandle 方法,然后逆序调用每个拦截器的 postHandle 和 afterCompletion 
+			方法 -->
+		<!-- <mvc:interceptor> <mvc:mapping path="/provider/**" /> <mvc:exclude-mapping 
+			path="/provider/info_**" /> <mvc:exclude-mapping path="/provider/repwd" /> 
+			<mvc:exclude-mapping path="/provider/updatePwd" /> <mvc:exclude-mapping path="/provider/thirdLogin" 
+			/> <mvc:exclude-mapping path="/provider/bind" /> <mvc:exclude-mapping path="/provider/register" 
+			/> <mvc:exclude-mapping path="/provider/leader" /> <mvc:exclude-mapping path="/provider/update/leaderInfomation" 
+			/> <mvc:exclude-mapping path="/provider/recover" /> <mvc:exclude-mapping 
+			path="/provider/header" /> <mvc:exclude-mapping path="/provider/doLogin" 
+			/> <mvc:exclude-mapping path="/provider/checkExisting" /> <mvc:exclude-mapping 
+			path="/provider/info/register" /> <mvc:exclude-mapping path="/provider/info/recover" 
+			/> <mvc:exclude-mapping path="/provider/login/**" /> <bean class="com.panfeng.web.wearable.filter.ProviderInterceptor" 
+			/> </mvc:interceptor> -->
 
 		<!-- 视频管家登陆拦截器 -->
 		<mvc:interceptor>

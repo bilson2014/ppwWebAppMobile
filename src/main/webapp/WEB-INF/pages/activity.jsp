@@ -3,7 +3,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
-<%@ taglib prefix="r" uri="/mytaglib" %>
+<%@ taglib prefix="r" uri="/mytaglib" %><%-- import CSS --%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %> 
 <spring:url value="/resources/lib/hwSlider/css/hwslider.css" var="hwsliderCss"/>
 <spring:url value="/resources/css/activity/activity.css" var="activityCss"/>

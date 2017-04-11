@@ -3,6 +3,7 @@
 @import "video";
 @import "model";
 @import "fontSize";
+@import "common_portal";
 @import "compass/typography/text/ellipsis";
 $video-height: 250px; // 视频播放区域高度
 $video-height320: 170px; // 视频播放区域高度(320px)
@@ -12,574 +13,316 @@ $video-height640: 351px; // 视频播放区域高度(640px)
 $video-height720: 396px; // 视频播放区域高度(720px)
 @media (max-device-width: 1024px) and (orientation: landscape) {}
 
-
-body{
-    background-color:black;
+body {
+    height: 100% !important;
+    width: 100% !important;
+    background: url(/resources/images/index/index.jpg) no-repeat !important;
+    background-size: 100% 100% !important;
 }
 
-.cusSide {
+.errorDiv {
+    height: 1.3rem;
     width: 100%;
-    height: 100%;
+    text-align: center;
+    color: white;
     background: $red-base;
-    position: relative;
-    .topDiv {
-        width: 100%;
-        height: 100%;
-        position: relative;
-        background: url(/resources/images/login/cusbg.jpg) no-repeat;
-        background-size: 100% $video-height;
-        @media screen and (max-width: 360px) {
-            background-size: 100% $video-height320;
-        }
-        @media screen and (min-width: 360px) and (max-width: 390px) {
-            background-size: 100% $video-height360;
-        }
-        @media screen and (min-width: 390px) and (max-width: 460px) {
-            background-size: 100% $video-height390;
-        }
-        @media screen and (min-width: 640px) and (max-width: 720px) {
-            background-size: 100% $video-height640;
-        }
-        @media screen and (min-width: 720px) {
-            background-size: 100% $video-height720;
-        }
-        .topContent {
-            width: 100%;
-            height: auto;
-            text-align: center;
-            position: relative;
-            top: 30px;
-            img {
-                height: auto;
-                width: 150px;
-                cursor: pointer;
-                @media screen and (max-width: 360px) {
-                    width: 100px;
-                }
-            }
-            .lineWidth {
-                margin: 15px auto;
-                height: 1px;
-                width: 150px;
-                background: $white;
-                @media screen and (max-width: 360px) {
-                    width: 100px;
-                }
-            }
-            .infoWord {
-                color: $white;
-                font-size: $font-size-lg22;
-                @media screen and (max-width: 360px) {
-                    font-size: $font-size;
-                }
-            }
-        }
-    }
-    .bottomDiv {
-        width: 100%;
-        height: auto;
-        position: absolute;
-        top: 130px;
-        @media screen and (max-width: 360px) {
-           top: 130px;
-        }
-        @media (max-device-width: 1024px) and (orientation: landscape) {
-           top: 150px;
-            height: 75%;
-        }
-        .cusBg {
-            background: url(/resources/images/login/cusLogin.png) no-repeat;
-            background-size: 100% 100%;
-        }
-        .contentHeight {
-            width: 100%;
-            height: 360px;
-            padding-top: 5%;
-            @media (max-device-width: 1024px) and (orientation: landscape) {
-                height: 700px;
-            }
-        }
-        .contentColor {
-            background: $red-base;
-        }
-    }
-    .titleWord {
-        position: relative;
-        top: 13px;
-        width: 100%;
-        height: 60px;
-        line-height: 6.0rem;
-        .leftWord {
-            position: relative;
-            left: 20px;
-            width: 100px;
-            float: left;
-            font-size: $font-size;
-            color: $white;
-            cursor: pointer;
-        }
-        .rightWord {
-            position: relative;
-            right: 20px;
-            width: 100px;
-            text-align: right;
-            float: right;
-            font-size: $font-size;
-            color: $red-base;
-            cursor: pointer;
-        }
-    }
-    .loginContent {
-        position: relative;
-        margin-left: 10%;
-        width: 80%;
-        height: 75px;
-        margin-top: 10px;
-        background: none;
-        @media screen and (max-width: 360px) {
-            height: 60px;
-        }
-        @media screen and (min-width: 360px) and (max-width: 420px) {
-            height: 65px;
-        }
-        input {
-            color: $white;
-            border: 1px solid white;
-            &:hover {
-                border: 2px solid white;
-            }
+    font-size: 0.42rem;
+    position: fixed;
+    top: 1.3rem;
+    line-height: 1.3rem;
+}
 
-            @extend .commonInputDiv;
-        }
-       ::-webkit-input-placeholder { /* WebKit browsers */ 
-color: #e3e3e3; 
-} 
--moz-placeholder { /* Mozilla Firefox 4 to 18 */ 
-color:  #e3e3e3; 
-} 
--moz-placeholder { /* Mozilla Firefox 19+ */ 
-color:  #e3e3e3 
-} 
--ms-input-placeholder { /* Internet Explorer 10+ */ 
-color:  #e3e3e3; 
-} 
-        .commonInput {
-            width: 60%;
-        }
-        .checkboxDiv {
-            width: 15px;
-            height: 20px;
-            position: relative;
-            top: 1px;
-        }
-        .image {
-            float: right;
-            z-index: 200;
-            position: relative;
-            height: 60px;
-            border-radius: 5px;
-            @media screen and (max-width: 360px) {
-                height: 40px;
-                width: 30%;
-            }
-            @media screen and (min-width: 360px) and (max-width: 420px) {
-                height: 45px;
-                width: 30%;
-            }
-            width: 25%;
-            border: 1px solid white;
-            img {
-                height: 100%;
-                width: 100%;
-                border-radius: 4px;
-            }
-            button {
-                height: 100%;
-                width: 100%;
-                color: white;
-                text-align: center;
-                line-height: 60px;
-                @media screen and (max-width: 360px) {
-                    line-height: 40px;
-                }
-                @media screen and (min-width: 360px) and (max-width: 420px) {
-                    line-height: 45px;
-                }
-            }
-        }
-        .error-word {
-            position: relative;
-            top: 65px;
-            color: $no-gray;
-            @media screen and (max-width: 360px) {
-                top: 45px;
-            }
-            @media screen and (min-width: 360px) and (max-width: 420px) {
-                top: 50px;
-            }
-        }
-        .inline {
-            display: inline-block;
-            width: auto;
-            height: 20px;
-        }
-        .wordSize {
-            position: relative;
-            color: white;
-        }
+.phoneHeader {
+    background: transparent !important;
+    border: none !important;
+}
+
+.proLogin {
+    border-top: 1px solid #979797;
+    width: 9rem;
+    color:$gray-light;
+    font-size: 0.3rem;
+    text-align: center;
+    margin: 0 auto;
+    line-height: 1.5rem;
+    margin-top: 1rem;
+}
+
+.choosePage {
+    margin-top: 2.3rem;
+}
+
+.loginItem {
+    margin-bottom: 1.3rem;
+    background: transparent;
+    text-align: center;
+    div:nth-child(1) {
+        color: #e3e3e3;
+        font-size: 0.42rem;
+        margin-bottom: 0.3rem;
+        font-weight: bold;
     }
-    .submitBtn {
-        @extend .commonSubmit;
-        border: none;
-        border: 2px solid white;
-        color: $white;
-        &:hover {
-            border: 2px solid white;
-        }
+    div:nth-child(2) {
+        color: $border-line;
+        font-size: 0.3rem;
     }
-    .nosubmitBtn {
-        background: $gray;
-        color: $white;
-        border: none;
-        border-bottom: 2px solid $gray;
-        @extend .commonNoSubmit;
-        &:hover {
-            border: 2px solid $gray;
-        }
+    div:nth-child(3) {
+        color: $border-line;
+        font-size: 0.3rem;
+        margin-top: 0.1rem;
     }
-    .btn-validation {
-        display: inline;
-        height: 34px;
-        width: 90px;
-        position: relative;
-        top: 0px;
-        left: 0px;
-        cursor: pointer;
-    }
-    .btn-get-validation {
-        display: inline;
-        height: 34px;
-        width: 90px;
-        position: relative;
-        line-height: 3px;
-        top: 0px;
-        left: 0px;
-        background: none;
-        border: none;
-        color: $gray;
-        cursor: pointer;
-        &:hover {
-            color: $gray-dark;
-        }
+    img {
+        margin-top: 0.6rem;
+        width: 3.25rem;
     }
 }
 
-.posSide {
+.toLogin {
     width: 100%;
-    height: 100%;
-    position: relative;
-    background:white;
-    .topDiv {
-        width: 100%;
-        height: 100%;
-        position: relative;
-        background: url(/resources/images/login/cusbg.jpg) no-repeat;
-        background-size: 100% $video-height;
-        @media screen and (max-width: 360px) {
-            background-size: 100% $video-height320;
-        }
-        @media screen and (min-width: 360px) and (max-width: 390px) {
-            background-size: 100% $video-height360;
-        }
-        @media screen and (min-width: 390px) and (max-width: 460px) {
-            background-size: 100% $video-height390;
-        }
-        @media screen and (min-width: 640px) and (max-width: 720px) {
-            background-size: 100% $video-height640;
-        }
-        @media screen and (min-width: 720px) {
-            background-size: 100% $video-height720;
-        }
-        .topContent {
-            width: 100%;
-            height: auto;
-            text-align: center;
-            position: relative;
-            top: 30px;
-            img {
-                height: auto;
-                width: 150px;
-                cursor: pointer;
-                @media screen and (max-width: 360px) {
-                    width: 100px;
-                }
-            }
-            .lineWidth {
-                margin: 15px auto;
-                height: 1px;
-                width: 150px;
-                background: $white;
-                @media screen and (max-width: 360px) {
-                    width: 100px;
-                }
-            }
-            .infoWord {
-                color: $white;
-                font-size: $font-size-lg22;
-                @media screen and (max-width: 360px) {
-                    font-size: $font-size;
-                }
-            }
-        }
-    }
-    .bottomDiv {
-        width: 100%;
-        height: auto;
-        position: absolute;
-
-           top: 130px;
-        @media screen and (max-width: 360px) {
-           top: 130px;
-        }
-        @media (max-device-width: 1024px) and (orientation: landscape) {
-           top: 150px;
-           height: 75%;
-        }
-        .cusBg {
-            background: url(/resources/images/login/posLogin.png) no-repeat;
-            background-size: 100% 100%;
-        }
-        .contentHeight {
-            width: 100%;
-            height: 360px;
-            padding-top: 5%;
-        }
-        .contentColor {
-            background: $white;
-        }
-    }
-    .titleWord {
-        position: relative;
-        top: 13px;
-        width: 100%;
-        height: 60px;
-        line-height: 6.0rem;
-        .leftWord {
-            position: relative;
-            left: 20px;
-            width: 100px;
-            float: left;
-            font-size: $font-size;
-            color: $white;
-            cursor: pointer;
-        }
-        .rightWord {
-            position: relative;
-            right: 20px;
-            width: 100px;
-            text-align: right;
-            float: right;
-            font-size: $font-size;
-            color: $red-base;
-            cursor: pointer;
-        }
-    }
-    .loginContent {
-        position: relative;
-        margin-left: 10%;
-        width: 80%;
-        height: 75px;
-        margin-top: 10px;
-        background: none;
-        @media screen and (max-width: 360px) {
-            height: 60px;
-        }
-        @media screen and (min-width: 360px) and (max-width: 420px) {
-            height: 65px;
-        }
-        input {
-            color: $red-base;
-            border: 1px solid $red-base;
-            &:hover {
-                border: 2px solid $red-base
-            }
-            @extend .commonInputDiv;
-        }
-        .commonInput {
-            width: 60%;
-        }
-        .checkboxDiv {
-            width: 15px;
-            height: 20px;
-            position: relative;
-            top: 1px;
-        }
-        .image {
-            float: right;
-            z-index: 200;
-            position: relative;
-            height: 60px;
-            border-radius: 5px;
-            @media screen and (max-width: 360px) {
-                height: 40px;
-                width: 30%;
-            }
-            @media screen and (min-width: 360px) and (max-width: 420px) {
-                height: 45px;
-                width: 30%;
-            }
-            width: 25%;
-            border: 1px solid $red-base;
-            img {
-                height: 100%;
-                width: 100%;
-                border-radius: 6px;
-            }
-            button {
-                height: 100%;
-                width: 100%;
-                color: $red-base;
-                text-align: center;
-                line-height: 60px;
-                @media screen and (max-width: 360px) {
-                    line-height: 40px;
-                }
-                @media screen and (min-width: 360px) and (max-width: 420px) {
-                    line-height: 45px;
-                }
-            }
-        }
-        .error-word {
-            position: relative;
-            top: 65px;
-            color: #F08080;
-            @media screen and (max-width: 360px) {
-                top: 45px;
-            }
-            @media screen and (min-width: 360px) and (max-width: 420px) {
-                top: 50px;
-            }
-        }
-        .inline {
-            display: inline-block;
-            width: auto;
-            height: 20px;
-        }
-        .wordSize {
-            position: relative;
-            color: $red-base;
-        }
-    }
-    .submitBtn {
-        @extend .commonSubmit;
-        border: none;
-        border: 2px solid $red-base;
+    text-align: center;
+    font-size: 0.3rem;
+    color: white;
+    span {
         color: $red-base;
-        &:hover {
-            border: 2px solid $red-base;
-        }
-    }
-    .nosubmitBtn {
-        background: $gray;
-        color: $white;
-        border: none;
-        border-bottom: 2px solid $gray;
-        @extend .commonNoSubmit;
-        &:hover {
-            border: 2px solid $gray;
-        }
-    }
-    .btn-validation {
-        display: inline;
-        height: 34px;
-        width: 90px;
-        position: relative;
-        top: 0px;
-        left: 0px;
-        cursor: pointer;
-    }
-    .btn-get-validation {
-        display: inline;
-        height: 34px;
-        width: 90px;
-        position: relative;
-        line-height: 3px;
-        top: 0px;
-        left: 0px;
-        background: none;
-        border: none;
-        color: $gray;
-        cursor: pointer;
-        &:hover {
-            color: $gray-dark;
-        }
     }
 }
 
-.commonInputDiv {
-    width: 100%;
-    height: 60px;
-    display: block;
-    position: absolute;
-    background: none;
-    outline: none;
-    border-radius: 5px;
-    padding-left: 28px;
-    @media screen and (max-width: 360px) {
-        height: 40px;
-    }
-    @media screen and (min-width: 360px) and (max-width: 420px) {
-        height: 45px;
-    }
-}
-
-.commonSubmit {
-    letter-spacing: 5px;
-    background: none;
-    height: 60px;
-    width: 80%;
-    text-align: center;
-    line-height: 60px;
-    font-size: $font-size;
-    cursor: pointer;
+.cusLogin {
+    width: 8rem;
     margin: 0 auto;
-    border-radius: 120px;
-    @media screen and (max-width: 360px) {
-        height: 40px;
-        line-height: 40px;
+    .loginTopActive {
+        div:nth-child(1) {
+            color: $gray-light !important;
+        }
+        div:nth-child(2) {
+            width: 50%;
+            color: $red-base !important;
+        }
+        div:nth-child(3) {
+            left: 50% !important;
+        }
     }
-    @media screen and (min-width: 360px) and (max-width: 420px) {
-        height: 45px;
-        line-height: 45px;
+    .loginTop {
+        font-size: 0;
+        height: 2.3rem;
+        line-height: 2.3rem;
+        text-align: center;
+        position: relative;
+        border-bottom: 2px solid $gray-dark;
+        margin-top: 2.3rem;
+        div {
+            -webkit-transition: all .2s linear .1s;
+            -moz-transition: all .2s linear .1s;
+            -o-transition: all .2s linear .1s;
+            transition: all .2s linear .1s;
+        }
+        div:nth-child(1) {
+            width: 50%;
+            display: inline-block;
+            vertical-align: top;
+            color: $red-base;
+            font-size: 0.4rem;
+        }
+        div:nth-child(2) {
+            width: 50%;
+            display: inline-block;
+            vertical-align: top;
+            color: $gray-light;
+            font-size: 0.4rem;
+        }
+        div:nth-child(3) {
+            width: 50%;
+            height: 2px;
+            background: $red-base;
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+        }
+    }
+    .loginItemPhone {
+        width: 100%;
+        height: 2rem;
+        border-bottom: 1px solid $gray-dark;
+        position: relative;
+        margin-top: 0.2rem;
+        .image {
+            width: 2rem;
+            height: 0.8rem;
+            position: absolute;
+            right: 0px;
+            top: 0.35rem;
+            right: 0.8rem;
+        }
+        .code {
+            color: white;
+            font-size: 0.34rem;
+            position: absolute;
+            right: 0.5rem;
+            top: 0.95rem;
+            button {
+                background: transparent;
+                border: none;
+            }
+        }
+        input {
+            width: 100%;
+            height: 100%;
+            line-height: 0.99rem;
+            padding-right: 0.3rem;
+            color: #e3e3e3;
+            font-size: 0.34rem;
+            background: transparent;
+            border: none;
+            outline: none;
+            padding-left: 5px;
+        }
     }
 }
 
-.commonNoSubmit {
-    height: 60px;
-    width: 80%;
-    text-align: center;
-    line-height: 60px;
-    font-size: $font-size;
-    background: $gray;
-    cursor: not-allowed;
-    margin: 0 auto;
-    border-radius: 120px;
-    @media screen and (max-width: 360px) {
-        height: 40px;
-        line-height: 40px;
-    }
-    @media screen and (min-width: 360px) and (max-width: 420px) {
-        height: 45px;
-        line-height: 45px;
-    }
-}
-
-.checkInfo {
+.forgetPw {
+    color: $red-base;
+    font-size: 0.34rem;
     position: relative;
-    top: -25px;
+    left: 5px;
+    div {
+        margin-top: 1rem;
+    }
 }
 
-.newError{
-	left: 200px;
-    top: 68px !important;
+.loginIng {
+    width: 8rem;
+    height: 1rem;
+    line-height: 1rem;
+    color: white;
+    font-size: 0.36rem;
+    background: $red-base;
+    border-radius: 100px;
+    text-align: center;
+    margin-top: 1.3rem;
+}
+
+.noLogin {
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 0.3rem;
+    margin-top: 0.8rem;
+    span {
+        color: $red-base;
+        margin-left: 3px;
+    }
+}
+
+.active {
+    display: none;
+}
+
+.loginTitle {
+    width: 100%;
+    font-size: 0;
+    margin-top: 0.8rem;
+    div {
+        display: inline-block;
+        vertical-align: middle;
+    }
+    div:nth-child(1) {
+        width: 2.5rem;
+        height: 1px;
+        background: $gray-dark;
+    }
+    div:nth-child(2) {
+        width: 3rem;
+        color: white;
+        font-size: 0.3rem;
+        text-align: center;
+    }
+    div:nth-child(3) {
+        width: 2.5rem;
+        height: 1px;
+        background: $gray-dark;
+    }
+}
+
+.loginIcon {
+    width: 8rem;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 0.8rem;
+    margin-bottom: 4rem;
+    position: relative;
+    img:nth-child(1) {
+        position: absolute;
+        left: 0px;
+    }
+    img:nth-child(2) {
+        position: absolute;
+        right: 0px;
+    }
+    img {
+        width: 1.1rem;
+    }
+}
+
+//忘记密码
+.title {
+    position: relative;
+    font-size: 0;
+    margin-bottom: 0.4rem;
+    div {
+        width: 33.33%;
+        display: inline-block;
+        position: relative;
+    }
+    .gray {
+        width: 33.33%;
+        display: inline-block;
+        position: relative;
+        div {
+            position: relative;
+            height: 0.4rem;
+            width: 0.4rem !important;
+            color: white;
+            font-size: $font-size-sm;
+            text-align: center;
+            line-height: 16px;
+            border-radius: 90px;
+            background: $gray-light;
+            z-index: 5;
+        }
+    }
+    .red {
+        width: 33.33%;
+        display: inline-block;
+        position: relative;
+        div {
+            position: relative;
+            height: 16px;
+            width: 16px !important;
+            color: white;
+            font-size: 0.3rem;
+            text-align: center;
+            line-height: 16px;
+            border-radius: 90px;
+            background: $red-base;
+            z-index: 5;
+        }
+    }
+    .gray:after {
+        content: '';
+        background: $gray-light;
+        position: absolute;
+        height: 3px;
+        width: 100%;
+        z-index: 4;
+        top: 7px;
+    }
+    .red:after {
+        content: '';
+        background: $red-base;
+        position: absolute;
+        height: 3px;
+        width: 100%;
+        z-index: 4;
+        top: 7px;
+    }
 }

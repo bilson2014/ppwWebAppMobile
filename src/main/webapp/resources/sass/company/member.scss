@@ -5,12 +5,16 @@
 @import "fontSize";
 @import "compass/typography/text/ellipsis";
 @import "common_portal";
-.wrap {
-    background: white;
-    overflow: auto;
-     -webkit-overflow-scrolling: touch;  
+
+video {
+    width: 100%;
+    margin-top: 1.2rem;
 }
 
+body {
+    overflow: hidden;
+    background: $gray-dark;
+}
 
 a {
     text-decoration: none;
@@ -36,13 +40,9 @@ a:active {
     /* 鎸囨鍦ㄧ偣鐨勯摼鎺�*/
 }
 
-
-
-
-
 .title {
     height: 50px;
-    line-height:50px;
+    line-height: 50px;
     width: 100%;
     border-bottom: 1px solid $border-line;
     text-align: center;
@@ -55,10 +55,8 @@ a:active {
     width: 100%;
     height: auto;
     position: relative;
-    
     .memberContent {
         display: none;
-        background: $backgroundColor;
         height: auto;
         margin-top: 30px;
         font-size: 12px;
@@ -67,47 +65,43 @@ a:active {
             margin-right: 8%;
         }
         .text {
-            padding-top: 30px;
-            color: $gray;
+            padding-top: 0.3rem;
+            color: $border-line;
             line-height: 30px;
-            font-size: 14px;
+            font-size: 0.34rem;
         }
         .share {
             padding-top: 30px;
             padding-bottom: 30px;
         }
         img {
-            height:25px;
-            margin-right:15px;
+            height: 25px;
+            margin-right: 15px;
         }
-
-        .shareImg{
+        .shareImg {
             // width:100px;
             // height: 100px;
             margin-top: 30px;
-            clear: both; 
+            clear: both;
             height: auto;
-            width: 100%; 
+            width: 100%;
         }
-
-        #showShare{
-
-              width:80%;
-              margin: 0 auto;
-
+        #showShare {
+            width: 80%;
+            margin: 0 auto;
         }
     }
     .memberCard {
         width: 100%;
-        height:123px;
+        height: 123px;
         @media screen and (max-width: 320px) {
-            height:70px;
+            height: 70px;
         }
         @media screen and (min-width: 320px) and (max-width: 380px) {
             height: 110px;
         }
         @media screen and (min-width: 380px) and (max-width: 420px) {
-            height:123px;
+            height: 123px;
         }
         .infoHead {
             height: 93px;
@@ -116,72 +110,50 @@ a:active {
             position: relative;
             margin: 0 auto;
             @media screen and (max-width: 320px) {
-               height: 40px;
+                height: 40px;
                 width: 40px;
-                
             }
             @media screen and (min-width: 320px) and (max-width: 380px) {
-               height: 86px;
+                height: 86px;
                 width: 86px;
-                
             }
             @media screen and (min-width: 380px) and (max-width: 420px) {
                 height: 93px;
                 width: 93px;
-          
             }
         }
         .infoHeadSide {
-            height: 93px;
-            width: 93px;
+            height: 2.4rem;
+            width: 2.4rem;
             background: image-url('/resources/images/provder/providerHeadSide.png') no-repeat;
-            background-size: 93px 93px;
+            background-size: 2.4rem 2.4rem;
             margin-left: 8%;
             text-align: center;
             position: relative;
             top: 30px;
             display: inline-block;
-            @media screen and (max-width: 320px) {
-                height: 40px;
-                width: 40px;
-                background-size: 40px 40px;
-            }
-            @media screen and (min-width: 320px) and (max-width: 380px) {
-                height: 80px;
-                width: 80px;
-                background-size: 80px 80px;
-            }
-            @media screen and (min-width: 380px) and (max-width: 420px) {
-                height: 93px;
-                width: 93px;
-                background-size: 93px 93px;
-            }
         }
         ul {
             display: inline-block;
             margin-left: 5%;
             color: $gray-dark;
             text-align: left;
-            @media screen and (max-width: 321px) {
-                position: relative;
-                top: 17px;
-            }
+            height: 2.4rem;
             li:first-child {
                 margin-top: 20px;
-                font-size: 16px;
-                @media screen and (max-width: 321px) {
-                    font-size: 14px;
-                }
+                font-size: 0.42rem;
+                color: #e3e3e3;
+                font-weight: bold;
+                position: relative;
+                top: -0.3rem;
             }
             li:nth-child(2) {
                 margin-top: 5px;
-                font-size: 14px;
                 position: relative;
-                top: 2px;
-                @media screen and (max-width: 321px) {
-                    margin-top: 5px;
-                    font-size:12px;
-                }
+                font-size: 0.36rem;
+                color: #e3e3e3;
+                position: relative;
+                top:0.2rem;
             }
         }
     }
@@ -222,16 +194,16 @@ a:active {
         top: 140px;
         text-align: center;
         @media screen and (max-width: 320px) {
-            top: 25px;
+            top: 30px;
         }
         @media screen and (min-width: 320px) and (max-width: 380px) {
-            top: 67px;
+            top: 70px;
         }
         @media screen and (min-width: 380px) and (max-width: 420px) {
-            top: 70px;
+            top: 80px;
         }
         @media screen and (min-width: 421px) and (max-width: 640px) {
-            top: 70px;
+            top: 80px;
         }
         @media screen and (min-width: 640px) and (max-width: 720px) {
             top: 100px;
@@ -242,193 +214,281 @@ a:active {
         li:nth-child(1) {
             font-size: 16px;
             color: white;
+            font-weight: bold;
         }
         div {
             margin: 0 auto;
             margin-top: 30px;
             color: white;
-            font-size: 14px;
-            width: 50%;
-            height: 35px;
-            line-height: 35px;
+            font-size: 0.36rem;
+            width: 4rem;
+            height: 1rem;
+            line-height: 1rem;
+            border-radius: 61px;
+            background:$red-base;
         }
     }
 }
 
-
-
-
-.contentImg0{
-position: relative;
-animation:headMove 1s;
--moz-animation:headMove 1s; /* Firefox */
--webkit-animation:headMove 1s; /* Safari and Chrome */
--o-animation:headMove 1s; /* Opera */
-}
-.contentImg1{
-position: relative;
-animation:headMove 1.5s;
--moz-animation:headMove 1.5s; /* Firefox */
--webkit-animation:headMove 1.5s; /* Safari and Chrome */
--o-animation:headMove 1.5s; /* Opera */
-}
-.contentImg2{
-position: relative;
-animation:headMove 1.8s;
--moz-animation:headMove 1.8s; /* Firefox */
--webkit-animation:headMove 1.8s; /* Safari and Chrome */
--o-animation:headMove 1.8s; /* Opera */
-}
-.contentImg3{
-position: relative;
-animation:headMove 2s;
--moz-animation:headMove 2s; /* Firefox */
--webkit-animation:headMove 2s; /* Safari and Chrome */
--o-animation:headMove 2s; /* Opera */
-}
-.contentImg4{
-position: relative;
-animation:headMove 2.4s;
--moz-animation:headMove 2.4s; /* Firefox */
--webkit-animation:headMove 2.4s; /* Safari and Chrome */
--o-animation:headMove 2.4s; /* Opera */
-}
-.contentImg5{
-position: relative;
-animation:headMove 2.8s;
--moz-animation:headMove 2.8s; /* Firefox */
--webkit-animation:headMove 2.8s; /* Safari and Chrome */
--o-animation:headMove 2.8s; /* Opera */
+.contentImg0 {
+    position: relative;
+    animation: headMove 1s;
+    -moz-animation: headMove 1s;
+    /* Firefox */
+    -webkit-animation: headMove 1s;
+    /* Safari and Chrome */
+    -o-animation: headMove 1s;
+    /* Opera */
 }
 
-.contentWord0{
-position: relative;
-animation:headMoveRight 1s;
--moz-animation:headMoveRight 1s; /* Firefox */
--webkit-animation:headMoveRight 1s; /* Safari and Chrome */
--o-animation:headMoveRight 1s; /* Opera */
-}
-.contentWord1{
-position: relative;
-animation:headMoveRight 1.5s;
--moz-animation:headMoveRight 1.5s; /* Firefox */
--webkit-animation:headMoveRight 1.5s; /* Safari and Chrome */
--o-animation:headMoveRight 1.5s; /* Opera */
-}
-.contentWord2{
-position: relative;
-animation:headMoveRight 1.8s;
--moz-animation:headMoveRight 1.8s; /* Firefox */
--webkit-animation:headMoveRight 1.8s; /* Safari and Chrome */
--o-animation:headMoveRight 1.8s; /* Opera */
-}
-.contentWord3{
-position: relative;
-animation:headMoveRight 2s;
--moz-animation:headMoveRight 2s; /* Firefox */
--webkit-animation:headMoveRight 2s; /* Safari and Chrome */
--o-animation:headMoveRight 2s; /* Opera */
-}
-.contentWord4{
-position: relative;
-animation:headMoveRight 2.4s;
--moz-animation:headMoveRight 2.4s; /* Firefox */
--webkit-animation:headMoveRight 2.4s; /* Safari and Chrome */
--o-animation:headMoveRight 2.4s; /* Opera */
-}
-.contentWord5{
-position: relative;
-animation:headMoveRight 2.8s;
--moz-animation:headMoveRight 2.8s; /* Firefox */
--webkit-animation:headMoveRight 2.8s; /* Safari and Chrome */
--o-animation:headMoveRight 2.8s; /* Opera */
+.contentImg1 {
+    position: relative;
+    animation: headMove 1.5s;
+    -moz-animation: headMove 1.5s;
+    /* Firefox */
+    -webkit-animation: headMove 1.5s;
+    /* Safari and Chrome */
+    -o-animation: headMove 1.5s;
+    /* Opera */
 }
 
-@keyframes headMove
+.contentImg2 {
+    position: relative;
+    animation: headMove 1.8s;
+    -moz-animation: headMove 1.8s;
+    /* Firefox */
+    -webkit-animation: headMove 1.8s;
+    /* Safari and Chrome */
+    -o-animation: headMove 1.8s;
+    /* Opera */
+}
+
+.contentImg3 {
+    position: relative;
+    animation: headMove 2s;
+    -moz-animation: headMove 2s;
+    /* Firefox */
+    -webkit-animation: headMove 2s;
+    /* Safari and Chrome */
+    -o-animation: headMove 2s;
+    /* Opera */
+}
+
+.contentImg4 {
+    position: relative;
+    animation: headMove 2.4s;
+    -moz-animation: headMove 2.4s;
+    /* Firefox */
+    -webkit-animation: headMove 2.4s;
+    /* Safari and Chrome */
+    -o-animation: headMove 2.4s;
+    /* Opera */
+}
+
+.contentImg5 {
+    position: relative;
+    animation: headMove 2.8s;
+    -moz-animation: headMove 2.8s;
+    /* Firefox */
+    -webkit-animation: headMove 2.8s;
+    /* Safari and Chrome */
+    -o-animation: headMove 2.8s;
+    /* Opera */
+}
+
+.contentWord0 {
+    position: relative;
+    animation: headMoveRight 1s;
+    -moz-animation: headMoveRight 1s;
+    /* Firefox */
+    -webkit-animation: headMoveRight 1s;
+    /* Safari and Chrome */
+    -o-animation: headMoveRight 1s;
+    /* Opera */
+}
+
+.contentWord1 {
+    position: relative;
+    animation: headMoveRight 1.5s;
+    -moz-animation: headMoveRight 1.5s;
+    /* Firefox */
+    -webkit-animation: headMoveRight 1.5s;
+    /* Safari and Chrome */
+    -o-animation: headMoveRight 1.5s;
+    /* Opera */
+}
+
+.contentWord2 {
+    position: relative;
+    animation: headMoveRight 1.8s;
+    -moz-animation: headMoveRight 1.8s;
+    /* Firefox */
+    -webkit-animation: headMoveRight 1.8s;
+    /* Safari and Chrome */
+    -o-animation: headMoveRight 1.8s;
+    /* Opera */
+}
+
+.contentWord3 {
+    position: relative;
+    animation: headMoveRight 2s;
+    -moz-animation: headMoveRight 2s;
+    /* Firefox */
+    -webkit-animation: headMoveRight 2s;
+    /* Safari and Chrome */
+    -o-animation: headMoveRight 2s;
+    /* Opera */
+}
+
+.contentWord4 {
+    position: relative;
+    animation: headMoveRight 2.4s;
+    -moz-animation: headMoveRight 2.4s;
+    /* Firefox */
+    -webkit-animation: headMoveRight 2.4s;
+    /* Safari and Chrome */
+    -o-animation: headMoveRight 2.4s;
+    /* Opera */
+}
+
+.contentWord5 {
+    position: relative;
+    animation: headMoveRight 2.8s;
+    -moz-animation: headMoveRight 2.8s;
+    /* Firefox */
+    -webkit-animation: headMoveRight 2.8s;
+    /* Safari and Chrome */
+    -o-animation: headMoveRight 2.8s;
+    /* Opera */
+}
+
+@keyframes headMove {
+    0% {
+        left: -100%
+    }
+    80% {
+        left: 2%
+    }
+    100% {
+        left: 0px
+    }
+}
+
+@-o-keyframes headMoveRight
+/* Opera */
+
 {
-0%   {left:-100%}
-80%   {left:2%}
-100% {left:0px}
+    0% {
+        left: -100%
+    }
+    80% {
+        left: 2%
+    }
+    100% {
+        left: 0px
+    }
 }
-@-o-keyframes headMoveRight /* Opera */
+
+@-moz-keyframes headMove
+/* Firefox */
+
 {
-0%   {left:-100%}
-80%   {left:2%}
-100% {left:0px}
+    0% {
+        left: -100%
+    }
+    80% {
+        left: 2%
+    }
+    100% {
+        left: 0px
+    }
 }
 
+@-webkit-keyframes headMove
+/* Safari 閸滐拷 Chrome */
 
-@-moz-keyframes headMove /* Firefox */
 {
-0%   {left:-100%}
-80%   {left:2%}
-100% {left:0px}
+    0% {
+        left: -100%
+    }
+    80% {
+        left: 2%
+    }
+    100% {
+        left: 0px
+    }
 }
 
+@-o-keyframes headMoveRight
+/* Opera */
 
-@-webkit-keyframes headMove /* Safari 閸滐拷 Chrome */
 {
-0%   {left:-100%}
-80%   {left:2%}
-100% {left:0px}
+    0% {
+        right: -100%
+    }
+    80% {
+        right: 2%
+    }
+    100% {
+        right: 0px
+    }
 }
 
+@keyframes headMoveRight {
+    0% {
+        right: -100%
+    }
+    80% {
+        right: 2%
+    }
+    100% {
+        right: 0px
+    }
+}
 
-@-o-keyframes headMoveRight /* Opera */
+@-moz-keyframes headMoveRight
+/* Firefox */
+
 {
-0%   {right:-100%}
-80%   {right:2%}
-100% {right:0px}
+    0% {
+        right: -100%
+    }
+    80% {
+        right: 2%
+    }
+    100% {
+        right: 0px
+    }
 }
-@keyframes headMoveRight
+
+@-webkit-keyframes headMoveRight
+/* Safari 閸滐拷 Chrome */
+
 {
-0%   {right:-100%}
-80%   {right:2%}
-100% {right:0px}
+    0% {
+        right: -100%
+    }
+    80% {
+        right: 2%
+    }
+    100% {
+        right: 0px
+    }
 }
 
-@-moz-keyframes headMoveRight /* Firefox */
-{
-0%   {right:-100%}
-80%   {right:2%}
-100% {right:0px}
-}
-
-
-@-webkit-keyframes headMoveRight /* Safari 閸滐拷 Chrome */
-{
-0%   {right:-100%}
-80%   {right:2%}
-100% {right:0px}
-}
-
-
-
-
-.topHeaderBottom{
-        height:79px;
-     @media screen and (max-width: 360px) {
+.topHeaderBottom {
+    height: 79px;
+    @media screen and (max-width: 360px) {
         height: 45px;
     }
     @media screen and (min-width: 360px) and (max-width: 500px) {
-        height:55px;
+        height: 55px;
     }
-
 }
 
-.showWeiXin{
-
-   position:fixed;
-   width: 100%;
-   top:0px;
-   z-index:999;
-
+.showWeiXin {
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    z-index: 999;
 }
-
-
-
-
-
-    
-
-

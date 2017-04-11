@@ -30,6 +30,7 @@
 <spring:url value="/resources/lib/jquery/waypoints.min.js"
 	var="waypoints" />
 <spring:url value="/resources/lib/merge/iosSelect.js" var="iosSelectJs" />
+<spring:url value="/resources/js/remSet.js" var="remSetJs" />
 
 
 
@@ -70,17 +71,132 @@
 		<script>window.html5 || document.write('<script src="html5shivJs"><\/script>')</script>
 	<![endif]-->
 <script src="${jqueryJs }"></script>
-<script src="${pluginJs }"></script>
-<script src="${jsonJs }"></script>
+<script src="${remSetJs }"></script>
+<%-- <script src="${pluginJs }"></script>
+
+<script src="${imgLazyLoadingJs }"></script> --%>
 <script src="${commonJs }"></script>
-<script src="${providerInfoLeaderJs }"></script>
-<script src="${imgLazyLoadingJs }"></script>
+<script src="${jsonJs }"></script>
 <script src="${iosSelectJs }"></script>
+<script src="${providerInfoLeaderJs }"></script>
+
 </head>
 <body>
 
+    <div class="errorDiv"  id="errorDiv" style="display: none;">error</div>
 
-       <div class="headerNew">
+	<div class="model" id="orderSuccess">
+	         <div class="success">
+	            <img src="${imgPath}/index/success.png">
+	            <div>提交完成审核</div>
+	            <div><span id="lasttime">3</span>秒后跳转到供应商主页</div>
+	            <div id="checkSuccess">确认</div>
+	         </div>
+	</div>
+
+    <div class="phoneHeader">
+	     <a><img src="${imgPath }/index/toMenu.png"></a>
+	     <a><img src="${imgPath }/index/toSearch.png"></a>
+	     <div>注册引导</div>
+	</div>
+    
+     <jsp:include flush="true" page="../menu.jsp"></jsp:include> 
+    
+    <div class="pagePhone">
+    
+            <div class="stepTopDiv">
+              <div class="titleTop">
+                    <span>*</span><label id="titleInfo">基本信息</label>
+               </div> 
+            </div>   
+           
+           
+           <div class="stepOne">
+               
+               <div class="item">    
+			       <div class="title">公司名称</div>
+	               <input  id="company-name">
+           	   </div>
+           	   <div class="item">    
+			       <div class="title">联系人</div>
+	               <input  id="company-linkman">
+           	   </div>
+           	   <div class="item">    
+			       <div class="title">微信号</div>
+	               <input  id="company-webchat">
+           	   </div>
+           	   <div class="item">    
+			       <div class="title">QQ</div>
+	               <input  id="company-qq">
+           	   </div>
+           	   <div class="item">    
+			       <div class="title">公司邮箱</div>
+	               <input  id="company-email">
+           	   </div>
+           	   <div class="item area">    
+			      	<div class="title">公司地址</div>
+	                <textarea id="company-address"></textarea>
+           	   </div>
+           	   
+           	   <div class="nextBtn" id="step1">下一步</div>
+           </div>
+           
+           <div class="stepTwo hide">
+                <div class="item">    
+			      	<div class="title">所在省</div>
+	                <div class="secondDiv">
+			            <input readonly type="text" class="AddrSelector" id="sheng">
+			            <input type="hidden" id="shengID">
+			            <div class="up">
+			              <img class="imgUD" src="${imgPath}/provider/select.png">
+			            </div>
+		          </div> 
+           	   </div>
+           	   
+           	   <div class="item">    
+			      	<div class="title">所在城市</div>
+	                <div class="secondDiv">
+			            <input readonly type="text" class="AddrSelector" id="shi">
+			            <input type="hidden" id="shiID">
+			            <div class="up">
+			              <img class="imgUD" src="${imgPath}/provider/select.png">
+			            </div>
+		          </div> 
+           	   </div>
+           	   
+           	    <div class="item">    
+			      	<div class="title">价格区间</div>
+	                <div class="secondDiv">
+			            <input readonly type="text" data-id="10001" id="company-priceRange" value="看情况">
+			            <input type="hidden" id="shiID">
+			            <div class="up">
+			              <img class="imgUD" src="${imgPath}/provider/select.png">
+			            </div>
+		          </div> 
+           	   </div>
+           	   
+           	   <div class="item">    
+			      	<div class="title">获知渠道</div>
+	                <div class="secondDiv">
+			            <input readonly type="text" data-id="1" id="company-infoResource" value="友情推荐">
+			            <input type="hidden" id="shiID">
+			            <div class="up">
+			              <img class="imgUD" src="${imgPath}/provider/select.png">
+			            </div>
+		          </div> 
+           	   </div>
+               
+               
+		           <div class="nextBtn" id="step2">下一步</div>
+           
+           </div>
+           
+           
+    
+    </div>
+
+
+     <%--   <div class="headerNew">
 	             <a href="javascript:history.back(-1);">
 		              <div class="leftHeader">
 						 <div class="back"></div>
@@ -292,6 +408,6 @@
 		</ul>
 	</div>
 	</div>
-
+ --%>
 </body>
 </html>

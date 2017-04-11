@@ -92,8 +92,6 @@
   
    <div class="swiper-container">
         <div class="swiper-wrapper">
-              
-        
             <div class="swiper-slide banner stepBtn-1">
               <div class="bLogoDiv">
                <img class="bLogo"  src="/resources/images/cost/bannerLogo.png">
@@ -125,21 +123,14 @@
                 <div class="stepBtn-2 step2E anE" data-content="0">
                     <div data-content="4" data-text="融资路演"></div>
                 </div>
-                <div class="stepBtn-2 step2F anF" data-content="0">
-                    <div data-content="5" data-text="众筹视频"></div>
-                </div>
-                
 		         <div class="icon spIcon">
 		            <img id="icon" src="/resources/images/cost/icon.png">
 		         </div>   
-				
             </div>
-            
                    
             <div class="swiper-slide step3">
 		             <img class="rotate" style="width:100%" src="/resources/images/cost/step3TB.png">
 		             <img style="width:100%; position: absolute;top: 0rem;left: 0rem;z-index:1" src="/resources/images/cost/step3Logo.png">
-		             
 		             <div class="step3Q"></div>
 		                <div class="stepBtn-3 step3A anA" >
 		                     <div class="" data-content="0" data-text="专业级导演"></div>

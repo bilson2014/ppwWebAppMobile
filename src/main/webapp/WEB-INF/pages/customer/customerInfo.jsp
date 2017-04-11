@@ -125,7 +125,6 @@
 						<div class="titleWord">QQ</div>
 						<div id="qq">${userinfo.qq }</div>
 					</li>
-
 				</ul>
 			</div>
 			<div class="line"></div>
