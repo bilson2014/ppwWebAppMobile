@@ -30,7 +30,6 @@ import com.paipianwang.pat.common.config.PublicConfig;
 import com.paipianwang.pat.common.constant.PmsConstant;
 import com.paipianwang.pat.common.entity.SessionInfo;
 import com.paipianwang.pat.common.enums.LoginType;
-import com.paipianwang.pat.common.util.Constants.loginType;
 import com.paipianwang.pat.common.util.ValidateUtil;
 import com.paipianwang.pat.facade.right.entity.PmsRole;
 import com.paipianwang.pat.facade.right.service.PmsRightFacade;
@@ -84,89 +83,57 @@ public class LoginController extends BaseController {
 	 */
 	@RequestMapping(value = "/doLogin", method = RequestMethod.POST, produces = "application/json; charset=UTF-8")
 	public Info login(@RequestBody final PmsUser user, final HttpServletRequest request) {
-		final String code = (String) request.getSession().getAttribute("code");
-		final String codeOfphone = (String) request.getSession().getAttribute("codeOfphone");
-		// 是否是测试程序
-		boolean isTest = PublicConfig.IS_AUTO_TEST.equals("yes") ? true : false;
-		Info info = new Info();
-
 		if (user.getLoginType().equals(LoginType.PHONE.getDesc())) {// 手机号登录
+			return loginByPhone(user,request);
+		} else {// 用户名登录
+			return loginByName(user,request);
+		}
+	}
+	
+	private Info loginByName(PmsUser user, HttpServletRequest request) {
+		final String pwd = user.getPassword();
+		final String loginName = user.getLoginName();
+		if (ValidateUtil.isValid(loginName) && ValidateUtil.isValid(pwd)) {
 			try {
-				if (isTest || (!"".equals(code) && code != null)) {
-					if (isTest || code.equals(user.getVerification_code())) {
-						if (isTest || (null != codeOfphone && codeOfphone.equals(user.getTelephone()))) {
-							if (user != null && user.getPassword() != null && !"".equals(user.getPassword())) {
-								// AES密码解密
-								final String password = AESUtil.Decrypt(user.getPassword(), PmsConstant.UNIQUE_KEY);
-								// MD5
-								user.setPassword(DataUtil.md5(password));
-
-								PmsUser orignUser = null;
-								if (user.getLoginType().equals(loginType.phone.getKey())) {
-									orignUser = pmsUserFacade.findUserByAttr(user);
-								} else if (user.getLoginType().equals(loginType.account.getKey())) {
-									orignUser = pmsUserFacade.findUserByLoginNameAndPwd(user);
-								}
-								if (orignUser != null) {
-									// 清空当前session
-									Gson gson = new Gson();
-									String json = gson.toJson(orignUser);
-									boolean ret = initSessionInfo(gson.fromJson(json, PmsUser.class), request);
-									info.setKey(ret);
-									info.setValue("登录成功");
-									return info;
-								}
-
-								info.setKey(false);
-								info.setValue("登录失败");
-								return info;
-							}
-						} else {
-							// 手机号错误
-							info.setKey(false);
-							info.setValue("和验证手机不符!");
-						}
-					} else {
-						// 验证码过期
-						info.setKey(false);
-						info.setValue("验证码输入错误!");
-					}
-				} else {
-					// session 过期
-					info.setKey(false);
-					info.setValue("请重新获取验证码!");
+				String password = AESUtil.Decrypt(pwd, PmsConstant.UNIQUE_KEY);
+				user.setPassword(DataUtil.md5(password));
+				PmsUser orignUser = pmsUserFacade.findUserByLoginNameAndPwd(user);
+				if(null != orignUser){
+					initSessionInfo(orignUser, request);
+					return new Info(true, "登录成功");
+				}else{
+					return new Info(false, "帐户名或密码错误");
 				}
 			} catch (Exception e) {
-				logger.error("LoginController method:login() PmsUser Password Decrypt Error ...");
 				e.printStackTrace();
 			}
-		} else {// 用户名登录
-			final String pwd = user.getPassword();
-			final String loginName = user.getLoginName();
-			if (ValidateUtil.isValid(loginName) && ValidateUtil.isValid(pwd)) {
-				try {// 解密
-					final String password = AESUtil.Decrypt(pwd, PmsConstant.UNIQUE_KEY);
-					user.setPassword(DataUtil.md5(password));
-					PmsUser orignUser = null;
-					if (user.getLoginType().equals(loginType.phone.getKey())) {
-						orignUser = pmsUserFacade.findUserByAttr(user);
-					} else if (user.getLoginType().equals(loginType.account.getKey())) {
-						orignUser = pmsUserFacade.findUserByLoginNameAndPwd(user);
-					}
-					if (orignUser != null) {
-						info.setKey(true);
-						info.setValue("登录成功");
-					} else {
-						info.setKey(false);
-						info.setValue("帐户名或密码错误");
-					}
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
 		}
+		return new Info(false,"数据错误");
+	}
 
-		return info;
+	private Info loginByPhone(PmsUser user, HttpServletRequest request) {
+		final String code = (String) request.getSession().getAttribute("code");
+		final String codeOfphone = (String) request.getSession().getAttribute("codeOfphone");
+		if ((!"".equals(code) && code != null)) {
+			if (code.equals(user.getVerification_code())) {
+				if (null != codeOfphone && codeOfphone.equals(user.getTelephone())) {
+					PmsUser orignUser = pmsUserFacade.findUserByAttr(user);
+					if (orignUser != null) {
+						// 清空当前session
+						initSessionInfo(orignUser, request);
+						return new Info(true, "登录成功");
+					}else{
+						return new Info(false, "手机号或密码错误");
+					}
+				} else {
+					return new Info(false, "和验证手机不符!");
+				}
+			} else {
+				return new Info(false, "验证码输入错误!");
+			}
+		} else {
+			return new Info(false, "请重新获取验证码!");
+		}
 	}
 
 	/**

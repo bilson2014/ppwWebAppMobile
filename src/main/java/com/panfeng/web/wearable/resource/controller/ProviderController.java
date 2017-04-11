@@ -121,74 +121,65 @@ public class ProviderController extends BaseController {
 			return new BaseMsg(BaseMsg.ERROR, "登陆错误", false);
 		}
 		if (original.getLoginType().equals(LoginType.PHONE.getDesc())) {// 手机号登录
-			final String code = (String) request.getSession().getAttribute("code");
-			final String codeOfphone = (String) request.getSession().getAttribute("codeOfphone");
-			// 是否是测试程序
-			boolean isTest = PublicConfig.IS_AUTO_TEST.equals("yes") ? true : false;
-			if (isTest || (original.getVerification_code() != null && code != null
-					&& code.equals(original.getVerification_code()))) {
-				if (isTest || (null != codeOfphone && codeOfphone.equals(original.getPhoneNumber()))) {
-
-					PmsTeam newTeam = new PmsTeam();
-					if (null != original && null != original.getPhoneNumber()
-							&& !"".equals(original.getPhoneNumber())) {
-						newTeam = pmsTeamFacade.doLogin(original.getPhoneNumber());
-					} else {
-						newTeam = pmsTeamFacade.findTeamByLoginNameAndPwd(original);
-					}
-					if (newTeam != null) {
-						// 存入session
-						Gson gson = new Gson();
-						String json = gson.toJson(newTeam);
-						final boolean ret = initSessionInfo(gson.fromJson(json, PmsTeam.class), request);
-						if (ret) {
-							return new BaseMsg(BaseMsg.NORMAL, "", true);
-						} else {
-							return new BaseMsg(BaseMsg.ERROR, "用户名或密码错误!", false);
-						}
-					}
-
-				} else {
-					serLogger.info("手机号错误");
-					return new BaseMsg(BaseMsg.ERROR, "手机号错误", false);
-				}
-			} else {
-				serLogger.info("Provider Verification_code timeout ...");
-				return new BaseMsg(BaseMsg.ERROR, "短信验证码错误", false);
-			}
+			return loginByPhone(original, request);
 		} else {// 用户名登录
-			final String pwd = original.getPassword();
-			final String loginName = original.getLoginName();
-			if (ValidateUtil.isValid(loginName) && ValidateUtil.isValid(pwd)) {
-				try {// 解密
-					final String password = AESUtil.Decrypt(pwd, PmsConstant.UNIQUE_KEY);
-					original.setPassword(DataUtil.md5(password));
-
-					PmsTeam newTeam = new PmsTeam();
-					if (null != original && null != original.getPhoneNumber()
-							&& !"".equals(original.getPhoneNumber())) {
-						newTeam = pmsTeamFacade.doLogin(original.getPhoneNumber());
+			return loginByName(original, request);
+		}
+	}
+	
+	private BaseMsg loginByName(PmsTeam original, HttpServletRequest request) {
+		final String pwd = original.getPassword();
+		final String loginName = original.getLoginName();
+		if (ValidateUtil.isValid(loginName) && ValidateUtil.isValid(pwd)) {
+			try {// 解密
+				final String password = AESUtil.Decrypt(pwd, PmsConstant.UNIQUE_KEY);
+				original.setPassword(DataUtil.md5(password));
+				PmsTeam team = pmsTeamFacade.findTeamByLoginNameAndPwd(original);
+				if (team != null) {
+					// 存入session
+					boolean ret = initSessionInfo(team, request);
+					if (ret) {
+						return new BaseMsg(BaseMsg.NORMAL, "", true);
 					} else {
-						newTeam = pmsTeamFacade.findTeamByLoginNameAndPwd(original);
+						return new BaseMsg(BaseMsg.ERROR, "用户名或密码错误!", false);
 					}
-					if (newTeam != null) {
-						// 存入session
-						Gson gson = new Gson();
-						String json = gson.toJson(newTeam);
-						final boolean ret = initSessionInfo(gson.fromJson(json, PmsTeam.class), request);
-						if (ret) {
-							return new BaseMsg(BaseMsg.NORMAL, "", true);
-						} else {
-							return new BaseMsg(BaseMsg.ERROR, "用户名或密码错误!", false);
-						}
-					}
-
-				} catch (Exception e) {
-					e.printStackTrace();
+				} else {
+					return new BaseMsg(BaseMsg.WARNING, "用户名或密码错误!", false);
 				}
+			} catch (Exception e) {
+				e.printStackTrace();
 			}
 		}
 		return new BaseMsg(BaseMsg.ERROR, "登陆错误", false);
+	}
+
+	private BaseMsg loginByPhone(final PmsTeam original, final HttpServletRequest request) {
+		final String code = (String) request.getSession().getAttribute("code");
+		final String codeOfphone = (String) request.getSession().getAttribute("codeOfphone");
+		if ((original.getVerification_code() != null && code != null)) {
+			if (code.equals(original.getVerification_code())) {
+				if ((null != codeOfphone && codeOfphone.equals(original.getPhoneNumber()))) {
+					PmsTeam team = pmsTeamFacade.doLogin(original.getPhoneNumber());
+					if (team != null) {
+						// 存入session
+						boolean ret = initSessionInfo(team, request);
+						if (ret) {
+							return new BaseMsg(BaseMsg.NORMAL, "", true);
+						} else {
+							return new BaseMsg(BaseMsg.WARNING, "手机号或密码错误!", false);
+						}
+					} else {
+						return new BaseMsg(BaseMsg.WARNING, "手机号或密码错误!", false);
+					}
+				} else {
+					return new BaseMsg(BaseMsg.ERROR, "和验证手机不符", false);
+				}
+			} else {
+				return new BaseMsg(BaseMsg.ERROR, "验证码错误", false);
+			}
+		} else {
+			return new BaseMsg(BaseMsg.ERROR, "请重新获取验证码", false);
+		}
 	}
 
 	@RequestMapping("/thirdLogin")
