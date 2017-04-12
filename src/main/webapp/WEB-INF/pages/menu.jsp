@@ -42,10 +42,29 @@
 <div class="model menu" id="menu">
 	           <img class="menuBack" src="${imgPath}/menu/menuBack.jpg">
 	           <div class="menuTop">
-	                  <a href="/loginSele"><img class="userLogo" src="${imgPath}/menu/defultLogin.png"></a>
+	                 
+	                   <r:noLogin>
+	                       <a href="/loginSele"><img class="userLogo" src="${imgPath}/menu/defultLogin.png"></a>
+	                   </r:noLogin>
+	                   <r:identity role="provider">
+	                   <a ><img class="userLogo" src="${imgPath}/menu/defultLogin.png"></a>
+	                  </r:identity>
+	                  <r:identity role="customer">
+	                      <a ><img class="userLogo" src="${imgPath}/menu/defultLogin.png"></a>
+	                  </r:identity>
 	                  <img class="close" id="editInfo" src="${imgPath}/menu/edit.png">
+	                   
 	                  <a href="/userInfo" ><img class="edit"  src="${imgPath}/menu/editMenu.png"></a>
-	                  <div>昵称</div>
+	                
+	                  <r:identity role="provider">
+	                     <div>provider.phoneNumber</div>
+	                  </r:identity>
+	                  <r:identity role="customer">
+	                     <div>user.phoneNumber</div>
+	                  </r:identity>
+	                  <r:noLogin>
+	                      <div>未登录</div>
+	                  </r:noLogin>
 	           </div>
 	           <div class="menuContent">
 	                 <a href="/">
