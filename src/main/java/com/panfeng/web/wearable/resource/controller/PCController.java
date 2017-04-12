@@ -53,7 +53,7 @@ public class PCController extends BaseController {
 
 	@Autowired
 	final private SolrService solrService = null;
-	
+
 	@Autowired
 	final private PmsTeamFacade pmsTeamFacade = null;
 
@@ -162,7 +162,7 @@ public class PCController extends BaseController {
 	@RequestMapping("/product/order/loadWithTeamName")
 	public List<PmsProductSolr> productInformationByTeamOrder(@RequestBody final SolrView solrView,
 			final HttpServletRequest request) {
-		
+
 		final ResourceToken token = (ResourceToken) request.getAttribute("resourceToken"); // 访问资源库令牌
 		String condition = solrView.getCondition();
 		final SolrQuery query = new SolrQuery();
@@ -241,10 +241,34 @@ public class PCController extends BaseController {
 	 * 首页获取导演推荐
 	 */
 	@RequestMapping(value = "/team/recommend", method = RequestMethod.POST, produces = "application/json; charset=UTF-8")
-	public com.panfeng.web.wearable.domain.BaseMsg getRecommendTeam(final HttpServletRequest request) {
+	public BaseMsg getRecommendTeam(final HttpServletRequest request) {
 		BaseMsg baseMsg = new BaseMsg();
 		List<PmsTeam> teamRecommendList = pmsTeamFacade.teamRecommendList();
-		if (null != teamRecommendList) {
+		if (ValidateUtil.isValid(teamRecommendList)) {
+			// 取出tags标签
+			for (PmsTeam pmsTeam : teamRecommendList) {
+				// 加载导演标签
+				String strtags = pmsTeam.getBusiness();
+				if (ValidateUtil.isValid(strtags)) {
+					try {
+						String[] tagsarray = strtags.split("\\,");
+						List<Integer> ids = new ArrayList<>();
+						for (int i = 0; i < tagsarray.length; i++) {
+							ids.add(Integer.parseInt(tagsarray[i]));
+						}
+						List<String> tags = pmsTeamFacade.getTags(ids);
+						if (ValidateUtil.isValid(tags)) {
+							pmsTeam.setBusiness(JsonUtil.toJson(tags));
+						}
+					} catch (NumberFormatException e) {
+						e.printStackTrace();
+					} catch (Exception e) {
+						e.printStackTrace();
+					}
+				} else {
+					logger.error("provider business is null ...");
+				}
+			}
 			baseMsg.setCode(1);
 			baseMsg.setResult(teamRecommendList);
 		} else {

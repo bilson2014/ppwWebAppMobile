@@ -2,10 +2,14 @@ package com.panfeng.web.wearable.resource.controller;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.apache.commons.lang.StringUtils;
+import org.apache.solr.client.solrj.SolrQuery;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,10 +22,13 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.paipianwang.pat.common.config.PublicConfig;
+import com.paipianwang.pat.common.util.SolrUtil;
 import com.paipianwang.pat.common.util.ValidateUtil;
+import com.paipianwang.pat.common.web.domain.ResourceToken;
 import com.paipianwang.pat.facade.information.entity.PmsNews;
 import com.paipianwang.pat.facade.information.entity.PmsNewsSolr;
 import com.paipianwang.pat.facade.information.entity.PmsProductSolr;
+import com.panfeng.web.wearable.domain.BaseMsg;
 import com.panfeng.web.wearable.resource.model.Solr;
 import com.panfeng.web.wearable.resource.view.SolrView;
 import com.panfeng.web.wearable.service.SolrService;
@@ -160,7 +167,6 @@ public class SolrController extends BaseController {
 		}
 
 		view.setLimit(20l);
-
 		final List<PmsNewsSolr> list = solrService.queryNewDocs(PublicConfig.SOLR_NEWS_URL, view);
 		return list;
 	}
@@ -207,5 +213,54 @@ public class SolrController extends BaseController {
 		}
 
 		return new ModelAndView("/news/newsInfo");
+	}
+	
+	/**
+	 * 播放界面获取更多推荐作品 根据tags来搜索 参数：condition 表示tag标签
+	 */
+	@RequestMapping("/tags/product/search")
+	public BaseMsg getMoreProductByTags(final HttpServletRequest request, @RequestBody final SolrView solrView) {
+		BaseMsg baseMsg = new BaseMsg();
+
+		final ResourceToken token = (ResourceToken) request.getAttribute("resourceToken"); // 访问资源库令牌
+		if (token != null) {
+			String condition = solrView.getCondition();
+			final SolrQuery query = new SolrQuery();
+			query.set("defType", "edismax");
+			query.set("q.alt", "*:*");
+			query.set("qf", "productName^2.3 tags");
+
+			if (StringUtils.isNotBlank(condition)) {
+				// 如果有标签的话，那么判断condition按照标签搜索
+				// 分析标签优先级顺序，按顺序权重依次降低
+				condition = SolrUtil.ReweightingByTags(condition);
+				query.setQuery(condition);
+			} else {
+				// 没有标签，则相关视频推荐为空
+				return null;
+			}
+			query.set("pf", "tags^2.3 productName");
+			query.set("tie", "0.1");
+			query.setFields("teamId,productId,productName,orignalPrice,price,picLDUrl,tags");
+			query.setStart((int) solrView.getBegin());
+			query.setRows((int) solrView.getLimit());
+
+			final List<PmsProductSolr> list = solrService.queryDocs(token.getSolrUrl(), query);
+			if (ValidateUtil.isValid(list)) {
+				Map<String, Object> map = new HashMap<>();
+				long total = 0;
+				total = list.get(0).getTotal();
+				map.put("total", total);
+				map.put("result", list);
+				baseMsg.setCode(1);
+				baseMsg.setResult(map);
+				return baseMsg;
+			}
+
+		}
+
+		baseMsg.setErrorCode(BaseMsg.ERROR);
+		baseMsg.setErrorMsg("list is null");
+		return baseMsg;
 	}
 }
