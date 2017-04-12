@@ -51,7 +51,7 @@
 	<script src="${aesJs }"></script>
 	<script src="${padJs }"></script>
 	<script src="${commonJs }"></script>
-	<script src="${phoneLoginJs }"></script>
+	
 
 
 </head>

@@ -162,7 +162,6 @@ var login = {
 					}
 				},  getContextPath() + '/login/doLogin', $.toJSON({
 					loginType :'phone',
-					password : Encrypt("123456"),
 					telephone : phoneNumber,
 					verification_code : veri_code
 				}));

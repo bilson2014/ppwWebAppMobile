@@ -63,11 +63,11 @@ var login = {
 								
 							}else{
 								// 服务器错误
-								alert(flag.errorMsg);
+								successToolTipShow(flag.errorMsg);
 							}
 						}
 						
-					}, getContextPath() + '/login/validation/phone', $.toJSON({
+					}, getContextPath() + '/provider/checkPhoneExisting', $.toJSON({
 						telephone : telephone
 					}));
 				}else{

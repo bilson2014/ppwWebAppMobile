@@ -78,7 +78,7 @@
 			                  </div>
 		                 </a>
 		             </r:identity>     
-	                 <a href="/search?q=&sortord=0&item=*">
+	                 <a href="/search?q=*">
 		                  <div class="menuItem">
 		                       <img src="${imgPath}/menu/editMenu.png">
 		                       <div>精品案例</div>
@@ -102,7 +102,7 @@
 		                       <div>关于我们</div>
 		                  </div>
 	                    </a>
-	                 <a href="/newsInfo">
+	                 <a href="/news-list.html">
 		                  <div class="menuItem">
 		                       <img src="${imgPath}/menu/newsInfo.png">
 		                       <div>新闻资讯</div>

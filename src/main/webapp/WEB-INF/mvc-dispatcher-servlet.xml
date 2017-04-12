@@ -58,7 +58,6 @@
 	<mvc:view-controller path="/repwd" view-name="/repwd" />
 	<mvc:view-controller path="/play" view-name="/play" />
 	<mvc:view-controller path="/searchs" view-name="/searchs" />
-	<mvc:view-controller path="/newsList" view-name="/news/newsList" />
 	<mvc:view-controller path="/newsInfo" view-name="/news/newsInfo" />
 	<mvc:view-controller path="/test" view-name="/portalTest" />
 	<mvc:resources location="/resources/" mapping="/resources/**" />

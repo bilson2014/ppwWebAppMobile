@@ -317,13 +317,13 @@
 	<div class="secondContent">
 	      <div class="title">热门案例</div>
 	      <div class="conDiv">
-	              <a href='/search?q=宣传片&sortord=0'>
+	              <a href='/search?q=&industry=宣传片'>
 			          <div class="conItem leftItem">
 			             <img src="${imgPath}/index/video.png">
 			             <div class="type">宣传片</div>
 			          </div>
 		          </a>
-		           <a href="/search?q=微电影&sortord=0">
+		           <a href="/search?q=&industry=微电影">
 			          <div class="conItem">
 			             <img src="${imgPath}/index/sVideo.png">
 			             <div class="type">微电影</div>
@@ -331,13 +331,13 @@
 		          </a>
 	      </div>
 	       <div class="conDiv noBot">
-	              <a href="/search?q=广告片&sortord=0">
+	              <a href="/search?q=&industry=广告片">
 			          <div class="conItem leftItem">
 			             <img src="${imgPath}/index/ad.png">
 			             <div class="type">广告片</div>
 			          </div>
 		          </a>
-		           <a href="/search?q=病毒视频&sortord=0">
+		           <a href="/search?q=&industry=病毒视频">
 			          <div class="conItem">
 			             <img src="${imgPath}/index/spread.png">
 			             <div class="type">病毒视频</div>

@@ -1,7 +1,9 @@
 <%@ page contentType="text/html;charset=UTF-8"%>
-<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jstl/core" %>
+<%-- <%@ page import="com.panfeng.web.wearable.resource.model.NewsSolr"%> --%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
+
 <%-- import CSS --%>
 <spring:url value="/resources/css/news/newsInfo.css" var="newsInfoCss"/>
 
@@ -58,11 +60,11 @@
 		          <div>超级大标签</div>
 		          <div>我是标签</div>
 		          <div>超级</div> -->
-		           <c:if test="${not empty fn:trim(news.tags) }">
+		           <%-- <c:if test="${not empty fn:trim(news.tags) }">
 										<c:forEach items="${fn:split(fn:trim(news.tags),' ') }" var="tag" end="2" varStatus="stat">
 											<div>${tag}</div> <c:if test="${!stat.last }"></c:if>
 										</c:forEach>
-				   </c:if>
+				   </c:if> --%>
 		       </div>
 		       <div class="setContent">
 		        <div>超级</div>
