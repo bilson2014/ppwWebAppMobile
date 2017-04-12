@@ -1,5 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8"%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 
 <%-- import CSS --%>
 <spring:url value="/resources/css/play.css" var="playCss"/>
@@ -65,21 +66,25 @@
 	
        <div class="pagePhone">
 	       <div class="videoShow">
-				<video id="showVideo" class="setVideo" preload="${imgPath}/index/index.jpg" muted>
-			        <source src="http://www.apaipian.com/product/video/paipianwangMovie.mp4" type="video/mp4">
+				<video id="recomment-video" class="setVideo" preload="${imgPath}/index/index.jpg" muted>
+			        <source src="" id="playVideo" type="video/mp4">
 			    </video> 
+			    <div id="video-play" class="video-play">
+				<!-- video play -->
+			    </div>
 	       </div>
 	       <div class="videoTitle">
 	           ${product.productName }
 	       </div>
 	       <div class="videoTag">
-	           <div>标签</div>
-	           <div>一个标签</div>
-	           <div>超级大标签</div>
-	           <div>超级大标签</div>
+	           <c:if test="${! empty product.tags}">
+									<c:forEach items="${fn:split(product.tags,'') }" var="tag">
+										 <div>${tag}</div>
+									</c:forEach>
+	           </c:if>
 	       </div>
 	       <div class="videoPrice">
-	              ${product.serviceRealPrice}
+	              ¥${product.serviceRealPrice}
 	       </div>
 	       
 	       <!-- 影片简介 -->
@@ -93,7 +98,7 @@
 		                       <img src="${imgPath}/index/test.png">
 		                       <img src="${imgPath}/index/true.png">
 		                 </div>
-		                 <div>${product.teamName}</div>
+		                 <div>¥${product.teamName}</div>
 		                 <div>更多作品</div>
 		            </div>
 	            </a>

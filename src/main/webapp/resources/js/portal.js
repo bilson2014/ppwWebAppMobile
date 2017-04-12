@@ -214,7 +214,7 @@ var portal = {
 		
 		var str=item.business;
 		var json = $.evalJSON(str);
-		 var $body = '<div class="item">' +
+		 var $body = '<a href="/provider/info_'+item.teamId+'.html"><div class="item">' +
 						 '<div class="proLogo">'+
 					         '<img src="'+getDfsHostName()+''+item.teamPhotoUrl+'">'+
 					         '<img src="/resources/images/index/true.png">'+
@@ -230,7 +230,7 @@ var portal = {
 					 }
 		 $body +=			      '</div>'+
 				            '</div>';
-		  $body += '</div>';
+		  $body += '</div></a>';
 		  $(".ourCus").append($body);
 	},
 	

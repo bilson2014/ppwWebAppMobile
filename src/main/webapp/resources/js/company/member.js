@@ -6,11 +6,7 @@ $().ready(function(){
 	var setHeight= screenWidth/16*9;
 	$('video').css('height',setHeight);
 	
-	
-	
-	
 	$('.footerBar').click();
-	
 	
 	var member = {
 			init:function(){
