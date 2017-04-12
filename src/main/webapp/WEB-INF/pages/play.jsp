@@ -63,6 +63,32 @@
 	     <div>案例</div>
 	</div>
 	
+	<div class="model" id="orderSuccess">
+	         <div class="success">
+	            <img src="${imgPath}/index/success.png">
+	            <div>恭喜您下单成功</div>
+	            <div>视频管家将会在两个小时内与您沟通</div>
+	            <div><a href="/">返回首页</a></div>
+	            <div id="checkSuccess">确认</div>
+	         </div>
+	</div>
+	
+		<div class="model" id="orderTo">
+	         <div class="showOrder">
+	             <div class="title">立即下单,对接制作团队</div>
+	             <div class="orderItem">
+	                 <input placeholder="填写手机号">
+	                 <div class="error">错误</div>
+	             </div>
+	              <div class="orderItem">
+	                 <input placeholder="填写验证码">
+	                 <div class="code"></div>
+	                 <div class="error">错误</div>
+	             </div>
+	             <div>按钮</div>
+	         </div>
+	    </div>
+	
 	 <jsp:include flush="true" page="menu.jsp"></jsp:include> 
 	
        <div class="pagePhone">
@@ -96,7 +122,7 @@
 	            <a href="<spring:url value='/provider/info_${product.teamId }.html'/>">
 		            <div class="videoCompany">
 		                 <div class="cLogo">
-		                       <img src="${imgPath}/index/test.png">
+		                       <img id="teamPhoto" src="${imgPath}/index/test.png">
 		                       <img src="${imgPath}/index/true.png">
 		                 </div>
 		                 <div>${product.teamName}</div>
@@ -111,17 +137,18 @@
 	            <div class="title"></div>
 	            <div class="line"></div>
 	       </div>
-	       <div class="anliContent">
+	       <div class="anliContent" id="anliContent">
 	       <!--       <div class="contentItem" style="background:url(/resources/images/index/index.jpg) no-repeat">
 	                	 <div class="itemTitle">介影片简介标题要介影片简介标题要长介影片简介标题要长介影片简介标题要长介影片简介标题要长介影片简介标题要长介影片简介标题要长长</div>
 	                     <div class="itemTag">介影片简介</div>
 	             </div> -->
 	        
 	       </div>
-	       
-	        <div class="moreAnli">
-	                                                更多相关推荐
-	        </div>
+	       <a href="/search?q=*&industry=${product.tags}">
+		        <div class="moreAnli">
+		                                                更多相关推荐
+		        </div>
+	       </a> 
 	       
 	       <jsp:include flush="true" page="foot.jsp"></jsp:include> 
 		     

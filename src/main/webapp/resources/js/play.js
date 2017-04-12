@@ -29,11 +29,7 @@ $().ready(function() {
         		$('#video-play').css('height',setHeight);
         	}
         }
-      //  $('#teamPhoto').attr('src',getDfsHostName()+$('#teamPhotoUrl').val());  
-
-
-
-
+      $('#teamPhoto').attr('src',getDfsHostName()+$('#teamPhotoUrl').val());  
 
     },
     order: function() {
@@ -57,11 +53,14 @@ $().ready(function() {
     showMore:function(){
     	var tags = $('#tags').val();
     	loadData(function(data){
-			if(data){
-				for (var int = 0;int<=data.length; int++) {
-					var card = createCard(data[int]);
+    		var list = data.result;
+			if(list!=null){
+				for (var int = 0;int<list.result.length; int++) {
+					var card = createCard(list.result[int]);
 					$("#anliContent").append(card);
 				}
+			}else{
+				$("#anliContent").hide();
 			}
 		}, getContextPath() + '/tags/product/search ' ,$.toJSON({
 			condition : tags,
@@ -73,10 +72,8 @@ $().ready(function() {
 };
 
 function createCard(msg){
-	
 	var tema = msg.teamId;
 	var pro = msg.productId;
-	
 	var $body1 = ''
 		+'   <a href="/play/'+tema+'_'+pro+'.html">'
 		+'		 <div class="contentItem" style="background:url('+getDfsHostName()+''+msg.picLDUrl+') no-repeat">'
