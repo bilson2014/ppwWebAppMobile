@@ -63,7 +63,7 @@ public class CostCalculateController extends BaseController {
 		typeAddTeam[5][2] = 100000;
 	}
 
-	@RequestMapping(value="cost")
+	@RequestMapping(value="/cost")
 	public Map<String, Object> costCalculate(@RequestBody CostCalculate calculate,
 			HttpServletRequest request){
 		String target = "";
@@ -122,7 +122,7 @@ public class CostCalculateController extends BaseController {
  		return map;
 	}
 
-	@RequestMapping(value = "cost2")
+	@RequestMapping(value = "/cost2")
 	public Map<String, Object> costCalculate2(@RequestBody CostCalculate calculate, HttpServletRequest request) {
 		Map<String, Object> map = new HashMap<>();
 		map.put("code", 1);

@@ -54,6 +54,7 @@
 	<input type="hidden" id="second" value="${product.mcoms }"/>
 	<input type="hidden" id="yk-play" value="<spring:url value="${product.hret}"/>" />
 	<input type="hidden" id="tags" value="${product.tags }">
+	<input type="hidden" id="csrftoken" name="csrftoken" value="${csrftoken}"/>
 	
 	<div class="phoneHeader">
 	     <a><img src="${imgPath }/index/toMenu.png"></a>
@@ -77,15 +78,15 @@
 	         <div class="showOrder">
 	             <div class="title">立即下单,对接制作团队</div>
 	             <div class="orderItem">
-	                 <input placeholder="填写手机号">
-	                 <div class="error">错误</div>
+	                 <input placeholder="填写手机号" id="phoneNumber" style="height: 40px;width: 250px;color: red !important;">
+	                <!--  <div class="error">错误</div> -->
 	             </div>
 	              <div class="orderItem">
-	                 <input placeholder="填写验证码">
-	                 <div class="code"></div>
-	                 <div class="error">错误</div>
+	                 <input placeholder="填写验证码"    id="verificationCodeValue"       type="text" style="height: 40px;width: 250px;color: red !important;">
+	                 <div class="getCode" id="verification_code_recover_btn" style="height: 40px;width: 70px;font-size: 12px">发送验证码</div>
+	                <!--  <div class="error">错误</div> -->
 	             </div>
-	             <div>按钮</div>
+	             <div style="height: 40px;width: 70px;font-size: 12px" id ="submitOrder">下单</div>
 	         </div>
 	    </div>
 	

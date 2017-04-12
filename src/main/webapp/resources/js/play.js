@@ -1,8 +1,17 @@
 var imgUrl, play;
+var kaptcharInterValObj; // timer变量，控制时间
+var InterValObj; // timer变量，控制时间 - 注册
+var InterValRecoverObj; // timer变量，控制时间 - 密码找回
+var count = 120; // 间隔函数，1秒执行 
+var curCount = 0; // 当前剩余秒数 - 注册
+var recoverCount; // 当前剩余秒数 - 密码找回
+var noCardIndex = 0;
 $().ready(function() {
     play.initData();
     play.order();
     play.showMore();
+    $('#verification_code_recover_btn').off('click').on('click',verificationCodeBtn);
+    $('#submitOrder').off('click').on('click',submitOrder);
 }), play = {
     initData: function() {
         //var b, c, d, e, f, g, h, i, j, k, l, m, a = $("#videoPoster").val();
@@ -84,3 +93,122 @@ function createCard(msg){
 	return $body1;		
 
 };
+
+
+
+
+
+
+
+
+
+
+
+function submitOrder(){
+	var verificationCodeValue =	$("#verificationCodeValue").val().trim();
+	var telephone = $('#phoneNumber').val().trim();
+	if(checkData(1) && checkData(2)){
+		loadData2(function(msg){
+			if(msg.ret){
+				//showSuccess();
+				alert('下单成功');
+			}else{
+				//showError($('#phoneCodeError'),'验证码错误');
+				alert('下单失败');
+			}
+		}, getContextPath() + '/order/deliver', 
+			{indentName : $("#videoName").val(),
+			productId :$("#videoId").val() ,
+			teamId : $('#teamId').val(),
+			serviceId : $('#serviceId').val(),
+			csrftoken : $('#csrftoken').val(),
+			phoneCode : $('#verificationCodeValue').val(),
+			indent_recomment:'样片名称:'+$("#videoName").val()+',价格:'+$("#originalPrice").val(),
+			indent_tele : telephone
+			});
+		// ret
+	}	
+}
+
+function checkData(type){
+	var telephone = $('#phoneNumber').val().trim();
+	var verificationCodeValue =	$("#verificationCodeValue").val().trim();
+	//showError($('#phoneError'),'');
+	//showError($('#phoneCodeError'),'');
+	switch (type) {
+	case 1:
+		if(telephone == '' || telephone == null || telephone == undefined){
+			showError($('#phoneError'),'请填写手机号');
+			$('#phoneNumber').focus();
+			return false;
+		}
+		if(!checkMobile(telephone)){
+			showError($('#phoneError'),'手机号输入错误');
+			$('#phoneNumber').focus();
+			return false;
+		}
+		return true;
+	case 2:
+		if(verificationCodeValue == '' || verificationCodeValue == null || verificationCodeValue == undefined){
+			showError($('#phoneCodeError'),'请填写验证码');
+			$('#verificationCodeValue').focus();
+			return false;
+		}
+		return true;
+	}
+}
+
+//order verificationCode
+function verificationCodeBtn(){
+	
+	if(curCount == 0 && checkData(1)){
+		curCount = count;
+		var telephone = $('#phoneNumber').val().trim();
+		$('#verification_code_recover_btn').text('已发送('+ curCount +')');
+		$('#verification_code_recover_btn').attr('disabled','disabled');
+		InterValObj = window.setInterval(SetRemainTime, 1000); // 启动计时器，1秒钟执行一次
+		loadData(function(flag){
+			if(!flag){
+				// 发送不成功
+				// 显示重新发送
+				sendCode=true;
+				$('#verification_code_recover_btn').text('重新获取');
+				$('#verification_code_recover_btn').removeAttr('disabled');
+			}
+		}, getContextPath() + '/login/verification/' + telephone, null);
+	}
+}
+
+//timer 处理函数 - 注册
+function SetRemainTime(){
+	if(curCount == 0){
+		window.clearInterval(InterValObj); // 停止计时器
+		sendCode=true;
+		$('#verification_code_recover_btn').text('重新获取');
+		$('#verification_code_recover_btn').removeAttr('disabled')
+		// 清除session code
+		getData(function(data){
+			// 清除session code
+		}, getContextPath() + '/login/clear/code');
+	}else{
+		curCount--;  
+		$("#verification_code_recover_btn").text('已发送('+ curCount +')');
+	}
+}
+
+function loadData2(Func,url,param){
+	$.ajax({
+		url : url,
+		type : 'POST',
+		data : param,
+		dataType : 'json',
+		success : function(data){
+			Func(data);
+		},
+		error : function(jqXHR, textStatus, errorThrown) {
+			console.error('ajax(' + url + ')[' + jqXHR.status + ']' + jqXHR.statusText);
+			console.error(jqXHR.responseText);
+			console.error('[' + textStatus + ']' + errorThrown);
+		}
+	});
+}
