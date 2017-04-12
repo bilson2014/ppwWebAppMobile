@@ -62,14 +62,7 @@
 <!--[if lt IE 9]>
 		<script>window.html5 || document.write('<script src="html5shivJs"><\/script>')</script>
 	<![endif]-->
-<script src="${jqueryJs }"></script>
-<script src="${pluginJs }"></script>
-<script src="${jsonJs }"></script>
-<script src="${waypoints }"></script>
-<script src="${commonJs }"></script>
-<script src="${providerInfoPhoneJs }"></script>
-<script src="${imgLazyLoadingJs }"></script>
-<script src="${remSetJs}"></script>
+
 
 
 
@@ -110,7 +103,6 @@
 			<li class="providerName">
 			  <div class="nameSize">
 				<div class="providerNames">大大</div> 
-				<div class="providerStatesRed states">未通过审核</div>
 				<c:if test="${provider.flag == 2}">
 					<div class="providerStatesRed states">未通过审核</div>
 				</c:if> 
@@ -141,7 +133,7 @@
 	<!-- 介绍区 -->
 
 	<div class="providerInfo contentAnimation">
-		内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</div>
+		${provider.teamDescription}</div>
 <%-- 
 	<%
 		//add by wanglc 添加前段标签处理
@@ -161,30 +153,11 @@
 	</div> --%>
 
 	<div class="tagBody contentAnimation">
+		<c:forEach var="tags" items="${providerTag}" varStatus="status">
 			<div class="card">
-					标签标签
+				${tags}
 			</div>
-			<div class="card">
-					标签标签
-			</div>
-			<div class="card">
-					标签标签
-			</div>
-			<div class="card">
-					标签标签
-			</div>
-			<div class="card">
-					标签标签
-			</div>
-			<div class="card">
-					标签标签
-			</div>
-			<div class="card">
-					标签标签
-			</div>
-			<div class="card">
-					标签标签
-			</div>
+		</c:forEach>
 	</div>
 
 	<!--代表说明  -->
@@ -193,13 +166,14 @@
 		<div class="introduceTitle">代表作</div>
 		<div class="introduceLine"></div>
 	</div>
-	
-	<a>
-		<div class="contentItem contentAnimation" style="background:url(/resources/images/index/index.jpg) no-repeat">
-			                     <div class="itemTitle">介影片简介标题要介影片简介标题要长介影片简介标题要长介影片简介标题要长介影片简介标题要长介影片简介标题要长介影片简介标题要长长</div>
-			                     <div class="itemTag">大大</div>
-	    </div>
-    </a>
+	 <c:if test="${product.teamId >0}">
+		<a href="/play/${product.teamId}_${product.productId }.html">
+			<div class="contentItem contentAnimation" style="background:url(${file_locate_storage_path}${product.picHDUrl}) no-repeat">
+				                     <div class="itemTitle">${product.productName}</div>
+				                     <div class="itemTag">${product.tags}</div>
+		    </div>
+	    </a>
+	 </c:if>   
 
 <%-- 	<div class="specialVideo contentCard" >
  		<div class="videoCradYear cardMaringAuto">
@@ -234,27 +208,17 @@
 		<div class="introduceLine"></div>
 	</div>
 	
-	<div class="moreProduct">
-	<a>
+	<div class="moreProduct" id="moreProduct">
+<!-- 	<a>
 		<div class="contentItem" style="background:url(/resources/images/index/index.jpg) no-repeat">
 			                     <div class="itemTitle">介影片简介标题要介影片简介标题要长介影片简介标题要长介影片简介标题要长介影片简介标题要长介影片简介标题要长介影片简介标题要长长</div>
 			                     <div class="itemTag">大大</div>
 	    </div>
-    </a>
-    	<a>
-		<div class="contentItem" style="background:url(/resources/images/index/index.jpg) no-repeat">
-			                     <div class="itemTitle">介影片简介标题要介影片简介标题要长介影片简介标题要长介影片简介标题要长介影片简介标题要长介影片简介标题要长介影片简介标题要长长</div>
-			                     <div class="itemTag">大大</div>
-	    </div>
-    </a>
-    	<a>
-		<div class="contentItem" style="background:url(/resources/images/index/index.jpg) no-repeat">
-			                     <div class="itemTitle">介影片简介标题要介影片简介标题要长介影片简介标题要长介影片简介标题要长介影片简介标题要长介影片简介标题要长介影片简介标题要长长</div>
-			                     <div class="itemTag">大大</div>
-	    </div>
-    </a>
-        <a><div class="findMore">查看更多视频</div></a>
+    </a> -->
+        
 	</div>
+	
+	<div class="findMore">查看更多视频</div>
 	
 	
 <!-- 	<div class="timeLine" id="timeLine" >
@@ -333,6 +297,16 @@
 		     </div>
 	
 </div>	
+
+
+<script src="${jqueryJs }"></script>
+<script src="${pluginJs }"></script>
+<script src="${jsonJs }"></script>
+<script src="${waypoints }"></script>
+<script src="${commonJs }"></script>
+<script src="${providerInfoPhoneJs }"></script>
+<script src="${imgLazyLoadingJs }"></script>
+<script src="${remSetJs}"></script>
 
 </body>
 </html>

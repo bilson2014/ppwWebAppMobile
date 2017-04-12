@@ -53,6 +53,7 @@
 	<input type="hidden" id="originalPrice" value="${product.serviceRealPrice }"/>
 	<input type="hidden" id="second" value="${product.mcoms }"/>
 	<input type="hidden" id="yk-play" value="<spring:url value="${product.hret}"/>" />
+	<input type="hidden" id="tags" value="${product.tags }">
 	
 	<div class="phoneHeader">
 	     <a><img src="${imgPath }/index/toMenu.png"></a>
@@ -98,7 +99,7 @@
 		                       <img src="${imgPath}/index/test.png">
 		                       <img src="${imgPath}/index/true.png">
 		                 </div>
-		                 <div>¥${product.teamName}</div>
+		                 <div>${product.teamName}</div>
 		                 <div>更多作品</div>
 		            </div>
 	            </a>
@@ -111,22 +112,16 @@
 	            <div class="line"></div>
 	       </div>
 	       <div class="anliContent">
-	             <div class="contentItem" style="background:url(/resources/images/index/index.jpg) no-repeat">
+	       <!--       <div class="contentItem" style="background:url(/resources/images/index/index.jpg) no-repeat">
 	                	 <div class="itemTitle">介影片简介标题要介影片简介标题要长介影片简介标题要长介影片简介标题要长介影片简介标题要长介影片简介标题要长介影片简介标题要长长</div>
 	                     <div class="itemTag">介影片简介</div>
-	             </div>
-	             <div class="contentItem" style="background:url(/resources/images/index/index.jpg) no-repeat">
-	                     <div class="itemTitle">介影片简介标题要介影片简介标题要长介影片简介标题要</div>
-	                     <div class="itemTag">介影片简介</div>
-	             </div>
-	             <div class="contentItem" style="background:url(/resources/images/index/index.jpg) no-repeat">
-	                     <div class="itemTitle">介影片简介标题要介影片简介标题要长介影片简介标题要长介影片简介标题要长介影片简介标题要长介影片简介标题要长介影片简介标题要长长</div>
-	                     <div class="itemTag">介影片简介</div>
-	             </div>
-	             <div class="moreAnli">
-	                                                更多相关推荐
-	             </div>
+	             </div> -->
+	        
 	       </div>
+	       
+	        <div class="moreAnli">
+	                                                更多相关推荐
+	        </div>
 	       
 	       <jsp:include flush="true" page="foot.jsp"></jsp:include> 
 		     
