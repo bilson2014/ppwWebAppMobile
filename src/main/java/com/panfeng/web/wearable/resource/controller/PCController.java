@@ -28,6 +28,7 @@ import com.paipianwang.pat.common.web.domain.ResourceToken;
 import com.paipianwang.pat.facade.employee.entity.PmsJob;
 import com.paipianwang.pat.facade.information.entity.PmsProductSolr;
 import com.paipianwang.pat.facade.product.entity.PmsProduct;
+import com.paipianwang.pat.facade.product.service.PmsProductFacade;
 import com.paipianwang.pat.facade.team.entity.PmsTeam;
 import com.paipianwang.pat.facade.team.service.PmsTeamFacade;
 import com.paipianwang.pat.facade.user.entity.PmsUser;
@@ -56,6 +57,9 @@ public class PCController extends BaseController {
 
 	@Autowired
 	final private PmsTeamFacade pmsTeamFacade = null;
+	
+	@Autowired
+	final private PmsProductFacade pmsProductFacade = null;
 
 	// 下单成功后跳转至成功页面
 	@RequestMapping("/success")
@@ -144,10 +148,15 @@ public class PCController extends BaseController {
 			final HttpServletRequest request) {
 		model.addAttribute("teamId", teamId);
 		model.addAttribute("productId", productId);
-		PmsProduct product = new PmsProduct();
-		final String url = PublicConfig.URL_PREFIX + "portal/product/static/information/" + productId;
-		String json = HttpUtil.httpGet(url, request);
-		product = JsonUtil.toBean(json, PmsProduct.class);
+		final PmsProduct product = pmsProductFacade.loadProduct(productId);
+		if (product.getTeamId() != null && !"".equals(product.getTeamId())) {
+			final PmsTeam team = pmsTeamFacade.findTeamById(product.getTeamId());
+			if (team != null) {
+				product.setTeamDescription(team.getTeamDescription());
+				product.setTeamName(team.getTeamName());
+				product.setTeamPhotoUrl(team.getTeamPhotoUrl());
+			}
+		}
 		model.addAttribute("product", product);
 
 		serLogger.info("Redirect team page,teamId:" + teamId + " ,productId:" + productId);

@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,6 +20,9 @@ import com.paipianwang.pat.common.entity.SessionInfo;
 import com.paipianwang.pat.common.util.ValidateUtil;
 import com.paipianwang.pat.facade.indent.entity.PmsIndent;
 import com.paipianwang.pat.facade.product.entity.PmsProduct;
+import com.paipianwang.pat.facade.product.service.PmsProductFacade;
+import com.paipianwang.pat.facade.team.entity.PmsTeam;
+import com.paipianwang.pat.facade.team.service.PmsTeamFacade;
 import com.panfeng.web.wearable.util.HttpUtil;
 import com.panfeng.web.wearable.util.IndentUtil;
 import com.panfeng.web.wearable.util.JsonUtil;
@@ -28,6 +32,11 @@ public class NewPhoneController extends BaseController {
 	final Logger serLogger = LoggerFactory.getLogger("service");
 	final Logger logger = LoggerFactory.getLogger("error");
 
+	@Autowired
+	final private PmsProductFacade pmsProductFacade = null;
+	
+	@Autowired
+	final private PmsTeamFacade pmsTeamFacade = null;
 	/**
 	 * 订单跳转页面
 	 * 
@@ -89,9 +98,16 @@ public class NewPhoneController extends BaseController {
 			@PathVariable("productId") Long id) {
 		try {
 			final PmsIndent indent = new PmsIndent();
-			final String url = PublicConfig.URL_PREFIX + "/portal/product/static/information/"+id;
-			final String json = HttpUtil.httpGet(url, request);
-			PmsProduct product = JsonUtil.toBean(json, PmsProduct.class);
+			
+			final PmsProduct product = pmsProductFacade.loadProduct(Integer.valueOf(id + ""));
+			if (product.getTeamId() != null && !"".equals(product.getTeamId())) {
+				final PmsTeam team = pmsTeamFacade.findTeamById(product.getTeamId());
+				if (team != null) {
+					product.setTeamDescription(team.getTeamDescription());
+					product.setTeamName(team.getTeamName());
+					product.setTeamPhotoUrl(team.getTeamPhotoUrl());
+				}
+			}
 			
 			indent.setTeamId(product.getTeamId());
 			indent.setProductId(product.getProductId());
