@@ -211,6 +211,9 @@ var portal = {
 	},
 	
 	setProvider:function(item){
+		
+		var str=item.business;
+		var json = $.evalJSON(str);
 		 var $body = '<div class="item">' +
 						 '<div class="proLogo">'+
 					         '<img src="'+getDfsHostName()+''+item.teamPhotoUrl+'">'+
@@ -219,9 +222,13 @@ var portal = {
 						  '<div class="proContent">'+
 				                '<div class="title">'+item.teamName+'</div>'+
 				                '<div class="des">'+item.description+'</div>'+
-				                '<div class="tags">'+
-				                      '<div class="tagsItem">'+item.business+'</div>'+
-				                '</div>'+
+				                '<div class="tags">';
+					 if(json!=null && json !=''){
+						 for (var int = 0; int < json.length; int++) {
+							 $body += '<div class="tagsItem">'+ json[int]+'</div>';
+						}
+					 }
+		 $body +=			      '</div>'+
 				            '</div>';
 		  $body += '</div>';
 		  $(".ourCus").append($body);

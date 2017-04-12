@@ -87,14 +87,16 @@
 	       <div class="videoContent">
 	            <div class="content">${product.teamDescription }</div>
 	            <div class="orderVideo">预约拍片</div>
-	            <div class="videoCompany">
-	                 <div class="cLogo">
-	                       <img src="${imgPath}/index/test.png">
-	                       <img src="${imgPath}/index/true.png">
-	                 </div>
-	                 <div>${product.teamName}</div>
-	                 <div>更多作品</div>
-	            </div>
+	            <a href="<spring:url value='/provider/info_${product.teamId }.html'/>">
+		            <div class="videoCompany">
+		                 <div class="cLogo">
+		                       <img src="${imgPath}/index/test.png">
+		                       <img src="${imgPath}/index/true.png">
+		                 </div>
+		                 <div>${product.teamName}</div>
+		                 <div>更多作品</div>
+		            </div>
+	            </a>
 	       </div>
 	       
 	       <!-- 相关推荐-->

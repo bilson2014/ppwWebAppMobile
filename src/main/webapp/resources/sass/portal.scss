@@ -185,12 +185,25 @@
             font-size: 0.36rem;
             width: 7rem;
             margin: 0 auto;
+
+            .getPhoneItem{
+                width: 100%;
+                position: relative;
+            }
+
+            .getCode{
+                height: 0.8rem;
+                color:$red-base;
+                width: 2rem;
+                border-left: 1px solid $red-base;
+            }
+
             input {
                 background: none;
                 width: 7rem;
                 height: 1rem;
                 line-height: 1rem;
-                text-align: center;
+                text-align: left;
                 border-color: $red-base;
                 border-radius: 61px;
                 margin: 0 auto;
