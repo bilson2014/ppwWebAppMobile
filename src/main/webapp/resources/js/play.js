@@ -1,6 +1,7 @@
 var imgUrl, play;
 $().ready(function() {
-    play.initData(), play.share(), play.order()
+    play.initData();
+    play.order();
 }), play = {
     initData: function() {
         //var b, c, d, e, f, g, h, i, j, k, l, m, a = $("#videoPoster").val();
@@ -12,30 +13,27 @@ $().ready(function() {
         var hret = $('#yk-play').val();
         //end
         
+        var screenWidth = document.documentElement.clientWidth;
+        var setHeight= screenWidth/16*9;
+
         
         if(urlSize != '' && urlSize != null && urlSize != undefined){
-	        $('#recomment-video').attr('src',url);
+	        $('#playVideo').attr('src',url);
 	        $('#recomment-video').attr('poster',post);
 	        $('#recomment-video').show();
+	        $('video').css('height',setHeight);
         } else{
         	if(hret != '' && hret != null && hret != undefined){
         		makePlayer('video-play', hret); // 创建视频浏览器
+        		$('#video-play').css('height',setHeight);
         	}
         }
-        $('#teamPhoto').attr('src',getDfsHostName()+$('#teamPhotoUrl').val());
-        
-    },
-    share: function() {
-        $(".share").click(function() {
-            var teamId = $('#teamId').val();
-            var videoId = $('#videoId').val();
-            var title = $('#videoName').val();
-            var url = getHostName() + getContextPath() + '/play/' + teamId + '_' + videoId + '.html';
-            var img_path = $('#videoPoster').val();
-            if(img_path !='' )
-            	img_path=getDfsHostName()+img_path;
-            share.init(url, title, img_path)
-        })
+      //  $('#teamPhoto').attr('src',getDfsHostName()+$('#teamPhotoUrl').val());  
+
+
+
+
+
     },
     order: function() {
         $("#order-btn").on("click", function() {
