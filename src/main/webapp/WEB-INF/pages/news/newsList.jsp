@@ -1,8 +1,8 @@
 <%@ page contentType="text/html;charset=UTF-8"%>
+<%@ page import="com.paipianwang.pat.facade.information.entity.PmsNewsSolr"%> 
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jstl/core" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
-<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="r" uri="/mytaglib" %>
 
@@ -47,7 +47,6 @@
 	<input type="hidden" value="${total }" id="total"/>
 	<input type="hidden" id="q" value="${q}" />
 
-	
 	<div class="phoneHeader">
 	     <a id="openMenu"><img src="${imgPath }/index/toMenu.png"></a>
 	     <a><img src="${imgPath }/index/toSearch.png"></a>
@@ -70,9 +69,9 @@
        <div class="pagePhone">
 	       
 	       <div class='newsContent'>
-	       
-	<%--              <c:if test="${!empty list}">
+	              <c:if test="${!empty list}">
 	                    <c:forEach items="${list }" var="newsSolr">
+	                        <a href="">
 				             <div class="newsItem">
 				                <img src="${file_locate_storage_path}${newsSolr.picLDUrl}" alt="${newsSolr.title}_拍片网" >
 				                <div class="itemContent">
@@ -82,10 +81,11 @@
 	                   				</div>
 				                </div>
 				             </div>
+				            </a> 
 	                    </c:forEach>
-	             </c:if>   --%>     
+	             </c:if>       
 	            
-	             <div class="newsItem">
+	             <%-- <div class="newsItem">
 	                   <img src="${imgPath }/index/back1.png">
 	                <div class="itemContent">
 	                     <div>我是标题</div>
@@ -105,7 +105,7 @@
 		                     <div>我是标题</div>
 		                     <div>2016年3月23日</div>
 		                </div>
-	             </div>
+	             </div> --%>
 	       </div>
 	       
 	       <div class="footPhone">

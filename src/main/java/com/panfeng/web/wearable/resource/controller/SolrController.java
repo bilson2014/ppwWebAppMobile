@@ -133,7 +133,7 @@ public class SolrController extends BaseController {
 		}
 		model.addAttribute("list", list);
 		model.addAttribute("total", total);
-		return new ModelAndView("newsInfo", model);
+		return new ModelAndView("news/newsList", model);
 	}
 
 	/**
