@@ -2,6 +2,7 @@ var imgUrl, play;
 $().ready(function() {
     play.initData();
     play.order();
+    play.showMore();
 }), play = {
     initData: function() {
         //var b, c, d, e, f, g, h, i, j, k, l, m, a = $("#videoPoster").val();
@@ -52,5 +53,37 @@ $().ready(function() {
                 f = '<input type="hidden" name="json" value="' + htmlSpecialCharsEntityEncode(decodeURIComponent(e)) + '" />';
             $('<form action="' + d + '" method = "POST" autocomplete="off" accept-charset="UTF-8">' + f + "</form>").appendTo("body").submit().remove()
         })
-    }
+    },
+    showMore:function(){
+    	var tags = $('#tags').val();
+    	loadData(function(data){
+			if(data){
+				for (var int = 0;int<=data.length; int++) {
+					var card = createCard(data[int]);
+					$("#anliContent").append(card);
+				}
+			}
+		}, getContextPath() + '/tags/product/search ' ,$.toJSON({
+			condition : tags,
+			begin : 0,
+			limit : 9
+		}));
+    },
+    
+};
+
+function createCard(msg){
+	
+	var tema = msg.teamId;
+	var pro = msg.productId;
+	
+	var $body1 = ''
+		+'   <a href="/play/'+tema+'_'+pro+'.html">'
+		+'		 <div class="contentItem" style="background:url('+getDfsHostName()+''+msg.picLDUrl+') no-repeat">'
+		+'			   <div class="itemTitle">'+msg.productName+'</div>'
+		+'					 <div class="itemTag">'+msg.tags+'</div>'
+		+'		 </div> '
+		+'	 </a>'
+	return $body1;		
+
 };
