@@ -224,19 +224,6 @@
 	<!--第一区域 -->
 	<div class="firstContent">
 	
-	
-<!-- 	<div class="Vidage" style="z-index:99">
-    <div class="Vidage__image"></div>
-
-    <video id="VidageVideo" style="display:none" class="Vidage__video" preload="metadata" loop autoplay muted>
-        <source src="http://www.apaipian.com/product/video/paipianwangMovie.mp4" type="video/mp4">
-    </video>
-
-    <div class="Vidage__backdrop"></div>
-</div> -->
-		
-		
-		
 		<div class="logo">
 		  <img src="${imgPath}/index/logo.png">
 		  <div id="logoPos" style="width:1px;"></div>
@@ -387,7 +374,7 @@
 	        <div class="ourCusTitle">导演工作室</div>
 		    <div class="ourCus">
 
-		        <div class="item">
+		      <%--   <div class="item">
 		            <div class="proLogo">
 		               <img src="${imgPath}/index/test.png">
 		               <img src="${imgPath}/index/true.png">
@@ -404,43 +391,8 @@
 		                      <div class="tagsItem">宣传片</div>
 		                </div>
 		            </div>
-		        </div>
-		        <div class="item">
-		            <div class="proLogo">
-		               <img src="${imgPath}/index/test.png">
-		               <img src="${imgPath}/index/true.png">
-		            </div>
-		            <div class="proContent">
-		                <div class="title">大大所大大多所大叔大叔大所大</div>
-		                <div class="des">大大所大大多所大叔大叔大所大大大所大大多所大叔大叔大所</div>
-		                <div class="tags">
-		                      <div class="tagsItem">宣传片</div>
-		                      <div class="tagsItem">宣传片</div>
-		                      <div class="tagsItem">宣传片</div>
-		                      <div class="tagsItem">宣传片</div>
-		                      <div class="tagsItem">宣传片</div>
-		                      <div class="tagsItem">宣传片</div>
-		                </div>
-		            </div>
-		        </div>
-		        <div class="item">
-		            <div class="proLogo">
-		               <img src="${imgPath}/index/test.png">
-		               <img src="${imgPath}/index/true.png">
-		            </div>
-		            <div class="proContent">
-		                <div class="title">大大所大大多所大叔大叔大所大</div>
-		                <div class="des">大大所大大多所大叔大叔大所大大大所大大多所大叔大叔大所</div>
-		                <div class="tags">
-		                      <div class="tagsItem">宣传片</div>
-		                      <div class="tagsItem">宣传片</div>
-		                      <div class="tagsItem">宣传片</div>
-		                      <div class="tagsItem">宣传片</div>
-		                      <div class="tagsItem">宣传片</div>
-		                      <div class="tagsItem">宣传片</div>
-		                </div>
-		            </div>
-		        </div>
+		        </div> --%>
+		      		      
 		    </div>
 		       
 	       <a href="/proRegister">

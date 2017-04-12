@@ -79,20 +79,20 @@
 	           <div>超级大标签</div>
 	       </div>
 	       <div class="videoPrice">
-	              ￥369900
+	              ${product.serviceRealPrice}
 	       </div>
 	       
 	       <!-- 影片简介 -->
 	       <div class="videoInfo">影片简介 Project Summary</div>
 	       <div class="videoContent">
-	            <div class="content">影片简介影片简介影片简介影片简介影片简介影片简介影片简介影片简介影片简介</div>
+	            <div class="content">${product.teamDescription }</div>
 	            <div class="orderVideo">预约拍片</div>
 	            <div class="videoCompany">
 	                 <div class="cLogo">
 	                       <img src="${imgPath}/index/test.png">
 	                       <img src="${imgPath}/index/true.png">
 	                 </div>
-	                 <div>某某影视单位</div>
+	                 <div>${product.teamName}</div>
 	                 <div>更多作品</div>
 	            </div>
 	       </div>

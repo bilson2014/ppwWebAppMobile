@@ -51,7 +51,7 @@
 	 <jsp:include flush="true" page="../menu.jsp"></jsp:include> 
 	
        <div class="pagePhone">
-	       <img class="bannerImg" id="banner" src="${imgPath }/index/back3.png">	       
+	       <img class="bannerImg" id="banner" src="${file_locate_storage_path }${news.picLDUrl}">	       
 	       <div class="infoContents">
 		       <div class="title">${news.title}</div>
 		       <div class="tags">
@@ -67,11 +67,11 @@
 				   </c:if> --%>
 		       </div>
 		       <div class="setContent">
-		        <div>超级</div>
-		          <div>超级大标签</div>
-		           <div>我是标签</div>
-		            <img class="bannerImg" id="banner" src="${imgPath }/index/back3.jpg">
-		          <div>超级</div>
+			        <div>超级</div>
+			          <div>超级大标签</div>
+			           <div>我是标签</div>
+			            <img class="bannerImg" id="banner" src="${imgPath }/index/back3.jpg">
+			          <div>超级</div>
 		       </div>
 	       </div>
 	       

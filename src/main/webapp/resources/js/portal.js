@@ -199,8 +199,10 @@ var portal = {
 	
 	getProviderItem:function(){
 		loadData(function(data){
-			if(data){
-				portal.setProvider();
+			if(data.code == 1){
+			    $.each(data.result, function(i, item) {
+			    	portal.setProvider(item);
+			    });
 			}else{
 				console.log("数据加载错误")
 			}
@@ -209,22 +211,16 @@ var portal = {
 	},
 	
 	setProvider:function(item){
-		
 		 var $body = '<div class="item">' +
 						 '<div class="proLogo">'+
-					         '<img src="'+getDfsHostName()+'/index/test.png">'+
-					         '<img src="/resources/index/true.png">'+
+					         '<img src="'+getDfsHostName()+''+item.teamPhotoUrl+'">'+
+					         '<img src="/resources/images/index/true.png">'+
 					     '</div>'+
 						  '<div class="proContent">'+
-				                '<div class="title">大大所大大多所大叔大叔大所大</div>'+
-				                '<div class="des">大大所大大多所大叔大叔大所大大大所大大多所大叔大叔大所</div>'+
+				                '<div class="title">'+item.teamName+'</div>'+
+				                '<div class="des">'+item.description+'</div>'+
 				                '<div class="tags">'+
-				                      '<div class="tagsItem">宣传片</div>'+
-				                      '<div class="tagsItem">宣传片</div>'+
-				                      '<div class="tagsItem">宣传片</div>'+
-				                      '<div class="tagsItem">宣传片</div>'+
-				                      '<div class="tagsItem">宣传片</div>'+
-				                      '<div class="tagsItem">宣传片</div>'+
+				                      '<div class="tagsItem">'+item.business+'</div>'+
 				                '</div>'+
 				            '</div>';
 		  $body += '</div>';
