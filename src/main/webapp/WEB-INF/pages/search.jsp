@@ -103,22 +103,12 @@
 		        <div>类型 :</div>
 		        <img id="qType" src="${imgPath }/index/flow.png">
 		     </div>
-		     <div class="itemTags">
-		        <div class="tags">的十大</div>
-		        <div class="tags">的十大</div>
-		        <div class="tags">的十大</div>
-		        <div class="tags">的十大</div>
-		        <div class="tags">的十大</div>
-		        <div class="tags">的十大</div>
+		     <div class="itemTags" id="typeTagsItem">
+		        
 		    </div>    
 		       
 		     <div class="itemTags noShow" id="typeTagsShow">
-		        <div class="tags">的十大</div>
-		        <div class="tags">的十大</div>
-		        <div class="tags">的十大</div>
-		        <div class="tags">的十大</div>
-		        <div class="tags">的十大</div>
-		        <div class="tags">的十大</div>
+		       
 		    </div>   
 	     </div>
 	     
@@ -127,21 +117,10 @@
 		        <div>行业 :</div>
 		        <img src="${imgPath }/index/flow.png" id="wType">
 		     </div>
-		     <div class="itemTags">
-		        <div class="tags" >的十大</div>
-		        <div class="tags" >的十大</div>
-		        <div class="tags" >的十大</div>
-		        <div class="tags" >的十大</div>
-		        <div class="tags" >的十大</div>
-		        <div class="tags" >的十大</div>
+		     <div class="itemTags" id="workTagsItem">
 		     </div>
 		     <div class="itemTags noShow" id="workTagsShow">
-		        <div class="tags">的十大</div>
-		        <div class="tags">的十大</div>
-		        <div class="tags">的十大</div>
-		        <div class="tags">的十大</div>
-		        <div class="tags">的十大</div>
-		        <div class="tags">的十大</div>
+		        
 		    </div>
 	     </div>
 	     
@@ -167,7 +146,7 @@
 	
 	     <div class="checkBtn" id="checkBtn">
 	        <div id="cancle">取消</div>
-	        <div>完成</div>
+	        <div id="toSearch">完成</div>
 	     </div>
 	
 	
