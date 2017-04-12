@@ -1,9 +1,8 @@
 <%@ page contentType="text/html;charset=UTF-8"%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
-<%@ page import="com.panfeng.web.wearable.resource.model.NewsSolr"%> 
-<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jstl/core" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="r" uri="/mytaglib" %>
 
@@ -16,7 +15,7 @@
 <spring:url value="/resources/lib/jquery.json/jquery.json-2.4.min.js" var="jsonJs"/>
 <spring:url value="/resources/js/common.js" var="commonJs"/>
 <spring:url value="/resources/js/youku-player.js" var="ykJs" />
-<spring:url value="/resources/js/play.js" var="playJs"/>
+<spring:url value="/resources/js/news/newsList.js" var="newsListJs"/>
 <!-- img path -->
 <spring:url value="/resources/images" var="imgPath" />
 <spring:url value="/resources/js/remSet.js" var="remSetJs" />
@@ -45,29 +44,34 @@
 </head>
 <body>
 	<input type="hidden" id="storage_node" value="${file_locate_storage_path }" />
+	<input type="hidden" value="${total }" id="total"/>
+	<input type="hidden" id="q" value="${q}" />
 
 	
 	<div class="phoneHeader">
-	     <a><img src="${imgPath }/index/toMenu.png"></a>
+	     <a id="openMenu"><img src="${imgPath }/index/toMenu.png"></a>
 	     <a><img src="${imgPath }/index/toSearch.png"></a>
 	     <div>新闻页</div>
 	</div>
 	
+	<jsp:include flush="true" page="../menu.jsp"></jsp:include> 
+	
 	 <div class="newsTags">
-	     <div class="active">推荐</div>
-	     <div>最新资讯</div>
-	     <div>案例花絮</div>
-	     <div>企业动态</div>
-	     <div>行业资讯</div>
-	     <div>佳片赏析</div>
+	     <a href="/newsList"><div class="category active">推荐</div></a>
+	     <a href="/newsList?q=最新资讯"><div class="category" data-value="最新资讯">最新资讯</div></a>
+	     <a href="/newsList?q=案例花絮"><div class="category" data-value="案例花絮">案例花絮</div></a>
+	     <a href="/newsList?q=企业动态"><div class="category" data-value="企业动态">企业动态</div></a>
+	     <a href="/newsList?q=行业资讯"><div class="category" data-value="行业资讯">行业资讯</div></a>
+	     <a href="/newsList?q=佳片赏析"><div class="category" data-value="佳片赏析">佳片赏析</div></a>
 	 </div>
+	
 	
 	
        <div class="pagePhone">
 	       
 	       <div class='newsContent'>
 	       
-	             <c:if test="${!empty list}">
+	<%--              <c:if test="${!empty list}">
 	                    <c:forEach items="${list }" var="newsSolr">
 				             <div class="newsItem">
 				                <img src="${file_locate_storage_path}${newsSolr.picLDUrl}" alt="${newsSolr.title}_拍片网" >
@@ -79,7 +83,7 @@
 				                </div>
 				             </div>
 	                    </c:forEach>
-	             </c:if>       
+	             </c:if>   --%>     
 	            
 	             <div class="newsItem">
 	                   <img src="${imgPath }/index/back1.png">
@@ -139,6 +143,8 @@
 <script src="${jsonJs }"></script>
 <script src="${commonJs }"></script>
 <script src="${remSetJs}"></script>
+<script src="${newsListJs}"></script>
+
 <!-- 加载Mob share 控件 -->
 <script id="-mob-share" src="http://f1.webshare.mob.com/code/mob-share.js?appkey=8c49c537a706"></script>
 <script type="text/javascript" src="http://player.youku.com/jsapi"></script>

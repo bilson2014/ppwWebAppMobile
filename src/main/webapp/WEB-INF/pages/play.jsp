@@ -70,7 +70,7 @@
 			    </video> 
 	       </div>
 	       <div class="videoTitle">
-	                          视频标题
+	           ${product.productName }
 	       </div>
 	       <div class="videoTag">
 	           <div>标签</div>

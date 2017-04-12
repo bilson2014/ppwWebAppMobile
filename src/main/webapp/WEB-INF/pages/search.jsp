@@ -84,10 +84,12 @@
     <c:if test="${!empty list}">
 					<!-- not empty -->
 	    <c:forEach items="${list }" var="solr" varStatus="status">
-		   <div class="contentItem" style="background:url(${file_locate_storage_path }${solr.picLDUrl }) no-repeat">
-		                     <div class="itemTitle">${solr.productName}</div>
-		                     <div class="itemTag">${solr.tags}</div>
-		   </div>
+	     	<a href="<spring:url value='/play/${solr.teamId}_${solr.productId }.html'/>">
+			   <div class="contentItem" style="background:url(${file_locate_storage_path }${solr.picLDUrl }) no-repeat">
+			                     <div class="itemTitle">${solr.productName} / ${solr.productName}</div>
+			                     <div class="itemTag">${solr.tags}</div>
+			   </div>
+		    </a>
 	    </c:forEach>
 	</c:if>
 		    
