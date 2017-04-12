@@ -28,7 +28,10 @@ import com.paipianwang.pat.common.web.domain.ResourceToken;
 import com.paipianwang.pat.facade.employee.entity.PmsJob;
 import com.paipianwang.pat.facade.information.entity.PmsProductSolr;
 import com.paipianwang.pat.facade.product.entity.PmsProduct;
+import com.paipianwang.pat.facade.team.entity.PmsTeam;
+import com.paipianwang.pat.facade.team.service.PmsTeamFacade;
 import com.paipianwang.pat.facade.user.entity.PmsUser;
+import com.panfeng.web.wearable.domain.BaseMsg;
 import com.panfeng.web.wearable.resource.model.Staff;
 import com.panfeng.web.wearable.resource.view.ProductView;
 import com.panfeng.web.wearable.resource.view.SolrView;
@@ -50,6 +53,9 @@ public class PCController extends BaseController {
 
 	@Autowired
 	final private SolrService solrService = null;
+	
+	@Autowired
+	final private PmsTeamFacade pmsTeamFacade = null;
 
 	// 下单成功后跳转至成功页面
 	@RequestMapping("/success")
@@ -231,4 +237,19 @@ public class PCController extends BaseController {
 		return new ModelAndView("/member");
 	}
 
+	/**
+	 * 首页获取导演推荐
+	 */
+	@RequestMapping(value = "/team/recommend", method = RequestMethod.POST, produces = "application/json; charset=UTF-8")
+	public com.panfeng.web.wearable.domain.BaseMsg getRecommendTeam(final HttpServletRequest request) {
+		BaseMsg baseMsg = new BaseMsg();
+		List<PmsTeam> teamRecommendList = pmsTeamFacade.teamRecommendList();
+		if (null != teamRecommendList) {
+			baseMsg.setCode(1);
+			baseMsg.setResult(teamRecommendList);
+		} else {
+			baseMsg.setErrorMsg("list is null");
+		}
+		return baseMsg;
+	}
 }
