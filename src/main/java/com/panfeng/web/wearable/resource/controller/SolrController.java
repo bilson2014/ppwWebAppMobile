@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.paipianwang.pat.common.config.PublicConfig;
+import com.paipianwang.pat.common.util.ValidateUtil;
 import com.paipianwang.pat.facade.information.entity.PmsNews;
 import com.paipianwang.pat.facade.information.entity.PmsNewsSolr;
 import com.paipianwang.pat.facade.information.entity.PmsProductSolr;
@@ -118,6 +119,7 @@ public class SolrController extends BaseController {
 			throws Exception {
 
 		final SolrView view = new SolrView();
+		view.setCondition(q);
 		if ("最热资讯".equals(q)) {
 			// 筛选 推荐值大于0 的新闻
 			view.setRecomendFq("[1 TO *]");
@@ -125,13 +127,14 @@ public class SolrController extends BaseController {
 		}
 		model.addAttribute("q", q);
 		view.setLimit(20l);
-
+		
 		final List<PmsNewsSolr> list = solrService.queryNewDocs(PublicConfig.SOLR_NEWS_URL, view);
-
 		long total = 0l;
-		final PmsNewsSolr s = list.get(0);
-		if (s != null) {
-			total = s.getTotal(); // 设置总数
+		if(ValidateUtil.isValid(list)) {
+			final PmsNewsSolr s = list.get(0);
+			if (s != null) {
+				total = s.getTotal(); // 设置总数
+			}
 		}
 		model.addAttribute("list", list);
 		model.addAttribute("total", total);
@@ -203,6 +206,6 @@ public class SolrController extends BaseController {
 			return new ModelAndView("/error");
 		}
 
-		return new ModelAndView("/newsInfo");
+		return new ModelAndView("/news/newsInfo");
 	}
 }
