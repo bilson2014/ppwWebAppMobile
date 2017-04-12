@@ -198,9 +198,14 @@ var portal = {
 	},
 	
 	getProviderItem:function(){
-		portal.setProvider();
-		portal.setProvider();
-		portal.setProvider();
+		loadData(function(data){
+			if(data){
+				portal.setProvider();
+			}else{
+				console.log("数据加载错误")
+			}
+		}, getContextPath() + '/team/recommend ',null);
+	
 	},
 	
 	setProvider:function(item){
