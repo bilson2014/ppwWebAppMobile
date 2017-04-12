@@ -139,6 +139,7 @@
 			<mvc:mapping path="/product/order/loadWithTeamName"/>
 			<mvc:mapping path="/product/loadProduct"/>
 			<mvc:mapping path="/search"/>
+			<mvc:mapping path="/search/tags/product/search"/>
 			<mvc:mapping path="/search/pagination"/>
 			<bean class="com.panfeng.web.wearable.intercepter.SearchResourceInterceptor" />
 		</mvc:interceptor>
