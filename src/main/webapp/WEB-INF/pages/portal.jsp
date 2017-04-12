@@ -296,12 +296,12 @@
     		<input type="number" maxlength="16" id="indent_tele"  placeholder="填写手机号">
     		<div class="error" id="error">手机号错误</div>
     		<div class="getPhoneItem">
-	    		<input type="number" maxlength="16" id="indent_tele"  placeholder="输入验证码">
-	    		<div class="getCode" id="getCode">发送验证码</div>
+	    		<input type="number" maxlength="16" id="phoneCode"  placeholder="输入验证码">
+	    		<div class="getCode" id="getPhoneCode">发送验证码</div>
 	    		<div class="error" id="codeError">错误</div>
     		</div>
     	</div>
-    	<div class="order" id="order-btn">预约拍片</div>
+    	<div class="order" id="subPaipian">预约拍片</div>
     	</form>
 	</div>
 	
