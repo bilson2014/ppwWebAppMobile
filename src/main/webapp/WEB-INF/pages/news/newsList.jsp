@@ -56,12 +56,12 @@
 	<jsp:include flush="true" page="../menu.jsp"></jsp:include> 
 	
 	 <div class="newsTags">
-	     <a href="/newsList"><div class="category active">推荐</div></a>
-	     <a href="/newsList?q=最新资讯"><div class="category" data-value="最新资讯">最新资讯</div></a>
-	     <a href="/newsList?q=案例花絮"><div class="category" data-value="案例花絮">案例花絮</div></a>
-	     <a href="/newsList?q=企业动态"><div class="category" data-value="企业动态">企业动态</div></a>
-	     <a href="/newsList?q=行业资讯"><div class="category" data-value="行业资讯">行业资讯</div></a>
-	     <a href="/newsList?q=佳片赏析"><div class="category" data-value="佳片赏析">佳片赏析</div></a>
+	     <a href="/news-list.html"><div class="category active">推荐</div></a>
+	     <a href="/news-list.html?q=最新资讯"><div class="category" data-value="最新资讯">最新资讯</div></a>
+	     <a href="/news-list.html?q=案例花絮"><div class="category" data-value="案例花絮">案例花絮</div></a>
+	     <a href="/news-list.html?q=企业动态"><div class="category" data-value="企业动态">企业动态</div></a>
+	     <a href="/news-list.html?q=行业资讯"><div class="category" data-value="行业资讯">行业资讯</div></a>
+	     <a href="/news-list.html?q=佳片赏析"><div class="category" data-value="佳片赏析">佳片赏析</div></a>
 	 </div>
 	
 	
@@ -71,16 +71,16 @@
 	       <div class='newsContent'>
 	              <c:if test="${!empty list}">
 	                    <c:forEach items="${list }" var="newsSolr">
-	                        <a href="">
-				             <div class="newsItem">
-				                <img src="${file_locate_storage_path}${newsSolr.picLDUrl}" alt="${newsSolr.title}_拍片网" >
-				                <div class="itemContent">
-				                     <div>${newsSolr.title}</div>
-				                     <div><fmt:parseDate value="${newsSolr.creationTime}" var="yearMonth" pattern="yyyy-MM-dd"/>
-	                   					<fmt:formatDate value="${yearMonth}" pattern="yyyy年MM月dd日" />
-	                   				</div>
-				                </div>
-				             </div>
+	                        <a href="/news/article-${newsSolr.id}.html">
+					             <div class="newsItem">
+					                <img src="${file_locate_storage_path}${newsSolr.picLDUrl}" alt="${newsSolr.title}_拍片网" >
+					                <div class="itemContent">
+					                     <div>${newsSolr.title}</div>
+					                     <div><fmt:parseDate value="${newsSolr.creationTime}" var="yearMonth" pattern="yyyy-MM-dd"/>
+		                   					<fmt:formatDate value="${yearMonth}" pattern="yyyy年MM月dd日" />
+		                   				</div>
+					                </div>
+					             </div>
 				            </a> 
 	                    </c:forEach>
 	             </c:if>       
