@@ -1,5 +1,6 @@
 package com.panfeng.web.wearable.resource.controller;
 
+import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
 import java.util.List;
 
@@ -9,6 +10,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.ModelMap;
+import org.springframework.util.Base64Utils;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,6 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.paipianwang.pat.common.config.PublicConfig;
+import com.paipianwang.pat.facade.information.entity.PmsNews;
 import com.paipianwang.pat.facade.information.entity.PmsNewsSolr;
 import com.paipianwang.pat.facade.information.entity.PmsProductSolr;
 import com.panfeng.web.wearable.resource.model.Solr;
@@ -30,9 +33,9 @@ public class SolrController extends BaseController {
 	final Logger logger = LoggerFactory.getLogger("error");
 
 	final Logger serLogger = LoggerFactory.getLogger("service");
-	
+
 	final Logger keywordsLogger = LoggerFactory.getLogger("keywords");
-	
+
 	@Autowired
 	final private SolrService solrService = null;
 
@@ -100,8 +103,7 @@ public class SolrController extends BaseController {
 		}
 		return null;
 	}
-	
-	
+
 	/**
 	 * 新闻列表视图页
 	 * 
@@ -174,5 +176,33 @@ public class SolrController extends BaseController {
 
 		final List<PmsNewsSolr> list = solrService.queryNewDocs(PublicConfig.SOLR_NEWS_URL, view);
 		return list;
+	}
+
+	/**
+	 * 跳转新闻详情
+	 */
+	@RequestMapping(value = "/news/article-{newId}.html")
+	public ModelAndView getRecommendNews(@PathVariable("newId") final Integer newId, final HttpServletRequest request,
+			final ModelMap model, PmsNews n) {
+		n.setId(Long.parseLong(newId + ""));
+		final String url = PublicConfig.URL_PREFIX + "portal/news/info";
+		String str = HttpUtil.httpPost(url, n, request);
+		if (str != null && !"".equals(str)) {
+			try {
+				PmsNews news = JsonUtil.toBean(str, PmsNews.class);
+				String content = news.getContent();
+				byte[] b = content.getBytes("UTF-8");
+				content = new String(Base64Utils.decode(b), "UTF-8");
+				news.setContent(content);
+				model.addAttribute("news", news);
+			} catch (UnsupportedEncodingException e) {
+				e.printStackTrace();
+			}
+		} else {
+			// 请求不存在的新闻
+			return new ModelAndView("/error");
+		}
+
+		return new ModelAndView("/newsInfo");
 	}
 }
