@@ -2,6 +2,7 @@ package com.panfeng.web.wearable.resource.controller;
 
 import java.util.HashMap;
 import java.util.Map;
+
 import javax.servlet.http.HttpServletRequest;
 
 import org.apache.commons.lang.StringUtils;
@@ -11,34 +12,37 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.paipianwang.pat.common.config.PublicConfig;
-import com.paipianwang.pat.common.util.JsonUtil;
+import com.paipianwang.pat.common.util.DateUtils;
 import com.paipianwang.pat.facade.indent.entity.PmsIndent;
+import com.paipianwang.pat.facade.indent.service.PmsIndentFacade;
+import com.panfeng.web.wearable.mq.service.SmsMQService;
 import com.panfeng.web.wearable.resource.model.CostCalculate;
 import com.panfeng.web.wearable.service.CostCalculateService;
-import com.panfeng.web.wearable.util.HttpUtil;
-
-
 
 /**
- *成本计算控制器
+ * 成本计算控制器
  */
 @RestController
 @RequestMapping("/calculate")
-public class CostCalculateController extends BaseController{
-	
+public class CostCalculateController extends BaseController {
+
 	@Autowired
 	private CostCalculateService calculateService;
+	
+	@Autowired
+	private final PmsIndentFacade pmsIndentFacade = null;
+	
+	@Autowired
+	private final SmsMQService smsMQService = null;
 	/**
-	视频类别	专业级导演团队（3-5）默认	广告级导演团队（5-8）	电影级导演团队（8-10）
-	活动视频1	￥ 30,000.00			￥ 60,000.00		￥ 100,000.00
-	产品广告	￥ 60,000.00			￥ 100,000.00	￥ 200,000.00
-	企业宣传	￥ 30,000.00			￥ 60,000.00		￥ 100,000.00
-	微电影	￥ 60,000.00			￥ 100,000.00	￥ 200,000.00
-	融资路演	￥ 30,000.00			￥ 60,000.00		￥ 100,000.00
-	众筹视频	￥ 30,000.00			￥ 60,000.00		￥ 100,000.00
+	 * 视频类别 专业级导演团队（3-5）默认 广告级导演团队（5-8） 电影级导演团队（8-10） 活动视频1 ￥ 30,000.00 ￥
+	 * 60,000.00 ￥ 100,000.00 产品广告 ￥ 60,000.00 ￥ 100,000.00 ￥ 200,000.00 企业宣传 ￥
+	 * 30,000.00 ￥ 60,000.00 ￥ 100,000.00 微电影 ￥ 60,000.00 ￥ 100,000.00 ￥
+	 * 200,000.00 融资路演 ￥ 30,000.00 ￥ 60,000.00 ￥ 100,000.00 众筹视频 ￥ 30,000.00 ￥
+	 * 60,000.00 ￥ 100,000.00
 	 */
-	public static int[][] typeAddTeam = new int[6][3];//初始化6行3列的 视频+导演价格表
-	static{
+	public static int[][] typeAddTeam = new int[6][3];// 初始化6行3列的 视频+导演价格表
+	static {
 		typeAddTeam[0][0] = 30000;
 		typeAddTeam[0][1] = 60000;
 		typeAddTeam[0][2] = 100000;
@@ -58,8 +62,7 @@ public class CostCalculateController extends BaseController{
 		typeAddTeam[5][1] = 60000;
 		typeAddTeam[5][2] = 100000;
 	}
-	
-	
+
 	@RequestMapping(value="cost")
 	public Map<String, Object> costCalculate(@RequestBody CostCalculate calculate,
 			HttpServletRequest request){
@@ -95,7 +98,8 @@ public class CostCalculateController extends BaseController{
 		if(StringUtils.isNotBlank(calculate.getTarget())){
 			target = "-("+calculate.getTarget()+")";
 		}
-		indent.setIndentName("2017元旦推广下单"+target);
+		String indentName = indent.getIndentName();
+		indent.setIndentName((StringUtils.isNotEmpty(indentName) ? indentName : "手机端成本计算器下单")+target);
 		indent.setIndentType(0);
 		indent.setServiceId(-1l);
 		indent.setIndentPrice(0d);
@@ -106,21 +110,24 @@ public class CostCalculateController extends BaseController{
 		indent.setIndentNum(" ");
 		indent.setIndent_recomment(calculate.getDescription()+",预期金额:"+cost);
 		
-		final String url = PublicConfig.URL_PREFIX + "portal/indent/cost/save";
-		String str = HttpUtil.httpPost(url, indent,request);
-		indent = JsonUtil.toBean(str, PmsIndent.class);
+		long indentId = 0;
+		if (indent.getId() == 0) {
+			indentId = pmsIndentFacade.save(indent);
+			indent.setId(indentId);
+			String telephone = PublicConfig.PHONENUMBER_ORDER;
+			smsMQService.sendMessage("131844", telephone,
+					new String[] { indent.getIndent_tele(), DateUtils.nowTime(), "【未指定具体影片】" });
+		}
 		map.put("indentId", indent.getId());
  		return map;
 	}
-	
-	
-	@RequestMapping(value="cost2")
-	public Map<String, Object> costCalculate2(@RequestBody CostCalculate calculate,
-			HttpServletRequest request){
+
+	@RequestMapping(value = "cost2")
+	public Map<String, Object> costCalculate2(@RequestBody CostCalculate calculate, HttpServletRequest request) {
 		Map<String, Object> map = new HashMap<>();
 		map.put("code", 1);
-		int cost = calculateService.dealCost(typeAddTeam,calculate);
+		int cost = calculateService.dealCost(typeAddTeam, calculate);
 		map.put("cost", cost);
- 		return map;
+		return map;
 	}
 }
