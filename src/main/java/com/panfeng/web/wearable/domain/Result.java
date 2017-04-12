@@ -7,6 +7,17 @@ public class Result extends BaseObject {
 	private boolean ret = false;
 	
 	private String message = null;
+	
+	public Result() {
+		
+	}
+	
+	public Result(boolean ret, String message) {
+		this.ret = ret;
+		this.message = message;
+	}
+
+
 
 	public boolean isRet() {
 		return ret;
