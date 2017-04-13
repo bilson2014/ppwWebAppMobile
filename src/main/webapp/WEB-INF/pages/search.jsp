@@ -74,7 +74,7 @@
 		  <img  src="${imgPath}/index/toSearch.png">
 		 </a> 
 	     <img class="searchType" src="${imgPath }/index/searchBox.png">
-	     <div>精品案例</div>
+	     <img class="ppwLogo" src="${imgPath}/index/logoH.png">
 	</div>
 	
 	 <jsp:include flush="true" page="menu.jsp"></jsp:include> 

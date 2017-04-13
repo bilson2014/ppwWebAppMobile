@@ -44,7 +44,11 @@
 	     <a href="/searchview">  
 		  <img  src="${imgPath}/index/toSearch.png">
 		 </a> 
+<<<<<<< HEAD
+	     <img class="ppwLogo" src="${imgPath}/index/logoH.png">
+=======
 	     <div>关于我们|拍片网</div>
+>>>>>>> 6e26a19b98c1369183329f24884cf0dfc5b061fb
 	</div>
 	
 	<jsp:include flush="true" page="menu.jsp"></jsp:include> 
