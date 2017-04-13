@@ -24,7 +24,9 @@ $().ready(function(){
 						getHeight();
 						
 					}
-					if(data.length<=5){$(".findMore").addClass("hide")}//不足五个，没有点击加载更多
+					if(data.length<=5){
+						$(".findMore").addClass("hide")
+					}//不足五个，没有点击加载更多
 					_this.getMore(data);//点击加载更多
 					lazyLoad();
 					getHeight();
