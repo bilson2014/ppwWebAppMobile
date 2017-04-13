@@ -10,7 +10,7 @@ body {
 
 .phoneHeader{
     line-height: 1.6rem !important;
-
+     z-index: 19 !important;
     div{
         position: relative;
         top:-0.1rem;
@@ -144,7 +144,7 @@ body {
 }
 
 .topT {
-    margin-top: 0rem !important;
+    margin-top: 0.2rem !important;
 }
 
 .title {

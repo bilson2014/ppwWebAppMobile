@@ -56,10 +56,10 @@
 	                  </r:identity>
 	                  <a href="/userInfo" class="hide" ><img class="edit"  src="${imgPath}/menu/editMenu.png"></a>
 	                  <r:identity role="provider">
-	                     <div>provider.phoneNumber</div>
+	                     <div>${provider.phoneNumber}</div>
 	                  </r:identity>
 	                  <r:identity role="customer">
-	                     <div>user.phoneNumber</div>
+	                     <div>${user.phoneNumber}</div>
 	                  </r:identity>
 	                  <r:noLogin>
 	                      <div>未登录</div>
