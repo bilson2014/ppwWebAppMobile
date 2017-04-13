@@ -173,7 +173,7 @@ html {
 		<div class="topHeader">
 			<ul>
 				<li>作品如人品</li>
-				<li><a href="<spring:url value='/about-us.html'/>">
+				<li><a href="<spring:url value='/about'/>">
 						<div>加入我们 </div>
 				</a></li>
 			</ul>

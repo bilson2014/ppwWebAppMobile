@@ -329,5 +329,15 @@ body {
     text-align: center;
     margin: 0 auto;
     margin-top: 1rem;
+    position: relative;
 }
 
+.closeOrder{
+
+  width: 1.5rem;
+  position: absolute;
+  left:50%;
+  margin-left: -0.75rem;
+  bottom: -1.8rem;
+
+}

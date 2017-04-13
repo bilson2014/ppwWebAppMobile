@@ -323,6 +323,8 @@ function subPaipian(){
 							$('#orderSuccess').show().addClass('moedlActive');
 							$('#error').hide();
 							$('#codeError').hide();
+							var contactTele = $('#indent_tele').val('');
+							var phoneCode = $('#phoneCode').val('');
 						}
 						else{
 							$('#codeError').show();

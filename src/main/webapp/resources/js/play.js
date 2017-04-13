@@ -16,6 +16,14 @@ $().ready(function() {
     	 $('#orderTo').show();
     });
     
+    $('#checkSuccess').off('click').on('click',function(){
+    	$('#orderSuccess').hide();
+    });
+    
+    $('#"closeOrder"').off('click').on('click',function(){
+    	$('#orderTo').hide();
+    });
+    
 }), play = {
     initData: function() {
         //var b, c, d, e, f, g, h, i, j, k, l, m, a = $("#videoPoster").val();
