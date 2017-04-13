@@ -48,14 +48,13 @@
 	                   </r:noLogin>
 	                   <r:identity role="provider">
 	                   <a ><img class="userLogo" src="${imgPath}/menu/defultLogin.png"></a>
+	                    <img class="close" id="editInfo" src="${imgPath}/menu/edit.png">
 	                  </r:identity>
 	                  <r:identity role="customer">
 	                      <a ><img class="userLogo" src="${imgPath}/menu/defultLogin.png"></a>
+	                       <img class="close" id="editInfo" src="${imgPath}/menu/edit.png">
 	                  </r:identity>
-	                  <img class="close" id="editInfo" src="${imgPath}/menu/edit.png">
-	                   
-	                  <a href="/userInfo" ><img class="edit"  src="${imgPath}/menu/editMenu.png"></a>
-	                
+	                  <a href="/userInfo" class="hide" ><img class="edit"  src="${imgPath}/menu/editMenu.png"></a>
 	                  <r:identity role="provider">
 	                     <div>provider.phoneNumber</div>
 	                  </r:identity>
@@ -133,7 +132,7 @@
 		                       <div>团队介绍</div>
 		                  </div>
 	                 </a>
-	                    <a>
+	                    <a class='hide'>
 		                  <div class="menuItem">
 		                       <img src="${imgPath}/menu/help.png">
 		                       <div>帮助</div>

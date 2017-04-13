@@ -11,6 +11,7 @@
 <spring:url value="/resources/lib/jquery.json/jquery.json-2.4.min.js" var="jsonJs"/>
 <spring:url value="/resources/js/common.js" var="commonJs"/>
 <spring:url value="/resources/js/searchView.js" var="searchViewJs"/>
+<spring:url value="/resources/js/remSet.js" var="remSetJs" />
 
 <!-- imgPath -->
 <spring:url value="/resources/images" var="imgPath"/>
@@ -40,35 +41,34 @@
 	<script src="${jsonJs }"></script>
 	<script src="${commonJs }"></script>
 	<script src="${searchViewJs }"></script>
+	<script src="${remSetJs }"></script>
+	
 </head>
 <body>
+
+
+	<div class="phoneHeader">
+	     <a><img src="${imgPath }/index/toMenu.png"></a>
+	     <div>检索</div>
+	</div>
+	
+	 <jsp:include flush="true" page="menu.jsp"></jsp:include>
+
 	<div class="wrap">
-		<div class="header">
-			<!-- logo -->
-			<dl class="header-ul">
-				<dd>
-					<a href="javascript:history.back(-1);">
-						<div class="back"></div>
-					</a>
-				</dd>
-				<dd>
-					<a href="/" target="_self">
-						<div class="logo"></div>
-					</a>
-				</dd>
-			</dl>
-		</div>
 		
+	
 		<div class="content-wrap">
 			<div class="search-section">
 				<div class="header-search-wrap">
 					<form method="get" action="/search" id="s-form" accept-charset="utf-8">
 						<input type="text" size="16" autocomplete="off" id="search-q" name="q" placeholder="搜索" />
-						<input type="hidden" id="search-sortord" name="sortord" value="0" />
 						<a href="javascript:void(0);" class="go bk_gray" onclick="return false;" id="s-btn"></a>
 					</form>
 				</div>
 			</div>
+			
+			<div class="title">您可能感兴趣</div>
+			
 			<div class="recomment-section">
 				<div class="recomment-section-wrap">
 					<div class="row">
