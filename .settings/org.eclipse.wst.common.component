@@ -40,7 +40,7 @@
         <dependent-module archiveName="pat-facade-information-1.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/pat-facade-information/pat-facade-information">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <property name="context-root" value="wearable-device"/>
         <property name="java-output-path" value="/wearable-device/target/classes"/>
+        <property name="context-root" value="/"/>
     </wb-module>
 </project-modules>
