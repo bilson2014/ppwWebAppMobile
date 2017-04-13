@@ -20,7 +20,7 @@
 <spring:url value="/resources/lib/cripto/aes.js" var="aesJs" />
 <spring:url value="/resources/lib/cripto/pad-zeropadding.js" var="padJs" />
 <spring:url value="/resources/js/common.js" var="commonJs" />
-
+<spring:url value="/resources/js/remSet.js" var="remSetJs" />
 
 <!-- imgPath -->
 <spring:url value="/resources/images" var="imgPath" />
@@ -59,30 +59,37 @@
 <script src="${padJs }"></script>
 <script src="${commonJs }"></script>
 <script src="${phoneLoginJs }"></script>
+<script src="${remSetJs }"></script>
+
+
 </head>
 <body>
 
-	<div class="cusSide" id="changeDiv">
-		<div class="topDiv">
+	<div class="phoneHeader">
+	     <a id="openMenu"><img src="${imgPath }/index/toMenu.png"></a>
+	     <div>管家登录</div>
+	</div>
+	
+	 <jsp:include flush="true" page="menu.jsp"></jsp:include> 
 
-			<div class="topContent">
-				<a href="<spring:url value="/"/>" target="_self">
-					<div>
-						<img class="" id="cusLogo" src="${imgPath}/login/logorw.png">
-					</div>
-				</a> <a href="<spring:url value="/"/>" target="_self">
-					<div>
-						<img class="hide" id="posLogo"
-							src="${imgPath}/login/logocw.png">
-					</div>
-				</a>
-				<div class="lineWidth"></div>
-				<div class="infoWord" id="infoWordId">拍片就上拍片网</div>
-			</div>
+		
+		     <div class="pagePhone">
 
-		</div>
+	             <div class="cusLogin" style="margin-top:2rem"> 
+		               <div class="loginPhone">
+				              <div class="loginItemPhone">
+				                  <input placeholder="用户名" id="user_phoneNumber">
+				              </div>
+				              <div class="loginItemPhone">
+				                  <input placeholder="密码" id="user_passWord">
+				              </div>
+				              <div class="loginIng" id="submitBtn">登录</div>
+		              </div>
+	              </div>
+	              
+	         </div>
 
-		<div class="bottomDiv" style="top:160px;">
+	<!-- 	<div class="bottomDiv" style="top:160px;">
 			<input id="login_type" value="phone" type="hidden"></input>
 			<div class="contentHeight contentColor">
 				<div class="loginContent">
@@ -93,7 +100,7 @@
 				</div>
 				<div class="submitBtn" id="submitBtn">登录</div>
 			</div>
-		</div>
+		</div> -->
 	</div>
 </body>
 </html>

@@ -46,9 +46,8 @@
 </head>
 <body>
 
-
 	<div class="phoneHeader">
-	     <a><img src="${imgPath }/index/toMenu.png"></a>
+	     <a id="openMenu"><img src="${imgPath }/index/toMenu.png"></a>
 	     <div>检索</div>
 	</div>
 	

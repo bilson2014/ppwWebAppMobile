@@ -37,45 +37,12 @@ function SetUsrRemainTime(){
 
 var login = {
 		init:function(){
-			this.userPhoneChange();
+			//this.userPhoneChange();
 			this.changeKaptcha();
 			this.userVerificationCode();
-			this.userCheckVerification();
+			//this.userCheckVerification();
 			this.user_phoneLogin();
-		},
-	 	userPhoneChange:function(){
-	 		
-			$('#user_phoneNumber').off("blur").on('blur',function(){
-				var telephone = $('#user_phoneNumber').val().trim();
-				if(telephone == '' || telephone == null || telephone == undefined){
-					successToolTipShow('请填写手机号');
-					$('#user_phoneNumber').focus();
-					return ;
-				}
-				if(checkMobile(telephone)){
-					loadData(function(flag){					
-						if(flag.errorCode == 200){
-							//  未注册
-							successToolTipShow('该手机号未注册');
-						}else if(flag.errorCode == 500){
-							if(flag.result == false){
-								// 已经注册
-								
-							}else{
-								// 服务器错误
-								successToolTipShow(flag.errorMsg);
-							}
-						}
-						
-					}, getContextPath() + '/provider/checkPhoneExisting', $.toJSON({
-						telephone : telephone
-					}));
-				}else{
-					successToolTipShow('手机号不正确');
-					$('#user_phoneNumber').focus();
-					return ;
-				}
-			});
+			provider_login.init();
 		},
 		//更换图片验证码
 		changeKaptcha:function(){
@@ -167,15 +134,15 @@ var login = {
 					return false;
 				}
 				loadData(function(info){
-					if(info.key){
-						window.location.href=getContextPath()+'/mgr/index';
+					if(info.errorCode == 200){
+						window.location.href=getContextPath()+'/provider/index';
 					}else{
-						successToolTipShow(info.value);
+						successToolTipShow(info.errorMsg);
 						return false;
 					}
 				},  getContextPath() + '/provider/doLogin', $.toJSON({
 					loginType :'phone',
-					telephone : phoneNumber,
+					phoneNumber : phoneNumber,
 					verification_code : veri_code
 				}));
 			})
@@ -243,29 +210,15 @@ var provider_login = {
 				if(checkMobile(telephone)){
 					loadData(function(flag){
 						if(flag.errorCode == 200){
-							$('#user_phoneNumberId').addClass('hide');
-							$('#submitBtn').text("注册");
-							$("#submitBtn").attr('data-id','register'); // 标记register
-							$('#infoOrder').removeClass('hide');
-							$('#user_phoneNumberId').text('*手机号不正确');
-						}else if(flag.errorCode == 300){
-							$('#user_phoneNumberId').addClass('hide');
-							$('#submitBtn').text("登录");
-							$('#submitBtn').attr('data-id','login'); // 标记login
-							$('#infoOrder').addClass('hide');
-							$('#user_phoneNumberId').text('*手机号不正确');
-						}else if(flag.errorCode == 500){
-							$('#user_phoneNumberId').removeClass('hide');
-							$('#user_phoneNumberId').text(flag.errorMsg);
+							//  未注册
+							successToolTipShow('该手机号未注册');
 						}
-						
 					}, getContextPath() + '/provider/checkPhoneExisting', $.toJSON({ // 改验证方式    
 						phoneNumber : telephone
 					}));
 				}else{
-					$('#user_phoneNumberId').removeClass('hide');
-					$('#user_phoneNumberId').text('*手机号不正确');
 					$('#user_phoneNumber').focus();
+					successToolTipShow("手机号不正确");
 					return ;
 				}
 				$('#user_phoneNumberId').addClass('hide');
@@ -433,23 +386,6 @@ function SetRemainTime(){
 		curCount--;  
 		$("#verification_code_recover_btn").text('已发送('+ curCount +')');
 	}
-}
-
-//确认状态
-function checkState(){
-	var href = window.location.href;
-    var state = href.substr(href.lastIndexOf("?")+1,href.length);
-    if(state.trim() == "role=director"){
-    	toProvider();
-    }
-}
-
-
-
-function toProvider(){
-	$('#submitBtn').off('click');
-	initPos();
-	provider_login.init();
 }
 
 

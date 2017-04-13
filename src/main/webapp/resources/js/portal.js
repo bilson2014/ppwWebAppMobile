@@ -323,6 +323,8 @@ function subPaipian(){
 							$('#orderSuccess').show().addClass('moedlActive');
 							$('#error').hide();
 							$('#codeError').hide();
+							var contactTele = $('#indent_tele').val('');
+							var phoneCode = $('#phoneCode').val('');
 						}
 						else{
 							$('#codeError').show();
@@ -392,20 +394,24 @@ function checkDatas(type) {
 	var flag = true;
 
 	if (contactTele == '' || contactTele == null || contactTele == undefined) {
-		showError($('#indent_tele_error'), '请输入手机号码');
+		$('#error').show();
+		$('#error').text('请输入手机号码');
 		flag = false;
 		return flag;
 	}
 
 	if (!checkMobile(contactTele)) {
-		showError($('#indent_tele_error'), '手机格式不正确');
+		$('#error').show();
+		$('#error').text('手机格式不正确');
+		
 		flag = false;
 		return flag;
 	}
 
 	if ((phoneCode == '' || phoneCode == null || phoneCode == undefined)
 			&& type == 1) {
-		showError($('#indent_code_error'), '请输入手机验证码');
+		$('#codeError').show();
+		$('#codeError').text('请输入手机验证码');
 		flag = false;
 		return flag;
 	}

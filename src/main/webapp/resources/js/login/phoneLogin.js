@@ -4,8 +4,8 @@ var curCount; // 当前剩余秒数
 var PopInterValObj, oTimer, successIntervalObj;
 $().ready(function(){
 	//changeDiv();
-	checkTap();
 	login.init();
+	checkTap();
 });
 
 function SetUsrRemainTime(){
@@ -28,13 +28,13 @@ var login = {
 			this.userPhoneChange();
 			this.changeKaptcha();
 			this.userVerificationCode();
-			this.userCheckVerification();
+			//this.userCheckVerification();
 			this.user_phoneLogin();
 			this.user_nameLogin();
 		},
 	 	userPhoneChange:function(){
 	 		
-			$('#user_phoneNumber').off("blur").on('blur',function(){
+			$('#user_phoneNumber').off("change").on('change',function(){
 				var telephone = $('#user_phoneNumber').val().trim();
 				if(telephone == '' || telephone == null || telephone == undefined){
 					successToolTipShow('请填写手机号');
@@ -44,16 +44,15 @@ var login = {
 				if(checkMobile(telephone)){
 					loadData(function(flag){					
 						if(flag.errorCode == 200){
-							//  未注册
+							// 已经注册
+						}else if (flag.errorCode == 300){
+						//  未注册
 							successToolTipShow('该手机号未注册');
-						}else if(flag.errorCode == 500){
-							if(flag.result == false){
-								// 已经注册
-							}else{
-								// 服务器错误
-								successToolTipShow(flag.errorMsg);
-							}
+						}else if (flag.errorCode == 500){
+							// 服务器错误
+							successToolTipShow(flag.errorMsg);
 						}
+						
 					}, getContextPath() + '/login/validation/phone', $.toJSON({
 						telephone : telephone
 					}));
@@ -220,24 +219,6 @@ function SetRemainTime(){
 	}
 }
 
-//确认状态
-function checkState(){
-	var href = window.location.href;
-    var state = href.substr(href.lastIndexOf("?")+1,href.length);
-    if(state.trim() == "role=director"){
-    	toProvider();
-    }
-}
-
-
-
-function toProvider(){
-	$('#submitBtn').off('click');
-	initPos();
-	provider_login.init();
-}
-
-
 //控制标签
 
 function checkTap(){
@@ -255,8 +236,4 @@ function checkTap(){
 	
 	
 }
-
-
-
-
 

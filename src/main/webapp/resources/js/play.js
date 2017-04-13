@@ -15,7 +15,17 @@ $().ready(function() {
     $('.orderVideo').off('click').on('click',function(){
     	 $('#orderTo').show();
     });
+
     
+    $('#checkSuccess').off('click').on('click',function(){
+    	$('#orderSuccess').hide();
+    });
+    
+    $('#closeOrder').off('click').on('click',function(){
+    	$('#orderTo').hide();
+    });
+    
+
 }), play = {
     initData: function() {
         //var b, c, d, e, f, g, h, i, j, k, l, m, a = $("#videoPoster").val();
@@ -67,7 +77,7 @@ $().ready(function() {
     	var tags = $('#tags').val();
     	loadData(function(data){
     		var list = data.result;
-			if(list!=null){
+			if(list.result.length > 0){
 				for (var int = 0;int<list.result.length; int++) {
 					var card = createCard(list.result[int]);
 					$("#anliContent").append(card);

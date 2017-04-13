@@ -84,7 +84,7 @@
 			                  <input id="verification_code_user" placeholder="短信验证码">
 			                  <div class="code"><button type="button" id="get_code_user" class="btn-get-validation" >点击获取</button></div>
 			              </div>
-			              <a href="/repwd" class="forgetPw"><div>忘记了密码?</div></a>
+			            <!--   <a href="/repwd" class="forgetPw"><div>忘记了密码?</div></a> -->
 			              <div class="loginIng" id="submitBtn-user">登录</div>
 			              <a href="/regSele"> <div class="noLogin">还没有账号? 请<span>注册</span></div></a>
 	              </div>

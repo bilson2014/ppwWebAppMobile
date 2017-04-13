@@ -32,6 +32,11 @@ body {
     line-height: 1.3rem;
 }
 
+.pagePhone{
+    margin-top: 1.3rem;
+    padding-bottom: 1.5rem;
+}
+
 .phoneHeader {
     background: transparent !important;
     border: none !important;
@@ -49,7 +54,7 @@ body {
 }
 
 .choosePage {
-    margin-top: 2.3rem;
+    margin-top: 1rem;
 }
 
 .loginItem {
@@ -142,7 +147,7 @@ body {
     .loginItemPhone {
         width: 100%;
         height: 2rem;
-        border-bottom: 1px solid $gray-dark;
+        border-bottom: 1px solid $gray-light;
         position: relative;
         margin-top: 0.2rem;
         .image {

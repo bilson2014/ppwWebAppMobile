@@ -241,16 +241,16 @@ public class ProviderController extends BaseController {
 	 * 
 	 * @param phoneNumber
 	 *            注册的手机号码
-	 * @return 标识可以注册，返回true;标识已注册，返回false
+	 * @return 
 	 */
 	@RequestMapping("/checkPhoneExisting")
 	public BaseMsg phoneIsExisting(@RequestBody final PmsTeam team, final HttpServletRequest request) {
 
 		final long count = pmsTeamFacade.checkExist(team);
 		if (count <= 0) {
-			return new BaseMsg(BaseMsg.NORMAL, "", null); // 请求失败
+			return new BaseMsg(BaseMsg.NORMAL, "", null); // 未被注册
 		} else {
-			return new BaseMsg(BaseMsg.WARNING, "手机号已经重复注册啦！", null); // 请求失败
+			return new BaseMsg(BaseMsg.WARNING, "手机号已经重复注册啦！", null); // 已经注册
 		}
 	}
 

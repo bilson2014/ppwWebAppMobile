@@ -233,7 +233,8 @@
 	        <div class="swiper-wrapper">
 	            <div class="swiper-slide">
 		            <video style="width:0px;opacity:0" controls="" loop="" poster="${imgPath}/index/moreInfo.JPG" name="media" id="header3Video" class="active"> 
-			          <source src="/resources/video/test.mov" id="source" type="video/mp4">
+			         <!--  <source src="/resources/video/test.mov" id="source" type="video/mp4"> -->
+			         <source src="http://www.apaipian.com/product/video/paipianwangMovie.mp4" id="source" type="video/mp4">
 			        </video>
 	                 <ul>
 		                  <li class="title">专业商业视频服务</li>
@@ -415,6 +416,13 @@
 		          <img src="${imgPath}/index/logo4.png">
 		          <img src="${imgPath}/index/logo5.png">
 		          <img src="${imgPath}/index/logo6.png">
+		          <img src="${imgPath}/index/logo7.png">
+		          <img src="${imgPath}/index/logo8.png">
+		          <img src="${imgPath}/index/logo9.png">
+		          <img src="${imgPath}/index/logo10.png">
+		          <img src="${imgPath}/index/logo11.png">
+		          <img src="${imgPath}/index/logo12.png">
+		          <img src="${imgPath}/index/logo13.png">
 		     </div>
 		     
 		     <jsp:include flush="true" page="foot.jsp"></jsp:include> 
