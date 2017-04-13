@@ -97,63 +97,6 @@
 			</div>
 		</div>
 	</div>
-	<<<<<<< HEAD
-	<jsp:include flush="true" page="../menu.jsp"></jsp:include>
-
-	<div class="pagePhone">
-		<img class="bannerImg" id="banner"
-			src="${file_locate_storage_path }${news.picLDUrl}">
-		<div class="infoContents">
-			<div class="title">${news.title}</div>
-			<div class="tags">
-				<!--        <div>我是标签</div>
-		          <div>超级</div>
-		          <div>超级大标签</div>
-		          <div>我是标签</div>
-		          <div>超级</div> -->
-				<%-- <c:if test="${not empty fn:trim(news.tags) }">
-										<c:forEach items="${fn:split(fn:trim(news.tags),' ') }" var="tag" end="2" varStatus="stat">
-											<div>${tag}</div> <c:if test="${!stat.last }"></c:if>
-										</c:forEach>
-				   </c:if> --%>
-			</div>
-			<div class="setContent">
-				<div>超级</div>
-				<div>超级大标签</div>
-				<div>我是标签</div>
-				<img class="bannerImg" id="banner" src="${imgPath }/index/back3.jpg">
-				<div>超级</div>
-			</div>
-		</div>
-
-		<div class="footPhone">
-			<div class="leftContent">
-				<img class="logoFoot" src="${imgPath}/index/logoH.png">
-				<div class="footItem">
-					<div class="service">服务热线 :</div>
-					<div>400-660-9728</div>
-				</div>
-				<div class="footItem">
-					<div class="cMail">公司邮箱 :</div>
-					<div>bdmarket@paipianwang.cn</div>
-				</div>
-				<div class="footItem">
-					<div class="cAddress">公司地址 :</div>
-					<div>北京市朝阳区国贸建外SOHO东区6号楼25层</div>
-				</div>
-			</div>
-			<div class="rightContent">
-				<img src="${imgPath}/index/footCode.png">
-				<div>拍片网官微</div>
-			</div>
-			<div class="footBottom">
-				© 2016 北京拍片乐科技有限公司 京ICP备16066831号-1 <br>百度统计 站长统计
-			</div>
-		</div>
-	</div>
-	======= >>>>>>> 18adcad11c25484c146d8df57590d4e8f562eb32
-
-
 
 	<script src="${jqueryJs }"></script>
 	<script src="${pluginJs }"></script>
