@@ -243,7 +243,7 @@
 
 		<div id="btn"> 
 			<r:noLogin>
-				<a href="/login?role=director">
+				<a href="/loginSele">
 					<div class="checkBtn">
 						加入我们
 					</div>
@@ -257,14 +257,14 @@
 				</a>
 			</r:identity> 
 			<r:identity role="customer">
-				<a href="/login?role=director">
+				<a href="/login">
 					<div class="checkBtn">
 						加入我们
 					</div>
 				</a>
 			</r:identity> 
 			<r:identity role="employee">
-				<a href="/login?role=director">
+				<a href="/loginSele">
 					<div class="checkBtn">
 						加入我们
 					</div>
