@@ -47,13 +47,14 @@ function controlCost(){
 				add = false;
 				loadData(function(result) {
 					add = true;
-					alert(result.cost);
+/*					alert(result.cost);
 					alert(result.code);
-					alert(result.indentId);
+					alert(result.indentId);*/
 					if(result.code == 1){
 						$('#price').text(thousandCount(result.cost));
 						$('#phone').attr('data-content', result.indentId);
 						$("#code-container").remove();
+						$('#bar').removeClass('proWidth'); 
 					}else if(result.code == 0 && result.msg == '手机号不匹配'){
 						$('#errorPhone').attr('data-content', '手机号不匹配');
 					}else{
