@@ -80,7 +80,7 @@
 	 <jsp:include flush="true" page="menu.jsp"></jsp:include> 
 	
 	
-	 <div class="searchBoxInit"> 	
+	 <div class="searchBoxInit searchInit"> 	
 	<div class="searchBox searchInit">
 	    <div class="searchItem">
 		     <div class="typeTitle" id="typeTags">
@@ -88,11 +88,8 @@
 		        <img id="qType" src="${imgPath }/index/flow.png">
 		     </div>
 		     <div class="itemTags" id="typeTagsItem">
-		        
 		    </div>    
-		       
 		     <div class="itemTags noShow" id="typeTagsShow">
-		       
 		    </div>   
 	     </div>
 	     

@@ -17,9 +17,11 @@ var search = {
 			 $('.searchType').off('click').on('click',function(){
 				  if($('.searchBox').hasClass('searchInit')){
 					  $('.searchBox').removeClass('searchInit');
+					  $('.searchBoxInit').removeClass('searchInit');
 					  $('#checkBtn').show();
 				  }else{
 					  $('.searchBox').addClass('searchInit');
+					  $('.searchBoxInit').addClass('searchInit');
 					  $('#checkBtn').hide();
 				  }
 			 });
@@ -88,6 +90,7 @@ var search = {
          	
          	$('#cancle').on('click',function(){
          		$('.searchBox').addClass('searchInit');
+         		 $('.searchBoxInit').addClass('searchInit');
 				$('#checkBtn').hide();
          	});
         },
