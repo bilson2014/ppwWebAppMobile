@@ -81,7 +81,7 @@
 		                 </a>
 		             </r:identity>
 		             <r:identity role="customer">
-		                 <a href="/user/index">
+		                 <a href="/phone/user/index">
 			                  <div class="menuItem">
 			                       <img src="${imgPath}/menu/myPro.png">
 			                       <div>我的项目</div>
