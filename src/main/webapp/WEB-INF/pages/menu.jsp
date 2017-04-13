@@ -46,7 +46,7 @@
 	                       <a href="/loginSele"><img class="userLogo" src="${imgPath}/menu/defultLogin.png"></a>
 	                   </r:noLogin>
 	                   <r:identity role="provider">
-	                    <a ><img class="userLogo" id="getImgUrl" src="${file_locate_storage_path }${provider.imgUrl}">></a>
+	                    <a ><img class="userLogo" id="getImgUrl" src="${file_locate_storage_path }${provider.imgUrl}"></a>
 	                    <img class="close" id="editInfo" src="${imgPath}/menu/edit.png">
 	                  </r:identity>
 	                  <r:identity role="customer">
@@ -80,7 +80,7 @@
 		                 </a>
 		             </r:identity>
 		             <r:identity role="customer">
-		                 <a href="/user/index">
+		                 <a href="/phone/user/index">
 			                  <div class="menuItem">
 			                       <img src="${imgPath}/menu/myPro.png">
 			                       <div>我的项目</div>
