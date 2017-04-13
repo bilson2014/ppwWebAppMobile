@@ -315,19 +315,18 @@ function subPaipian(){
 	var flag = true;
 	$('#subPaipian').off("click").on("click",function(){
 		if(checkDatas(1)){ // 检查数据完整性
-//				showError($('#indent_tele_error'),'');
-				// 提交表单
 				if(flag){
 					flag = false;
 					loadData2(function(msg){
 						if(msg.ret){
 							$('.comOrder').hide();
-							//showSuccess();
-							alert('下单成功');
+							$('#orderSuccess').show().addClass('moedlActive');
+							$('#error').hide();
+							$('#codeError').hide();
 						}
 						else{
-							//showError($('#indent_code_error'),'验证码错误');
-							alert('验证码错误');
+							$('#codeError').show();
+							$('#codeError').text('验证码错误');
 						}
 						flag = true;
 					}, getContextPath() + '/order/deliver', 

@@ -12,6 +12,10 @@ $().ready(function() {
     play.showMore();
     $('#verification_code_recover_btn').off('click').on('click',verificationCodeBtn);
     $('#submitOrder').off('click').on('click',submitOrder);
+    $('.orderVideo').off('click').on('click',function(){
+    	 $('#orderTo').show();
+    });
+    
 }), play = {
     initData: function() {
         //var b, c, d, e, f, g, h, i, j, k, l, m, a = $("#videoPoster").val();
@@ -111,10 +115,10 @@ function submitOrder(){
 		loadData2(function(msg){
 			if(msg.ret){
 				//showSuccess();
-				alert('下单成功');
+			   $('#orderTo').hide();
+			   $('#orderSuccess').show();
 			}else{
-				//showError($('#phoneCodeError'),'验证码错误');
-				alert('下单失败');
+				$('#codeError').text('下单失败');
 			}
 		}, getContextPath() + '/order/deliver', 
 			{indentName : $("#videoName").val(),
@@ -138,19 +142,22 @@ function checkData(type){
 	switch (type) {
 	case 1:
 		if(telephone == '' || telephone == null || telephone == undefined){
-			showError($('#phoneError'),'请填写手机号');
+			$('#phoneCode').show();
+			$('#phoneCode').text('请填写手机号');
 			$('#phoneNumber').focus();
 			return false;
 		}
 		if(!checkMobile(telephone)){
-			showError($('#phoneError'),'手机号输入错误');
+			$('#phoneCode').show();
+			$('#phoneCode').text('手机号输入错误');
 			$('#phoneNumber').focus();
 			return false;
 		}
 		return true;
 	case 2:
 		if(verificationCodeValue == '' || verificationCodeValue == null || verificationCodeValue == undefined){
-			showError($('#phoneCodeError'),'请填写验证码');
+			$('#codeError').show();
+			$('#codeError').text('请填写验证码');
 			$('#verificationCodeValue').focus();
 			return false;
 		}
