@@ -28,13 +28,13 @@ var login = {
 			this.userPhoneChange();
 			this.changeKaptcha();
 			this.userVerificationCode();
-			this.userCheckVerification();
+			//this.userCheckVerification();
 			this.user_phoneLogin();
 			this.user_nameLogin();
 		},
 	 	userPhoneChange:function(){
 	 		
-			$('#user_phoneNumber').off("change").on('blur',function(){
+			$('#user_phoneNumber').off("change").on('change',function(){
 				var telephone = $('#user_phoneNumber').val().trim();
 				if(telephone == '' || telephone == null || telephone == undefined){
 					successToolTipShow('请填写手机号');
@@ -230,44 +230,3 @@ function SetRemainTime(){
 		$("#verification_code_recover_btn").text('已发送('+ curCount +')');
 	}
 }
-
-//确认状态
-function checkState(){
-	var href = window.location.href;
-    var state = href.substr(href.lastIndexOf("?")+1,href.length);
-    if(state.trim() == "role=director"){
-    	toProvider();
-    }
-}
-
-
-
-function toProvider(){
-	$('#submitBtn').off('click');
-	initPos();
-	provider_login.init();
-}
-
-
-//控制标签
-
-function checkTap(){
-	$('#phoneLogin').off('click').on('click',function(){
-		$('#loginTop').removeClass('loginTopActive');
-		$('#phoneLoginDiv').show();
-		$('#useLoginDiv').hide();
-	});
-	
-	$('#noPhoneLogin').off('click').on('click',function(){
-		$('#loginTop').addClass('loginTopActive');
-		$('#phoneLoginDiv').hide();
-		$('#useLoginDiv').show();
-	});
-	
-	
-}
-
-
-
-
-

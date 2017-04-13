@@ -40,12 +40,13 @@ var login = {
 			this.userPhoneChange();
 			this.changeKaptcha();
 			this.userVerificationCode();
-			this.userCheckVerification();
+			//this.userCheckVerification();
 			this.user_phoneLogin();
+			provider_login.init();
 		},
 	 	userPhoneChange:function(){
 	 		
-			$('#user_phoneNumber').off("blur").on('blur',function(){
+			$('#user_phoneNumber').off("chaneg").on('chaneg',function(){
 				var telephone = $('#user_phoneNumber').val().trim();
 				if(telephone == '' || telephone == null || telephone == undefined){
 					successToolTipShow('请填写手机号');
@@ -263,9 +264,8 @@ var provider_login = {
 						phoneNumber : telephone
 					}));
 				}else{
-					$('#user_phoneNumberId').removeClass('hide');
-					$('#user_phoneNumberId').text('*手机号不正确');
 					$('#user_phoneNumber').focus();
+					successToolTipShow("手机号不正确");
 					return ;
 				}
 				$('#user_phoneNumberId').addClass('hide');
@@ -433,23 +433,6 @@ function SetRemainTime(){
 		curCount--;  
 		$("#verification_code_recover_btn").text('已发送('+ curCount +')');
 	}
-}
-
-//确认状态
-function checkState(){
-	var href = window.location.href;
-    var state = href.substr(href.lastIndexOf("?")+1,href.length);
-    if(state.trim() == "role=director"){
-    	toProvider();
-    }
-}
-
-
-
-function toProvider(){
-	$('#submitBtn').off('click');
-	initPos();
-	provider_login.init();
 }
 
 
