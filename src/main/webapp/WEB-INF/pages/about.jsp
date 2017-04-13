@@ -44,7 +44,7 @@
 	     <a href="/searchview">  
 		  <img  src="${imgPath}/index/toSearch.png">
 		 </a> 
-	     <div>关于我们</div>
+	     <div>关于我们|拍片网</div>
 	</div>
 	
 	<jsp:include flush="true" page="menu.jsp"></jsp:include> 

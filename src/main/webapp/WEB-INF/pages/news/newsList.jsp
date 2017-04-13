@@ -50,7 +50,7 @@
 	<div class="phoneHeader">
 	     <a id="openMenu"><img src="${imgPath }/index/toMenu.png"></a>
 	     <a><img src="${imgPath }/index/toSearch.png"></a>
-	     <div>新闻页</div>
+	     <div>新闻咨询|拍片网</div>
 	</div>
 	
 	<jsp:include flush="true" page="../menu.jsp"></jsp:include> 
