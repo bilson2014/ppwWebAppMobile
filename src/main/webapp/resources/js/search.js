@@ -18,11 +18,11 @@ var search = {
 				  if($('.searchBox').hasClass('searchInit')){
 					  $('.searchBox').removeClass('searchInit');
 					  $('.searchBoxInit').removeClass('searchInit');
-					  $('#checkBtn').show();
+					  $('.pagePhone').addClass('noTouch');
 				  }else{
 					  $('.searchBox').addClass('searchInit');
 					  $('.searchBoxInit').addClass('searchInit');
-					  $('#checkBtn').hide();
+					  $('.pagePhone').removeClass('noTouch');
 				  }
 			 });
 		},
@@ -57,14 +57,14 @@ var search = {
         		}
         	});
 //        	//价格区域处理
-//        	var base_tagsPrice = $(".tagsPrice");
-//        	var tagsPrice = $(".tagsPrice").length;
-//        	base_tagsPrice.on('click', function() {
-//        		    $(".tagsPrice").removeClass('checkActive');
-//        			$(this).addClass('checkActive');
-//        			$('#lowPrice').val($(this).attr('data-low'));
-//        			$('#heightPrice').val($(this).attr('data-content'));
-//        	});
+        	var base_tagsPrice = $(".tagsPrice");
+        	var tagsPrice = $(".tagsPrice").length;
+        	base_tagsPrice.on('click', function() {
+        		    $(".tagsPrice").removeClass('checkActive');
+        			$(this).addClass('checkActive');
+        			$('#lowPrice').val($(this).attr('data-low'));
+        			$('#heightPrice').val($(this).attr('data-content'));
+        	});
 //        	
 //        	$('#heightPrice').blur('click',function(){
 //        		var lowPrice = $('#lowPrice').val();
@@ -90,9 +90,18 @@ var search = {
          	
          	$('#cancle').on('click',function(){
          		$('.searchBox').addClass('searchInit');
-         		 $('.searchBoxInit').addClass('searchInit');
-				$('#checkBtn').hide();
+         		$('.searchBoxInit').addClass('searchInit');
+         		$('.pagePhone').removeClass('noTouch');
+				
          	});
+         	
+         	$('.hideBox').off('click').on('click',function(){
+         		$('.searchBox').addClass('searchInit');
+         		$('.searchBoxInit').addClass('searchInit');
+         		$('.pagePhone').removeClass('noTouch');
+				
+         	})
+         	
         },
         showTagsItem:function(){
      //类型   	
@@ -159,10 +168,10 @@ function toSearch(){
 		    	price = price +"["+lowPrice+" TO "+heightPrice+"]";
 	    }
 	    
-	    if(lowPrice==""){
+	    if(lowPrice=="" &&  heightPrice!=""){
 	    	price = price +"[*" + " TO "+heightPrice+"]";
 	    }
-	    if(heightPrice==""){
+	    if(heightPrice=="" && lowPrice!=""){
 	    	price = price +"["+lowPrice+" TO "+"*]";
 	    }
 	    

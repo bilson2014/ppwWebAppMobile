@@ -744,6 +744,9 @@ a:active {
     width: 100%;
     background-size: 100% 100% !important;
     position: relative;
+    -webkit-filter: grayscale(70%);
+    filter: grayscale(70%);
+    
     .itemTitle {
         color: white;
         font-size: 0.4rem;

@@ -46,13 +46,14 @@
 	                       <a href="/loginSele"><img class="userLogo" src="${imgPath}/menu/defultLogin.png"></a>
 	                   </r:noLogin>
 	                   <r:identity role="provider">
-	                    <a ><img class="userLogo" id="getImgUrl" src="${file_locate_storage_path }${provider.imgUrl}">></a>
+	                    <a ><img class="userLogo" id="getImgUrl" src="${file_locate_storage_path }${sessionScope.sessionInfo.photo}">></a>
 	                    <img class="close" id="editInfo" src="${imgPath}/menu/edit.png">
 	                  </r:identity>
 	                  <r:identity role="customer">
-	                       <a ><img class="userLogo" id="getImgUrl" src="${file_locate_storage_path }${user.imgUrl}"></a> 
+	                       <a ><img class="userLogo" id="getImgUrl" src="${file_locate_storage_path }${sessionScope.sessionInfo.photo}"></a> 
 	                       <img class="close" id="editInfo" src="${imgPath}/menu/edit.png">
 	                  </r:identity>
+	
 	                  <a href="/userInfo" class="hide" ><img class="edit"  src="${imgPath}/menu/editMenu.png"></a>
 	                  <r:identity role="provider">
 	                     <div>${sessionScope.sessionInfo.telephone}</div>

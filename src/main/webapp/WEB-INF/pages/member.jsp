@@ -30,9 +30,6 @@
 <spring:url value="/resources/js/company/member.js" var="memberJs" />
 <spring:url value="/resources/js/remSet.js" var="remSetJs" />
 
-
-
-
 <!-- imgPath -->
 <spring:url value="/resources/images" var="imgPath" />
 <!DOCTYPE html>
@@ -126,7 +123,7 @@ html {
 
 					<div class="memberContent">
 						<div class="memberContentInfo">
-							<div class="text">${staff.staffDescription}</div>
+<%-- 							<div class="text">${staff.staffDescription}</div> --%>
 							<div class="share" data-id="${staff.staffId}"
 								data-flag="${staff.staffName}"
 								data-img="${file_locate_storage_path}${staff.staffImageUrl }">

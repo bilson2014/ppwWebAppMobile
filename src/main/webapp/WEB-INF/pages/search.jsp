@@ -47,7 +47,7 @@
 <meta name="keywords" content="拍片网下单,视频交易,广告购买,导演制作费,拍片下单">
 <meta name="description"
 	content="拍片网，汇聚千万影视行业创作者，是中国最大的视频交易平台。产品：宣传片、广告、微电影、动画、三维演示等视频，优势：创意免费、选择多、价格低、不满意无条件退款">
-<title>索引搜索</title>
+<title>精品案例</title>
 
 <link rel="shortcut icon" href="${imgPath }/favicon.ico">
 <link rel="stylesheet" href="${bootstrapCss }">
@@ -80,7 +80,13 @@
 	 <jsp:include flush="true" page="menu.jsp"></jsp:include> 
 	
 	
-	 <div class="searchBoxInit searchInit"> 	
+	
+	
+	
+	<div class="pagePhone">
+	
+	 <div class="searchBoxInit searchInit"> 
+	 <div class="hideBox"></div>	
 	<div class="searchBox searchInit">
 	    <div class="searchItem">
 		     <div class="typeTitle" id="typeTags">
@@ -124,11 +130,12 @@
 		     </div>
 	     </div>
 	</div>
+	    <div class="checkBtn" id="checkBtn">
+	        <div id="cancle">取消</div>
+	        <div id="toSearch">完成</div>
+	     </div>
 </div>
-	
-	
-	<div class="pagePhone">
-	
+	<div class="hideMenu">
     <c:if test="${!empty list}">
 					<!-- not empty -->
 	    <c:forEach items="${list }" var="solr" varStatus="status">
@@ -142,15 +149,12 @@
 	</c:if>
 		    
     <jsp:include flush="true" page="foot.jsp"></jsp:include> 
-		  
+	</div>	  
 	</div>
 	
  	
 	
-	     <div class="checkBtn" id="checkBtn">
-	        <div id="cancle">取消</div>
-	        <div id="toSearch">完成</div>
-	     </div>
+	 
 	
 	
 	<script src="${jqueryJs}"></script>

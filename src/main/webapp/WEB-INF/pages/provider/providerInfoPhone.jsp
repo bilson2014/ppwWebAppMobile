@@ -221,7 +221,7 @@
 	</div>
 	
 	<div class="findMore">
-	           <div>查看更多视频</div>
+	    <div>查看更多视频</div>
 	    <img src="${imgPath}/index/getMore.png">
 	</div>
 	
