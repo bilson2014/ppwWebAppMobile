@@ -87,10 +87,12 @@
 	<input type="hidden" id="masterWorkProductId" value="${product.productId }">
 	
 	<div class="phoneHeader">
-	     <a><img src="${imgPath }/index/toMenu.png"></a>
+	     <a id="openMenu"><img src="${imgPath }/index/toMenu.png"></a>
 	     <a id="toSearch"><img src="${imgPath }/index/toSearch.png"></a>
 	     <div>导演页</div>
 	</div>
+	
+	<jsp:include flush="true" page="../menu.jsp"></jsp:include>
 	
    <div class="pagePhone">
 	<div class="topHeader headAnimation">
