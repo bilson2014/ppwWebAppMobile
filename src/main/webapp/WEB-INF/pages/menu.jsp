@@ -142,7 +142,7 @@
 	           <img class="closeMenu" id="closeMenu" src="${imgPath}/menu/cMenu.png">
 	           <div class="showMore" id="showMore">
 	                                 <div class="hide" id="showSafeSet">安全设置</div>
-	                              <a><div class="loginOut">退出登录</div></a>
+	                                 <a href="/login/loginout"><div class="loginOut">退出登录</div></a>
 	           </div>
 	           <div class="safeSet">
 	                   <div class="safeTitle">安全设置</div>
