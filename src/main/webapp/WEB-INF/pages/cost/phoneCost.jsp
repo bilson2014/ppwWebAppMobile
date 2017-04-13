@@ -164,7 +164,7 @@
 	                          <div class="priceInfo">按照您的需求,拍片大概会花费</div>
 	                          <div class="priceLine"></div>
 	                          <div class="reCost">再次计算</div>
-	                          <div class="returnBack">返回上一级</div>
+	                          <div class="returnBack"  onclick="JavaScript:history.back(-1);">返回上一级</div>
 	                      </div>
 	                </div>
 	            </div>
