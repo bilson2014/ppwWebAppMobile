@@ -4,8 +4,8 @@ var curCount; // 当前剩余秒数
 var PopInterValObj, oTimer, successIntervalObj;
 $().ready(function(){
 	//changeDiv();
-	checkTap();
 	login.init();
+	checkTap();
 });
 
 function SetUsrRemainTime(){
@@ -43,18 +43,6 @@ var login = {
 				}
 				if(checkMobile(telephone)){
 					loadData(function(flag){					
-//						if(flag.errorCode == 200){
-//							//  未注册
-//							successToolTipShow('该手机号未注册');
-//						}else if(flag.errorCode == 500){
-//							if(flag.result == false){
-//								// 已经注册
-//							}else{
-//								// 服务器错误
-//								successToolTipShow(flag.errorMsg);
-//							}
-//						}
-						
 						if(flag.errorCode == 200){
 							// 已经注册
 						}else if (flag.errorCode == 300){
@@ -230,3 +218,22 @@ function SetRemainTime(){
 		$("#verification_code_recover_btn").text('已发送('+ curCount +')');
 	}
 }
+
+//控制标签
+
+function checkTap(){
+	$('#phoneLogin').off('click').on('click',function(){
+		$('#loginTop').removeClass('loginTopActive');
+		$('#phoneLoginDiv').show();
+		$('#useLoginDiv').hide();
+	});
+	
+	$('#noPhoneLogin').off('click').on('click',function(){
+		$('#loginTop').addClass('loginTopActive');
+		$('#phoneLoginDiv').hide();
+		$('#useLoginDiv').show();
+	});
+	
+	
+}
+

@@ -46,7 +46,7 @@ var register = {
 			this.userRegister();
 	    },
 	    userPhoneChange:function(){
-			$('#user_phoneNumber').off("blur").on('blur',function(){
+			$('#user_phoneNumber').off("change").on('change',function(){
 				var telephone = $('#user_phoneNumber').val().trim();
 				if(telephone == '' || telephone == null || telephone == undefined){
 					successToolTipShow('请填写手机号');
@@ -57,18 +57,11 @@ var register = {
 					loadData(function(flag){
 						if(flag.errorCode == 200){
 							//  未注册
-							
-						}else if(flag.errorCode == 500){
-							if(flag.result == false){
-								// 已经注册
-								successToolTipShow('该手机号已经注册');
-							}else{
-								// 服务器错误
-								successToolTipShow(flag.errorMsg);
-							}
+						}else{
+							successToolTipShow('该手机号已经被注册！');
 						}
-					}, getContextPath() + '/login/validation/phone', $.toJSON({
-						telephone : telephone
+					}, getContextPath() + '/provider/checkPhoneExisting', $.toJSON({
+						phoneNumber : telephone
 					}));
 				}else{
 					successToolTipShow('手机号不正确');
@@ -144,52 +137,59 @@ var register = {
 		userRegister:function(){
 			var add = true;
 			$("#submitBtn-user").off("click").on("click",function(){
-				if(add){
-					add = false;//禁用点击事件， 防止网络拥堵或点击过快造成多次注册
-					var phoneNumber = $('#user_phoneNumber').val();				
-					var veri_code = $('#verification_code_user').val();
-					var kap_code = $('#kaptcha_code_user').val();
-					$("#code_error_info_user").addClass("hide");
-					$("#kapt_error_info_user").addClass("hide");
-					if(phoneNumber == null || phoneNumber == '' || phoneNumber == undefined){
-						successToolTipShow("请输入手机号");
-						$('#user_phoneNumber').focus();
-						add = true;
-						return false;
-					}
-					if(!checkMobile(phoneNumber.trim())){
-						successToolTipShow('手机号不正确');
-						$('#user_phoneNumber').focus();
-						add = true;
-						return false;
-					}
-					if(kap_code == null || kap_code == '' || kap_code == undefined){
-						successToolTipShow("请输入图形验证码");
-						$('#kaptcha_code_user').focus();
-						add = true;
-						return false;
-					}
-					if(veri_code == null || veri_code == '' || veri_code == undefined){
-						successToolTipShow("请输入验证码");
-						$('#verification_code_user').focus();
-						add = true;
-						return false;
-					}
-					loadData(function(info){
-						
-						if(info.key){
-							window.location.href=getContextPath()+'/provider/providerInfoLeader';
-						}else{
-							add = true;
-							successToolTipShow(info.value);
-							return false;
+				var phoneNumber = $('#user_phoneNumber').val();			
+				loadData(function(flag){
+					if(flag.errorCode == 200){
+						if(add){
+							add = false;//禁用点击事件， 防止网络拥堵或点击过快造成多次注册
+							var veri_code = $('#verification_code_user').val();
+							var kap_code = $('#kaptcha_code_user').val();
+							$("#code_error_info_user").addClass("hide");
+							$("#kapt_error_info_user").addClass("hide");
+							if(phoneNumber == null || phoneNumber == '' || phoneNumber == undefined){
+								successToolTipShow("请输入手机号");
+								$('#user_phoneNumber').focus();
+								add = true;
+								return false;
+							}
+							if(!checkMobile(phoneNumber.trim())){
+								successToolTipShow('手机号不正确');
+								$('#user_phoneNumber').focus();
+								add = true;
+								return false;
+							}
+							if(kap_code == null || kap_code == '' || kap_code == undefined){
+								successToolTipShow("请输入图形验证码");
+								$('#kaptcha_code_user').focus();
+								add = true;
+								return false;
+							}
+							if(veri_code == null || veri_code == '' || veri_code == undefined){
+								successToolTipShow("请输入验证码");
+								$('#verification_code_user').focus();
+								add = true;
+								return false;
+							}
+							loadData(function(info){
+								if(info.key){
+									window.location.href=getContextPath()+'/provider/providerInfoLeader';
+								}else{
+									add = true;
+									successToolTipShow(info.value);
+									return false;
+								}
+							},  getContextPath() + '/provider/info/register', $.toJSON({
+								phoneNumber : phoneNumber,
+								password : Encrypt("123456"),
+								verification_code : veri_code,
+							}));
 						}
-					},  getContextPath() + '/provider/info/register', $.toJSON({
-						phoneNumber : phoneNumber,
-						password : Encrypt("123456"),
-						verification_code : veri_code,
-					}));
-				}
+					}else{
+						successToolTipShow('该手机号已经被注册！');
+					}
+				}, getContextPath() + '/provider/checkPhoneExisting', $.toJSON({
+					phoneNumber : phoneNumber
+				}));
 			})
 		},
 }

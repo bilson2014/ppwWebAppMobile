@@ -42,7 +42,6 @@
 <div class="model menu" id="menu">
 	           <img class="menuBack" src="${imgPath}/menu/menuBack.jpg">
 	           <div class="menuTop">
-	                 
 	                   <r:noLogin>
 	                       <a href="/loginSele"><img class="userLogo" src="${imgPath}/menu/defultLogin.png"></a>
 	                   </r:noLogin>
@@ -56,10 +55,10 @@
 	                  </r:identity>
 	                  <a href="/userInfo" class="hide" ><img class="edit"  src="${imgPath}/menu/editMenu.png"></a>
 	                  <r:identity role="provider">
-	                     <div>${provider.phoneNumber}</div>
+	                     <div>${sessionScope.sessionInfo.telephone}</div>
 	                  </r:identity>
 	                  <r:identity role="customer">
-	                     <div>${user.phoneNumber}</div>
+	                     <div>${sessionScope.sessionInfo.telephone}</div>
 	                  </r:identity>
 	                  <r:noLogin>
 	                      <div>未登录</div>

@@ -197,22 +197,31 @@ public class LoginController extends BaseController {
 						session.removeAttribute("code"); // 移除验证码
 
 						PmsUser pmsUser = pmsUserFacade.register(user);
-						smsMQService.sendMessage("132269", user.getTelephone(), null);
-						Gson gson = new Gson();
-						String json = gson.toJson(pmsUser);
-						final boolean ret = initSessionInfo(gson.fromJson(json, PmsUser.class), request);
-						info.setKey(ret);
-						if (!ret) {
-							// 注册失败
-							info.setValue("服务器繁忙，请稍候再试...");
+						if(pmsUser != null){
+							if(pmsUser.getUserId() > 0 ){
+								smsMQService.sendMessage("132269", user.getTelephone(), null);
+								Gson gson = new Gson();
+								String json = gson.toJson(pmsUser);
+								final boolean ret = initSessionInfo(gson.fromJson(json, PmsUser.class), request);
+								info.setKey(ret);
+								if (!ret) {
+									// 注册失败
+									info.setValue("服务器繁忙，请稍候再试...");
+								}
+								return info;
+							}else if(pmsUser.getUserId() < 0 ){
+								info.setKey(false);
+								info.setValue("手机已经备注册！");
+							}
+						}else{
+							info.setKey(false);
+							info.setValue("注册失败！");
 						}
 						return info;
-
 					} else {
 						// 验证码不匹配
 						info.setKey(false);
 						info.setValue("密码为空!");
-
 						serLogger.info(
 								"Register PmsUser " + user.getUserName() + " failure ,Becase password is empty ...");
 						return info;
