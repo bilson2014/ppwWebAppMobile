@@ -79,24 +79,8 @@
 	
 	 <jsp:include flush="true" page="menu.jsp"></jsp:include> 
 	
-	<div class="pagePhone">
 	
-    <c:if test="${!empty list}">
-					<!-- not empty -->
-	    <c:forEach items="${list }" var="solr" varStatus="status">
-	     	<a href="<spring:url value='/play/${solr.teamId}_${solr.productId }.html'/>">
-			   <div class="contentItem" style="background:url(${file_locate_storage_path }${solr.picLDUrl }) no-repeat">
-			                     <div class="itemTitle">${solr.productName} / ${solr.productName}</div>
-			                     <div class="itemTag">${solr.tags}</div>
-			   </div>
-		    </a>
-	    </c:forEach>
-	</c:if>
-		    
-    <jsp:include flush="true" page="foot.jsp"></jsp:include> 
-		  
-	</div>
-	
+	 <div class="searchBoxInit"> 	
 	<div class="searchBox searchInit">
 	    <div class="searchItem">
 		     <div class="typeTitle" id="typeTags">
@@ -143,6 +127,28 @@
 		     </div>
 	     </div>
 	</div>
+</div>
+	
+	
+	<div class="pagePhone">
+	
+    <c:if test="${!empty list}">
+					<!-- not empty -->
+	    <c:forEach items="${list }" var="solr" varStatus="status">
+	     	<a href="<spring:url value='/play/${solr.teamId}_${solr.productId }.html'/>">
+			   <div class="contentItem" style="background:url(${file_locate_storage_path }${solr.picLDUrl }) no-repeat">
+			                     <div class="itemTitle">${solr.productName} / ${solr.productName}</div>
+			                     <div class="itemTag">${solr.tags}</div>
+			   </div>
+		    </a>
+	    </c:forEach>
+	</c:if>
+		    
+    <jsp:include flush="true" page="foot.jsp"></jsp:include> 
+		  
+	</div>
+	
+ 	
 	
 	     <div class="checkBtn" id="checkBtn">
 	        <div id="cancle">取消</div>

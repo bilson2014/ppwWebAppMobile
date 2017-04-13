@@ -52,8 +52,19 @@ $().ready(function(){
 	});
 	
 	menuInit();
+	getImgUrl();
 	
 });
+
+
+function getImgUrl(){
+	var p = $('#getImgUrl').attr('data-value');
+	if(p!=null && p!=''){
+		if(p.indexOf("/resources/") == -1){
+			$('#getImgUrl').attr('src',getDfsHostName() + p);
+		}
+	}
+}
 
 function debug(obj) {
 
