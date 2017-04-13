@@ -955,6 +955,7 @@ public class ProviderController extends BaseController {
 		info.setSessionType(PmsConstant.ROLE_PROVIDER);
 		info.setToken(DataUtil.md5(sessionId));
 		info.setReqiureId(team.getTeamId());
+		info.setTelephone(team.getPhoneNumber());
 		info.setPhoto(team.getTeamPhotoUrl());
 		if (team.getFlag() == 1)
 			info.setIsIdentification(true);
