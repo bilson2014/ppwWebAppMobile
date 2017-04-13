@@ -1,51 +1,10 @@
+var typeArray = new Array(' 宣传片','个人宣传片','活动宣传片','产品宣传片','企业宣传片','城市宣传片','品牌宣传片','场景宣传片','招商宣传片','形象宣传片','TVC',' 广告','创意广告','产品广告','品牌广告','活动广告','微电影','路演视频','病毒视频','公益片','社交媒体视频','花絮');
+var busArray = new Array('智能硬件','互联网','电子产品','电商','通讯','服装纺织','金融','医疗保健','游戏','交通运输','汽车','文化','日用美妆','家居建材','政府机构','企业服务','餐饮美食','母婴','美容','美发','食品饮料','电器','影视','房地产');
 $().ready(function(){
+	search.showTagsItem();
 	search.initData();
-//	initData();
-//	$('nav#menu').mmenu({
-//		"offCanvas" : {
-//			"position": "left"
-//		},
-//		navbar : {
-//			title : '视频分类'
-//		}
-//	});
-//	
-//	if($('#sequence').val() != null && $('#sequence').val() != '' && $('#sequence').val() != undefined){
-//		var iName = 'unchange.png';
-//		if($('#sortord').val() == 0){ // 升序
-//			iName = 'asc-icon.png';
-//		}else{ // 降序
-//			iName = 'desc-icon.png';
-//		}
-//		$('#' + $('#sequence').val() + '-img').attr('src',getContextPath() + '/resources/images/icons/' + iName);
-//		$('#' + $('#sequence').val() + '-lb').css('color',"#fe5453");
-//	}
-//	
-//	$('.condition-section').children('label').on('click',function(){
-//		var q = $('#q').val().trim();
-//		var sequence = $(this).data('sequence');
-//		
-//		if(q != null && q != '' && q != undefined){
-//			// 查询条件不为空,则执行相应的操作
-//			var sortord = $(this).data('sortord');
-//			if(sortord == 0){
-//				$(this).data('sortord',1);
-//				sortord = 1;
-//			}else {
-//				$(this).data('sortord',0);
-//				sortord = 0;
-//			}
-//			
-//			if(sequence != null && sequence != '' && sequence != undefined) {
-//				$('#search-sortord').val(sortord);
-//				$('#search-sequence').val(sequence);
-//				
-//				$('#s-form').submit(); // 提交
-//			}
-//			return false;
-//		}
-//	});
-//	lazyLoad();
+	toSearch();
+
 });
 
 
@@ -131,7 +90,93 @@ var search = {
          		$('.searchBox').addClass('searchInit');
 				$('#checkBtn').hide();
          	});
-        }
+        },
+        showTagsItem:function(){
+     //类型   	
+       for (var int = 0; int < 6; int++) {
+          	var tags = createTags(typeArray[int]);
+          	$('#typeTagsItem').append(tags);
+        } 	
+        	
+       for (var int = 6; int < typeArray.length; int++) {
+		 var tags = createTags(typeArray[int]);
+		 $('#typeTagsShow').append(tags);
+	    }
+     //end  
+       
+       //行业	
+       for (var int = 0; int < 6; int++) {
+          	var tags = createTags(busArray[int]);
+          	$('#workTagsItem').append(tags);
+        } 	
+        	
+       for (var int = 6; int < busArray.length; int++) {
+		 var tags = createTags(busArray[int]);
+		 $('#workTagsShow').append(tags);
+	    }
+     //end  
+        	
+      },
+        
+}
+
+function createTags(name){
+	var $body1 = '<div class="tags">'+name+'</div>';
+	return $body1;		
+}
+
+function toSearch(){
+	$('#toSearch').off('click').on('click',function(){
+		
+		var typeShow = $('#typeTagsItem').find('.checkActive');
+		var typeNoShow = $('#typeTagsShow').find('.checkActive');
+		var ubsShow = $('#workTagsItem').find('.checkActive');
+		var ubsNoShow = $('#workTagsShow').find('.checkActive');
+		var lowPrice = $('#lowPrice').val();
+		var heightPrice = $('#heightPrice').val();
+		var type = '&industry=';
+		var ubs = '&genre=';
+		var price = '&price=';
+		var searchQ = '/search?q=*';
+	    for (var int = 0; int < typeShow.length; int++) {
+	    	type = type+$(typeShow[int]).text()+ ' ';
+			
+		}
+	    for (var int = 0; int < typeNoShow.length; int++) {
+			type = type+$(typeNoShow[int]).text()+ ' ';
+		}
+	    for (var int = 0; int < ubsShow.length; int++) {
+	    	ubs = ubs + $(ubsShow[int]).text()+ ' ';
+		}
+	    for (var int = 0; int < ubsNoShow.length; int++) {
+	    	ubs = ubs + $(ubsNoShow[int]).text() + ' ';
+		}
+	    
+	    if(lowPrice!="" && heightPrice!=""){
+	        if(lowPrice <= heightPrice){
+		    	price = price +"["+lowPrice+" TO "+heightPrice+"]";
+		    }else{
+		    	price = price +"["+heightPrice+" TO "+lowPrice+"]";
+		    }
+	    }
+	    
+	
+	    
+	    if(type !='&industry='){
+	    	
+	    	searchQ = searchQ+type;
+	    }
+	    if(ubs !='&genre='){
+	    
+	    	searchQ = searchQ+ubs;
+	    }
+	    if(price !='&price='){
+	    
+	    	searchQ = searchQ+price;
+	    }
+	    window.location.href=getContextPath()+searchQ;
+	   	    
+	});
 }
 
 

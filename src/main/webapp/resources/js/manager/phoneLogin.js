@@ -3,8 +3,6 @@ $().ready(function(){
 	doLogin();
 	
 });
-
-
 function doLogin(){
 
 	$('#submitBtn').on('click',function(){
