@@ -17,9 +17,11 @@ var search = {
 			 $('.searchType').off('click').on('click',function(){
 				  if($('.searchBox').hasClass('searchInit')){
 					  $('.searchBox').removeClass('searchInit');
+					  $('.searchBoxInit').removeClass('searchInit');
 					  $('#checkBtn').show();
 				  }else{
 					  $('.searchBox').addClass('searchInit');
+					  $('.searchBoxInit').addClass('searchInit');
 					  $('#checkBtn').hide();
 				  }
 			 });
@@ -54,40 +56,41 @@ var search = {
         			$(this).addClass('checkActive');
         		}
         	});
-        	//价格区域处理
-        	var base_tagsPrice = $(".tagsPrice");
-        	var tagsPrice = $(".tagsPrice").length;
-        	base_tagsPrice.on('click', function() {
-        		    $(".tagsPrice").removeClass('checkActive');
-        			$(this).addClass('checkActive');
-        			$('#lowPrice').val($(this).attr('data-low'));
-        			$('#heightPrice').val($(this).attr('data-content'));
-        	});
-        	
-        	$('#heightPrice').blur('click',function(){
-        		var lowPrice = $('#lowPrice').val();
-        		var heightPrice = $('#heightPrice').val();
-                if(lowPrice !=null && lowPrice !="" && lowPrice != undefined){
-                	if(heightPrice < lowPrice){
-                		$('#heightPrice').val(lowPrice);
-                		$('#lowPrice').val(heightPrice);
-                	}
-                }    		
-        	});
-        	
-         	$('#lowPrice').blur('click',function(){
-        		var lowPrice = $('#lowPrice').val();
-        		var heightPrice = $('#heightPrice').val();
-                if(heightPrice !=null && heightPrice !="" && heightPrice != undefined){
-                	if(heightPrice < lowPrice){
-                		$('#heightPrice').val(lowPrice);
-                		$('#lowPrice').val(heightPrice);
-                	}
-                }    		
-        	});
+//        	//价格区域处理
+//        	var base_tagsPrice = $(".tagsPrice");
+//        	var tagsPrice = $(".tagsPrice").length;
+//        	base_tagsPrice.on('click', function() {
+//        		    $(".tagsPrice").removeClass('checkActive');
+//        			$(this).addClass('checkActive');
+//        			$('#lowPrice').val($(this).attr('data-low'));
+//        			$('#heightPrice').val($(this).attr('data-content'));
+//        	});
+//        	
+//        	$('#heightPrice').blur('click',function(){
+//        		var lowPrice = $('#lowPrice').val();
+//        		var heightPrice = $('#heightPrice').val();
+//                if(lowPrice !=null && lowPrice !="" && lowPrice != undefined){
+//                	if(heightPrice < lowPrice){
+//                		$('#heightPrice').val(lowPrice);
+//                		$('#lowPrice').val(heightPrice);
+//                	}
+//                }    		
+//        	});
+//        	
+//         	$('#lowPrice').blur('click',function(){
+//        		var lowPrice = $('#lowPrice').val();
+//        		var heightPrice = $('#heightPrice').val();
+//                if(heightPrice !=null && heightPrice !="" && heightPrice != undefined){
+//                	if(heightPrice < lowPrice){
+//                		$('#heightPrice').val(lowPrice);
+//                		$('#lowPrice').val(heightPrice);
+//                	}
+//                }    		
+//        	});
          	
          	$('#cancle').on('click',function(){
          		$('.searchBox').addClass('searchInit');
+         		 $('.searchBoxInit').addClass('searchInit');
 				$('#checkBtn').hide();
          	});
         },
@@ -153,11 +156,14 @@ function toSearch(){
 		}
 	    
 	    if(lowPrice!="" && heightPrice!=""){
-	        if(lowPrice <= heightPrice){
 		    	price = price +"["+lowPrice+" TO "+heightPrice+"]";
-		    }else{
-		    	price = price +"["+heightPrice+" TO "+lowPrice+"]";
-		    }
+	    }
+	    
+	    if(lowPrice==""){
+	    	price = price +"[*" + " TO "+heightPrice+"]";
+	    }
+	    if(heightPrice==""){
+	    	price = price +"["+lowPrice+" TO "+"*]";
 	    }
 	    
 	

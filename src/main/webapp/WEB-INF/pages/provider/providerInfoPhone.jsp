@@ -220,7 +220,10 @@
         
 	</div>
 	
-	<div class="findMore">查看更多视频</div>
+	<div class="findMore">
+	           <div>查看更多视频</div>
+	    <img src="${imgPath}/index/getMore.png">
+	</div>
 	
 	
 <!-- 	<div class="timeLine" id="timeLine" >

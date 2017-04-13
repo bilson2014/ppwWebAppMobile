@@ -18,6 +18,10 @@ body {
     -webkit-overflow-scrolling: touch;
 }
 
+input {
+    outline: none;
+}
+
 .headerNew {
     position: fixed;
     top: 0px;
@@ -763,11 +767,16 @@ a:active {
     width: 4rem;
     height: 0.6rem;
     margin: 0 auto;
-    background: $red-base;
     font-size: 0.32rem;
     color: white;
     text-align: center;
-    line-height: 0.6rem;
-    border-radius: 60px;
     margin-top: 0.7rem;
+    margin-bottom: 0.2rem;
+    color: $red-base;
+    div {
+        display: block;
+    }
+    img {
+        width: 0.6rem;
+    }
 }

@@ -104,7 +104,7 @@
 			</div>
 			<div class="submitOrder"
 				style="height: 40px; width: 70px; font-size: 12px" id="submitOrder">确认提交</div>
-				<img class="closeOrder" src="${imgPath }/index/close.png">
+				<img class="closeOrder" id="closeOrder" src="${imgPath }/index/close.png">
 		</div>
 	</div>
 
