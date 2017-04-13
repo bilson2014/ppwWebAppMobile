@@ -51,14 +51,14 @@
 		value="${file_locate_storage_path }" />
 
 	<div class="phoneHeader">
-		<a><img src="${imgPath }/index/toMenu.png"></a> <a><img
+		<a id="openMenu"><img src="${imgPath }/index/toMenu.png"></a> <a><img
 			src="${imgPath }/index/toSearch.png"></a>
 		<div>新闻页</div>
 	</div>
 	<jsp:include flush="true" page="../menu.jsp"></jsp:include>
 
 	<div class="pagePhone">
-		<img class="bannerImg" id="banner" src="${imgPath }/index/back3.png">
+		<img class="bannerImg" id="banner" src="${file_locate_storage_path}${news.picLDUrl}">
 		<div class="infoContents">
 			<div class="title">${news.title}</div>
 			<div class="tags">

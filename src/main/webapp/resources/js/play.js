@@ -15,9 +15,21 @@ $().ready(function() {
     $('.orderVideo').off('click').on('click',function(){
     	 $('#orderTo').show();
     });
+<<<<<<< HEAD
+    
+    $('#checkSuccess').off('click').on('click',function(){
+    	$('#orderSuccess').hide();
+    });
+    
+    $('#"closeOrder"').off('click').on('click',function(){
+    	$('#orderTo').hide();
+    });
+    
+=======
     $('#checkSuccess').off('click').on('click',function(){
     	 $('#orderSuccess').hide();
     });
+>>>>>>> b85c05000c87e70cd6ba9a677b2dcc9d3fc5f345
 }), play = {
     initData: function() {
         //var b, c, d, e, f, g, h, i, j, k, l, m, a = $("#videoPoster").val();
