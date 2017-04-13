@@ -34,7 +34,7 @@ var login = {
 		},
 	 	userPhoneChange:function(){
 	 		
-			$('#user_phoneNumber').off("blur").on('blur',function(){
+			$('#user_phoneNumber').off("change").on('blur',function(){
 				var telephone = $('#user_phoneNumber').val().trim();
 				if(telephone == '' || telephone == null || telephone == undefined){
 					successToolTipShow('请填写手机号');
@@ -43,17 +43,28 @@ var login = {
 				}
 				if(checkMobile(telephone)){
 					loadData(function(flag){					
+//						if(flag.errorCode == 200){
+//							//  未注册
+//							successToolTipShow('该手机号未注册');
+//						}else if(flag.errorCode == 500){
+//							if(flag.result == false){
+//								// 已经注册
+//							}else{
+//								// 服务器错误
+//								successToolTipShow(flag.errorMsg);
+//							}
+//						}
+						
 						if(flag.errorCode == 200){
-							//  未注册
+							// 已经注册
+						}else if (flag.errorCode == 300){
+						//  未注册
 							successToolTipShow('该手机号未注册');
-						}else if(flag.errorCode == 500){
-							if(flag.result == false){
-								// 已经注册
-							}else{
-								// 服务器错误
-								successToolTipShow(flag.errorMsg);
-							}
+						}else if (flag.errorCode == 500){
+							// 服务器错误
+							successToolTipShow(flag.errorMsg);
 						}
+						
 					}, getContextPath() + '/login/validation/phone', $.toJSON({
 						telephone : telephone
 					}));
