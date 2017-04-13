@@ -50,7 +50,7 @@
 	<div class="phoneHeader">
 	     <a id="openMenu"><img src="${imgPath }/index/toMenu.png"></a>
 	     <a><img src="${imgPath }/index/toSearch.png"></a>
-	     <div>新闻页</div>
+	     <div>新闻咨询|拍片网</div>
 	</div>
 	
 	<jsp:include flush="true" page="../menu.jsp"></jsp:include> 
@@ -107,32 +107,7 @@
 		                </div>
 	             </div> --%>
 	       </div>
-	       
-	       <div class="footPhone">
-		         <div class="leftContent">
-		              <img class="logoFoot" src="${imgPath}/index/logoH.png">
-		              <div class="footItem">
-		                 <div class="service">服务热线  : </div>
-		                 <div>400-660-9728</div>
-		              </div>
-		               <div class="footItem">
-		                 <div class="cMail">公司邮箱  : </div>
-		                 <div>bdmarket@paipianwang.cn</div>
-		              </div>
-		               <div class="footItem">
-		                 <div class="cAddress">公司地址  : </div>
-		                 <div>北京市朝阳区国贸建外SOHO东区6号楼25层</div>
-		              </div>
-		         </div>
-		         <div class="rightContent">
-		              <img src="${imgPath}/index/footCode.png">
-		              <div>拍片网官微</div>
-		         </div>
-		         <div class="footBottom">
-		              © 2016 北京拍片乐科技有限公司 京ICP备16066831号-1  
-		              <br>百度统计 站长统计
-		         </div>
-		     </div>
+	       <jsp:include flush="true" page="../foot.jsp"></jsp:include> 
 	       
        </div>
 

@@ -147,26 +147,31 @@ function controlActive(){
 	$('.tags1').off('click').on('click',function(){
 		$('.tags1').removeClass('type');
 		$(this).addClass('type');
+		swiper.slideNext();
 	});
 	
 	$('.tags2').off('click').on('click',function(){
 		$('.tags2').removeClass('team');
 		$(this).addClass('team');
+		swiper.slideNext();
 	});
 	
 	$('.tags3').off('click').on('click',function(){
 		$('.tags3').removeClass('equipment');
 		$(this).addClass('equipment');
+		swiper.slideNext();
 	});
 	
 	$('.tags4').off('click').on('click',function(){
 		$('.tags4').removeClass('actor');
 		$(this).addClass('actor');
+		swiper.slideNext();
 	});
 	
 	$('.tags5').off('click').on('click',function(){
 		$('.tags5').removeClass('animation');
 		$(this).addClass('animation');
+		swiper.slideNext();
 	});
 	
 	$('.closeInfo').off('click').on('click',function(){

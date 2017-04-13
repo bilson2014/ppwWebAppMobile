@@ -71,8 +71,7 @@
 	         <div class="choosePage">
 	              <div class="loginItem">
 	                    <div>我是客户</div>
-	                    <div>让所有企业都能够享受</div>
-	                    <div>高品质的视频服务</div>
+	                    <div>让所有企业都能够享受  高品质的视频服务</div>
 	                    <a href="/login"><img src="${imgPath}/login/cus.png"></a>
 	              </div>
 	              <div class="loginItem">

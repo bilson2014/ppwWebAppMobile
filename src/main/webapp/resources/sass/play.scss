@@ -18,14 +18,7 @@ body {
     video {
         width: 100%;
     }
-    // img {
-    //     width: 1.5rem;
-    //     position: absolute;
-    //     top: 50%;
-    //     margin-top: -0.75rem;
-    //     left: 50%;
-    //     margin-left: -0.75rem;
-    // }
+
 }
 
 .videoTitle {
@@ -168,6 +161,8 @@ body {
         background-size: 100% 100% !important;
         position: relative;
         margin-right: 0.1rem;
+        -webkit-filter: grayscale(70%);
+        filter: grayscale(70%);
         .itemTitle {
             color: white;
             font-size: 0.4rem;
@@ -272,20 +267,20 @@ body {
         height: 9rem;
         background: white;
         text-align: left;
-        border-radius: 18px;
+        border-radius: 8px;
         .orderItem {
             width: 7rem;
             margin: 0 auto;
             position: relative;
             .getCode {
-                width: 2rem !important;
+                width: 2.5rem !important;
                 height: 0.9rem !important;
                 border-left: 1px solid #d1d1d1;
                 position: absolute;
                 top: 0.6rem;
                 text-align: center;
                 line-height: 0.9rem;
-                right: 0.4rem;
+                right: 0.1rem;
             }
             .error {
                 font-size: 0.26rem;
@@ -313,7 +308,8 @@ body {
             font-size: 0.3rem;
             color: $gray-dark;
             margin: 0 auto;
-            margin-top: 1rem;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
         }
     }
 }
@@ -332,12 +328,9 @@ body {
     position: relative;
 }
 
-.closeOrder{
-
-  width: 1.5rem;
-  position: absolute;
-  left:50%;
-  margin-left: -0.75rem;
-  bottom: -1.8rem;
-
+.closeOrder {
+    width: 0.8rem;
+    position: absolute;
+    top: -0.3rem !important;
+    right: -0.3rem !important;
 }

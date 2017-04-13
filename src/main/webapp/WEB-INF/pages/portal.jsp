@@ -41,7 +41,7 @@
 <meta content="telephone=no" name="format-detection">
 <meta name="keywords" content="宣传片制作,企业宣传片,拍片网,广告片制作,微电影制作,企业微电影">
 <meta name="description" content="拍片网是一个视频内容制作服务平台，主营宣传片制作和微电影制作，三大优势：免费创意策划、72小时出片、不满意全额退款或重拍。拍片就上拍片网">
-<title>宣传片制作_拍片网-企业视频内容制作平台</title>
+<title>拍片网  专业商业视频服务</title>
 
 <link rel="shortcut icon" href="${imgPath }/favicon.ico">
 <link rel="stylesheet" href="${mmenuCss }">
@@ -80,123 +80,8 @@
 		    </div> 
 	    </div>
 	    
-	    
 	    <jsp:include flush="true" page="menu.jsp"></jsp:include> 
 	    
-	    <%-- <div class="model menu" id="menu">
-	           <img class="menuBack" src="${imgPath}/menu/menuBack.jpg">
-	           <div class="menuTop">
-	                  <a href="/loginSele"><img class="userLogo" src="${imgPath}/menu/defultLogin.png"></a>
-	                  <img class="close" id="editInfo" src="${imgPath}/menu/edit.png">
-	                  <a href="/userInfo" ><img class="edit"  src="${imgPath}/menu/editMenu.png"></a>
-	                  <div>昵称</div>
-	           </div>
-	           <div class="menuContent">
-	                 <a href="/">
-		                  <div class="menuItem">
-		                       <img src="${imgPath}/menu/menu.png">
-		                       <div>首页</div>
-		                  </div>
-	                 </a>
-	                 <r:identity role="provider">
-		                 <a href="/provider/index">
-			                  <div class="menuItem">
-			                       <img src="${imgPath}/menu/myPro.png">
-			                       <div>我的项目</div>
-			                  </div>
-		                 </a>
-		             </r:identity>
-		             <r:identity role="customer">
-		                 <a href="">
-			                  <div class="menuItem">
-			                       <img src="${imgPath}/menu/myPro.png">
-			                       <div>我的项目</div>
-			                  </div>
-		                 </a>
-		             </r:identity> 
-		             <r:identity role="employee">
-		                 <a href="/mgr/index">
-			                  <div class="menuItem">
-			                       <img src="${imgPath}/menu/myPro.png">
-			                       <div>我的项目</div>
-			                  </div>
-		                 </a>
-		             </r:identity>     
-	                 <a href="/search?q=&sortord=0&item=*">
-		                  <div class="menuItem">
-		                       <img src="${imgPath}/menu/editMenu.png">
-		                       <div>精品案例</div>
-		                  </div>
-	                 </a>
-	                 <a href="/phoneCost">
-		                  <div class="menuItem">
-		                       <img src="${imgPath}/menu/cost.png">
-		                       <div>成本估算</div>
-		                  </div>
-	                 </a>
-	                 <a href="/order-flow.html">
-		                  <div class="menuItem">
-		                       <img src="${imgPath}/menu/order.png">
-		                       <div>服务流程</div>
-		                  </div>
-	                 </a>
-	                    <a href="/about">
-		                  <div class="menuItem">
-		                       <img src="${imgPath}/menu/about.png">
-		                       <div>关于我们</div>
-		                  </div>
-	                    </a>
-	                 <a href="/newsInfo">
-		                  <div class="menuItem">
-		                       <img src="${imgPath}/menu/newsInfo.png">
-		                       <div>新闻资讯</div>
-		                  </div>
-	                 </a>
-	                    <a href="/member.html">
-		                  <div class="menuItem">
-		                       <img src="${imgPath}/menu/member.png">
-		                       <div>团队介绍</div>
-		                  </div>
-	                 </a>
-	                    <a>
-		                  <div class="menuItem">
-		                       <img src="${imgPath}/menu/help.png">
-		                       <div>帮助</div>
-		                  </div>
-	                    </a> 
-	           </div>
-	           <img class="closeMenu" id="closeMenu" src="${imgPath}/menu/cMenu.png">
-	           <div class="showMore" id="showMore">
-	                                 <div id="showSafeSet">安全设置</div>
-	                              <a><div class="loginOut">退出登录</div></a>
-	           </div>
-	           <div class="safeSet">
-	                   <div class="safeTitle">安全设置</div>
-			           <div class="safeItem">    
-					       <div class="title">请输入原密码</div>
-			               <input id="repwd">
-			               <img class="orTrue" src="${imgPath}/menu/psTrue.png">
-			               <img class="orError" src="${imgPath}/menu/psError.png">
-			               <div class="error"></div>
-		           	   </div>
-		           	   <div class="safeItem">    
-					       <div class="title">请输入密码</div>
-			               <input id="newpwd">
-			               <img class="orTrue" src="${imgPath}/menu/psTrue.png">
-			               <img class="orError" src="${imgPath}/menu/psError.png">
-			               <div class="error"></div>
-		           	   </div>
-		           	   <div class="safeItem">    
-					       <div class="title">再次输入密码</div>
-			               <input id="cpwd">
-			               <img class="orTrue" src="${imgPath}/menu/psTrue.png">
-			               <img class="orError" src="${imgPath}/menu/psError.png">
-			               <div class="error"></div>
-		           	   </div>
-		           	   <div class="cancleBtn">取消</div>
-		           	   <img class="safeClose" id="safeClose" src="${imgPath}/menu/cMenu.png">
-	           </div>
-	    </div>   --%>
 	    
 	 <div class="headerCom">
 		<a>
@@ -353,22 +238,22 @@
 	         <li>
 	             <img src="${imgPath}/index/help.png">
 	             <div class="wordItem">
-	                    <div>1</div>
+	                    <div>3</div>
 	                    <div>平台托管制作费</div>
 	             </div>
 	             <div class="wordItem">
-	                    <div>2</div>
+	                    <div>4</div>
 	                    <div>甄选最佳导演&nbsp&nbsp&nbsp&nbsp</div>
 	             </div>
 	         </li>
 	         <li>
 	             <img src="${imgPath}/index/replay.png">
 	             <div class="wordItem">
-	                    <div>1</div>
+	                    <div>5</div>
 	                    <div>拍摄制作全程监管</div>
 	             </div>
 	             <div class="wordItem">
-	                    <div>2</div>
+	                    <div>6</div>
 	                    <div>不满意免单或重拍</div>
 	             </div>
 	         </li>
@@ -423,6 +308,7 @@
 		          <img src="${imgPath}/index/logo11.png">
 		          <img src="${imgPath}/index/logo12.png">
 		          <img src="${imgPath}/index/logo13.png">
+		          <img src="${imgPath}/index/logo14.png">
 		     </div>
 		     
 		     <jsp:include flush="true" page="foot.jsp"></jsp:include> 

@@ -30,9 +30,6 @@
 <spring:url value="/resources/js/company/member.js" var="memberJs" />
 <spring:url value="/resources/js/remSet.js" var="remSetJs" />
 
-
-
-
 <!-- imgPath -->
 <spring:url value="/resources/images" var="imgPath" />
 <!DOCTYPE html>
@@ -49,7 +46,7 @@
 	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
 <meta name="keywords" content="">
 <meta name="description" content="">
-<title>拍片网团队</title>
+<title>团队接收|拍片网</title>
 <link rel="shortcut icon" href="${imgPath}/favicon.ico">
 <link rel="stylesheet" href="${bootstrapCss}">
 <link rel="stylesheet" href="${commonCss}">
@@ -126,7 +123,7 @@ html {
 
 					<div class="memberContent">
 						<div class="memberContentInfo">
-							<div class="text">${staff.staffDescription}</div>
+<%-- 							<div class="text">${staff.staffDescription}</div> --%>
 							<div class="share" data-id="${staff.staffId}"
 								data-flag="${staff.staffName}"
 								data-img="${file_locate_storage_path}${staff.staffImageUrl }">

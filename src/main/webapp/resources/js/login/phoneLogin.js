@@ -154,7 +154,7 @@ var login = {
 				}
 				loadData(function(info){
 					if(info.key){
-						window.location.href=getContextPath()+'/mgr/index';
+						window.location.href=getContextPath()+'/phone/user/index';
 					}else{
 						successToolTipShow(info.value);
 						return false;
