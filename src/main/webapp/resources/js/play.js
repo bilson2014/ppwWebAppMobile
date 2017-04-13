@@ -15,21 +15,17 @@ $().ready(function() {
     $('.orderVideo').off('click').on('click',function(){
     	 $('#orderTo').show();
     });
-<<<<<<< HEAD
+
     
     $('#checkSuccess').off('click').on('click',function(){
     	$('#orderSuccess').hide();
     });
     
-    $('#"closeOrder"').off('click').on('click',function(){
+    $('#closeOrder').off('click').on('click',function(){
     	$('#orderTo').hide();
     });
     
-=======
-    $('#checkSuccess').off('click').on('click',function(){
-    	 $('#orderSuccess').hide();
-    });
->>>>>>> b85c05000c87e70cd6ba9a677b2dcc9d3fc5f345
+
 }), play = {
     initData: function() {
         //var b, c, d, e, f, g, h, i, j, k, l, m, a = $("#videoPoster").val();
@@ -81,7 +77,7 @@ $().ready(function() {
     	var tags = $('#tags').val();
     	loadData(function(data){
     		var list = data.result;
-			if(list!=null){
+			if(list.result.length > 0){
 				for (var int = 0;int<list.result.length; int++) {
 					var card = createCard(list.result[int]);
 					$("#anliContent").append(card);
