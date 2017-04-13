@@ -74,7 +74,7 @@
 		  <img  src="${imgPath}/index/toSearch.png">
 		 </a> 
 	     <img class="searchType" src="${imgPath }/index/searchBox.png">
-	     <div>精品案例</div>
+	     <img class="ppwLogo" src="${imgPath}/index/logoH.png">
 	</div>
 	
 	 <jsp:include flush="true" page="menu.jsp"></jsp:include> 
@@ -141,7 +141,7 @@
 	    <c:forEach items="${list }" var="solr" varStatus="status">
 	     	<a href="<spring:url value='/play/${solr.teamId}_${solr.productId }.html'/>">
 			   <div class="contentItem" style="background:url(${file_locate_storage_path }${solr.picLDUrl }) no-repeat">
-			                     <div class="itemTitle">${solr.productName} / ${solr.productName}</div>
+			                     <div class="itemTitle">${solr.productName}</div>
 			                     <div class="itemTag">${solr.tags}</div>
 			   </div>
 		    </a>

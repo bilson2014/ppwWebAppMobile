@@ -67,7 +67,7 @@
 
 	<div class="phoneHeader">
 	     <a id="openMenu"><img src="${imgPath }/index/toMenu.png"></a>
-	     <div>管家登录</div>
+	     <img class="ppwLogo" src="${imgPath}/index/logoH.png">
 	</div>
 	
 	 <jsp:include flush="true" page="menu.jsp"></jsp:include> 

@@ -60,7 +60,7 @@
 	<div class="phoneHeader">
 	     <a id="openMenu"><img src="${imgPath }/index/toMenu.png"></a>
 	     <a href="/searchview"><img src="${imgPath }/index/toSearch.png"></a>
-	     <div>注册</div>
+	    <img class="ppwLogo" src="${imgPath}/index/logoH.png">
 	</div>
 	
 	 <jsp:include flush="true" page="../menu.jsp"></jsp:include> 

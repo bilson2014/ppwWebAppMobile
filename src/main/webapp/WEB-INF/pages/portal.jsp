@@ -91,8 +91,9 @@
 		 <img  src="${imgPath}/index/toSearch.png">
 		</a> 
 		<a>
-		  <img class="ppwLogo" src="${imgPath}/index/logoW.png">
+		  <img class="" src="${imgPath}/index/logoW.png">
 		</a>
+		
 	</div>
 
 	<div class="backImg">

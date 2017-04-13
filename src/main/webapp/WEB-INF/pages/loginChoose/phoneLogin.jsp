@@ -62,7 +62,7 @@
 	     <a href="/searchview">  
 		 <img  src="${imgPath}/index/toSearch.png">
 		</a> 
-	     <div>客户登录</div>
+	     <img class="ppwLogo" src="${imgPath}/index/logoH.png">
 	</div>
 	
 	 <jsp:include flush="true" page="../menu.jsp"></jsp:include>
