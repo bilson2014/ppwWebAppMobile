@@ -227,7 +227,13 @@ var portal = {
 				                '<div class="tags">';
 					 if(json!=null && json !=''){
 						 for (var int = 0; int < json.length; int++) {
+							 
+							 if(int >=4){
+								 break;
+							 }
+							 
 							 $body += '<div class="tagsItem">'+ json[int]+'</div>';
+							 
 						}
 					 }
 		 $body +=			      '</div>'+

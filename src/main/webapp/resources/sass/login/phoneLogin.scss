@@ -56,7 +56,7 @@ body {
     border-top: 1px solid #979797;
     width: 9rem;
     color:$gray-light;
-    font-size: 0.3rem;
+    font-size: $size36;
     text-align: center;
     margin: 0 auto;
     line-height: 1.5rem;
@@ -68,7 +68,7 @@ body {
 }
 
 .loginItem {
-    margin-bottom: 1.3rem;
+    margin-bottom: 1rem;
     background: transparent;
     text-align: center;
     div:nth-child(1) {

@@ -2,6 +2,12 @@
 @import "constant";
 @import "mixin";
 @import "common_portal";
+@import "normalize";
+
+body{
+    font-family: "PingFang SC","Microsoft YaHei", "微软雅黑", "STHeiti" !important;
+}
+
 html,
 body {
     -webkit-overflow-scrolling: touch;
@@ -274,8 +280,12 @@ body {
     }
 }
 
+
+
 .noImg {
     text-align: center;
+    margin-top: 1.3rem;
+    margin-bottom: 1rem;
     img {
         width: 100%;
     }
@@ -285,3 +295,5 @@ body {
         color: white;
     }
 }
+
+

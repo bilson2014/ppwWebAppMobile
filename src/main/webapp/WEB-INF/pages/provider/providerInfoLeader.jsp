@@ -96,6 +96,7 @@
 
     <div class="phoneHeader">
 	     <a><img src="${imgPath }/index/toMenu.png"></a>
+	     <a class="hide"><img src="${imgPath }/index/toMenu.png"></a>
 	      <a href="/"><img class="ppwLogo" src="${imgPath}/index/logoH.png"></a>
 	</div>
     

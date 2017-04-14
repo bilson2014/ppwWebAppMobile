@@ -165,7 +165,7 @@
 	<c:if test="${ empty list}">
 	
 	     <div class="noImg">
-	         <img src="${imgPath }/index/noVideo.jpg">
+	         <img src="${imgPath }/index/noVideo.png">
 	         <div>很抱歉,没有找到相关影片</div>
 	         <div>请尝试用其它关键词搜索</div>
 	     </div>
