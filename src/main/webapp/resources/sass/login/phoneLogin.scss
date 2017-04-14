@@ -61,6 +61,7 @@ body {
     margin: 0 auto;
     line-height: 1.5rem;
     margin-top: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 .choosePage {
@@ -218,7 +219,7 @@ body {
     width: 100%;
     text-align: center;
     color: white;
-    font-size: 0.3rem;
+    font-size: $size36;
     margin-top: 0.8rem;
     span {
         color: $red-base;

@@ -36,16 +36,20 @@ body {
     z-index: 19;
     background: $gray-dark;
     width: 100%;
+    font-size: 0;
     div {
         display: inline-block;
         vertical-align: top;
-        margin-left: 0.8rem;
         color: $gray-light;
         font-size: $size40;
     }
+
+    a{
+         margin-left: 0.6rem;
+    }
     
-    div:last-child{
-        margin-right: 0.4rem;
+    a:last-child{
+        margin-right: 1rem;
     }
 
     .active {

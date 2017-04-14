@@ -590,7 +590,7 @@ transform: scale(1); */
         height: 1.6rem;
         width: 7rem;
         margin: 0 auto;
-        font-size: 0.36rem;
+        font-size: $size40;
     }
     div:nth-child(1) {
         //border-bottom: 1px solid $gray-light;
@@ -602,6 +602,7 @@ transform: scale(1); */
     }
     .loginOut {
         border: none !important;
+
     }
 }
 
