@@ -16,7 +16,7 @@ $().ready(function() {
 });
 function controlCost(){
 	$('.start').off('click').on('click',function(){
-		$('#step1').hide();
+		/*$('#step1').hide();
 		$('#step2').show();
 	 	setTimeout(function() {
 		 		$('#bar').addClass('proWidth'); 
@@ -24,7 +24,7 @@ function controlCost(){
 	 	setTimeout(function() {
 			$('#step2').hide();
 			$('#step3').show();
-		}, 3000);
+		}, 3000);*/
 	 	if(checkData()){
 			var videoType = $('#videoType').text();
 			var team = $('#team').text();
@@ -49,6 +49,15 @@ function controlCost(){
 							$("#code-container").remove();
 							$('#bar').removeClass('proWidth'); 
 							$('.item').hide();
+							$('#step1').hide();
+							$('#step2').show();
+						 	setTimeout(function() {
+							 		$('#bar').addClass('proWidth'); 
+								}, 500);
+						 	setTimeout(function() {
+								$('#step2').hide();
+								$('#step3').show();
+							}, 3000);
 							first = false;
 						}else if(result.code == 0 && result.msg == '手机号不匹配'){
 							$('#errorPhone').attr('data-content', '手机号不匹配');
@@ -72,8 +81,16 @@ function controlCost(){
 						flag = 1;
 						$('#price').text(thousandCount(result.cost));
 						$('#phone').attr('data-content', result.indentId);
-						controlCost();
 						$('.item').hide();
+						$('#step1').hide();
+						$('#step2').show();
+					 	setTimeout(function() {
+						 		$('#bar').addClass('proWidth'); 
+							}, 500);
+					 	setTimeout(function() {
+							$('#step2').hide();
+							$('#step3').show();
+						}, 3000);
 					}, getContextPath() + '/calculate/cost2', $.toJSON({
 						videoType : $('.type').attr('data-content'),
 						team : $('.team').attr('data-content'),
