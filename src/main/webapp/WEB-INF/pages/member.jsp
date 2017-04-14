@@ -46,7 +46,7 @@
 	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
 <meta name="keywords" content="">
 <meta name="description" content="">
-<title>团队接收|拍片网</title>
+<title>团队介绍|拍片网</title>
 <link rel="shortcut icon" href="${imgPath}/favicon.ico">
 <link rel="stylesheet" href="${bootstrapCss}">
 <link rel="stylesheet" href="${commonCss}">
@@ -167,14 +167,6 @@ html {
 			</c:forEach>
 		</c:if>
 
-		<div class="topHeader">
-			<ul>
-				<li>作品如人品</li>
-				<li><a href="<spring:url value='/about'/>">
-						<div>加入我们 </div>
-				</a></li>
-			</ul>
-		</div>
 		
 		<jsp:include flush="true" page="foot.jsp"></jsp:include> 
 		

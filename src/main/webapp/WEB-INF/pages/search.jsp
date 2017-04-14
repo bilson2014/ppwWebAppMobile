@@ -79,13 +79,7 @@
 	
 	 <jsp:include flush="true" page="menu.jsp"></jsp:include> 
 	
-	
-	
-	
-	
-	<div class="pagePhone">
-	
-	 <div class="searchBoxInit searchInit"> 
+		 <div class="searchBoxInit searchInit"> 
 	 <div class="hideBox"></div>	
 	<div class="searchBox searchInit">
 	    <div class="searchItem">
@@ -131,10 +125,16 @@
 	     </div>
 	</div>
 	    <div class="checkBtn" id="checkBtn">
-	        <div id="cancle">取消</div>
-	        <div id="toSearch">完成</div>
-	     </div>
+		        <div id="cancle">取消</div>
+		        <div id="toSearch">完成</div>
+	    </div>
 </div>
+	
+	
+	
+	<div class="pagePhone">
+	
+
 	<div class="hideMenu">
     <c:if test="${!empty list}">
 					<!-- not empty -->

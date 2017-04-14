@@ -154,7 +154,7 @@ var login = {
 				}
 				loadData(function(info){
 					if(info.key){
-						window.location.href=getContextPath()+'/phone/user/index';
+						window.location.href=getContextPath()+'/';
 					}else{
 						successToolTipShow(info.value);
 						return false;
@@ -188,7 +188,7 @@ var login = {
 				loadData(function(msg){
 					$(".errorDiv").addClass("hide");
 					if(msg.key){ 
-						window.location.href=getContextPath()+ '/mgr/index';
+						window.location.href=getContextPath()+ '/';
 					}else{
 						$("#user_pwd_error").text(msg.value).removeClass("hide");
 						return false;

@@ -116,9 +116,6 @@
 				preload="${imgPath}/index/index.jpg" muted>
 				<source src="" id="playVideo" type="video/mp4">
 			</video>
-			<div id="video-play" class="video-play">
-				<!-- video play -->
-			</div>
 		</div>
 		<div class="videoTitle">${product.productName }</div>
 		<div class="videoTag">
@@ -128,7 +125,12 @@
 				</c:forEach>
 			</c:if>
 		</div>
-		<div class="videoPrice">¥${product.serviceRealPrice}</div>
+		<c:if test="${product.serviceRealPrice != 0}">
+	                    	<div class="videoPrice">¥ ${product.serviceRealPrice}</div>
+	     </c:if>
+		 <c:if test="${product.servicePrice == 0}">
+	                    	<div class="videoPrice">¥ 暂无报价</div>
+	     </c:if>
 
 		<!-- 影片简介 -->
 		<div class="videoInfo">影片简介 Project Summary</div>

@@ -12,10 +12,24 @@ $().ready(function() {
 
 });
 
+
+
+
 var newsInfo = {
 		initData : function() { // 加载分类信息
 			 var screenWidth = document.documentElement.clientWidth;
 			 var setHeight= screenWidth/16*9;
 			 $('#banner').css('height',setHeight);
+			 
+				var html = $('.setContent').html().trim();
+				if (html != '') {
+					var re2 = 'src="@.@([^"]*)"';
+					var p = new RegExp(re2, [ "gm" ]);
+					html = html.replace(p, "src='" + getDfsHostName()
+							+ "$1" + "'");
+					$('.setContent').html(html);
+				} else {
+					$('.setContent').text('');
+				}
 		}
 }

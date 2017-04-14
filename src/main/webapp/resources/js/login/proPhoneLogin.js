@@ -135,7 +135,7 @@ var login = {
 				}
 				loadData(function(info){
 					if(info.errorCode == 200){
-						window.location.href=getContextPath()+'/provider/index';
+						window.location.href=getContextPath()+'/';
 					}else{
 						successToolTipShow(info.errorMsg);
 						return false;
@@ -169,7 +169,7 @@ var login = {
 				loadData(function(msg){
 					$(".errorDiv").addClass("hide");
 					if(msg.key){ 
-						window.location.href=getContextPath()+ '/mgr/index';
+						window.location.href=getContextPath()+ '/';
 					}else{
 						$("#user_pwd_error").text(msg.value).removeClass("hide");
 						return false;
