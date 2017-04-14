@@ -68,6 +68,11 @@
 	
 	  <div class="pagePhone">
 	         <div class="cusLogin">
+	         
+	         <div class="loginImg" >
+	             <img src="${imgPath}/login/pro.png">
+	         </div>
+	         
 	              <div class="loginPhone " id="phoneLoginDiv">
 			              <div class="loginItemPhone">
 			                  <input placeholder="手机号"  id="user_phoneNumber">

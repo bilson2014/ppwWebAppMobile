@@ -67,6 +67,10 @@
 	  <div class="pagePhone">
 	         
 	         <div class="cusLogin">
+		          <div class="loginImg" >
+		             <img src="${imgPath}/login/pro.png">
+		         </div>
+		         
 	              <div class="loginTop" id="loginTop">
 	                  <div id="phoneLogin">手机号登录</div>
 	                  <div id="noPhoneLogin">账号登录</div>
