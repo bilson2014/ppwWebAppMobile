@@ -1,5 +1,7 @@
 var typeArray = new Array(' 宣传片','个人宣传片','活动宣传片','产品宣传片','企业宣传片','城市宣传片','品牌宣传片','场景宣传片','招商宣传片','形象宣传片','TVC',' 广告','创意广告','产品广告','品牌广告','活动广告','微电影','路演视频','病毒视频','公益片','社交媒体视频','花絮');
 var busArray = new Array('智能硬件','互联网','电子产品','电商','通讯','服装纺织','金融','医疗保健','游戏','交通运输','汽车','文化','日用美妆','家居建材','政府机构','企业服务','餐饮美食','母婴','美容','美发','食品饮料','电器','影视','房地产');
+
+var loadMore = true;
 $().ready(function(){
 	search.showTagsItem();
 	search.initData();
@@ -7,7 +9,6 @@ $().ready(function(){
 	touchLis();
 
 });
-
 
 var search = {
 		initData : function() { // 加载分类信息
@@ -132,14 +133,6 @@ var search = {
       },
         
 }
-
-//滑动回调
-function touchLis(){
-	  $(document).on('touchend',function(){
-		   
-	  });
-}
-
 function createTags(name){
 	var $body1 = '<div class="tags">'+name+'</div>';
 	return $body1;		
@@ -229,4 +222,42 @@ function initData(){
 		});
 		$('.mm-listview').append($ibody);
 	}, getContextPath() + '/item/list', null);
+}
+
+
+var pageSize = 20;
+var currentSize = 0;
+var p = 1;
+var more = true;
+//滑动回调
+function touchLis(){
+	  $(document).on('touchend',function(e){
+		   var total = $('#total').val(); 
+		   var rootView = $('.hideMenu');
+		   var item = rootView.find('a');
+		   
+		   var docH = parseInt($('.pagePhone').height()); 
+		   var scrollH = parseInt($('.pagePhone').scrollTop());
+		   // 计算此次事件触发需不要 加载数据
+		   if((docH / 2) <= scrollH){
+				loadProduction((p - 1) * pageSize);
+				currentSize = (p - 1) * pageSize;
+				p++;
+		   }
+	  });
+}
+
+//加载视频
+function loadProduction(start){
+	loadData(function(list){
+		console.log(list);
+	}, getContextPath() + '/search/pagination', $.toJSON({
+		begin : start,
+		limit : pageSize,
+		condition : $('#q').val().trim(),
+		industry : $('#industry').val().trim(),
+		genre : $('#genre').val().trim(),
+		priceFq : $('#price').val(),
+		lengthFq : $('#length').val()
+	}));
 }
