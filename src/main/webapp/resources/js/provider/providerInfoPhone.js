@@ -1,6 +1,18 @@
 $().ready(function(){
-	
-
+	var tag = $('#id_tags').val();
+	var root = $('.adb');
+	if(tag !=null && tag != ''){
+		var json = $.evalJSON(tag);
+		if(json != null && json.length >0){
+			for (var int = 0; int < json.length; int++) {
+				var body = '';
+					body+='<div class="card">';
+					body+= json[int];
+					body+= '</div>';
+					root.append(body);
+			}
+		}
+	}
 });
 	
 	showHeadImg();

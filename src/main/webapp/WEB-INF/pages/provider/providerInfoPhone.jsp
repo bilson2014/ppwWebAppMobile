@@ -154,12 +154,8 @@
 		</c:forEach>
 	</div> --%>
 
-	<div class="tagBody contentAnimation">
-		<c:forEach var="tags" items="${providerTags}" varStatus="status">
-			<div class="card">
-				${tags}
-			</div>
-		</c:forEach>
+	<div class="tagBody contentAnimation adb">
+		<input type="hidden" id="id_tags" value='${providerTags}'>
 	</div>
 
 	<!--代表说明  -->
@@ -290,7 +286,6 @@
 	<jsp:include flush="true" page="../foot.jsp"></jsp:include> 
 	
 </div>	
-
 
 <script src="${jqueryJs }"></script>
 <script src="${pluginJs }"></script>
