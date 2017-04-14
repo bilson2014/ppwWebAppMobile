@@ -225,30 +225,56 @@ function initData(){
 
 var pageSize = 20;
 var currentSize = 0;
-var p = 1;
+var p = 2;
 var more = true;
 //滑动回调
 function touchLis(){
-	  $(document).on('touchend',function(e){
-		   var total = $('#total').val(); 
-		   var rootView = $('.hideMenu');
-		   var item = rootView.find('a');
-		   
-		   var docH = parseInt($('.pagePhone').height()); 
-		   var scrollH = parseInt($('.pagePhone').scrollTop());
-		   // 计算此次事件触发需不要 加载数据
-		   if((docH / 2) <= scrollH){
-				loadProduction((p - 1) * pageSize);
-				currentSize = (p - 1) * pageSize;
-				p++;
+//	  $(document).on('touchend',function(e){
+//		   var total = $('#total').val(); 
+//		   var rootView = $('.hideMenu');
+//		   var item = rootView.find('a');
+//		   
+//		   var docH = parseInt($('.pagePhone').height()); 
+//		   var scrollH = parseInt($('.pagePhone').scrollTop());
+//		   // 计算此次事件触发需不要 加载数据
+//		   if((docH / 2) <= scrollH){
+//				loadProduction((p - 1) * pageSize);
+//				currentSize = (p - 1) * pageSize;
+//				p++;
+//		   }
+//	  });
+	  
+	  $('.pagePhone').on("scrollstop", function() {
+		   if(more){
+			   var total = $('#total').val(); 
+			   var rootView = $('.hideMenu');
+			   var docH = parseInt($('.hideMenu').height()); 
+			   var scrollH = parseInt($('.pagePhone').scrollTop());
+			   // 计算此次事件触发需不要 加载数据
+			   if((docH / 2) <= scrollH){
+					loadProduction((p - 1) * pageSize);
+					currentSize = (p - 1) * pageSize;
+					p++;
+					var item = rootView.find('a');
+					if(item.length == total){
+						more = false;
+					}
+			   }
 		   }
-	  });
+	  })
 }
 
 //加载视频
 function loadProduction(start){
 	loadData(function(list){
-		console.log(list);
+		if(list != null && list.length > 0){
+			var rootView = $('.hideMenu');
+			for (var int = 0; int < list.length; int++) {
+				var item = list[int];
+				var html = createVideo(item);
+				$(rootView).append(html);
+			}
+		}
 	}, getContextPath() + '/search/pagination', $.toJSON({
 		begin : start,
 		limit : pageSize,
@@ -258,4 +284,33 @@ function loadProduction(start){
 		priceFq : $('#price').val(),
 		lengthFq : $('#length').val()
 	}));
+}
+
+function createVideo(product){
+	var url = getDfsHostName()+ product.picLDUrl;
+	var tags = product.tags;
+	var ptags = '';
+	if(tags != null && tags != '' && tags != undefined){
+		var arr = tags.split(' ');
+		
+		if(arr != null && arr.length >0){
+			for (var int = 0; int < arr.length; int++) {
+				if(int !=0 )
+					ptags += '/';
+				ptags += arr[int];
+			}
+		}
+	}
+	var body = [
+					'<a class="videoItem" href="/play/'+product.teamId+'_'+product.productId+'.html">',
+					'<div class="contentItem" style="height: 232.875px; background: url('+url+') no-repeat;">',
+					      '<div class="itemTitle">'+product.productName+'</div>',
+					      '<div class="itemTag">',
+					      ptags,
+					      '</div>',
+					      '<div class="itemBack"></div>',
+					'</div>',
+					'</a>'
+				].join('');
+	return body;
 }

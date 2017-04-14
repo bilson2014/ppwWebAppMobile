@@ -39,8 +39,8 @@
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <!-- 取消数字被识别为电话号码 -->
 <meta content="telephone=no" name="format-detection">
-<meta name="keywords" content="宣传片制作,企业宣传片,拍片网,广告片制作,微电影制作,企业微电影">
-<meta name="description" content="拍片网是一个视频内容制作服务平台，主营宣传片制作和微电影制作，三大优势：免费创意策划、72小时出片、不满意全额退款或重拍。拍片就上拍片网">
+<meta name="keywords" content="宣传片制作,产品宣传片制作,企业宣传片制作,微电影制作,MG动画制作">
+<meta name="description" content="拍片网主营宣传片制作、微电影制作、MG动画制作等各种视频内容制作，拍片网是最大的企业视频内容制作平台。拍片就上拍片网！">
 <title>拍片网  专业商业视频服务</title>
 
 <link rel="shortcut icon" href="${imgPath }/favicon.ico">

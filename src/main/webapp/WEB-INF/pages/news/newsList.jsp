@@ -32,8 +32,8 @@
 	<meta name="apple-mobile-web-app-capable" content="yes" />
 	<!-- 取消数字被识别为电话号码 -->
 	<meta name="format-detection" content="telephone=no" />
-	<meta name="keywords" content="拍片网,视频播放,视频详情,影片播放,影片介绍">
-	<meta name="description" content="拍片网，汇聚千万影视行业创作者，是中国最大的视频交易平台。产品：宣传片、广告、微电影、动画、三维演示等视频，优势：创意免费、选择多、价格低、不满意无条件退款">
+	<meta name="keywords" content="拍片网资讯,拍片网动态">
+	<meta name="description" content="新闻资讯频道将提供拍片网的案例分享、企业动态、行业资讯等影视行业资讯。">
 	<title>新闻资讯 | 拍片网</title>
 	
 	<link rel="shortcut icon" href="${imgPath }/favicon.ico" >
