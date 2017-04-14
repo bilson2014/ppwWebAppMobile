@@ -210,7 +210,7 @@
 		          </a>
 	      </div>
 	       <div class="conDiv noBot">
-	              <a href="/search?q=&industry=广告片">
+	              <a href="/search?q=广告片">
 			          <div class="conItem leftItem">
 			             <img src="${imgPath}/index/ad.png">
 			             <div class="type">广告片</div>
