@@ -35,13 +35,14 @@ $().ready(function(){
 				}));
 			},
 			getMore:function(data){
-				$("#findMore").off("click").on("click",function(){
-				$("#findMore").addClass("hide");
+				$(".findMore").off("click").on("click",function(){
+				$(".findMore").addClass("hide");
 					for(var i = 5;i < data.length;i++){
 						var card = createCard(data[i]);
 						$("#moreProduct").append(card);
 					}
 					lazyLoad();
+					getHeight();
 				})
 			},
 			
