@@ -47,8 +47,10 @@ play = {
 		        $('#recomment-video').show();
 		        $('video').css('height',setHeight);
 	        }
-        
-      $('#teamPhoto').attr('src',getDfsHostName()+$('#teamPhotoUrl').val());  
+        var img = $('#teamPhotoUrl').val();
+	        if(img!=''&&img!=null){
+                  $('#teamPhoto').attr('src',getDfsHostName()+$('#teamPhotoUrl').val());
+	        }
     },
     order: function() {
         $("#order-btn").on("click", function() {
