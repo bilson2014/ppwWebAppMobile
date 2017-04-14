@@ -110,10 +110,15 @@
 
 	<div class="pagePhone">
 		<div class="videoShow">
-			<video control id="recomment-video" class="setVideo"
-				preload="${imgPath}/index/index.jpg" muted>
+		<!-- 	<video controls id="recomment-video" class="setVideo">
 				<source src="" id="playVideo" type="video/mp4">
+			</video> -->
+			
+			<video  controls id="recomment-video" class="setVideo"> 
+				 <source src="" id="playVideo" type="video/mp4">
 			</video>
+			
+			
 		</div>
 		<div class="videoTitle">${product.productName }</div>
 		<div class="videoTag">

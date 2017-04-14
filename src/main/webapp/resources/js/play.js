@@ -24,9 +24,9 @@ $().ready(function() {
     $('#closeOrder').off('click').on('click',function(){
     	$('#orderTo').hide();
     });
-    
+});
 
-}), play = {
+play = {
     initData: function() {
         //var b, c, d, e, f, g, h, i, j, k, l, m, a = $("#videoPoster").val();
         
@@ -41,14 +41,14 @@ $().ready(function() {
         var setHeight= screenWidth/16*9;
         
 	        if(urlSize != '' && urlSize != null && urlSize != undefined){
-		        $('#playVideo').attr('src',url);
+		        $('#playVideo').prop('src',url);
+		        $('#recomment-video').load();
 		        $('#recomment-video').attr('poster',post);
 		        $('#recomment-video').show();
 		        $('video').css('height',setHeight);
 	        }
         
       $('#teamPhoto').attr('src',getDfsHostName()+$('#teamPhotoUrl').val());  
-
     },
     order: function() {
         $("#order-btn").on("click", function() {
@@ -85,8 +85,7 @@ $().ready(function() {
 			begin : 0,
 			limit : 9
 		}));
-    },
-    
+    }
 };
 
 function createCard(msg){
