@@ -27,6 +27,7 @@
 <spring:url value="/resources/js/common.js" var="commonJs" />
 <spring:url value="/resources/js/search.js" var="searchJs" />
 <spring:url value="/resources/js/remSet.js" var="remSetJs" />
+<spring:url value="/resources/lib/jquery.json/jquery.json-2.4.min.js" var="jsonJs"/>
 
 <!-- imgPath -->
 <spring:url value="/resources/images" var="imgPath" />
@@ -65,7 +66,14 @@
  --%>
 </head>
 <body>
-
+	<input type="hidden" id="storage_node" value="${file_locate_storage_path }" />
+	<input type="hidden" value='${q }' id="q"/>
+	<input type="hidden" value="${industry }" id="industry"/>
+	<input type="hidden" value="${genre }" id="genre"/>
+	<input type="hidden" value="${price }" id="price"/>
+	<input type="hidden" value="${length}" id="length"/>
+	<input type="hidden" value="${total }" id="total"/>
+	<input type="hidden" value="${isMore }" id="isMore"/>
 
 	<input type="hidden" id="storage_node" value="${file_locate_storage_path }" />
 	<div class="phoneHeader">
@@ -161,5 +169,6 @@
 	<script src="${remSetJs}"></script>
 	<script src="${searchJs}"></script>
     <script src="${commonJs}"></script>
+    <script src="${jsonJs}"></script>
 </body>
 </html>
