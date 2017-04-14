@@ -355,7 +355,7 @@ var provider_login = {
 				loadData(function(msg){
 					$(".errorDiv").hide();
 					if(msg.errorCode == 200){ 
-						window.location.href=getContextPath()+ '/provider/index';
+						window.location.href=getContextPath()+ '/';
 					}else{
 						successToolTipShow(msg.errorMsg);
 						return false;

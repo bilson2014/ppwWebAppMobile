@@ -64,7 +64,7 @@ function getDefImg(){
 	if(imgUrl == null || imgUrl ==""){
 		$('#getImgUrl').attr('src','/resources/images/menu/defultLogin.png');
 	}else{
-		var realUrl = imgUrl.indexof('group');
+		var realUrl = imgUrl.indexOf('group');
 		if(realUrl<0){
 			$('#getImgUrl').attr('src','/resources/images/menu/defultLogin.png');
 		}

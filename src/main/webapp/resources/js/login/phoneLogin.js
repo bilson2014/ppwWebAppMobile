@@ -187,7 +187,7 @@ var login = {
 				}
 				loadData(function(msg){
 					if(msg.key){ 
-						window.location.href=getContextPath()+ '/phone/user/index';
+						window.location.href=getContextPath()+ '/';
 					}else{
 						successToolTipShow(msg.value);
 						return false;
