@@ -55,8 +55,8 @@ body {
 .proLogin {
     border-top: 1px solid #979797;
     width: 9rem;
-    color:$gray-light;
-    font-size: $size36;
+    color:#e3e3e3;
+    font-size: $size40;
     text-align: center;
     margin: 0 auto;
     line-height: 1.5rem;
@@ -221,6 +221,7 @@ body {
     color: white;
     font-size: $size36;
     margin-top: 0.8rem;
+    margin-bottom: 1.5rem;
     span {
         color: $red-base;
         margin-left: 3px;

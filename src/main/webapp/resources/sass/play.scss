@@ -304,6 +304,7 @@ body {
                 text-align: center;
                 line-height: 0.9rem;
                 right: 0.1rem;
+                font-size: $size40;
             }
             .error {
                 font-size: 0.26rem;
@@ -320,7 +321,7 @@ body {
                 background: white;
                 border: 1px solid $border-line;
                 padding-left: 10px;
-                font-size: 0.36rem;
+                font-size: $size40;
                 color: $gray-dark !important;
                 text-align: left;
                 padding-left: 10px;
@@ -339,12 +340,12 @@ body {
 
 .submitOrder {
     width: 7rem !important;
-    height: 1rem !important;
+    height: 1.1rem !important;
     background: $red-base;
     border-radius: 70px;
     color: white;
-    font-size: 0.36rem;
-    line-height: 1rem;
+    font-size: $size40;
+    line-height: 1.1rem;
     text-align: center;
     margin: 0 auto;
     margin-top: 1rem;
