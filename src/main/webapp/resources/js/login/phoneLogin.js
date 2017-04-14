@@ -186,11 +186,10 @@ var login = {
 					return false;
 				}
 				loadData(function(msg){
-					$(".errorDiv").addClass("hide");
 					if(msg.key){ 
-						window.location.href=getContextPath()+ '/';
+						window.location.href=getContextPath()+ '/phone/user/index';
 					}else{
-						$("#user_pwd_error").text(msg.value).removeClass("hide");
+						successToolTipShow(msg.value);
 						return false;
 					}
 				}, getContextPath() + '/login/doLogin', $.toJSON({
