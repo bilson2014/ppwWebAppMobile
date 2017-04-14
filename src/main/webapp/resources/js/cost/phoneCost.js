@@ -119,18 +119,7 @@ function init() {
 	        	}
 	        	
 	        }
-//	        onSlideChangeEnd: function(swiper) {
-//	            var number = swiper.activeIndex; //每次切换时，提示现在是第几个slide
-//	            var url = 'url(/resources/images/index/back'+number+'.jpg) no-repeat'
-//                $('.swiper-container').css('background',url);
-//	            $('.swiper-container').css('background-size','100% 100%');
-//	            if(number >5){
-//	            	$('.swiper-container').addClass('showOp');
-//	            	$('.costResult').show();
-//	            }
-//	            console.info(number);
-//	            
-//	        },
+
 	    });
 	 
 	 controlActive(swiper);
@@ -140,6 +129,7 @@ function init() {
 		 $('#step1').show();
 		 $('#step2').hide();
 		 $('#step3').hide();
+		 $('#bar').removeClass('proWidth'); 
 	 });
 	
 }
@@ -180,8 +170,6 @@ function controlActive(swiper){
 		$('#noInfo').hide();
 	});
 	
-
-		
 }
 
 function initStep1(swiper){

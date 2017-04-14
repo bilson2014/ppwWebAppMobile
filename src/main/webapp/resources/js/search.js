@@ -4,6 +4,7 @@ $().ready(function(){
 	search.showTagsItem();
 	search.initData();
 	toSearch();
+	touchLis();
 
 });
 
@@ -130,6 +131,13 @@ var search = {
         	
       },
         
+}
+
+//滑动回调
+function touchLis(){
+	  $(document).on('touchend',function(){
+		   
+	  });
 }
 
 function createTags(name){
