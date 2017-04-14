@@ -303,7 +303,7 @@ var provider_login = {
 		login:function(action){
 			loadData(function(info){
 				if(info.result){
-					$(".errorDiv").addClass("hide");
+					$(".errorDiv").hide();
 					window.location.href=getContextPath()+ '/';
 				}else{
 					$("#code_error_info").text(info.errorMsg).removeClass("hide");
@@ -320,7 +320,7 @@ var provider_login = {
 		register:function(action){
 			loadData(function(info){
 				if(info.key){
-					$(".errorDiv").addClass("hide");
+					$(".errorDiv").hide();
 					window.location.href=getContextPath()+'/provider/leader';
 				}else{
 					$("#code_error_info").text(info.value).removeClass("hide");
@@ -353,7 +353,7 @@ var provider_login = {
 					return false;
 				}
 				loadData(function(msg){
-					$(".errorDiv").addClass("hide");
+					$(".errorDiv").hide();
 					if(msg.errorCode == 200){ 
 						window.location.href=getContextPath()+ '/provider/index';
 					}else{

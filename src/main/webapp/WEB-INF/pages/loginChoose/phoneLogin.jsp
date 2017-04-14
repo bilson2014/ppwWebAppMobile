@@ -109,7 +109,7 @@
 			                  <input placeholder="用户名" id="user_name">
 			              </div>
 			              <div class="loginItemPhone">
-			                  <input placeholder="密码" id="user_pwd">
+			                  <input placeholder="密码" type="password" id="user_pwd">
 			              </div>
 			             <!--  <a class="forgetPw"><div>忘记了密码?</div></a> -->
 			              <div class="loginIng" id="submitBtn_user_name">登录</div>
