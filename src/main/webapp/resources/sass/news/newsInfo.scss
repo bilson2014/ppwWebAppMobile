@@ -52,7 +52,7 @@ body {
 }
 
 .setContent {
-    color: $border-line;
+    color: $border-line !important;
     font-size: 0.34rem;
     img {
         width: 100%;

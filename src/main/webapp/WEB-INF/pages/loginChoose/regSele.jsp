@@ -68,11 +68,13 @@
 	  <div class="pagePhone">
 	         <div class="choosePage">
 	              <div class="loginItem">
-	                    <div>我是客户 成为拍片网客户 遇见好作品</div>
+	                    <div>我是客户 </div>
+	                    <div>成为拍片网客户 遇见好作品</div>
 	                    <a href="/register"><img src="${imgPath}/login/cus.png"></a>
 	              </div>
 	              <div class="loginItem">
-	                    <div>我是导演 成为拍片网导演 接单更容易</div>
+	                    <div>我是导演 </div>
+	                    <div>成为拍片网导演 接单更容易</div>
 	                    <a href="/proRegister"><img src="${imgPath}/login/pro.png"></a>
 	              </div>
 	              <a href="/loginSele"><div class="toLogin">还没有账号? 请<span>登录</span></div></a>

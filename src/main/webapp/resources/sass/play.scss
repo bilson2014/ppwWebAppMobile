@@ -116,11 +116,15 @@ body {
                 position: absolute;
                 bottom: 0;
                 right: 0.2rem;
+                
+
             }
         }
         div:nth-child(2) {
             color: #e3e3e3;
             font-size: 0.36rem;
+            @include ellipsis;
+            width: 5rem;
         }
         div:nth-child(3) {
             color: $red-base;
@@ -342,4 +346,9 @@ body {
     position: absolute;
     top: -0.3rem !important;
     right: -0.3rem !important;
+}
+
+#teamPhoto {
+    background: white;
+    padding: 2px;
 }
