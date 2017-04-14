@@ -14,7 +14,7 @@ $footer-order-height: 120px; // 底部高度
 $footer-content-height: 40px; // 底部拍片按钮内容高度
 html,
 body {
-    font-family: "Lantinghei SC", "PingFang SC", "Open Sans", Arial, "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", "STHeiti", "WenQuanYi Micro Hei", SimSun, sans-serif;
+    font-family: "PingFang SC",  "Microsoft YaHei", "微软雅黑", "STHeiti", "WenQuanYi Micro Hei", SimSun;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
@@ -173,7 +173,7 @@ a {
 .ppwLogo {
     width: 2.1rem !important;
     position: relative !important;
-    top: -0.1rem !important;
+    top: -0.15rem !important;
 }
 
 //导航栏

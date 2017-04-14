@@ -43,6 +43,11 @@ body {
         color: $gray-light;
         font-size: $size40;
     }
+    
+    div:last-child{
+        margin-right: 0.4rem;
+    }
+
     .active {
         color: $red-base;
     }
