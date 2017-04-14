@@ -244,7 +244,7 @@
 	             </div>
 	             <div class="wordItem">
 	                    <div>4</div>
-	                    <div>甄选最佳导演&nbsp&nbsp&nbsp&nbsp</div>
+	                    <div>甄选最佳的导演</div>
 	             </div>
 	         </li>
 	         <li>
