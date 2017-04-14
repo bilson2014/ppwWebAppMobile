@@ -46,7 +46,7 @@
 	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
 <meta name="keywords" content="">
 <meta name="description" content="">
-<title>团队介绍|拍片网</title>
+<title>团队介绍 | 拍片网</title>
 <link rel="shortcut icon" href="${imgPath}/favicon.ico">
 <link rel="stylesheet" href="${bootstrapCss}">
 <link rel="stylesheet" href="${commonCss}">

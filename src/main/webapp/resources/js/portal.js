@@ -185,14 +185,14 @@ var portal = {
 		});
 	},
 	controlLogo : function() { // 分享
-		 $('.ppwLogo').hide();
+		 $('.ppwLogos').hide();
 		 $('.pagePhone').scroll(function() {
 			  var divTop = $('#logoPos').offset().top;
 			  var nowTop = $('.pagePhone').scrollTop();
               if(divTop < nowTop){
-            	  $('.ppwLogo').show();
+            	  $('.ppwLogos').show();
               }else{
-            	  $('.ppwLogo').hide();
+            	  $('.ppwLogos').hide();
               }
 			
 		  });
