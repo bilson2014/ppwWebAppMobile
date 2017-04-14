@@ -166,11 +166,7 @@ html {
 				</div>
 			</c:forEach>
 		</c:if>
-
-		
 		<jsp:include flush="true" page="foot.jsp"></jsp:include> 
-		
-		
 	</div>	
 
 
