@@ -2,7 +2,7 @@ var imgUrl, play;
 var kaptcharInterValObj; // timer变量，控制时间
 var InterValObj; // timer变量，控制时间 - 注册
 var InterValRecoverObj; // timer变量，控制时间 - 密码找回
-var count = 120; // 间隔函数，1秒执行 
+var count = 60; // 间隔函数，1秒执行 
 var curCount = 0; // 当前剩余秒数 - 注册
 var recoverCount; // 当前剩余秒数 - 密码找回
 var noCardIndex = 0;
