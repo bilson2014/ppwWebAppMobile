@@ -13,6 +13,7 @@ $().ready(function() {
 	portal.getProviderItem();
 	//isWeiXin();
 	subPaipian();
+	getCardWord();
 
 });
 
@@ -434,4 +435,26 @@ function loadData2(Func,url,param){
 			console.error('[' + textStatus + ']' + errorThrown);
 		}
 	});
+}
+
+function getCardWord(){
+	
+		
+	$.each($('.des'), function(i,model) {
+		$(model).text(getTitleIndex(title));
+	})
+	
+}
+
+function getContentIndex(string){
+	 var screenWidth = document.documentElement.clientWidth;
+	 var num = 33;  
+	    
+	if(string.length<=num){
+		var content = string
+	}else{
+		var content = string.substr(1,num) +"[...]"
+	}
+	
+	return  content;
 }
