@@ -132,6 +132,7 @@ textarea {
         vertical-align: top !important;
         position: relative;
         top: 0.2rem;
+        padding-left: 10px;
     }
     textarea {
         width: 5.8rem;
@@ -139,7 +140,6 @@ textarea {
         font-size: 0.34rem;
         height: 2.7rem;
         border: 1px solid $border-line;
-        padding-left: 5px;
         border-radius: 8px;
         background: transparent;
         border-radius: 4px;
@@ -172,7 +172,7 @@ textarea {
         font-size:$size40 ;
         height: 0.9rem;
         border: 1px solid $border-line;
-        padding-left: 5px;
+        padding-left: 10px;
         border-radius: 4px;
         background: transparent;
     }

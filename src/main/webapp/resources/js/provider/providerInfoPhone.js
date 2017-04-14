@@ -70,7 +70,7 @@ $().ready(function(){
 			+'		 <div class="contentItem" style="background:url('+getDfsHostName()+''+msg.picLDUrl+') no-repeat">'
 			+'			   <div class="itemTitle">'+msg.productName+'</div>'
 			+'					 <div class="itemTag">'+msg.tags+'</div>'
-			+'					 <div></div>'
+			+'					 <div class="itemBack"></div>'
 			+'		 </div> '
 			+'	 </a>'
 		return $body1;		
