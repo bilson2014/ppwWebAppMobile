@@ -47,7 +47,7 @@
 <meta name="keywords" content="拍片网下单,视频交易,广告购买,导演制作费,拍片下单">
 <meta name="description"
 	content="拍片网，汇聚千万影视行业创作者，是中国最大的视频交易平台。产品：宣传片、广告、微电影、动画、三维演示等视频，优势：创意免费、选择多、价格低、不满意无条件退款">
-<title>精品案例|拍片网</title>
+<title>精品案例  | 拍片网</title>
 
 <link rel="shortcut icon" href="${imgPath }/favicon.ico">
 <link rel="stylesheet" href="${bootstrapCss }">
@@ -142,7 +142,12 @@
 	     	<a href="<spring:url value='/play/${solr.teamId}_${solr.productId }.html'/>">
 			   <div class="contentItem" style="background:url(${file_locate_storage_path }${solr.picLDUrl }) no-repeat">
 			                     <div class="itemTitle">${solr.productName}</div>
-			                     <div class="itemTag">${solr.tags}</div>
+			                     <div class="itemTag">
+				                     <c:forEach items="${fn:split(fn:trim(solr.tags),' ') }" var="tag" end="2" varStatus="stat">
+												${tag} <c:if test="${!stat.last }">/</c:if>
+									 </c:forEach>
+			                     </div>
+			                     <div class="itemBack"></div>
 			   </div>
 		    </a>
 	    </c:forEach>

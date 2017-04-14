@@ -91,7 +91,7 @@
 		 <img  src="${imgPath}/index/toSearch.png">
 		</a> 
 		<a>
-		  <img class="" src="${imgPath}/index/logoW.png">
+		  <img class="ppwLogos" src="${imgPath}/index/logoW.png">
 		</a>
 		
 	</div>

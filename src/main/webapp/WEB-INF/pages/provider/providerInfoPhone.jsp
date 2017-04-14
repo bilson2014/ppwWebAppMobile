@@ -52,7 +52,7 @@
 <meta name="keywords" content="拍片网下单,视频交易,广告购买,导演制作费,拍片下单">
 <meta name="description"
 	content="拍片网，汇聚千万影视行业创作者，是中国最大的视频交易平台。产品：宣传片、广告、微电影、动画、三维演示等视频，优势：创意免费、选择多、价格低、不满意无条件退款">
-<title>${provider.teamName}|拍片网</title>
+<title>${provider.teamName} | 拍片网</title>
 
 <link rel="shortcut icon" href="${imgPath }/favicon.ico">
 <link rel="stylesheet" href="${bootstrapAlertCss }">
@@ -172,7 +172,12 @@
 		<a href="/play/${product.teamId}_${product.productId }.html">
 			<div class="contentItem contentAnimation" style="background:url(${file_locate_storage_path}${product.picHDUrl}) no-repeat">
 				                     <div class="itemTitle">${product.productName}</div>
-				                     <div class="itemTag">${product.tags}</div>
+				                     <div class="itemTag">
+				                       <c:forEach items="${fn:split(fn:trim(solr.tags),' ') }" var="tag" end="2" varStatus="stat">
+												${tag} <c:if test="${!stat.last }">/</c:if>
+									   </c:forEach>
+				                     </div>
+				                     <div class="itemBack"></div>
 		    </div>
 	    </a>
 	 </c:if>   
