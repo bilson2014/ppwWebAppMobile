@@ -19,6 +19,7 @@ body {
 
 .search-section {
     width: 100%;
+    position: relative;
     //border-bottom: solid 1px #999;
 }
 
@@ -78,12 +79,13 @@ body {
     }
 }
 
-.cancleInput{
-     font-size: $normal-font-size;
-     color: white;
-     position: absolute;
-     width: 30px;
-     right: 5px;
+.cancleInput {
+    font-size: $normal-font-size;
+    color: white;
+    position: absolute;
+    width: 30px;
+    right: 0.2rem;
+    top: 0.8rem;
 }
 
 .recomment-section {
