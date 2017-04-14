@@ -12,4 +12,4 @@
 /* Safari 閸滐拷 Chrome */{0%{left:-100%}80%{left:2%}100%{left:0px}}@-o-keyframes headMoveRight
 /* Opera */{0%{right:-100%}80%{right:2%}100%{right:0px}}@keyframes headMoveRight{0%{right:-100%}80%{right:2%}100%{right:0px}}@-moz-keyframes headMoveRight
 /* Firefox */{0%{right:-100%}80%{right:2%}100%{right:0px}}@-webkit-keyframes headMoveRight
-/* Safari 閸滐拷 Chrome */{0%{right:-100%}80%{right:2%}100%{right:0px}}.topHeaderBottom{height:79px}@media screen and (max-width: 360px){.topHeaderBottom{height:45px}}@media screen and (min-width: 360px) and (max-width: 500px){.topHeaderBottom{height:55px}}.showWeiXin{position:fixed;width:100%;top:0px;z-index:999}
+/* Safari 閸滐拷 Chrome */{0%{right:-100%}80%{right:2%}100%{right:0px}}.topHeaderBottom{height:79px}@media screen and (max-width: 360px){.topHeaderBottom{height:45px}}@media screen and (min-width: 360px) and (max-width: 500px){.topHeaderBottom{height:55px}}.showWeiXin{position:fixed;width:100%;top:0px;z-index:999}.footPhone{margin-top:0.5rem}

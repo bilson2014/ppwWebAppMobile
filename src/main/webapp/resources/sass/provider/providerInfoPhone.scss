@@ -629,6 +629,7 @@ a:visited {
 
 .contentCard {
     position: relative;
+    z-index: 10;
     animation: headMove 3s;
     -moz-animation: headMove 3s;
     /* Firefox */
