@@ -43,6 +43,8 @@ function controlCost(){
 					add = false;
 					loadData(function(result) {
 						add = true;
+						$('#phoneError').hide();
+						$('#codeError').hide();
 						if(result.code == 1){
 							$('#price').text(thousandCount(result.cost));
 							$('#phone').attr('data-content', result.indentId);
@@ -60,9 +62,11 @@ function controlCost(){
 							}, 3000);
 							first = false;
 						}else if(result.code == 0 && result.msg == '手机号不匹配'){
-							$('#errorPhone').attr('data-content', '手机号不匹配');
+							$('#phoneError').text( '手机号不匹配');
+							$('#phoneError').show();
 						}else{
-							$('#errorCode').attr('data-content', result.msg);
+							$('#codeError').text( result.msg);
+							$('#codeError').show();
 						}
 					}, getContextPath() + '/calculate/cost', $.toJSON({
 						videoType : $('#videoType').attr('data-content'),

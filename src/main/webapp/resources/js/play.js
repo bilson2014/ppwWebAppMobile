@@ -138,7 +138,8 @@ function submitOrder(){
 			   $('#orderTo').hide();
 			   $('#orderSuccess').show();
 			}else{
-				$('#codeError').text('下单失败');
+				$('#codeError').text(msg.message);
+				$('#codeError').show();
 			}
 		}, getContextPath() + '/order/deliver', 
 			{indentName : $("#videoName").val(),
