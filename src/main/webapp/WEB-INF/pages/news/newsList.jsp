@@ -49,7 +49,7 @@
 
 	<div class="phoneHeader">
 	     <a id="openMenu"><img src="${imgPath }/index/toMenu.png"></a>
-	     <a><img src="${imgPath }/index/toSearch.png"></a>
+	     <a class="hide"><img src="${imgPath }/index/toSearch.png"></a>
          <a href="/"><img class="ppwLogo" src="${imgPath}/index/logoH.png"></a>
 	</div>
 	
@@ -57,7 +57,7 @@
 	
 	 <div class="newsTags">
 	     <a href="/news-list.html"><div class="category active">推荐</div></a>
-	     <a href="/news-list.html?q=最热资讯"><div class="category" data-value="最热资讯">最新资讯</div></a>
+	     <a href="/news-list.html?q=最热资讯"><div class="category" data-value="最热资讯">最热资讯</div></a>
 	     <a href="/news-list.html?q=案例花絮"><div class="category" data-value="案例花絮">案例花絮</div></a>
 	     <a href="/news-list.html?q=企业动态"><div class="category" data-value="企业动态">企业动态</div></a>
 	     <a href="/news-list.html?q=行业资讯"><div class="category" data-value="行业资讯">行业资讯</div></a>

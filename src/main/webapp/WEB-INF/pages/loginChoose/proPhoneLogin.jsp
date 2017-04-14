@@ -53,7 +53,7 @@
 <body>
 
 	<div class="phoneHeader">
-	     <a id="openMenu"><img src="${imgPath }/index/toMenu.png"></a>
+	     <a class="hide" id="openMenu"><img src="${imgPath }/index/toMenu.png"></a>
 	     <a href="/searchview">  
 		 <img  src="${imgPath}/index/toSearch.png">
 		</a> 

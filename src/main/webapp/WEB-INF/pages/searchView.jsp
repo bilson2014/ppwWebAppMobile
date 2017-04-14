@@ -65,6 +65,7 @@
 						<a href="javascript:void(0);" class="go bk_gray" onclick="return false;" id="s-btn"></a>
 					</form>
 				</div>
+				<div class="cancleInput">取消</div>
 			</div>
 			
 			<div class="title">您可能感兴趣</div>

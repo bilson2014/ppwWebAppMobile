@@ -116,8 +116,6 @@ body {
                 position: absolute;
                 bottom: 0;
                 right: 0.2rem;
-                
-
             }
         }
         div:nth-child(2) {
@@ -183,9 +181,11 @@ body {
             color: white;
             font-size: 0.26rem;
             position: absolute;
-            bottom: 0.5rem;
+            bottom: 0.1rem;
             left: 0.6rem;
             z-index: 3;
+            height: 0.8rem;
+            overflow: hidden;
         }
         .itemBack {
             position: relative;
