@@ -74,7 +74,7 @@
 		  <img  src="${imgPath}/index/toSearch.png">
 		 </a> 
 	     <img class="searchType" src="${imgPath }/index/searchBox.png">
-	     <img class="ppwLogo" src="${imgPath}/index/logoH.png">
+	     <a href="/"><img class="ppwLogo" src="${imgPath}/index/logoH.png"></a>
 	</div>
 	
 	 <jsp:include flush="true" page="menu.jsp"></jsp:include> 
@@ -151,11 +151,6 @@
     <jsp:include flush="true" page="foot.jsp"></jsp:include> 
 	</div>	  
 	</div>
-	
- 	
-	
-	 
-	
 	
 	<script src="${jqueryJs}"></script>
 	<script src="${remSetJs}"></script>

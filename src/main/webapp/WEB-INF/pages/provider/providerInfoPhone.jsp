@@ -89,7 +89,7 @@
 	<div class="phoneHeader">
 	     <a id="openMenu"><img src="${imgPath }/index/toMenu.png"></a>
 	     <a id="toSearch"><img src="${imgPath }/index/toSearch.png"></a>
-	     <img class="ppwLogo" src="${imgPath}/index/logoH.png">
+	      <a href="/"><img class="ppwLogo" src="${imgPath}/index/logoH.png"></a>
 	</div>
 	
 	<jsp:include flush="true" page="../menu.jsp"></jsp:include>
@@ -104,7 +104,7 @@
 			</li>
 			<li class="providerName">
 			  <div class="nameSize">
-				<div class="providerNames">大大</div> 
+				<div class="providerNames">${provider.teamName }</div> 
 				<c:if test="${provider.flag == 2}">
 					<div class="providerStatesRed states">未通过审核</div>
 				</c:if> 
@@ -118,9 +118,9 @@
 			</li>
 			<li class="providerPlace"><img class="place"
 				src="${imgPath}/provder/place.png"></li>
-			<li class="provinceCity"><div id="province">那儿</div>
+			<li class="provinceCity"><div id="province">${provider.teamProvinceName }</div>
 				<div class="circle"></div>
-				<div id="city">中国</div></li>
+				<div id="city">${provider.teamCityName }</div></li>
 		</ul>
 
 	</div>

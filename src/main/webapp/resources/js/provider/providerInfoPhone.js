@@ -39,7 +39,7 @@ $().ready(function(){
 				$("#findMore").addClass("hide");
 					for(var i = 5;i < data.length;i++){
 						var card = createCard(data[i]);
-						$("#productContent").append(card);
+						$("#moreProduct").append(card);
 					}
 					lazyLoad();
 				})

@@ -9,7 +9,7 @@ var first = true;
 $().ready(function() {
 
 	 init();
-	 controlActive();
+
 	 getVerificationCode();
 	 controlCost();
 	// submit();
@@ -133,6 +133,8 @@ function init() {
 //	        },
 	    });
 	 
+	 controlActive(swiper);
+	 
 	 $('.reCost').on('click',function(){
 		 swiper.slideTo(0, 1000, false);//切换到第一个slide，速度为1秒
 		 $('#step1').show();
@@ -142,7 +144,7 @@ function init() {
 	
 }
 
-function controlActive(){
+function controlActive(swiper){
 	
 	$('.tags1').off('click').on('click',function(){
 		$('.tags1').removeClass('type');

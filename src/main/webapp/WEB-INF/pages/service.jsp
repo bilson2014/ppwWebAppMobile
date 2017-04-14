@@ -82,7 +82,7 @@
 	     <a href="/searchview">  
 		  <img  src="${imgPath}/index/toSearch.png">
 		 </a> 
-	     <img class="ppwLogo" src="${imgPath}/index/logoH.png">
+	     <a href="/"><img class="ppwLogo" src="${imgPath}/index/logoH.png"></a>
 	</div>
 	
 	<jsp:include flush="true" page="menu.jsp"></jsp:include>
