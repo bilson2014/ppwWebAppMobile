@@ -28,6 +28,7 @@
 <spring:url value="/resources/js/search.js" var="searchJs" />
 <spring:url value="/resources/js/remSet.js" var="remSetJs" />
 <spring:url value="/resources/lib/jquery.json/jquery.json-2.4.min.js" var="jsonJs"/>
+<spring:url value="/resources/lib/jquery.scrollstop/jquery.scrollstop.min.js" var="scrollstopJs"/>
 
 <!-- imgPath -->
 <spring:url value="/resources/images" var="imgPath" />
@@ -161,8 +162,8 @@
 	    </c:forEach>
 	</c:if>
 		    
-    <jsp:include flush="true" page="foot.jsp"></jsp:include> 
 	</div>	  
+	 <jsp:include flush="true" page="foot.jsp"></jsp:include> 
 	</div>
 	
 	<script src="${jqueryJs}"></script>
@@ -170,5 +171,6 @@
 	<script src="${searchJs}"></script>
     <script src="${commonJs}"></script>
     <script src="${jsonJs}"></script>
+    <script src="${scrollstopJs}"></script>
 </body>
 </html>
