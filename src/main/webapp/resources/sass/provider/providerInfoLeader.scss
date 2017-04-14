@@ -62,21 +62,21 @@ textarea {
                 }
                 div:nth-child(2) {
                     color: $gray-dark;
-                    font-size: 0.4rem;
+                    font-size: $size46;
                     margin-top: 0.6rem;
                     margin-bottom: 0.4rem;
                 }
                 div:nth-child(3) {
                     color: $gray-light;
-                    font-size: 0.34rem;
+                    font-size: $size36;
                     margin-bottom: 1rem;
                 }
                 div:nth-child(4) {
                     color: white !important;
-                    font-size: 0.36rem;
-                    width: 4rem;
-                    height: 1rem;
-                    line-height: 1rem;
+                    font-size: $size40;
+                    width: 5rem;
+                    height: 1.1rem;
+                    line-height: 1.1rem;
                     text-align: center;
                     border-radius: 100px;
                     background: $red-base;
@@ -114,7 +114,7 @@ textarea {
     line-height: 1rem;
     border-bottom: 1px solid $gray-light;
     color: #e3e3e3;
-    font-size: 0.36rem;
+    font-size: $size46;
     text-align: left;
     margin-bottom: 0.6rem;
     span {
@@ -164,12 +164,12 @@ textarea {
     div {
         width: 2rem;
         color: $border-line;
-        font-size: 0.34rem;
+        font-size: $size40;
     }
     input {
         width: 5.8rem;
         color: $border-line;
-        font-size: 0.34rem;
+        font-size:$size40 ;
         height: 0.9rem;
         border: 1px solid $border-line;
         padding-left: 5px;
@@ -180,13 +180,13 @@ textarea {
 
 .nextBtn {
     width: 8rem;
-    height: 1rem;
+    height: 1.1rem;
     color: white;
-    font-size: 0.36rem;
+    font-size:$size40;
     border-radius: 100px;
     background: $red-base;
     text-align: center;
-    line-height: 1rem;
+    line-height: 1.1rem;
     position: absolute;
     bottom: 2rem;
     left:50%;

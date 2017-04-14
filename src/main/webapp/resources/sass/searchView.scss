@@ -113,7 +113,7 @@ body {
             margin: 0 auto;
         }
         label {
-            width: 32%;
+            width: 30%;
             height: 28px;
             line-height: 28px;
             margin-right: 2%;
@@ -125,7 +125,7 @@ body {
             font-size: 0.26rem;
             color: $border-line;
         }
-        label:last-child {
+        label:nth-child(3n) {
             margin-right: 0;
         }
     }

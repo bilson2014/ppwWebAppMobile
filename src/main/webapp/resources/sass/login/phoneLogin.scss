@@ -73,17 +73,17 @@ body {
     text-align: center;
     div:nth-child(1) {
         color: #e3e3e3;
-        font-size: 0.42rem;
+        font-size: $size46;
         margin-bottom: 0.3rem;
         font-weight: bold;
     }
     div:nth-child(2) {
         color: $border-line;
-        font-size: 0.3rem;
+        font-size: $size36;
     }
     div:nth-child(3) {
         color: $border-line;
-        font-size: 0.3rem;
+        font-size: $size36;
         margin-top: 0.1rem;
     }
     img {
@@ -95,7 +95,7 @@ body {
 .toLogin {
     width: 100%;
     text-align: center;
-    font-size: 0.3rem;
+    font-size:$size36;
     color: white;
     span {
         color: $red-base;
@@ -135,14 +135,14 @@ body {
             display: inline-block;
             vertical-align: top;
             color: $red-base;
-            font-size: 0.4rem;
+            font-size: $size46;
         }
         div:nth-child(2) {
             width: 50%;
             display: inline-block;
             vertical-align: top;
             color: $gray-light;
-            font-size: 0.4rem;
+           font-size: $size46;
         }
         div:nth-child(3) {
             width: 50%;
@@ -168,7 +168,7 @@ body {
         }
         .code {
             color: white;
-            font-size: 0.34rem;
+            font-size:$size40;
             position: absolute;
             right: 0.5rem;
             top: 0.95rem;
@@ -183,7 +183,7 @@ body {
             line-height: 0.99rem;
             padding-right: 0.3rem;
             color: #e3e3e3;
-            font-size: 0.34rem;
+            font-size:$size40;
             background: transparent;
             border: none;
             outline: none;
@@ -204,10 +204,10 @@ body {
 
 .loginIng {
     width: 8rem;
-    height: 1rem;
-    line-height: 1rem;
+    height: 1.1rem;
+    line-height: 1.1rem;
     color: white;
-    font-size: 0.36rem;
+    font-size: $size40;
     background: $red-base;
     border-radius: 100px;
     text-align: center;

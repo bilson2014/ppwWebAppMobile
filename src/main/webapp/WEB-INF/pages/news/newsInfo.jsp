@@ -66,7 +66,7 @@
 				<c:if test="${not empty fn:trim(news.tags) }">
 					<c:forEach items="${fn:split(fn:trim(news.tags),' ') }" var="tag"
 						end="2" varStatus="stat">
-						${tag}<c:if test="${!stat.last }">/</c:if>
+						<div>${tag}</div><c:if test="${!stat.last }"></c:if>
 					</c:forEach>
 				</c:if>
 			</div>
