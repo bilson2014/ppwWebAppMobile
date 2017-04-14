@@ -46,9 +46,9 @@
 	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
 <!-- iphone 手机默认全屏 -->
 <meta name="apple-mobile-web-app-capable" content="yes" />
-<meta name="keywords" content="拍片网下单,视频交易,广告购买,导演制作费,拍片下单">
+<meta name="keywords" content="宣传片,广告片,微电影,病毒视频,MG动画,宣传片,产品宣传片,企业宣传片,创意广告片,企业微电影,产品微电影,病毒视频">
 <meta name="description"
-	content="拍片网，汇聚千万影视行业创作者，是中国最大的视频交易平台。产品：宣传片、广告、微电影、动画、三维演示等视频，优势：创意免费、选择多、价格低、不满意无条件退款">
+	content="拍片网平台汇聚了入驻导演原创精品宣传片视频案例，免费创意策划，价格透明，不满意全额退款">
 <title>精品案例  | 拍片网</title>
 
 <link rel="shortcut icon" href="${imgPath }/favicon.ico">

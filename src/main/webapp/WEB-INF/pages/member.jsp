@@ -44,8 +44,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9,chrome=1">
 <meta name="viewport"
 	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
-<meta name="keywords" content="">
-<meta name="description" content="">
+<meta name="keywords" content="拍片网团队,团队介绍,拍片网怎么样">
+<meta name="description" content="拍片网是一个温暖和谐的大家庭，成员全部来自于影视和互联网行业的精英，致力于打造“影视工业化”流程规范">
 <title>团队介绍 | 拍片网</title>
 <link rel="shortcut icon" href="${imgPath}/favicon.ico">
 <link rel="stylesheet" href="${bootstrapCss}">
