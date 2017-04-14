@@ -74,9 +74,10 @@
 				<div class="recomment-section-wrap">
 					<div class="row">
 						<label>智能硬件</label><label>广告营销</label><label>旅游户外</label>
-						<label>宣传片</label><label>广告片</label><label>动画</label><label>病毒视频</label>  <label>纪录片</label>  
-						<label>微电影</label>  <label>智能硬件</label> <label>电商</label> <label>互联网</label>  <label>医疗保健</label> <label>教育</label> 
-						<label>旅游</label>  <label>餐饮美食</label>  <label>美容</label>  <label>APP</label>
+						<label>宣传片</label><label>广告片</label><label>动画</label><label>病毒视频</label>
+						<label>纪录片</label><label>微电影</label><label>智能硬件</label>
+						<label>电商</label><label>互联网</label><label>医疗保健</label><label>教育</label> 
+						<label>旅游</label><label>餐饮美食</label><label>美容</label><label>APP</label>
 					</div>
 					<div class="row hide">
 						<label>电子商务</label><label>社交</label><label>消费生活</label>
