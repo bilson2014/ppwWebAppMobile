@@ -160,6 +160,12 @@
 		    </a>
 	    </c:forEach>
 	</c:if>
+	
+	<c:if test="${ empty list}">
+	
+	
+	
+	</c:if>
 		    
     <jsp:include flush="true" page="foot.jsp"></jsp:include> 
 	</div>	  
