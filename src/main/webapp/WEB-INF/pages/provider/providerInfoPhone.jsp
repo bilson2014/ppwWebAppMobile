@@ -155,7 +155,7 @@
 	</div> --%>
 
 	<div class="tagBody contentAnimation">
-		<c:forEach var="tags" items="${providerTag}" varStatus="status">
+		<c:forEach var="tags" items="${providerTags}" varStatus="status">
 			<div class="card">
 				${tags}
 			</div>
