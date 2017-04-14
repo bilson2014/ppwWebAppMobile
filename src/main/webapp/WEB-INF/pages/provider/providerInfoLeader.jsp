@@ -187,7 +187,7 @@
            	   </div>
                
                
-		           <div class="nextBtn" id="step2">下一步</div>
+		           <div class="nextBtn" id="step2">提交</div>
            
            </div>
            
