@@ -759,10 +759,12 @@ a:active {
         color: white;
         font-size: 0.26rem;
         position: absolute;
-        bottom: 0.5rem;
+        bottom: 0.1rem;
         left: 0.6rem;
         z-index: 3;
-    }
+        height: 0.8rem;
+        overflow: hidden;
+    }    
     .itemBack {
         position: relative;
         width: 100%;

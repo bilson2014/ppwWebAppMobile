@@ -439,7 +439,6 @@ function loadData2(Func,url,param){
 
 function getCardWord(){
 	
-		
 	$.each($('.des'), function(i,model) {
 		$(model).text(getTitleIndex(title));
 	})

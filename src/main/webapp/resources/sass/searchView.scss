@@ -46,16 +46,14 @@ body {
     input {
         padding: 0 10px;
         width: 100%;
-        height: 30px;
-        height: $search-icon-height;
-        line-height: 30px;
+        height: 40px;
+        line-height: 40px;
         outline: none;
         font-size: $normal-font-size;
         color: #666;
         border: 1px solid $border-line;
         background: #424242;
         border-radius: 71px;
-        @include border-radius(4px);
         &:hover {
             border: 1px solid rgba(190, 190, 190, 1);
         }
@@ -66,18 +64,26 @@ body {
     .go {
         position: absolute;
         display: block;
-        top: 0.6rem;
-        right: 0;
+        top: 0.7rem;
+        right: 20px;
         width: $search-icon-width;
         height: $search-icon-height;
         cursor: pointer;
     }
     .bk_gray {
-        background: image-url("/resources/images/icons/search-btn.png") no-repeat;
-        width: $search-icon-width;
-        height: $search-icon-height;
-        background-size: $search-icon-width;
+        background: image-url("/resources/images/index/toSearch.png") no-repeat;
+        width: 25px;
+        height: 25px;
+        background-size: 25px;
     }
+}
+
+.cancleInput{
+     font-size: $normal-font-size;
+     color: white;
+     position: absolute;
+     width: 30px;
+     right: 5px;
 }
 
 .recomment-section {
