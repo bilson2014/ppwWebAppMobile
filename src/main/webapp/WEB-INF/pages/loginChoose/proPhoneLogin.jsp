@@ -89,7 +89,7 @@
 			                  <div class="code"><button type="button" id="get_code_user" class="btn-get-validation" >点击获取</button></div>
 			              </div>
 			            <!--   <a href="/repwd" class="forgetPw"><div>忘记了密码?</div></a> -->
-			              <div class="loginIng" id="submitBtn-user">登录</div>
+			              <div class="loginIng" id="submitBtn-user">导演登录</div>
 			              <a href="/regSele"> <div class="noLogin">还没有账号? 请<span>注册</span></div></a>
 	              </div>
 	              
@@ -102,7 +102,7 @@
 			              </div>
 			          <!--     <a class="forgetPw"><div>忘记了密码?</div></a> -->
 
-			                    <div class="loginIng" id="submitBtn_user_name">登录</div>
+			                    <div class="loginIng" id="submitBtn_user_name">导演登录</div>
 			              <a href="/regSele"><div class="noLogin">还没有账号? 请<span>注册</span></div></a>
 	               </div>
 	         </div>

@@ -88,8 +88,8 @@
 	<div class="model" id="orderSuccess">
 	         <div class="success">
 	            <img src="${imgPath}/index/success.png">
-	            <div>提交完成审核</div>
-	            <div><span id="lasttime">3</span>秒后跳转到供应商主页</div>
+	            <div>提交完成等待审核</div>
+	            <div><span id="lasttime">3</span>秒后跳转到导演主页</div>
 	            <div id="checkSuccess">确认</div>
 	         </div>
 	</div>

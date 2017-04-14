@@ -136,7 +136,8 @@
 	     </c:if>
 
 		<!-- 影片简介 -->
-		<div class="videoInfo">影片简介 Project Summary</div>
+		<div class="videoInfo">影片简介 </div>
+		<div class="videoEn">Project Summary</div>
 		<div class="videoContent">
 			<div class="content">${product.teamDescription }</div>
 			<div class="orderVideo">预约拍片</div>

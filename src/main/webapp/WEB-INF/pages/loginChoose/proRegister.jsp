@@ -85,7 +85,7 @@
 			                  <input id="verification_code_user" placeholder="短信验证码">
 			                  <div class="code"><button type="button" id="get_code_user" class="btn-get-validation" >点击获取</button></div>
 			              </div>
-			              <div class="loginIng" id="submitBtn-user">注册</div>
+			              <div class="loginIng" id="submitBtn-user">导演注册</div>
 			              <a href="/loginSele"><div class="noLogin">已有账号? 请<span>登录</span></div></a>
 	              </div>
 	         </div>

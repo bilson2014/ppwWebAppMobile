@@ -182,7 +182,7 @@ body {
                 text-align: center;
                 border-radius: 8px;
                 color: $gray-light;
-                font-size: 0.3rem;
+                font-size: $size40;
                 outline: none;
                 background: $gray-dark;
                 border: none;
@@ -281,7 +281,7 @@ body {
     }
     div {
         margin-top: 0.2rem;
-        font-size: 0.4rem;
+        font-size: $size40;
         color: white;
     }
 }
