@@ -126,12 +126,14 @@ public class SolrController extends BaseController {
 			throws Exception {
 
 		final SolrView view = new SolrView();
-		view.setCondition(q);
+		
 		if ("最热资讯".equals(q)) {
 			// 筛选 推荐值大于0 的新闻
 			view.setRecomendFq("[1 TO *]");
 			q = null;
 		}
+		
+		view.setCondition(q);
 		model.addAttribute("q", q);
 		view.setLimit(20l);
 		
