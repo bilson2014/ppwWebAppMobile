@@ -2,9 +2,9 @@
 @import "constant";
 @import "mixin";
 @import "common_portal";
-$wrap-width-280: 280px;
-$wrap-width-320: 320px;
-$wrap-width-480: 480px;
+$wrap-width-280: 250px;
+$wrap-width-320: 280px;
+$wrap-width-480: 400px;
 $wrap-width-640: 640px;
 $wrap-width-720: 720px;
 html,
@@ -19,6 +19,7 @@ body {
 
 .search-section {
     width: 100%;
+    position: relative;
     //border-bottom: solid 1px #999;
 }
 
@@ -46,16 +47,14 @@ body {
     input {
         padding: 0 10px;
         width: 100%;
-        height: 30px;
-        height: $search-icon-height;
-        line-height: 30px;
+        height: 40px;
+        line-height: 40px;
         outline: none;
         font-size: $normal-font-size;
         color: #666;
         border: 1px solid $border-line;
         background: #424242;
         border-radius: 71px;
-        @include border-radius(4px);
         &:hover {
             border: 1px solid rgba(190, 190, 190, 1);
         }
@@ -66,18 +65,28 @@ body {
     .go {
         position: absolute;
         display: block;
-        top: 0.6rem;
-        right: 0;
+        top: 0.75rem;
+        right: 20px;
         width: $search-icon-width;
         height: $search-icon-height;
         cursor: pointer;
     }
     .bk_gray {
-        background: image-url("/resources/images/icons/search-btn.png") no-repeat;
-        width: $search-icon-width;
-        height: $search-icon-height;
-        background-size: $search-icon-width;
+        background: image-url("/resources/images/index/toSearch.png") no-repeat;
+        width: 20px;
+        height: 20px;
+        background-size: 20px;
     }
+}
+
+.cancleInput {
+    font-size: $normal-font-size;
+    color: white;
+    position: absolute;
+    width: 30px;
+    right: 0.2rem;
+    top: 0.8rem;
+    display: none;
 }
 
 .recomment-section {
@@ -103,22 +112,25 @@ body {
         .row {
             height: 45%;
             margin: 0 auto;
+            font-size: 0;
+            margin-top: 20px;
         }
         label {
-            width: 32%;
+            width: 31%;
             height: 28px;
             line-height: 28px;
-            margin-right: 2%;
+            margin-right: 3%;
             background: #424242;
             padding: 0 10px;
             text-align: center;
             cursor: pointer;
             @include border-radius(20px);
-            font-size: 0.26rem;
+            font-size: 0.36rem;
             color: $border-line;
+            margin-top:20px;
         }
-        label:last-child {
-            margin-right: 0;
+        label:nth-child(3n) {
+            margin-right: 0 !important;
         }
     }
 }
@@ -126,8 +138,10 @@ body {
 .title {
     font-size: 0.36rem;
     color: $border-line;
-    width: 320px;
-    margin: 0 auto;
     height: 51px;
     padding-top: 50px;
+    text-align: center;
 }
+
+
+

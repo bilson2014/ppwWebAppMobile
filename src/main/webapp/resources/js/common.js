@@ -53,9 +53,23 @@ $().ready(function(){
 	
 	menuInit();
 	getImgUrl();
-	
+	getDefImg();
 });
 
+
+//加载默认
+function getDefImg(){
+	var imgUrl = $('#getImgUrl').attr('src');
+
+	if(imgUrl == null || imgUrl ==""){
+		$('#getImgUrl').attr('src','/resources/images/menu/defultLogin.png');
+	}else{
+		var realUrl = imgUrl.indexOf('group');
+		if(realUrl<0){
+			$('#getImgUrl').attr('src','/resources/images/menu/defultLogin.png');
+		}
+	}
+}
 
 function getImgUrl(){
 	var p = $('#getImgUrl').attr('data-value');

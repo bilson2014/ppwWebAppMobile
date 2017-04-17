@@ -35,10 +35,10 @@
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <!-- 取消数字被识别为电话号码 -->
 <meta name="format-detection" content="telephone=no" />
-<meta name="keywords" content="拍片网,视频播放,视频详情,影片播放,影片介绍">
+<meta name="keywords" content="${news.title}">
 <meta name="description"
-	content="拍片网，汇聚千万影视行业创作者，是中国最大的视频交易平台。产品：宣传片、广告、微电影、动画、三维演示等视频，优势：创意免费、选择多、价格低、不满意无条件退款">
-<title>${product.productName }|拍片网</title>
+	content="新闻资讯频道将提供拍片网的案例分享、企业动态、行业资讯等影视行业资讯。">
+<title>${news.title} | 拍片网</title>
 
 <link rel="shortcut icon" href="${imgPath }/favicon.ico">
 <link rel="stylesheet" href="${newsInfoCss }">
@@ -51,9 +51,10 @@
 		value="${file_locate_storage_path }" />
 
 	<div class="phoneHeader">
-		<a id="openMenu"><img src="${imgPath }/index/toMenu.png"></a> <a><img
+		<a id="openMenu"><img src="${imgPath }/index/toMenu.png"></a> 
+		<a class="hide"><img
 			src="${imgPath }/index/toSearch.png"></a>
-		<img class="ppwLogo" src="${imgPath}/index/logoH.png">
+		 <a href="/"><img class="ppwLogo" src="${imgPath}/index/logoH.png"></a>
 	</div>
 	<jsp:include flush="true" page="../menu.jsp"></jsp:include>
 
@@ -65,7 +66,7 @@
 				<c:if test="${not empty fn:trim(news.tags) }">
 					<c:forEach items="${fn:split(fn:trim(news.tags),' ') }" var="tag"
 						end="2" varStatus="stat">
-						${tag}<c:if test="${!stat.last }">/</c:if>
+						<div>${tag}</div><c:if test="${!stat.last }"></c:if>
 					</c:forEach>
 				</c:if>
 			</div>

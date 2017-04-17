@@ -14,7 +14,7 @@ $footer-order-height: 120px; // 底部高度
 $footer-content-height: 40px; // 底部拍片按钮内容高度
 html,
 body {
-    font-family: "Lantinghei SC", "PingFang SC", "Open Sans", Arial, "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", "STHeiti", "WenQuanYi Micro Hei", SimSun, sans-serif;
+    font-family: "PingFang SC",  "Microsoft YaHei", "微软雅黑", "STHeiti", "WenQuanYi Micro Hei", SimSun;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
@@ -173,7 +173,7 @@ a {
 .ppwLogo {
     width: 2.1rem !important;
     position: relative !important;
-    top: -0.1rem !important;
+    top: -0.15rem !important;
 }
 
 //导航栏
@@ -212,7 +212,8 @@ a {
         position: absolute;
         bottom: 0;
         left: 0;
-        background: $gray-light;
+        background: transparent;
+        
     }
 }
 
@@ -231,41 +232,7 @@ a {
         height: 20px;
         width: 20px;
     }
-    // &:hover {
-    //     .commonWord {
-    //         color: $red-base;
-    //     }
-    //     .portal {
-    //        // @include portal-sprite(portalBg);
-    //         width: 21px;
-    //         height: 20px;
-    //         margin:0 auto; 
-    //     }
-    //     .project {
-    //         //@include portal-sprite(projectBg);
-    //         width: 21px;
-    //         height: 20px;
-    //          margin:0 auto; 
-    //     }
-    //     .order {
-    //         //@include portal-sprite(orderBg);
-    //         width: 21px;
-    //         height: 20px;
-    //          margin:0 auto; 
-    //     }
-    //     .mySelf {
-    //         //@include portal-sprite(mySelfBg);
-    //       width: 21px;
-    //         height: 20px;
-    //          margin:0 auto; 
-    //     }
-    //     .loginOut {
-    //        // @include portal-sprite(loginOutBg);
-    //         width: 21px;
-    //         height: 20px;
-    //          margin:0 auto; 
-    //     }
-    // }
+
     ul {
         margin: 0 auto;
         width: 70px;
@@ -285,36 +252,7 @@ a {
     }
 }
 
-// .portal {
-//   //  @include portal-sprite(portal);
-//     width: 21px;
-//     height: 20px;
-//     margin:0 auto; 
-// }
-// .project {
-//   //  @include portal-sprite(project);
-//     width: 21px;
-//     height: 20px;
-//      margin:0 auto; 
-// }
-// .order {
-//   //  @include portal-sprite(order);
-//     width: 21px;
-//     height: 20px;
-//     margin:0 auto; 
-// }
-// .mySelf {
-//    // @include portal-sprite(mySelf);
-//     width: 21px;
-//     height: 20px;
-//     margin:0 auto; 
-// }
-// .loginOut {
-//    // @include portal-sprite(loginOut);
-//     height: 20px;
-//     width: 21px;
-//     margin:0 auto; 
-// }
+
 .wordLeftRight {
     width: 70px;
     letter-spacing: 5px;
@@ -593,7 +531,7 @@ transform: scale(1); */
     }
     .close {
         position: absolute;
-        width: 0.45rem;
+        width: 0.8rem;
         left: 2rem;
         top: 2.4rem;
     }
@@ -652,7 +590,7 @@ transform: scale(1); */
         height: 1.6rem;
         width: 7rem;
         margin: 0 auto;
-        font-size: 0.36rem;
+        font-size: $size40;
     }
     div:nth-child(1) {
         //border-bottom: 1px solid $gray-light;
@@ -664,6 +602,7 @@ transform: scale(1); */
     }
     .loginOut {
         border: none !important;
+
     }
 }
 

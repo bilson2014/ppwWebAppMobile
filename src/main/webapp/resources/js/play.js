@@ -2,7 +2,7 @@ var imgUrl, play;
 var kaptcharInterValObj; // timer变量，控制时间
 var InterValObj; // timer变量，控制时间 - 注册
 var InterValRecoverObj; // timer变量，控制时间 - 密码找回
-var count = 120; // 间隔函数，1秒执行 
+var count = 60; // 间隔函数，1秒执行 
 var curCount = 0; // 当前剩余秒数 - 注册
 var recoverCount; // 当前剩余秒数 - 密码找回
 var noCardIndex = 0;
@@ -24,9 +24,9 @@ $().ready(function() {
     $('#closeOrder').off('click').on('click',function(){
     	$('#orderTo').hide();
     });
-    
+});
 
-}), play = {
+play = {
     initData: function() {
         //var b, c, d, e, f, g, h, i, j, k, l, m, a = $("#videoPoster").val();
         
@@ -39,21 +39,18 @@ $().ready(function() {
         
         var screenWidth = document.documentElement.clientWidth;
         var setHeight= screenWidth/16*9;
-
         
-        if(urlSize != '' && urlSize != null && urlSize != undefined){
-	        $('#playVideo').attr('src',url);
-	        $('#recomment-video').attr('poster',post);
-	        $('#recomment-video').show();
-	        $('video').css('height',setHeight);
-        } else{
-        	if(hret != '' && hret != null && hret != undefined){
-        		makePlayer('video-play', hret); // 创建视频浏览器
-        		$('#video-play').css('height',setHeight);
-        	}
-        }
-      $('#teamPhoto').attr('src',getDfsHostName()+$('#teamPhotoUrl').val());  
-
+	        if(urlSize != '' && urlSize != null && urlSize != undefined){
+		        $('#playVideo').prop('src',url);
+		        $('#recomment-video').load();
+		        $('#recomment-video').attr('poster',post);
+		        $('#recomment-video').show();
+		        $('video').css('height',setHeight);
+	        }
+        var img = $('#teamPhotoUrl').val();
+	        if(img!=''&&img!=null){
+                  $('#teamPhoto').attr('src',getDfsHostName()+$('#teamPhotoUrl').val());
+	        }
     },
     order: function() {
         $("#order-btn").on("click", function() {
@@ -90,18 +87,31 @@ $().ready(function() {
 			begin : 0,
 			limit : 9
 		}));
-    },
-    
+    }
 };
 
 function createCard(msg){
 	var tema = msg.teamId;
 	var pro = msg.productId;
+	var str = msg.tags;
+	var spl = str.split(" ");
+	var tags = "";
+	for (var int = 0; int < spl.length; int++) {
+		if(int == spl.length - 1){
+			tags = tags + spl[int];
+		}else{
+			tags = tags + spl[int] +" / ";
+		}
+	}
+	
+	console.log(tags);
+	
 	var $body1 = ''
 		+'   <a href="/play/'+tema+'_'+pro+'.html">'
 		+'		 <div class="contentItem" style="background:url('+getDfsHostName()+''+msg.picLDUrl+') no-repeat">'
 		+'			   <div class="itemTitle">'+msg.productName+'</div>'
-		+'					 <div class="itemTag">'+msg.tags+'</div>'
+		+'					 <div class="itemTag">'+tags+'</div>'
+		+'					 <div class="itemBack"></div>'
 		+'		 </div> '
 		+'	 </a>'
 	return $body1;		
@@ -128,7 +138,8 @@ function submitOrder(){
 			   $('#orderTo').hide();
 			   $('#orderSuccess').show();
 			}else{
-				$('#codeError').text('下单失败');
+				$('#codeError').text(msg.message);
+				$('#codeError').show();
 			}
 		}, getContextPath() + '/order/deliver', 
 			{indentName : $("#videoName").val(),

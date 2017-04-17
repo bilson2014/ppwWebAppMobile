@@ -49,10 +49,10 @@
 <!-- 取消数字被识别为电话号码 -->
 <meta content="telephone=no" name="format-detection">
 <meta name="apple-mobile-web-app-capable" content="yes" />
-<meta name="keywords" content="拍片网下单,视频交易,广告购买,导演制作费,拍片下单">
+<meta name="keywords" content="拍片网,供应商">
 <meta name="description"
-	content="拍片网，汇聚千万影视行业创作者，是中国最大的视频交易平台。产品：宣传片、广告、微电影、动画、三维演示等视频，优势：创意免费、选择多、价格低、不满意无条件退款">
-<title>${provider.teamName}|拍片网</title>
+	content="${provider.teamDescription}">
+<title>${provider.teamName} | 拍片网</title>
 
 <link rel="shortcut icon" href="${imgPath }/favicon.ico">
 <link rel="stylesheet" href="${bootstrapAlertCss }">
@@ -89,7 +89,7 @@
 	<div class="phoneHeader">
 	     <a id="openMenu"><img src="${imgPath }/index/toMenu.png"></a>
 	     <a id="toSearch"><img src="${imgPath }/index/toSearch.png"></a>
-	     <img class="ppwLogo" src="${imgPath}/index/logoH.png">
+	      <a href="/"><img class="ppwLogo" src="${imgPath}/index/logoH.png"></a>
 	</div>
 	
 	<jsp:include flush="true" page="../menu.jsp"></jsp:include>
@@ -104,7 +104,7 @@
 			</li>
 			<li class="providerName">
 			  <div class="nameSize">
-				<div class="providerNames">大大</div> 
+				<div class="providerNames">${provider.teamName }</div> 
 				<c:if test="${provider.flag == 2}">
 					<div class="providerStatesRed states">未通过审核</div>
 				</c:if> 
@@ -118,9 +118,9 @@
 			</li>
 			<li class="providerPlace"><img class="place"
 				src="${imgPath}/provder/place.png"></li>
-			<li class="provinceCity"><div id="province">那儿</div>
+			<li class="provinceCity"><div id="province">${provider.teamProvinceName }</div>
 				<div class="circle"></div>
-				<div id="city">中国</div></li>
+				<div id="city">${provider.teamCityName }</div></li>
 		</ul>
 
 	</div>
@@ -154,12 +154,8 @@
 		</c:forEach>
 	</div> --%>
 
-	<div class="tagBody contentAnimation">
-		<c:forEach var="tags" items="${providerTag}" varStatus="status">
-			<div class="card">
-				${tags}
-			</div>
-		</c:forEach>
+	<div class="tagBody contentAnimation adb">
+		<input type="hidden" id="id_tags" value='${providerTags}'>
 	</div>
 
 	<!--代表说明  -->
@@ -172,7 +168,12 @@
 		<a href="/play/${product.teamId}_${product.productId }.html">
 			<div class="contentItem contentAnimation" style="background:url(${file_locate_storage_path}${product.picHDUrl}) no-repeat">
 				                     <div class="itemTitle">${product.productName}</div>
-				                     <div class="itemTag">${product.tags}</div>
+				                     <div class="itemTag">
+				                       <c:forEach items="${fn:split(fn:trim(product.tags),' ') }" var="tag" end="2" varStatus="stat">
+												${tag} <c:if test="${!stat.last }">/</c:if>
+									   </c:forEach>
+				                     </div>
+				                     <div class="itemBack"></div>
 		    </div>
 	    </a>
 	 </c:if>   
@@ -245,14 +246,21 @@
 		</div>
 
 		<div id="btn"> 
-			<r:noLogin>
-				<a href="/loginSele">
+		
+		
+		<a href="/proRegister">
+					<div class="checkBtn">
+						加入我们
+					</div>
+	    </a>
+		<%-- 	<r:noLogin>
+				<a href="/proRegister">
 					<div class="checkBtn">
 						加入我们
 					</div>
 				</a>
-			</r:noLogin> 
-			<r:identity role="provider">
+			</r:noLogin>  --%>
+<%-- 			<r:identity role="provider">
 				<a href="/login/loginout">
 					<div class="checkBtn">
 						退出登录
@@ -272,37 +280,12 @@
 						加入我们
 					</div>
 				</a>
-			</r:identity>
+			</r:identity> --%>
 		</div>
 	</div>
-	<div class="footPhone">
-		         <div class="leftContent">
-		              <img class="logoFoot" src="${imgPath}/index/logoH.png">
-		              <div class="footItem">
-		                 <div class="service">服务热线  : </div>
-		                 <div>400-660-9728</div>
-		              </div>
-		               <div class="footItem">
-		                 <div class="cMail">公司邮箱  : </div>
-		                 <div>bdmarket@paipianwang.cn</div>
-		              </div>
-		               <div class="footItem">
-		                 <div class="cAddress">公司地址  : </div>
-		                 <div class="differentItem">北京市朝阳区国贸建外SOHO东区6号楼25层</div>
-		              </div>
-		         </div>
-		         <div class="rightContent">
-		              <img src="${imgPath}/index/footCode.png">
-		              <div>拍片网官微</div>
-		         </div>
-		         <div class="footBottom">
-		              © 2016 北京拍片乐科技有限公司 京ICP备16066831号-1  
-		              <br>百度统计 站长统计
-		         </div>
-		     </div>
+	<jsp:include flush="true" page="../foot.jsp"></jsp:include> 
 	
 </div>	
-
 
 <script src="${jqueryJs }"></script>
 <script src="${pluginJs }"></script>

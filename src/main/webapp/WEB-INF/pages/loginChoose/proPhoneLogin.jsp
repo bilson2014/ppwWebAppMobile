@@ -30,7 +30,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
 	<meta name="keywords" content="拍片网,视频制作,拍广告,找导演,拍片">
 	<meta name="description" content="拍片网，汇聚千万影视行业创作者，是中国最大的视频交易平台。产品：宣传片、广告、微电影、动画、三维演示等视频，优势：创意免费、选择多、价格低、不满意无条件退款">
-	<title>导演登录|拍片网</title>
+	<title>导演登录 | 拍片网</title>
 	<link rel="shortcut icon" href="${imgPath}/favicon.ico" >
 	<link rel="stylesheet" href="${bootstrapCss}">
 	<link rel="stylesheet" href="${commonCss}">
@@ -53,11 +53,11 @@
 <body>
 
 	<div class="phoneHeader">
-	     <a id="openMenu"><img src="${imgPath }/index/toMenu.png"></a>
+	     <a class="hide" id="openMenu"><img src="${imgPath }/index/toMenu.png"></a>
 	     <a href="/searchview">  
 		 <img  src="${imgPath}/index/toSearch.png">
 		</a> 
-	    <img class="ppwLogo" src="${imgPath}/index/logoH.png">
+	      <a href="/"><img class="ppwLogo" src="${imgPath}/index/logoH.png"></a>
 	</div>
 	
 	 <jsp:include flush="true" page="../menu.jsp"></jsp:include> 
@@ -67,6 +67,10 @@
 	  <div class="pagePhone">
 	         
 	         <div class="cusLogin">
+		          <div class="loginImg" >
+		             <img src="${imgPath}/login/pro.png">
+		         </div>
+		         
 	              <div class="loginTop" id="loginTop">
 	                  <div id="phoneLogin">手机号登录</div>
 	                  <div id="noPhoneLogin">账号登录</div>
@@ -85,7 +89,7 @@
 			                  <div class="code"><button type="button" id="get_code_user" class="btn-get-validation" >点击获取</button></div>
 			              </div>
 			            <!--   <a href="/repwd" class="forgetPw"><div>忘记了密码?</div></a> -->
-			              <div class="loginIng" id="submitBtn-user">登录</div>
+			              <div class="loginIng" id="submitBtn-user">导演登录</div>
 			              <a href="/regSele"> <div class="noLogin">还没有账号? 请<span>注册</span></div></a>
 	              </div>
 	              
@@ -94,10 +98,11 @@
 			                  <input placeholder="用户名" id="user_name">
 			              </div>
 			              <div class="loginItemPhone">
-			                  <input placeholder="密码"   id="user_pwd">
+			                  <input placeholder="密码" type="password"  id="user_pwd">
 			              </div>
-			              <a class="forgetPw"><div>忘记了密码?</div></a>
-			                    <div class="loginIng" id="submitBtn_user_name">登录</div>
+			          <!--     <a class="forgetPw"><div>忘记了密码?</div></a> -->
+
+			                    <div class="loginIng" id="submitBtn_user_name">导演登录</div>
 			              <a href="/regSele"><div class="noLogin">还没有账号? 请<span>注册</span></div></a>
 	               </div>
 	         </div>

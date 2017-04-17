@@ -34,9 +34,9 @@
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <!-- 取消数字被识别为电话号码 -->
 <meta content="telephone=no" name="format-detection">
-<meta name="keywords" content="宣传片制作,企业宣传片,拍片网,广告片制作,微电影制作,企业微电影">
-<meta name="description" content="拍片网是一个视频内容制作服务平台，主营宣传片制作和微电影制作，三大优势：免费创意策划、72小时出片、不满意全额退款或重拍。拍片就上拍片网">
-<title>成本计算|拍片网</title>
+<meta name="keywords" content="拍片成本报价,拍片陈本估算,拍片计算器,宣传片制作报价">
+<meta name="description" content="拍片网平台致力于打造“影视工业化”行业标准，首家模块化成本定价，推出拍片成本计算器，随时了解视频制作价格。拍片就上拍片网！">
+<title>成本计算 | 拍片网</title>
 
 <link rel="shortcut icon" href="${imgPath }/favicon.ico">
 <link rel="stylesheet" href="${phoneCost }">
@@ -55,7 +55,7 @@
 
 	<div class="phoneHeader">
 	     <a id="openMenu"><img src="${imgPath }/index/toMenu.png"></a>
-	     <a><img src="${imgPath }/index/toSearch.png"></a>
+	     <a href="/searchview"><img src="${imgPath }/index/toSearch.png"></a>
 	     <img class="ppwLogo" src="${imgPath}/index/logoH.png">
 	</div>
 	

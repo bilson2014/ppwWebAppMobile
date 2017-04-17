@@ -13,6 +13,7 @@ $().ready(function() {
 	portal.getProviderItem();
 	//isWeiXin();
 	subPaipian();
+	getCardWord();
 
 });
 
@@ -185,14 +186,14 @@ var portal = {
 		});
 	},
 	controlLogo : function() { // 分享
-		 $('.ppwLogo').hide();
+		 $('.ppwLogos').hide();
 		 $('.pagePhone').scroll(function() {
 			  var divTop = $('#logoPos').offset().top;
 			  var nowTop = $('.pagePhone').scrollTop();
               if(divTop < nowTop){
-            	  $('.ppwLogo').show();
+            	  $('.ppwLogos').show();
               }else{
-            	  $('.ppwLogo').hide();
+            	  $('.ppwLogos').hide();
               }
 			
 		  });
@@ -226,7 +227,13 @@ var portal = {
 				                '<div class="tags">';
 					 if(json!=null && json !=''){
 						 for (var int = 0; int < json.length; int++) {
+							 
+							 if(int >=4){
+								 break;
+							 }
+							 
 							 $body += '<div class="tagsItem">'+ json[int]+'</div>';
+							 
 						}
 					 }
 		 $body +=			      '</div>'+
@@ -308,7 +315,7 @@ function btnPosition() {
 			
 		  });	
 }
-var counts = 120; // 间隔函数，1秒执行
+var counts = 60; // 间隔函数，1秒执行
 var curCounts = 0; // 当前剩余秒数 - 注册
 var InterValObj; // timer变量，控制时间 - 注册
 function subPaipian(){
@@ -434,4 +441,25 @@ function loadData2(Func,url,param){
 			console.error('[' + textStatus + ']' + errorThrown);
 		}
 	});
+}
+
+function getCardWord(){
+	
+	$.each($('.des'), function(i,model) {
+		$(model).text(getContentIndex(title));
+	})
+	
+}
+
+function getContentIndex(string){
+	 var screenWidth = document.documentElement.clientWidth;
+	 var num = 33;  
+	    
+	if(string.length<=num){
+		var content = string
+	}else{
+		var content = string.substr(1,num) +"[...]"
+	}
+	
+	return  content;
 }

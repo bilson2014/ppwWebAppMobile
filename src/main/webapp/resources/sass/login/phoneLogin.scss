@@ -20,6 +20,16 @@ body {
     background-size: 100% 100% !important;
 }
 
+.loginImg{
+    width: 100%;
+    text-align: center;
+    margin-top: 0.8rem;
+
+    img{
+        width: 3.25rem;
+    }
+}
+
 .errorDiv {
     height: 1.3rem;
     width: 100%;
@@ -45,12 +55,13 @@ body {
 .proLogin {
     border-top: 1px solid #979797;
     width: 9rem;
-    color:$gray-light;
-    font-size: 0.3rem;
+    color:#e3e3e3;
+    font-size: $size40;
     text-align: center;
     margin: 0 auto;
     line-height: 1.5rem;
     margin-top: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 .choosePage {
@@ -58,22 +69,22 @@ body {
 }
 
 .loginItem {
-    margin-bottom: 1.3rem;
+    margin-bottom: 1rem;
     background: transparent;
     text-align: center;
     div:nth-child(1) {
         color: #e3e3e3;
-        font-size: 0.42rem;
+        font-size: $size46;
         margin-bottom: 0.3rem;
         font-weight: bold;
     }
     div:nth-child(2) {
         color: $border-line;
-        font-size: 0.3rem;
+        font-size: $size36;
     }
     div:nth-child(3) {
         color: $border-line;
-        font-size: 0.3rem;
+        font-size: $size36;
         margin-top: 0.1rem;
     }
     img {
@@ -85,7 +96,7 @@ body {
 .toLogin {
     width: 100%;
     text-align: center;
-    font-size: 0.3rem;
+    font-size:$size36;
     color: white;
     span {
         color: $red-base;
@@ -114,7 +125,6 @@ body {
         text-align: center;
         position: relative;
         border-bottom: 2px solid $gray-dark;
-        margin-top: 2.3rem;
         div {
             -webkit-transition: all .2s linear .1s;
             -moz-transition: all .2s linear .1s;
@@ -126,14 +136,14 @@ body {
             display: inline-block;
             vertical-align: top;
             color: $red-base;
-            font-size: 0.4rem;
+            font-size: $size46;
         }
         div:nth-child(2) {
             width: 50%;
             display: inline-block;
             vertical-align: top;
             color: $gray-light;
-            font-size: 0.4rem;
+           font-size: $size46;
         }
         div:nth-child(3) {
             width: 50%;
@@ -149,7 +159,6 @@ body {
         height: 2rem;
         border-bottom: 1px solid $gray-light;
         position: relative;
-        margin-top: 0.2rem;
         .image {
             width: 2rem;
             height: 0.8rem;
@@ -160,7 +169,7 @@ body {
         }
         .code {
             color: white;
-            font-size: 0.34rem;
+            font-size:$size40;
             position: absolute;
             right: 0.5rem;
             top: 0.95rem;
@@ -175,7 +184,7 @@ body {
             line-height: 0.99rem;
             padding-right: 0.3rem;
             color: #e3e3e3;
-            font-size: 0.34rem;
+            font-size:$size40;
             background: transparent;
             border: none;
             outline: none;
@@ -196,22 +205,23 @@ body {
 
 .loginIng {
     width: 8rem;
-    height: 1rem;
-    line-height: 1rem;
+    height: 1.1rem;
+    line-height: 1.1rem;
     color: white;
-    font-size: 0.36rem;
+    font-size: $size40;
     background: $red-base;
     border-radius: 100px;
     text-align: center;
-    margin-top: 1.3rem;
+    margin-top: 1rem;
 }
 
 .noLogin {
     width: 100%;
     text-align: center;
     color: white;
-    font-size: 0.3rem;
+    font-size: $size36;
     margin-top: 0.8rem;
+    margin-bottom: 1.5rem;
     span {
         color: $red-base;
         margin-left: 3px;

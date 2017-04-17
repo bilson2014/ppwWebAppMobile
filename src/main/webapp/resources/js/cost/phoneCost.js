@@ -9,14 +9,14 @@ var first = true;
 $().ready(function() {
 
 	 init();
-	 controlActive();
+
 	 getVerificationCode();
 	 controlCost();
 	// submit();
 });
 function controlCost(){
 	$('.start').off('click').on('click',function(){
-		$('#step1').hide();
+		/*$('#step1').hide();
 		$('#step2').show();
 	 	setTimeout(function() {
 		 		$('#bar').addClass('proWidth'); 
@@ -24,7 +24,7 @@ function controlCost(){
 	 	setTimeout(function() {
 			$('#step2').hide();
 			$('#step3').show();
-		}, 3000);
+		}, 3000);*/
 	 	if(checkData()){
 			var videoType = $('#videoType').text();
 			var team = $('#team').text();
@@ -43,17 +43,30 @@ function controlCost(){
 					add = false;
 					loadData(function(result) {
 						add = true;
+						$('#phoneError').hide();
+						$('#codeError').hide();
 						if(result.code == 1){
 							$('#price').text(thousandCount(result.cost));
 							$('#phone').attr('data-content', result.indentId);
 							$("#code-container").remove();
 							$('#bar').removeClass('proWidth'); 
 							$('.item').hide();
+							$('#step1').hide();
+							$('#step2').show();
+						 	setTimeout(function() {
+							 		$('#bar').addClass('proWidth'); 
+								}, 500);
+						 	setTimeout(function() {
+								$('#step2').hide();
+								$('#step3').show();
+							}, 3000);
 							first = false;
 						}else if(result.code == 0 && result.msg == '手机号不匹配'){
-							$('#errorPhone').attr('data-content', '手机号不匹配');
+							$('#phoneError').text( '手机号不匹配');
+							$('#phoneError').show();
 						}else{
-							$('#errorCode').attr('data-content', result.msg);
+							$('#codeError').text( result.msg);
+							$('#codeError').show();
 						}
 					}, getContextPath() + '/calculate/cost', $.toJSON({
 						videoType : $('#videoType').attr('data-content'),
@@ -72,8 +85,16 @@ function controlCost(){
 						flag = 1;
 						$('#price').text(thousandCount(result.cost));
 						$('#phone').attr('data-content', result.indentId);
-						controlCost();
 						$('.item').hide();
+						$('#step1').hide();
+						$('#step2').show();
+					 	setTimeout(function() {
+						 		$('#bar').addClass('proWidth'); 
+							}, 500);
+					 	setTimeout(function() {
+							$('#step2').hide();
+							$('#step3').show();
+						}, 3000);
 					}, getContextPath() + '/calculate/cost2', $.toJSON({
 						videoType : $('.type').attr('data-content'),
 						team : $('.team').attr('data-content'),
@@ -119,30 +140,22 @@ function init() {
 	        	}
 	        	
 	        }
-//	        onSlideChangeEnd: function(swiper) {
-//	            var number = swiper.activeIndex; //每次切换时，提示现在是第几个slide
-//	            var url = 'url(/resources/images/index/back'+number+'.jpg) no-repeat'
-//                $('.swiper-container').css('background',url);
-//	            $('.swiper-container').css('background-size','100% 100%');
-//	            if(number >5){
-//	            	$('.swiper-container').addClass('showOp');
-//	            	$('.costResult').show();
-//	            }
-//	            console.info(number);
-//	            
-//	        },
+
 	    });
+	 
+	 controlActive(swiper);
 	 
 	 $('.reCost').on('click',function(){
 		 swiper.slideTo(0, 1000, false);//切换到第一个slide，速度为1秒
 		 $('#step1').show();
 		 $('#step2').hide();
 		 $('#step3').hide();
+		 $('#bar').removeClass('proWidth'); 
 	 });
 	
 }
 
-function controlActive(){
+function controlActive(swiper){
 	
 	$('.tags1').off('click').on('click',function(){
 		$('.tags1').removeClass('type');
@@ -178,8 +191,6 @@ function controlActive(){
 		$('#noInfo').hide();
 	});
 	
-
-		
 }
 
 function initStep1(swiper){

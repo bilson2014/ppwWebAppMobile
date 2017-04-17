@@ -31,7 +31,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
 	<meta name="keywords" content="拍片网,视频制作,拍广告,找导演,拍片">
 	<meta name="description" content="拍片网，汇聚千万影视行业创作者，是中国最大的视频交易平台。产品：宣传片、广告、微电影、动画、三维演示等视频，优势：创意免费、选择多、价格低、不满意无条件退款">
-	<title>客户注册|拍片网</title>
+	<title>客户注册 | 拍片网</title>
 	<link rel="shortcut icon" href="${imgPath}/favicon.ico" >
 	<link rel="stylesheet" href="${bootstrapCss}">
 	<link rel="stylesheet" href="${commonCss}">
@@ -56,10 +56,10 @@
 
 	<div class="phoneHeader">
 	     <a id="openMenu"><img src="${imgPath }/index/toMenu.png"></a>
-	     <a href="/searchview">  
+	     <a class="hide" href="/searchview">  
 		 <img  src="${imgPath}/index/toSearch.png">
 		</a> 
-	     <img class="ppwLogo" src="${imgPath}/index/logoH.png">
+	           <a href="/"><img class="ppwLogo" src="${imgPath}/index/logoH.png"></a>
 	</div>
 	
 	 <jsp:include flush="true" page="../menu.jsp"></jsp:include> 
@@ -68,6 +68,11 @@
 	
 	  <div class="pagePhone">
 	         <div class="cusLogin">
+	         
+	         <div class="loginImg" >
+	             <img src="${imgPath}/login/cus.png">
+	         </div>
+	         
 	              <div class="loginPhone " id="phoneLoginDiv">
 			              <div class="loginItemPhone">
 			                  <input placeholder="手机号"  id="user_phoneNumber">
@@ -80,7 +85,7 @@
 			                  <input id="verification_code_user" placeholder="短信验证码">
 			                  <div class="code"><button type="button" id="get_code_user" class="btn-get-validation" >点击获取</button></div>
 			              </div>
-			              <div class="loginIng" id="submitBtn-user">注册</div>
+			              <div class="loginIng" id="submitBtn-user">用户注册</div>
 			              <a href="/loginSele"><div class="noLogin">已有账号? 请<span>登录</span></div></a>
 	              </div>
 	         </div>

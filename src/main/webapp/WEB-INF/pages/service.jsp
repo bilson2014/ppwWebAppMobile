@@ -35,9 +35,9 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=9,chrome=1">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
-	<meta name="keywords" content="">
-	<meta name="description" content="">
-	<title>服务流程|拍片网</title>
+	<meta name="keywords" content="宣传片制作流程,拍片服务流程">
+	<meta name="description" content="拍片网平台上的宣传片制作流程以及整个拍片服务流程。拍片就上拍片网！">
+	<title>服务流程 | 拍片网</title>
 	<link rel="shortcut icon" href="${imgPath}/favicon.ico" >
 	<link rel="stylesheet" href="${bootstrapCss}">
 	<link rel="stylesheet" href="${commonCss}">
@@ -82,7 +82,7 @@
 	     <a href="/searchview">  
 		  <img  src="${imgPath}/index/toSearch.png">
 		 </a> 
-	     <img class="ppwLogo" src="${imgPath}/index/logoH.png">
+	     <a href="/"><img class="ppwLogo" src="${imgPath}/index/logoH.png"></a>
 	</div>
 	
 	<jsp:include flush="true" page="menu.jsp"></jsp:include>

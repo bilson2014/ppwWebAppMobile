@@ -102,7 +102,6 @@
             top: 0px;
             z-index: 11;
             text-align: center;
-      
             img {
                 width: 0.5rem;
             }
@@ -122,8 +121,6 @@
                 }
             }
         }
-
-
         
         //第一区域
         .logo {
@@ -160,10 +157,10 @@
             align-items: center;
             color: white;
             .title {
-                font-size: 0.54rem;
+                font-size: $size60;
             }
             .desc {
-                font-size: 0.47rem;
+                font-size: $size40;
             }
             .line {
                 width: 2.2rem;
@@ -183,8 +180,8 @@
         
         .getPhone {
             color: white;
-            font-size: 0.36rem;
-            width: 7rem;
+            font-size: $size40;
+            width: 8rem;
             margin: 0 auto;
             .getPhoneItem {
                 width: 100%;
@@ -194,28 +191,28 @@
             .getCode {
                 height: 0.8rem;
                 line-height: 0.8rem;
-                color: $white;
-                width: 3rem;
+                color: #fff;
+                width: 2.5rem;
                 border-left: 1px solid $red-base;
                 position: absolute;
-                top: 0.1rem;
-                right: 0;
-                text-align: center;
+                top: 0.15rem;
+                right: 16px;
+                text-align: right;
             }
             input {
                 background: none;
-                width: 7rem;
-                height: 1rem;
-                line-height: 1rem;
+                width: 8rem;
+                height: 1.1rem;
+                line-height: 1.08rem;
                 text-align: left;
                 border-color: $red-base;
                 border-radius: 61px;
                 margin: 0 auto;
                 outline: none;
-                padding-left: 10px;
+                padding-left: 15px;
             }
             .error {
-                font-size: 0.2rem;
+                font-size: 0.26rem;
                 color: $red-base;
                 position: relative;
                 top: 0.2rem;
@@ -225,10 +222,10 @@
         
         .order {
             color: white;
-            font-size: 0.36rem;
-            width: 7rem;
-            height: 1rem;
-            line-height: 1rem;
+            font-size: $size40;
+            width: 8rem;
+            height: 1.1rem;
+            line-height: 1.1rem;
             text-align: center;
             background: $red-base;
             border-radius: 61px;
@@ -266,14 +263,14 @@
             .title {
                 width: 100%;
                 color: white;
-                font-size: 0.4rem;
+                font-size: $size46;
                 text-align: center;
                 margin-bottom: 0.8rem;
             }
             .service {
                 width: 100%;
                 color: white;
-                font-size: 0.4rem;
+                font-size: $size46;
                 text-align: center;
                 margin-top: 1rem;
                 margin-bottom: 0.8rem;
@@ -302,7 +299,7 @@
                 .type {
                     color: white;
                     width: 100%;
-                    font-size: 0.36rem;
+                    font-size: $size40;
                     height: auto !important;
                 }
             }
@@ -346,7 +343,7 @@
                     }
                     div:nth-child(2) {
                         color: white;
-                        font-size: 0.28rem;
+                        font-size: $size30;
                     }
                 }
             }
@@ -354,10 +351,10 @@
         
         .freeTel {
             color: white;
-            font-size: 0.36rem;
-            width: 7rem;
-            height: 1rem;
-            line-height: 1rem;
+            font-size: $size40;
+            width: 8rem;
+            height: 1.1rem;
+            line-height: 1.1rem;
             text-align: center;
             background: $red-base;
             border-radius: 61px;
@@ -370,7 +367,7 @@
         //第三区域
         .ourCusTitle {
             color: white;
-            font-size: 0.4rem;
+            font-size: $size46;
             margin-bottom: 0.8rem;
             width: 100%;
             text-align: center;
@@ -379,7 +376,7 @@
         .join {
             width: 4rem;
             height: 0.9rem;
-            font-size: 0.36rem;
+            font-size: $size40;
             color: white;
             line-height: 0.9rem;
             text-align: center;
@@ -424,6 +421,7 @@
                     margin-right: 0.3rem;
                     img:nth-child(1) {
                         width: 100%;
+                        height: 100%;
                         border-radius: 100%;
                     }
                     img:nth-child(2) {
@@ -441,14 +439,14 @@
                     .title {
                         width: 6rem;
                         color: white;
-                        font-size: 0.36rem;
+                        font-size: $size40;
                         @include ellipsis;
                     }
                     .des {
                         width: 6rem;
                         height: 0.75rem;
-                        color: #e3e3e3;
-                        font-size: 0.32rem;
+                        color: #d1d1d1;
+                        font-size: $size36;
                         line-height: 0.4rem;
                         overflow: hidden;
                         white-space: initial;
@@ -460,20 +458,22 @@
                         position: absolute;
                         bottom: 0;
                         left: 0;
-                        height: 0.5rem;
+                        height: 0.6rem;
                         font-size: 0;
                         .tagsItem {
-                            width: 1.3rem;
-                            height: 0.5rem;
-                            line-height: 0.48rem;
+                            width: auto;
+                            height: 0.6rem;
+                            line-height: 0.58rem;
                             border-radius: 49px;
-                            font-size: 0.26rem;
+                            font-size: $size28;
                             color: $gray-light;
                             text-align: center;
                             border: 1px solid $gray-light;
                             margin-right: 0.2rem;
                             display: inline-block;
                             vertical-align: top;
+                            padding-right:0.1rem;
+                            padding-left: 0.1rem;
                         }
                     }
                 }

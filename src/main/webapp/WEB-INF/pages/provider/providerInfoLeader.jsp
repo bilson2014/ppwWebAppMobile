@@ -59,7 +59,7 @@
 <meta name="keywords" content="拍片网下单,视频交易,广告购买,导演制作费,拍片下单">
 <meta name="description"
 	content="拍片网，汇聚千万影视行业创作者，是中国最大的视频交易平台。产品：宣传片、广告、微电影、动画、三维演示等视频，优势：创意免费、选择多、价格低、不满意无条件退款">
-<title>导演注册流程|拍片网</title>
+<title>导演注册流程 | 拍片网</title>
 
 <link rel="shortcut icon" href="${imgPath }/favicon.ico">
 <link rel="stylesheet" href="${bootstrapAlertCss }">
@@ -88,16 +88,16 @@
 	<div class="model" id="orderSuccess">
 	         <div class="success">
 	            <img src="${imgPath}/index/success.png">
-	            <div>提交完成审核</div>
-	            <div><span id="lasttime">3</span>秒后跳转到供应商主页</div>
+	            <div>提交完成等待审核</div>
+	            <div><span id="lasttime">3</span>秒后跳转到导演主页</div>
 	            <div id="checkSuccess">确认</div>
 	         </div>
 	</div>
 
     <div class="phoneHeader">
 	     <a><img src="${imgPath }/index/toMenu.png"></a>
-	     <a><img src="${imgPath }/index/toSearch.png"></a>
-	     <img class="ppwLogo" src="${imgPath}/index/logoH.png">
+	     <a class="hide"><img src="${imgPath }/index/toMenu.png"></a>
+	      <a href="/"><img class="ppwLogo" src="${imgPath}/index/logoH.png"></a>
 	</div>
     
      <jsp:include flush="true" page="../menu.jsp"></jsp:include> 
@@ -187,7 +187,7 @@
            	   </div>
                
                
-		           <div class="nextBtn" id="step2">下一步</div>
+		           <div class="nextBtn" id="step2">提交</div>
            
            </div>
            

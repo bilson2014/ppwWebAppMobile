@@ -1,6 +1,18 @@
 $().ready(function(){
-	
-
+	var tag = $('#id_tags').val();
+	var root = $('.adb');
+	if(tag !=null && tag != ''){
+		var json = $.evalJSON(tag);
+		if(json != null && json.length >0){
+			for (var int = 0; int < json.length; int++) {
+				var body = '';
+					body+='<div class="card">';
+					body+= json[int];
+					body+= '</div>';
+					root.append(body);
+			}
+		}
+	}
 });
 	
 	showHeadImg();
@@ -35,13 +47,14 @@ $().ready(function(){
 				}));
 			},
 			getMore:function(data){
-				$("#findMore").off("click").on("click",function(){
-				$("#findMore").addClass("hide");
+				$(".findMore").off("click").on("click",function(){
+				$(".findMore").addClass("hide");
 					for(var i = 5;i < data.length;i++){
 						var card = createCard(data[i]);
-						$("#productContent").append(card);
+						$("#moreProduct").append(card);
 					}
 					lazyLoad();
+					getHeight();
 				})
 			},
 			
@@ -57,6 +70,7 @@ $().ready(function(){
 			+'		 <div class="contentItem" style="background:url('+getDfsHostName()+''+msg.picLDUrl+') no-repeat">'
 			+'			   <div class="itemTitle">'+msg.productName+'</div>'
 			+'					 <div class="itemTag">'+msg.tags+'</div>'
+			+'					 <div class="itemBack"></div>'
 			+'		 </div> '
 			+'	 </a>'
 		return $body1;		

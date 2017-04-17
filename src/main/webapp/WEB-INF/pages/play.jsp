@@ -34,10 +34,10 @@
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <!-- 取消数字被识别为电话号码 -->
 <meta name="format-detection" content="telephone=no" />
-<meta name="keywords" content="拍片网,视频播放,视频详情,影片播放,影片介绍">
+<meta name="keywords" content="${product.tags }">
 <meta name="description"
-	content="拍片网，汇聚千万影视行业创作者，是中国最大的视频交易平台。产品：宣传片、广告、微电影、动画、三维演示等视频，优势：创意免费、选择多、价格低、不满意无条件退款">
-<title>${product.productName }|拍片网</title>
+	content="${product.pDescription }">
+<title>${product.productName } | 拍片网</title>
 
 <link rel="shortcut icon" href="${imgPath }/favicon.ico">
 <link rel="stylesheet" href="${playCss }">
@@ -70,7 +70,7 @@
 	<div class="phoneHeader">
 		<a id="openMenu"><img src="${imgPath }/index/toMenu.png"></a> 
 		<a href="/searchview"> <img src="${imgPath}/index/toSearch.png"></a>
-		<img class="ppwLogo" src="${imgPath}/index/logoH.png">
+		<a href="/"><img class="ppwLogo" src="${imgPath}/index/logoH.png"></a>
 	</div>
 
 	<jsp:include flush="true" page="menu.jsp"></jsp:include>
@@ -108,17 +108,17 @@
 		</div>
 	</div>
 
-
-
 	<div class="pagePhone">
 		<div class="videoShow">
-			<video control id="recomment-video" class="setVideo"
-				preload="${imgPath}/index/index.jpg" muted>
+		<!-- 	<video controls id="recomment-video" class="setVideo">
 				<source src="" id="playVideo" type="video/mp4">
+			</video> -->
+			
+			<video  controls id="recomment-video" class="setVideo"> 
+				 <source src="" id="playVideo" type="video/mp4">
 			</video>
-			<div id="video-play" class="video-play">
-				<!-- video play -->
-			</div>
+			
+			
 		</div>
 		<div class="videoTitle">${product.productName }</div>
 		<div class="videoTag">
@@ -128,10 +128,16 @@
 				</c:forEach>
 			</c:if>
 		</div>
-		<div class="videoPrice">¥${product.serviceRealPrice}</div>
+		<c:if test="${product.serviceRealPrice != 0}">
+	                    	<div class="videoPrice">¥ ${product.serviceRealPrice}</div>
+	     </c:if>
+		 <c:if test="${product.servicePrice == 0}">
+	                    	<div class="videoPrice">¥ 暂无报价</div>
+	     </c:if>
 
 		<!-- 影片简介 -->
-		<div class="videoInfo">影片简介 Project Summary</div>
+		<div class="videoInfo">影片简介 </div>
+		<div class="videoEn">Project Summary</div>
 		<div class="videoContent">
 			<div class="content">${product.teamDescription }</div>
 			<div class="orderVideo">预约拍片</div>

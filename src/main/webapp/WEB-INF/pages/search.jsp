@@ -27,6 +27,8 @@
 <spring:url value="/resources/js/common.js" var="commonJs" />
 <spring:url value="/resources/js/search.js" var="searchJs" />
 <spring:url value="/resources/js/remSet.js" var="remSetJs" />
+<spring:url value="/resources/lib/jquery.json/jquery.json-2.4.min.js" var="jsonJs"/>
+<spring:url value="/resources/lib/jquery.scrollstop/jquery.scrollstop.min.js" var="scrollstopJs"/>
 
 <!-- imgPath -->
 <spring:url value="/resources/images" var="imgPath" />
@@ -44,10 +46,10 @@
 	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
 <!-- iphone 手机默认全屏 -->
 <meta name="apple-mobile-web-app-capable" content="yes" />
-<meta name="keywords" content="拍片网下单,视频交易,广告购买,导演制作费,拍片下单">
+<meta name="keywords" content="宣传片,广告片,微电影,病毒视频,MG动画,宣传片,产品宣传片,企业宣传片,创意广告片,企业微电影,产品微电影,病毒视频">
 <meta name="description"
-	content="拍片网，汇聚千万影视行业创作者，是中国最大的视频交易平台。产品：宣传片、广告、微电影、动画、三维演示等视频，优势：创意免费、选择多、价格低、不满意无条件退款">
-<title>精品案例|拍片网</title>
+	content="拍片网平台汇聚了入驻导演原创精品宣传片视频案例，免费创意策划，价格透明，不满意全额退款">
+<title>精品案例  | 拍片网</title>
 
 <link rel="shortcut icon" href="${imgPath }/favicon.ico">
 <link rel="stylesheet" href="${bootstrapCss }">
@@ -65,7 +67,14 @@
  --%>
 </head>
 <body>
-
+	<input type="hidden" id="storage_node" value="${file_locate_storage_path }" />
+	<input type="hidden" value='${q }' id="q"/>
+	<input type="hidden" value="${industry }" id="industry"/>
+	<input type="hidden" value="${genre }" id="genre"/>
+	<input type="hidden" value="${price }" id="price"/>
+	<input type="hidden" value="${length}" id="length"/>
+	<input type="hidden" value="${total }" id="total"/>
+	<input type="hidden" value="${isMore }" id="isMore"/>
 
 	<input type="hidden" id="storage_node" value="${file_locate_storage_path }" />
 	<div class="phoneHeader">
@@ -74,18 +83,12 @@
 		  <img  src="${imgPath}/index/toSearch.png">
 		 </a> 
 	     <img class="searchType" src="${imgPath }/index/searchBox.png">
-	     <img class="ppwLogo" src="${imgPath}/index/logoH.png">
+	     <a href="/"><img class="ppwLogo" src="${imgPath}/index/logoH.png"></a>
 	</div>
 	
 	 <jsp:include flush="true" page="menu.jsp"></jsp:include> 
 	
-	
-	
-	
-	
-	<div class="pagePhone">
-	
-	 <div class="searchBoxInit searchInit"> 
+		 <div class="searchBoxInit searchInit"> 
 	 <div class="hideBox"></div>	
 	<div class="searchBox searchInit">
 	    <div class="searchItem">
@@ -131,35 +134,53 @@
 	     </div>
 	</div>
 	    <div class="checkBtn" id="checkBtn">
-	        <div id="cancle">取消</div>
-	        <div id="toSearch">完成</div>
-	     </div>
+		        <div id="cancle">取消</div>
+		        <div id="toSearch">完成</div>
+	    </div>
 </div>
+	
+	
+	
+	<div class="pagePhone">
+	
+
 	<div class="hideMenu">
     <c:if test="${!empty list}">
 					<!-- not empty -->
 	    <c:forEach items="${list }" var="solr" varStatus="status">
-	     	<a href="<spring:url value='/play/${solr.teamId}_${solr.productId }.html'/>">
+	     	<a  class="videoItem" href="<spring:url value='/play/${solr.teamId}_${solr.productId }.html'/>">
 			   <div class="contentItem" style="background:url(${file_locate_storage_path }${solr.picLDUrl }) no-repeat">
-			                     <div class="itemTitle">${solr.productName}</div>
-			                     <div class="itemTag">${solr.tags}</div>
+                     <div class="itemTitle">${solr.productName}</div>
+                     <div class="itemTag">
+	                     <c:forEach items="${fn:split(fn:trim(solr.tags),' ') }" var="tag" end="2" varStatus="stat">
+									${tag} <c:if test="${!stat.last }">/</c:if>
+						 </c:forEach>
+                     </div>
+                     <div class="itemBack"></div>
 			   </div>
 		    </a>
 	    </c:forEach>
 	</c:if>
+	
+	<c:if test="${ empty list}">
+	
+	     <div class="noImg">
+	         <img src="${imgPath }/index/noVideo.png">
+	         <div>很抱歉,没有找到相关影片</div>
+	         <div>请尝试用其它关键词搜索</div>
+	     </div>
+	
+	</c:if>
 		    
-    <jsp:include flush="true" page="foot.jsp"></jsp:include> 
 	</div>	  
+	 <jsp:include flush="true" page="foot.jsp"></jsp:include> 
 	</div>
-	
- 	
-	
-	 
-	
 	
 	<script src="${jqueryJs}"></script>
 	<script src="${remSetJs}"></script>
 	<script src="${searchJs}"></script>
     <script src="${commonJs}"></script>
+    <script src="${jsonJs}"></script>
+    <script src="${scrollstopJs}"></script>
 </body>
 </html>

@@ -1,5 +1,5 @@
 var InterValObj; // timer变量，控制时间  
-var count = 120; // 间隔函数，1秒执行  
+var count = 60; // 间隔函数，1秒执行  
 var curCount; // 当前剩余秒数  
 var PopInterValObj, oTimer, successIntervalObj;
 $().ready(function(){
@@ -135,7 +135,7 @@ var login = {
 				}
 				loadData(function(info){
 					if(info.errorCode == 200){
-						window.location.href=getContextPath()+'/provider/index';
+						window.location.href=getContextPath()+'/';
 					}else{
 						successToolTipShow(info.errorMsg);
 						return false;
@@ -146,41 +146,7 @@ var login = {
 					verification_code : veri_code
 				}));
 			})
-		},
-		user_nameLogin:function(){
-			$("#submitBtn_user_name").off("click").on("click",function(){
-				var loginName = $("#user_name").val();
-				var pwd = $("#user_pwd").val();
-				if(loginName == null || loginName == '' || loginName == undefined){
-					successToolTipShow("请输入用户名");
-					$('#user_name').focus();
-					return false;
-				}
-				if(pwd == null || pwd == '' || pwd == undefined){
-					successToolTipShow("请输入密码");
-					$('#user_pwd').focus();
-					return false;
-				}
-				if(pwd.length<6){
-					successToolTipShow("密码最少六位");
-					$('#user_pwd').focus();
-					return false;
-				}
-				loadData(function(msg){
-					$(".errorDiv").addClass("hide");
-					if(msg.key){ 
-						window.location.href=getContextPath()+ '/mgr/index';
-					}else{
-						$("#user_pwd_error").text(msg.value).removeClass("hide");
-						return false;
-					}
-				}, getContextPath() + '/provider/doLogin', $.toJSON({
-					loginType : 'loginName',
-					loginName : loginName,
-					password : Encrypt(pwd.trim())
-				}))
-			});
-		},
+		}
 }
 
 
@@ -194,6 +160,8 @@ var provider_login = {
 			this.verificationCode();
 			//注册或者登录
 			this.regesterOrLogin();
+			
+			this.provider_nameLogin();
 		},
 		
 		phoneNumberChange:function(){
@@ -335,7 +303,7 @@ var provider_login = {
 		login:function(action){
 			loadData(function(info){
 				if(info.result){
-					$(".errorDiv").addClass("hide");
+					$(".errorDiv").hide();
 					window.location.href=getContextPath()+ '/';
 				}else{
 					$("#code_error_info").text(info.errorMsg).removeClass("hide");
@@ -352,7 +320,7 @@ var provider_login = {
 		register:function(action){
 			loadData(function(info){
 				if(info.key){
-					$(".errorDiv").addClass("hide");
+					$(".errorDiv").hide();
 					window.location.href=getContextPath()+'/provider/leader';
 				}else{
 					$("#code_error_info").text(info.value).removeClass("hide");
@@ -365,6 +333,39 @@ var provider_login = {
 				verification_code : $('#verification_code').val().trim(),
 				flag : 3
 			}));
+		},provider_nameLogin:function(){
+			$("#submitBtn_user_name").off("click").on("click",function(){
+				var loginName = $("#user_name").val();
+				var pwd = $("#user_pwd").val();
+				if(loginName == null || loginName == '' || loginName == undefined){
+					successToolTipShow("请输入用户名");
+					$('#user_name').focus();
+					return false;
+				}
+				if(pwd == null || pwd == '' || pwd == undefined){
+					successToolTipShow("请输入密码");
+					$('#user_pwd').focus();
+					return false;
+				}
+				if(pwd.length<6){
+					successToolTipShow("密码最少六位");
+					$('#user_pwd').focus();
+					return false;
+				}
+				loadData(function(msg){
+					$(".errorDiv").hide();
+					if(msg.errorCode == 200){ 
+						window.location.href=getContextPath()+ '/';
+					}else{
+						successToolTipShow(msg.errorMsg);
+						return false;
+					}
+				}, getContextPath() + '/provider/doLogin', $.toJSON({
+					loginType : 'loginName',
+					loginName : loginName,
+					password : Encrypt(pwd.trim())
+				}))
+			});
 		}
 } 
 

@@ -147,7 +147,7 @@ a:active {
             height: 2.4rem;
             li:first-child {
                 margin-top: 20px;
-                font-size: 0.42rem;
+                font-size: $size46;
                 color: #e3e3e3;
                 font-weight: bold;
                 position: relative;
@@ -156,7 +156,7 @@ a:active {
             li:nth-child(2) {
                 margin-top: 5px;
                 position: relative;
-                font-size: 0.36rem;
+                font-size: $size40;
                 color: #e3e3e3;
                 position: relative;
                 top:0.2rem;
@@ -497,4 +497,9 @@ a:active {
     width: 100%;
     top: 0px;
     z-index: 999;
+}
+
+
+.footPhone{
+    margin-top: 1.5rem;
 }

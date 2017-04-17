@@ -10,9 +10,18 @@ body {
     background: $gray-dark;
 }
 
-
-
-
+.phoneHeader {
+    z-index: 19 !important;
+    &:before {
+        content: '';
+        width: 100%;
+        height: 1px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background: $gray-light !important;
+    }
+}
 
 .newsTags {
     height: 1.3rem;
@@ -24,16 +33,25 @@ body {
     line-height: 1.3rem;
     position: fixed;
     top: 1.3rem;
-    z-index:19;
+    z-index: 19;
     background: $gray-dark;
     width: 100%;
+    font-size: 0;
     div {
         display: inline-block;
         vertical-align: top;
-        margin-left: 0.8rem;
         color: $gray-light;
-        font-size: 0.36rem;
+        font-size: $size40;
     }
+
+    a{
+         margin-left: 0.8rem;
+    }
+    
+    a:last-child{
+        margin-right: 1rem;
+    }
+
     .active {
         color: $red-base;
     }
@@ -70,7 +88,7 @@ body {
             margin-left: 0.3rem;
             div:nth-child(1) {
                 color: $border-line;
-                font-size: 0.36rem;
+                font-size: $size46;
                 position: absolute;
                 left: 0;
                 top: 0.05rem;
@@ -79,7 +97,7 @@ body {
             }
             div:nth-child(2) {
                 color: $gray-light;
-                font-size: 0.26rem;
+                font-size: $size36;
                 position: absolute;
                 left: 0;
                 bottom: 0rem;
