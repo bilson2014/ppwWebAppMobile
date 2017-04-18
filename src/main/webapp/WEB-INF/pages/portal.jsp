@@ -74,9 +74,6 @@
 	     	  <button id="closeBtn" type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="close-icon" aria-hidden="true">&times;</span></button>
 	        </div>
 			<div class="video-play-sections">
-			      <%--  <video controls="" loop="" poster="${imgPath}/index/moreInfo.JPG" name="media" id="header3Video" class="active"> 
-			         <source src="http://www.apaipian.com/product/video/paipianwangMovie.mp4" id="source" type="video/mp4">
-			       </video> --%>
 		    </div> 
 	    </div>
 	    

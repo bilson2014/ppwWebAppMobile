@@ -303,7 +303,8 @@ function createVideo(product){
 	}
 	var body = [
 					'<a class="videoItem" href="/play/'+product.teamId+'_'+product.productId+'.html">',
-					'<div class="contentItem" style="height: 232.875px; background: url('+url+') no-repeat;">',
+					'<div class="contentItem"">',
+					      '<img src='+url+'> ',
 					      '<div class="itemTitle">'+product.productName+'</div>',
 					      '<div class="itemTag">',
 					      ptags,
