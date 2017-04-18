@@ -149,7 +149,8 @@
 					<!-- not empty -->
 	    <c:forEach items="${list }" var="solr" varStatus="status">
 	     	<a  class="videoItem" href="<spring:url value='/play/${solr.teamId}_${solr.productId }.html'/>">
-			   <div class="contentItem" style="background:url(${file_locate_storage_path }${solr.picLDUrl }) no-repeat">
+			   <div class="contentItem">
+			         <img src="${file_locate_storage_path }${solr.picLDUrl }">
                      <div class="itemTitle">${solr.productName}</div>
                      <div class="itemTag">
 	                     <c:forEach items="${fn:split(fn:trim(solr.tags),' ') }" var="tag" end="2" varStatus="stat">
