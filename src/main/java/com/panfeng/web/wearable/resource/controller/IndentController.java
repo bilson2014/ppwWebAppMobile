@@ -163,6 +163,6 @@ public class IndentController extends BaseController {
 			}
 			return result;
 		}
-		return new Result(false, "参数错误");
+		return new Result(false, "验证码有误！");
 	}
 }
