@@ -42,6 +42,6 @@
             <dependency-type>uses</dependency-type>
         </dependent-module>
         <property name="java-output-path" value="/wearable-device/target/classes"/>
-        <property name="context-root" value="wearable-device"/>
+        <property name="context-root" value="/"/>
     </wb-module>
 </project-modules>

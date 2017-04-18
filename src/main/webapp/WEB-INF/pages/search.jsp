@@ -28,7 +28,9 @@
 <spring:url value="/resources/js/search.js" var="searchJs" />
 <spring:url value="/resources/js/remSet.js" var="remSetJs" />
 <spring:url value="/resources/lib/jquery.json/jquery.json-2.4.min.js" var="jsonJs"/>
+
 <spring:url value="/resources/lib/jquery.scrollstop/jquery.scrollstop.min.js" var="scrollstopJs"/>
+<spring:url value="/resources/lib/jquery.lazyload/jquery.lazyload.min.js" var="lazyloadJs"/>
 
 <!-- imgPath -->
 <spring:url value="/resources/images" var="imgPath" />
@@ -182,5 +184,6 @@
     <script src="${commonJs}"></script>
     <script src="${jsonJs}"></script>
     <script src="${scrollstopJs}"></script>
+    <script src="${lazyloadJs}"></script>
 </body>
 </html>
