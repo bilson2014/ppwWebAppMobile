@@ -31,8 +31,6 @@
 </head>
 <body>
 
-
-
 <div class="upload-window" id="toolbar-modal">      
      	 <div class="closeVideo">
      	  <button id="closeBtn" type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="close-icon" aria-hidden="true">&times;</span></button>
@@ -48,11 +46,8 @@
 		<img class="imgLeft" src="/resources/images/activity/btnLeft.jpg"></a> 
 		<a href='<spring:url value="/order-flow.html" />'>
 		<img class="imgRight" src="/resources/images/activity/btnRight.jpg"></a>
-		
-
-		 <div class="swiper-container">
+	<div class="swiper-container">
         <div class="swiper-wrapper" id="setHeight">
-          
           <c:if test="${!empty products}">
                     <c:forEach items="${products }" var="product" varStatus="status">
                     	<c:if test="${status.index == 0 }">
@@ -80,68 +75,11 @@
 		                </div>
                     </c:forEach>
                 </c:if> 
-          
         </div>
          <div class="swiper-pagination"></div>
     </div>
 		
-      <%-- <div style="width:100%;height:auto;">
-		<div id="hwslider" class="hwslider">
-	<!-- 		<ul id="setHeight">
-				<li id="ulHeight">
-					<div class="card">
-						<div class="cardOutSide">
-							<img class="cardImg" src="/resources/images/activity/gr5.jpg" name="openVideo" data-value="222">
-								<div class="cardInfo">
-									<div class="title">众创空间宣传片</div>
-									<div class="content">人物采访＋实拍＋特效</div>
-									<div class="price">
-										<span>原价:￥28800</span><label>特惠:￥<label>23000
-									</div>
-									<div class="toFind">立即下单</div>
-								</div>
-						</div>
-
-					</div>
-				</li>
-				</ul>
-				 -->
-
-             <ul id="setHeight">
-				<c:if test="${!empty products}">
-                    <c:forEach items="${products }" var="product" varStatus="status">
-                    	<c:if test="${status.index == 0 }">
-                    		<li id="ulHeight">
-                    	</c:if>
-                    	<c:if test="${status.index != 0 }">
-                    		<li>
-                    	</c:if>
-		                    <div class="card">
-		                        <div class="cardOutSide">
-		                            <img class="cardImg" data-video-url="${product.videoUrl }" src="<spring:url value="${fn:replace(fn:substringAfter(product.picHDUrl,'/portal'),'image','img') }"/>" name="openVideo" data-value="222">
-		                                <div class="cardInfo">
-		                                    <div class="title">${product.productName }</div>
-		                                    <div class="content">${product.pDescription }</div>
-		                                    <div class="price">
-		                                        <span>原价:￥<fmt:formatNumber type="number" value="${product.servicePrice }" maxFractionDigits="0"/>  </span><label>特惠:￥<fmt:formatNumber type="number" value="${product.serviceRealPrice }" maxFractionDigits="0"/>  </label>
-		                                    </div>
-		                                    <a href='<spring:url value="/direct/order" />'>
-		                                    <div class="toFind">立即下单</div>
-		                                    </a>
-		                                </div>
-		                        </div>
-		                    </div>
-		                </li>
-                    </c:forEach>
-                </c:if> 
-			</ul>
-		</div>
-	</div>	 --%>
-	
-	    
-	
 		<div class="info">
-
            <label>活动说明&nbsp&nbsp:<br></label>
            <label>"双十"拍片节是拍片网2016年力度最大的促销活动,所有符合以下条件的客户都将获得拍片<span>8折优惠</span>&nbsp&nbsp:<br></label>
            <label class="position"><div></div>在2016年10月10日当天通过系统下单<br></label>
@@ -149,7 +87,6 @@
 		   <label class="position"><div></div>每个客户只有一次优惠机会<br></label>
 		   <label class="position"><div></div>此优惠不与其他任何促销优惠同享<br></label>
 		   <label class="position">*以上最终解释权归拍片网所有<br></label>
- 
 		</div>
 </body>
 </html>

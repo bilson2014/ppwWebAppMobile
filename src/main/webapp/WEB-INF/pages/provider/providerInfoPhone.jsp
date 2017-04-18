@@ -29,7 +29,6 @@
 	var="waypoints" />
 <spring:url value="/resources/js/remSet.js" var="remSetJs" />
 
-
 <!-- imgPath -->
 <spring:url value="/resources/images" var="imgPath" />
 <!DOCTYPE html>
@@ -62,14 +61,6 @@
 <!--[if lt IE 9]>
 		<script>window.html5 || document.write('<script src="html5shivJs"><\/script>')</script>
 	<![endif]-->
-
-
-
-
-<!-- 加载Mob share 控件 -->
-<script id="-mob-share"
-	src="http://f1.webshare.mob.com/code/mob-share.js?appkey=8c49c537a706"></script>
-<script type="text/javascript" src="http://player.youku.com/jsapi"></script>
 
 </head>
 <body>
@@ -128,7 +119,11 @@
 	 <!--说明区  -->
 
 	<div class="introduce contentAnimation">
-		<div class="introduceTitle">导演简介</div>
+	    <div class="titleDes">导演简介</div> 
+	    <div class="titleDesEn">Director profile</div> 
+		<div class="introduceTitle">
+		</div>
+		
 		<div class="introduceLine"></div>
 	</div>
 
@@ -161,7 +156,9 @@
 	<!--代表说明  -->
 <%-- <c:if test="${! empty product}"> --%>
 	<div class="introduce contentCard" >
-		<div class="introduceTitle">代表作</div>
+	    <div class="titleDes">代表作</div> 
+	    <div class="titleDesEn">Best-known Work</div> 
+		<div class="introduceTitle"></div>
 		<div class="introduceLine"></div>
 	</div>
 	 <c:if test="${product.teamId >0}">
@@ -178,36 +175,15 @@
 	    </a>
 	 </c:if>   
 
-<%-- 	<div class="specialVideo contentCard" >
- 		<div class="videoCradYear cardMaringAuto">
-			<div class="videoContent">
-	 	   <c:if test="${product.teamId >0}">
-					<a href="/play/${product.teamId}_${product.productId }.html">
-						<img id="playimg" src="${fn:replace(fn:substringAfter(product.picHDUrl,'/portal'),'image', 'img')}">
-						<img id="playimg" src="${file_locate_storage_path}${product.picHDUrl}">
-					</a>
-				</c:if>
-			 <div class="title" title="${product.productName}">${product.productName }</div>
-				 <div class="videoContentInfo">${product.pDescription }</div> 
-				 <div class="cardBottom">
-					<div class="price">
-						<span class="firstSpan">￥</span> <span class="secondSpan">${product.serviceRealPrice}</span>
-						<span class="lastSpan">${product.servicePrice}</span>
-					</div>
-					<a href="/play/${product.teamId}_${product.productId }.html">
-						<div class="videoBtn btn-red-common">查看详情</div>
-					</a>
-				</div>   
 
-			</div>
-		</div> 
-	</div> --%>
 
 
 
 	 <!--代表说明  -->
 	<div class="introduce" >
-		<div class="introduceTitle">更多作品</div>
+		<div class="titleDes">更多作品</div> 
+	    <div class="titleDesEn">Other works</div> 
+		<div class="introduceTitle"></div>
 		<div class="introduceLine"></div>
 	</div>
 	

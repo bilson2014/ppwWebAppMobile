@@ -60,13 +60,7 @@
 <!--[if lt IE 9]>
 		<script>window.html5 || document.write('<script src="html5shivJs"><\/script>')</script>
 	<![endif]-->
-<%-- 
-<script src="${imgLazyLoadingJs }"></script>
-<script src="${pluginJs }"></script>
-<script src="${jsonJs }"></script>
-<script src="${mmenuJs }"></script>
-<script src="${commonJs }"></script>
- --%>
+
 </head>
 <body>
 	<input type="hidden" id="storage_node" value="${file_locate_storage_path }" />
@@ -141,10 +135,7 @@
 	    </div>
 </div>
 	
-	
-	
 	<div class="pagePhone">
-	
 
 	<div class="hideMenu">
     <c:if test="${!empty list}">

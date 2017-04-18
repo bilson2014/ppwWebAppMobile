@@ -19,10 +19,7 @@
 <spring:url value="/resources/images" var="imgPath" />
 <spring:url value="/resources/js/remSet.js" var="remSetJs" />
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!-->
+
 <html class="no-js">
 <!--<![endif]-->
 <head>
@@ -110,15 +107,9 @@
 
 	<div class="pagePhone">
 		<div class="videoShow">
-		<!-- 	<video controls id="recomment-video" class="setVideo">
-				<source src="" id="playVideo" type="video/mp4">
-			</video> -->
-			
 			<video  controls id="recomment-video" class="setVideo"> 
 				 <source src="" id="playVideo" type="video/mp4">
 			</video>
-			
-			
 		</div>
 		<div class="videoTitle">${product.productName }</div>
 		<div class="videoTag">
@@ -155,25 +146,20 @@
 		</div>
 
 		<!-- 相关推荐-->
-
-		<div class="anli">
+		<div class="videoInfo">相关推荐 </div>
+		<div class="videoEn">Recommended for you</div>
+        <div class="videoLines"></div>
+<!-- 		<div class="anli">
 			<div class="title"></div>
 			<div class="line"></div>
-		</div>
+		</div> -->
 		<div class="anliContent" id="anliContent">
-			<!--       <div class="contentItem" style="background:url(/resources/images/index/index.jpg) no-repeat">
-	                	 <div class="itemTitle">介影片简介标题要介影片简介标题要长介影片简介标题要长介影片简介标题要长介影片简介标题要长介影片简介标题要长介影片简介标题要长长</div>
-	                     <div class="itemTag">介影片简介</div>
-	             </div> -->
-
 		</div>
 		<a href="/search?q=*&industry=${product.tags}">
 			<div class="moreAnli">更多相关推荐</div>
 		</a>
 
 		<jsp:include flush="true" page="foot.jsp"></jsp:include>
-
-
 	</div>
 
 

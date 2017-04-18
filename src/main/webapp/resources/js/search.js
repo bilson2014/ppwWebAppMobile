@@ -65,28 +65,7 @@ var search = {
         			$('#lowPrice').val($(this).attr('data-low'));
         			$('#heightPrice').val($(this).attr('data-content'));
         	});
-//        	
-//        	$('#heightPrice').blur('click',function(){
-//        		var lowPrice = $('#lowPrice').val();
-//        		var heightPrice = $('#heightPrice').val();
-//                if(lowPrice !=null && lowPrice !="" && lowPrice != undefined){
-//                	if(heightPrice < lowPrice){
-//                		$('#heightPrice').val(lowPrice);
-//                		$('#lowPrice').val(heightPrice);
-//                	}
-//                }    		
-//        	});
-//        	
-//         	$('#lowPrice').blur('click',function(){
-//        		var lowPrice = $('#lowPrice').val();
-//        		var heightPrice = $('#heightPrice').val();
-//                if(heightPrice !=null && heightPrice !="" && heightPrice != undefined){
-//                	if(heightPrice < lowPrice){
-//                		$('#heightPrice').val(lowPrice);
-//                		$('#lowPrice').val(heightPrice);
-//                	}
-//                }    		
-//        	});
+
          	
          	$('#cancle').on('click',function(){
          		$('.searchBox').addClass('searchInit');
@@ -173,8 +152,6 @@ function toSearch(){
 	    if(heightPrice=="" && lowPrice!=""){
 	    	price = price +"["+lowPrice+" TO "+"*]";
 	    }
-	    
-	
 	    
 	    if(type !='&industry='){
 	    	

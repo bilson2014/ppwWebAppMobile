@@ -27,9 +27,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
 	<title>服务器去拍404电影啦</title>
 	<link rel="stylesheet" href="${errorCss}">
-	<!--[if lt IE 9]>
-		<script>window.html5 || document.write('<script src="html5shivJs"><\/script>')</script>
-	<![endif]-->
 	
 </head>
 <body>
@@ -56,15 +53,11 @@
 			<div class="outSideDiv">	
 				<div class="centerDiv">
 				       <ul>
-				          
 				          <li><a href="/"><img src="${imgPath }/icons/error.png"></a></li>
 				          <li><div class="centerWord">服务器去拍电影啦~回到<a href="/">首页</a>去看看吧！</div></li>
 				       </ul>
 				</div>
             </div>
-	
-    
-    
 		
 	<script src="${jqueryJs }"></script>
 	<script src="${modelJs }"></script>

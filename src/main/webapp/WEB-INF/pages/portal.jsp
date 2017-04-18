@@ -49,7 +49,6 @@
 <link rel="stylesheet" href="${portalCss }">
 <link rel="stylesheet" href="${swiperCss }">
 
-
 <!--[if lt IE 9]>
 		<script>window.html5 || document.write('<script src="html5shivJs"><\/script>')</script>
 	<![endif]-->
@@ -261,29 +260,7 @@
 	
 	<div class="thirdContent">
 	        <div class="ourCusTitle">导演工作室</div>
-		    <div class="ourCus">
-
-		      <%--   <div class="item">
-		            <div class="proLogo">
-		               <img src="${imgPath}/index/test.png">
-		               <img src="${imgPath}/index/true.png">
-		            </div>
-		            <div class="proContent">
-		                <div class="title">大大所大大多所大叔大叔大所大</div>
-		                <div class="des">大大所大大多所大叔大叔大所大大大所大大多所大叔大叔大所</div>
-		                <div class="tags">
-		                      <div class="tagsItem">宣传片</div>
-		                      <div class="tagsItem">宣传片</div>
-		                      <div class="tagsItem">宣传片</div>
-		                      <div class="tagsItem">宣传片</div>
-		                      <div class="tagsItem">宣传片</div>
-		                      <div class="tagsItem">宣传片</div>
-		                </div>
-		            </div>
-		        </div> --%>
-		      		      
-		    </div>
-		       
+		    <div class="ourCus"></div>
 	       <a href="/proRegister">
 	    		<div class="join">
                                                       加入我们
@@ -314,25 +291,16 @@
 		     
 	</div>	    
  </div>
-
+ 
 </body>
-
-
 <script src="${jqueryJs }"></script>
 <script src="${waypointsJs}"></script>
 <script src="${swiperJs}"></script>
 <script src="${pluginJs }"></script>
 <script src="${flexsliderJs }"></script>
 <script src="${jsonJs }"></script>
-<script src="${imgLazyLoadingJs }"></script>
 <script src="${commonJs }"></script>
 <script src="${portalJs }"></script>
-<script src="${mmenuJs}"></script>
 <script src="${remSetJs}"></script>
 
-
-
-<!-- 加载Mob share 控件 -->
-<script id="-mob-share"
-	src="http://f1.webshare.mob.com/code/mob-share.js?appkey=8c49c537a706"></script>
 </html>

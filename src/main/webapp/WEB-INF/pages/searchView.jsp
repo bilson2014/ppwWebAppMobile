@@ -51,12 +51,9 @@
 	     <a></a>
 	     <a href="/"><img class="ppwLogo" src="${imgPath}/index/logoH.png"></a>
 	</div>
-	
 	 <jsp:include flush="true" page="menu.jsp"></jsp:include>
-
+	 
 	<div class="wrap">
-		
-	
 		<div class="content-wrap">
 			<div class="search-section">
 				<div class="header-search-wrap">

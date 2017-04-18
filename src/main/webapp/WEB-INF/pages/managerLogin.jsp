@@ -45,12 +45,6 @@
 <link rel="stylesheet" href="${commonCss}">
 <link rel="stylesheet" href="${phoneLoginCss}">
 
-
-<!--[if lt IE 9]>
-		<script>window.html5 || document.write('<script src="html5shivJs"><\/script>')</script>
-	<![endif]-->
-
-
 <script src="${jqueryJs }"></script>
 <script src="${pluginJs }"></script>
 <script src="${jsonJs }"></script>
@@ -61,7 +55,6 @@
 <script src="${phoneLoginJs }"></script>
 <script src="${remSetJs }"></script>
 
-
 </head>
 <body>
 
@@ -70,10 +63,7 @@
 	     <a class="hide" href="/"><img class="" src=""></a>
 	     <a href="/"><img class="ppwLogo" src="${imgPath}/index/logoH.png"></a>
 	</div>
-	
 	 <jsp:include flush="true" page="menu.jsp"></jsp:include> 
-
-		
 		     <div class="pagePhone">
 
 	             <div class="cusLogin" style="margin-top:2rem"> 
@@ -87,21 +77,7 @@
 				              <div class="loginIng" id="submitBtn">登录</div>
 		              </div>
 	              </div>
-	              
 	         </div>
 
-	<!-- 	<div class="bottomDiv" style="top:160px;">
-			<input id="login_type" value="phone" type="hidden"></input>
-			<div class="contentHeight contentColor">
-				<div class="loginContent">
-					<input placeholder="用户名" id="user_phoneNumber"></input>
-				</div>
-				<div class="loginContent">
-					<input type="password" placeholder="密码" id="user_passWord"></input>
-				</div>
-				<div class="submitBtn" id="submitBtn">登录</div>
-			</div>
-		</div> -->
-	</div>
 </body>
 </html>

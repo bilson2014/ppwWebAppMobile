@@ -9,11 +9,7 @@
 <spring:url value="/resources/css/common.css" var="commonCss"/>
 <spring:url value="/resources/css/company/company-service.css" var="serviceCss"/>
 <spring:url value="/resources/lib/mMenu/jquery.mmenu.all.css" var="mmenuCss"/>
-
-
-
 <%-- import JS --%>
-
 <spring:url value="/resources/lib/jquery/jquery-2.0.3.min.js" var="jqueryJs"/>
 <spring:url value="/resources/lib/jquery/plugins.js" var="pluginJs"/>
 <spring:url value="/resources/lib/jquery.json/jquery.json-2.4.min.js" var="jsonJs"/>
@@ -21,13 +17,6 @@
 <spring:url value="/resources/lib/mMenu/jquery.mmenu.min.js" var="mmenuJs"/>
 <spring:url value="/resources/js/common.js" var="commonJs"/>
 <spring:url value="/resources/js/imgLazyLoad.js" var="imgLazyLoadingJs"/>
-
-
-
-
-
-
-
 <!-- imgPath -->
 <spring:url value="/resources/images" var="imgPath" />
 <!DOCTYPE html>
@@ -47,32 +36,20 @@
 	<link rel="stylesheet" href="${commonCss}">
 	<link rel="stylesheet" href="${serviceCss}">
 	<link rel="stylesheet" href="${mmenuCss}">
-  
-
-
-	<!--[if lt IE 9]>
-		<script>window.html5 || document.write('<script src="html5shivJs"><\/script>')</script>
-	<![endif]-->
-
-	
 	<script src="${jqueryJs }"></script>
-	 <script src="${memberJs}"></script> 
-
+	<script src="${memberJs}"></script> 
 	<script src="${pluginJs }"></script>
 	<script src="${jsonJs }"></script>
 	<script src="${bootstrapJs }"></script>
 	<script src="${commonJs }"></script>
 	<script src="${imgLazyLoadingJs }"></script>
 	<script src="${mmenuJs }"></script>
-    
    
 <style>
 
  html{
  font-size:16px}
 </style>
-
-
 
 <!-- 加载Mob share 控件 -->
 <script id="-mob-share" src="http://f1.webshare.mob.com/code/mob-share.js?appkey=8c49c537a706"></script>
@@ -100,8 +77,6 @@
 				</dd>
 			</dl>
 		</div>
-		 
-
 		 <div class="agreemen">
 			<h1>网站使用协议</h1>
 			<h2>第一条 本站服务条款的确认和接纳</h1>
@@ -110,7 +85,6 @@
 				1.3如果您在18周岁以下，您只能在父母或监护人的监护参与下才能使用本站。<br>
 				1.4 本协议内容包括协议正文及所有拍片网平台已经发布的或将来可能发布的各类规则。所有规则为本协议不可分割的组成部分，与协议正文具有同等法律效力。<br>
 				1.5 拍片网有权根据国家法律法规的更新、产品和服务规则的调整需要不时地制订、修改本协议及/或各类规则，并以网站公示的方式进行公示。如您继续使用拍片网平台服务的，即表示您接受经修订的协议和规则。<br></p>
-			
 			<h2>第二条  服务条款</h2>
 			<p>2.1本站主要致力于为客户提供一站式视频内容制作服务。[具体内容请根据服务内容完善]</p>
 			<h2>第三条 用户信息</h2>
@@ -132,8 +106,6 @@
 			4.2您应不时关注并遵守本站不时公布或修改的各类合法规则规定。
 			本站保有删除站内各类不符合法律政策或不真实的信息内容而无须通知您的权利。<br>
 			4.3若您未遵守以上规定的，本站有权作出独立判断并采取暂停或关闭您的账号等措施。您须对自己在网上的言论和行为承担法律责任。<br></p>
-
-
 			<h2>第五条 内容的所有权</h2>
 			<p>5.1内容的定义包括:文字、软件、声音、相片、录像、图表；在广告中的全部内容；电子邮件的全部内容；拍片网为用户提供的任何信息；所有这些内容均受版权、商标、标签和其它财产所有权法律的保护。所以，您只能在拍片网授权下才能使用这些内容，而不能擅自复制、再造这些内容、或创造与内容有关的派生产品。</p>
 			<h2>第六条 责任范围和责任限制</h2>
@@ -145,7 +117,6 @@
 			7.3您同意，您与拍片网的协议关系终止后，拍片网仍享有下列权利：<br>
 			7.3.1继续保存您未及时删除的注册信息及您使用拍片网平台服务期间发布的所有信息至法律规定的记录保存期满。<br>
 			7.3.2您在使用拍片网平台服务期间存在违法行为或违反本协议和/或规则的行为的，拍片网仍可依据本协议向您主张权利。</p>
-
 			<h2>第八条 用户隐私制度</h2>
 			<p>8.1 尊重用户个人隐私是拍片网的一项基本政策。所以，拍片网一定不会公开、编辑或透露您的注册资料及保存在拍片网平台各项服务中的非公开内容，除非拍片网在诚信的基础上认为透露这些信息在以下几种情况是必要的: <br>
 			8.1.1遵守有关法律规定，包括在国家有关机关查询时，提供用户在拍片网平台的网页上发布的信息内容及其发布时间、互联网地址或者域名。 <br>
@@ -159,16 +130,11 @@
 			<p>9.1本协议之效力、解释、变更、执行与争议解决均适用中华人民共和国法律，如无相关法律规定的，则应参照通用商业惯例和（或）行业惯例。 <br>
 			9.2如缔约方就本协议内容或其执行发生任何争议，双方应尽力友好协商解决；协商不成时，任何一方均可向拍片网平台所有者所在地人民法院提起诉讼。</p>
 			<div id="servicePart"></div>
-			
  			<h1 class="h1-margin" >拍片网服务协议</h1>
-            
             <p class="top-big">甲方：客户<br>
 			乙方：北京拍片乐科技有限公司<br></p>
-
 			<p class="top">
 			拍片网是互联网视频内容制作平台，所有权为乙方享有。平台汇聚导演、工作室、制作公司百余家，影视行业导演、编剧、摄影师、演员等顶尖人才30000余名，为客户提供一站式视频内容制作服务。甲方同意委托乙方为其介绍视频供应商（即视频制作方）制作视频，供甲方在全球范围内进行公司产品营销、品牌宣传、教学培训等目的使用。<br></p>
-
-
 			<p class="top bottom">一、甲乙双方须签订年度服务合同后，双方服务内容与职责将按照本协议规定执行<br>
 			二、甲方将单品视频制作项目制作费托管至乙方，视频制作费托管金额及支付时间以具体项目的《项目确认函》邮件为准，乙方收到视频托管费后通知视频供应商启动项目制作，待项目制作完成并通过甲方验收后，将制作费支付给供应商。<br>
 			三、视频供应商确定后，由视频供应商制作《视频脚本》，并提交甲方确认，以甲方确认的《视频脚本》为准进行视频制作。如甲方的制作需求临时变更，则另行协商以邮件形式确认补充协议。<br>
@@ -178,16 +144,6 @@
 			七、因签订、履行本合同而发生的争议，双方应当协商解决；不能协商解决的，交由合乙方所在地有管辖权的人民法院管辖。</p>
          </div>
 	</div>
-	
-		
-
-	 
-		
-		
 </div>		
-		
-			 
-		
-
 </body>
 </html>
