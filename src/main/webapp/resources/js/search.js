@@ -6,6 +6,16 @@ $().ready(function(){
 	search.initData();
 	toSearch();
 	touchLis();
+	
+	var docElem = document.documentElement;
+
+	window.lazySizesConfig = window.lazySizesConfig || {};
+
+	window.lazySizesConfig.loadMode = 1;
+
+	//set expand to a higher value on larger displays
+	window.lazySizesConfig.expand = Math.max(Math.min(docElem.clientWidth, docElem.clientHeight, 1222) - 1, 359);
+	window.lazySizesConfig.expFactor = lazySizesConfig.expand < 380 ? 3 : 2;
 });
 
 var search = {

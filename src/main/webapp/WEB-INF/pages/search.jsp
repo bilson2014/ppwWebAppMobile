@@ -30,7 +30,7 @@
 <spring:url value="/resources/lib/jquery.json/jquery.json-2.4.min.js" var="jsonJs"/>
 
 <spring:url value="/resources/lib/jquery.scrollstop/jquery.scrollstop.min.js" var="scrollstopJs"/>
-<spring:url value="/resources/lib/jquery.lazyload/jquery.lazyload.min.js" var="lazyloadJs"/>
+<spring:url value="/resources/lib/jquery.lazyload/lazysizes.min.js" var="lazyloadJs"/>
 
 <!-- imgPath -->
 <spring:url value="/resources/images" var="imgPath" />
@@ -143,7 +143,7 @@
 	    <c:forEach items="${list }" var="solr" varStatus="status">
 	     	<a  class="videoItem" href="<spring:url value='/play/${solr.teamId}_${solr.productId }.html'/>">
 			   <div class="contentItem">
-			         <img src="${file_locate_storage_path }${solr.picLDUrl }">
+			         <img class="lazyload" data-src="${file_locate_storage_path }${solr.picLDUrl }">
                      <div class="itemTitle">${solr.productName}</div>
                      <div class="itemTag">
 	                     <c:forEach items="${fn:split(fn:trim(solr.tags),' ') }" var="tag" end="2" varStatus="stat">
