@@ -14,7 +14,6 @@ $().ready(function() {
 	//isWeiXin();
 	subPaipian();
 	getCardWord();
-
 });
 
 function checkPassWord(){
@@ -258,7 +257,6 @@ function checkData(){
 	return flag;
 }
 
-
 function getBusiness() {
 
 	var busArr;
@@ -271,7 +269,6 @@ function getBusiness() {
 	});
 	return busArr;
 }
-
 
 function btnPosition() {
 

@@ -140,6 +140,7 @@
 <script src="${jsonJs }"></script>
 <script src="${commonJs }"></script>
 <script src="${remSetJs}"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
 <!-- 加载Mob share 控件 -->
 <script id="-mob-share" src="http://f1.webshare.mob.com/code/mob-share.js?appkey=8c49c537a706"></script>
 <script type="text/javascript" src="http://player.youku.com/jsapi"></script>

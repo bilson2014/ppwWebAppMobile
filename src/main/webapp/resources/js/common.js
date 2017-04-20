@@ -54,7 +54,138 @@ $().ready(function(){
 	menuInit();
 	getImgUrl();
 	getDefImg();
+	initShare();
 });
+
+
+
+function initShare(){
+	var ua = navigator.userAgent.toLowerCase();
+	if (ua.match(/MicroMessenger/i) == "micromessenger") {
+		getData(function(msg){
+			console.info(msg);
+			wx.config({
+			    debug: true, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+			    appId: msg.appId, // 必填，公众号的唯一标识
+			    timestamp: msg.timestamp, // 必填，生成签名的时间戳
+			    nonceStr: msg.nonceStr, // 必填，生成签名的随机串
+			    signature: msg.signature,// 必填，签名，见附录1
+			    jsApiList: ['onMenuShareAppMessage','onMenuShareTimeline','onMenuShareQQ','onMenuShareWeibo','onMenuShareQZone'] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
+			});
+		}, getContextPath() + '/get/config?path='+ getUrl());
+		wx.ready(function(){
+			var  title = "拍片网  专业商业视频服务";
+			wx.onMenuShareAppMessage({
+			      title: title,
+			      desc: '拍片网',
+			      link: 'http://m.apaipian.com',
+			      imgUrl: 'http://m.apaipian.com/resources/images/index/logo.png',
+			      trigger: function (res) {
+			       // alert('用户点击发送给朋友');
+			      },
+			      success: function (res) {
+			       // alert('已分享');
+			      },
+			      cancel: function (res) {
+			       // alert('已取消');
+			      },
+			      fail: function (res) {
+			        //alert(JSON.stringify(res));
+			      }
+			   });
+			wx.onMenuShareTimeline({
+				title: title,
+				desc: '拍片网',
+				link: 'http://m.apaipian.com',
+				imgUrl: 'http://m.apaipian.com/resources/images/index/logo.png',
+				trigger: function (res) {
+					// alert('用户点击发送给朋友');
+				},
+				success: function (res) {
+					// alert('已分享');
+				},
+				cancel: function (res) {
+					// alert('已取消');
+				},
+				fail: function (res) {
+					//alert(JSON.stringify(res));
+				}
+			});
+			wx.onMenuShareQQ({
+				title: title,
+				desc: '拍片网',
+				link: 'http://m.apaipian.com',
+				imgUrl: 'http://m.apaipian.com/resources/images/index/logo.png',
+				trigger: function (res) {
+					// alert('用户点击发送给朋友');
+				},
+				success: function (res) {
+					// alert('已分享');
+				},
+				cancel: function (res) {
+					// alert('已取消');
+				},
+				fail: function (res) {
+					//alert(JSON.stringify(res));
+				}
+			});
+			wx.onMenuShareWeibo({
+				title: title,
+				desc: '拍片网',
+				link: 'http://m.apaipian.com',
+				imgUrl: 'http://m.apaipian.com/resources/images/index/logo.png',
+				trigger: function (res) {
+					// alert('用户点击发送给朋友');
+				},
+				success: function (res) {
+					// alert('已分享');
+				},
+				cancel: function (res) {
+					// alert('已取消');
+				},
+				fail: function (res) {
+					//alert(JSON.stringify(res));
+				}
+			});
+			wx.onMenuShareQZone({
+				title: title,
+				desc: '拍片网',
+				link: 'http://m.apaipian.com',
+				imgUrl: 'http://m.apaipian.com/resources/images/index/logo.png',
+				trigger: function (res) {
+					// alert('用户点击发送给朋友');
+				},
+				success: function (res) {
+					// alert('已分享');
+				},
+				cancel: function (res) {
+					// alert('已取消');
+				},
+				fail: function (res) {
+					//alert(JSON.stringify(res));
+				}
+			});
+		});
+	}
+}
+function getUrl(){
+	var url = window.location.href;
+	if(url != null && url != '' && url != undefined){
+		var x=url.indexOf('//');
+		url = url.substring(x+2,url.length); // 去掉http://
+		var xx=url.indexOf('/');
+		if(xx > -1){
+			url = url.substring(xx+1,url.length); // 去掉域名
+		}
+		if(url != null && url != ''){
+			var v=url.indexOf('#');
+			if(v > -1){
+				url = url.substring(0,v); // 去掉域名
+			}
+		}
+	}
+	return url;
+}
 
 
 //加载默认

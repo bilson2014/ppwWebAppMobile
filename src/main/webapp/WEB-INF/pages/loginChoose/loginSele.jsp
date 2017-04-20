@@ -51,7 +51,7 @@
 	<script src="${aesJs }"></script>
 	<script src="${padJs }"></script>
 	<script src="${commonJs }"></script>
-	
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
 
 
 </head>

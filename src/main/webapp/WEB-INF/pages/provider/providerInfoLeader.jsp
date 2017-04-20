@@ -73,7 +73,7 @@
 <script src="${jqueryJs }"></script>
 <script src="${remSetJs }"></script>
 <%-- <script src="${pluginJs }"></script>
-
+<script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
 <script src="${imgLazyLoadingJs }"></script> --%>
 <script src="${commonJs }"></script>
 <script src="${jsonJs }"></script>

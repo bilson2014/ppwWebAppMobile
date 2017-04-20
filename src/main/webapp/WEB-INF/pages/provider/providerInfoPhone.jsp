@@ -70,7 +70,7 @@
 <script id="-mob-share"
 	src="http://f1.webshare.mob.com/code/mob-share.js?appkey=8c49c537a706"></script>
 <script type="text/javascript" src="http://player.youku.com/jsapi"></script>
-
+<script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
 </head>
 <body>
 	<input type="hidden" id="storage_node" value="${file_locate_storage_path }" />

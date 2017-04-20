@@ -69,7 +69,7 @@
 <script src="${memberJs}"></script>
 <script src="${mmenuJs }"></script>
 <script src="${remSetJs }"></script>
-
+<script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
 
 <style>
 html {
