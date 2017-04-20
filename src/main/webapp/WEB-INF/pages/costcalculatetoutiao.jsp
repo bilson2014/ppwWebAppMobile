@@ -48,7 +48,6 @@
 <audio controls="controls" hidden="hidden" autoplay="autoplay" loop="loop">
   <source src="/resources/music/music.mp3" type="audio/mpeg" />
 </audio> 
-
 <div class="modalShow" id="showOrder">
        
        <div id="sOrder" class="sOrder">
@@ -58,31 +57,24 @@
 								style="width: 0;" id="bar"></div>
 		   </div>
        </div>
-       
 </div>
 
 <div class="modalShow" id="code">       
        <img id="sCode" class="sCode" src="/resources/images/cost/code.jpg">
 </div>
-
 <div class="modalShow" id="showWeixin">  
       <div class="showWeixin">     
        <img  src="/resources/images/cost/shareWeChat.png">
       </div> 
 </div>
-
 <div class="modalShow" id="noInfo">       
       <div class="noInfo closeInfo">
               <div class="noInfoF">您没有选择需求哦</div>
               <div class="justDoIt closeInfo" >现在选择！</div>
       </div>
 </div>
-
-  
    <div class="swiper-container">
         <div class="swiper-wrapper">
-              
-        
             <div class="swiper-slide banner stepBtn-1">
               <div class="bLogoDiv">
                <img class="bLogo"  src="/resources/images/cost/bannerLogo.png">
@@ -93,10 +85,8 @@
 	           <div class="icon spIcon">
 	            <img id="icon" src="/resources/images/cost/icon.png">
 	         </div>   
-            </div>
-            
-            
-            <div class="swiper-slide step2">
+         </div>
+          <div class="swiper-slide step2">
                 <img style="width:100%" src="/resources/images/cost/step2TB.png">
                 <img class="step2Ani" style="width:100%" src="/resources/images/cost/step2Ani.png">
                 <div class="stepBtn-2 step2A anA" data-content="0">
@@ -117,19 +107,13 @@
                 <div class="stepBtn-2 step2F anF" data-content="0">
                     <div data-content="5" data-text="众筹视频"></div>
                 </div>
-                
 		         <div class="icon spIcon">
 		            <img id="icon" src="/resources/images/cost/icon.png">
 		         </div>   
-				
             </div>
-            
-            
-            
             <div class="swiper-slide step3">
 		             <img class="rotate" style="width:100%" src="/resources/images/cost/step3TB.png">
 		             <img style="width:100%; position: absolute;top: 0rem;left: 0rem;z-index:1" src="/resources/images/cost/step3Logo.png">
-		             
 		             <div class="step3Q"></div>
 		                <div class="stepBtn-3 step3A anA" >
 		                     <div class="" data-content="0" data-text="专业级导演"></div>
@@ -143,9 +127,9 @@
 		                     <div class="" data-content="2" data-text="电影级导演"></div>
 		                </div>
 		                 <div class="step3CI"></div>
-		                          <div class="icon">
-            <img src="/resources/images/cost/icon.png">
-         </div>   
+				 <div class="icon">
+		            <img src="/resources/images/cost/icon.png">
+		         </div>   
             </div>
             <div class="swiper-slide step4">
                 <img style="width:100%" src="/resources/images/cost/step4TB.png">
@@ -190,7 +174,6 @@
 		                         <div class="icon spIcon">
             <img src="/resources/images/cost/icon.png">
          </div>   
-		                
             </div>
             <div class="swiper-slide step6">
                   <img class="tb" style="width:100%" src="/resources/images/cost/step6TB.png">
@@ -200,7 +183,6 @@
 		                <div class="stepBtn-6 step6A anA">
 		                     <div class="" data-content="0" data-text="没有也行"></div>
 		                </div>
-		               
 		                  <div class="stepBtn-6 step6B anB">
 		                     <div class="" data-content="2" data-text="二维动画"></div>
 		                </div>
@@ -215,8 +197,7 @@
           <div class="icon">
             <img src="/resources/images/cost/icon.png">
          </div>   
-
-            </div>
+       </div>
             
             <div class="swiper-slide step6">
 			       <div class="phoneCard cardBack" id="phoneCard">
@@ -234,27 +215,8 @@
 			            </div>
 			       </div>
             </div>
-            
              <div class="swiper-slide backGround swiper-no-swiping ">
-                         <!--  <img style="width:100%" src="/resources/images/cost/f1.jpg">
-                          <div class="f2">
-                            <div class="priceResult">
-                                   <div class="priceInfo">
-					                   <img src="/resources/images/cost/priceInfo.png">
-					               </div>
-							        <div class="getPrice"><span>￥</span><span id="getPriceSpan"></span></div>
-							        <div class="reCost">
-							           <img src="/resources/images/cost/reCost.png">
-							        </div>
-							        <div class="shareTo">
-							           <img id="shareWx" src="/resources/images/cost/shareTo.png">
-							        </div>
-					        
-					         </div>
-					     
-                          </div>
-                        
-                          <img style="width:100%" src="/resources/images/cost/f3.jpg"> -->
+
                           <img style="width:100%" src="/resources/images/cost/f1.jpg">
                           <div class="f2">
                             <div class="priceResult">
@@ -276,26 +238,10 @@
                         
                           <img style="width:100%" src="/resources/images/cost/f3.jpg">
 					     
-					   
-					   <%--  <div class="tools">
-					     <img class="share -mob-share-ui-button -mob-share-open" src="/resources/images/cost/share.png">
-					     <img src="/resources/images/cost/code.png" id="toShowCode">
-					    <a href="<spring:url value='/'/>"> <img class="img3" src="/resources/images/cost/order.png" id="toShowOrder"></a>
-					    </div> --%>
              </div>
-            
-            
-    <!--         <div class="swiper-slide">
-
-            <input class="setInput" id='phone' value="18210367466" style="font-size:30px">
-            <input data-content="0" placeholder="您的验证码" id="phoneCode" style="font-size:30px">
-            <button class="setCode" id='getPhoneCode' style="font-size:30px">发送验证码</button>
-            <div id="price">计算</div>
-            </div> -->
 
         </div>
-       
-        <!-- <div class="swiper-pagination"></div> -->
+
     </div> 
             
              <a href="javascript:void(0);">

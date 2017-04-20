@@ -10,7 +10,6 @@ $().ready(function() {
 	checkType();
 	initPrice();
 	initInfoResource();
-	returnFirst();
 	checkStep();	
 });
 
@@ -22,6 +21,10 @@ function checkStep(){
 	
 	$('#step2').off('click').on('click',function(){
 		checkStepTwo();
+	});
+	
+	$('#returnStep').off('click').on('click',function(){
+		returnFirst();
 	});
 	
 }
@@ -202,14 +205,9 @@ function stepTwoFinish(num){
 }
 
 function returnFirst(){
-	
-	$('#cancleBtn').on('click',function(){
-		$('#step1').removeClass('hide');
-		$('#step2').addClass('hide');
-		$('#step-bar').removeClass('step-2');
-		
-	});
-	 
+	    $('#titleInfo').text('基本信息');
+		$('.stepOne').removeClass('hide');
+		$('.stepTwo').addClass('hide');
 }
 
 

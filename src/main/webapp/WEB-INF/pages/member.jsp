@@ -33,10 +33,6 @@
 <!-- imgPath -->
 <spring:url value="/resources/images" var="imgPath" />
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!-->
 <html class="no-js">
 <!--<![endif]-->
 <head>
@@ -52,13 +48,6 @@
 <link rel="stylesheet" href="${commonCss}">
 <link rel="stylesheet" href="${memberCss}">
 <link rel="stylesheet" href="${mmenuCss}">
-
-
-
-<!--[if lt IE 9]>
-		<script>window.html5 || document.write('<script src="html5shivJs"><\/script>')</script>
-	<![endif]-->
-
 
 <script src="${jqueryJs }"></script>
 <script src="${imgLazyLoadingJs }"></script>

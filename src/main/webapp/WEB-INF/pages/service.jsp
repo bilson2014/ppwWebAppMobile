@@ -67,15 +67,11 @@
  font-size:16px}
 </style>
 
-
-
 <!-- 加载Mob share 控件 -->
 <script id="-mob-share" src="http://f1.webshare.mob.com/code/mob-share.js?appkey=8c49c537a706"></script>
 <script type="text/javascript" src="http://player.youku.com/jsapi"></script>
 </head>
 <body>
-
-
 		
 	<div class="phoneHeader">
 	     <a id="openMenu"><img src="${imgPath }/index/toMenu.png"></a>
@@ -91,28 +87,9 @@
 		<video controls poster="/resources/images/banner/moreInfo.JPG">
 		   <source  src="http://www.apaipian.com/product/video/paipianwangMovie.mp4"  id="source" type="video/mp4">
 		</video>
-<%-- 	<img src="${imgPath }/company/step1.png">
-		<img src="${imgPath }/company/step2.png">
-		<img src="${imgPath }/company/step3.png">
-		<img src="${imgPath }/company/step4.png">
-		<img src="${imgPath }/company/step5.png">
-		<img src="${imgPath }/company/step6.png">
-		<img src="${imgPath }/company/step7.png">
-		<img src="${imgPath }/company/step8.png">
-		<img src="${imgPath }/company/step9.png"> --%>
 		<img class="stepImg" src="${imgPath }/company/step.png">
-		
-   
-   
     <jsp:include flush="true" page="foot.jsp"></jsp:include> 
-		     
 	</div>	     
-		
-		
-		
-		
-			 
-		
 
 </body>
 </html>

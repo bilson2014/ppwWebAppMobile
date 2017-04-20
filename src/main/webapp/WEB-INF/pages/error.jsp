@@ -56,15 +56,11 @@
 			<div class="outSideDiv">	
 				<div class="centerDiv">
 				       <ul>
-				          
 				          <li><a href="/"><img src="${imgPath }/icons/error.png"></a></li>
 				          <li><div class="centerWord">服务器去拍电影啦~回到<a href="/">首页</a>去看看吧！</div></li>
 				       </ul>
 				</div>
             </div>
-	
-    
-    
 		
 	<script src="${jqueryJs }"></script>
 	<script src="${modelJs }"></script>

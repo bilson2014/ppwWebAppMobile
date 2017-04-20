@@ -44,11 +44,7 @@
 	     <a href="/searchview">  
 		  <img  src="${imgPath}/index/toSearch.png">
 		 </a> 
-
 	     <a href="/"><img class="ppwLogo" src="${imgPath}/index/logoH.png"></a>
-
-	   
-
 	</div>
 	
 	<jsp:include flush="true" page="menu.jsp"></jsp:include> 
@@ -60,12 +56,10 @@
 			    </video> 
 	       </div>
 	       <div class="timeLine">
-	            
 	            <div class="stepTop">
 	                <img src="${imgPath }/company/aboutUs.png">
 	                <div>2016</div>
 	            </div>
-	            
 	            <div class="stepItem">
 	                    <div class="item">
 	                      <div></div>
@@ -114,7 +108,6 @@
 	                      <div>2月获得洪泰基金投资人俞敏洪、盛希泰天使轮追加投资</div>
 	                    </div>
 	            </div>
-	            
 	             <div class="stepCircle">
 	                <div></div>
 	                <div>2014</div>
@@ -127,14 +120,8 @@
 	                    </div>
 	             </div>
 	       </div>
-	       
-	       
 	       <jsp:include flush="true" page="foot.jsp"></jsp:include> 
-		     
-	       
        </div>
-
-
 <script src="${jqueryJs }"></script>
 <script src="${pluginJs }"></script>
 <script src="${jsonJs }"></script>
