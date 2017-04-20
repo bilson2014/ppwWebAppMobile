@@ -42,6 +42,8 @@ public class TokenInterceptor implements HandlerInterceptor {
 			session.setAttribute("csrftoken", stoken);
 		}
 		
+		// 配置全局官方电话
+		session.setAttribute(PmsConstant.OFFICAL_PHONE_MARK, PmsConstant.OFFICAL_PHONE);
 		return true;
 	}
 

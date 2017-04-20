@@ -387,10 +387,10 @@ var share = {
 
 var _hmt = _hmt || [];
 (function() {
-	var hm = document.createElement("script");
-	hm.src = "//hm.baidu.com/hm.js?b0ac6d7e1cee0e96c5c43106c5d43537";
-	var s = document.getElementsByTagName("script")[0];
-	s.parentNode.insertBefore(hm, s);
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?d06b1b59bcfc102e4e6c4ad89bc4f0f6";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
 })();
 /*var _hmt = _hmt || [];
 (function() {
