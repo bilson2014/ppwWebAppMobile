@@ -51,7 +51,6 @@
 
 </head>
 <body>
-		
 	<div class="phoneHeader">
 	     <a id="openMenu"><img src="${imgPath }/index/toMenu.png"></a>
 	     <a href="/searchview">  

@@ -62,7 +62,7 @@ function initShare(){
 		getData(function(msg){
 			console.info(msg);
 			wx.config({
-			    debug: true, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+			    debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
 			    appId: msg.appId, // 必填，公众号的唯一标识
 			    timestamp: msg.timestamp, // 必填，生成签名的时间戳
 			    nonceStr: msg.nonceStr, // 必填，生成签名的随机串
@@ -73,10 +73,10 @@ function initShare(){
 		wx.ready(function(){
 			var  title = "拍片网  专业商业视频服务";
 			wx.onMenuShareAppMessage({
-			      title: title,
-			      desc: '拍片网',
-			      link: 'http://m.apaipian.com',
-			      imgUrl: 'http://m.apaipian.com/resources/images/index/logo.png',
+			      //title: title,
+			      desc: '拍片网平台汇聚了入驻导演原创精品宣传片视频案例，免费创意策划，价格透明，不满意全额退款',
+			      //link: 'http://m.apaipian.com',
+			      imgUrl: 'http://m.apaipian.com/resources/images/index/share-logo.png',
 			      trigger: function (res) {
 			       // alert('用户点击发送给朋友');
 			      },
@@ -91,9 +91,9 @@ function initShare(){
 			      }
 			   });
 			wx.onMenuShareTimeline({
-				title: title,
-				desc: '拍片网',
-				link: 'http://m.apaipian.com',
+				//title: title,
+				desc: '拍片网平台汇聚了入驻导演原创精品宣传片视频案例，免费创意策划，价格透明，不满意全额退款',
+				//link: 'http://m.apaipian.com',
 				imgUrl: 'http://m.apaipian.com/resources/images/index/logo.png',
 				trigger: function (res) {
 					// alert('用户点击发送给朋友');
@@ -109,9 +109,9 @@ function initShare(){
 				}
 			});
 			wx.onMenuShareQQ({
-				title: title,
-				desc: '拍片网',
-				link: 'http://m.apaipian.com',
+				//title: title,
+				desc: '拍片网平台汇聚了入驻导演原创精品宣传片视频案例，免费创意策划，价格透明，不满意全额退款',
+				//link: 'http://m.apaipian.com',
 				imgUrl: 'http://m.apaipian.com/resources/images/index/logo.png',
 				trigger: function (res) {
 					// alert('用户点击发送给朋友');
@@ -127,9 +127,9 @@ function initShare(){
 				}
 			});
 			wx.onMenuShareWeibo({
-				title: title,
-				desc: '拍片网',
-				link: 'http://m.apaipian.com',
+				//title: title,
+				desc: '拍片网平台汇聚了入驻导演原创精品宣传片视频案例，免费创意策划，价格透明，不满意全额退款',
+				//link: 'http://m.apaipian.com',
 				imgUrl: 'http://m.apaipian.com/resources/images/index/logo.png',
 				trigger: function (res) {
 					// alert('用户点击发送给朋友');
@@ -145,9 +145,9 @@ function initShare(){
 				}
 			});
 			wx.onMenuShareQZone({
-				title: title,
-				desc: '拍片网',
-				link: 'http://m.apaipian.com',
+				//title: title,
+				desc: '拍片网平台汇聚了入驻导演原创精品宣传片视频案例，免费创意策划，价格透明，不满意全额退款',
+				//link: 'http://m.apaipian.com',
 				imgUrl: 'http://m.apaipian.com/resources/images/index/logo.png',
 				trigger: function (res) {
 					// alert('用户点击发送给朋友');
