@@ -373,7 +373,7 @@
             overflow-y: hidden;
             position: relative;
             font-size: 0;
-            a:last-child() {
+            a:last-child{
                 margin-right: 0.3rem;
             }
             .item:first-child {
