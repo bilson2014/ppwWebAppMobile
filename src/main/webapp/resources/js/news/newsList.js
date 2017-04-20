@@ -5,9 +5,7 @@ var swiper;
 var add = true ;
 var reSet = false;
 $().ready(function() {
-
 	newsList.initCategory();
-	
 });
 
 var newsList = {
@@ -34,11 +32,8 @@ var newsList = {
 						}
 					});
 				}
-					
 			}
 		}
-		
-		
 }
 
 function getParam() {

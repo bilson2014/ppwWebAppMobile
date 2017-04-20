@@ -10,11 +10,10 @@
 <spring:url value="/resources/lib/jquery/jquery-2.0.3.min.js" var="jqueryJs"/>
 <spring:url value="/resources/lib/jquery/plugins.js" var="pluginJs"/>
 <spring:url value="/resources/lib/jquery.json/jquery.json-2.4.min.js" var="jsonJs"/>
-<spring:url value="/resources/lib/Bootstrap/js/bootstrap.min.js" var="bootstrapJs"/>
-<spring:url value="/resources/lib/cripto/aes.js" var="aesJs"/>
-<spring:url value="/resources/lib/cripto/pad-zeropadding.js" var="padJs"/>
 <spring:url value="/resources/js/common.js" var="commonJs"/>
 <spring:url value="/resources/js/remSet.js" var="remSetJs" />
+<spring:url value="/resources/lib/cripto/aes.js" var="aesJs"/>
+<spring:url value="/resources/lib/cripto/pad-zeropadding.js" var="padJs"/>
 
 
 <!-- imgPath -->
@@ -35,25 +34,20 @@
 	<link rel="stylesheet" href="${bootstrapCss}">
 	<link rel="stylesheet" href="${commonCss}">
 	<link rel="stylesheet" href="${phoneLoginCss}">
-
 	
 	<!--[if lt IE 9]>
 		<script>window.html5 || document.write('<script src="html5shivJs"><\/script>')</script>
 	<![endif]-->
-
-	
 	
 	<script src="${jqueryJs }"></script>
 	<script src="${remSetJs }"></script>
 	<script src="${pluginJs }"></script>
 	<script src="${jsonJs }"></script>
-	<script src="${bootstrapJs }"></script>
-	<script src="${aesJs }"></script>
-	<script src="${padJs }"></script>
 	<script src="${commonJs }"></script>
 	<script src="${phoneLoginJs }"></script>
-<script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
-
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+	<script src="${aesJs }"></script>
+	<script src="${padJs }"></script>
 </head>
 <body>
 
@@ -97,16 +91,6 @@
 			              <!-- <a href="/repwd" class="forgetPw"><div>忘记了密码?</div></a> -->
 			              <div class="loginIng" id="submitBtn-user">用户登录</div>
 			               <a href="/regSele"><div class="noLogin">还没有账号? 请<span>注册</span></div></a>
-			         <%-- <div class="loginTitle">
-			                   <div></div>
-			                   <div>第三方登录</div>
-			                   <div></div>
-			              </div>
-			              <div class="loginIcon">
-			                 <img src="${imgPath}/login/qqp.png">
-			                 <img src="${imgPath}/login/wbp.png">
-			                 <img src="${imgPath}/login/wechatp.png">
-			              </div> --%>
 	              </div>
 	              
 	               <div class="loginPhone active" id="useLoginDiv">
@@ -120,13 +104,7 @@
 			              <div class="loginIng" id="submitBtn_user_name">用户登录</div>
 			              <div class="noLogin">还没有账号? 请<span>注册</span></div>
 	              </div>
-	              
 	         </div>
-	         
-	         
-	         
 	  </div>
-		
-	
 </body>
 </html>

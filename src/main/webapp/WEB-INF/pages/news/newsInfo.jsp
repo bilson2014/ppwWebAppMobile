@@ -6,7 +6,6 @@
 
 <%-- import CSS --%>
 <spring:url value="/resources/css/news/newsInfo.css" var="newsInfoCss" />
-
 <%-- import JS --%>
 <spring:url value="/resources/lib/jquery/jquery-2.0.3.min.js"
 	var="jqueryJs" />
@@ -14,7 +13,6 @@
 <spring:url value="/resources/lib/jquery.json/jquery.json-2.4.min.js"
 	var="jsonJs" />
 <spring:url value="/resources/js/common.js" var="commonJs" />
-<spring:url value="/resources/js/youku-player.js" var="ykJs" />
 <spring:url value="/resources/js/news/newsInfo.js" var="newsInfoJs" />
 <!-- img path -->
 <spring:url value="/resources/images" var="imgPath" />
@@ -48,15 +46,15 @@
 	<script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
 </head>
 <body>
-	<input type="hidden" id="storage_node"
-		value="${file_locate_storage_path }" />
+
+	<input type="hidden" id="storage_node" value="${file_locate_storage_path }" />
 
 	<div class="phoneHeader">
 		<a id="openMenu"><img src="${imgPath }/index/toMenu.png"></a> 
-		<a class="hide"><img
-			src="${imgPath }/index/toSearch.png"></a>
-		 <a href="/"><img class="ppwLogo" src="${imgPath}/index/logoH.png"></a>
+		<a class="hide" ><img src="${imgPath }/index/toSearch.png"></a>
+		<a href="/"><img class="ppwLogo" src="${imgPath}/index/logoH.png"></a>
 	</div>
+	
 	<jsp:include flush="true" page="../menu.jsp"></jsp:include>
 
 	<div class="pagePhone">
@@ -73,7 +71,6 @@
 			</div>
 			<div class="setContent">${news.content}</div>
 		</div>
-
 		
 		<jsp:include flush="true" page="../foot.jsp"></jsp:include> 
 		
@@ -85,9 +82,5 @@
 	<script src="${newsInfoJs }"></script>
 	<script src="${commonJs }"></script>
 	<script src="${remSetJs}"></script>
-	<!-- 加载Mob share 控件 -->
-	<script id="-mob-share"
-		src="http://f1.webshare.mob.com/code/mob-share.js?appkey=8c49c537a706"></script>
-	<script type="text/javascript" src="http://player.youku.com/jsapi"></script>
 </body>
 </html>

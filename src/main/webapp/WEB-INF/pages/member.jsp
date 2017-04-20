@@ -1,7 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8"%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
-<%-- <%@ page import="com.panfeng.film.resource.model.User"%> --%>
-<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="r" uri="/mytaglib"%>
 <%-- import CSS --%>
@@ -10,22 +8,10 @@
 <spring:url value="/resources/css/common.css" var="commonCss" />
 <spring:url value="/resources/css/company/member.css"
 	var="memberCss" />
-<spring:url value="/resources/lib/mMenu/jquery.mmenu.all.css"
-	var="mmenuCss" />
-
-
 <%-- import JS --%>
-
 <spring:url value="/resources/lib/jquery/jquery-2.0.3.min.js"
 	var="jqueryJs" />
 <spring:url value="/resources/lib/jquery/plugins.js" var="pluginJs" />
-<spring:url value="/resources/lib/jquery.json/jquery.json-2.4.min.js"
-	var="jsonJs" />
-<spring:url value="/resources/lib/Bootstrap/js/bootstrap.min.js"
-	var="bootstrapJs" />
-<spring:url value="/resources/lib/mMenu/jquery.mmenu.min.js"
-	var="mmenuJs" />
-<spring:url value="/resources/js/imgLazyLoad.js" var="imgLazyLoadingJs" />
 <spring:url value="/resources/js/common.js" var="commonJs" />
 <spring:url value="/resources/js/company/member.js" var="memberJs" />
 <spring:url value="/resources/js/remSet.js" var="remSetJs" />
@@ -38,8 +24,7 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=9,chrome=1">
-<meta name="viewport"
-	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
 <meta name="keywords" content="拍片网团队,团队介绍,拍片网怎么样">
 <meta name="description" content="拍片网是一个温暖和谐的大家庭，成员全部来自于影视和互联网行业的精英，致力于打造“影视工业化”流程规范">
 <title>团队介绍 | 拍片网</title>
@@ -50,13 +35,10 @@
 <link rel="stylesheet" href="${mmenuCss}">
 
 <script src="${jqueryJs }"></script>
-<script src="${imgLazyLoadingJs }"></script>
 <script src="${pluginJs }"></script>
 <script src="${jsonJs }"></script>
-<script src="${bootstrapJs }"></script>
 <script src="${commonJs }"></script>
 <script src="${memberJs}"></script>
-<script src="${mmenuJs }"></script>
 <script src="${remSetJs }"></script>
 <script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
 
@@ -66,17 +48,12 @@ html {
 }
 </style>
 
-
-
 <!-- 加载Mob share 控件 -->
-<script id="-mob-share"
-	src="http://f1.webshare.mob.com/code/mob-share.js?appkey=8c49c537a706"></script>
+<script id="-mob-share" src="http://f1.webshare.mob.com/code/mob-share.js?appkey=8c49c537a706"></script>
 <script type="text/javascript" src="http://player.youku.com/jsapi"></script>
 </head>
 <body>
 <input type="hidden" id="storage_node" value="${file_locate_storage_path }" />
-
-
 	<div class="phoneHeader">
 	     <a id="openMenu"><img src="${imgPath }/index/toMenu.png"></a>
 	     <a href="/searchview">  
@@ -148,7 +125,7 @@ html {
 									</div>
 								</c:if>
 								<%--  <img class="-mob-share-weibo" src="${imgPath}/company/wb.png">
-					                 <img class="-mob-share-qzone" src="${imgPath}/company/qqzone.png"> --%>
+					                  <img class="-mob-share-qzone" src="${imgPath}/company/qqzone.png"> --%>
 							</div>
 						</div>
 					</div>
@@ -157,9 +134,6 @@ html {
 		</c:if>
 		<jsp:include flush="true" page="foot.jsp"></jsp:include> 
 	</div>	
-
-
-
 
 </body>
 </html>

@@ -5,9 +5,7 @@
 @import "fontSize";
 @import "compass/typography/text/ellipsis";
 @import "common_portal";
-
-
-.pagePhone{
+.pagePhone {
     margin-top: 1.3rem;
     padding-bottom: 1.5rem;
 }
@@ -85,8 +83,6 @@ a:active {
             margin-right: 15px;
         }
         .shareImg {
-            // width:100px;
-            // height: 100px;
             margin-top: 30px;
             clear: both;
             height: auto;
@@ -159,7 +155,7 @@ a:active {
                 font-size: $size40;
                 color: #e3e3e3;
                 position: relative;
-                top:0.2rem;
+                top: 0.2rem;
             }
         }
     }
@@ -231,7 +227,7 @@ a:active {
             height: 1rem;
             line-height: 1rem;
             border-radius: 61px;
-            background:$red-base;
+            background: $red-base;
         }
     }
 }
@@ -499,7 +495,6 @@ a:active {
     z-index: 999;
 }
 
-
-.footPhone{
+.footPhone {
     margin-top: 1.5rem;
 }

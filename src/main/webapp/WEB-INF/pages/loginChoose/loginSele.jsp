@@ -1,22 +1,16 @@
 <%@ page contentType="text/html;charset=UTF-8"%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%-- import CSS --%>
-<spring:url value="/resources/lib/Bootstrap/css/bootstrap.min.css" var="bootstrapCss"/>
 <spring:url value="/resources/css/common.css" var="commonCss"/>
 <spring:url value="/resources/css/login/phoneLogin.css" var="phoneLoginCss"/>
-
 <%-- import JS --%>
 <spring:url value="/resources/js/login/phoneLogin.js" var="phoneLoginJs"/>
 <spring:url value="/resources/lib/jquery/jquery-2.0.3.min.js" var="jqueryJs"/>
 <spring:url value="/resources/lib/jquery/plugins.js" var="pluginJs"/>
 <spring:url value="/resources/lib/jquery.json/jquery.json-2.4.min.js" var="jsonJs"/>
-<spring:url value="/resources/lib/Bootstrap/js/bootstrap.min.js" var="bootstrapJs"/>
-<spring:url value="/resources/lib/cripto/aes.js" var="aesJs"/>
 <spring:url value="/resources/lib/cripto/pad-zeropadding.js" var="padJs"/>
 <spring:url value="/resources/js/common.js" var="commonJs"/>
 <spring:url value="/resources/js/remSet.js" var="remSetJs" />
-
-
 <!-- imgPath -->
 <spring:url value="/resources/images" var="imgPath" />
 <!DOCTYPE html>
@@ -35,25 +29,17 @@
 	<link rel="stylesheet" href="${bootstrapCss}">
 	<link rel="stylesheet" href="${commonCss}">
 	<link rel="stylesheet" href="${phoneLoginCss}">
-
 	
 	<!--[if lt IE 9]>
 		<script>window.html5 || document.write('<script src="html5shivJs"><\/script>')</script>
 	<![endif]-->
-
-	
 	
 	<script src="${jqueryJs }"></script>
 	<script src="${remSetJs }"></script>
 	<script src="${pluginJs }"></script>
 	<script src="${jsonJs }"></script>
-	<script src="${bootstrapJs }"></script>
-	<script src="${aesJs }"></script>
-	<script src="${padJs }"></script>
 	<script src="${commonJs }"></script>
 	<script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
-
-
 </head>
 <body>
 
@@ -69,22 +55,22 @@
 
 	  <div class="pagePhone">
 	         <div class="choosePage">
+	         
 	              <div class="loginItem">
 	                    <div>我是客户</div>
 	                    <div>让所有企业都能够享受  高品质的视频服务</div>
 	                    <a href="/login"><img src="${imgPath}/login/cus.png"></a>
 	              </div>
+	              
 	              <div class="loginItem">
 	                    <div>我是导演</div>
 	                    <div>让每个导演都能拍出优秀作品</div>
 	                    <a href="/pLogin"><img src="${imgPath}/login/pro.png"></a>
 	              </div>
+	              
 	              <a href="regSele"><div class="toLogin">还没有账号? 请<span>注册</span></div></a>
 	              <a href="/mgr/login"><div class="proLogin">视频管家登录</div></a>
 	         </div>
-	         
 	  </div>
-		
-	
 </body>
 </html>

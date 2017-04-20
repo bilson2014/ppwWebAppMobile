@@ -1,18 +1,12 @@
 $().ready(function(){
- 
-	
-	
 	var screenWidth = document.documentElement.clientWidth;
 	var setHeight= screenWidth/16*9;
 	$('video').css('height',setHeight);
-	
 	$('.footerBar').click();
-	
 	var member = {
 			init:function(){
 				this.check();//详情展开与关闭
 				this.share();//分享
-				this.lazyLoading();
 			},
 			check:function(){
 				$('.checkOpen').off("click").on('click',function(){
@@ -42,9 +36,6 @@ $().ready(function(){
 						$(this).parent().find('#showShare').slideDown();
 					}
 				});
-				
-								
-				
 //				// 初始化 分享空间
 //				$('.share').click(function(){
 //					var title = '拍片网团队-'+$(this).data("flag");
@@ -53,9 +44,6 @@ $().ready(function(){
 //					share.init(shareUrl,title,imgUrl);
 //				});
 			},
-			lazyLoading:function(){
-				lazyLoad();
-			}
 	}
 	member.init();
 });

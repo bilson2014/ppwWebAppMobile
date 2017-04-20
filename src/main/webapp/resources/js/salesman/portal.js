@@ -2,6 +2,7 @@
 var critical = [39800,59800]; // 临界值
 
 $().ready(function() {
+	
 	loadVideoList();
 	closeVideo();
 	showOhideImg();
@@ -10,9 +11,6 @@ $().ready(function() {
 
 function showOhideImg(){
 	  $(document).on('touchmove',function(e){
-//		    e.preventDefault();		    
-//			var touch = event.touches[0];
-			
 		    var height = $('.example-basic').offset().top;
 		    console.info(height);
 		    if(height<0){
@@ -20,7 +18,6 @@ function showOhideImg(){
 		    }else{
 		    	$('#topImg').show();
 		    }
-             
 		  });
 }
 
@@ -77,25 +74,20 @@ function loadVideoList() {
 	if (list != null && list.length > 0) {
 		var listSize = list.length;
 		for (var i = 0; i < listSize; i++) {
-			
 			var product = list[i];
 			var videoId = product.productId;
 			var url = getContextPath() + '/salesman/order/'+videoId+'/'+uniqueId+''; 
 			var posterUrl = product.picLDUrl;
 			var videoId="video"+videoId;
-			
 			if(posterUrl != undefined && posterUrl != null){
 				var imgPath = getDfsHostName() + posterUrl;
 				imgUrl = imgPath;
 			} 
-			
 			var realPrice = thousandCount(product.serviceRealPrice);
 			var videoUrl = product.videoUrl;
 				if(videoUrl != undefined && videoUrl != null){
 					var videoPath = getDfsHostName() + videoUrl;
-					
 				}
-			
 				$body += '<div class="video-area-card">';
 				$body += '<div class="video-play-section" id="first-video-section">';
 				$body += '<img class="video-play-section" src="'+imgPath+'" />';
@@ -134,18 +126,16 @@ function loadVideoList() {
         });
 }
 
-
  function playVideo(){
 	            $('.video-play-section').off('click');
                 $('.video-play-section').on('click',function(){
-                 $('#toolbar-modal').show();
-                  var imgX = $(this).find('#imgPath').val();
-				  var videoPath = $(this).find('#videoPath').val();
-				  $('#recomment-video').attr('src',videoPath);
-				  $('#recomment-video').attr('poster',imgX);
+	                  $('#toolbar-modal').show();
+	                  var imgX = $(this).find('#imgPath').val();
+					  var videoPath = $(this).find('#videoPath').val();
+					  $('#recomment-video').attr('src',videoPath);
+					  $('#recomment-video').attr('poster',imgX);
                 });
 }
- 
 
  function fill(html,price,index){
 	var element;
@@ -166,7 +156,6 @@ function loadVideoList() {
 	if(element!=null){
 		element.empty();
 		element.append(html);
-		
 	}
  }
 

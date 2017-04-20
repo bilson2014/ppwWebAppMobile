@@ -5,22 +5,13 @@ var swiper;
 var add = true ;
 var reSet = false;
 $().ready(function() {
-	
 	newsInfo.initData();
-	
-	 
-
 });
-
-
-
-
 var newsInfo = {
 		initData : function() { // 加载分类信息
 			 var screenWidth = document.documentElement.clientWidth;
 			 var setHeight= screenWidth/16*9;
 			 $('#banner').css('height',setHeight);
-			 
 				var html = $('.setContent').html().trim();
 				if (html != '') {
 					var re2 = 'src="@.@([^"]*)"';

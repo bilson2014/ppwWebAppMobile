@@ -7,24 +7,12 @@ var indentId = 0;
 var add = true;
 var first = true;
 $().ready(function() {
-
 	 init();
-
 	 getVerificationCode();
 	 controlCost();
-	// submit();
 });
 function controlCost(){
 	$('.start').off('click').on('click',function(){
-		/*$('#step1').hide();
-		$('#step2').show();
-	 	setTimeout(function() {
-		 		$('#bar').addClass('proWidth'); 
-			}, 500);
-	 	setTimeout(function() {
-			$('#step2').hide();
-			$('#step3').show();
-		}, 3000);*/
 	 	if(checkData()){
 			var videoType = $('#videoType').text();
 			var team = $('#team').text();
@@ -37,7 +25,6 @@ function controlCost(){
 					",拍摄设备:" + equipment, ",演员:" + actor, ",动画:" + animation ].join("");
 			var phone = $('#phone').val();
 			var verification_code = $('#phoneCode').val();
-			
 			if(add){
 				if(first){
 					add = false;
@@ -106,12 +93,9 @@ function controlCost(){
 			}
 		}
 	});
-	
 }
 
-
 function init() {
-
 	 var swiper = new Swiper('.swiper-container', {
 	        pagination: '.swiper-pagination',
 	        slidesPerView: 'auto',
@@ -136,11 +120,8 @@ function init() {
 	        	case 5:
 	        		initStep5(swiper);
 	        		break;
-
 	        	}
-	        	
 	        }
-
 	    });
 	 
 	 controlActive(swiper);
@@ -255,7 +236,6 @@ function checkData(){
 			return false;
 		}
 	}
-	
 	return true;
 }
 
@@ -292,64 +272,6 @@ function getVerificationCode(){
 		}, getContextPath() + '/login/verification/' + $('#phone').val().trim(), null);
 	});
 }
-
-//function submit() {
-//	$('.start').off("click").on('click', function() {
-//		if(flag = 0){
-//			if(checkData()){
-//				var videoType = $('.type').text();
-//				var team = $('.team').text();
-//				var equipment = $('.equipment').text();
-//				var actor = $('.actor').text();
-//				var animation = $('.animation').text();
-//				var indentId = $('#phone').attr('data-content');
-//				var description = [ "视频类别:" + videoType,",导演团队:" + team,
-//						",拍摄设备:" + equipment, ",演员:" + actor, ",动画:" + animation ].join("");
-//				var phone = $('#phone').val();
-//				var verification_code = $('#phoneCode').val();
-//				loadData(function(result) {
-//						if(result.code == 1){
-//							flag = 1;
-//							$('#price').text(thousandCount(result.cost));
-//							$('#phone').attr('data-content', result.indentId);
-//							controlCost();
-//							$('.item').hide();
-//						}else if(result.code == 0 && result.msg == '手机号不匹配'){
-//							$('#errorPhone').text('手机号不匹配');
-//							$('#errorPhone').show();
-//						}else{
-//							$('#errorCode').text(result.msg);
-//							$('#errorCode').show();
-//						}
-//				}, getContextPath() + '/calculate/cost', $.toJSON({
-//					videoType : $('.type').attr('data-content'),
-//					team : $('.team').attr('data-content'),
-//					equipment : $('.equipment').attr('data-content'),
-//					actor : $('.actor').attr('data-content'),
-//					animation : $('.animation').attr('data-content'),
-//					phone : phone,
-//					indentId : indentId,
-//					description : description,
-//					verification_code:verification_code
-//				}));
-//			}
-//		}else{
-//			loadData(function(result) {
-//				flag = 1;
-//				$('#price').text(thousandCount(result.cost));
-//				$('#phone').attr('data-content', result.indentId);
-//				controlCost();
-//				$('.item').hide();
-//			}, getContextPath() + '/calculate/cost2', $.toJSON({
-//				videoType : $('.type').attr('data-content'),
-//				team : $('.team').attr('data-content'),
-//				equipment : $('.equipment').attr('data-content'),
-//				actor : $('.actor').attr('data-content'),
-//				animation : $('.animation').attr('data-content')
-//			}));
-//		}
-//	});
-//}
 
 //timer 处理函数 - 注册
 function setRemainTime(){

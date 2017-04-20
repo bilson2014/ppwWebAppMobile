@@ -36,7 +36,9 @@
 	<link rel="stylesheet" href="${commonCss}">
 	<link rel="stylesheet" href="${phoneLoginCss}">
 	
-	
+	<!--[if lt IE 9]>
+		<script>window.html5 || document.write('<script src="html5shivJs"><\/script>')</script>
+	<![endif]-->
 	
 	<script src="${jqueryJs }"></script>
 	<script src="${remSetJs }"></script>
@@ -47,17 +49,15 @@
 	<script src="${padJs }"></script>
 	<script src="${commonJs }"></script>
 	<script src="${phoneLoginJs }"></script>
-<script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
 
 </head>
 <body>
 
 	<div class="phoneHeader">
 	     <a class="hide" id="openMenu"><img src="${imgPath }/index/toMenu.png"></a>
-	     <a href="/searchview">  
-		 <img  src="${imgPath}/index/toSearch.png">
-		</a> 
-	      <a href="/"><img class="ppwLogo" src="${imgPath}/index/logoH.png"></a>
+	     <a href="/searchview"><img  src="${imgPath}/index/toSearch.png"></a> 
+	     <a href="/"><img class="ppwLogo" src="${imgPath}/index/logoH.png"></a>
 	</div>
 	
 	 <jsp:include flush="true" page="../menu.jsp"></jsp:include> 
@@ -76,6 +76,7 @@
 	                  <div id="noPhoneLogin">账号登录</div>
 	                  <div></div>
 	              </div>
+	              
 	              <div class="loginPhone " id="phoneLoginDiv">
 			              <div class="loginItemPhone">
 			                  <input placeholder="手机号"  id="user_phoneNumber">

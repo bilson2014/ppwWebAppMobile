@@ -14,7 +14,6 @@ $().ready(function(){
 				updatePwd = true;
 				$('#executeBtn').on('click',upd.updPwd);
 			}
-			
 		},
 		updPwd:function(){ //修改密码
 			var id = $('#userId').val().trim();

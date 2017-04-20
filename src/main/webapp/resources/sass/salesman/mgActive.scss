@@ -37,7 +37,8 @@ body {
     }
 }
 
-.info,.infos {
+.info,
+.infos {
     width: 100%;
     font-size: 0.34rem;
     color: $red-base;
@@ -45,11 +46,9 @@ body {
     font-weight: bold;
 }
 
-.infos{
+.infos {
     margin-top: 0.2rem;
 }
-
-
 
 img {
     width: 100%;

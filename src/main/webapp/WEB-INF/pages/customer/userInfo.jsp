@@ -31,7 +31,6 @@
 <spring:url value="/resources/lib/merge/iosSelect.js" var="iosSelectJs" />
 <spring:url value="/resources/js/remSet.js" var="remSetJs" />
 
-
 <!-- imgPath -->
 <spring:url value="/resources/images" var="imgPath" />
 <!DOCTYPE html>
@@ -66,11 +65,9 @@
 <!--[if lt IE 9]>
 		<script>window.html5 || document.write('<script src="html5shivJs"><\/script>')</script>
 	<![endif]-->
+	
 <script src="${jqueryJs}"></script>
 <script src="${remSetJs}"></script>
-<%-- <script src="${pluginJs }"></script>
-
-<script src="${imgLazyLoadingJs }"></script> --%>
 <script src="${commonJs}"></script>
 <script src="${jsonJs}"></script>
 <script src="${iosSelectJs}"></script>
@@ -155,12 +152,6 @@
            	   
            	   <div class="nextBtn" id="upDateInfo">保存</div>
            </div>
-           
-		          
-           </div>
-    </div>
-
-
-    
+        </div>
 </body>
 </html>

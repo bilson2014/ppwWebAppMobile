@@ -5,21 +5,9 @@
         @import "mixin";
         @import "common_portal";
         @import "variables";
-        //@import "compass/css3/box-shadow";
         @import "compass/typography/text/ellipsis";
         @import "normalize";
-        $video-video-height: 270px; // 视频图片的高度
-        $video-video-height320: 180px; // 视频图片的高度(320px)
-        $video-video-height360: 202px; // 视频图片的高度(360px)
-        $video-video-height390: 220px; // 视频图片的高度(320px)
-        $video-video-height640: 360px; // 视频图片的高度(640px)
-        $video-video-height720: 405px; // 视频图片的高度(720px)
-        $video-play-section-height: 250px; // 视频播放区域高度
-        $video-play-section-height320: 170px; // 视频播放区域高度(320px)
-        $video-play-section-height360: 192px; // 视频播放区域高度(360px)
-        $video-play-section-height390: 210px; // 视频播放区域高度(390px)
-        $video-play-section-height640: 351px; // 视频播放区域高度(640px)
-        $video-play-section-height720: 396px; // 视频播放区域高度(720px)
+
         a {
             text-decoration: none;
         }
@@ -27,8 +15,6 @@
         body {
             overflow: hidden;
             background: black;
-            /* background: url(/resources/video/indexVideo.gif) no-repeat;            
-            background-size: 100% 100%; */
         }
         
         .backImg {
@@ -46,10 +32,6 @@
             img {
                 position: absolute;
                 width: 100%;
-                // -webkit-transition: all 1.2s ease-in .1s;
-                // -moz-transition: all 1.2s ease-in .1s;
-                // -o-transition: all 1.2s ease-in .1s;
-                // transition: all 1.2s ease-in .1s;
                 -webkit-transform: scale(1);
                 -moz-transform: scale(1);
                 -o-transform: scale(1);
@@ -245,15 +227,12 @@
         @-webkit-keyframes ba {
             0% {
                 bottom: 0.5rem;
-                //     opacity: 1;
             }
             50% {
                 bottom: 0px;
-                //      opacity: 0;
             }
             100% {
                 bottom: 0.5rem;
-                //     opacity: 1;
             }
         }
         
@@ -670,52 +649,4 @@
             }
         }
         
-        //视频
-        .video-play-sections {
-            position: relative;
-            width: 100%;
-            background: #000;
-            top: 50%;
-            height: $video-video-height;
-            @media screen and (max-width: 360px) {
-                height: $video-video-height320;
-                margin-top: -($video-video-height320 / 2);
-            }
-            @media screen and (min-width: 360px) and (max-width: 390px) {
-                height: $video-video-height360;
-                margin-top: -($video-video-height360 / 2);
-            }
-            @media screen and (min-width: 390px) and (max-width: 460px) {
-                height: $video-video-height390;
-                margin-top: -($video-video-height390 / 2);
-            }
-            @media screen and (min-width: 640px) and (max-width: 720px) {
-                height: $video-video-height640;
-                margin-top: -($video-video-height640 / 2);
-            }
-            @media screen and (min-width: 720px) {
-                height: $video-video-height720;
-                margin-top: -($video-video-height720 / 2);
-            }
-            .video-play {
-                width: 100%;
-                height: 100%;
-            }
-            video {
-                width: 100%;
-                height: 100%;
-            }
-        }
-        
-        #closeBtn {
-            position: absolute;
-            top: 5%;
-            right: 5%;
-            margin-right: 5%;
-            color: #fff;
-            font-size: 30px;
-            margin-top: 20px;
-            border: none;
-            outline: none;
-            background: transparent;
-        }
+      

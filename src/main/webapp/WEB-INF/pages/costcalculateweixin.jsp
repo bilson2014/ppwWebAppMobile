@@ -39,6 +39,7 @@
     <link rel="stylesheet" href="/resources/lib/swiper/swiper-3.3.1.min.css">
     <link rel="stylesheet" href="/resources/lib/Bootstrap/css/bootstrap.min.css">
     <script type="text/javascript" src="/resources/lib/jquery/jquery-2.0.3.min.js"></script>
+    
 	<!--[if lt IE 9]>
 		<script>window.html5 || document.write('<script src="html5shivJs"><\/script>')</script>
 	<![endif]-->

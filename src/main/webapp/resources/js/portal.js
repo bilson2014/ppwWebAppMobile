@@ -11,7 +11,6 @@ $().ready(function() {
 	portal.toOrder();
 	portal.controlLogo();
 	portal.getProviderItem();
-	//isWeiXin();
 	subPaipian();
 	getCardWord();
 });
@@ -31,7 +30,6 @@ function checkPassWord(){
 		}
 	});
 }
-
 
 function checkData(type){
 
@@ -70,7 +68,6 @@ function checkData(type){
 			$("#repwd").parent().find('.orError').show();
 			return false;
 		}
-		  
 		
 		break;
 
@@ -108,11 +105,8 @@ function checkData(type){
 	}
 }
 
-
-
 function isWeiXin() {
 	var ua = window.navigator.userAgent.toLowerCase();
-	console.log(ua);//mozilla/5.0 (iphone; cpu iphone os 9_1 like mac os x) applewebkit/601.1.46 (khtml, like gecko)version/9.0 mobile/13b143 safari/601.1
 	if (ua.match(/MicroMessenger/i) == 'micromessenger') {
 	return true;
 	} else {
@@ -127,8 +121,6 @@ function isWeiXin() {
 		alert("不是来自微信内置浏览器");
 	}
 }
-	
-
 
 var portal = {
 	initData : function() { // 加载分类信息
@@ -174,7 +166,6 @@ var portal = {
 				if(checkMobile($('#indent_tele').val())){ // 检查 是否 是手机号码
 					$('#error').hide('normal');
 					// 提交表单
-				//	$('#order-form').attr('action',getContextPath() + '/salesman/order/submit').submit();
 					$('#orderSuccess').show().addClass('moedlActive');
 				}else {
 					$('#error').show('normal');
@@ -226,21 +217,16 @@ var portal = {
 				                '<div class="tags">';
 					 if(json!=null && json !=''){
 						 for (var int = 0; int < json.length; int++) {
-							 
 							 if(int >=4){
 								 break;
 							 }
-							 
 							 $body += '<div class="tagsItem">'+ json[int]+'</div>';
-							 
 						}
 					 }
-		 $body +=			      '</div>'+
-				            '</div>';
+		 $body += '</div></div>';
 		  $body += '</div></a>';
 		  $(".ourCus").append($body);
-	},
-	
+	}
 }
 
 function checkData(){
@@ -253,7 +239,6 @@ function checkData(){
 		$('#error').text('请输入手机号码');
 		flag = false;
 	}
-	
 	return flag;
 }
 
@@ -285,15 +270,11 @@ function btnPosition() {
 		  footer.addClass('hide');
 	});
 	
-	
 	  $(document).on('touchmove',function(e){
-		    //e.preventDefault();
 		    var touch = event.touches[0]; 
 			var topPos=$('#top').offset().top;
 			var botBtn=$('#footer').offset().top;
-		    
 		    var top = $('#toTop');
-		  
 			  if(topPos > 0){
 				  top.addClass('hide');
 				  footer.removeClass('hide');
@@ -302,14 +283,11 @@ function btnPosition() {
 			  if(botBtn>600&&topPos < 0){
 				  top.removeClass('hide');
 				  footer.removeClass('hide');
-				 
 			  }
 			  if(botBtn<600){
 				  top.removeClass('hide');
 				  footer.addClass('hide');
-				 
 			  }
-			
 		  });	
 }
 var counts = 60; // 间隔函数，1秒执行
@@ -386,32 +364,24 @@ function SetRemainTimes() {
 	}
 }
 
-
 //检查数据完整性
 function checkDatas(type) {
 	// 检查数据
-
-//	showError($('#indent_tele_error'), '');
-//	showError($('#indent_code_error'), '');
 	var contactTele = $('#indent_tele').val().trim();
 	var phoneCode = $('#phoneCode').val().trim();
 	var flag = true;
-
 	if (contactTele == '' || contactTele == null || contactTele == undefined) {
 		$('#error').show();
 		$('#error').text('请输入手机号码');
 		flag = false;
 		return flag;
 	}
-
 	if (!checkMobile(contactTele)) {
 		$('#error').show();
 		$('#error').text('手机格式不正确');
-		
 		flag = false;
 		return flag;
 	}
-
 	if ((phoneCode == '' || phoneCode == null || phoneCode == undefined)
 			&& type == 1) {
 		$('#codeError').show();
@@ -451,12 +421,10 @@ function getCardWord(){
 function getContentIndex(string){
 	 var screenWidth = document.documentElement.clientWidth;
 	 var num = 33;  
-	    
 	if(string.length<=num){
 		var content = string
 	}else{
 		var content = string.substr(1,num) +"[...]"
 	}
-	
 	return  content;
 }

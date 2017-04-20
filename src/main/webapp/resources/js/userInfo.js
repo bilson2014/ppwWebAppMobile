@@ -7,8 +7,6 @@ var reSet = false;
 $().ready(function() {
 	init();
 });
-
 function init() {
-
 }
 
