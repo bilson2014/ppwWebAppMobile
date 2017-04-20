@@ -34,8 +34,6 @@
 	<mvc:view-controller path="/company-activity.html"
 		view-name="/company-activity" />
 
-	<!-- <mvc:view-controller path="/member.html" view-name="/member" /> -->
-
 	<mvc:view-controller path="/mgr/recover" view-name="/manager/recover" />
 
 	<mvc:view-controller path="/payment/payList"

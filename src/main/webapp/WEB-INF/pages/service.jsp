@@ -6,7 +6,6 @@
 <spring:url value="/resources/css/company/service.css" var="serviceCss"/>
 
 <%-- import JS --%>
-
 <spring:url value="/resources/lib/jquery/jquery-2.0.3.min.js" var="jqueryJs"/>
 <spring:url value="/resources/lib/jquery/plugins.js" var="pluginJs"/>
 <spring:url value="/resources/js/common.js" var="commonJs"/>
@@ -43,7 +42,6 @@
 	<script src="${imgLazyLoadingJs }"></script>
 	<script src="${mmenuJs }"></script>
     <script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
-   
 <style>
 
  html{
@@ -63,13 +61,14 @@
 	<jsp:include flush="true" page="menu.jsp"></jsp:include>
 		
 	<div class="pagePhone">
-		<video controls poster="/resources/images/banner/moreInfo.JPG" id="setVideo">
-		</video>
+		<video id="postVideo" controls poster="/resources/images/banner/moreInfo.JPG" src="" ></video>
 		<img class="stepImg" src="${imgPath }/company/step.png">
-        <jsp:include flush="true" page="foot.jsp"></jsp:include> 
-	</div>	     
-	
-<script src="${serviceJs }"></script>
+		
+    <jsp:include flush="true" page="foot.jsp"></jsp:include> 
+		     
+	</div>
+
+	<script src="${serviceJs }"></script>
 
 </body>
 </html>

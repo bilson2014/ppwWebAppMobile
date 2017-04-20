@@ -191,6 +191,11 @@ public class PCController extends BaseController {
 		query.setRows(Integer.parseInt(String.valueOf(solrView.getLimit())));
 
 		final List<PmsProductSolr> list = solrService.queryDocs(token.getSolrUrl(), query);
+		for (PmsProductSolr pmsProductSolr : list) {
+			String tags = pmsProductSolr.getTags();
+			if(StringUtils.isNotBlank(tags))
+				pmsProductSolr.setTags(tags.trim().replaceAll("(\\s*)(,|，|\\s+)(\\s*)", " "));
+		}
 		return list;
 	}
 

@@ -76,16 +76,12 @@ function initShare(){
 			      //link: 'http://m.apaipian.com',
 			      imgUrl: 'http://m.apaipian.com/resources/images/index/share-logo.png',
 			      trigger: function (res) {
-			       // alert('用户点击发送给朋友');
 			      },
 			      success: function (res) {
-			       // alert('已分享');
 			      },
 			      cancel: function (res) {
-			       // alert('已取消');
 			      },
 			      fail: function (res) {
-			        //alert(JSON.stringify(res));
 			      }
 			   });
 			wx.onMenuShareTimeline({
@@ -94,16 +90,12 @@ function initShare(){
 				//link: 'http://m.apaipian.com',
 				imgUrl: 'http://m.apaipian.com/resources/images/index/logo.png',
 				trigger: function (res) {
-					// alert('用户点击发送给朋友');
 				},
 				success: function (res) {
-					// alert('已分享');
 				},
 				cancel: function (res) {
-					// alert('已取消');
 				},
 				fail: function (res) {
-					//alert(JSON.stringify(res));
 				}
 			});
 			wx.onMenuShareQQ({
@@ -112,16 +104,12 @@ function initShare(){
 				//link: 'http://m.apaipian.com',
 				imgUrl: 'http://m.apaipian.com/resources/images/index/logo.png',
 				trigger: function (res) {
-					// alert('用户点击发送给朋友');
 				},
 				success: function (res) {
-					// alert('已分享');
 				},
 				cancel: function (res) {
-					// alert('已取消');
 				},
 				fail: function (res) {
-					//alert(JSON.stringify(res));
 				}
 			});
 			wx.onMenuShareWeibo({
@@ -130,16 +118,12 @@ function initShare(){
 				//link: 'http://m.apaipian.com',
 				imgUrl: 'http://m.apaipian.com/resources/images/index/logo.png',
 				trigger: function (res) {
-					// alert('用户点击发送给朋友');
 				},
 				success: function (res) {
-					// alert('已分享');
 				},
 				cancel: function (res) {
-					// alert('已取消');
 				},
 				fail: function (res) {
-					//alert(JSON.stringify(res));
 				}
 			});
 			wx.onMenuShareQZone({
@@ -148,16 +132,12 @@ function initShare(){
 				//link: 'http://m.apaipian.com',
 				imgUrl: 'http://m.apaipian.com/resources/images/index/logo.png',
 				trigger: function (res) {
-					// alert('用户点击发送给朋友');
 				},
 				success: function (res) {
-					// alert('已分享');
 				},
 				cancel: function (res) {
-					// alert('已取消');
 				},
 				fail: function (res) {
-					//alert(JSON.stringify(res));
 				}
 			});
 		});
@@ -513,10 +493,10 @@ var share = {
 
 var _hmt = _hmt || [];
 (function() {
-	var hm = document.createElement("script");
-	hm.src = "//hm.baidu.com/hm.js?b0ac6d7e1cee0e96c5c43106c5d43537";
-	var s = document.getElementsByTagName("script")[0];
-	s.parentNode.insertBefore(hm, s);
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?d06b1b59bcfc102e4e6c4ad89bc4f0f6";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
 })();
 /*var _hmt = _hmt || [];
 (function() {
