@@ -35,7 +35,7 @@
 		<script>window.html5 || document.write('<script src="html5shivJs"><\/script>')</script>
 	<![endif]-->
 	<script src="${jqueryJs }"></script>
-
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
 </head>
 <body>
 		  <div class="cusSide" id="changeDiv">

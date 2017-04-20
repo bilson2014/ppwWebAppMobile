@@ -23,11 +23,11 @@
 <meta name="description"
 	content="hwSlider是一款支持移动设备轮播图片插件，支持的图片效果有焦点图轮播、图片和文字混搭。和我们之前分享的多图相册滑动flexslider插件http://www.sucaihuo.com/js/6.html类似。" />
 <meta name="viewport"
-	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
 	
 	<link type="text/css" rel="stylesheet" href="${activityCss}" />
     <link type="text/css" rel="stylesheet" href="${swiperCss}" />
-    
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
 </head>
 <body>
 

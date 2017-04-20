@@ -27,7 +27,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
 	<title>服务器去拍404电影啦</title>
 	<link rel="stylesheet" href="${errorCss}">
-	
+	<!--[if lt IE 9]>
+		<script>window.html5 || document.write('<script src="html5shivJs"><\/script>')</script>
+	<![endif]-->
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
 </head>
 <body>
 

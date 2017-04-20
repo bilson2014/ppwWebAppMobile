@@ -109,7 +109,7 @@
 	            <div class="swiper-slide">
 		            <video style="width:0px;opacity:0" controls="" loop="" poster="${imgPath}/index/moreInfo.JPG" name="media" id="header3Video" class="active"> 
 			         <!--  <source src="/resources/video/test.mov" id="source" type="video/mp4"> -->
-			         <source src="http://www.apaipian.com/product/video/paipianwangMovie.mp4" id="source" type="video/mp4">
+			         <source src="" id="source" type="video/mp4">
 			        </video>
 	                 <ul>
 		                  <li class="title">专业商业视频服务</li>
@@ -294,5 +294,6 @@
 <script src="${commonJs }"></script>
 <script src="${portalJs }"></script>
 <script src="${remSetJs}"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
 
 </html>

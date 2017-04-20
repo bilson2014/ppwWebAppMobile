@@ -43,7 +43,7 @@
 	<script src="${commonJs }"></script>
 	<script src="${orderJs }"></script>
 	<script src="${RemJs}"></script>
-	
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
 </head>
 <body>
 	<div class="wrap">

@@ -72,6 +72,7 @@
 <script src="${jsonJs}"></script>
 <script src="${iosSelectJs}"></script>
 <script src="${userInfoJs}"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
 </head>
 <body>
 

@@ -6,13 +6,7 @@ $().ready(function(){
 	search.initData();
 	toSearch();
 	touchLis();
-	
-	var docElem = document.documentElement;
-	window.lazySizesConfig = window.lazySizesConfig || {};
-	window.lazySizesConfig.loadMode = 1;
-	//set expand to a higher value on larger displays
-	window.lazySizesConfig.expand = Math.max(Math.min(docElem.clientWidth, docElem.clientHeight, 1222) - 1, 359);
-	window.lazySizesConfig.expFactor = lazySizesConfig.expand < 380 ? 3 : 2;
+	initLazySizes();
 });
 
 function getItemHeight(){
@@ -153,7 +147,6 @@ function toSearch(){
 	    if(heightPrice=="" && lowPrice!=""){
 	    	price = price +"["+lowPrice+" TO "+"*]";
 	    }
-	    
 	    if(type !='&industry='){
 	    	
 	    	searchQ = searchQ+type;
@@ -276,4 +269,12 @@ function createVideo(product){
 					'</a>'
 				].join('');
 	return body;
+}
+
+function initLazySizes(){
+	var docElem = document.documentElement;
+	window.lazySizesConfig = window.lazySizesConfig || {};
+	window.lazySizesConfig.loadMode = 1;
+	window.lazySizesConfig.expand = Math.max(Math.min(docElem.clientWidth, docElem.clientHeight, 1222) - 1, 359);
+	window.lazySizesConfig.expFactor = lazySizesConfig.expand < 380 ? 3 : 2;
 }

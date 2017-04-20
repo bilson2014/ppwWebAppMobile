@@ -13,8 +13,9 @@ $().ready(function() {
 	portal.getProviderItem();
 	subPaipian();
 	getCardWord();
-	$('#source').attr('src','http://www.apaipian.com/product/video/paipianwangMovie.mp4');
 	
+	$('#source').attr('src','http://www.apaipian.com/product/video/paipianwangMovie.mp4');
+	$('#header3Video').load();
 });
 
 function checkPassWord(){

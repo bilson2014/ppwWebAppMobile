@@ -48,6 +48,7 @@
 	<script src="${padJs }"></script>
 	<script src="${commonJs }"></script>
 
+<script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
 </head>
 <body>
 
@@ -76,6 +77,8 @@
 	              <a href="/loginSele"><div class="toLogin">还没有账号? 请<span>登录</span></div></a>
 	              <a href="/mgr/login"><div class="proLogin">视频管家登录</div></a>
 	         </div>
+
 	  </div>
+
 </body>
 </html>
