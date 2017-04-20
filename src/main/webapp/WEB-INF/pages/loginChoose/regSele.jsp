@@ -16,7 +16,6 @@
 <spring:url value="/resources/js/common.js" var="commonJs"/>
 <spring:url value="/resources/js/remSet.js" var="remSetJs" />
 
-
 <!-- imgPath -->
 <spring:url value="/resources/images" var="imgPath" />
 <!DOCTYPE html>
@@ -35,13 +34,10 @@
 	<link rel="stylesheet" href="${bootstrapCss}">
 	<link rel="stylesheet" href="${commonCss}">
 	<link rel="stylesheet" href="${phoneLoginCss}">
-
 	
 	<!--[if lt IE 9]>
 		<script>window.html5 || document.write('<script src="html5shivJs"><\/script>')</script>
 	<![endif]-->
-
-	
 	
 	<script src="${jqueryJs }"></script>
 	<script src="${remSetJs }"></script>
@@ -51,6 +47,7 @@
 	<script src="${aesJs }"></script>
 	<script src="${padJs }"></script>
 	<script src="${commonJs }"></script>
+
 <script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
 </head>
 <body>
@@ -80,9 +77,8 @@
 	              <a href="/loginSele"><div class="toLogin">还没有账号? 请<span>登录</span></div></a>
 	              <a href="/mgr/login"><div class="proLogin">视频管家登录</div></a>
 	         </div>
-	         
+
 	  </div>
-		
-	
+
 </body>
 </html>

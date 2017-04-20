@@ -38,7 +38,7 @@
 <script src="${pluginJs }"></script>
 <script src="${jsonJs }"></script>
 <script src="${commonJs }"></script>
-<script src="${memberJs}"></script>
+
 <script src="${remSetJs }"></script>
 <script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
 
@@ -66,8 +66,9 @@ html {
 
 	<div class="pagePhone">
 	
-	    <video id="video"  preload="auto" controls="controls" poster="${imgPath }/company/poster.jpg">
-	        <source src="${file_locate_storage_path }group1/M00/00/20/CgqNZViiqe2ANmqIAZ-Ai8Au-R8971.mp4">
+	    <video id="video"  preload="auto" controls="controls" poster="${imgPath }/company/poster.jpg" id="setVideo">
+	        <%-- <source id="setVideo" src="${file_locate_storage_path }group1/M00/00/20/CgqNZViiqe2ANmqIAZ-Ai8Au-R8971.mp4"> --%>
+	 <!--        <source > -->
 	    </video>
 	
 		<c:if test="${!empty list}">
@@ -134,6 +135,6 @@ html {
 		</c:if>
 		<jsp:include flush="true" page="foot.jsp"></jsp:include> 
 	</div>	
-
+<script src="${memberJs}"></script>
 </body>
 </html>

@@ -11,6 +11,7 @@
 <spring:url value="/resources/lib/jquery/plugins.js" var="pluginJs"/>
 <spring:url value="/resources/js/common.js" var="commonJs"/>
 <spring:url value="/resources/js/remSet.js" var="remSetJs" />
+<spring:url value="/resources/js/company/service.js" var="serviceJs" />
 
 <!-- imgPath -->
 <spring:url value="/resources/images" var="imgPath" />
@@ -62,12 +63,13 @@
 	<jsp:include flush="true" page="menu.jsp"></jsp:include>
 		
 	<div class="pagePhone">
-		<video controls poster="/resources/images/banner/moreInfo.JPG">
-		   <source  src="http://www.apaipian.com/product/video/paipianwangMovie.mp4"  id="source" type="video/mp4">
+		<video controls poster="/resources/images/banner/moreInfo.JPG" id="setVideo">
 		</video>
 		<img class="stepImg" src="${imgPath }/company/step.png">
         <jsp:include flush="true" page="foot.jsp"></jsp:include> 
 	</div>	     
+	
+<script src="${serviceJs }"></script>
 
 </body>
 </html>
