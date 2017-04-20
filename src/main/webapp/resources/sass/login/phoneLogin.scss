@@ -20,12 +20,11 @@ body {
     background-size: 100% 100% !important;
 }
 
-.loginImg{
+.loginImg {
     width: 100%;
     text-align: center;
     margin-top: 0.8rem;
-
-    img{
+    img {
         width: 3.25rem;
     }
 }
@@ -42,7 +41,7 @@ body {
     line-height: 1.3rem;
 }
 
-.pagePhone{
+.pagePhone {
     margin-top: 1.3rem;
     padding-bottom: 1.5rem;
 }
@@ -55,7 +54,7 @@ body {
 .proLogin {
     border-top: 1px solid #979797;
     width: 9rem;
-    color:#e3e3e3;
+    color: #e3e3e3;
     font-size: $size40;
     text-align: center;
     margin: 0 auto;
@@ -96,7 +95,7 @@ body {
 .toLogin {
     width: 100%;
     text-align: center;
-    font-size:$size36;
+    font-size: $size36;
     color: white;
     span {
         color: $red-base;
@@ -143,7 +142,7 @@ body {
             display: inline-block;
             vertical-align: top;
             color: $gray-light;
-           font-size: $size46;
+            font-size: $size46;
         }
         div:nth-child(3) {
             width: 50%;
@@ -169,7 +168,7 @@ body {
         }
         .code {
             color: white;
-            font-size:$size40;
+            font-size: $size40;
             position: absolute;
             right: 0.5rem;
             top: 0.95rem;
@@ -184,7 +183,7 @@ body {
             line-height: 0.99rem;
             padding-right: 0.3rem;
             color: #e3e3e3;
-            font-size:$size40;
+            font-size: $size40;
             background: transparent;
             border: none;
             outline: none;

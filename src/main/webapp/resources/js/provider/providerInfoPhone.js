@@ -16,25 +16,20 @@ $().ready(function(){
 });
 	
 	showHeadImg();
-	//namePos();
 	var providerInfoPhone = {
 			init:function(){
 				this.tree();//加载其他作品
-				
 			},
 			tree:function(){
 				var _this = this;
 				var teamId = $("#teamId").val();
 				loadData(function(data){
 					if(data){
-		            
 						for (var int = 0;int < (data.length>5?5:data.length) ; int++) {
 							var card = createCard(data[int]);
 							$("#moreProduct").append(card);
 						}
-						
 						getHeight();
-						
 					}
 					if(data.length<=5){
 						$(".findMore").addClass("hide")
@@ -57,14 +52,11 @@ $().ready(function(){
 					getHeight();
 				})
 			},
-			
 	}
 	providerInfoPhone.init();
 	function createCard(msg){
-		
 		var tema = msg.teamId;
 		var pro = msg.productId;
-		
 		var $body1 = ''
 			+'   <a href="/play/'+tema+'_'+pro+'.html">'
 			+'		 <div class="contentItem" style="background:url('+getDfsHostName()+''+msg.picLDUrl+') no-repeat">'
@@ -74,9 +66,7 @@ $().ready(function(){
 			+'		 </div> '
 			+'	 </a>'
 		return $body1;		
-	
 };
-
 
 function showHeadImg(){
 	var userImgPath = $('#user_img').val();
@@ -86,12 +76,8 @@ function showHeadImg(){
 			// 第三方登录
 			$('#infoHead').attr('src',userImgPath);
 		}else{
-			//修改为dfs路径 2016-11-4 14:53:14
-			//var imgName = getFileName(userImgPath);
-			//var imgPath = getHostName() + '/team/img/' + imgName;
 			var imgPath = getDfsHostName() + userImgPath;
 			$('#infoHead').attr('src',imgPath);
-			
 		}
 	}else{
 		// 加载 默认头像
@@ -112,5 +98,3 @@ function getHeight(){
 	 $('.contentItem').css('height',setHeight + "px");
 	
 }
-
-

@@ -550,30 +550,6 @@ img {
     background-size: 8.35rem 1.79rem;
 }
 
-// .stepBtn-1,
-// .stepBtn-2,
-// .stepBtn-3,
-// .stepBtn-4,
-// .stepBtn-5,
-// .stepBtn-6 {
-//     width: 0.5rem;
-//     height: 0.3rem;
-//     color: white;
-//     background: $gray;
-//     text-align: center;
-//     line-height: 0.3rem;
-//     font-size: 0.3rem;
-//     margin-right: 30px;
-//     cursor: pointer;
-// }
-// .red-1,
-// .red-2,
-// .red-3,
-// .red-4,
-// .red-5,
-// .red-6 {
-//     background: $red-base;
-// }
 div {
     font-size: 0.3rem;
 }
@@ -671,7 +647,7 @@ div {
     -webkit-transform: scale(0);
     -moz-transform: scale(0);
     -o-transform: scale(0);
-    transfosrm: scale(0);
+    transform: scale(0);
     transition: all 2s ease-in-out .2s !important;
     -moz-transition: all 2s ease-in-out .2s !important;
     /* Firefox 4 */
@@ -707,41 +683,31 @@ div {
             width: 4.64rem;
         }
     }
-    .reCost {
-       /*  margin-top: 0.3rem;
-       font-size: 0.2rem;
-       color: $red-base;
-       text-decoration: underline;
-       img {
-           width: 2rem;
-       } */
-    }
+    .reCost {}
 }
 
 .shareTo {
-    width: 5.54rem !important; 
+    width: 5.54rem !important;
     margin: 0 auto;
-     margin-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
     img {
         width: 100%;
     }
 }
 
-.time{
-     width: 3.36rem !important; 
+.time {
+    width: 3.36rem !important;
     margin: 0 auto;
-
-    img{
+    img {
         width: 100%;
     }
 }
 
 .shareTos {
     width: 8.41rem;
-     margin: 0 auto;
+    margin: 0 auto;
     img {
         width: 100%;
-
     }
 }
 
@@ -813,18 +779,18 @@ div {
     background: white;
 }
 
+.toOrderDiv {
+    position: relative;
+    top: 0.2rem !important;
+    text-align: center;
+    width: 8.35rem;
+    margin: 0 auto;
+    z-index: 20;
+}
 
- .toOrderDiv {
-        position: relative;
-        top: 0.2rem !important;
-        text-align: center;
-        width: 8.35rem;
-        margin: 0 auto;
-        z-index:20;
-    }
-    .toOrder {
-        width:100%;
-    }
+.toOrder {
+    width: 100%;
+}
 
 .phoneCard {
     width: 10.52rem;
@@ -891,7 +857,6 @@ div {
             border-color: #d1d1d1 !important;
         }
     }
-   
     .close {
         width: .56rem;
         height: .56rem;
@@ -981,11 +946,11 @@ input {
     position: relative;
 }
 
-#getPriceSpan{
+#getPriceSpan {
     font-weight: bold;
 }
 
-.f3{
+.f3 {
     padding-top: 0.5rem;
     width: 100%;
     height: 100%;
@@ -1006,71 +971,7 @@ input {
     }
 }
 
-// .animTop {
-//     top: 0 !important;
-//     opacity: 1 !important;
-// }
-// .anA {
-//     position: relative;
-//     top: 5rem;
-//     opacity: 0;
-//     transition: all .5s ease-in-out .2s !important;
-//     -moz-transition: all .5s ease-in-out .2s !important;
-//     /* Firefox 4 */
-//     -webkit-transition: all .5s ease-in-out .2s !important;
-//     /* Safari 和 Chrome */
-//     -o-transition: all .5s ease-in-out .2s !important;
-// }
-// .anB {
-//     position: relative;
-//     top: 5rem;
-//     transition: all .8s ease-in-out .2s !important;
-//     -moz-transition: all .8s ease-in-out .2s !important;
-//     /* Firefox 4 */
-//     -webkit-transition: all .8s ease-in-out .2s !important;
-//     /* Safari 和 Chrome */
-//     -o-transition: all .8s ease-in-out .2s !important;
-// }
-// .anC {
-//     position: relative;
-//     top: 5rem;
-//     transition: all 1.1s ease-in-out .2s !important;
-//     -moz-transition: all 1.1s ease-in-out .2s !important;
-//     /* Firefox 4 */
-//     -webkit-transition: all 1.1s ease-in-out .2s !important;
-//     /* Safari 和 Chrome */
-//     -o-transition: all 1.1s ease-in-out .2s !important;
-// }
-// .anD {
-//     position: relative;
-//     top: 5rem;
-//     transition: all 1.3s ease-in-out .2s !important;
-//     -moz-transition: all 1.3s ease-in-out .2s !important;
-//     /* Firefox 4 */
-//     -webkit-transition: all 1.3s ease-in-out .2s !important;
-//     /* Safari 和 Chrome */
-//     -o-transition: all 1.3s ease-in-out .2s !important;
-// }
-// .anE {
-//     position: relative;
-//     top: 5rem;
-//     transition: all 1.5s ease-in-out .2s !important;
-//     -moz-transition: all 1.5s ease-in-out .2s !important;
-//     /* Firefox 4 */
-//     -webkit-transition: all 1.5s ease-in-out .2s !important;
-//     /* Safari 和 Chrome */
-//     -o-transition: all 1.5s ease-in-out .2s !important;
-// }
-// .anF {
-//     position: relative;
-//     top: 5rem;
-//     transition: all 1.7s ease-in-out .2s !important;
-//     -moz-transition: all 1.7s ease-in-out .2s !important;
-//     /* Firefox 4 */
-//     -webkit-transition: all 1.7s ease-in-out .2s !important;
-//     /* Safari 和 Chrome */
-//     -o-transition: all 1.7s ease-in-out .2s !important;
-// }
+
 .noInfo {
     width: 7.2rem;
     height: 7.2rem;
@@ -1239,7 +1140,7 @@ input {
 }
 
 @-webkit-keyframes rotate {
-   0% {
+    0% {
         -webkit-transform: rotate(8deg);
         -moz-transform: rotate(8deg);
         -o-transform: rotate(8deg);
@@ -1252,7 +1153,7 @@ input {
         transform: rotate(0deg);
     }
     100% {
-       -webkit-transform: rotate(8deg);
+        -webkit-transform: rotate(8deg);
         -moz-transform: rotate(8deg);
         -o-transform: rotate(8deg);
         transform: rotate(8deg);
@@ -1273,7 +1174,7 @@ input {
         transform: rotate(0deg);
     }
     100% {
-       -webkit-transform: rotate(8deg);
+        -webkit-transform: rotate(8deg);
         -moz-transform: rotate(8deg);
         -o-transform: rotate(8deg);
         transform: rotate(8deg);
@@ -1281,7 +1182,7 @@ input {
 }
 
 @-o-keyframes rotate {
-     0% {
+    0% {
         -webkit-transform: rotate(8deg);
         -moz-transform: rotate(8deg);
         -o-transform: rotate(8deg);
@@ -1294,7 +1195,7 @@ input {
         transform: rotate(0deg);
     }
     100% {
-       -webkit-transform: rotate(8deg);
+        -webkit-transform: rotate(8deg);
         -moz-transform: rotate(8deg);
         -o-transform: rotate(8deg);
         transform: rotate(8deg);
@@ -1315,7 +1216,7 @@ input {
         transform: rotate(0deg);
     }
     100% {
-       -webkit-transform: rotate(8deg);
+        -webkit-transform: rotate(8deg);
         -moz-transform: rotate(8deg);
         -o-transform: rotate(8deg);
         transform: rotate(8deg);
@@ -1495,31 +1396,30 @@ input {
     }
 }
 
-.redBag{
+.redBag {
     height: 2.64rem !important;
     width: 8.41rem !important;
 }
 
-.shareF{
+.shareF {
     height: 1.12rem !important;
     width: 8.07rem !important;
 }
 
-.shareFModal{
+.shareFModal {
     width: 10.20rem;
     height: 10.54rem;
     position: absolute;
-    top:50%;
-    left:50%;
+    top: 50%;
+    left: 50%;
     margin-left: -5.1rem;
     margin-top: -5.27rem;
-    img{
+    img {
         width: 100%;
     }
 }
 
-
-.step6Img{
+.step6Img {
     width: 100%;
     margin-bottom: 0.7rem;
 }

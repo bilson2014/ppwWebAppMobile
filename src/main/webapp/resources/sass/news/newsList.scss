@@ -43,15 +43,12 @@ body {
         color: $gray-light;
         font-size: $size40;
     }
-
-    a{
-         margin-left: 0.8rem;
+    a {
+        margin-left: 0.8rem;
     }
-    
-    a:last-child{
+    a:last-child {
         margin-right: 1rem;
     }
-
     .active {
         color: $red-base;
     }

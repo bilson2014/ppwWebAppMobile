@@ -28,7 +28,9 @@
 <spring:url value="/resources/js/search.js" var="searchJs" />
 <spring:url value="/resources/js/remSet.js" var="remSetJs" />
 <spring:url value="/resources/lib/jquery.json/jquery.json-2.4.min.js" var="jsonJs"/>
+
 <spring:url value="/resources/lib/jquery.scrollstop/jquery.scrollstop.min.js" var="scrollstopJs"/>
+<spring:url value="/resources/lib/jquery.lazyload/lazysizes.min.js" var="lazyloadJs"/>
 
 <!-- imgPath -->
 <spring:url value="/resources/images" var="imgPath" />
@@ -58,13 +60,6 @@
 <!--[if lt IE 9]>
 		<script>window.html5 || document.write('<script src="html5shivJs"><\/script>')</script>
 	<![endif]-->
-<%-- 
-<script src="${imgLazyLoadingJs }"></script>
-<script src="${pluginJs }"></script>
-<script src="${jsonJs }"></script>
-<script src="${mmenuJs }"></script>
-<script src="${commonJs }"></script>
- --%>
 </head>
 <body>
 	<input type="hidden" id="storage_node" value="${file_locate_storage_path }" />
@@ -139,17 +134,15 @@
 	    </div>
 </div>
 	
-	
-	
 	<div class="pagePhone">
-	
 
 	<div class="hideMenu">
     <c:if test="${!empty list}">
 					<!-- not empty -->
 	    <c:forEach items="${list }" var="solr" varStatus="status">
 	     	<a  class="videoItem" href="<spring:url value='/play/${solr.teamId}_${solr.productId }.html'/>">
-			   <div class="contentItem" style="background:url(${file_locate_storage_path }${solr.picLDUrl }) no-repeat">
+			   <div class="contentItem">
+			         <img class="lazyload" data-src="${file_locate_storage_path }${solr.picLDUrl }">
                      <div class="itemTitle">${solr.productName}</div>
                      <div class="itemTag">
 	                     <c:forEach items="${fn:split(fn:trim(solr.tags),' ') }" var="tag" end="2" varStatus="stat">
@@ -175,12 +168,13 @@
 	</div>	  
 	 <jsp:include flush="true" page="foot.jsp"></jsp:include> 
 	</div>
-	
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
 	<script src="${jqueryJs}"></script>
 	<script src="${remSetJs}"></script>
 	<script src="${searchJs}"></script>
     <script src="${commonJs}"></script>
     <script src="${jsonJs}"></script>
     <script src="${scrollstopJs}"></script>
+    <script src="${lazyloadJs}"></script>
 </body>
 </html>

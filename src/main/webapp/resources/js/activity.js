@@ -1,6 +1,5 @@
 $().ready(function() {
 
-
   showVideo();
   getCardheight();
   closeVideo();
@@ -16,8 +15,6 @@ $().ready(function() {
  var ulH = $('#ulHeight').height();
  
   var utRH = ulH + 35;
- //var number = ulH+'px !important';
-  //$('#setHeight').height(ulH+'!important');
   $('.swiper-container').css('height',utRH);
  $('#setHeight').css('height',ulH);
 
@@ -31,7 +28,6 @@ $().ready(function() {
 					var videoUrl=$(this).attr('data-video-url');
 					$('#toolbar-modal').show();
 					$('#recomment-video').attr('src',videoUrl);
-					//$('#recomment-video').attr('src','/product/video/product11-20150630124357383.mp4');
 					$('#recomment-video').attr('poster',imageUrl);
 			});
 }

@@ -11,7 +11,19 @@ $video-content-height360: 356px; // 一行视频的高度(360px)
 $video-content-height390: 372px; // 视频图片的高度(390px)
 $video-content-height640: 511px; // 一行视频的高度(640px)
 $video-content-height720: 558px; // 一行视频的高度(720px)
-body{
+$video-video-height: 270px; // 视频图片的高度
+$video-video-height320: 180px; // 视频图片的高度(320px)
+$video-video-height360: 202px; // 视频图片的高度(360px)
+$video-video-height390: 220px; // 视频图片的高度(320px)
+$video-video-height640: 360px; // 视频图片的高度(640px)
+$video-video-height720: 405px; // 视频图片的高度(720px)
+$video-play-section-height: 250px; // 视频播放区域高度
+$video-play-section-height320: 170px; // 视频播放区域高度(320px)
+$video-play-section-height360: 192px; // 视频播放区域高度(360px)
+$video-play-section-height390: 210px; // 视频播放区域高度(390px)
+$video-play-section-height640: 351px; // 视频播放区域高度(640px)
+$video-play-section-height720: 396px; // 视频播放区域高度(720px)
+body {
     background: $gray-dark;
     overflow: hidden;
 }
@@ -40,31 +52,13 @@ a:active {
     /* 指正在点的链接*/
 }
 
-
-
-.pagePhone{
+.pagePhone {
     margin-top: 1.3rem;
 }
 
 video {
     width: 100%;
     background: black;
-    // @media screen and (max-width: 360px) {
-    //     height: $video-content-height320;
-    // }
-    // @media screen and (min-width: 360px) and (max-width: 390px) {
-    //     height: $video-content-height360;
-    // }
-    // @media screen and (min-width: 390px) and (max-width: 460px) {
-    //     height: $video-content-height390;
-    // }
-    // @media screen and (min-width: 460px) and (max-width: 720px) {
-    //     height: $video-content-height640;
-    // }
-    // @media screen and (min-width: 720px) {
-    //     height: $video-content-height720;
-    // }
-    
 }
 
 .stepImg {
@@ -76,10 +70,3 @@ video {
     margin-top: 1rem;
     margin-bottom: 1.2rem;
 }
-
-
-
-
-
-
-

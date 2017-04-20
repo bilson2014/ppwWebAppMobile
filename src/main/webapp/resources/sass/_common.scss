@@ -7,7 +7,7 @@
 @import "navbar";
 @import "media_screen";
 @import "video";
-@import "icons-sprite";
+// @import "icons-sprite";
 
 .errorDiv {
     height: 1.3rem;
@@ -199,7 +199,7 @@ input[placeholder],
     .mark-icon {
         width: 120px;
         height: 120px;
-        @include icons-sprite(mark);
+       // @include icons-sprite(mark);
     }
     h3 {
         display: inline-block;
@@ -213,7 +213,7 @@ input[placeholder],
     }
     .qq-icon {
         display: inline-block;
-        @include icons-sprite(qq-icon);
+     //   @include icons-sprite(qq-icon);
         width: 16px;
         height: 16px;
         vertical-align: bottom;
@@ -221,7 +221,7 @@ input[placeholder],
     }
     .tel-icon {
         display: inline-block;
-        @include icons-sprite(tel-icon);
+      //  @include icons-sprite(tel-icon);
         width: 16px;
         height: 16px;
         vertical-align: middle;
@@ -229,7 +229,7 @@ input[placeholder],
     }
     .mail-icon {
         display: inline-block;
-        @include icons-sprite(mail-icon);
+       // @include icons-sprite(mail-icon);
         width: 16px;
         height: 16px;
         vertical-align: middle;
@@ -293,35 +293,36 @@ input[placeholder],
     transition: background-position 1s;
 }
 
+
 //.toolbar-item:hover{opacity:1;filter:alpha(opacity=100);transform:scale(1);-webkit-transform:scale(1);-moz-transform:scale(1);-ms-transform:scale(1);-o-transform:scale(1);}
 .toolbar-item-weixin {
     //background: image-url('../images/icons/tele-client.png') no-repeat;
-    @include icons-sprite(tele-client);
+ //   @include icons-sprite(tele-client);
 }
 
 .toolbar-item-weixin:hover {
     //background: image-url('../images/icons/tele-desc.png') no-repeat;
-    @include icons-sprite(tele-desc);
+ //   @include icons-sprite(tele-desc);
 }
 
 .toolbar-item-qq {
     //background: image-url('../images/icons/qq-client.png') no-repeat;
-    @include icons-sprite(qq-client);
+ //   @include icons-sprite(qq-client);
 }
 
 .toolbar-item-qq:hover {
     //background: image-url('../images/icons/qq-desc.png') no-repeat;
-    @include icons-sprite(qq-desc);
+ //   @include icons-sprite(qq-desc);
 }
 
 .toolbar-item-top {
     //background: image-url('../images/icons/top-client.png') no-repeat;
-    @include icons-sprite(top-client);
+ //   @include icons-sprite(top-client);
 }
 
 .toolbar-item-top:hover {
     //background: image-url('../images/icons/top-desc.png') no-repeat;
-    @include icons-sprite(top-desc);
+ //   @include icons-sprite(top-desc);
 }
 
 .modal-open {
@@ -533,7 +534,7 @@ input[placeholder],
         top: -34px;
         width: 40px;
         height: 40px;
-        @include icons-sprite(close-icon);
+      //  @include icons-sprite(close-icon);
         cursor: pointer;
     }
     dl {
@@ -575,7 +576,7 @@ input[placeholder],
                     line-height: 34px;
                     width: 14px;
                     height: 14px;
-                    @include icons-sprite(telephone);
+                 //   @include icons-sprite(telephone);
                 }
             }
             .modal-message {
@@ -593,7 +594,7 @@ input[placeholder],
             margin-top: 30px;
             margin-bottom: 15px;
             .model-qq-icon {
-                @include icons-sprite(qq);
+              //  @include icons-sprite(qq);
                 width: 42px;
                 height: 42px;
                 margin: 0 auto;

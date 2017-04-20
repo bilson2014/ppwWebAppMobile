@@ -5,125 +5,100 @@
 @import "fontSize";
 @import "compass/typography/text/ellipsis";
 @import "common_portal";
-
-
-
-a{
-text-decoration: none;
+a {
+    text-decoration: none;
 }
 
-.wrap{
- overflow: scroll;
- -webkit-overflow-scrolling: touch;  
+.wrap {
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
 }
-
 
 .nav-title-wrap {
-  @include media_screen_width($about-us-width-min,$about-us-width-middle,$about-us-width-lg);
-  height: 70px;
-  margin: 0 auto;
-    
+    @include media_screen_width($about-us-width-min, $about-us-width-middle, $about-us-width-lg);
+    height: 70px;
+    margin: 0 auto;
     a {
         color: $gray-dark;
         text-decoration: none;
-        &:link,&:visited,&:active {
+        &:link,
+        &:visited,
+        &:active {
             color: $gray-dark;
             text-decoration: none;
         }
-
         &:hover {
             color: $gray-light;
             text-decoration: none;
         }
     }
-
-  p {
-    display: inline;
-    font-size: $font-size;
-    color: $gray;
-    margin-left: -2px;
-  }
-  .ul-wrap {
-    height: 40px;
-  }
-
-  #first-title{
-    border-bottom:2px solid #fe5453;
-    font-color:$gray;
-    font-weight:bold
-  }
-
-  .nav-title {
-    margin:0 auto;
-    display: inline-block;
-    width: 80px;
-    text-align: center;
-    line-height: 70px;
-    cursor: pointer;
-    margin-right: ($about-us-width-min - (80*5)) / 5 - 10px;
-    @media screen and (min-width:1276px) and (max-width:1500px) {
-      margin-right: ($about-us-width-middle - (80*5)) / 5 - 10px;
+    p {
+        display: inline;
+        font-size: $font-size;
+        color: $gray;
+        margin-left: -2px;
     }
-    @media screen and (min-width:1500px) {
-      margin-right: ($about-us-width-lg - (80*5)) / 5 - 10px;
+    .ul-wrap {
+        height: 40px;
     }
-    &:last-child {
-      margin-right: 0;
+    #first-title {
+        border-bottom: 2px solid #fe5453;
+        font-color: $gray;
+        font-weight: bold
     }
-  }
+    .nav-title {
+        margin: 0 auto;
+        display: inline-block;
+        width: 80px;
+        text-align: center;
+        line-height: 70px;
+        cursor: pointer;
+        margin-right: ($about-us-width-min - (80*5)) / 5 - 10px;
+        @media screen and (min-width: 1276px) and (max-width: 1500px) {
+            margin-right: ($about-us-width-middle - (80*5)) / 5 - 10px;
+        }
+        @media screen and (min-width:1500px) {
+            margin-right: ($about-us-width-lg - (80*5)) / 5 - 10px;
+        }
+        &:last-child {
+            margin-right: 0;
+        }
+    }
 }
 
-
-
-
-.agreemen{
-      
-      width:90%;
-      margin:0 auto;
-    
-
-    h1{     
-       margin-top: 60px;
-       font-weight:bold;
-       font-size:$font-size-base;
-       text-align:center;
-       line-height:30px;
+.agreemen {
+    width: 90%;
+    margin: 0 auto;
+    h1 {
+        margin-top: 60px;
+        font-weight: bold;
+        font-size: $font-size-base;
+        text-align: center;
+        line-height: 30px;
+    }
+    h2 {
+        font-weight: bold;
+        padding-top: 40px;
+        font-size: $font-size-sm;
+        line-height: 30px;
+    }
+    p {
+        line-height: 30px;
+        padding-top: 15px;
+        font-size: $font-size-sm10;
+        color: $gray;
+    }
+    .top {
+        padding-top: 40px;
+    }
+    .top-big {
+        padding-top: 20px;
+    }
 }
 
-    h2{
-       font-weight:bold;
-       padding-top:40px;
-       font-size:$font-size-sm;
-       line-height:30px;
-
+.bottom {
+    margin-bottom: 90px;
 }
-   p{
-       line-height:30px;
-       padding-top:15px;
-       font-size:$font-size-sm10;
-       color:$gray;
-   }
-
-   .top{
- padding-top:40px;
-
-   }
-
-      .top-big{
- padding-top:20px;
-   
-   }
-
-}
-
-.bottom{
-  
-  margin-bottom:90px;
-}
-
-
-
-
 
 .topHeader {
     position: relative;
@@ -192,4 +167,3 @@ text-decoration: none;
         }
     }
 }
-

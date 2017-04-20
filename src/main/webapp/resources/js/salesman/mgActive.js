@@ -4,24 +4,15 @@ var curCount; // 当前剩余秒数
 var swiper;
 var reSet = false;
 $().ready(function() {
-	
-
 	init();
-	 
-
 });
 function init() {
-
   $('.btnSub').off('click').on('click',function(){
 	  check();
   });
-	
-	
-	
 }
 
 function check(){
-	
 	var name=$('#name').val();
 	var phone=$('#indent_tele').val();
 	$('#nameError').removeClass('errorShow');
@@ -43,9 +34,7 @@ function check(){
 		$('#indent_tele').focus();
 		return;
 	}
-	
 	$('#indent_recomment').val(name + phone);
-	
 	$('#order-form').attr('action',getContextPath() + '/salesman/order/submit').submit();
 }
 

@@ -21,10 +21,7 @@
 <!-- imgPath -->
 <spring:url value="/resources/images" var="imgPath"/>
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<html class="no-js"> <!--<![endif]-->
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=9,chrome=1">
@@ -47,6 +44,7 @@
 	<script src="${jsonJs }"></script>
 	<script src="${commonJs }"></script>
 	<script src="${orderJs }"></script>
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
 </head>
 <body>
 	<div class="wrap">
@@ -68,13 +66,6 @@
 		
 		<div class="content-wrap">
 			<form id="order-form" role="form" method="post" autocomplete="off" accept-charset="UTF-8">
-				<%-- <input type="hidden" id="teamId" name="teamId" value="${teamId}"/>
-				<input type="hidden" id="productId" name="productId" value="${productId}"/>
-				<input type="hidden" id="serviceId" name="serviceId" value="${serviceId}"/>
-				<input type="hidden" id="indentPrice" name="indentPrice" value="${indentPrice}"/>
-				<input type="hidden" id="second" name="second" value="${second}"/>
-				<input type="hidden" id="product_name" name="product_name" value="${product_name}"/>
-				<input type="hidden" id="salesmanUniqueId" name="salesmanUniqueId" value="${uniqueId}"/> --%>
 				<c:if test="${activity == 1 }">
 					<r:noLogin>
 					<input type="hidden" id="indentName" name="indentName" value="新订单-手机下单"/>
@@ -127,7 +118,6 @@
 				<div class="right-part">
 					<img alt="" src="${imgPath }/order/first-img.png">
 				</div>
-				
 			</div>
 			
 			<div class="second-section-wrap">
@@ -156,7 +146,6 @@
 				</div>
 			</div>
 			
-			<!-- <a href="/redirect/order" target="_self"><button class="btn btn-primary" style="position: relative;width: 90%;left: 5%;height: 46px;background-color: #fe5453;border-color: #fe5453;margin-bottom: 10px;">我要下单</button></a> -->
 		</div>
 	</div>
 </body>

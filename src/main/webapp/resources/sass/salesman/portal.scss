@@ -18,7 +18,7 @@ $video-play-section-height640: 351px; // 视频播放区域高度(640px)
 $video-play-section-height720: 396px; // 视频播放区域高度(720px)
 body {
     font-size: 0;
-    background:#E32600;
+    background: #E32600;
 }
 
 .header {
@@ -125,7 +125,7 @@ video {
         font-weight: bold;
         color: yellow;
         position: absolute;
-        top:-3px;
+        top: -3px;
     }
     .left-desc {
         font-size: 16px;
@@ -134,7 +134,7 @@ video {
         font-weight: 300;
         position: absolute;
         bottom: 0px;
-        left:8px;
+        left: 8px;
     }
 }
 
@@ -143,7 +143,7 @@ video {
     width: 49%;
     height: 60px;
     position: relative;
-    top:-5px;
+    top: -5px;
     .right-price {
         display: block;
         margin-left: 10px;
@@ -210,36 +210,15 @@ video {
     margin-top: 22px !important;
 }
 
-
-
-
 .video-area-card {
     margin-top: 5px;
     display: inline-block;
     width: 100%;
     height: auto;
     margin-right: 10px;
-    //border: 1px solid #ccc;
-    //background: $white;
     .video-play-section {
         position: relative;
         width: 100%;
-        //height: $video-play-section-height;
-        // @media screen and (max-width: 360px) {
-        //     height: $video-play-section-height320;
-        // }
-        // @media screen and (min-width: 360px) and (max-width: 390px) {
-        //     height: $video-play-section-height360;
-        // }
-        // @media screen and (min-width: 390px) and (max-width: 460px) {
-        //     height: $video-play-section-height390;
-        // }
-        // @media screen and (min-width: 640px) and (max-width: 720px) {
-        //     height: $video-play-section-height640;
-        // }
-        // @media screen and (min-width: 720px) {
-        //     height: $video-play-section-height720;
-        // }
     }
     &:last-child {
         margin-right: 10px;
@@ -270,37 +249,8 @@ video {
     .video-btn {
         margin: 20px 10% 20px 10%;
         width: 80%;
-        // display: block;
-        // text-align: center;
-        //height: 50px;
-        // background-color: $red-base;
-        // border-color: $white;
-        // border-radius: 5px;
-        // border: none;
-        // color: $white;
-        // font-size: 20px;
-        // line-height: 50px;
         text-align: center;
-        // background: url(/resources/images/goodGod/btn.png)no-repeat;
-        // background-size: 100% 50px;
-        //  @media screen and (max-width: 360px) {
-        //  	      line-height: 50px;
-        //           background-size: 100% 50px;
-        // }
-        // @media screen and (min-width: 360px) and (max-width: 390px) {
-        // 	        line-height: 50px;
-        //            background-size: 100% 50px;
-        // }
-        // @media screen and (min-width: 390px) and (max-width: 460px) {
-        // 	       height: 60px;
-        // 	       line-height: 60px;
-        //            background-size: 100% 60px;
-        // }
-        &:hover {
-            // background-color: $gray;
-            // color: $white;
-            // cursor: pointer;
-        }
+        &:hover {}
     }
 }
 
@@ -319,16 +269,16 @@ video {
     }
 }
 
-.botImg{
-	width: 30px;
-	position: fixed;
-	bottom: 50px;
-	left:50%;
-	margin-left: -15px;
-	z-index: 10;
-	img{
-		width: 100%;
-	}
+.botImg {
+    width: 30px;
+    position: fixed;
+    bottom: 50px;
+    left: 50%;
+    margin-left: -15px;
+    z-index: 10;
+    img {
+        width: 100%;
+    }
 }
 
 .bannerAni {
@@ -354,7 +304,7 @@ video {
 }
 
 @-moz-keyframes ba {
-       0% {
+    0% {
         bottom: 53px;
         opacity: 1;
     }
@@ -369,7 +319,7 @@ video {
 }
 
 @-o-keyframes ba {
-     0% {
+    0% {
         bottom: 53px;
         opacity: 1;
     }
@@ -384,7 +334,7 @@ video {
 }
 
 @keyframes ba {
-  0% {
+    0% {
         bottom: 53px;
         opacity: 1;
     }
@@ -398,10 +348,9 @@ video {
     }
 }
 
-
-.pLogo{
-width: 20%;
-position: absolute;
-top:10px;
-left:10px;
+.pLogo {
+    width: 20%;
+    position: absolute;
+    top: 10px;
+    left: 10px;
 }

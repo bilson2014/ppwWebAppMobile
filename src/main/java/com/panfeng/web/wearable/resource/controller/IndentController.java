@@ -17,6 +17,8 @@ import org.springframework.web.servlet.ModelAndView;
 import com.paipianwang.pat.common.config.PublicConfig;
 import com.paipianwang.pat.common.constant.PmsConstant;
 import com.paipianwang.pat.common.util.DateUtils;
+import com.paipianwang.pat.common.util.JsonUtil;
+import com.paipianwang.pat.common.web.security.AESUtil;
 import com.paipianwang.pat.facade.indent.entity.PmsIndent;
 import com.paipianwang.pat.facade.indent.service.PmsIndentFacade;
 import com.paipianwang.pat.facade.product.entity.PmsProduct;
@@ -25,8 +27,6 @@ import com.paipianwang.pat.facade.product.service.PmsProductFacade;
 import com.paipianwang.pat.facade.product.service.PmsServiceFacade;
 import com.panfeng.web.wearable.domain.Result;
 import com.panfeng.web.wearable.mq.service.SmsMQService;
-import com.panfeng.web.wearable.security.AESUtil;
-import com.panfeng.web.wearable.util.JsonUtil;
 
 @RestController
 @RequestMapping("/order")
@@ -163,6 +163,6 @@ public class IndentController extends BaseController {
 			}
 			return result;
 		}
-		return new Result(false, "参数错误");
+		return new Result(false, "验证码有误！");
 	}
 }

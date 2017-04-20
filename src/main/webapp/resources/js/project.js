@@ -21,7 +21,6 @@ function initDefaultMsg(){
 	if(loginName == null || loginName == undefined || loginName == ''){
 		$('#loginName').text('');
 	}
-	
 	var realName = $('#realName').text();
 	if(realName == null || realName == undefined || realName == ''){
 		$('#realName').text('');
@@ -38,7 +37,6 @@ function showHeadImg(){
 		}else{
 			var imgPath = getDfsHostName() + userImgPath;
 			$('#infoHead').attr('src',imgPath);
-			
 		}
 	}else{
 		// 加载 默认头像
@@ -46,8 +44,6 @@ function showHeadImg(){
 		$('#infoHead').attr('src',defaultImgPath);
 	}
 }
-
-
 
 function showTime(){
 	   var mydate = new Date();
@@ -79,7 +75,6 @@ var tab = {
 					$('#showImg').addClass('hide');
 					$('#toOrder').removeClass('hide');
 				}
-				
 			});
 			$("#doingProject").on('click',function(){
 				tab.resetView();
@@ -142,7 +137,6 @@ var loadProjectCard = {
 							else if(state == 1 || state == 2)
 								rootHistory.append(html);
 						}
-						
 						controlCard.bindMgrEvent();
 						break;
 				}
@@ -158,19 +152,16 @@ var loadProjectCard = {
 			}
 			$('#showImg').addClass('hide');
 		}, getContextPath() + '/project/all-project', $.toJSON({}));
-		
 	},
 	loadBaseInfo:function(self){
 		// 加载基础信息
 		var key = self.attr("data-id");
 		if (key != null && key != undefined && key != '') {
 			loadData(function(msg) {
-				
 				if(msg.length<=0){
 					self.next('#projectContent').addClass('hide');
 					self.addClass('opens');
 				}
-				
 				var content = self.next('#projectContent');
 				content.html('');
 				var priceFinish = msg.priceFinish;
@@ -195,19 +186,15 @@ var loadProjectCard = {
 				id : key
 			}));
 		}
-		
 	},
 	loadFile:function(self){
 		var key = self.attr("data-id");
 		if(key != null ){
 			loadData(function(msg) {
-				
-				
 				if(msg.length<=0){
 					self.next('#projectFile').addClass('hide');
 					self.addClass('opens');
 				}
-				
 				var content = self.next('#projectFile');
 				content.html('');
 				if(msg.length > 0){
@@ -311,7 +298,6 @@ var loadProjectCard = {
 						var user = msg[index].userViewModel;
 						var text = "未知";
 						if (user != null) {
-							//imgx.attr("src",user.imgUrl);
 							text = user.userName;
 							if(user.imgUrl != undefined && user.imgUrl != '') {
 								if(user.imgUrl.indexOf('resources/images') < 0) {
@@ -346,14 +332,12 @@ var loadProjectCard = {
 		div.html('');
 		var $body;
 		loadData(function(msg){
-			
-		if(role != 'employee' || (!$('#projectCardHistory').hasClass('hide'))){	
-			if(msg.length<=0 ){
-				self.next().addClass('hide');
-				self.addClass('opens');
+			if(role != 'employee' || (!$('#projectCardHistory').hasClass('hide'))){	
+				if(msg.length<=0 ){
+					self.next().addClass('hide');
+					self.addClass('opens');
+				}
 			}
-		}
-			
 			if(msg != null ){
 				msg.forEach(function(deal){
 				var status =  deal.dealStatus;
@@ -364,7 +348,6 @@ var loadProjectCard = {
 					dealLogSourceStr = '线上支付';
 				else
 					dealLogSourceStr = '线下支付';
-				
 				var statusStr = '';
 				// TODO: 支付卡样式
 				switch (status) {
@@ -391,7 +374,6 @@ var loadProjectCard = {
 					'<div class="contentInfo">'+ deal.orderTimeOut +'</div>';
 					break;
 				}
-				
 			$body =
 				'<div class="proPriceCard">'+
 				'<div class="proPriceContent">'+
@@ -581,12 +563,9 @@ var cardBuildHtml ={
 					'</div>'+
 				'</div>'+
 			'</div>';
-			
 			return $body;
 		},
 }
-
-
 
 var controlCard = {
 		init:function(){
@@ -596,9 +575,7 @@ var controlCard = {
 			this.controlBoard();
 			// 取消流程按钮隐藏属性
 			$('.btndiv-id').removeClass('hide');
-			
 			flowBtnControl.initEvent();
-			
 		},
 		//项目信息
 		controlProject:function(){
@@ -679,7 +656,6 @@ var controlCard = {
 		//留言板
 		controlBoard:function(){
 			$('.openBoard').on('click',function(){
-				 
 				if($(this).hasClass('open')){
 					controlCard.openBoard($(this));
 				}else{
@@ -784,7 +760,6 @@ var controlCard = {
 				var projectName = $("#onLinePName").val('');
 				var cusName = $("#onLineExpenditure").val('');
 				var payPrice = $("#onLinePayPrice").val('');
-				
 				var outlineTime = $('#outLineDate').val('');
 				var orderOutLine = $("#outLineBillNo").val('');
 				var projectName = $("#outLinePName").val('');
@@ -802,7 +777,6 @@ var controlCard = {
 				var projectName = $("#onLinePName").val('');
 				var cusName = $("#onLineExpenditure").val('');
 				var payPrice = $("#onLinePayPrice").val('');
-				
 				var outlineTime = $('#outLineDate').val('');
 				var orderOutLine = $("#outLineBillNo").val('');
 				var projectName = $("#outLinePName").val('');
@@ -813,7 +787,6 @@ var controlCard = {
 				var res = dealVerify(0);
 				if(!res)
 					return;
-				
 				var key = $(this).attr('data-id');
 				var orderId = $("#onLineBillNo").val();
 				var projectName = $("#onLinePName").val();
@@ -825,7 +798,6 @@ var controlCard = {
 						var root = $('.index_'+key);
 						controlCard.openPrice(root);
 					}else{
-						//alert("出错啦"+msg.errorCode);
 						$('#onLine').addClass('hide');
 					}
 				},  getContextPath() + '/pay/sendpay',$.toJSON({
@@ -840,7 +812,6 @@ var controlCard = {
 				var res = dealVerify(1);
 				if(!res)
 					return;
-				
 				var key = $(this).attr('data-id');
 				var outlineTime = $('#outLineDate').val();
 				var orderOutLine = $("#outLineBillNo").val().trim();

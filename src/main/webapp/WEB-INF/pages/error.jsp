@@ -30,7 +30,7 @@
 	<!--[if lt IE 9]>
 		<script>window.html5 || document.write('<script src="html5shivJs"><\/script>')</script>
 	<![endif]-->
-	
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
 </head>
 <body>
 
@@ -56,15 +56,11 @@
 			<div class="outSideDiv">	
 				<div class="centerDiv">
 				       <ul>
-				          
 				          <li><a href="/"><img src="${imgPath }/icons/error.png"></a></li>
 				          <li><div class="centerWord">服务器去拍电影啦~回到<a href="/">首页</a>去看看吧！</div></li>
 				       </ul>
 				</div>
             </div>
-	
-    
-    
 		
 	<script src="${jqueryJs }"></script>
 	<script src="${modelJs }"></script>

@@ -41,6 +41,7 @@
 	<!--[if lt IE 9]>
 		<script>window.html5 || document.write('<script src="html5shivJs"><\/script>')</script>
 	<![endif]-->
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
 </head>
 <body>
 	<input type="hidden" id="storage_node" value="${file_locate_storage_path }" />
@@ -83,32 +84,9 @@
 	                    </c:forEach>
 	             </c:if>       
 	            
-	             <%-- <div class="newsItem">
-	                   <img src="${imgPath }/index/back1.png">
-	                <div class="itemContent">
-	                     <div>我是标题</div>
-	                     <div>2016年3月23日</div>
-	                </div>
-	             </div>
-	             <div class="newsItem">
-	                   <img src="${imgPath }/index/back2.png">
-	                <div class="itemContent">
-	                     <div>我是标题</div>
-	                     <div>2016年3月23日</div>
-	                </div>
-	             </div>
-	             <div class="newsItem">
-	                   <img src="${imgPath }/index/back3.png">
-		                <div class="itemContent">
-		                     <div>我是标题</div>
-		                     <div>2016年3月23日</div>
-		                </div>
-	             </div> --%>
 	       </div>
 	       <jsp:include flush="true" page="../foot.jsp"></jsp:include> 
-	       
        </div>
-
 
 <script src="${jqueryJs }"></script>
 <script src="${pluginJs }"></script>

@@ -3,7 +3,6 @@ var count = 60; // 间隔函数，1秒执行
 var curCount; // 当前剩余秒数  
 var PopInterValObj, oTimer, successIntervalObj;
 $().ready(function(){
-	//changeDiv();
 	login.init();
 	checkTap();
 });
@@ -28,12 +27,10 @@ var login = {
 			this.userPhoneChange();
 			this.changeKaptcha();
 			this.userVerificationCode();
-			//this.userCheckVerification();
 			this.user_phoneLogin();
 			this.user_nameLogin();
 		},
 	 	userPhoneChange:function(){
-	 		
 			$('#user_phoneNumber').off("change").on('change',function(){
 				var telephone = $('#user_phoneNumber').val().trim();
 				if(telephone == '' || telephone == null || telephone == undefined){
@@ -52,7 +49,6 @@ var login = {
 							// 服务器错误
 							successToolTipShow(flag.errorMsg);
 						}
-						
 					}, getContextPath() + '/login/validation/phone', $.toJSON({
 						telephone : telephone
 					}));
@@ -124,7 +120,6 @@ var login = {
 				$('#kaptcha_pic_user').val('');// 重置图片验证码
 				$('#kaptcha_pic_user').attr('src',getContextPath() + '/login/kaptcha.png?' + Math.floor(Math.random()*100));
 				$('#kaptcha_code_user').focus();
-				//successToolTipShow("请填写图片验证码!");
 			}
 		},
 		user_phoneLogin:function(){
@@ -211,28 +206,21 @@ function SetRemainTime(){
 		getData(function(data){
 			// 清除session code
 		}, getContextPath() + '/login/clear/code');
-		
 	}else{
 		curCount--;  
 		$("#verification_code_recover_btn").text('已发送('+ curCount +')');
 	}
 }
-
 //控制标签
-
 function checkTap(){
 	$('#phoneLogin').off('click').on('click',function(){
 		$('#loginTop').removeClass('loginTopActive');
 		$('#phoneLoginDiv').show();
 		$('#useLoginDiv').hide();
 	});
-	
 	$('#noPhoneLogin').off('click').on('click',function(){
 		$('#loginTop').addClass('loginTopActive');
 		$('#phoneLoginDiv').hide();
 		$('#useLoginDiv').show();
 	});
-	
-	
 }
-

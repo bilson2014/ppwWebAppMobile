@@ -29,8 +29,6 @@
 					width: 60px;
 					height: 60px;
 					color: #ffffff;
-					background: image-url("/resources/images/icons/right-icon.png") no-repeat;
-					//@include icons-sprite(right-icon);
 					background-size: 60px;
 					margin: 14px auto;
 					@include border-radius(50px);
@@ -47,7 +45,6 @@
 					}
 				}
 				
-
 				dd:nth-child(3) {
 					color: #999;
 					font: {
@@ -90,7 +87,6 @@
 					height: 120px;
 					margin: 8px auto;
 					background: image-url("/resources/images/icons/mark.png") no-repeat;
-					
 					background-size: 120px;
 					background-position: center;
 				}
@@ -107,7 +103,6 @@
 		width: 100%;
 		height: 100%;
 		text-align: center;
-
 		.tele-wrap {
 			height: 60px;
 			font: {

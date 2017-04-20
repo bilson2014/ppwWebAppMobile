@@ -10,8 +10,6 @@
 <spring:url value="/resources/css/testRem/testRem.css" var="serviceCss"/>
 <spring:url value="/resources/lib/mMenu/jquery.mmenu.all.css" var="mmenuCss"/>
 
-
-
 <%-- import JS --%>
 
 <spring:url value="/resources/lib/jquery/jquery-2.0.3.min.js" var="jqueryJs"/>
@@ -22,13 +20,6 @@
 <spring:url value="/resources/js/common.js" var="commonJs"/>
 <spring:url value="/resources/js/testRem.js" var="testRemJs"/>
 <spring:url value="/resources/js/imgLazyLoad.js" var="imgLazyLoadingJs"/>
-
-
-
-
-
-
-
 <!-- imgPath -->
 <spring:url value="/resources/images" var="imgPath" />
 <!DOCTYPE html>
@@ -48,14 +39,6 @@
 	<link rel="stylesheet" href="${commonCss}">
 	<link rel="stylesheet" href="${serviceCss}">
 	<link rel="stylesheet" href="${mmenuCss}">
-  
-
-
-	<!--[if lt IE 9]>
-		<script>window.html5 || document.write('<script src="html5shivJs"><\/script>')</script>
-	<![endif]-->
-
-	
 	<script src="${jqueryJs }"></script>
 	<script src="${memberJs}"></script> 
 	<script src="${pluginJs }"></script>
@@ -65,22 +48,14 @@
 	<script src="${imgLazyLoadingJs }"></script>
 	<script src="${mmenuJs }"></script>
 	<script src="${testRemJs }"></script>
-	
-    
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
    
 <style type="text/css">
 html {font-size:100px}
 </style>
-
-
 </head>
 
-
-
-
 <body>
-     
      <div></div>
-		
 </body>
 </html>

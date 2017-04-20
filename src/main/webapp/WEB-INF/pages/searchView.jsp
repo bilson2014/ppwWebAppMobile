@@ -4,7 +4,6 @@
 <%-- import CSS --%>
 <spring:url value="/resources/lib/Bootstrap/css/bootstrap.min.css" var="bootstrapCss"/>
 <spring:url value="/resources/css/searchView.css" var="searchViewCss"/>
-
 <%-- import JS --%>
 <spring:url value="/resources/lib/jquery/jquery-2.0.3.min.js" var="jqueryJs"/>
 <spring:url value="/resources/lib/jquery/plugins.js" var="pluginJs"/>
@@ -42,7 +41,7 @@
 	<script src="${commonJs }"></script>
 	<script src="${searchViewJs }"></script>
 	<script src="${remSetJs }"></script>
-	
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
 </head>
 <body>
 
@@ -51,12 +50,9 @@
 	     <a></a>
 	     <a href="/"><img class="ppwLogo" src="${imgPath}/index/logoH.png"></a>
 	</div>
-	
 	 <jsp:include flush="true" page="menu.jsp"></jsp:include>
-
+	 
 	<div class="wrap">
-		
-	
 		<div class="content-wrap">
 			<div class="search-section">
 				<div class="header-search-wrap">

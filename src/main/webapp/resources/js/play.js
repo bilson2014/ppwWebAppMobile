@@ -15,12 +15,9 @@ $().ready(function() {
     $('.orderVideo').off('click').on('click',function(){
     	 $('#orderTo').show();
     });
-
-    
     $('#checkSuccess').off('click').on('click',function(){
     	$('#orderSuccess').hide();
     });
-    
     $('#closeOrder').off('click').on('click',function(){
     	$('#orderTo').hide();
     });
@@ -28,15 +25,11 @@ $().ready(function() {
 
 play = {
     initData: function() {
-        //var b, c, d, e, f, g, h, i, j, k, l, m, a = $("#videoPoster").val();
-        
         //add lt
     	var urlSize = $("#videoUrl").val();
     	var post = getDfsHostName()+$("#videoPoster").val();
         var url = getDfsHostName()+$("#videoUrl").val();
-        var hret = $('#yk-play').val();
         //end
-        
         var screenWidth = document.documentElement.clientWidth;
         var setHeight= screenWidth/16*9;
         
@@ -52,6 +45,7 @@ play = {
                   $('#teamPhoto').attr('src',getDfsHostName()+$('#teamPhotoUrl').val());
 	        }
     },
+    //下单
     order: function() {
         $("#order-btn").on("click", function() {
             var a = $("#realPrice").val(),
@@ -70,6 +64,7 @@ play = {
             $('<form action="' + d + '" method = "POST" autocomplete="off" accept-charset="UTF-8">' + f + "</form>").appendTo("body").submit().remove()
         })
     },
+    //显示更多相关推荐
     showMore:function(){
     	var tags = $('#tags').val();
     	loadData(function(data){
@@ -103,9 +98,6 @@ function createCard(msg){
 			tags = tags + spl[int] +" / ";
 		}
 	}
-	
-	console.log(tags);
-	
 	var $body1 = ''
 		+'   <a href="/play/'+tema+'_'+pro+'.html">'
 		+'		 <div class="contentItem" style="background:url('+getDfsHostName()+''+msg.picLDUrl+') no-repeat">'
@@ -115,18 +107,7 @@ function createCard(msg){
 		+'		 </div> '
 		+'	 </a>'
 	return $body1;		
-
 };
-
-
-
-
-
-
-
-
-
-
 
 function submitOrder(){
 	var verificationCodeValue =	$("#verificationCodeValue").val().trim();
@@ -158,8 +139,6 @@ function submitOrder(){
 function checkData(type){
 	var telephone = $('#phoneNumber').val().trim();
 	var verificationCodeValue =	$("#verificationCodeValue").val().trim();
-	//showError($('#phoneError'),'');
-	//showError($('#phoneCodeError'),'');
 	switch (type) {
 	case 1:
 		if(telephone == '' || telephone == null || telephone == undefined){
@@ -186,9 +165,7 @@ function checkData(type){
 	}
 }
 
-//order verificationCode
 function verificationCodeBtn(){
-	
 	if(curCount == 0 && checkData(1)){
 		curCount = count;
 		var telephone = $('#phoneNumber').val().trim();
@@ -206,7 +183,6 @@ function verificationCodeBtn(){
 		}, getContextPath() + '/login/verification/' + telephone, null);
 	}
 }
-
 //timer 处理函数 - 注册
 function SetRemainTime(){
 	if(curCount == 0){

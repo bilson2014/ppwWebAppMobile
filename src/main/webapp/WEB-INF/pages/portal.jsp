@@ -13,9 +13,6 @@
 <spring:url value="/resources/lib/jquery.json/jquery.json-2.4.min.js" var="jsonJs"/>
 <spring:url value="/resources/lib/jquery/jquery.flexslider-min.js"
 	var="flexsliderJs" />
-<spring:url value="/resources/lib/mMenu/jquery.mmenu.min.js"
-	var="mmenuJs" />
-<spring:url value="/resources/js/imgLazyLoad.js" var="imgLazyLoadingJs" />
 <spring:url value="/resources/js/common.js" var="commonJs" />
 <spring:url value="/resources/js/portal.js" var="portalJs" />
 <spring:url value="/resources/js/remSet.js" var="remSetJs" />
@@ -49,7 +46,6 @@
 <link rel="stylesheet" href="${portalCss }">
 <link rel="stylesheet" href="${swiperCss }">
 
-
 <!--[if lt IE 9]>
 		<script>window.html5 || document.write('<script src="html5shivJs"><\/script>')</script>
 	<![endif]-->
@@ -57,8 +53,6 @@
 </head>
 <body>
 	<input type="hidden" id="storage_node" value="${file_locate_storage_path }" />
-<%-- 	<img class="indexBack" src="${imgPath}/index/index.jpg"> --%>
-	
 	<div class="model" id="orderSuccess">
 	         <div class="success">
 	            <img src="${imgPath}/index/success.png">
@@ -74,14 +68,10 @@
 	     	  <button id="closeBtn" type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="close-icon" aria-hidden="true">&times;</span></button>
 	        </div>
 			<div class="video-play-sections">
-			      <%--  <video controls="" loop="" poster="${imgPath}/index/moreInfo.JPG" name="media" id="header3Video" class="active"> 
-			         <source src="http://www.apaipian.com/product/video/paipianwangMovie.mp4" id="source" type="video/mp4">
-			       </video> --%>
 		    </div> 
 	    </div>
 	    
 	    <jsp:include flush="true" page="menu.jsp"></jsp:include> 
-	    
 	    
 	 <div class="headerCom">
 		<a>
@@ -93,7 +83,6 @@
 		<a>
 		  <img class="ppwLogos" src="${imgPath}/index/logoW.png">
 		</a>
-		
 	</div>
 
 	<div class="backImg">
@@ -120,7 +109,7 @@
 	            <div class="swiper-slide">
 		            <video style="width:0px;opacity:0" controls="" loop="" poster="${imgPath}/index/moreInfo.JPG" name="media" id="header3Video" class="active"> 
 			         <!--  <source src="/resources/video/test.mov" id="source" type="video/mp4"> -->
-			         <source src="http://www.apaipian.com/product/video/paipianwangMovie.mp4" id="source" type="video/mp4">
+			         <source src="" id="source" type="video/mp4">
 			        </video>
 	                 <ul>
 		                  <li class="title">专业商业视频服务</li>
@@ -264,29 +253,7 @@
 	
 	<div class="thirdContent">
 	        <div class="ourCusTitle">导演工作室</div>
-		    <div class="ourCus">
-
-		      <%--   <div class="item">
-		            <div class="proLogo">
-		               <img src="${imgPath}/index/test.png">
-		               <img src="${imgPath}/index/true.png">
-		            </div>
-		            <div class="proContent">
-		                <div class="title">大大所大大多所大叔大叔大所大</div>
-		                <div class="des">大大所大大多所大叔大叔大所大大大所大大多所大叔大叔大所</div>
-		                <div class="tags">
-		                      <div class="tagsItem">宣传片</div>
-		                      <div class="tagsItem">宣传片</div>
-		                      <div class="tagsItem">宣传片</div>
-		                      <div class="tagsItem">宣传片</div>
-		                      <div class="tagsItem">宣传片</div>
-		                      <div class="tagsItem">宣传片</div>
-		                </div>
-		            </div>
-		        </div> --%>
-		      		      
-		    </div>
-		       
+		    <div class="ourCus"></div>
 	       <a href="/proRegister">
 	    		<div class="join">
                                                       加入我们
@@ -314,28 +281,19 @@
 		     
 		     <jsp:include flush="true" page="foot.jsp"></jsp:include> 
 		     
-		     
 	</div>	    
  </div>
-
+ 
 </body>
-
-
 <script src="${jqueryJs }"></script>
 <script src="${waypointsJs}"></script>
 <script src="${swiperJs}"></script>
 <script src="${pluginJs }"></script>
 <script src="${flexsliderJs }"></script>
 <script src="${jsonJs }"></script>
-<script src="${imgLazyLoadingJs }"></script>
 <script src="${commonJs }"></script>
 <script src="${portalJs }"></script>
-<script src="${mmenuJs}"></script>
 <script src="${remSetJs}"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
 
-
-
-<!-- 加载Mob share 控件 -->
-<script id="-mob-share"
-	src="http://f1.webshare.mob.com/code/mob-share.js?appkey=8c49c537a706"></script>
 </html>

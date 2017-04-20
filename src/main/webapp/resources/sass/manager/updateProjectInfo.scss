@@ -94,7 +94,6 @@ body {
         font-size: $font-size-base;
     }
     .firstDiv {
-
         width: 90px;
         height: 30px;
         display: inline-block;
@@ -118,7 +117,6 @@ body {
         }
     }
 }
-
 
 .contentInput {
     margin: 0 auto;
@@ -147,17 +145,16 @@ body {
         border-left: 1px solid $border-line;
         height: 25px;
         width: 25px;
-       position: relative;
-       top: -27px;
+        position: relative;
+        top: -27px;
         left: 73%;
         left: calc(100% - 47px);
-
         img {
-             width: 16px;
-    height: 9px;
-    position: relative;
-    left: 6px;
-    top: 5px;
+            width: 16px;
+            height: 9px;
+            position: relative;
+            left: 6px;
+            top: 5px;
         }
     }
     input {
@@ -177,8 +174,6 @@ body {
         line-height: 30px;
         vertical-align: middle;
     }
-
-
     .secondDiv {
         width: 50%;
         width: calc(100% - 105px);
@@ -263,8 +258,6 @@ body {
     top: 90px;
 }
 
-
-
 .keBianShiDiv {
     width: 100%;
     height: auto;
@@ -278,7 +271,6 @@ body {
     }
     .autoContent {
         width: 100%;
-        
         span {
             width: 15px;
             color: $gray-light;
@@ -287,32 +279,26 @@ body {
             cursor: pointer;
             display: inline-flex;
             position: relative;
-            right:30px;
-            top:6px;
+            right: 30px;
+            top: 6px;
             div {
                 height: 2px;
                 width: 11px !important;
                 background: $gray-light;
                 position: relative;
                 top: 13px;
-
             }
-
-           
         }
-
-       
-         .bfb{
-                position: relative;
-                left:5px;
-                color:$gray-light;
-                width:10px !important;
-            }
-
+        .bfb {
+            position: relative;
+            left: 5px;
+            color: $gray-light;
+            width: 10px !important;
+        }
         .divPosition {
             position: relative;
             //width: calc(100% - 105px);
-            width:100%;
+            width: 100%;
             height: 45px;
             margin-bottom: 10px;
             margin-left: 15px;
@@ -322,7 +308,7 @@ body {
                 width: 25%;
                 position: absolute;
                 font-size: $font-size-base;
-                left:77px;
+                left: 77px;
                 z-index: 999;
                 border: 1px solid $border-line;
                 background-color: #fff;
@@ -339,14 +325,12 @@ body {
                     }
                 }
             }
-
-            div{
+            div {
                 display: inline-block;
-                width:70px;
-                font-size:1.3rem;
-                color:$gray-light;
+                width: 70px;
+                font-size: 1.3rem;
+                color: $gray-light;
             }
-
             .ul-option {
                 text-align: center;
                 line-height: 20px;
@@ -354,12 +338,11 @@ body {
                 width: calc(100% - 105px);
                 font-size: $font-size-base;
                 position: absolute;
-                left:75px;
+                left: 75px;
                 z-index: 999;
                 border: 1px solid $border-line;
                 background-color: #fff;
-
-                 li:last-child{
+                li:last-child {
                     height: 25px;
                     line-height: 25px;
                     width: 80%;
@@ -370,8 +353,7 @@ body {
                         color: #fff;
                         cursor: pointer;
                     }
-                 }
-
+                }
                 li {
                     border-bottom: 1px solid $border-line;
                     height: 25px;
@@ -410,7 +392,7 @@ body {
             font-size: $font-size-base;
         }
         .info {
-            width:55%;
+            width: 55%;
             width: calc(100% - 135px);
             height: 40px;
             border: 1px solid $border-line;
@@ -420,7 +402,7 @@ body {
             color: $gray-dark;
             font-size: $font-size-base;
         }
-            .infos {
+        .infos {
             width: 70%;
             width: calc(100% - 105px);
             height: 40px;
@@ -461,7 +443,7 @@ body {
             font-size: $font-size-base;
         }
         .timeContent {
-            margin-left:90px;
+            margin-left: 90px;
             width: 79%;
             height: auto;
             padding-bottom: 5px;
@@ -542,8 +524,7 @@ body {
     -ms-transform: rotate(90deg);
     transform: rotate(90deg);
     left: -5px !important;
-    top:11px !important;
-
+    top: 11px !important;
 }
 
 .completeDiv {
@@ -583,7 +564,6 @@ body {
     }
 }
 
-
 .color1 {
     background: #f1b059;
 }
@@ -607,25 +587,26 @@ body {
 .gifImgDiv {
     position: relative;
     position: fixed;
-    top:45%;
+    top: 45%;
     z-index: 998;
     width: 100%;
     height: auto;
     text-align: center;
-    img{
+    img {
         margin: 0 auto;
     }
 }
 
-.syeName{
-    width:70px !important;
+.syeName {
+    width: 70px !important;
 }
-.syeBl{
-    width:30px !important;
+
+.syeBl {
+    width: 30px !important;
     margin-left: -5px;
 }
 
-.newInput{
+.newInput {
     height: 30px !important;
     margin-top: 1px !important;
     margin-bottom: 15px !important;
@@ -633,20 +614,19 @@ body {
     top: -4px;
 }
 
-input{
-      -webkit-appearance: none;
+input {
+    -webkit-appearance: none;
 }
 
-textarea{
-      -webkit-appearance: none;
+textarea {
+    -webkit-appearance: none;
 }
 
-.dtpicker-compButton{
+.dtpicker-compButton {
     height: 50px !important;
 }
 
-
-a{
+a {
     text-decoration: none;
 }
 
@@ -669,4 +649,3 @@ a:active {
     text-decoration: none;
     /* 指正在点的链接*/
 }
-

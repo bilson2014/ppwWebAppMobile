@@ -1,6 +1,5 @@
 var PopInterValObj,oTimer,successIntervalObj
 $().ready(function(){
-	 
 	projectSource.init();
 	synergy.init();
 	user.init();
@@ -8,10 +7,7 @@ $().ready(function(){
 	price.init();
 	time.init();
 });
-
-
 var projectSource ={
-		
 		    init:function(){
 		    	this.showReferrer();
 		    	this.initReferrerInput();
@@ -44,7 +40,6 @@ var projectSource ={
 		    },
 		  //推荐人检索
 		    searchReferrer:function (inputString) {
-		    	//getReferrerData();
 		    	loadData(function (msg){
 		    		var table=$("#ul-select-referrer");
 		    		table.html("");
@@ -62,7 +57,6 @@ var projectSource ={
 		    					$("#referrer-Id-hidden").val(id);
 		    					$("#input-referrer").val(name);
 		    					$("#ul-select-referrer").hide();
-		    					//clearError($("#input-referrer"));
 		    				});
 		    				table.append(li);
 		    		});
@@ -140,11 +134,9 @@ var projectSource ={
 		    			$("#referrer-Id-hidden").val(msg.referrerId);
 		    			$("#input-referrer").val(msg.referrerName);
 		    		}
-		    		
 		    		//add wangliming 2016.5.10 11:29 end
 		    		$(".teamId").val(msg.teamId);
 		    		$(".userId").val(msg.customerId);
-		    		
 		    		$("#firstinput").val(msg.priceFirst);
 		    		$("#lastinput").val(msg.priceLast);
 		    		$("#finishInput").val(msg.priceFinish);
@@ -168,7 +160,6 @@ var projectSource ={
 	    					synergy.delSynergyView();
 		    			});
 		    		}
-		    		
 		    		if(msg.customerPayment+'' == '')
 		    			$("#userinput").val('');
 		    		else
@@ -177,9 +168,7 @@ var projectSource ={
 		    			$("#providerInput").val('');
 		    		else
 		    			$("#providerInput").val(msg.providerPayment);
-		    		
 		    		hasPirce();
-		    		
 		    	}, getContextPath() + '/mgr/projects/get-redundantProject', $.toJSON({
 		    		id : currentProject
 		    	}));
@@ -231,14 +220,12 @@ var projectSource ={
 		    	var priceFinish=$("#finishInput").val().trim();
 		    	var teamId= $("#teamId").val();
 		    	var customerId= $("#userId").val();
-		    	
 		    	var description = $("#description").val().trim();
 		    	var gtstarttime = $("#gtstarttime").val().trim();
 		    	var fastarttime = $("#fastarttime").val().trim();
 		    	var swstarttime = $("#swstarttime").val().trim();
 		    	var zzstarttime = $("#zzstarttime").val().trim();
 		    	var jfstarttime = $("#jfstarttime").val().trim();
-		    	
 		    	//获取推荐人，是友情推荐时为 “人名” 否则为 ‘’
 		    	var referrerId=getReferrer();
 		    	//add laowng
@@ -425,13 +412,6 @@ var synergy ={
 			var deleteSynergys=$("[name^=delSynergy]");
 			var cout=deleteSynergys.length;
 			deleteSynergys.on('click',function(){
-//				if(cout != 0){
-//					var x=$(this).parent().find("input#synergy-id");
-//					if(x.val().trim() != ''){
-//						removeSynergy($(x).val().trim());
-//					}
-//					$(this).parent().parent().remove();
-//				}
 				if(cout != 0){
 					var x=$(this).parent().find("input#synergy-id")
 					var res = false;
@@ -440,15 +420,11 @@ var synergy ={
 						if(res){
 							$(this).parent().parent().remove();
 						}else{
-							
 							successToolTipShow('协同人删除失败！'); //TODO:
 						}
 					}else{
 						$(this).parent().parent().remove();
 					}
-					
-			
-					
 				}	
 				var deleteSecondSynergys=$("[name^=delSynergy]");
 				var couts=deleteSecondSynergys.length;
@@ -459,7 +435,6 @@ var synergy ={
 		},
 		removeSynergy:function(id){
 			loadData(function(){
-				
 			}, getContextPath() + '/mgr/projects/remove/synergy', $.toJSON({
 				name:id
 			}));
@@ -522,7 +497,6 @@ var synergy ={
 		    			}else{
 		    				 //输入的信息数据库里不存在
 		    				hasError =true;
-		    				
 		    			}
 		    			if(hasError){
 		    				$(item).find("input#name").focus();
@@ -531,10 +505,8 @@ var synergy ={
 		    			}
 		    			// 继续验证价格
 		    			var res = synergy.verifySynerhyRatio(ratio,baseRatio);
-		    			
 		    			if(res.str != 'ok'){
 		    				//价格发生问题
-
 		    				successToolTipShow(res.str);
 		    				ratioName.focus();
 		    				hasError =true;
@@ -547,7 +519,6 @@ var synergy ={
 		            var userId = $(item).find("input#user-id").val().trim();
 		            var s =userIdArray.length;
 		            if(userIdArray.length!=1){
-		            	
 		            for(var i=0;i<userIdArray.length-1;i++)
 		            {
 		                    for(var j=1;j<userIdArray.length;j++)
@@ -559,7 +530,7 @@ var synergy ={
 		                                return false;
 		                            }
 		                    }
-		                 }
+		                }
 		            }
 				}
 				 if(userId==''){
@@ -577,8 +548,6 @@ var synergy ={
 				return true;
 			}
 			return true;
-			
-			
 		},
 		showOpenView:function(){
 			$("#synergy").removeClass('hide');
@@ -640,13 +609,11 @@ var user ={
 		},
 		showUser:function(){
 			$('#userOpen').on('click',function(){
-				 
 				  if($('#userInfo').hasClass("white")){
 					  user.showCloseView();
 				  }else{
 					  user.showOpenView();
 				  }
-				
 			});
 		},
 		showOpenView:function(){
@@ -672,7 +639,6 @@ var user ={
 					$("#ul-select").show();
 					isShow = true;
 				}
-				
 			});
 		},
 		//用户搜索方法
@@ -697,7 +663,6 @@ var user ={
 							table.html("");
 						});
 						table.append(li);
-						
 					}
 					var hover=false;
 					$(table).hover(function(){
@@ -708,7 +673,6 @@ var user ={
 					$("#userName").on('blur',function(){
 						if(!hover){
 							table.html("");
-							//table.hide();
 							table.addClass("hide");
 						}
 					});
@@ -755,7 +719,6 @@ var provider ={
 					$("#ul-select-team").show();
 					isShow = true;
 				}
-				
 			});
 		},
 		//团队搜索方法 
@@ -790,7 +753,6 @@ var provider ={
 				$("#teamName").on('blur',function(){
 					if(!hover){
 						table.html("");
-						//table.hide();
 						table.addClass("hide");
 					}
 				});
@@ -836,7 +798,6 @@ var price ={
 					first.focus();
 					return false;
 				}
-				
 				if(!checkNumber(last.val())){
 					last.val("");
 					successToolTipShow('价格范围出错');
@@ -844,14 +805,12 @@ var price ={
 					last.focus();
 					return false;
 				}
-				
 				if(first.val()=="0"){
 					first.val('0');
 				}
 				if(last.val()=="0"){
 					last.val('0');
 				}
-				
 				if(parseInt(first.val())>parseInt(last.val())){
 					last.val("");
 					price.showOpenView();
@@ -870,7 +829,6 @@ var price ={
 				successToolTipShow('请填写最终价格');
 				return false;
 			}
-				
 			if(!checkNumber(text)){
 				$("#finishInput").val("");
 				$("#finishInput").focus();
@@ -878,18 +836,15 @@ var price ={
 				successToolTipShow('最终价格有误');
 				return false;
 			}
-			
 			return true;
 		},
 		  priceCheck:function(){
 				$("#firstinput").on('change',function(){
 	 				var res=price.priceVerifyInputNotNull();
 	 			});
-	 			
 	 			$("#lastinput").on('change',function(){
 	 				var res=price.priceVerifyInputNotNull();
 	 			});
-	 			
 	 			$("#finishInput").on('change',function(){
 	 				price.checkFinishPrice();
 	 			});
@@ -925,13 +880,6 @@ var time ={
 			$('#timetopLine').addClass('hide');
 		},
 		datepick:function(){	
-			/*$("input[id$='time']").datepicker({
-				language: 'zh',
-				dateFormat:'yyyy-MM-dd',
-				//position:'left top',
-				autoClose:true,
-				minDate: new Date() 
-		   });*/
 			$("#dtBox").DateTimePicker({
 				dateFormat:'yyyy-MM-dd',
 				language:'zh-CN'
@@ -962,27 +910,21 @@ var checkInfo = {
 		 init:function(){
 			 return this.check();
 		 },
-
          check:function(){
-        	 var error =$('#errorDiv');
-        	 var projectName = $('#projectName');
-        	 
-        	 var userName = $('#userName');
-        	 var userContact = $('#userContact');
-        	 var userTel = $('#userPhone');
-        	 
-        	 var providerName = $('#teamName');
-        	 var providerContact = $('#teamContact');
-        	 var providerTel = $('#teamPhone');
-        	 
-        	    var gtstarttime = $("#gtstarttime").val().trim();
-        		var fastarttime = $("#fastarttime").val().trim();
-        		var swstarttime = $("#swstarttime").val().trim();
-        		var zzstarttime = $("#zzstarttime").val().trim();
-        		var jfstarttime = $("#jfstarttime").val().trim();
-        		
-        		
-        		var res=synergy.checkSynerhy();
+	        	 var error =$('#errorDiv');
+	        	 var projectName = $('#projectName');
+	        	 var userName = $('#userName');
+	        	 var userContact = $('#userContact');
+	        	 var userTel = $('#userPhone');
+	        	 var providerName = $('#teamName');
+	        	 var providerContact = $('#teamContact');
+	        	 var providerTel = $('#teamPhone');
+	        	 var gtstarttime = $("#gtstarttime").val().trim();
+	        	 var fastarttime = $("#fastarttime").val().trim();
+	        	 var swstarttime = $("#swstarttime").val().trim();
+	        	 var zzstarttime = $("#zzstarttime").val().trim();
+	        	 var jfstarttime = $("#jfstarttime").val().trim();
+        		 var res=synergy.checkSynerhy();
         		if(!res){
         			return false;
         		}
@@ -991,7 +933,6 @@ var checkInfo = {
         		 projectName.focus();
         		 return false;
         	 }
-        	 
  			 if(userName.val()==null||userName.val()==""){
  				 if(!$('#userInfo').hasClass("white")){
  					user.showOpenView();
@@ -1000,13 +941,11 @@ var checkInfo = {
         		 userName.focus();
         		 return false;;
         	 }
- 			 
  			 if(userContact.val()==null||userContact.val()==""){
         		 successToolTipShow('请填写客户联系人');
         		 userContact.focus();
         		 return false;
         	 }
- 			 
  			 if(userTel.val()==null||userTel.val()==""){
         		 successToolTipShow('请填写客户电话');
         		 userTel.focus();
@@ -1046,8 +985,6 @@ var checkInfo = {
          }
 	}
 
-
-
 //成功信息 提示框弹出方法
 function successToolTipShow(word){
 	window.clearInterval(successIntervalObj);
@@ -1059,7 +996,6 @@ function successToolTipShow(word){
 function hideSuccessTooltip(){
 	$('#errorDiv').hide('normal');
 }
-
 
 //时间比较
 function dateCompare(date1, date2) {
@@ -1087,6 +1023,7 @@ function submitForm(){
 function getCurrentProject() {
 	return $("#key").val();
 }
+
 function hasPirce(){
 	var userPrirce =$("#userinput").val().trim();
 	var providerPrice =$('#providerInput').val().trim();
@@ -1103,6 +1040,7 @@ function hasPirce(){
 		isMore=true;
 	}
 }
+
 function getReferrer() {
 	if($("#projectSource").val().trim()=='个人信息下单'){
 		 return  $("#referrer-Id-hidden").val();
@@ -1111,6 +1049,7 @@ function getReferrer() {
 		 return '0';
 	 }
 }
+
 function getViewSynerhy() {
 	var base_Synergy = $("div[name^=Synergy-info]");
 	var currCount=base_Synergy.length;
@@ -1134,6 +1073,7 @@ function getViewSynerhy() {
 	}
 	return synergys;
 }
+
 function disableSubmitBtnEnent(check){
 	$("#indent-btn").off('click');
 	$("#topSubmit").off('click');
@@ -1141,6 +1081,7 @@ function disableSubmitBtnEnent(check){
 		$('.bottom-div').show();
 	}
 }
+
 function enableSubmitBtnEnent(){
 	var state=$(".state").text().trim();
 	disableSubmitBtnEnent();
@@ -1156,6 +1097,7 @@ function removeSynergy(id){
 	}));
 	return res;
 }
+
 Date.prototype.Format = function (fmt) { //author: meizz 
     var o = {
         "M+": this.getMonth() + 1, //月份 
@@ -1171,11 +1113,3 @@ Date.prototype.Format = function (fmt) { //author: meizz
     if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
     return fmt;
 }
-
-//function removeSynergy(id){
-//	loadData(function(){
-//	}, getContextPath() + '/mgr/projects/remove/synergy', $.toJSON({
-//		name:id
-//	}));
-//	
-//}

@@ -1,7 +1,6 @@
 $().ready(function(){
 	// 搜索智能提示
 	suggest.smartSuggest();
-	
 	// 如果 搜索栏为空，则隐藏提示栏
 	suggest.prototypeChange();
 });
@@ -19,25 +18,20 @@ var suggest = {
 				{
 					return false;
 				}
-				
 				oldValue=this.value;
-				
 				var token = $('#search-q').val().trim();
 				if(token != null && token != '' && token != undefined){
 					loadData(function(list){
 						if(list != null && list != '' && list != undefined) {
-
 							oUl.style.display='block';
 							oUl.innerHTML='';
 							var arr=list;
-							
 							for (var i=0; i<arr.length; i++)
 							{
 								var oLi=document.createElement('li');
 								oLi.innerHTML=arr[i].condition;
 								oUl.appendChild(oLi);
 							}
-							
 							// 移入移出 点击跳转
 							var aLi=oUl.children;
 							for (var i=0; i<aLi.length; i++)
@@ -59,7 +53,6 @@ var suggest = {
 									
 								})(i);
 							}
-						
 						}
 					}, getContextPath() + '/suggest/' + token, null);
 				}
@@ -67,9 +60,7 @@ var suggest = {
 			
 			oT.onkeydown=function (ev){
 				var aLi=oUl.children;
-				
 				var oEvent=ev || event;
-				
 				if (oEvent.keyCode == 40)
 				{
 					now++;
@@ -92,10 +83,8 @@ var suggest = {
 						aLi[now].className='on';
 						oT.value=aLi[now].innerHTML;
 					}
-					
 					document.title=now;
 				}
-				
 			}
 	},
 	prototypeChange : function(){

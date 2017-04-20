@@ -4,18 +4,15 @@ var shengarray;
 var shiarray;
 var teamId = 0;
 $().ready(function() {
-	
 	checkEven();
 	initAddrSelector();
 	checkType();
 	initPrice();
 	initInfoResource();
-	returnFirst();
 	checkStep();	
 });
 
 function checkStep(){
-	
 	$('#step1').off('click').on('click',function(){
 		checkStepOne();
 	});
@@ -24,8 +21,10 @@ function checkStep(){
 		checkStepTwo();
 	});
 	
+	$('#returnStep').off('click').on('click',function(){
+		returnFirst();
+	});
 }
-
 
 function initAddrSelector() {
 	$('.AddrSelector').on(
@@ -58,7 +57,6 @@ function initAddrSelector() {
 						}
 					}, getContextPath() + '/all/citys', $.toJSON({}));
 				}
-
 				var iosSelect = new IosSelect(2, [ shengarray, shiarray], {
 					title : '省市选择',
 					itemHeight : 35,
@@ -74,7 +72,6 @@ function initAddrSelector() {
 						domShiID.val(selectTwoObj.id);
 					}
 				});
-
 			});
 }
 
@@ -102,7 +99,6 @@ function checkType() {
 }
 
 function getBusiness() {
-
 	var busArr;
 	$('.checkWord').each(function(i) {
 		if (0 == i) {
@@ -202,16 +198,10 @@ function stepTwoFinish(num){
 }
 
 function returnFirst(){
-	
-	$('#cancleBtn').on('click',function(){
-		$('#step1').removeClass('hide');
-		$('#step2').addClass('hide');
-		$('#step-bar').removeClass('step-2');
-		
-	});
-	 
+	    $('#titleInfo').text('基本信息');
+		$('.stepOne').removeClass('hide');
+		$('.stepTwo').addClass('hide');
 }
-
 
 function checkStepOne(){
 	var name = $('#company-name').val().trim(); // 公司名称
@@ -268,7 +258,6 @@ function checkStepOne(){
 	return true;
 }
 
-
 function checkStepTwo(){
 
 	var sheng = $('#sheng').val().trim(); // 省
@@ -285,10 +274,6 @@ function checkStepTwo(){
 		$('#shi').click;
 		return false;
 	}
-
-    
-	
-	
 	
 	infoSave();
 	return true;
@@ -314,6 +299,7 @@ function SetLastTime() {
 	$('#lasttime').attr('disabled', 'disabled');
 	InterValObj = window.setInterval(SetRemainTime, 1000);
 }
+
 function SetRemainTime() {
 	if (curCount == 0) {
 		window.clearInterval(InterValObj); // 停止计时器
@@ -323,6 +309,7 @@ function SetRemainTime() {
 		$('#lasttime').text(curCount);
 	}
 }
+
 function city(id, text, parentId) {
 	this.id = id;
 	this.value = text;
@@ -350,5 +337,3 @@ function infoSave(){
 			teamCity : $("#shiID").val()
 		}));
 	}
-
-

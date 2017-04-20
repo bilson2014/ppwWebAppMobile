@@ -35,14 +35,11 @@
 		<script>window.html5 || document.write('<script src="html5shivJs"><\/script>')</script>
 	<![endif]-->
 	<script src="${jqueryJs }"></script>
-
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
 </head>
 <body>
-
-
 		  <div class="cusSide" id="changeDiv">
 	      <div class="topDiv">
-	        
 	        <div class="topContent">
 	          
 	            <div><img id="posLogo" src="${imgPath}/login/logo.png" ></div>
@@ -52,31 +49,25 @@
 	                  <div>请绑定拍片网账号</div>
 	               </div>
 	        </div>
-	       
 	      </div>
 	      
 	      <div class="bottomDiv">
-	               
-	            
 			               <div class="contentHeight contentColor">
 					                 <div class="loginContent">
 							                   <div class="image hide"></div> 
 							                   <input placeholder="手机号"></input>
 							                   <div class="error-word"  id="user_phoneNumberId">错误提示</div>
 					                 </div>
-					                
 					                  <div class="loginContent">
 							                   <div class="image "><img alt="图片验证码" src="/login/kaptcha.png?41" id="kaptcha_pic" class="btn-validation"/></div> 
 							                   <input placeholder="图片验证码"></input>
 							                   <div class="error-word"  id="kapt_error_info">错误提示</div>
 					                 </div>
-					                 
 					                    <div class="loginContent">
 							                   <div class="image "><button type="button" id="verification_code_recover_btn" class="btn-get-validation fontSizeBaseLight" >点击获取</button></div> 
 							                   <input placeholder="短信验证码"></input>
 							                   <div class="error-word">错误提示</div>
 					                    </div>
-					                    
 					                  <div class="loginContent" >
 					                     <div class="checkInfo hide" id="infoOrder">
 						                       <div class="inline">
@@ -86,13 +77,11 @@
 						                       </div>
 					                      </div>
 					                 </div>
-					                 
 					                   <div class="submitBtn">立即绑定</div>
 					            </div>
 					               
 			              </div>
 	  </div>
 		
-	
 </body>
 </html>

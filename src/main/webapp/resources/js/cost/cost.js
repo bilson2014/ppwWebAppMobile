@@ -4,13 +4,11 @@ var curCount; // 当前剩余秒数
 var swiper;
 var reSet = false;
 $().ready(function() {
-	
 
 	 getUrlTarget();
 	 init();
 	 getVerificationCode();
 	 initTools();
-	 
 
 });
 function init() {
@@ -24,42 +22,31 @@ function init() {
 	        },
 	        onSlideNextEnd: function(swiper){
 	        	var index = swiper.activeIndex;
-	        	console.info(index);
-	        	
 	        	switch (index){
 	        	case 0:
-	        		
 	        		break;
 	        	case 1:
-	        		
 	        		break;
 	        	case 2:
-	        		
 	        		initStep2();
 	        		
 	        		break;
 	        	case 3:
 	        		initStep3();
-	        		
 	        		break;
 	        	case 4:
 	        		initStep4();
-	        		
 	        		break;
 	        	case 5:
 	        		initStep5();
-	        		
 	        		break;
 	        	case 6:
-	        		
 	        		initStep6();		
 	        		swiper.lockSwipeToNext();
 	        		break;
 	        	}
-	        	
 	            }
 	    });
-	 
 	 
 	 $('.reCost').on('click',function(){
 		 swiper.slideTo(1, 1000, false);//切换到第一个slide，速度为1秒
@@ -73,13 +60,9 @@ function init() {
 	 	 $('.toOrderDiv').addClass('errorPhoneReset');
 	 	 $('#phoneCard').removeClass('cardBack');
 	 });
-	 
 	 $('.icon').on('click',function(){
 		// swiper.slideNext();
 	 });
-	 
-	 
-	 
 	 
 	var step1 = $('.stepBtn-1');
 	var step2 = $('.stepBtn-2');
@@ -147,7 +130,6 @@ function initStep2(){
 
 function initStep3(){
 	if($('.stepBtn-3 div').hasClass('red-3')){
-
 	}else{
 		$('#noInfo').show();
 		swiper.slidePrev();
@@ -156,7 +138,6 @@ function initStep3(){
 
 function initStep4(){
 	if($('.stepBtn-4 div').hasClass('red-4')){
-
 	}else{
 		$('#noInfo').show();
 		swiper.slidePrev();
@@ -183,11 +164,10 @@ function initStep6(){
 	}
 }
 
-
 function getPrice(){
 	var videoType =$('.red-2').attr('data-content') == undefined ? 0 : $('.red-2').attr('data-content');
 	var videoTypeText = $('.red-2').attr('data-text') == undefined ? '活动视频' : $('.red-2').attr('data-text');
-	
+
 	var team = $('.red-3').attr('data-content') == undefined ? 0 : $('.red-3').attr('data-content');
 	var teamText = $('.red-3').attr('data-text') == undefined ? '专业级导演' : $('.red-3').attr('data-text');
 	
@@ -235,9 +215,6 @@ function getPrice(){
 			target:""
 		}));
 	}
-
-
-
 
 function checkCode(){
 	
@@ -319,34 +296,15 @@ function initTools(){
 	});
 }
 
-
-
 function share(){
     $("#shareWx").click(function() {
-//        var title = '测试';
-//        var url = getHostName() + getContextPath() + '/cost/';
-//        var img_path = ''+'/images/'+'/shareImg.jpg/';
-//        share.init(url, title, img_path);  	
+//        var url = getHostName() + getContextPath() + '/cost/'; 	
     	$('#showWeixin').show();
     });
-    
     $('#showWeixin').click(function(){
     	$('#showWeixin').hide();
     });
-    
-//    $('#shareF').click(function(){
-//    	$('#shareFModal').show();
-//    });
-//    
-//    $('#shareFModal').click(function(){
-//    	$('#shareFModal').hide();
-//    });
-    
-
-    
-    
 }
-
 
 function code(){
 	
@@ -358,30 +316,6 @@ function code(){
     	$('#code').hide();
     });
 }
-
-//function toOrderPage(){
-//	
-//	var phone = $('#phone').val();
-//	
-//	loadData(function(job){
-//		  /*$('#price').text(thousandCount(job.cost));
-//		  $('#phone').attr('data-content',job.indentId);*/
-//		     var price = job.cost;
-//             alert(thousandCount(price));
-//             if(result.code == 1){
-//					$('#price').text(thousandCount(result.cost));
-//					$('#phoneCode').attr('data-content', result.indentId);
-//					$("#code-container").remove();
-//				}else if(result.code == 0 && result.msg == '手机号不匹配'){
-//					$('#errorInfo').text('手机号不匹配');
-//				}else{
-//					$('#errorCode').text(result.msg);
-//				}
-//		}, getContextPath() + '/calculate/cost', $.toJSON({
-//			phone:phone,
-//			description:""
-//		}));
-//}
 
 function showBar(){
 	$('#phoneCard').hide();
@@ -413,8 +347,3 @@ function getUrlTarget(){
     	 $("#target").val(unescape(r[2])); 
      }
 }
-
-
-
-
-

@@ -3,11 +3,9 @@ var count = 60; // 间隔函数，1秒执行
 var curCount; // 当前剩余秒数  
 var PopInterValObj, oTimer, successIntervalObj;
 $().ready(function(){
-	//changeDiv();
 	checkTap();
 	login.init();
 });
-
 //成功信息 提示框弹出方法
 function successToolTipShow(word) {
 	window.clearInterval(successIntervalObj);
@@ -37,10 +35,8 @@ function SetUsrRemainTime(){
 
 var login = {
 		init:function(){
-			//this.userPhoneChange();
 			this.changeKaptcha();
 			this.userVerificationCode();
-			//this.userCheckVerification();
 			this.user_phoneLogin();
 			provider_login.init();
 		},
@@ -149,7 +145,6 @@ var login = {
 		}
 }
 
-
 var provider_login = {
 		init:function(){
 			//手机号码失去焦点
@@ -159,11 +154,8 @@ var provider_login = {
 			//获取手机验证码
 			this.verificationCode();
 			//注册或者登录
-			this.regesterOrLogin();
-			
 			this.provider_nameLogin();
 		},
-		
 		phoneNumberChange:function(){
 			$('#user_phoneNumber').off('change').on('change',function(){
 				$('#submitBtn').removeAttr('data-id');//清空注册或登陆标记位，防止换号后数据错误
@@ -173,12 +165,11 @@ var provider_login = {
 					$('#user_phoneNumberId').removeClass('hide');
 					$('#user_phoneNumberId').text('*请填写手机号');
 					$('#user_phoneNumber').focus();
-					return ;
+					return;
 				}
 				if(checkMobile(telephone)){
 					loadData(function(flag){
 						if(flag.errorCode == 200){
-							//  未注册
 							successToolTipShow('该手机号未注册');
 						}
 					}, getContextPath() + '/provider/checkPhoneExisting', $.toJSON({ // 改验证方式    
@@ -252,88 +243,11 @@ var provider_login = {
 					$('#kaptcha_pic').attr('src',getContextPath() + '/login/kaptcha.png?' + Math.floor(Math.random()*100));
 					$('#kaptcha_code').focus();
 					$("#kapt_error_info").text("*请填写图片验证码!").removeClass("hide");
-				}
+				  }
 				}
 			});
 		},
-		regesterOrLogin:function(){
-			var _this = this;
-			$("#submitBtn").off("click").on("click",function(){
-				var phone_code = $('#user_phoneNumber').val();				
-				var veri_code = $('#verification_code').val();
-				var kap_code = $('#kaptcha_code').val();
-				$("#user_phoneNumberId").addClass("hide");
-				$("#code_error_info").addClass("hide");
-				$("#kapt_error_info").addClass("hide");
-				
-				if(phone_code == null || phone_code == '' || phone_code == undefined){
-					$("#user_phoneNumberId").text("*请输入手机号").removeClass("hide");
-					$('#user_phoneNumber').focus();
-					return false;
-				}
-				if(!checkMobile(phone_code)){
-					$("#user_phoneNumberId").text("*手机号不正确").removeClass("hide");
-					$('#user_phoneNumber').focus();
-					return false;
-				}
-				if(kap_code == null || kap_code == '' || kap_code == undefined){
-					$("#kapt_error_info").text("*请输入图形验证码").removeClass("hide");
-					$('#kaptcha_code').focus();
-					return false;
-				}
-				if(veri_code == null || veri_code == '' || veri_code == undefined){
-					$("#code_error_info").text("*请输入验证码").removeClass("hide");
-					$('#verification_code').focus();
-					return false;
-				}
-				//20160706 lt 添加验证begin		
-				//provider_login.init();
-				//end
-				var action = $("#submitBtn").attr("data-id");//login or register
-				$('#submitBtn').removeAttr('data-id');//清空注册或登陆标记位，防止重复点击
-				if(action=='login'){
-					_this.login(action);
-				}
-				if(action=='register'){
-					_this.register(action);
-				}
-				
-			})
-		},
-		login:function(action){
-			loadData(function(info){
-				if(info.result){
-					$(".errorDiv").hide();
-					window.location.href=getContextPath()+ '/';
-				}else{
-					$("#code_error_info").text(info.errorMsg).removeClass("hide");
-					$('#submitBtn').attr('data-id',action);
-					return false;
-				}
-			}, getContextPath() + '/provider/doLogin', $.toJSON({
-				phoneNumber : $('#user_phoneNumber').val().trim(),
-				password : Encrypt("123456"),
-				loginType :'phone',
-				verification_code : $('#verification_code').val().trim(),
-			}))
-		},
-		register:function(action){
-			loadData(function(info){
-				if(info.key){
-					$(".errorDiv").hide();
-					window.location.href=getContextPath()+'/provider/leader';
-				}else{
-					$("#code_error_info").text(info.value).removeClass("hide");
-					$('#submitBtn').attr('data-id',action);
-					return false;
-				}
-			},  getContextPath() + '/provider/info/register', $.toJSON({
-				phoneNumber : $('#user_phoneNumber').val().trim(),
-				password : Encrypt("123456"),
-				verification_code : $('#verification_code').val().trim(),
-				flag : 3
-			}));
-		},provider_nameLogin:function(){
+		provider_nameLogin:function(){
 			$("#submitBtn_user_name").off("click").on("click",function(){
 				var loginName = $("#user_name").val();
 				var pwd = $("#user_pwd").val();
@@ -369,9 +283,6 @@ var provider_login = {
 		}
 } 
 
-
-
-
 //timer 处理函数 - 注册
 function SetRemainTime(){
 	if(curCount == 0){
@@ -382,33 +293,21 @@ function SetRemainTime(){
 		getData(function(data){
 			// 清除session code
 		}, getContextPath() + '/login/clear/code');
-		
 	}else{
 		curCount--;  
 		$("#verification_code_recover_btn").text('已发送('+ curCount +')');
 	}
 }
-
-
 //控制标签
-
 function checkTap(){
 	$('#phoneLogin').off('click').on('click',function(){
 		$('#loginTop').removeClass('loginTopActive');
 		$('#phoneLoginDiv').show();
 		$('#useLoginDiv').hide();
 	});
-	
 	$('#noPhoneLogin').off('click').on('click',function(){
 		$('#loginTop').addClass('loginTopActive');
 		$('#phoneLoginDiv').hide();
 		$('#useLoginDiv').show();
 	});
-	
-	
 }
-
-
-
-
-
