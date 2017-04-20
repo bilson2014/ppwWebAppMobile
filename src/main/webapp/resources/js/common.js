@@ -76,16 +76,12 @@ function initShare(){
 			      //link: 'http://m.apaipian.com',
 			      imgUrl: 'http://m.apaipian.com/resources/images/index/share-logo.png',
 			      trigger: function (res) {
-			       // alert('用户点击发送给朋友');
 			      },
 			      success: function (res) {
-			       // alert('已分享');
 			      },
 			      cancel: function (res) {
-			       // alert('已取消');
 			      },
 			      fail: function (res) {
-			        //alert(JSON.stringify(res));
 			      }
 			   });
 			wx.onMenuShareTimeline({
@@ -94,16 +90,12 @@ function initShare(){
 				//link: 'http://m.apaipian.com',
 				imgUrl: 'http://m.apaipian.com/resources/images/index/logo.png',
 				trigger: function (res) {
-					// alert('用户点击发送给朋友');
 				},
 				success: function (res) {
-					// alert('已分享');
 				},
 				cancel: function (res) {
-					// alert('已取消');
 				},
 				fail: function (res) {
-					//alert(JSON.stringify(res));
 				}
 			});
 			wx.onMenuShareQQ({
@@ -112,16 +104,12 @@ function initShare(){
 				//link: 'http://m.apaipian.com',
 				imgUrl: 'http://m.apaipian.com/resources/images/index/logo.png',
 				trigger: function (res) {
-					// alert('用户点击发送给朋友');
 				},
 				success: function (res) {
-					// alert('已分享');
 				},
 				cancel: function (res) {
-					// alert('已取消');
 				},
 				fail: function (res) {
-					//alert(JSON.stringify(res));
 				}
 			});
 			wx.onMenuShareWeibo({
@@ -130,16 +118,12 @@ function initShare(){
 				//link: 'http://m.apaipian.com',
 				imgUrl: 'http://m.apaipian.com/resources/images/index/logo.png',
 				trigger: function (res) {
-					// alert('用户点击发送给朋友');
 				},
 				success: function (res) {
-					// alert('已分享');
 				},
 				cancel: function (res) {
-					// alert('已取消');
 				},
 				fail: function (res) {
-					//alert(JSON.stringify(res));
 				}
 			});
 			wx.onMenuShareQZone({
@@ -148,16 +132,12 @@ function initShare(){
 				//link: 'http://m.apaipian.com',
 				imgUrl: 'http://m.apaipian.com/resources/images/index/logo.png',
 				trigger: function (res) {
-					// alert('用户点击发送给朋友');
 				},
 				success: function (res) {
-					// alert('已分享');
 				},
 				cancel: function (res) {
-					// alert('已取消');
 				},
 				fail: function (res) {
-					//alert(JSON.stringify(res));
 				}
 			});
 		});
