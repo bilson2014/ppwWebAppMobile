@@ -51,9 +51,6 @@
  font-size:16px}
 </style>
 
-<!-- 加载Mob share 控件 -->
-<script id="-mob-share" src="http://f1.webshare.mob.com/code/mob-share.js?appkey=8c49c537a706"></script>
-<script type="text/javascript" src="http://player.youku.com/jsapi"></script>
 </head>
 <body>
 <div class="wrap">

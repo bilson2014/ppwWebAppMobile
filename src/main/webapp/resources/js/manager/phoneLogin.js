@@ -1,10 +1,7 @@
-
 $().ready(function(){
 	doLogin();
-	
 });
 function doLogin(){
-
 	$('#submitBtn').on('click',function(){
 		// 登陆
 		loadData(function(result){

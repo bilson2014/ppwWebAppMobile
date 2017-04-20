@@ -550,30 +550,6 @@ img {
     background-size: 8.35rem 1.79rem;
 }
 
-// .stepBtn-1,
-// .stepBtn-2,
-// .stepBtn-3,
-// .stepBtn-4,
-// .stepBtn-5,
-// .stepBtn-6 {
-//     width: 0.5rem;
-//     height: 0.3rem;
-//     color: white;
-//     background: $gray;
-//     text-align: center;
-//     line-height: 0.3rem;
-//     font-size: 0.3rem;
-//     margin-right: 30px;
-//     cursor: pointer;
-// }
-// .red-1,
-// .red-2,
-// .red-3,
-// .red-4,
-// .red-5,
-// .red-6 {
-//     background: $red-base;
-// }
 div {
     font-size: 0.3rem;
 }
@@ -666,12 +642,10 @@ div {
 .backGround {
     width: 100%;
     height: 100%;
-    /*   background: url(/resources/images/cost/successB.jpg) no-repeat;
-  background-size: 100% 100%; */
     -webkit-transform: scale(0);
     -moz-transform: scale(0);
     -o-transform: scale(0);
-    transfosrm: scale(0);
+    transform: scale(0);
     transition: all 2s ease-in-out .2s !important;
     -moz-transition: all 2s ease-in-out .2s !important;
     /* Firefox 4 */
@@ -707,15 +681,6 @@ div {
             width: 4.64rem;
         }
     }
-    // .reCost {
-    //     margin-top: 0.3rem;
-    //     font-size: 0.2rem;
-    //     color: $red-base;
-    //     text-decoration: underline;
-    //     img {
-    //         width: 2rem;
-    //     }
-    // }
 }
 
 .shareTo {
@@ -981,71 +946,6 @@ input {
     }
 }
 
-// .animTop {
-//     top: 0 !important;
-//     opacity: 1 !important;
-// }
-// .anA {
-//     position: relative;
-//     top: 5rem;
-//     opacity: 0;
-//     transition: all .5s ease-in-out .2s !important;
-//     -moz-transition: all .5s ease-in-out .2s !important;
-//     /* Firefox 4 */
-//     -webkit-transition: all .5s ease-in-out .2s !important;
-//     /* Safari 和 Chrome */
-//     -o-transition: all .5s ease-in-out .2s !important;
-// }
-// .anB {
-//     position: relative;
-//     top: 5rem;
-//     transition: all .8s ease-in-out .2s !important;
-//     -moz-transition: all .8s ease-in-out .2s !important;
-//     /* Firefox 4 */
-//     -webkit-transition: all .8s ease-in-out .2s !important;
-//     /* Safari 和 Chrome */
-//     -o-transition: all .8s ease-in-out .2s !important;
-// }
-// .anC {
-//     position: relative;
-//     top: 5rem;
-//     transition: all 1.1s ease-in-out .2s !important;
-//     -moz-transition: all 1.1s ease-in-out .2s !important;
-//     /* Firefox 4 */
-//     -webkit-transition: all 1.1s ease-in-out .2s !important;
-//     /* Safari 和 Chrome */
-//     -o-transition: all 1.1s ease-in-out .2s !important;
-// }
-// .anD {
-//     position: relative;
-//     top: 5rem;
-//     transition: all 1.3s ease-in-out .2s !important;
-//     -moz-transition: all 1.3s ease-in-out .2s !important;
-//     /* Firefox 4 */
-//     -webkit-transition: all 1.3s ease-in-out .2s !important;
-//     /* Safari 和 Chrome */
-//     -o-transition: all 1.3s ease-in-out .2s !important;
-// }
-// .anE {
-//     position: relative;
-//     top: 5rem;
-//     transition: all 1.5s ease-in-out .2s !important;
-//     -moz-transition: all 1.5s ease-in-out .2s !important;
-//     /* Firefox 4 */
-//     -webkit-transition: all 1.5s ease-in-out .2s !important;
-//     /* Safari 和 Chrome */
-//     -o-transition: all 1.5s ease-in-out .2s !important;
-// }
-// .anF {
-//     position: relative;
-//     top: 5rem;
-//     transition: all 1.7s ease-in-out .2s !important;
-//     -moz-transition: all 1.7s ease-in-out .2s !important;
-//     /* Firefox 4 */
-//     -webkit-transition: all 1.7s ease-in-out .2s !important;
-//     /* Safari 和 Chrome */
-//     -o-transition: all 1.7s ease-in-out .2s !important;
-// }
 .noInfo {
     width: 7.2rem;
     height: 7.2rem;

@@ -4,14 +4,12 @@
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="r" uri="/mytaglib" %>
-
 <%-- import CSS --%>
 <spring:url value="/resources/lib/Bootstrap/css/bootstrap.min.css"
 	var="bootstrapCss" />
 <spring:url value="/resources/css/common.css" var="commonCss" />
 <spring:url value="/resources/css/customer/customerInfo.css"
 	var="customerInfoCss" />
-
 <%-- import JS --%>
 <spring:url value="/resources/lib/jquery/jquery-2.0.3.min.js"
 	var="jqueryJs" />
@@ -23,9 +21,6 @@
 <spring:url value="/resources/js/common.js" var="commonJs" />
 <spring:url value="/resources/js/customer/customerInfo.js"
 	var="customerInfoJs" />
-
-
-
 <!-- imgPath -->
 <spring:url value="/resources/images" var="imgPath" />
 <!DOCTYPE html>
@@ -52,10 +47,10 @@
 <link rel="stylesheet" href="${commonCss}">
 <link rel="stylesheet" href="${customerInfoCss}">
 <link rel="stylesheet" href="${providerInfoPhoneCss}">
+
 <!--[if lt IE 9]>
 		<script>window.html5 || document.write('<script src="html5shivJs"><\/script>')</script>
 	<![endif]-->
-
 
 <script src="${jqueryJs }"></script>
 <script src="${pluginJs }"></script>
@@ -63,7 +58,6 @@
 <script src="${bootstrapJs }"></script>
 <script src="${commonJs }"></script>
 <script src="${customerInfoJs }"></script>
-
 
 </head>
 <body>

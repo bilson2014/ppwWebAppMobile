@@ -20,7 +20,6 @@ body {
         position: relative;
         top: -0.1rem;
     }
-
     &:before {
         content: '';
         width: 100%;
@@ -293,9 +292,7 @@ body {
 }
 
 .swiper-slide-active {
-    //  margin-left: 30px;
     height: 12rem !important;
-    //  width: 9.2rem !important;
 }
 
 .costResult {

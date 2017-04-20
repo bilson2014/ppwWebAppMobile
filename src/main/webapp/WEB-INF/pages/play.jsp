@@ -2,10 +2,8 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
-
 <%-- import CSS --%>
 <spring:url value="/resources/css/play.css" var="playCss" />
-
 <%-- import JS --%>
 <spring:url value="/resources/lib/jquery/jquery-2.0.3.min.js"
 	var="jqueryJs" />
@@ -13,7 +11,7 @@
 <spring:url value="/resources/lib/jquery.json/jquery.json-2.4.min.js"
 	var="jsonJs" />
 <spring:url value="/resources/js/common.js" var="commonJs" />
-<spring:url value="/resources/js/youku-player.js" var="ykJs" />
+
 <spring:url value="/resources/js/play.js" var="playJs" />
 <!-- img path -->
 <spring:url value="/resources/images" var="imgPath" />
@@ -43,8 +41,7 @@
 	<![endif]-->
 </head>
 <body>
-	<input type="hidden" id="storage_node"
-		value="${file_locate_storage_path }" />
+	<input type="hidden" id="storage_node" value="${file_locate_storage_path }" />
 	<input type="hidden" id="videoId" value="${product.productId }" />
 	<input type="hidden" id="videoName" value="${product.productName }" />
 	<input type="hidden" id="videoUrl" value="${product.videoUrl }" />
@@ -55,14 +52,10 @@
 	<input type="hidden" id="teamPhotoUrl" value="${product.teamPhotoUrl }" />
 	<input type="hidden" id="serviceId" value="${product.serviceId }" />
 	<input type="hidden" id="realPrice" value="${product.servicePrice }" />
-	<input type="hidden" id="originalPrice"
-		value="${product.serviceRealPrice }" />
+	<input type="hidden" id="originalPrice" value="${product.serviceRealPrice }" />
 	<input type="hidden" id="second" value="${product.mcoms }" />
-	<input type="hidden" id="yk-play"
-		value="<spring:url value="${product.hret}"/>" />
 	<input type="hidden" id="tags" value="${product.tags }">
-	<input type="hidden" id="csrftoken" name="csrftoken"
-		value="${csrftoken}" />
+	<input type="hidden" id="csrftoken" name="csrftoken" value="${csrftoken}" />
 
 	<div class="phoneHeader">
 		<a id="openMenu"><img src="${imgPath }/index/toMenu.png"></a> 
@@ -149,30 +142,20 @@
 		<div class="videoInfo">相关推荐 </div>
 		<div class="videoEn">Recommended for you</div>
         <div class="videoLines"></div>
-<!-- 		<div class="anli">
-			<div class="title"></div>
-			<div class="line"></div>
-		</div> -->
 		<div class="anliContent" id="anliContent">
 		</div>
 		<a href="/search?q=*&industry=${product.tags}">
 			<div class="moreAnli">更多相关推荐</div>
 		</a>
-
 		<jsp:include flush="true" page="foot.jsp"></jsp:include>
 	</div>
-
 
 	<script src="${jqueryJs }"></script>
 	<script src="${pluginJs }"></script>
 	<script src="${jsonJs }"></script>
 	<script src="${commonJs }"></script>
-	<script src="${ykJs }"></script>
 	<script src="${playJs }"></script>
 	<script src="${remSetJs}"></script>
-	<!-- 加载Mob share 控件 -->
-	<script id="-mob-share"
-		src="http://f1.webshare.mob.com/code/mob-share.js?appkey=8c49c537a706"></script>
-	<script type="text/javascript" src="http://player.youku.com/jsapi"></script>
+
 </body>
 </html>

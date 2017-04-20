@@ -13,9 +13,6 @@
 <spring:url value="/resources/lib/jquery.json/jquery.json-2.4.min.js" var="jsonJs"/>
 <spring:url value="/resources/lib/jquery/jquery.flexslider-min.js"
 	var="flexsliderJs" />
-<spring:url value="/resources/lib/mMenu/jquery.mmenu.min.js"
-	var="mmenuJs" />
-<spring:url value="/resources/js/imgLazyLoad.js" var="imgLazyLoadingJs" />
 <spring:url value="/resources/js/common.js" var="commonJs" />
 <spring:url value="/resources/js/portal.js" var="portalJs" />
 <spring:url value="/resources/js/remSet.js" var="remSetJs" />
@@ -56,8 +53,6 @@
 </head>
 <body>
 	<input type="hidden" id="storage_node" value="${file_locate_storage_path }" />
-<%-- 	<img class="indexBack" src="${imgPath}/index/index.jpg"> --%>
-	
 	<div class="model" id="orderSuccess">
 	         <div class="success">
 	            <img src="${imgPath}/index/success.png">
@@ -78,7 +73,6 @@
 	    
 	    <jsp:include flush="true" page="menu.jsp"></jsp:include> 
 	    
-	    
 	 <div class="headerCom">
 		<a>
 		 <img id="openMenu" src="${imgPath}/index/toMenu.png">
@@ -89,7 +83,6 @@
 		<a>
 		  <img class="ppwLogos" src="${imgPath}/index/logoW.png">
 		</a>
-		
 	</div>
 
 	<div class="backImg">

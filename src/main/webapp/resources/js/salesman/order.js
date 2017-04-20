@@ -25,12 +25,10 @@ function checkData(){
 	// 检查数据
 	var contactTele = $('#indent_tele').val().trim();
 	var flag = true;
-	
 	if(contactTele == '' || contactTele == null || contactTele == undefined){
 		$('#label-message').show('normal');
 		$('#label-message').text('请输入手机号码');
 		flag = false;
 	}
-	
 	return flag;
 }

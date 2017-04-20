@@ -6,12 +6,6 @@
 @import "compass/typography/text/ellipsis";
 @import "common_portal";
 @import "common_card";
-// $video-image-height: 270px; // 视频图片的高度
-// $video-image-height320: 180px; // 视频图片的高度(320px)
-// $video-image-height360: 202px; // 视频图片的高度(360px)
-// $video-image-height390: 220px; // 视频图片的高度(320px)
-// $video-image-height640: 360px; // 视频图片的高度(640px)
-// $video-image-height720: 405px; // 视频图片的高度(720px)
 $centerWidth:calc(95% - 20px); // 轮播图区域高度(720px)
 body {
     background: $gray-dark;
@@ -218,17 +212,6 @@ a:visited {
                 position: relative;
                 top: 4px;
                 vertical-align: top;
-                // left: calc(50% + 53px);
-                // top: 98px;
-                // @media screen and (max-width: 320px) {
-                //     top: 44px;
-                // }
-                // @media screen and (min-width: 320px) and (max-width: 380px) {
-                //     top: 83px;
-                // }
-                // @media screen and (min-width: 380px) and (max-width: 420px) {
-                //     top: 98px;
-                // }
             }
             .providerStatesRed {
                 font-size: 0.36rem;
@@ -243,26 +226,6 @@ a:visited {
                 position: relative;
                 top: 4px;
                 vertical-align: top;
-                // position: absolute;
-                // font-size: $font-size-sm10;
-                // border: 1px solid $red-base;
-                // height: 17px;
-                // line-height: 16px;
-                // color: $red-base;
-                // padding-left: 8px;
-                // padding-right: 8px;
-                // border-radius: 4px;
-                // left: calc(50% + 53px);
-                // top: 98px;
-                //  @media screen and (max-width: 320px) {
-                //     top: 44px;
-                // }
-                // @media screen and (min-width: 320px) and (max-width: 380px) {
-                //     top: 83px;
-                // }
-                // @media screen and (min-width: 380px) and (max-width: 420px) {
-                //     top: 98px;
-                // }
             }
             div {
                 color: $white;
@@ -544,21 +507,6 @@ a:visited {
             background-position: center 0;
             max-height: 210px;
             min-height: 100px;
-            // @media screen and (max-width: 360px) {
-            //     height: $video-image-height320;
-            // }
-            // @media screen and (min-width: 360px) and (max-width: 390px) {
-            //     height: $video-image-height360;
-            // }
-            // @media screen and (min-width: 390px) and (max-width: 460px) {
-            //     height: $video-image-height390;
-            // }
-            // @media screen and (min-width: 640px) and (max-width: 720px) {
-            //     height: $video-image-height640;
-            // }
-            // @media screen and (min-width: 720px) {
-            //     height: $video-image-height720;
-            // }
         }
     }
     .videoContentInfo {

@@ -1,16 +1,13 @@
 <%@ page contentType="text/html;charset=UTF-8"%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%-- import CSS --%>
-<spring:url value="/resources/lib/Bootstrap/css/bootstrap.min.css" var="bootstrapCss"/>
 <spring:url value="/resources/css/common.css" var="commonCss"/>
 <spring:url value="/resources/css/login/register.css" var="registerCss"/>
 
 <%-- import JS --%>
-<spring:url value="/resources/js/login/proRegister.js" var="proRegisterJs"/>
 <spring:url value="/resources/lib/jquery/jquery-2.0.3.min.js" var="jqueryJs"/>
 <spring:url value="/resources/lib/jquery/plugins.js" var="pluginJs"/>
 <spring:url value="/resources/lib/jquery.json/jquery.json-2.4.min.js" var="jsonJs"/>
-<spring:url value="/resources/lib/Bootstrap/js/bootstrap.min.js" var="bootstrapJs"/>
 <spring:url value="/resources/lib/cripto/aes.js" var="aesJs"/>
 <spring:url value="/resources/lib/cripto/pad-zeropadding.js" var="padJs"/>
 <spring:url value="/resources/js/common.js" var="commonJs"/>
@@ -37,15 +34,14 @@
 	<link rel="stylesheet" href="${commonCss}">
 	<link rel="stylesheet" href="${registerCss}">
 
-	
 	<!--[if lt IE 9]>
 		<script>window.html5 || document.write('<script src="html5shivJs"><\/script>')</script>
 	<![endif]-->
+	
 	<script src="${jqueryJs}"></script>
 	<script src="${remSetJs}"></script>
 	<script src="${pluginJs}"></script>
 	<script src="${jsonJs}"></script>
-	<script src="${bootstrapJs}"></script>
 	<script src="${aesJs}"></script>
 	<script src="${padJs}"></script>
 	<script src="${commonJs}"></script>

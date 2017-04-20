@@ -83,32 +83,9 @@
 	                    </c:forEach>
 	             </c:if>       
 	            
-	             <%-- <div class="newsItem">
-	                   <img src="${imgPath }/index/back1.png">
-	                <div class="itemContent">
-	                     <div>我是标题</div>
-	                     <div>2016年3月23日</div>
-	                </div>
-	             </div>
-	             <div class="newsItem">
-	                   <img src="${imgPath }/index/back2.png">
-	                <div class="itemContent">
-	                     <div>我是标题</div>
-	                     <div>2016年3月23日</div>
-	                </div>
-	             </div>
-	             <div class="newsItem">
-	                   <img src="${imgPath }/index/back3.png">
-		                <div class="itemContent">
-		                     <div>我是标题</div>
-		                     <div>2016年3月23日</div>
-		                </div>
-	             </div> --%>
 	       </div>
 	       <jsp:include flush="true" page="../foot.jsp"></jsp:include> 
-	       
        </div>
-
 
 <script src="${jqueryJs }"></script>
 <script src="${pluginJs }"></script>

@@ -1,15 +1,12 @@
 <%@ page contentType="text/html;charset=UTF-8"%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
-
 <%-- import CSS --%>
 <spring:url value="/resources/css/company/about.css" var="aboutCss"/>
-
 <%-- import JS --%>
 <spring:url value="/resources/lib/jquery/jquery-2.0.3.min.js" var="jqueryJs"/>
 <spring:url value="/resources/lib/jquery/plugins.js" var="pluginJs"/>
 <spring:url value="/resources/lib/jquery.json/jquery.json-2.4.min.js" var="jsonJs"/>
 <spring:url value="/resources/js/common.js" var="commonJs"/>
-
 <!-- img path -->
 <spring:url value="/resources/images" var="imgPath" />
 <spring:url value="/resources/js/remSet.js" var="remSetJs" />
@@ -29,12 +26,13 @@
 	<meta name="keywords" content="拍片网平台上的宣传片制作流程以及整个拍片服务流程。拍片就上拍片网！">
 	<meta name="description" content="拍片网平台简介，拍片网是一个开放、共享、透明、公正的一个视频制作服务平台，了解更多拍片网平台服务和拍片网平台愿景">
 	<title>关于我们 | 拍片网</title>
-	
 	<link rel="shortcut icon" href="${imgPath }/favicon.ico" >
 	<link rel="stylesheet" href="${aboutCss}">
+	
 	<!--[if lt IE 9]>
 		<script>window.html5 || document.write('<script src="html5shivJs"><\/script>')</script>
 	<![endif]-->
+	
 </head>
 <body>
 	<input type="hidden" id="storage_node" value="${file_locate_storage_path }" />
@@ -122,13 +120,12 @@
 	       </div>
 	       <jsp:include flush="true" page="foot.jsp"></jsp:include> 
        </div>
+       
 <script src="${jqueryJs }"></script>
 <script src="${pluginJs }"></script>
 <script src="${jsonJs }"></script>
 <script src="${commonJs }"></script>
 <script src="${remSetJs}"></script>
-<!-- 加载Mob share 控件 -->
-<script id="-mob-share" src="http://f1.webshare.mob.com/code/mob-share.js?appkey=8c49c537a706"></script>
-<script type="text/javascript" src="http://player.youku.com/jsapi"></script>
+
 </body>
 </html>

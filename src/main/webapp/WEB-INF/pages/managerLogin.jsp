@@ -1,12 +1,9 @@
 <%@ page contentType="text/html;charset=UTF-8"%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%-- import CSS --%>
-<spring:url value="/resources/lib/Bootstrap/css/bootstrap.min.css"
-	var="bootstrapCss" />
 <spring:url value="/resources/css/common.css" var="commonCss" />
 <spring:url value="/resources/css/login/phoneLogin.css"
 	var="phoneLoginCss" />
-
 <%-- import JS --%>
 <spring:url value="/resources/js/manager/phoneLogin.js"
 	var="phoneLoginJs" />
@@ -15,8 +12,6 @@
 <spring:url value="/resources/lib/jquery/plugins.js" var="pluginJs" />
 <spring:url value="/resources/lib/jquery.json/jquery.json-2.4.min.js"
 	var="jsonJs" />
-<spring:url value="/resources/lib/Bootstrap/js/bootstrap.min.js"
-	var="bootstrapJs" />
 <spring:url value="/resources/lib/cripto/aes.js" var="aesJs" />
 <spring:url value="/resources/lib/cripto/pad-zeropadding.js" var="padJs" />
 <spring:url value="/resources/js/common.js" var="commonJs" />
@@ -39,16 +34,14 @@
 <meta name="keywords" content="拍片网,视频制作,拍广告,找导演,拍片">
 <meta name="description"
 	content="拍片网，汇聚千万影视行业创作者，是中国最大的视频交易平台。产品：宣传片、广告、微电影、动画、三维演示等视频，优势：创意免费、选择多、价格低、不满意无条件退款">
-<title>视频管家登录</title>
+<title>视频管家登录 | 拍片网</title>
 <link rel="shortcut icon" href="${imgPath}/favicon.ico">
-<link rel="stylesheet" href="${bootstrapCss}">
 <link rel="stylesheet" href="${commonCss}">
 <link rel="stylesheet" href="${phoneLoginCss}">
 
 <script src="${jqueryJs }"></script>
 <script src="${pluginJs }"></script>
 <script src="${jsonJs }"></script>
-<script src="${bootstrapJs }"></script>
 <script src="${aesJs }"></script>
 <script src="${padJs }"></script>
 <script src="${commonJs }"></script>
