@@ -7,7 +7,6 @@
         @import "variables";
         @import "compass/typography/text/ellipsis";
         @import "normalize";
-
         a {
             text-decoration: none;
         }
@@ -374,6 +373,9 @@
             overflow-y: hidden;
             position: relative;
             font-size: 0;
+            a:last-child() {
+                margin-right: 0.3rem;
+            }
             .item:first-child {
                 margin-left: 0.4rem;
             }
@@ -451,7 +453,7 @@
                             margin-right: 0.2rem;
                             display: inline-block;
                             vertical-align: top;
-                            padding-right:0.1rem;
+                            padding-right: 0.1rem;
                             padding-left: 0.1rem;
                         }
                     }
@@ -483,6 +485,9 @@
             margin-bottom: 1rem;
             img:first-child {
                 margin-left: 0.4rem;
+            }
+            img:last-child {
+                margin-right: 0.4rem !important;
             }
             img {
                 width: 2.4rem;
@@ -648,5 +653,3 @@
                 }
             }
         }
-        
-      
