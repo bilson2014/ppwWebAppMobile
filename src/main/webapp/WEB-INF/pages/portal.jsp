@@ -281,7 +281,6 @@
 		     
 		     <jsp:include flush="true" page="foot.jsp"></jsp:include> 
 		     
-		     
 	</div>	    
  </div>
  
