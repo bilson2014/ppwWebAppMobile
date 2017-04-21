@@ -62,10 +62,6 @@
 		<script>window.html5 || document.write('<script src="html5shivJs"><\/script>')</script>
 	<![endif]-->
 
-
-<!-- 加载Mob share 控件 -->
-<script id="-mob-share"
-	src="http://f1.webshare.mob.com/code/mob-share.js?appkey=8c49c537a706"></script>
 <script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
 
 </head>
@@ -84,9 +80,9 @@
 		value="${product.productId }">
 
 	<div class="phoneHeader">
-		<a id="openMenu"><img src="${imgPath }/index/toMenu.png"></a> <a
-			id="toSearch"><img src="${imgPath }/index/toSearch.png"></a> <a
-			href="/"><img class="ppwLogo" src="${imgPath}/index/logoH.png"></a>
+	     <a id="openMenu"><img src="${imgPath }/index/toMenu.png"></a>
+	     <a class="hide" id="toSearch"><img src="${imgPath }/index/toSearch.png"></a>
+	      <a href="/"><img class="ppwLogo" src="${imgPath}/index/logoH.png"></a>
 	</div>
 
 	<jsp:include flush="true" page="../menu.jsp"></jsp:include>

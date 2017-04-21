@@ -263,7 +263,7 @@
             margin: 0 auto;
             a {
                 .conItem {
-                    width: 50% !important;
+                    width: 49.5% !important;
                     height: 100%;
                     display: inline-block;
                     vertical-align: top;
@@ -373,7 +373,7 @@
             overflow-y: hidden;
             position: relative;
             font-size: 0;
-            a:last-child() {
+            a:last-child{
                 margin-right: 0.3rem;
             }
             .item:first-child {

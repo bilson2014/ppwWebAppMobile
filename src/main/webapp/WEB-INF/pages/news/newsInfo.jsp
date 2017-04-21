@@ -16,7 +16,6 @@
 <spring:url value="/resources/js/news/newsInfo.js" var="newsInfoJs" />
 <!-- img path -->
 <spring:url value="/resources/images" var="imgPath" />
-<spring:url value="/resources/js/remSet.js" var="remSetJs" />
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -81,6 +80,5 @@
 	<script src="${jsonJs }"></script>
 	<script src="${newsInfoJs }"></script>
 	<script src="${commonJs }"></script>
-	<script src="${remSetJs}"></script>
 </body>
 </html>

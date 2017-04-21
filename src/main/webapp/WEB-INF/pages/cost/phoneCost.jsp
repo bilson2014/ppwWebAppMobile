@@ -13,7 +13,6 @@
 <spring:url value="/resources/js/imgLazyLoad.js" var="imgLazyLoadingJs" />
 <spring:url value="/resources/js/common.js" var="commonJs" />
 <spring:url value="/resources/js/cost/phoneCost.js" var="phoneCostJs" />
-<spring:url value="/resources/js/remSet.js" var="remSetJs" />
 <spring:url value="/resources/lib/swiper/swiper.min.js" var="swiperJs" />
 <spring:url value="/resources/lib/Bootstrap/css/bootstrap.min.css" var="bootstrapCss" />
 <!-- imgPath -->
@@ -56,7 +55,7 @@
 	<div class="phoneHeader">
 	     <a id="openMenu"><img src="${imgPath }/index/toMenu.png"></a>
 	     <a href="/searchview"><img src="${imgPath }/index/toSearch.png"></a>
-	     <img class="ppwLogo" src="${imgPath}/index/logoH.png">
+	     <a href="/"><img class="ppwLogo" src="${imgPath}/index/logoH.png"></a>
 	</div>
 	
 	 <jsp:include flush="true" page="../menu.jsp"></jsp:include> 
@@ -185,9 +184,6 @@
 <script src="${jsonJs }"></script>
 <script src="${commonJs }"></script>
 <script src="${phoneCostJs }"></script>
-<script src="${remSetJs}"></script>
-
-
 
 <!-- 加载Mob share 控件 -->
 <script id="-mob-share"

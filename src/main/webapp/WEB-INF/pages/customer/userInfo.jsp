@@ -22,14 +22,13 @@
 <spring:url value="/resources/lib/jquery/plugins.js" var="pluginJs" />
 <spring:url value="/resources/lib/jquery.json/jquery.json-2.4.min.js"
 	var="jsonJs" />
-<spring:url value="/resources/js/common.js" var="commonJs" />
+<spring:url value="/resources/js/commonCopy.js" var="commonJs" />
 <spring:url value="/resources/js/imgLazyLoad.js" var="imgLazyLoadingJs" />
 <spring:url value="/resources/js/customer/userInfo.js"
 	var="userInfoJs" />
 <spring:url value="/resources/lib/jquery/waypoints.min.js"
 	var="waypoints" />
 <spring:url value="/resources/lib/merge/iosSelect.js" var="iosSelectJs" />
-<spring:url value="/resources/js/remSet.js" var="remSetJs" />
 
 <!-- imgPath -->
 <spring:url value="/resources/images" var="imgPath" />
@@ -67,7 +66,6 @@
 	<![endif]-->
 	
 <script src="${jqueryJs}"></script>
-<script src="${remSetJs}"></script>
 <script src="${commonJs}"></script>
 <script src="${jsonJs}"></script>
 <script src="${iosSelectJs}"></script>

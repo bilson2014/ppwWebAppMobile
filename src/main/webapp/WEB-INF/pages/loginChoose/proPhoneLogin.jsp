@@ -14,7 +14,6 @@
 <spring:url value="/resources/lib/cripto/aes.js" var="aesJs"/>
 <spring:url value="/resources/lib/cripto/pad-zeropadding.js" var="padJs"/>
 <spring:url value="/resources/js/common.js" var="commonJs"/>
-<spring:url value="/resources/js/remSet.js" var="remSetJs" />
 
 
 <!-- imgPath -->
@@ -41,7 +40,6 @@
 	<![endif]-->
 	
 	<script src="${jqueryJs }"></script>
-	<script src="${remSetJs }"></script>
 	<script src="${pluginJs }"></script>
 	<script src="${jsonJs }"></script>
 	<script src="${bootstrapJs }"></script>
@@ -55,8 +53,8 @@
 <body>
 
 	<div class="phoneHeader">
-	     <a class="hide" id="openMenu"><img src="${imgPath }/index/toMenu.png"></a>
-	     <a href="/searchview"><img  src="${imgPath}/index/toSearch.png"></a> 
+	     <a  id="openMenu"><img src="${imgPath }/index/toMenu.png"></a>
+	     <a class="hide"  href="/searchview"><img  src="${imgPath}/index/toSearch.png"></a> 
 	     <a href="/"><img class="ppwLogo" src="${imgPath}/index/logoH.png"></a>
 	</div>
 	

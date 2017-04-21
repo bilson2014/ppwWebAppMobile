@@ -117,6 +117,8 @@ public class CostCalculateController extends BaseController {
 			String telephone = PublicConfig.PHONENUMBER_ORDER;
 			smsMQService.sendMessage("131844", telephone,
 					new String[] { indent.getIndent_tele(), DateUtils.nowTime(), "【未指定具体影片】" });
+		}else{
+			pmsIndentFacade.updateForCalculate(indent);
 		}
 		map.put("indentId", indent.getId());
  		return map;

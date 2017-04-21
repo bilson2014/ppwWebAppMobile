@@ -7,12 +7,52 @@ $().ready(function(){
 	toSearch();
 	touchLis();
 	initLazySizes();
+	search.getTags();
 });
 
 function getItemHeight(){
 	 var screenWidth = document.documentElement.clientWidth;
 	 var setHeight= screenWidth/16*9;
 	 $('.contentItem').css('height',setHeight + "px");
+}
+//解析价格
+function parsePrice() {
+	var price = $('#price').val();
+	var lowPrice = $('#lowPrice');
+	var heightPrice = $('#heightPrice');
+	if(price != undefined && price != '') {
+		// 价钱不为空时
+		if(price.indexOf('TO') > -1) {
+			// 分解
+			var pArray = price.split('TO');
+			var startPrice = pArray[0].split('[')[1].trim();
+			var endPrice = pArray[1].split(']')[0].trim();
+			if(startPrice == '*') {
+				// 开始价格如果为*，则认为只有结尾价格有效
+				if(endPrice == '*') {
+					// 开始、结束价格都为*则认为是查询全部价格
+					return null;
+				}
+				heightPrice.val(Number(endPrice));
+				return (Number(endPrice) / 10000) + '万以内';
+			}
+			
+			if(endPrice == '*'){
+				// 结尾价格如果为*，则认为只有开始价格有效
+				if(startPrice == '*') {
+					// 开始、结束价格都为*,则认为是查询全部价格
+					return null;
+				}
+				lowPrice.val(Number(startPrice))
+				return (Number(startPrice) / 10000) + '万以上';
+			}
+			
+			lowPrice.val(Number(startPrice));
+			heightPrice.val(Number(endPrice));
+			return (Number(startPrice) / 10000) + '~' + (Number(endPrice) / 10000) + '万';
+		}
+	}
+	return null;
 }
 
 var search = {
@@ -30,6 +70,27 @@ var search = {
 					  $('.pagePhone').removeClass('noTouch');
 				  }
 			 });
+		},
+		//回显
+		getTags : function(){
+			
+			var industry = $('#industry').val(); // 行业
+			var genre = $('#genre').val();; // 类型
+			var industryArr = industry.split(' ');
+			var genreArr = genre.split(' ');
+			if(industryArr != null && industryArr.length >0){
+				for (var int = 0; int < industryArr.length; int++) {
+						$('#'+industryArr[int]).addClass('checkActive');
+				}
+			}
+			
+			if(genreArr != null && genreArr.length >0){
+				for (var int = 0; int < genreArr.length; int++) {
+						$('#'+genreArr[int]).addClass('checkActive');
+				}
+			}
+			
+			parsePrice();
 		},
         showTags : function(){
         	$('#qType').off('click').on('click',function(){
@@ -109,7 +170,7 @@ var search = {
       },
 }
 function createTags(name){
-	var $body1 = '<div class="tags">'+name+'</div>';
+	var $body1 = '<div class="tags" id="'+name+'">'+name+'</div>';
 	return $body1;		
 }
 

@@ -9,7 +9,6 @@
 <spring:url value="/resources/lib/jquery/jquery-2.0.3.min.js" var="jqueryJs"/>
 <spring:url value="/resources/lib/jquery/plugins.js" var="pluginJs"/>
 <spring:url value="/resources/js/common.js" var="commonJs"/>
-<spring:url value="/resources/js/remSet.js" var="remSetJs" />
 <spring:url value="/resources/js/company/service.js" var="serviceJs" />
 
 <!-- imgPath -->
@@ -36,7 +35,6 @@
 	<![endif]-->
 	
 	<script src="${jqueryJs }"></script>
-	<script src="${remSetJs }"></script>
 	<script src="${pluginJs }"></script>
 	<script src="${commonJs }"></script>
 	<script src="${imgLazyLoadingJs }"></script>
@@ -61,7 +59,7 @@
 	<jsp:include flush="true" page="menu.jsp"></jsp:include>
 		
 	<div class="pagePhone">
-		<video id="postVideo" controls poster="/resources/images/banner/moreInfo.JPG" src="" ></video>
+		<video id="setVideo" controls poster="/resources/images/banner/moreInfo.JPG" src="" ></video>
 		<img class="stepImg" src="${imgPath }/company/step.png">
 		
     <jsp:include flush="true" page="foot.jsp"></jsp:include> 

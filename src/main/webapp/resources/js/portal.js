@@ -93,7 +93,6 @@ function checkData(type){
 			$("#repwd").parent().removeClass("sureIcon").addClass("errorIcon");
 			return false;
 		}
-		
 		break;
 		
 	case 4:
@@ -299,6 +298,8 @@ var InterValObj; // timer变量，控制时间 - 注册
 function subPaipian(){
 	var flag = true;
 	$('#subPaipian').off("click").on("click",function(){
+		$('#error').hide();
+		$('#codeError').hide();
 		if(checkDatas(1)){ // 检查数据完整性
 				if(flag){
 					flag = false;
@@ -308,6 +309,11 @@ function subPaipian(){
 							$('#orderSuccess').show().addClass('moedlActive');
 							$('#error').hide();
 							$('#codeError').hide();
+							window.clearInterval(InterValObj);
+							$('#getPhoneCode').text('发送验证码');
+							$('#getPhoneCode').removeAttr('disabled');
+							counts = 60;
+							curCounts = 0;
 							var contactTele = $('#indent_tele').val('');
 							var phoneCode = $('#phoneCode').val('');
 						}
@@ -332,6 +338,8 @@ function subPaipian(){
 	});
 	
 	$('#getPhoneCode').off("click").on('click',function(){
+		$('#error').hide();
+		$('#codeError').hide();
 		if(curCounts == 0 && checkDatas(2)){
 			curCounts = counts;
 			var telephone = $('#indent_tele').val().trim();

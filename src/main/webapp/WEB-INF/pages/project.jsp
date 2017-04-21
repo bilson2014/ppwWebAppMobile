@@ -23,7 +23,7 @@
 	var="jsonJs" />
 <spring:url value="/resources/lib/Bootstrap/js/bootstrap.min.js"
 	var="bootstrapJs" />
-<spring:url value="/resources/js/common.js" var="commonJs" />
+<spring:url value="/resources/js/commonCopy.js" var="commonJs" />
 <spring:url value="/resources/js/project.js" var="customerInfoJs" />
 <spring:url value="/resources/js/flowView.js" var="flowViewJs" />
 
@@ -49,6 +49,7 @@
 <link rel="stylesheet" href="${bootstrapCss}">
 <link rel="stylesheet" href="${commonCss}">
 <link rel="stylesheet" href="${customerInfoCss}">
+
 <!--[if lt IE 9]>
 		<script>window.html5 || document.write('<script src="html5shivJs"><\/script>')</script>
 	<![endif]-->
@@ -109,8 +110,7 @@ display: inline-block;
 			<div class="topHeader">
 				<div class="topContent">
 					<div class="infoHeadSide sameLine ">
-						<img class="infoHead" id="infoHead"
-							src="">
+						<img class="infoHead" id="infoHead" src="">
 					</div>
 					<ul class="topInfo sameLine ">
 						<li>
@@ -174,7 +174,6 @@ display: inline-block;
 		<div class="hide"  id="projectCardHistory"></div>
 		<div class="hide"  id="projectCardPause"></div>
 	</div>
-
 
 	<!-- model -->
 	<div class="phoneModel hide" id="onLine">

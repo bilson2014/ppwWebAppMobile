@@ -26,7 +26,6 @@
 <spring:url value="/resources/lib/jquery/waypoints.min.js"
 	var="waypoints" />
 <spring:url value="/resources/lib/merge/iosSelect.js" var="iosSelectJs" />
-<spring:url value="/resources/js/remSet.js" var="remSetJs" />
 
 <!-- imgPath -->
 <spring:url value="/resources/images" var="imgPath" />
@@ -63,7 +62,6 @@
 		<script>window.html5 || document.write('<script src="html5shivJs"><\/script>')</script>
 	<![endif]-->
 <script src="${jqueryJs }"></script>
-<script src="${remSetJs }"></script>
 <%-- <script src="${pluginJs }"></script>
 <script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
 <script src="${imgLazyLoadingJs }"></script> --%>
@@ -173,7 +171,6 @@
 			            </div>
 		          </div> 
            	   </div>
-               
                
 		           <div class="step2BtnDiv">
 		             <div id="returnStep">上一步</div>
