@@ -15,7 +15,7 @@
 <spring:url value="/resources/lib/jquery/plugins.js" var="pluginJs"/>
 <spring:url value="/resources/lib/jquery.json/jquery.json-2.4.min.js" var="jsonJs"/>
 <spring:url value="/resources/lib/Bootstrap/js/bootstrap.min.js" var="bootstrapJs"/>
-<spring:url value="/resources/js/common.js" var="commonJs"/>
+<spring:url value="/resources/js/commonCopy.js" var="commonJs"/>
 <spring:url value="/resources/js/manager/updateProjectInfo.js" var="updateProjectInfoJs"/>
 <%-- <spring:url value="/resources/lib/AirDatepicker/dist/js/datepicker.min.js" var="datepickerJs" /> --%>
 <spring:url value="/resources/lib/DateTimePicker/DateTimePicker.js" var="datepickerJs" />

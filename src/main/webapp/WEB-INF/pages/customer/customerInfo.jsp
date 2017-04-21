@@ -18,7 +18,7 @@
 	var="jsonJs" />
 <spring:url value="/resources/lib/Bootstrap/js/bootstrap.min.js"
 	var="bootstrapJs" />
-<spring:url value="/resources/js/common.js" var="commonJs" />
+<spring:url value="/resources/js/commonCopy.js" var="commonJs" />
 <spring:url value="/resources/js/customer/customerInfo.js"
 	var="customerInfoJs" />
 <!-- imgPath -->

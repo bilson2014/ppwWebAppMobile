@@ -31,6 +31,12 @@ var search = {
 				  }
 			 });
 		},
+		getTags : function(){
+			
+			var industry = $('#industry').val(); // 行业
+			var genre = $('#genre').val();; // 类型
+			
+		},
         showTags : function(){
         	$('#qType').off('click').on('click',function(){
         		if($('#typeTags').hasClass('typeActive')){
