@@ -7,6 +7,7 @@ $().ready(function(){
 	toSearch();
 	touchLis();
 	initLazySizes();
+	search.getTags();
 });
 
 function getItemHeight(){
@@ -35,6 +36,15 @@ var search = {
 			
 			var industry = $('#industry').val(); // 行业
 			var genre = $('#genre').val();; // 类型
+			var industryArr = industry.split(' ');
+			
+			if(industryArr != null && industryArr.length >0){
+				for (var int = 0; int < industryArr.length; int++) {
+					if(int !=0 )
+						$('#'+industryArr[int]).addClass('checkActive');
+				}
+			}
+			
 			
 		},
         showTags : function(){
@@ -115,7 +125,7 @@ var search = {
       },
 }
 function createTags(name){
-	var $body1 = '<div class="tags">'+name+'</div>';
+	var $body1 = '<div class="tags" id="'+name+'">'+name+'</div>';
 	return $body1;		
 }
 
