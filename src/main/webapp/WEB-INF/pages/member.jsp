@@ -34,14 +34,6 @@
 <link rel="stylesheet" href="${memberCss}">
 <link rel="stylesheet" href="${mmenuCss}">
 
-<script src="${jqueryJs }"></script>
-<script src="${pluginJs }"></script>
-<script src="${jsonJs }"></script>
-<script src="${commonJs }"></script>
-
-<script src="${remSetJs }"></script>
-<script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
-
 <style>
 html {
 	font-size: 16px
@@ -135,6 +127,12 @@ html {
 		</c:if>
 		<jsp:include flush="true" page="foot.jsp"></jsp:include> 
 	</div>	
-<script src="${memberJs}"></script>
+	<script src="${jqueryJs }"></script>
+	<script src="${pluginJs }"></script>
+	<script src="${jsonJs }"></script>
+	<script src="${commonJs }"></script>
+	<script src="${memberJs}"></script>
+<%-- 	<script src="${remSetJs }"></script>  --%>
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
 </body>
 </html>

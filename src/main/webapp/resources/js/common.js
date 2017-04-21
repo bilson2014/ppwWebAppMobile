@@ -2,6 +2,11 @@ var InterValObj; // timer变量，控制时间
 var PopInterValObj, oTimer, successIntervalObj;
 
 $().ready(function(){
+	windowChange(); 
+//	window.onresize = function(){
+//		windowChange(); 
+//	}
+	
 	// 弹出电话预约界面
 	$('.common-icons-tele-client').click(function(){
 		$('#toolbar-modal').modal({
@@ -53,7 +58,12 @@ $().ready(function(){
 	getDefImg();
 	initShare();
 });
-
+function windowChange(){
+	var screenWidth = parseInt(document.body.clientWidth);
+	var fontSize = parseInt(screenWidth/1080*100);
+	$('html').css('font-size',fontSize);
+	$('.pagePhone').removeClass('hide');
+}
 function initShare(){
 	var ua = navigator.userAgent.toLowerCase();
 	if (ua.match(/MicroMessenger/i) == "micromessenger") {
