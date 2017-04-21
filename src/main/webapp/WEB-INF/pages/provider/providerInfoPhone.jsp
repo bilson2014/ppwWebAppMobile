@@ -168,9 +168,9 @@
 		    </div>
 	    </a>
 	 </c:if>   
-=======
+
 		<!--说明区  -->
->>>>>>> 644a8701eaaac6862fae8949e52b343a309b1b32
+
 
 		<div class="introduce contentAnimation">
 			<div class="titleDes">导演简介</div>

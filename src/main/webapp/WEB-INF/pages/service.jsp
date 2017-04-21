@@ -48,6 +48,8 @@
 
 </head>
 <body>
+	<input type="hidden" id="storage_node"
+		value="${file_locate_storage_path }" />
 	<div class="phoneHeader">
 	     <a id="openMenu"><img src="${imgPath }/index/toMenu.png"></a>
 	     <a href="/searchview">  
@@ -59,7 +61,7 @@
 	<jsp:include flush="true" page="menu.jsp"></jsp:include>
 		
 	<div class="pagePhone">
-		<video id="setVideo" controls poster="/resources/images/banner/moreInfo.JPG" src="" ></video>
+		<video id="setVideo" controls poster="/resources/images/banner/moreInfo.JPG" src="${file_locate_storage_path}/product/video/paipianwangMovie.mp4" ></video>
 		<img class="stepImg" src="${imgPath }/company/step.png">
 		
     <jsp:include flush="true" page="foot.jsp"></jsp:include> 
