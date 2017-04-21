@@ -124,7 +124,6 @@
 <script src="${jsonJs }"></script>
 <script src="${commonJs }"></script>
 <script src="${aboutJs}"></script>
-
 <script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
 </body>
 </html>
