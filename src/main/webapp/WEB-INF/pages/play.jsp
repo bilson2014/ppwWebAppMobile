@@ -15,7 +15,6 @@
 <spring:url value="/resources/js/play.js" var="playJs" />
 <!-- img path -->
 <spring:url value="/resources/images" var="imgPath" />
-<spring:url value="/resources/js/remSet.js" var="remSetJs" />
 <!DOCTYPE html>
 
 <html class="no-js">
@@ -156,7 +155,6 @@
 	<script src="${jsonJs }"></script>
 	<script src="${commonJs }"></script>
 	<script src="${playJs }"></script>
-	<script src="${remSetJs}"></script>
 
 </body>
 </html>

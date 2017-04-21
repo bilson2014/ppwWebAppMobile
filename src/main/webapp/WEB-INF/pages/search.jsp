@@ -26,7 +26,6 @@
 <spring:url value="/resources/js/imgLazyLoad.js" var="imgLazyLoadingJs" />
 <spring:url value="/resources/js/common.js" var="commonJs" />
 <spring:url value="/resources/js/search.js" var="searchJs" />
-<spring:url value="/resources/js/remSet.js" var="remSetJs" />
 <spring:url value="/resources/lib/jquery.json/jquery.json-2.4.min.js" var="jsonJs"/>
 
 <spring:url value="/resources/lib/jquery.scrollstop/jquery.scrollstop.min.js" var="scrollstopJs"/>
@@ -170,7 +169,6 @@
 	</div>
 	<script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
 	<script src="${jqueryJs}"></script>
-	<script src="${remSetJs}"></script>
 	<script src="${searchJs}"></script>
     <script src="${commonJs}"></script>
     <script src="${jsonJs}"></script>

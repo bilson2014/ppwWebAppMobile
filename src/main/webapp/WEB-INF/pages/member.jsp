@@ -14,7 +14,6 @@
 <spring:url value="/resources/lib/jquery/plugins.js" var="pluginJs" />
 <spring:url value="/resources/js/common.js" var="commonJs" />
 <spring:url value="/resources/js/company/member.js" var="memberJs" />
-<spring:url value="/resources/js/remSet.js" var="remSetJs" />
 
 <!-- imgPath -->
 <spring:url value="/resources/images" var="imgPath" />
@@ -39,7 +38,6 @@
 <script src="${jsonJs }"></script>
 <script src="${commonJs }"></script>
 
-<script src="${remSetJs }"></script>
 <script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
 
 <style>

@@ -15,7 +15,6 @@
 	var="flexsliderJs" />
 <spring:url value="/resources/js/common.js" var="commonJs" />
 <spring:url value="/resources/js/portal.js" var="portalJs" />
-<spring:url value="/resources/js/remSet.js" var="remSetJs" />
 <spring:url value="/resources/lib/swiper/swiper.min.js" var="swiperJs" />
 <spring:url value="/resources/lib/jquery/waypoints.min.js" var="waypointsJs" />
 <!-- imgPath -->
@@ -40,11 +39,7 @@
 <meta name="description" content="拍片网主营宣传片制作、微电影制作、MG动画制作等各种视频内容制作，拍片网是最大的企业视频内容制作平台。拍片就上拍片网！">
 <title>拍片网  专业商业视频服务</title>
 
-<link rel="shortcut icon" href="${imgPath }/favicon.ico">
-<link rel="stylesheet" href="${mmenuCss }">
-<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css">
-<link rel="stylesheet" href="${portalCss }">
-<link rel="stylesheet" href="${swiperCss }">
+
 
 <!--[if lt IE 9]>
 		<script>window.html5 || document.write('<script src="html5shivJs"><\/script>')</script>
@@ -285,6 +280,11 @@
  </div>
  
 </body>
+<link rel="shortcut icon" href="${imgPath }/favicon.ico">
+<link rel="stylesheet" href="${mmenuCss }">
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css">
+<link rel="stylesheet" href="${portalCss }">
+<link rel="stylesheet" href="${swiperCss }">
 <script src="${jqueryJs }"></script>
 <script src="${waypointsJs}"></script>
 <script src="${swiperJs}"></script>
@@ -293,7 +293,6 @@
 <script src="${jsonJs }"></script>
 <script src="${commonJs }"></script>
 <script src="${portalJs }"></script>
-<script src="${remSetJs}"></script>
 <script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
 
 </html>
