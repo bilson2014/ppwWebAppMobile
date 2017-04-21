@@ -62,7 +62,7 @@ function windowChange(){
 	var screenWidth = parseInt(document.body.clientWidth);
 	var fontSize = parseInt(screenWidth/1080*100);
 	$('html').css('font-size',fontSize);
-	$('.pagePhone').removeClass('hide');
+	$('.pagePhone').css('opacity','1');
 }
 function initShare(){
 	var ua = navigator.userAgent.toLowerCase();

@@ -97,7 +97,7 @@ ${imgPath }
 	        <div></div>
 	</div>
 	
-	<div class="pagePhone hide">
+	<div class="pagePhone" style="opacity:0">
 	
 	<!--第一区域 -->
 	<div class="firstContent">
