@@ -37,15 +37,18 @@ var search = {
 			var industry = $('#industry').val(); // 行业
 			var genre = $('#genre').val();; // 类型
 			var industryArr = industry.split(' ');
-			
+			var genreArr = industry.split(' ');
 			if(industryArr != null && industryArr.length >0){
 				for (var int = 0; int < industryArr.length; int++) {
-					if(int !=0 )
 						$('#'+industryArr[int]).addClass('checkActive');
 				}
 			}
 			
-			
+			if(genreArr != null && genreArr.length >0){
+				for (var int = 0; int < genreArr.length; int++) {
+						$('#'+genreArr[int]).addClass('checkActive');
+				}
+			}
 		},
         showTags : function(){
         	$('#qType').off('click').on('click',function(){
