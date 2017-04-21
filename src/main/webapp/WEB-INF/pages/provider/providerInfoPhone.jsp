@@ -27,7 +27,6 @@
 	var="providerInfoPhoneJs" />
 <spring:url value="/resources/lib/jquery/waypoints.min.js"
 	var="waypoints" />
-<spring:url value="/resources/js/remSet.js" var="remSetJs" />
 
 <!-- imgPath -->
 <spring:url value="/resources/images" var="imgPath" />
@@ -118,60 +117,7 @@
 
 		</div>
 
-
-	<!-- 介绍区 -->
-
-	<div class="providerInfo contentAnimation">
-		${provider.teamDescription}</div>
-<%-- 
-	<%
-		//add by wanglc 添加前段标签处理
-		String providerTags = request.getAttribute("providerTags").toString();
-		request.setAttribute("providerTag", providerTags.replaceAll("[\"\\[\\]]", ""));
-	%>
-	<!--标签区  -->
-	<div class="tagBody contentAnimation">
-		<c:forEach var="tags" items="${providerTag}" varStatus="status">
-			<div class="card">
-				<div class="controlCard">
-					<div class="pencil"></div>
-					<div class="cardWord">${tags}</div>
-				</div>
-			</div>
-		</c:forEach>
-	</div> --%>
-
-	<div class="tagBody contentAnimation adb">
-		<input type="hidden" id="id_tags" value='${providerTags}'>
-	</div>
-
-	<!--代表说明  -->
-<%-- <c:if test="${! empty product}"> --%>
-	<div class="introduce contentCard" >
-	    <div class="titleDes">代表作</div> 
-	    <div class="titleDesEn">Best-known Work</div> 
-		<div class="introduceTitle"></div>
-		<div class="introduceLine"></div>
-	</div>
-	 <c:if test="${product.teamId >0}">
-		<a href="/play/${product.teamId}_${product.productId }.html">
-			<div class="contentItem contentAnimation" style="background:url(${file_locate_storage_path}${product.picHDUrl}) no-repeat">
-				                     <div class="itemTitle">${product.productName}</div>
-				                     <div class="itemTag">
-				                        <c:forEach items="${fn:split(fn:trim(solr.tags),' ') }" var="tag" end="2" varStatus="stat">
-				                              <c:if test="${stat.index < 5}">
-												 <c:if test="${stat.index > 0}">/</c:if>${tag} 
-											   </c:if>	
-						 				</c:forEach>
-				                     </div>
-				                     <div class="itemBack"></div>
-		    </div>
-	    </a>
-	 </c:if>   
-
 		<!--说明区  -->
-
-
 		<div class="introduce contentAnimation">
 			<div class="titleDes">导演简介</div>
 			<div class="titleDesEn">Director profile</div>
@@ -248,7 +194,6 @@
 	<script src="${commonJs }"></script>
 	<script src="${providerInfoPhoneJs }"></script>
 	<script src="${imgLazyLoadingJs }"></script>
-	<script src="${remSetJs}"></script>
 
 </body>
 </html>

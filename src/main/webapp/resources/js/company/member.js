@@ -6,6 +6,12 @@ $().ready(function(){
 	//$('#setVideo').attr('src',''+getDfsHostName()+'group1/M00/00/20/CgqNZViiqe2ANmqIAZ-Ai8Au-R8971.mp4');
 	//$('#setVideo').load();
 
+	var docElem = document.documentElement;
+	window.lazySizesConfig = window.lazySizesConfig || {};
+	window.lazySizesConfig.loadMode = 1;
+	window.lazySizesConfig.expand = Math.max(Math.min(docElem.clientWidth, docElem.clientHeight, 1222) - 1, 359);
+	window.lazySizesConfig.expFactor = lazySizesConfig.expand < 380 ? 3 : 2;
+	
 	var member = {
 			init:function(){
 				this.check();//详情展开与关闭
