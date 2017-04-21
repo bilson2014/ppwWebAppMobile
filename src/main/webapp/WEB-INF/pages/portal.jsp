@@ -15,7 +15,6 @@
 	var="flexsliderJs" />
 <spring:url value="/resources/js/common.js" var="commonJs" />
 <spring:url value="/resources/js/portal.js" var="portalJs" />
-<spring:url value="/resources/js/remSet.js" var="remSetJs" />
 <spring:url value="/resources/lib/swiper/swiper.min.js" var="swiperJs" />
 <spring:url value="/resources/lib/jquery/waypoints.min.js" var="waypointsJs" />
 <spring:url value="/resources/lib/jquery.scrollstop/jquery.scrollstop.min.js" var="scrollstopJs"/>
@@ -42,7 +41,6 @@
 <title>拍片网  专业商业视频服务</title>
 <script src="${jqueryJs }"></script>
 <script src="${commonJs }"></script>
-<%-- <script src="${remSetJs}"></script> --%>
 <script src="${scrollstopJs}"></script>
 <script src="${lazyloadJs}"></script>
 
@@ -290,6 +288,7 @@ ${imgPath }
  </div>
  
 </body>
+
 <script src="${waypointsJs}"></script>
 <script src="${swiperJs}"></script>
 <script src="${pluginJs }"></script>

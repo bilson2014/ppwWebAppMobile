@@ -14,7 +14,6 @@
 <spring:url value="/resources/lib/jquery/plugins.js" var="pluginJs" />
 <spring:url value="/resources/js/common.js" var="commonJs" />
 <spring:url value="/resources/js/company/member.js" var="memberJs" />
-<spring:url value="/resources/js/remSet.js" var="remSetJs" />
 
 <!-- imgPath -->
 <spring:url value="/resources/images" var="imgPath" />
@@ -33,7 +32,6 @@
 <link rel="stylesheet" href="${commonCss}">
 <link rel="stylesheet" href="${memberCss}">
 <link rel="stylesheet" href="${mmenuCss}">
-
 <style>
 html {
 	font-size: 16px

@@ -9,7 +9,6 @@
 <spring:url value="/resources/lib/jquery/jquery-2.0.3.min.js" var="jqueryJs"/>
 <spring:url value="/resources/lib/jquery/plugins.js" var="pluginJs"/>
 <spring:url value="/resources/js/common.js" var="commonJs"/>
-<spring:url value="/resources/js/remSet.js" var="remSetJs" />
 <spring:url value="/resources/js/company/service.js" var="serviceJs" />
 
 <!-- imgPath -->
@@ -36,7 +35,6 @@
 	<![endif]-->
 	
 	<script src="${jqueryJs }"></script>
-	<script src="${remSetJs }"></script>
 	<script src="${pluginJs }"></script>
 	<script src="${commonJs }"></script>
 	<script src="${imgLazyLoadingJs }"></script>
