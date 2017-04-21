@@ -309,8 +309,11 @@ function subPaipian(){
 							$('#orderSuccess').show().addClass('moedlActive');
 							$('#error').hide();
 							$('#codeError').hide();
+							window.clearInterval(InterValObj);
 							$('#getPhoneCode').text('发送验证码');
+							$('#getPhoneCode').removeAttr('disabled');
 							counts = 60;
+							curCounts = 0;
 							var contactTele = $('#indent_tele').val('');
 							var phoneCode = $('#phoneCode').val('');
 						}

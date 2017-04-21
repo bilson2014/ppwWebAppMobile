@@ -26,7 +26,7 @@ function checkStep(){
 	});
 	
 	$('#checkSuccess').off('click').on('click',function(){
-		window.location.href = getContextPath() + '/provider/info_'+teamId+'.html';
+		window.location.href = getContextPath() + '/';
 	});
 }
 
@@ -197,7 +197,7 @@ function stepOneFinish(){
 
 function stepTwoFinish(num){
 	$('.stepTwo').addClass('hide');
-	$('.model').show();
+	$('#orderSuccess').show();
 	SetLastTime(num);
 }
 
@@ -297,7 +297,7 @@ function hideSuccessTooltip() {
 
 function SetLastTime() {
 	$('#checkTo').on('click',function(){
-		window.location.href = getContextPath() + '/provider/info_'+teamId+'.html';
+		window.location.href = getContextPath() + '/';
 	});
 	$('#lasttime').text(curCount);
 	$('#lasttime').attr('disabled', 'disabled');

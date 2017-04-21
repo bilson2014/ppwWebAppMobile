@@ -56,7 +56,7 @@ html {
 
 	<div class="pagePhone">
 	
-	    <video id="video"  preload="auto" controls="controls" poster="${imgPath }/company/poster.jpg" id="setVideo">
+	    <video id="setVideo"  preload="auto" controls="controls" poster="${imgPath }/company/poster.jpg" id="setVideo">
 	        <%-- <source id="setVideo" src="${file_locate_storage_path }group1/M00/00/20/CgqNZViiqe2ANmqIAZ-Ai8Au-R8971.mp4"> --%>
 	 <!--        <source > -->
 	    </video>

@@ -21,6 +21,8 @@ $().ready(function() {
     });
     $('#closeOrder').off('click').on('click',function(){
     	$('#orderTo').hide();
+    	$('#phoneCode').hide();
+		$('#codeError').hide();
     	clearDate();
     });
 });
@@ -114,12 +116,15 @@ function createCard(msg){
 function submitOrder(){
 	var verificationCodeValue =	$("#verificationCodeValue").val().trim();
 	var telephone = $('#phoneNumber').val().trim();
+	$('#phoneCode').hide();
+	$('#codeError').hide();
 	if(checkData(1) && checkData(2)){
 		loadData2(function(msg){
 			if(msg.ret){
 				//showSuccess();
 			   $('#orderTo').hide();
 			   $('#orderSuccess').show();
+			   clearDate();
 			}else{
 				$('#codeError').text(msg.message);
 				$('#codeError').show();
@@ -223,7 +228,12 @@ function clearDate(){
 	
 	$('#codeError').hide();
 	$('#phoneCode').hide();
-	$('#phoneNumber').val();
-	$('#verificationCodeValue').val();
+	$('#phoneNumber').val('');
+	$('#verificationCodeValue').val('');
+	$('#verification_code_recover_btn').text('发送验证码');
+	$('#verification_code_recover_btn').removeAttr('disabled');
+	window.clearInterval(InterValObj);
+	count = 60;
+	curCount = 0;
 	
 }
