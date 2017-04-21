@@ -10,9 +10,11 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
+
 	<!--[if lt IE 9]>
 		<script>window.html5 || document.write('<script src="html5shivJs"><\/script>')</script>
 	<![endif]-->
+	
 	<script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
 </head>
 <body>
@@ -23,11 +25,11 @@
 	                       <a href="/loginSele"><img class="userLogo" src="${imgPath}/menu/defultLogin.png"></a>
 	                   </r:noLogin>
 	                   <r:identity role="provider">
-	                    <a ><img class="userLogo" id="getImgUrl" src="${file_locate_storage_path }${sessionScope.sessionInfo.photo}"></a>
+	                    <a href="<spring:url value='/provider/info_${sessionScope.sessionInfo.reqiureId }.html'/>" ><img class="userLogo" id="getImgUrl" src="${file_locate_storage_path }${sessionScope.sessionInfo.photo}"></a>
 	                    <img class="close" id="editInfo" src="${imgPath}/menu/edit.png">
 	                  </r:identity>
 	                  <r:identity role="customer">
-	                       <a ><img class="userLogo" id="getImgUrl" src="${file_locate_storage_path }${sessionScope.sessionInfo.photo}"></a> 
+	                       <a href=""><img class="userLogo" id="getImgUrl" src="${file_locate_storage_path }${sessionScope.sessionInfo.photo}"></a> 
 	                       <img class="close" id="editInfo" src="${imgPath}/menu/edit.png">
 	                  </r:identity>
 	                  <a href="/userInfo" class="hide" ><img class="edit"  src="${imgPath}/menu/editMenu.png"></a>

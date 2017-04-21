@@ -59,7 +59,7 @@
 	<jsp:include flush="true" page="menu.jsp"></jsp:include>
 		
 	<div class="pagePhone">
-		<video id="postVideo" controls poster="/resources/images/banner/moreInfo.JPG" src="" ></video>
+		<video id="setVideo" controls poster="/resources/images/banner/moreInfo.JPG" src="" ></video>
 		<img class="stepImg" src="${imgPath }/company/step.png">
 		
     <jsp:include flush="true" page="foot.jsp"></jsp:include> 
