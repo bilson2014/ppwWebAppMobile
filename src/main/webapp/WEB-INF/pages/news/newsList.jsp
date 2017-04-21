@@ -83,7 +83,7 @@
 	                    </c:forEach>
 	             </c:if>  
 	             
-	             <c:if test="${!empty list}">
+	             <c:if test="${empty list}">
 	                  <div class="noImg">
 					         <img src="${imgPath }/index/noVideo.png">
 					         <div>您找的新闻遗落在外星球了！</div>
