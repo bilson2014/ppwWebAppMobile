@@ -50,7 +50,7 @@
 	
        <div class="pagePhone">
 	       <div class="videoShow">
-				<video id="setVideo" class="setVideo" poster="${imgPath}/company/2017.png" controls id="setVideo"></video> 
+				<video id="setVideo" class="setVideo" poster="${imgPath}/company/2017.png" controls id="setVideo" src="${file_locate_storage_path }group1/M00/00/60/CgpmTlib2EaAbOOdAQ1EMav8_P0022.mp4"></video> 
 	       </div>
 	       <div class="timeLine">
 	            <div class="stepTop">

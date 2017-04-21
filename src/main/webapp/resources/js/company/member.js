@@ -3,8 +3,8 @@ $().ready(function(){
 	var setHeight= screenWidth/16*9;
 	$('video').css('height',setHeight);
 	$('.footerBar').click();
-	$('#setVideo').attr('src',''+getDfsHostName()+'group1/M00/00/20/CgqNZViiqe2ANmqIAZ-Ai8Au-R8971.mp4');
-	$('#setVideo').load();
+	//$('#setVideo').attr('src',''+getDfsHostName()+'group1/M00/00/20/CgqNZViiqe2ANmqIAZ-Ai8Au-R8971.mp4');
+	//$('#setVideo').load();
 
 	var member = {
 			init:function(){
