@@ -93,7 +93,6 @@ function checkData(type){
 			$("#repwd").parent().removeClass("sureIcon").addClass("errorIcon");
 			return false;
 		}
-		
 		break;
 		
 	case 4:
@@ -310,6 +309,8 @@ function subPaipian(){
 							$('#orderSuccess').show().addClass('moedlActive');
 							$('#error').hide();
 							$('#codeError').hide();
+							$('#getPhoneCode').text('发送验证码');
+							counts = 60;
 							var contactTele = $('#indent_tele').val('');
 							var phoneCode = $('#phoneCode').val('');
 						}
