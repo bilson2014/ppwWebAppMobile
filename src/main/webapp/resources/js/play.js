@@ -99,10 +99,10 @@ function createCard(msg){
 		if(int>4){
 			break;
 		}
-		if(int > 1){
-			 tags = " / " + tags + spl[int];
+		if(int > 0){
+			 tags += " / " + spl[int];
 		}else{
-			tags = tags + spl[int] ;
+			tags += spl[int] ;
 		}
 	}
 	var $body1 = ''

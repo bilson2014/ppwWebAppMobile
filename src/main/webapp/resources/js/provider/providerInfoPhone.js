@@ -64,10 +64,10 @@ $().ready(function(){
 			if(int>4){
 				break;
 			}
-			if(int == spl.length - 1){
-				tags = " / " + tags + spl[int];
+			if(int > 0){
+				tags += " / " + spl[int];
 			}else{
-				tags = tags + spl[int];
+				tags += spl[int];
 			}
 		}
 		var $body1 = ''
