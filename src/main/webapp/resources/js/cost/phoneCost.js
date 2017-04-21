@@ -14,15 +14,23 @@ $().ready(function() {
 function controlCost(){
 	$('.start').off('click').on('click',function(){
 	 	if(checkData()){
-			var videoType = $('#videoType').text();
-			var team = $('#team').text();
-			var equipment = $('#equipment').text();
-			var actor = $('#actor').text();
-			var animation = $('#animation').text();
+			var videoType = $('.tags1').siblings('.type').attr('data-content');
+			var team = $('.tags2').siblings('.team').attr('data-content');
+			var equipment = $('.tags3').siblings('.equipment').attr('data-content');
+			var actor = $('.tags4').siblings('.actor').attr('data-content');
+			var animation = $('.tags5').siblings('animation').attr('data-content');
+			
+			
+			var videoTypeText = $('.tags1').siblings('.type').text();
+			var teamText = $('.tags2').siblings('.team').text();
+			var equipmentText = $('.tags3').siblings('.equipment').text();
+			var actorText = $('.tags4').siblings('.actor').text();
+			var animationText = $('.tags5').siblings('animation').text();
+			
 			var time = $('#time').text();
 			var indentId = $('#phone').attr('data-content');
-			var description = [ "视频类别:" + videoType, ",时长:" + time, ",导演团队:" + team,
-					",拍摄设备:" + equipment, ",演员:" + actor, ",动画:" + animation ].join("");
+			var description = [ "视频类别:" + videoTypeText, ",时长: 未选择", ",导演团队:" + teamText,
+					",拍摄设备:" + equipmentText, ",演员:" + actorText, ",动画:" + animationText ].join("");
 			var phone = $('#phone').val();
 			var verification_code = $('#phoneCode').val();
 			if(add){
@@ -56,12 +64,12 @@ function controlCost(){
 							$('#codeError').show();
 						}
 					}, getContextPath() + '/calculate/cost', $.toJSON({
-						videoType : $('#videoType').attr('data-content'),
-						team : $('#team').attr('data-content'),
-						equipment : $('#equipment').attr('data-content'),
-						actor : $('#actor').attr('data-content'),
-						animation : $('#animation').attr('data-content'),
-						time : $('#time').attr('data-content'),
+						videoType : videoType,
+						team : team,
+						equipment : equipment,
+						actor : actor,
+						animation : animation,
+						//time : null,
 						phone : phone,
 						indentId : indentId,
 						description : description,
@@ -82,12 +90,17 @@ function controlCost(){
 							$('#step2').hide();
 							$('#step3').show();
 						}, 3000);
-					}, getContextPath() + '/calculate/cost2', $.toJSON({
-						videoType : $('.type').attr('data-content'),
-						team : $('.team').attr('data-content'),
-						equipment : $('.equipment').attr('data-content'),
-						actor : $('.actor').attr('data-content'),
-						animation : $('.animation').attr('data-content')
+					}, getContextPath() + '/calculate/cost', $.toJSON({
+						videoType : videoType,
+						team : team,
+						equipment : equipment,
+						actor : actor,
+						animation : animation,
+						//time : null,
+						phone : phone,
+						indentId : indentId,
+						description : description,
+						verification_code:verification_code
 					}));
 				}
 			}
