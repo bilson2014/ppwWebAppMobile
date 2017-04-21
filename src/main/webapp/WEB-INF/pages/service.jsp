@@ -61,6 +61,7 @@
 	<jsp:include flush="true" page="menu.jsp"></jsp:include>
 		
 	<div class="pagePhone">
+	
 		<video id="setVideo" controls poster="/resources/images/banner/moreInfo.JPG" src="http://www.apaipian.com/product/video/paipianwangMovie.mp4" ></video>
 		<img class="stepImg" src="${imgPath }/company/step.png">
 		
