@@ -155,7 +155,6 @@
 	</c:if>
 	
 	<c:if test="${ empty list}">
-	
 	     <div class="noImg">
 	         <img src="${imgPath }/index/noVideo.png">
 	         <div>很抱歉,没有找到相关影片</div>

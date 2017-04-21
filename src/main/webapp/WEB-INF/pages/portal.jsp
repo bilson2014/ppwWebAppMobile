@@ -17,8 +17,9 @@
 <spring:url value="/resources/js/portal.js" var="portalJs" />
 <spring:url value="/resources/lib/swiper/swiper.min.js" var="swiperJs" />
 <spring:url value="/resources/lib/jquery/waypoints.min.js" var="waypointsJs" />
+<spring:url value="/resources/lib/jquery.scrollstop/jquery.scrollstop.min.js" var="scrollstopJs"/>
+<spring:url value="/resources/lib/jquery.lazyload/lazysizes.min.js" var="lazyloadJs"/>
 <!-- imgPath -->
-<spring:url value="/resources/images" var="imgPath" />
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -38,19 +39,26 @@
 <meta name="keywords" content="宣传片制作,产品宣传片制作,企业宣传片制作,微电影制作,MG动画制作">
 <meta name="description" content="拍片网主营宣传片制作、微电影制作、MG动画制作等各种视频内容制作，拍片网是最大的企业视频内容制作平台。拍片就上拍片网！">
 <title>拍片网  专业商业视频服务</title>
+<script src="${jqueryJs }"></script>
+<script src="${commonJs }"></script>
+<script src="${scrollstopJs}"></script>
+<script src="${lazyloadJs}"></script>
 
-
-
+<link rel="stylesheet" href="${portalCss }">
+<link rel="stylesheet" href="${swiperCss }">
+<link rel="stylesheet" href="${mmenuCss }">
+<link rel="shortcut icon" href="/resources/images/favicon.ico">
 <!--[if lt IE 9]>
 		<script>window.html5 || document.write('<script src="html5shivJs"><\/script>')</script>
 	<![endif]-->
 
 </head>
 <body>
+${imgPath }
 	<input type="hidden" id="storage_node" value="${file_locate_storage_path }" />
 	<div class="model" id="orderSuccess">
 	         <div class="success">
-	            <img src="${imgPath}/index/success.png">
+	            <img data-src="/resources/images/index/success.png" class="lazyload">
 	            <div>恭喜您下单成功</div>
 	            <div>视频管家将会在两个小时内与您沟通</div>
 	            <div><a href="/">返回首页</a></div>
@@ -70,39 +78,39 @@
 	    
 	 <div class="headerCom">
 		<a>
-		 <img id="openMenu" src="${imgPath}/index/toMenu.png">
+		 <img id="openMenu"  class="lazyload" data-src="/resources/images/index/toMenu.png">
 		</a>
 		<a href="/searchview">  
-		 <img  src="${imgPath}/index/toSearch.png">
+		 <img  class="lazyload" data-src="/resources/images/index/toSearch.png">
 		</a> 
 		<a>
-		  <img class="ppwLogos" src="${imgPath}/index/logoW.png">
+		  <img class="ppwLogos lazyload" data-src="/resources/images/index/logoW.png">
 		</a>
 	</div>
 
 	<div class="backImg">
-	        <img  id="img1" src="${imgPath}/index/back1.jpg">
-	        <img  id="img2" src="${imgPath}/index/back2.jpg">
-	        <img  id="img3" src="${imgPath}/index/back3.jpg">
-	        <img  id="img4" src="${imgPath}/index/back4.jpg">
-	        <img  id="img5" src="${imgPath}/index/back5.jpg">
+	        <img  id="img1" class="lazyload" data-src="/resources/images/index/back1.jpg">
+	        <img  id="img2" class="lazyload" data-src="/resources/images/index/back2.jpg">
+	        <img  id="img3" class="lazyload" data-src="/resources/images/index/back3.jpg">
+	        <img  id="img4" class="lazyload" data-src="/resources/images/index/back4.jpg">
+	        <img  id="img5" class="lazyload" data-src="/resources/images/index/back5.jpg">
 	        <div></div>
 	</div>
 	
-	<div class="pagePhone">
+	<div class="pagePhone hide">
 	
 	<!--第一区域 -->
 	<div class="firstContent">
 	
 		<div class="logo">
-		  <img src="${imgPath}/index/logo.png">
+		  <img class="lazyload" data-src="/resources/images/index/logo.png">
 		  <div id="logoPos" style="width:1px;"></div>
 		</div>
 			
 		<div class="swiper-container">
 	        <div class="swiper-wrapper">
 	            <div class="swiper-slide">
-		            <video style="width:0px;opacity:0" controls="" loop="" poster="${imgPath}/index/moreInfo.JPG" name="media" id="header3Video" class="active"> 
+		            <video style="width:0px;opacity:0" controls="" loop="" poster="/resources/images/index/moreInfo.JPG" name="media" id="header3Video" class="active"> 
 			         <!--  <source src="/resources/video/test.mov" id="source" type="video/mp4"> -->
 			         <source src="" id="source" type="video/mp4">
 			        </video>
@@ -110,7 +118,7 @@
 		                  <li class="title">专业商业视频服务</li>
 		                  <li class="line"></li>
 		                  <li class="desc">35800+导演/编剧/摄影师/影视专家为您服务</li>
-		                  <li class="icon bannerAni playVideo" id="playVideo"><img src="${imgPath}/index/playIcon.png"></li>
+		                  <li class="icon bannerAni playVideo" id="playVideo"><img class="lazyload" data-src="/resources/images/index/playIcon.png"></li>
 	                 </ul>
 	            </div>
 	            <div class="swiper-slide">
@@ -118,7 +126,7 @@
 		                  <li class="title">低预算拍大片 不满意全额退款</li>
 		                  <li class="line"></li>
 		                  <li class="desc">低于行业均价30%以上 平台托管制作费</li>
-		                  <a  href="/phoneCost"> <li class="icon bannerAni"><img src="${imgPath}/index/calc.png"></li></a>
+		                  <a  href="/phoneCost"> <li class="icon bannerAni"><img src="/resources/images/index/calc.png"></li></a>
 	                 </ul>
 	             </div>
 	            <div class="swiper-slide">
@@ -126,7 +134,7 @@
 		                  <li class="title">免费创意策划 72小时极速出片</li>
 		                  <li class="line"></li>
 		                  <li class="desc">专业视频管家 一站式视频服务 全流程质量监管</li>
-		                  <li class="icon bannerAni"><a href="tel:4006609728"><img src="${imgPath}/index/phone.png"></a></li>
+		                  <li class="icon bannerAni"><a href="tel:4006609728"><img src="/resources/images/index/phone.png"></a></li>
 	                 </ul>
 	            </div>
 	        </div>
@@ -182,13 +190,13 @@
 	      <div class="conDiv">
 	              <a href='/search?q=&industry=宣传片'>
 			          <div class="conItem leftItem">
-			             <img src="${imgPath}/index/video.png">
+			             <img class="lazyload" data-src="/resources/images/index/video.png">
 			             <div class="type">宣传片</div>
 			          </div>
 		          </a>
 		           <a href="/search?q=&industry=微电影">
 			          <div class="conItem">
-			             <img src="${imgPath}/index/sVideo.png">
+			             <img class="lazyload" data-src="/resources/images/index/sVideo.png">
 			             <div class="type">微电影</div>
 			          </div>
 		          </a>
@@ -196,13 +204,13 @@
 	       <div class="conDiv noBot">
 	              <a href="/search?q=广告片">
 			          <div class="conItem leftItem">
-			             <img src="${imgPath}/index/ad.png">
+			             <img class="lazyload" data-src="/resources/images/index/ad.png">
 			             <div class="type">广告片</div>
 			          </div>
 		          </a>
 		           <a href="/search?q=&industry=病毒视频">
 			          <div class="conItem">
-			             <img src="${imgPath}/index/spread.png">
+			             <img class="lazyload" data-src="/resources/images/index/spread.png">
 			             <div class="type">病毒视频</div>
 			          </div>
 		          </a>
@@ -210,7 +218,7 @@
 	      <div class="service">服务流程</div>
 	      <ul class="serviceItem">
 	         <li>
-	             <img src="${imgPath}/index/talk.png">
+	             <img class="lazyload" data-src="/resources/images/index/talk.png">
 	             <div class="wordItem">
 	                    <div>1</div>
 	                    <div>沟通拍片需求</div>
@@ -221,7 +229,7 @@
 	             </div>
 	         </li>
 	         <li>
-	             <img src="${imgPath}/index/help.png">
+	             <img class="lazyload" data-src="/resources/images/index/help.png">
 	             <div class="wordItem">
 	                    <div>3</div>
 	                    <div>平台托管制作费</div>
@@ -232,7 +240,7 @@
 	             </div>
 	         </li>
 	         <li>
-	             <img src="${imgPath}/index/replay.png">
+	             <img class="lazyload" data-src="/resources/images/index/replay.png">
 	             <div class="wordItem">
 	                    <div>5</div>
 	                    <div>拍摄制作全程监管</div>
@@ -258,20 +266,20 @@
 		     <div class="ourCusTitle">我们的客户</div>
 		     
 		     <div class="showLogo">
-		          <img src="${imgPath}/index/logo1.png">
-		          <img src="${imgPath}/index/logo2.png">
-		          <img src="${imgPath}/index/logo3.png">
-		          <img src="${imgPath}/index/logo4.png">
-		          <img src="${imgPath}/index/logo5.png">
-		          <img src="${imgPath}/index/logo6.png">
-		          <img src="${imgPath}/index/logo7.png">
-		          <img src="${imgPath}/index/logo8.png">
-		          <img src="${imgPath}/index/logo9.png">
-		          <img src="${imgPath}/index/logo10.png">
-		          <img src="${imgPath}/index/logo11.png">
-		          <img src="${imgPath}/index/logo12.png">
-		          <img src="${imgPath}/index/logo13.png">
-		          <img src="${imgPath}/index/logo14.png">
+		          <img class="lazyload" data-src="/resources/images/index/logo1.png">
+		          <img class="lazyload" data-src="/resources/images/index/logo2.png">
+		          <img class="lazyload" data-src="/resources/images/index/logo3.png">
+		          <img class="lazyload" data-src="/resources/images/index/logo4.png">
+		          <img class="lazyload" data-src="/resources/images/index/logo5.png">
+		          <img class="lazyload" data-src="/resources/images/index/logo6.png">
+		          <img class="lazyload" data-src="/resources/images/index/logo7.png">
+		          <img class="lazyload" data-src="/resources/images/index/logo8.png">
+		          <img class="lazyload" data-src="/resources/images/index/logo9.png">
+		          <img class="lazyload" data-src="/resources/images/index/logo10.png">
+		          <img class="lazyload" data-src="/resources/images/index/logo11.png">
+		          <img class="lazyload" data-src="/resources/images/index/logo12.png">
+		          <img class="lazyload" data-src="/resources/images/index/logo13.png">
+		          <img class="lazyload" data-src="/resources/images/index/logo14.png">
 		     </div>
 		     
 		     <jsp:include flush="true" page="foot.jsp"></jsp:include> 
@@ -280,19 +288,12 @@
  </div>
  
 </body>
-<link rel="shortcut icon" href="${imgPath }/favicon.ico">
-<link rel="stylesheet" href="${mmenuCss }">
-<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css">
-<link rel="stylesheet" href="${portalCss }">
-<link rel="stylesheet" href="${swiperCss }">
-<script src="${jqueryJs }"></script>
+
 <script src="${waypointsJs}"></script>
 <script src="${swiperJs}"></script>
 <script src="${pluginJs }"></script>
 <script src="${flexsliderJs }"></script>
 <script src="${jsonJs }"></script>
-<script src="${commonJs }"></script>
 <script src="${portalJs }"></script>
 <script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
-
 </html>
