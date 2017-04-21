@@ -1,3 +1,3 @@
 $().ready(function(){
-	$('#setVideo').attr('src','http://www.apaipian.com/product/video/paipianwangMovie.mp4');
+	$('#postVideo').attr('src',getContextPath() + '/product/video/paipianwangMovie.mp4');
 });

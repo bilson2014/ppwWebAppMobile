@@ -50,9 +50,7 @@
 	
        <div class="pagePhone">
 	       <div class="videoShow">
-				<video id="setVideo" class="setVideo" poster="${imgPath}/company/2017.png" controls id="setVideo">
-			      <%--   <source id="setVideo" src="${file_locate_storage_path}group1/M00/00/60/CgpmTlib2EaAbOOdAQ1EMav8_P0022.mp4" type="video/mp4"> --%>
-			    </video> 
+				<video id="setVideo" class="setVideo" poster="${imgPath}/company/2017.png" controls id="setVideo"></video> 
 	       </div>
 	       <div class="timeLine">
 	            <div class="stepTop">
@@ -130,8 +128,5 @@
 <script src="${aboutJs}"></script>
 
 <script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
-<!-- 加载Mob share 控件 -->
-<script id="-mob-share" src="http://f1.webshare.mob.com/code/mob-share.js?appkey=8c49c537a706"></script>
-<script type="text/javascript" src="http://player.youku.com/jsapi"></script>
 </body>
 </html>

@@ -5,6 +5,7 @@ $().ready(function(){
 	$('.footerBar').click();
 	$('#setVideo').attr('src',''+getDfsHostName()+'group1/M00/00/20/CgqNZViiqe2ANmqIAZ-Ai8Au-R8971.mp4');
 	$('#setVideo').load();
+
 	var member = {
 			init:function(){
 				this.check();//详情展开与关闭

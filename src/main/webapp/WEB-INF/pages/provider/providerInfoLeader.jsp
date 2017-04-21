@@ -69,10 +69,8 @@
 <script src="${jsonJs }"></script>
 <script src="${iosSelectJs }"></script>
 <script src="${providerInfoLeaderJs }"></script>
-
 </head>
 <body>
-
     <div class="errorDiv"  id="errorDiv" style="display: none;">error</div>
 
 	<div class="model" id="orderSuccess">
@@ -173,7 +171,6 @@
 			            </div>
 		          </div> 
            	   </div>
-               
                
 		           <div class="step2BtnDiv">
 		             <div id="returnStep">上一步</div>
