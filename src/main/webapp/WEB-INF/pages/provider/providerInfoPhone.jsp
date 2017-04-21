@@ -86,7 +86,7 @@
 	
 	<div class="phoneHeader">
 	     <a id="openMenu"><img src="${imgPath }/index/toMenu.png"></a>
-	     <a id="toSearch"><img src="${imgPath }/index/toSearch.png"></a>
+	     <a class="hide" id="toSearch"><img src="${imgPath }/index/toSearch.png"></a>
 	      <a href="/"><img class="ppwLogo" src="${imgPath}/index/logoH.png"></a>
 	</div>
 	

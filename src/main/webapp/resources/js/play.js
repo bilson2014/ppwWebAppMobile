@@ -17,9 +17,11 @@ $().ready(function() {
     });
     $('#checkSuccess').off('click').on('click',function(){
     	$('#orderSuccess').hide();
+    	
     });
     $('#closeOrder').off('click').on('click',function(){
     	$('#orderTo').hide();
+    	clearDate();
     });
 });
 
@@ -215,4 +217,13 @@ function loadData2(Func,url,param){
 			console.error('[' + textStatus + ']' + errorThrown);
 		}
 	});
+}
+
+function clearDate(){
+	
+	$('#codeError').hide();
+	$('#phoneCode').hide();
+	$('#phoneNumber').val();
+	$('#verificationCodeValue').val();
+	
 }

@@ -24,6 +24,10 @@ function checkStep(){
 	$('#returnStep').off('click').on('click',function(){
 		returnFirst();
 	});
+	
+	$('#checkSuccess').off('click').on('click',function(){
+		window.location.href = getContextPath() + '/provider/info_'+teamId+'.html';
+	});
 }
 
 function initAddrSelector() {

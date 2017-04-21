@@ -299,6 +299,8 @@ var InterValObj; // timer变量，控制时间 - 注册
 function subPaipian(){
 	var flag = true;
 	$('#subPaipian').off("click").on("click",function(){
+		$('#error').hide();
+		$('#codeError').hide();
 		if(checkDatas(1)){ // 检查数据完整性
 				if(flag){
 					flag = false;
@@ -332,6 +334,8 @@ function subPaipian(){
 	});
 	
 	$('#getPhoneCode').off("click").on('click',function(){
+		$('#error').hide();
+		$('#codeError').hide();
 		if(curCounts == 0 && checkDatas(2)){
 			curCounts = counts;
 			var telephone = $('#indent_tele').val().trim();
