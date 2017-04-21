@@ -66,10 +66,7 @@ html {
 
 	<div class="pagePhone">
 	
-	    <video id="video"  preload="auto" controls="controls" poster="${imgPath }/company/poster.jpg" id="setVideo">
-	        <%-- <source id="setVideo" src="${file_locate_storage_path }group1/M00/00/20/CgqNZViiqe2ANmqIAZ-Ai8Au-R8971.mp4"> --%>
-	 <!--        <source > -->
-	    </video>
+	    <video id="video"  preload="auto" controls="controls" poster="${imgPath }/company/poster.jpg" id="setVideo"></video>
 	
 		<c:if test="${!empty list}">
 			<c:forEach items="${list}" var="staff" varStatus="status">
@@ -125,8 +122,6 @@ html {
 											id="showSun">
 									</div>
 								</c:if>
-								<%--  <img class="-mob-share-weibo" src="${imgPath}/company/wb.png">
-					                  <img class="-mob-share-qzone" src="${imgPath}/company/qqzone.png"> --%>
 							</div>
 						</div>
 					</div>

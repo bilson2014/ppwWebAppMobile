@@ -28,10 +28,6 @@
 <spring:url value="/resources/lib/merge/iosSelect.js" var="iosSelectJs" />
 <spring:url value="/resources/js/remSet.js" var="remSetJs" />
 
-
-
-
-
 <!-- imgPath -->
 <spring:url value="/resources/images" var="imgPath" />
 <!DOCTYPE html>
@@ -75,10 +71,8 @@
 <script src="${jsonJs }"></script>
 <script src="${iosSelectJs }"></script>
 <script src="${providerInfoLeaderJs }"></script>
-
 </head>
 <body>
-
     <div class="errorDiv"  id="errorDiv" style="display: none;">error</div>
 
 	<div class="model" id="orderSuccess">

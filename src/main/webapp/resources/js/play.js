@@ -77,7 +77,7 @@ play = {
 			}else{
 				$("#anliContent").hide();
 			}
-		}, getContextPath() + '/tags/product/search ' ,$.toJSON({
+		}, getContextPath() + '/tags/product/search' ,$.toJSON({
 			condition : tags,
 			begin : 0,
 			limit : 9

@@ -220,7 +220,7 @@ public class ProviderController extends BaseController {
 	@RequestMapping("/loginout")
 	public ModelAndView loginOut(final HttpServletRequest request) {
 		request.getSession().removeAttribute(PmsConstant.SESSION_INFO);
-		return new ModelAndView("redirect:/provider/login");
+		return new ModelAndView("redirect:/");
 	}
 
 	/**

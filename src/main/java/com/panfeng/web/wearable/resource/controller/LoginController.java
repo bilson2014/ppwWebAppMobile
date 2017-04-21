@@ -381,7 +381,7 @@ public class LoginController extends BaseController {
 	public ModelAndView loginout(final HttpServletRequest request) {
 
 		request.getSession().removeAttribute(PmsConstant.SESSION_INFO);
-		return new ModelAndView("redirect:/login");
+		return new ModelAndView("redirect:/");
 	}
 
 	/**

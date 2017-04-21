@@ -126,20 +126,20 @@ public class SolrController extends BaseController {
 			throws Exception {
 
 		final SolrView view = new SolrView();
-		
+
 		if ("最热资讯".equals(q)) {
 			// 筛选 推荐值大于0 的新闻
 			view.setRecomendFq("[1 TO *]");
 			q = null;
 		}
-		
+
 		view.setCondition(q);
 		model.addAttribute("q", q);
 		view.setLimit(20l);
-		
+
 		final List<PmsNewsSolr> list = solrService.queryNewDocs(PublicConfig.SOLR_NEWS_URL, view);
 		long total = 0l;
-		if(ValidateUtil.isValid(list)) {
+		if (ValidateUtil.isValid(list)) {
 			final PmsNewsSolr s = list.get(0);
 			if (s != null) {
 				total = s.getTotal(); // 设置总数
@@ -167,7 +167,7 @@ public class SolrController extends BaseController {
 			view.setRecomendFq("[1 TO *]");
 			q = null;
 		}
-
+		view.setCondition(q);
 		view.setLimit(20l);
 		final List<PmsNewsSolr> list = solrService.queryNewDocs(PublicConfig.SOLR_NEWS_URL, view);
 		return list;
@@ -216,7 +216,7 @@ public class SolrController extends BaseController {
 
 		return new ModelAndView("/news/newsInfo");
 	}
-	
+
 	/**
 	 * 播放界面获取更多推荐作品 根据tags来搜索 参数：condition 表示tag标签
 	 */

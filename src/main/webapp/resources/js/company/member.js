@@ -3,7 +3,7 @@ $().ready(function(){
 	var setHeight= screenWidth/16*9;
 	$('video').css('height',setHeight);
 	$('.footerBar').click();
-	$('#setVideo').attr('src',''+getDfsHostName()+'group1/M00/00/20/CgqNZViiqe2ANmqIAZ-Ai8Au-R8971.mp4');
+	$('#setVideo').attr('src',getDfsHostName()+'group1/M00/00/20/CgqNZViiqe2ANmqIAZ-Ai8Au-R8971.mp4');
 	var member = {
 			init:function(){
 				this.check();//详情展开与关闭
