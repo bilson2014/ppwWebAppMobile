@@ -173,9 +173,11 @@
 			<div class="contentItem contentAnimation" style="background:url(${file_locate_storage_path}${product.picHDUrl}) no-repeat">
 				                     <div class="itemTitle">${product.productName}</div>
 				                     <div class="itemTag">
-				                       <c:forEach items="${fn:split(fn:trim(product.tags),' ') }" var="tag" end="2" varStatus="stat">
-												${tag} <c:if test="${!stat.last }">/</c:if>
-									   </c:forEach>
+				                        <c:forEach items="${fn:split(fn:trim(solr.tags),' ') }" var="tag" end="2" varStatus="stat">
+				                              <c:if test="${stat.index < 5}">
+												 <c:if test="${stat.index > 0}">/</c:if>${tag} 
+											   </c:if>	
+						 				</c:forEach>
 				                     </div>
 				                     <div class="itemBack"></div>
 		    </div>

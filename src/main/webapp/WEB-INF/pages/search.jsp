@@ -145,8 +145,8 @@
                      <div class="itemTitle">${solr.productName}</div>
                      <div class="itemTag">
 	                     <c:forEach items="${fn:split(fn:trim(solr.tags),' ') }" var="tag" end="2" varStatus="stat">
-	                              <c:if test="${stat.index <5}">
-									<c:if test="${stat.index>0}">/</c:if>${tag} 
+	                              <c:if test="${stat.index < 5}">
+									 <c:if test="${stat.index > 0}">/</c:if>${tag} 
 								   </c:if>	
 						 </c:forEach>
                      </div>

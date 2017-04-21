@@ -75,8 +75,11 @@ play = {
     		var list = data.result;
 			if(list.result.length > 0){
 				for (var int = 0;int<list.result.length; int++) {
+					
+					if(int>5){
 					var card = createCard(list.result[int]);
 					$("#anliContent").append(card);
+					}
 				}
 			}else{
 				$("#anliContent").hide();
