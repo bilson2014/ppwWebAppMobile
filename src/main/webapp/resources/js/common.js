@@ -98,7 +98,7 @@ function initShare(){
 				//title: title,
 				desc: '拍片网平台汇聚了入驻导演原创精品宣传片视频案例，免费创意策划，价格透明，不满意全额退款',
 				//link: 'http://m.apaipian.com',
-				imgUrl: 'http://m.apaipian.com/resources/images/index/logo.png',
+				imgUrl: 'http://m.apaipian.com/resources/images/index/share-logo.png',
 				trigger: function (res) {
 				},
 				success: function (res) {
@@ -112,7 +112,7 @@ function initShare(){
 				//title: title,
 				desc: '拍片网平台汇聚了入驻导演原创精品宣传片视频案例，免费创意策划，价格透明，不满意全额退款',
 				//link: 'http://m.apaipian.com',
-				imgUrl: 'http://m.apaipian.com/resources/images/index/logo.png',
+				imgUrl: 'http://m.apaipian.com/resources/images/index/share-logo.png',
 				trigger: function (res) {
 				},
 				success: function (res) {
@@ -126,7 +126,7 @@ function initShare(){
 				//title: title,
 				desc: '拍片网平台汇聚了入驻导演原创精品宣传片视频案例，免费创意策划，价格透明，不满意全额退款',
 				//link: 'http://m.apaipian.com',
-				imgUrl: 'http://m.apaipian.com/resources/images/index/logo.png',
+				imgUrl: 'http://m.apaipian.com/resources/images/index/share-logo.png',
 				trigger: function (res) {
 				},
 				success: function (res) {
@@ -140,7 +140,7 @@ function initShare(){
 				//title: title,
 				desc: '拍片网平台汇聚了入驻导演原创精品宣传片视频案例，免费创意策划，价格透明，不满意全额退款',
 				//link: 'http://m.apaipian.com',
-				imgUrl: 'http://m.apaipian.com/resources/images/index/logo.png',
+				imgUrl: 'http://m.apaipian.com/resources/images/index/share-logo.png',
 				trigger: function (res) {
 				},
 				success: function (res) {
