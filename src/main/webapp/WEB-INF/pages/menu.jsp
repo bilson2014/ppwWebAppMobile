@@ -43,6 +43,9 @@
 	                  <r:identity role="customer">
 	                     <div>${sessionScope.sessionInfo.telephone}</div>
 	                  </r:identity>
+	                  <r:identity role="employee">
+	                     <div>${sessionScope.sessionInfo.loginName}</div>
+	                  </r:identity>
 	                  <r:noLogin>
 	                      <div>未登录</div>
 	                  </r:noLogin>
