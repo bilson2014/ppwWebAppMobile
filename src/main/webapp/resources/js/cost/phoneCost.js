@@ -12,74 +12,123 @@ $().ready(function() {
 	 controlCost();
 });
 function controlCost(){
+	
 	$('.start').off('click').on('click',function(){
-	 	if(checkData()){
-			var videoType = $('.tags1').siblings('.type').attr('data-content');
-			var team = $('.tags2').siblings('.team').attr('data-content');
-			var equipment = $('.tags3').siblings('.equipment').attr('data-content');
-			var actor = $('.tags4').siblings('.actor').attr('data-content');
-			var animation = $('.tags5').siblings('animation').attr('data-content');
+		var loginTel = $('#rolephone').val();
+		if(loginTel!=null && loginTel!= "" ){
+			loginOrder();
+		}else{
+			noLoginOrder();
+		}
+	});
+}
+function loginOrder(){
+	var videoType = $('.tags1').siblings('.type').attr('data-content');
+	var team = $('.tags2').siblings('.team').attr('data-content');
+	var equipment = $('.tags3').siblings('.equipment').attr('data-content');
+	var actor = $('.tags4').siblings('.actor').attr('data-content');
+	var animation = $('.tags5').siblings('animation').attr('data-content');
+	var videoTypeText = $('.tags1').siblings('.type').text();
+	var teamText = $('.tags2').siblings('.team').text();
+	var equipmentText = $('.tags3').siblings('.equipment').text();
+	var actorText = $('.tags4').siblings('.actor').text();
+	var animationText = $('.tags5').siblings('animation').text();
+	var time = $('#time').text();
+	var indentId = $('#phone').attr('data-content');
+	var description = [ "视频类别:" + videoTypeText, ",时长: 未选择", ",导演团队:" + teamText,
+			",拍摄设备:" + equipmentText, ",演员:" + actorText, ",动画:" + animationText ].join("");
+	var phone = $('#rolephone').val();
+	if(first){
+		add = false;
+		loadData(function(result) {
+			add = true;
+				$('#price').text(thousandCount(result.cost));
+				$('#phone').attr('data-content', result.indentId);
+				$("#code-container").remove();
+				$('#bar').removeClass('proWidth'); 
+				$('.item').hide();
+				$('#step1').hide();
+				$('#step2').show();
+			 	setTimeout(function() {
+				 		$('#bar').addClass('proWidth'); 
+					}, 500);
+			 	setTimeout(function() {
+					$('#step2').hide();
+					$('#step3').show();
+				}, 3000);
+				first = false;
 			
-			
-			var videoTypeText = $('.tags1').siblings('.type').text();
-			var teamText = $('.tags2').siblings('.team').text();
-			var equipmentText = $('.tags3').siblings('.equipment').text();
-			var actorText = $('.tags4').siblings('.actor').text();
-			var animationText = $('.tags5').siblings('animation').text();
-			
-			var time = $('#time').text();
-			var indentId = $('#phone').attr('data-content');
-			var description = [ "视频类别:" + videoTypeText, ",时长: 未选择", ",导演团队:" + teamText,
-					",拍摄设备:" + equipmentText, ",演员:" + actorText, ",动画:" + animationText ].join("");
-			var phone = $('#phone').val();
-			var verification_code = $('#phoneCode').val();
-			if(add){
-				if(first){
-					add = false;
-					loadData(function(result) {
-						add = true;
-						$('#phoneError').hide();
-						$('#codeError').hide();
-						if(result.code == 1){
-							$('#price').text(thousandCount(result.cost));
-							$('#phone').attr('data-content', result.indentId);
-							$("#code-container").remove();
-							$('#bar').removeClass('proWidth'); 
-							$('.item').hide();
-							$('#step1').hide();
-							$('#step2').show();
-						 	setTimeout(function() {
-							 		$('#bar').addClass('proWidth'); 
-								}, 500);
-						 	setTimeout(function() {
-								$('#step2').hide();
-								$('#step3').show();
-							}, 3000);
-							first = false;
-						}else if(result.code == 0 && result.msg == '手机号不匹配'){
-							$('#phoneError').text( '手机号不匹配');
-							$('#phoneError').show();
-						}else{
-							$('#codeError').text( result.msg);
-							$('#codeError').show();
-						}
-					}, getContextPath() + '/calculate/cost', $.toJSON({
-						videoType : videoType,
-						team : team,
-						equipment : equipment,
-						actor : actor,
-						animation : animation,
-						//time : null,
-						phone : phone,
-						indentId : indentId,
-						description : description,
-						verification_code:verification_code
-					}));
-				}else{
-					loadData(function(result) {
-						flag = 1;
+		}, getContextPath() + '/calculate/cost', $.toJSON({
+			videoType : videoType,
+			team : team,
+			equipment : equipment,
+			actor : actor,
+			animation : animation,
+			phone : phone,
+			indentId : indentId,
+			description : description,
+			verification_code:''
+		}));
+	}else{
+		loadData(function(result) {
+			flag = 1;
+			$('#price').text(thousandCount(result.cost));
+			$('#phone').attr('data-content', result.indentId);
+			$('.item').hide();
+			$('#step1').hide();
+			$('#step2').show();
+		 	setTimeout(function() {
+			 		$('#bar').addClass('proWidth'); 
+				}, 500);
+		 	setTimeout(function() {
+				$('#step2').hide();
+				$('#step3').show();
+			}, 3000);
+		}, getContextPath() + '/calculate/cost', $.toJSON({
+			videoType : videoType,
+			team : team,
+			equipment : equipment,
+			actor : actor,
+			animation : animation,
+			phone : phone,
+			indentId : indentId,
+			description : description,
+			verification_code:''
+		}));
+	}
+	
+}
+
+function noLoginOrder(){
+	if(checkData()){
+		var videoType = $('.tags1').siblings('.type').attr('data-content');
+		var team = $('.tags2').siblings('.team').attr('data-content');
+		var equipment = $('.tags3').siblings('.equipment').attr('data-content');
+		var actor = $('.tags4').siblings('.actor').attr('data-content');
+		var animation = $('.tags5').siblings('animation').attr('data-content');
+		var videoTypeText = $('.tags1').siblings('.type').text();
+		var teamText = $('.tags2').siblings('.team').text();
+		var equipmentText = $('.tags3').siblings('.equipment').text();
+		var actorText = $('.tags4').siblings('.actor').text();
+		var animationText = $('.tags5').siblings('animation').text();
+		var time = $('#time').text();
+		var indentId = $('#phone').attr('data-content');
+		var description = [ "视频类别:" + videoTypeText, ",时长: 未选择", ",导演团队:" + teamText,
+				",拍摄设备:" + equipmentText, ",演员:" + actorText, ",动画:" + animationText ].join("");
+		var phone = $('#phone').val();
+		var verification_code = $('#phoneCode').val();
+		if(add){
+			if(first){
+				add = false;
+				loadData(function(result) {
+					add = true;
+					$('#phoneError').hide();
+					$('#codeError').hide();
+					if(result.code == 1){
 						$('#price').text(thousandCount(result.cost));
 						$('#phone').attr('data-content', result.indentId);
+						$("#code-container").remove();
+						$('#bar').removeClass('proWidth'); 
 						$('.item').hide();
 						$('#step1').hide();
 						$('#step2').show();
@@ -90,22 +139,56 @@ function controlCost(){
 							$('#step2').hide();
 							$('#step3').show();
 						}, 3000);
-					}, getContextPath() + '/calculate/cost', $.toJSON({
-						videoType : videoType,
-						team : team,
-						equipment : equipment,
-						actor : actor,
-						animation : animation,
-						//time : null,
-						phone : phone,
-						indentId : indentId,
-						description : description,
-						verification_code:verification_code
-					}));
-				}
+						first = false;
+					}else if(result.code == 0 && result.msg == '手机号不匹配'){
+						$('#phoneError').text( '手机号不匹配');
+						$('#phoneError').show();
+					}else{
+						$('#codeError').text( result.msg);
+						$('#codeError').show();
+					}
+				}, getContextPath() + '/calculate/cost', $.toJSON({
+					videoType : videoType,
+					team : team,
+					equipment : equipment,
+					actor : actor,
+					animation : animation,
+					//time : null,
+					phone : phone,
+					indentId : indentId,
+					description : description,
+					verification_code:verification_code
+				}));
+			}else{
+				loadData(function(result) {
+					flag = 1;
+					$('#price').text(thousandCount(result.cost));
+					$('#phone').attr('data-content', result.indentId);
+					$('.item').hide();
+					$('#step1').hide();
+					$('#step2').show();
+				 	setTimeout(function() {
+					 		$('#bar').addClass('proWidth'); 
+						}, 500);
+				 	setTimeout(function() {
+						$('#step2').hide();
+						$('#step3').show();
+					}, 3000);
+				}, getContextPath() + '/calculate/cost', $.toJSON({
+					videoType : videoType,
+					team : team,
+					equipment : equipment,
+					actor : actor,
+					animation : animation,
+					//time : null,
+					phone : phone,
+					indentId : indentId,
+					description : description,
+					verification_code:verification_code
+				}));
 			}
 		}
-	});
+	}
 }
 
 function init() {

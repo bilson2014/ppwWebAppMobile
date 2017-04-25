@@ -117,6 +117,41 @@ function createCard(msg){
 };
 
 function submitOrder(){
+	var loginTel = $('#rolephone').val();
+	
+	if(loginTel!=null && loginTel!= "" ){
+		loginOrder();
+	}else{
+		noLoginOrder();
+	}
+}
+
+loginOrder(){
+		loadData2(function(msg){
+			if(msg.ret){
+				//showSuccess();
+			   $('#orderTo').hide();
+			   $('#orderSuccess').show();
+			   $('#showStatues').text('恭喜您下单成功');
+			   clearDate();
+			}else{
+				$('#orderTo').hide();
+				$('#orderSuccess').show();
+				$('#showStatues').text('服务器异常请稍后再试');
+				clearDate();
+			}
+		}, getContextPath() + '/order/deliver', 
+			{indentName : $("#videoName").val(),
+			productId :$("#videoId").val() ,
+			teamId : $('#teamId').val(),
+			serviceId : $('#serviceId').val(),
+			csrftoken : $('#csrftoken').val(),
+			indent_tele : $('#rolephone').val()
+			});
+	
+}
+
+noLoginOrder(){
 	var verificationCodeValue =	$("#verificationCodeValue").val().trim();
 	var telephone = $('#phoneNumber').val().trim();
 	$('#phoneCode').hide();
@@ -127,6 +162,7 @@ function submitOrder(){
 				//showSuccess();
 			   $('#orderTo').hide();
 			   $('#orderSuccess').show();
+			   $('#showStatues').text('恭喜您下单成功');
 			   clearDate();
 			}else{
 				$('#codeError').text(msg.message);
@@ -143,8 +179,10 @@ function submitOrder(){
 			indent_tele : telephone
 			});
 		// ret
-	}	
+	}
 }
+
+
 
 function checkData(type){
 	var telephone = $('#phoneNumber').val().trim();

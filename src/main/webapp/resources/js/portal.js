@@ -296,46 +296,14 @@ var counts = 60; // 间隔函数，1秒执行
 var curCounts = 0; // 当前剩余秒数 - 注册
 var InterValObj; // timer变量，控制时间 - 注册
 function subPaipian(){
-	var flag = true;
-	$('#subPaipian').off("click").on("click",function(){
-		$('#error').hide();
-		$('#codeError').hide();
-		if(checkDatas(1)){ // 检查数据完整性
-				if(flag){
-					flag = false;
-					loadData2(function(msg){
-						if(msg.ret){
-							$('.comOrder').hide();
-							$('#orderSuccess').show().addClass('moedlActive');
-							$('#error').hide();
-							$('#codeError').hide();
-							window.clearInterval(InterValObj);
-							$('#getPhoneCode').text('发送验证码');
-							$('#getPhoneCode').removeAttr('disabled');
-							counts = 60;
-							curCounts = 0;
-							var contactTele = $('#indent_tele').val('');
-							var phoneCode = $('#phoneCode').val('');
-						}
-						else{
-							$('#codeError').show();
-							$('#codeError').text('验证码错误');
-						}
-						flag = true;
-					}, getContextPath() + '/order/deliver', 
-						{	
-						csrftoken:$("#csrftoken").val(),
-						indent_tele:$("#indent_tele").val(),
-						indent_recomment:$("#submit-indent-recomment").text(),
-						indentName:'直接下单',
-						productId:-1,
-						teamId:-1,
-						serviceId:-1,
-						phoneCode : $('#phoneCode').val(),
-					});	
-				}
-		}
-	});
+	
+	var loginTel = $('#rolephone').val();
+	
+	if(loginTel!=null && loginTel!= "" ){
+		loginOrder();
+	}else{
+		noLoginOrder();
+	}
 	
 	$('#getPhoneCode').off("click").on('click',function(){
 		$('#error').hide();
@@ -358,6 +326,85 @@ function subPaipian(){
 		}
 	});
 }
+
+function loginOrder(){
+	
+	$('#subPaipian').off("click").on("click",function(){	
+	
+	loadData2(function(msg){
+		if(msg.ret){
+			$('.comOrder').hide();
+			$('#orderSuccess').show().addClass('moedlActive');
+			$('#error').hide();
+			$('#codeError').hide();
+			$('#showStatues').text('恭喜您下单成功');
+		}
+		else{
+			$('.comOrder').hide();
+			$('#orderSuccess').show().addClass('moedlActive');
+			$('#error').hide();
+			$('#codeError').hide();
+			$('#showStatues').text('服务器异常请之后再试');
+		}
+		flag = true;
+	}, getContextPath() + '/order/deliver', 
+		{	
+		csrftoken:$("#csrftoken").val(),
+		indent_tele:$("#rolephone").val(),
+		indent_recomment:$("#submit-indent-recomment").text(),
+		indentName:'直接下单',
+		productId:-1,
+		teamId:-1,
+		serviceId:-1,
+		phoneCode : '',
+	});	
+	});
+}
+
+function noLoginOrder(){
+	var flag = true;
+	$('#subPaipian').off("click").on("click",function(){
+		$('#error').hide();
+		$('#codeError').hide();
+		if(checkDatas(1)){ // 检查数据完整性
+				if(flag){
+					flag = false;
+					loadData2(function(msg){
+						if(msg.ret){
+							$('.comOrder').hide();
+							$('#orderSuccess').show().addClass('moedlActive');
+							$('#error').hide();
+							$('#codeError').hide();
+							window.clearInterval(InterValObj);
+							$('#getPhoneCode').text('发送验证码');
+							$('#getPhoneCode').removeAttr('disabled');
+							counts = 60;
+							curCounts = 0;
+							var contactTele = $('#indent_tele').val('');
+							var phoneCode = $('#phoneCode').val('');
+							$('#showStatues').text('恭喜您下单成功');
+						}
+						else{
+							$('#codeError').show();
+							$('#codeError').text('验证码错误');
+						}
+						flag = true;
+					}, getContextPath() + '/order/deliver', 
+						{	
+						csrftoken:$("#csrftoken").val(),
+						indent_tele:$("#indent_tele").val(),
+						indent_recomment:$("#submit-indent-recomment").text(),
+						indentName:'直接下单',
+						productId:-1,
+						teamId:-1,
+						serviceId:-1,
+						phoneCode : $('#phoneCode').val(),
+					});	
+				}
+		}
+	});
+}
+
 
 function SetRemainTimes() {
 	if (curCounts == 0) {

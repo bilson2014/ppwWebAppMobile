@@ -54,12 +54,19 @@
 
 </head>
 <body>
-${imgPath }
+
+     <r:identity role="provider">
+	    <input type="hidden" id="rolephone" value="1314520ppw" />              
+	 </r:identity>
+	 <r:identity role="customer">
+	    <input type="hidden" id="rolephone" value="1314520ppw" />
+	 </r:identity>         
+	            
 	<input type="hidden" id="storage_node" value="${file_locate_storage_path }" />
 	<div class="model" id="orderSuccess">
 	         <div class="success">
 	            <img data-src="/resources/images/index/success.png" class="lazyload">
-	            <div>恭喜您下单成功</div>
+	            <div id="showStatues">恭喜您下单成功</div>
 	            <div>视频管家将会在两个小时内与您沟通</div>
 	            <div><a href="/">返回首页</a></div>
 	            <div id="checkSuccess">确认</div>
@@ -171,15 +178,18 @@ ${imgPath }
 				</c:if>
 				<input type="hidden" id="csrftoken" name="csrftoken" value="${csrftoken}"/>
 				<input type="hidden" id="token" name="token" value="${token}"/>
-    	<div class="getPhone">
-    		<input type="number" maxlength="16" id="indent_tele"  placeholder="填写手机号">
-    		<div class="error" id="error">手机号错误</div>
-    		<div class="getPhoneItem">
-	    		<input type="number" maxlength="16" id="phoneCode"  placeholder="输入验证码">
-	    		<div class="getCode" id="getPhoneCode">发送验证码</div>
-	    		<div class="error" id="codeError">错误</div>
-    		</div>
-    	</div>
+				       		
+			<r:noLogin>			
+		    	<div class="getPhone">
+		    		<input type="number" maxlength="16" id="indent_tele"  placeholder="填写手机号">
+		    		<div class="error" id="error">手机号错误</div>
+		    		<div class="getPhoneItem">
+			    		<input type="number" maxlength="16" id="phoneCode"  placeholder="输入验证码">
+			    		<div class="getCode" id="getPhoneCode">发送验证码</div>
+			    		<div class="error" id="codeError">错误</div>
+		    		</div>
+		    	</div>
+		   </r:noLogin> 	
     	<div class="order" id="subPaipian">预约拍片</div>
     	</form>
 	</div>

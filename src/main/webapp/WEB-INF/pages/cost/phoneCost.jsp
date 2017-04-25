@@ -50,6 +50,12 @@
 <script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
 </head>
 <body>
+     <r:identity role="provider">
+	    <input type="hidden" id="rolephone" value="${sessionScope.sessionInfo.telephone}" />              
+	 </r:identity>
+	 <r:identity role="customer">
+	    <input type="hidden" id="rolephone" value="${sessionScope.sessionInfo.telephone}" />
+	 </r:identity> 
 	<input type="hidden" id="storage_node" value="${file_locate_storage_path }" />
 
 	<div class="phoneHeader">
@@ -137,15 +143,17 @@
 	            <div class="swiper-slide swiper-no-swiping" >
 	                <div id="step1">
 		                  <img class="slideBg6" src="${imgPath}/cost/gPhone6.png">
-		                  <div class="item">
-		                     <input placeholder="您的手机号" id="phone" data-content="0">
-		                     <div class="error" id="phoneError">error</div>
-		                  </div>
-		                  <div class="item">
-		                     <input placeholder="输入您的验证码" id="phoneCode">
-		                     <div class="checkCode" id="checkCode">发送验证码</div>
-		                     <div class="error" id="codeError">error</div>
-		                  </div>
+		                  <r:noLogin>		
+			                  <div class="item">
+			                     <input placeholder="您的手机号" id="phone" data-content="0">
+			                     <div class="error" id="phoneError">error</div>
+			                  </div>
+			                  <div class="item">
+			                     <input placeholder="输入您的验证码" id="phoneCode">
+			                     <div class="checkCode" id="checkCode">发送验证码</div>
+			                     <div class="error" id="codeError">error</div>
+			                  </div>
+		                  </r:noLogin>		
 		                  <div class="start">开始计算</div>
 	                </div>  
 	                <div id="step2">

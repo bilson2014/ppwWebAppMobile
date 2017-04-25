@@ -2,6 +2,7 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
+<%@ taglib prefix="r" uri="/mytaglib"%>
 <%-- import CSS --%>
 <spring:url value="/resources/css/play.css" var="playCss" />
 <%-- import JS --%>
@@ -35,12 +36,20 @@
 
 <link rel="shortcut icon" href="${imgPath }/favicon.ico">
 <link rel="stylesheet" href="${playCss }">
+
 <!--[if lt IE 9]>
 		<script>window.html5 || document.write('<script src="html5shivJs"><\/script>')</script>
 	<![endif]-->
+	
 </head>
 <script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
 <body>
+     <r:identity role="provider">
+	    <input type="hidden" id="rolephone" value="${sessionScope.sessionInfo.telephone}" />              
+	 </r:identity>
+	 <r:identity role="customer">
+	    <input type="hidden" id="rolephone" value="${sessionScope.sessionInfo.telephone}" />
+	 </r:identity>  
 	<input type="hidden" id="storage_node" value="${file_locate_storage_path }" />
 	<input type="hidden" id="videoId" value="${product.productId }" />
 	<input type="hidden" id="videoName" value="${product.productName }" />
@@ -68,7 +77,7 @@
 	<div class="model" id="orderSuccess">
 		<div class="success">
 			<img src="${imgPath}/index/success.png">
-			<div>恭喜您下单成功</div>
+			<div id="showStatues">恭喜您下单成功</div>
 			<div>视频管家将会在两个小时内与您沟通</div>
 			<div>
 				<a href="/">返回首页</a>
@@ -80,20 +89,21 @@
 	<div class="model" id="orderTo">
 		<div class="showOrder">
 			<div class="title">立即下单,对接制作团队</div>
-			<div class="orderItem">
-				<input placeholder="填写手机号" id="phoneNumber"
-					style="height: 40px; width: 250px;">
-				<div class="error" id="phoneCode">错误</div>
-			</div>
-			<div class="orderItem">
-				<input placeholder="填写验证码" id="verificationCodeValue" type="text"
-					style="height: 40px; width: 250px;">
-				<div class="getCode" id="verification_code_recover_btn"
-					style="height: 40px; width: 70px; font-size: 12px">发送验证码</div>
-				<div class="error" id="codeError">错误</div>
-			</div>
-			<div class="submitOrder"
-				style="height: 40px; width: 70px; font-size: 12px" id="submitOrder">确认提交</div>
+			 <r:noLogin>
+					<div class="orderItem">
+						<input placeholder="填写手机号" id="phoneNumber"
+							style="height: 40px; width: 250px;">
+						<div class="error" id="phoneCode">错误</div>
+					</div>
+					<div class="orderItem">
+						<input placeholder="填写验证码" id="verificationCodeValue" type="text"
+							style="height: 40px; width: 250px;">
+						<div class="getCode" id="verification_code_recover_btn"
+							style="height: 40px; width: 70px; font-size: 12px">发送验证码</div>
+						<div class="error" id="codeError">错误</div>
+					</div>
+			</r:noLogin>
+			<div class="submitOrder" style="height: 40px; width: 70px; font-size: 12px" id="submitOrder">确认提交</div>
 				<img class="closeOrder" id="closeOrder" src="${imgPath }/index/close.png">
 		</div>
 	</div>
