@@ -27,7 +27,6 @@
 	var="providerInfoPhoneJs" />
 <spring:url value="/resources/lib/jquery/waypoints.min.js"
 	var="waypoints" />
-<spring:url value="/resources/js/remSet.js" var="remSetJs" />
 
 <!-- imgPath -->
 <spring:url value="/resources/images" var="imgPath" />
@@ -119,7 +118,6 @@
 		</div>
 
 		<!--说明区  -->
-
 		<div class="introduce contentAnimation">
 			<div class="titleDes">导演简介</div>
 			<div class="titleDesEn">Director profile</div>
@@ -196,7 +194,6 @@
 	<script src="${commonJs }"></script>
 	<script src="${providerInfoPhoneJs }"></script>
 	<script src="${imgLazyLoadingJs }"></script>
-	<script src="${remSetJs}"></script>
 
 </body>
 </html>

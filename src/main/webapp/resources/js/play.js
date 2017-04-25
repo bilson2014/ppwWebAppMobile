@@ -96,10 +96,13 @@ function createCard(msg){
 	var spl = str.split(" ");
 	var tags = "";
 	for (var int = 0; int < spl.length; int++) {
-		if(int == spl.length - 1){
-			tags = tags + spl[int];
+		if(int>4){
+			break;
+		}
+		if(int > 0){
+			 tags += " / " + spl[int];
 		}else{
-			tags = tags + spl[int] +" / ";
+			tags += spl[int] ;
 		}
 	}
 	var $body1 = ''

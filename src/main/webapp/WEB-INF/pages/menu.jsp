@@ -29,7 +29,11 @@
 	                    <img class="close" id="editInfo" src="${imgPath}/menu/edit.png">
 	                  </r:identity>
 	                  <r:identity role="customer">
-	                       <a href=""><img class="userLogo" id="getImgUrl" src="${file_locate_storage_path }${sessionScope.sessionInfo.photo}"></a> 
+	                       <a href="/phone/user/index"><img class="userLogo" id="getImgUrl" src="${file_locate_storage_path }${sessionScope.sessionInfo.photo}"></a> 
+	                       <img class="close" id="editInfo" src="${imgPath}/menu/edit.png">
+	                  </r:identity>
+	                  <r:identity role="employee">
+	                       <a href="/mgr/index"><img class="userLogo" id="getImgUrl" src="${file_locate_storage_path }${sessionScope.sessionInfo.photo}"></a> 
 	                       <img class="close" id="editInfo" src="${imgPath}/menu/edit.png">
 	                  </r:identity>
 	                  <a href="/userInfo" class="hide" ><img class="edit"  src="${imgPath}/menu/editMenu.png"></a>
@@ -38,6 +42,9 @@
 	                  </r:identity>
 	                  <r:identity role="customer">
 	                     <div>${sessionScope.sessionInfo.telephone}</div>
+	                  </r:identity>
+	                  <r:identity role="employee">
+	                     <div>${sessionScope.sessionInfo.loginName}</div>
 	                  </r:identity>
 	                  <r:noLogin>
 	                      <div>未登录</div>

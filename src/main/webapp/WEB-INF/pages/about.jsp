@@ -9,7 +9,7 @@
 <spring:url value="/resources/js/common.js" var="commonJs"/>
 <!-- img path -->
 <spring:url value="/resources/images" var="imgPath" />
-<spring:url value="/resources/js/remSet.js" var="remSetJs" />
+<spring:url value="/resources/js/company/about.js" var="aboutJs" />
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -49,7 +49,7 @@
 	
        <div class="pagePhone">
 	       <div class="videoShow">
-				<video id="setVideo" class="setVideo" poster="${imgPath}/company/2017.png" controls id="setVideo"></video> 
+				<video id="setVideo" class="setVideo" poster="${imgPath}/company/2017.png" controls id="setVideo" src="${file_locate_storage_path }group1/M00/00/60/CgpmTlib2EaAbOOdAQ1EMav8_P0022.mp4"></video> 
 	       </div>
 	       <div class="timeLine">
 	            <div class="stepTop">
@@ -123,7 +123,7 @@
 <script src="${pluginJs }"></script>
 <script src="${jsonJs }"></script>
 <script src="${commonJs }"></script>
-<script src="${remSetJs}"></script>
+<script src="${aboutJs}"></script>
 <script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
 </body>
 </html>

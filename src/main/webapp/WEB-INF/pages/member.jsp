@@ -14,6 +14,9 @@
 <spring:url value="/resources/js/common.js" var="commonJs" />
 <spring:url value="/resources/js/company/member.js" var="memberJs" />
 
+<spring:url value="/resources/lib/jquery.scrollstop/jquery.scrollstop.min.js" var="scrollstopJs"/>
+<spring:url value="/resources/lib/jquery.lazyload/lazysizes.min.js" var="lazyloadJs"/>
+
 <!-- imgPath -->
 <spring:url value="/resources/images" var="imgPath" />
 <!DOCTYPE html>
@@ -54,18 +57,18 @@ html {
 	<div class="pagePhone">
 
 		<video id="setVideo" preload="auto" controls="controls"
-			poster="${imgPath }/company/poster.jpg" id="setVideo"></video>
+			poster="${imgPath }/company/poster.jpg" id="setVideo" src="${file_locate_storage_path}group1/M00/00/20/CgqNZViiqe2ANmqIAZ-Ai8Au-R8971.mp4"></video>
 
 		<c:if test="${!empty list}">
 			<c:forEach items="${list}" var="staff" varStatus="status">
 				<div class="memberInfo">
 					<div class="memberCard open checkOpen" id="${staff.staffId}">
 						<div class="infoHeadSide contentImg${status.index}">
-							<img class="infoHead lazy" width="79" height="79"
+							<img class="infoHead lazyload" width="79" height="79"
 								alt="${staff.staffName}_拍片网"
 								src="/resources/images/icons/lazyloading2.png"
 								<%-- data-original="<spring:url value='/staff/img${staff.staffImageUrl }'/>"> --%>
-								data-original="${file_locate_storage_path}${staff.staffImageUrl }">
+								data-src="${file_locate_storage_path}${staff.staffImageUrl }">
 						</div>
 						<ul class="contentWord${status.index}">
 							<li>${staff.staffName}</li>
@@ -115,6 +118,8 @@ html {
 	<script src="${jsonJs }"></script>
 	<script src="${commonJs }"></script>
 	<script src="${memberJs}"></script>
+	<script src="${scrollstopJs}"></script>
+    <script src="${lazyloadJs}"></script>
 	<script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
 </body>
 </html>

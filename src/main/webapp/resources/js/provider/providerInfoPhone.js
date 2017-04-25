@@ -57,11 +57,24 @@ $().ready(function(){
 	function createCard(msg){
 		var tema = msg.teamId;
 		var pro = msg.productId;
+		var str = msg.tags;
+		var spl = str.split(" ");
+		var tags = "";
+		for (var int = 0; int < spl.length; int++) {
+			if(int>4){
+				break;
+			}
+			if(int > 0){
+				tags += " / " + spl[int];
+			}else{
+				tags += spl[int];
+			}
+		}
 		var $body1 = ''
 			+'   <a href="/play/'+tema+'_'+pro+'.html">'
 			+'		 <div class="contentItem" style="background:url('+getDfsHostName()+''+msg.picLDUrl+') no-repeat">'
 			+'			   <div class="itemTitle">'+msg.productName+'</div>'
-			+'					 <div class="itemTag">'+msg.tags+'</div>'
+			+'					 <div class="itemTag">'+tags+'</div>'
 			+'					 <div class="itemBack"></div>'
 			+'		 </div> '
 			+'	 </a>'

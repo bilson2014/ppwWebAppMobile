@@ -81,7 +81,14 @@
 					             </div>
 				            </a> 
 	                    </c:forEach>
-	             </c:if>       
+	             </c:if>  
+	             
+	             <c:if test="${empty list}">
+	                  <div class="noImg">
+					         <img src="${imgPath }/index/noVideo.png">
+					         <div>您找的新闻遗落在外星球了！</div>
+	    			 </div>
+	             </c:if>     
 	            
 	       </div>
 	       <jsp:include flush="true" page="../foot.jsp"></jsp:include> 
