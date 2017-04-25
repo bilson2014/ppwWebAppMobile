@@ -9,7 +9,7 @@
 <spring:url value="/resources/lib/jquery/plugins.js" var="pluginJs"/>
 <spring:url value="/resources/lib/jquery.json/jquery.json-2.4.min.js" var="jsonJs"/>
 <spring:url value="/resources/js/common.js" var="commonJs"/>
-<spring:url value="/resources/js/salesman/mgActive.js" var="activeJs"/>
+<spring:url value="/resources/js/activity/mg/mg.js" var="mgJs"/>
 <!-- img path -->
 <spring:url value="/resources/images" var="imgPath" />
 <!DOCTYPE html>
@@ -39,7 +39,6 @@
 </head>
 <body>
 	   <input type="hidden" id="storage_node" value="${file_locate_storage_path }" />
-
  
          <div class="pagePhone">
          
@@ -51,11 +50,10 @@
               <form id="order-form" role="form" method="post" autocomplete="off" accept-charset="UTF-8">
 				<input type="hidden" id="csrftoken" name="csrftoken" value="${csrftoken}"/>
 				<input type="hidden" id="token" name="token" value="${token}"/>
-				<input type="hidden" id="indentName" name="indentName" value="活动-头条-MG"/>
-				<input type="hidden" id="indent_recomment" name="indent_recomment" value="123"/>
+				<input type="hidden" name="salesmanUniqueId" value="${uniqueId }">
 	              <div class="order">
 	                  <div class="title">您的姓名</div>
-	                  <input type="text" maxlength="10" id="name"  />
+	                  <input type="text" maxlength="10" id="user_name"  />
 	                  <div class="error" id="nameError">请填写您的姓名</div>
 	                  <div class="title">您的手机号</div>
 	                  <input type="number" oninput="if(value.length>11)value=value.slice(0,11)"  id="indent_tele" name="indent_tele" />
@@ -69,7 +67,7 @@
 <script src="${pluginJs}"></script>
 <script src="${jsonJs}"></script>
 <script src="${commonJs}"></script>
-<script src="${activeJs}"></script>
+<script src="${mgJs}"></script>
 <!-- 加载Mob share 控件 -->
 </body>
 </html>

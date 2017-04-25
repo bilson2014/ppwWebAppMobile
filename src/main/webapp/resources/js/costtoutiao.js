@@ -205,6 +205,7 @@ function getPrice(){
 			equipment :equipment ,
 			actor : actor,
 			animation : animation,
+			indentName : '活动-成本计算器-头条',
 			time : '0',
 			phone : $('#phone').val(),
 			indentId : $('#phoneCode').attr('data-content'),

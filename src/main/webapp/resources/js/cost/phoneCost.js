@@ -57,7 +57,6 @@ function loginOrder(){
 					$('#step3').show();
 				}, 3000);
 				first = false;
-			
 		}, getContextPath() + '/calculate/cost', $.toJSON({
 			videoType : videoType,
 			team : team,
@@ -118,12 +117,56 @@ function noLoginOrder(){
 		var phone = $('#phone').val();
 		var verification_code = $('#phoneCode').val();
 		if(add){
-			if(first){
-				add = false;
-				loadData(function(result) {
-					add = true;
-					$('#phoneError').hide();
-					$('#codeError').hide();
+				if(first){
+					var time = $('#time').text();
+					var indentId = $('#phone').attr('data-content');
+					var description = [ "视频类别:" + videoTypeText, ",时长: 未选择", ",导演团队:" + teamText,
+							",拍摄设备:" + equipmentText, ",演员:" + actorText, ",动画:" + animationText ].join("");
+					var phone = $('#phone').val();
+					var verification_code = $('#phoneCode').val();
+					add = false;
+					loadData(function(result) {
+						add = true;
+						$('#phoneError').hide();
+						$('#codeError').hide();
+						if(result.code == 1){
+							$('#price').text(thousandCount(result.cost));
+							$('#phone').attr('data-content', result.indentId);
+							$("#code-container").remove();
+							$('#bar').removeClass('proWidth'); 
+							$('.item').hide();
+							$('#step1').hide();
+							$('#step2').show();
+						 	setTimeout(function() {
+							 		$('#bar').addClass('proWidth'); 
+								}, 500);
+						 	setTimeout(function() {
+								$('#step2').hide();
+								$('#step3').show();
+							}, 3000);
+							first = false;
+						}else if(result.code == 0 && result.msg == '手机号不匹配'){
+							$('#phoneError').text( '手机号不匹配');
+							$('#phoneError').show();
+						}else{
+							$('#codeError').text( result.msg);
+							$('#codeError').show();
+						}
+					}, getContextPath() + '/calculate/cost', $.toJSON({
+						videoType : videoType,
+						team : team,
+						equipment : equipment,
+						actor : actor,
+						animation : animation,
+						indentName : '网站-移动-成本计算器',
+						phone : phone,
+						indentId : indentId,
+						description : description,
+						verification_code:verification_code
+					}));
+				}else{
+					loadData(function(result) {
+						flag = 1;
 					if(result.code == 1){
 						$('#price').text(thousandCount(result.cost));
 						$('#phone').attr('data-content', result.indentId);
@@ -147,33 +190,6 @@ function noLoginOrder(){
 						$('#codeError').text( result.msg);
 						$('#codeError').show();
 					}
-				}, getContextPath() + '/calculate/cost', $.toJSON({
-					videoType : videoType,
-					team : team,
-					equipment : equipment,
-					actor : actor,
-					animation : animation,
-					//time : null,
-					phone : phone,
-					indentId : indentId,
-					description : description,
-					verification_code:verification_code
-				}));
-			}else{
-				loadData(function(result) {
-					flag = 1;
-					$('#price').text(thousandCount(result.cost));
-					$('#phone').attr('data-content', result.indentId);
-					$('.item').hide();
-					$('#step1').hide();
-					$('#step2').show();
-				 	setTimeout(function() {
-					 		$('#bar').addClass('proWidth'); 
-						}, 500);
-				 	setTimeout(function() {
-						$('#step2').hide();
-						$('#step3').show();
-					}, 3000);
 				}, getContextPath() + '/calculate/cost', $.toJSON({
 					videoType : videoType,
 					team : team,

@@ -159,7 +159,6 @@ noLoginOrder(){
 	if(checkData(1) && checkData(2)){
 		loadData2(function(msg){
 			if(msg.ret){
-				//showSuccess();
 			   $('#orderTo').hide();
 			   $('#orderSuccess').show();
 			   $('#showStatues').text('恭喜您下单成功');
@@ -169,7 +168,7 @@ noLoginOrder(){
 				$('#codeError').show();
 			}
 		}, getContextPath() + '/order/deliver', 
-			{indentName : $("#videoName").val(),
+			{indentName : '网站-移动-' + $("#videoName").val(),
 			productId :$("#videoId").val() ,
 			teamId : $('#teamId').val(),
 			serviceId : $('#serviceId').val(),
@@ -178,7 +177,6 @@ noLoginOrder(){
 			indent_recomment:'样片名称:'+$("#videoName").val()+',价格:'+$("#originalPrice").val(),
 			indent_tele : telephone
 			});
-		// ret
 	}
 }
 

@@ -8,6 +8,14 @@
 		                   http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd
 		                   http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd">
 
+	<mvc:resources location="/resources/" mapping="/resources/**" />
+	
+	<context:component-scan base-package="com.panfeng.web.wearable.resource.controller" />
+
+	<context:annotation-config />
+
+	<mvc:annotation-driven />
+
 	<mvc:view-controller path="/login" view-name="/loginChoose/phoneLogin" />
 
 	<mvc:view-controller path="/mgr/login" view-name="/managerLogin" />
@@ -52,13 +60,10 @@
 	<mvc:view-controller path="/costtoutiao" view-name="/costcalculatetoutiao" />
 	
 	
-	<!-- test -->
 	<mvc:view-controller path="/repwd" view-name="/repwd" />
 	<mvc:view-controller path="/play" view-name="/play" />
 	<mvc:view-controller path="/searchs" view-name="/searchs" />
 	<mvc:view-controller path="/newsInfo" view-name="/news/newsInfo" />
-	<mvc:view-controller path="/test" view-name="/portalTest" />
-	<mvc:resources location="/resources/" mapping="/resources/**" />
 	<mvc:view-controller path="/about" view-name="/about" />
 	<mvc:view-controller path="/pif" view-name="/provider/providerInfoPhones" />
 	<mvc:view-controller path="/mg" view-name="/salesman/mgActive" />
@@ -67,19 +72,12 @@
 	<mvc:view-controller path="/loginSele" view-name="/loginChoose/loginSele" />
 	<mvc:view-controller path="/regSele" view-name="/loginChoose/regSele" />
 	<mvc:view-controller path="/pLogin" view-name="/loginChoose/proPhoneLogin" />
-    <mvc:view-controller path="/test" view-name="/test" />
     <mvc:view-controller path="/userInfo" view-name="/customer/userInfo" />
     <mvc:view-controller path="/phoneCost" view-name="/cost/phoneCost" />
     
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver"
 		p:prefix="/WEB-INF/pages/" p:suffix=".jsp" />
 
-	<context:component-scan base-package="com.panfeng.web.wearable.resource.controller" />
-
-	<context:annotation-config />
-
-	<mvc:annotation-driven />
-	
 	<mvc:interceptors>
 		<mvc:interceptor>
 			<mvc:mapping path="/**" />
@@ -93,12 +91,6 @@
 			<!-- <mvc:mapping path="/pay/income" /> -->
 			<bean class="com.panfeng.web.wearable.filter.ValidateTokenInterceptor" />
 		</mvc:interceptor>
-
-		<!-- 匹配URL路径，如果不配置或配置 /**,将拦截所有的controller -->
-		<!-- 验证作品分类需要登陆才能使用 -->
-		<!-- <mvc:interceptor> <mvc:mapping path="/list.html"/> <bean class="com.panfeng.web.wearable.filter.LoginInterceptor"/> 
-			</mvc:interceptor> -->
-
 
 		<mvc:interceptor>
 			<mvc:mapping path="/phone/user/**" />
