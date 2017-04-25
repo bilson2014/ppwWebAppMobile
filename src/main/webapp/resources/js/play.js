@@ -121,7 +121,6 @@ function submitOrder(){
 	if(checkData(1) && checkData(2)){
 		loadData2(function(msg){
 			if(msg.ret){
-				//showSuccess();
 			   $('#orderTo').hide();
 			   $('#orderSuccess').show();
 			   clearDate();
@@ -130,7 +129,7 @@ function submitOrder(){
 				$('#codeError').show();
 			}
 		}, getContextPath() + '/order/deliver', 
-			{indentName : $("#videoName").val(),
+			{indentName : '网站-移动-' + $("#videoName").val(),
 			productId :$("#videoId").val() ,
 			teamId : $('#teamId').val(),
 			serviceId : $('#serviceId').val(),
@@ -139,7 +138,6 @@ function submitOrder(){
 			indent_recomment:'样片名称:'+$("#videoName").val()+',价格:'+$("#originalPrice").val(),
 			indent_tele : telephone
 			});
-		// ret
 	}	
 }
 

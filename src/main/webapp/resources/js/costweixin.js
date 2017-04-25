@@ -200,6 +200,7 @@ function getPrice(){
 			team : team,
 			equipment :equipment ,
 			actor : actor,
+			indentName : '活动-成本计算器-微信朋友圈',
 			animation : animation,
 			time : '0',
 			phone : $('#phone').val(),

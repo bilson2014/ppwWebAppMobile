@@ -1,4 +1,3 @@
-//var critical = [12800,28800]; // 临界值
 var critical = [39800,59800]; // 临界值
 
 $().ready(function() {
@@ -46,20 +45,17 @@ function loadVideoList() {
 			// 填充数据
 			$('#first-video-section').empty();
 			$('#first-video-section').append(composing(first_section));
-			//$('#firstPrice').text('12800');
 			$('#firstPrice').text('39800');
 			
 			// 装配第二块视频
 			$('#second-video-section').empty();
 			$('#second-video-section').append(composing(second_section));
-			//$('#secondPrice').text('28800');
 			$('#secondPrice').text('59800');
 			
 			
 			// 装配第三块视频
 			$('#third-video-section').empty();
 			$('#third-video-section').append(composing(third_section));
-			//$('#thirdPrice').text('59800');
 			$('#thirdPrice').text('99800');
 			
 			playVideo();
@@ -97,7 +93,6 @@ function loadVideoList() {
 				$body += '<div class="video-content">';
 				$body += '<ul>';
 				$body += '<li class="font-title">' + product.productName+ '</li>';
-		/*		$body += '<li class="font-content">' + product.pDescription+ '</li>';*/
 				$body += '<li><a href="'+url+'" ><div class="video-btn"><img style="width:100%" src="/resources/images/goodGod/toOrder.png"></div></a></li>';
 				$body += '</div>';
 				$body += '</ul>';

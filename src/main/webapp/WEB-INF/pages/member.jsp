@@ -39,7 +39,6 @@ html {
 }
 </style>
 
-<script type="text/javascript" src="http://player.youku.com/jsapi"></script>
 </head>
 <body>
 	<input type="hidden" id="storage_node"

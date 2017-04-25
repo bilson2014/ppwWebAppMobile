@@ -1,7 +1,6 @@
 package com.panfeng.web.wearable.resource.controller;
 
 import java.io.UnsupportedEncodingException;
-import java.net.URLEncoder;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -21,14 +20,19 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.paipianwang.pat.common.config.PublicConfig;
 import com.paipianwang.pat.common.constant.PmsConstant;
+import com.paipianwang.pat.common.util.DateUtils;
 import com.paipianwang.pat.common.util.ValidateUtil;
 import com.paipianwang.pat.facade.indent.entity.PmsIndent;
+import com.paipianwang.pat.facade.indent.service.PmsIndentFacade;
 import com.paipianwang.pat.facade.product.entity.PmsProduct;
+import com.paipianwang.pat.facade.product.entity.PmsService;
 import com.paipianwang.pat.facade.product.service.PmsProductFacade;
+import com.paipianwang.pat.facade.product.service.PmsServiceFacade;
 import com.paipianwang.pat.facade.sales.entity.PmsSalesman;
+import com.paipianwang.pat.facade.sales.service.PmsSalesmanFacade;
 import com.paipianwang.pat.facade.team.entity.PmsTeam;
 import com.paipianwang.pat.facade.team.service.PmsTeamFacade;
-import com.panfeng.web.wearable.domain.Result;
+import com.panfeng.web.wearable.mq.service.SmsMQService;
 import com.panfeng.web.wearable.security.AESUtil;
 import com.panfeng.web.wearable.util.HttpUtil;
 import com.panfeng.web.wearable.util.IndentUtil;
@@ -40,12 +44,24 @@ public class SalesmanController extends BaseController {
 	final Logger serLogger = LoggerFactory.getLogger("service"); // service log
 
 	final Logger logger = LoggerFactory.getLogger("error");
-	
+
 	@Autowired
 	final private PmsTeamFacade pmsTeamFacade = null;
-	
+
 	@Autowired
-	final private PmsProductFacade pmsProductFacade = null; 
+	final private PmsProductFacade pmsProductFacade = null;
+
+	@Autowired
+	private PmsSalesmanFacade pmsSalesmanFacade = null;
+
+	@Autowired
+	private PmsIndentFacade pmsIndentFacade = null;
+
+	@Autowired
+	private PmsServiceFacade pmsServiceFacade = null;
+
+	@Autowired
+	private SmsMQService smsMQService = null;
 
 	/**
 	 * 手机分销人直接下单页
@@ -57,7 +73,7 @@ public class SalesmanController extends BaseController {
 		// 判断uniqueId是否合法
 		final PmsSalesman salesman = new PmsSalesman();
 		salesman.setUniqueId(uniqueId);
-		if (isValid(request, salesman)) {
+		if (isValid(uniqueId)) {
 
 			final PmsIndent indent = new PmsIndent();
 			indent.setTeamId(-1l);
@@ -90,7 +106,7 @@ public class SalesmanController extends BaseController {
 		// 判断uniqueId是否合法
 		final PmsSalesman salesman = new PmsSalesman();
 		salesman.setUniqueId(uniqueId);
-		if (isValid(request, salesman)) {
+		if (isValid(uniqueId)) {
 
 			final PmsProduct product = pmsProductFacade.loadProduct(Integer.valueOf(productId + ""));
 			if (product.getTeamId() != null && !"".equals(product.getTeamId())) {
@@ -133,34 +149,58 @@ public class SalesmanController extends BaseController {
 			final ModelMap model) throws UnsupportedEncodingException {
 
 		request.setCharacterEncoding("UTF-8");
-		final String url = PublicConfig.URL_PREFIX + "portal/indent/order";
 		try {
-			indent.setIndentName(URLEncoder.encode(indent.getIndentName(), "UTF-8"));
-			// add by Jack,2016-06-22 19:45 begin
-			// -> to promote security for order
 			String token = indent.getToken();
 			// token 解密
 			token = AESUtil.Decrypt(token, PmsConstant.ORDER_TOKEN_UNIQUE_KEY);
 			final PmsIndent nIndent = JsonUtil.toBean(token, PmsIndent.class);
 			if (!HasDigit(nIndent.getSalesmanUniqueId())) {// 代表微信 今日头条等特定人
-				indent.setIndentName(indent.getIndentName() + "(" + nIndent.getSalesmanUniqueId() + ")");
+				if ("微信".equals(nIndent.getSalesmanUniqueId()))
+					indent.setIndentName("活动-成本计算器-微信朋友圈");
+				else if ("头条".equals(nIndent.getSalesmanUniqueId()))
+					indent.setIndentName("活动-成本计算器-头条");
+				else
+					indent.setIndentName(indent.getIndentName() + "(" + nIndent.getSalesmanUniqueId() + ")");
 			}
-			if (StringUtils.isNotBlank(indent.getIndent_recomment())) {
-				indent.setIndent_recomment(URLEncoder.encode(indent.getIndent_recomment(), "UTF-8"));
+
+			long teamId = indent.getTeamId();
+			long productId = indent.getProductId();
+			Long serviceId = indent.getServiceId();
+			String productName = null;
+			// 如果按产品下单，那么下单之后的订单信息需要与数据库进行对比
+			if (teamId != -1 && productId != -1 && serviceId != -1) {
+				// 产品下单
+				final PmsProduct product = pmsProductFacade.findProductById(productId);
+				productName = product.getProductName();
+				final PmsService ser = pmsServiceFacade.getServiceById(serviceId);
+				indent.setSecond(ser.getMcoms());
+				indent.setIndentPrice(ser.getServiceRealPrice());
+				indent.setProduct_name(productName);
 			}
 			indent.setTeamId(nIndent.getTeamId());
 			indent.setProductId(nIndent.getProductId());
 			indent.setServiceId(nIndent.getServiceId());
 			indent.setSalesmanUniqueId(nIndent.getSalesmanUniqueId());
-			String str = HttpUtil.httpPost(url, indent, request);
-			if (str != null && !"".equals(str)) {
-				final Result result = JsonUtil.toBean(str, Result.class);
 
-				if (result.isRet()) {
-					model.addAttribute("uniqueId", indent.getSalesmanUniqueId());
-					return new ModelAndView("/salesman/success");
+			boolean res = pmsIndentFacade.saveOrder(indent);
+			if (res) {
+				String telephone = PublicConfig.PHONENUMBER_ORDER;
+				if (indent.getSendToStaff()) {
+					if (StringUtils.isBlank(productName)) {
+						smsMQService.sendMessage("131844", telephone,
+								new String[] { indent.getIndent_tele(), DateUtils.nowTime(), "【未指定具体影片】" });
+					} else {
+						smsMQService.sendMessage("131844", telephone,
+								new String[] { indent.getIndent_tele(), DateUtils.nowTime(), "【" + productName + "】" });
+					}
 				}
+				// 发送短信给用户下单成功
+				if (indent.getSendToUser()) {
+					smsMQService.sendMessage("131329", indent.getIndent_tele(), null);
+				}
+				return new ModelAndView("/salesman/success");
 			}
+
 		} catch (Exception e) {
 			logger.error("SalesmanController method:successViewOnPhone() Order encode Failure ...");
 			e.printStackTrace();
@@ -175,7 +215,7 @@ public class SalesmanController extends BaseController {
 		// 判断uniqueId是否合法
 		final PmsSalesman salesman = new PmsSalesman();
 		salesman.setUniqueId(uniqueId);
-		if (isValid(request, salesman)) {
+		if (isValid(uniqueId)) {
 
 			model.addAttribute("uniqueId", uniqueId);
 			return new ModelAndView("/salesman/portal");
@@ -204,18 +244,16 @@ public class SalesmanController extends BaseController {
 		return null;
 	}
 
-	public boolean isValid(final HttpServletRequest request, final PmsSalesman salesman) {
-
-		// 判断uniqueId是否合法
-		final String url = PublicConfig.URL_PREFIX + "portal/salesman/valid";
-		final String str = HttpUtil.httpPost(url, salesman, request);
-		if (ValidateUtil.isValid(str)) {
-			Boolean result = JsonUtil.toBean(str, Boolean.class);
-			if (result)
-				return true;
-		}
-
-		return false;
+	/**
+	 * 验证uniqueId是否合法
+	 * 
+	 * @param request
+	 * @param salesman
+	 * @return
+	 */
+	public boolean isValid(final String uniqueId) {
+		final PmsSalesman saleman = pmsSalesmanFacade.findSalesmanByUniqueId(uniqueId);
+		return saleman == null ? false : true;
 	}
 
 	// 判断一个字符串是否含有数字

@@ -140,13 +140,6 @@ public class NewPhoneController extends BaseController {
 		return new ModelAndView("/searchView", model);
 	}
 
-	@RequestMapping("/")
-	public ModelAndView portalView(final ModelMap model, HttpServletRequest request) {
-		SessionInfo sessionInfo = getCurrentInfo(request);
-		model.put("sessionInfo", sessionInfo);
-		return new ModelAndView("/portal", model);
-	}
-
 	// 跳转至 移动端 活动页面
 	@RequestMapping("/activity.html")
 	public ModelAndView activityView(final ModelMap model, final HttpServletRequest request) {
