@@ -45,10 +45,10 @@
 <script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
 <body>
      <r:identity role="provider">
-	    <input type="hidden" id="rolephone" value="${sessionScope.sessionInfo.telephone}" />              
+	    <input type="hidden" id="rolephone" value="1314520ppw" />              
 	 </r:identity>
 	 <r:identity role="customer">
-	    <input type="hidden" id="rolephone" value="${sessionScope.sessionInfo.telephone}" />
+	    <input type="hidden" id="rolephone" value="1314520ppw" />
 	 </r:identity>  
 	<input type="hidden" id="storage_node" value="${file_locate_storage_path }" />
 	<input type="hidden" id="videoId" value="${product.productId }" />
