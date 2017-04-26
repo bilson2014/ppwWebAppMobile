@@ -46,12 +46,12 @@ public class CostCalculateController extends BaseController {
 		final HttpSession session = request.getSession();
 		// 判断该用户是否登录
 		final SessionInfo info = (SessionInfo) session.getAttribute(PmsConstant.SESSION_INFO);
+		final String codeOfphone = (String) request.getSession().getAttribute("codeOfphone");
 		
 		if(calculate.getIndentId() == 0){//首次计算
 			if(info == null) {
 				// 未登录，则需要验证短信验证码
 				final String code = (String) request.getSession().getAttribute("code");
-				final String codeOfphone = (String) request.getSession().getAttribute("codeOfphone");
 				if(StringUtils.isBlank(code) || StringUtils.isBlank(codeOfphone)){
 					map.put("code", 0);
 					map.put("msg", "请重新获取验证码");
@@ -74,8 +74,13 @@ public class CostCalculateController extends BaseController {
 		map.put("cost", cost);
 		//提交订单
 		PmsIndent indent = new PmsIndent();
-		final String telephone = info.getTelephone();
-		indent.setIndent_tele(telephone == null ? calculate.getPhone() : telephone);
+		
+		if(info == null){
+			indent.setIndent_tele(codeOfphone == null ? calculate.getPhone() : codeOfphone);
+		}else{
+			final String telephone = info.getTelephone();
+			indent.setIndent_tele(telephone == null ? calculate.getPhone() : telephone);
+		}
 		indent.setIndentId(calculate.getIndentId());
 		indent.setId(calculate.getIndentId());
 		

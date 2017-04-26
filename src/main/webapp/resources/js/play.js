@@ -13,7 +13,15 @@ $().ready(function() {
     $('#verification_code_recover_btn').off('click').on('click',verificationCodeBtn);
     $('#submitOrder').off('click').on('click',submitOrder);
     $('.orderVideo').off('click').on('click',function(){
-    	 $('#orderTo').show();
+    	
+    	var loginTel = $('#rolephone').val();
+    	
+    	if(loginTel!=null && loginTel!= "" ){
+    		loginOrder();
+    	}else{
+    		$('#orderTo').show();
+    	}
+    	 
     });
     $('#checkSuccess').off('click').on('click',function(){
     	$('#orderSuccess').hide();
@@ -117,16 +125,10 @@ function createCard(msg){
 };
 
 function submitOrder(){
-	var loginTel = $('#rolephone').val();
-	
-	if(loginTel!=null && loginTel!= "" ){
-		loginOrder();
-	}else{
 		noLoginOrder();
-	}
 }
 
-loginOrder(){
+function loginOrder(){
 		loadData2(function(msg){
 			if(msg.ret){
 				//showSuccess();
@@ -151,7 +153,7 @@ loginOrder(){
 	
 }
 
-noLoginOrder(){
+function noLoginOrder(){
 	var verificationCodeValue =	$("#verificationCodeValue").val().trim();
 	var telephone = $('#phoneNumber').val().trim();
 	$('#phoneCode').hide();

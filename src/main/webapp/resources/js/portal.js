@@ -350,7 +350,7 @@ function loginOrder(){
 	}, getContextPath() + '/order/deliver', 
 		{	
 		csrftoken:$("#csrftoken").val(),
-		indent_tele:$("#rolephone").val(),
+		indent_tele:'',
 		indent_recomment:$("#submit-indent-recomment").text(),
 		indentName:'直接下单',
 		productId:-1,
