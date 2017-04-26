@@ -13,7 +13,15 @@ $().ready(function() {
     $('#verification_code_recover_btn').off('click').on('click',verificationCodeBtn);
     $('#submitOrder').off('click').on('click',submitOrder);
     $('.orderVideo').off('click').on('click',function(){
-    	 $('#orderTo').show();
+    	
+    	var loginTel = $('#rolephone').val();
+    	
+    	if(loginTel!=null && loginTel!= "" ){
+    		loginOrder();
+    	}else{
+    		$('#orderTo').show();
+    	}
+    	 
     });
     $('#checkSuccess').off('click').on('click',function(){
     	$('#orderSuccess').hide();
@@ -117,6 +125,35 @@ function createCard(msg){
 };
 
 function submitOrder(){
+		noLoginOrder();
+}
+
+function loginOrder(){
+		loadData2(function(msg){
+			if(msg.ret){
+				//showSuccess();
+			   $('#orderTo').hide();
+			   $('#orderSuccess').show();
+			   $('#showStatues').text('恭喜您下单成功');
+			   clearDate();
+			}else{
+				$('#orderTo').hide();
+				$('#orderSuccess').show();
+				$('#showStatues').text('服务器异常请稍后再试');
+				clearDate();
+			}
+		}, getContextPath() + '/order/deliver', 
+			{indentName : $("#videoName").val(),
+			productId :$("#videoId").val() ,
+			teamId : $('#teamId').val(),
+			serviceId : $('#serviceId').val(),
+			csrftoken : $('#csrftoken').val(),
+			indent_tele : $('#rolephone').val()
+			});
+	
+}
+
+function noLoginOrder(){
 	var verificationCodeValue =	$("#verificationCodeValue").val().trim();
 	var telephone = $('#phoneNumber').val().trim();
 	$('#phoneCode').hide();
@@ -126,6 +163,7 @@ function submitOrder(){
 			if(msg.ret){
 			   $('#orderTo').hide();
 			   $('#orderSuccess').show();
+			   $('#showStatues').text('恭喜您下单成功');
 			   clearDate();
 			}else{
 				$('#codeError').text(msg.message);
@@ -141,8 +179,10 @@ function submitOrder(){
 			indent_recomment:'样片名称:'+$("#videoName").val()+',价格:'+$("#originalPrice").val(),
 			indent_tele : telephone
 			});
-	}	
+	}
 }
+
+
 
 function checkData(type){
 	var telephone = $('#phoneNumber').val().trim();

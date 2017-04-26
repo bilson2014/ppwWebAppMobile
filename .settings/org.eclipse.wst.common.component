@@ -17,18 +17,10 @@
         
         
         
-        <dependent-module archiveName="pat-common-config-1.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/pat-common-config/pat-common-config">
-            <dependency-type>uses</dependency-type>
-        </dependent-module>
-        <dependent-module archiveName="pat-common-1.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/pat-common/pat-common">
-            <dependency-type>uses</dependency-type>
-        </dependent-module>
-        <dependent-module archiveName="pat-common-web-1.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/pat-common-web/pat-common-web">
-            <dependency-type>uses</dependency-type>
-        </dependent-module>
-        <dependent-module archiveName="pat-facade-employee-1.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/pat-facade-employee/pat-facade-employee">
-            <dependency-type>uses</dependency-type>
-        </dependent-module>
+        
+        
+        
+        
         
         
         
@@ -41,6 +33,6 @@
         
         
         <property name="java-output-path" value="/wearable-device/target/classes"/>
-        <property name="context-root" value="/"/>
+        <property name="context-root" value="wearable-device"/>
     </wb-module>
 </project-modules>
