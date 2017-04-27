@@ -146,8 +146,14 @@
 	            </div>
 	            <div class="swiper-slide swiper-no-swiping" >
 	                <div id="step1">
+	                     <r:identity role="customer">
+	                     <img class="slideBgLogin6" src="${imgPath}/cost/gPhone6.png">
+	                     </r:identity>
+	                     <r:identity role="provider">
+	                     <img class="slideBgLogin6" src="${imgPath}/cost/gPhone6.png">
+	                     </r:identity>
+	                     <r:noLogin>
 		                  <img class="slideBg6" src="${imgPath}/cost/gPhone6.png">
-		                  <r:noLogin>		
 			                  <div class="item">
 			                     <input placeholder="您的手机号" id="phone" data-content="0">
 			                     <div class="error" id="phoneError">error</div>
@@ -157,7 +163,7 @@
 			                     <div class="checkCode" id="checkCode">发送验证码</div>
 			                     <div class="error" id="codeError">error</div>
 			                  </div>
-		                  </r:noLogin>		
+		                  </r:noLogin>	
 		                  <div class="start">开始计算</div>
 	                </div>  
 	                <div id="step2">
