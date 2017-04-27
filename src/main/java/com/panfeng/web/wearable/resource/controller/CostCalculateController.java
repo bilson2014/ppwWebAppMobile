@@ -100,7 +100,7 @@ public class CostCalculateController extends BaseController {
 		final String source_channels = (String) request.getSession().getAttribute(PmsConstant.SOURCE_CHANNELS);
 		if(StringUtils.isNotBlank(source_channels)) {
 			// 流量来自媒体
-			indentName = "新媒体-" + source_channels + "成本计算器";
+			indentName = "新媒体-" + source_channels + "-成本计算器";
 			indent.setIndentName(indentName);
 		}
 		

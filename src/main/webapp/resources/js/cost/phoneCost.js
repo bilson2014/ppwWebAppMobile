@@ -66,7 +66,8 @@ function loginOrder(){
 			phone : '',
 			indentId : indentId,
 			description : description,
-			verification_code:''
+			verification_code:'',
+			indentName : 'PC-移动-成本计算器'
 		}));
 	}else{
 		loadData(function(result) {
@@ -153,7 +154,7 @@ function noLoginOrder(){
 					equipment : equipment,
 					actor : actor,
 					animation : animation,
-					//time : null,
+					indentName : 'PC-移动-成本计算器',
 					phone : phone,
 					indentId : indentId,
 					description : description,
@@ -180,7 +181,6 @@ function noLoginOrder(){
 					equipment : equipment,
 					actor : actor,
 					animation : animation,
-					//time : null,
 					phone : phone,
 					indentId : indentId,
 					description : description,

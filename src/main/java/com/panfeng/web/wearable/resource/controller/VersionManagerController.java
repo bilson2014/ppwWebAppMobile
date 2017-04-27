@@ -31,6 +31,10 @@ import com.paipianwang.pat.common.constant.PmsConstant;
 import com.paipianwang.pat.common.entity.SessionInfo;
 import com.paipianwang.pat.common.util.ValidateUtil;
 import com.paipianwang.pat.facade.right.entity.PmsEmployee;
+import com.paipianwang.pat.facade.right.entity.PmsRole;
+import com.paipianwang.pat.facade.right.service.PmsEmployeeFacade;
+import com.paipianwang.pat.facade.right.service.PmsRightFacade;
+import com.paipianwang.pat.facade.right.service.PmsRoleFacade;
 import com.paipianwang.pat.facade.team.entity.PmsTeam;
 import com.paipianwang.pat.facade.user.entity.PmsUser;
 import com.panfeng.web.wearable.domain.BaseMsg;
@@ -57,6 +61,16 @@ import com.panfeng.web.wearable.util.WechatUtils;
 public class VersionManagerController extends BaseController {
 
 	private static Logger logger = LoggerFactory.getLogger("error");
+	
+	@Autowired
+	private PmsEmployeeFacade pmsEmployeeFacade = null;
+	
+	@Autowired
+	private final PmsRoleFacade pmsRoleFacade = null;
+
+	@Autowired
+	private final PmsRightFacade pmsRightFacade = null;
+	
 	@Autowired
 	private ResourceService resourceService = null;
 	
@@ -81,17 +95,19 @@ public class VersionManagerController extends BaseController {
 				try {
 					final String password = AESUtil.Decrypt(pwd, PmsConstant.UNIQUE_KEY);
 					employee.setEmployeePassword(DataUtil.md5(password));
-					final String url = PublicConfig.URL_PREFIX + "/portal/manager/static/encipherment";
-					final String json = HttpUtil.httpPost(url, employee, request);
-					if (ValidateUtil.isValid(json)) {
-						final boolean ret = JsonUtil.toBean(json, Boolean.class);
-						if (!ret) {
-							result.setMessage("用户名或密码错误!");
-						}
-						result.setRet(ret);
-						return result;
+					
+					final PmsEmployee e = pmsEmployeeFacade.doLogin(employee.getEmployeeLoginName(), employee.getEmployeePassword());
+					if (e != null) {
+						//填充角色
+						request.getSession().removeAttribute(PmsConstant.SESSION_INFO);
+						result.setRet(initSessionInfo(e, request));
+					}else {
+						result.setRet(false);
+						result.setMessage("用户名或密码错误!");
 					}
-
+					return result;
+					
+					
 				} catch (Exception e) {
 					logger.error("VersionManager login error,Becase of decrypt password error ...");
 					e.printStackTrace();
@@ -803,4 +819,40 @@ public class VersionManagerController extends BaseController {
 		return new ModelAndView("/project", model);
 	}
 
+	/**
+	 * 初始化 sessionInfo 信息
+	 */
+	public boolean initSessionInfo(final PmsEmployee e, final HttpServletRequest request) {
+		// 存入session中
+		final String sessionId = request.getSession().getId();
+		final SessionInfo info = new SessionInfo();
+		info.setLoginName(e.getEmployeeLoginName());
+		info.setRealName(e.getEmployeeRealName());
+		info.setSessionType(PmsConstant.ROLE_EMPLOYEE);
+		info.setToken(DataUtil.md5(sessionId));
+		info.setReqiureId(e.getEmployeeId());
+		info.setPhoto(e.getEmployeeImg());
+		info.setTelephone(e.getPhoneNumber());
+
+		// 计算权限码
+		// 替换带有权限的角色
+		final List<PmsRole> roles = new ArrayList<PmsRole>();
+		for (final PmsRole r : e.getRoles()) {
+			final PmsRole role = pmsRoleFacade.findRoleById(r.getRoleId());
+			roles.add(role);
+		}
+		e.setRoles(roles);
+
+		// 计算权限码总和
+		final long maxPos = pmsRightFacade.getMaxPos();
+		final long[] rightSum = new long[(int) (maxPos + 1)];
+
+		e.setRightSum(rightSum);
+		e.calculateRightSum();
+		long[] sum = e.getRightSum();
+		info.setSum(sum);
+		info.setSuperAdmin(e.isSuperAdmin()); // 判断是否是超级管理员
+		request.getSession().setAttribute(PmsConstant.SESSION_INFO, info);
+		return true;
+	}
 }

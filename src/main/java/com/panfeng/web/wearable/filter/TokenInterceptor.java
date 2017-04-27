@@ -6,12 +6,14 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.paipianwang.pat.common.config.PublicConfig;
 import com.paipianwang.pat.common.constant.PmsConstant;
+import com.paipianwang.pat.common.enums.SourceChannelsEnum;
 import com.paipianwang.pat.common.web.file.FastDFSClient;
 import com.panfeng.web.wearable.dao.StorageLocateDao;
 import com.panfeng.web.wearable.util.DataUtil;
@@ -43,7 +45,24 @@ public class TokenInterceptor implements HandlerInterceptor {
 		}
 		
 		// 配置全局官方电话
-		session.setAttribute(PmsConstant.OFFICAL_PHONE_MARK, PmsConstant.OFFICAL_PHONE);
+		final String offical_phone = (String) session.getAttribute(PmsConstant.OFFICAL_PHONE_MARK);
+		
+		// 判断session中是否存储官网电话信息，如果没有则添加；反之则不做操作
+		if(StringUtils.isBlank(offical_phone) || !(PmsConstant.OFFICAL_PHONE.equals(offical_phone)))
+			session.setAttribute(PmsConstant.OFFICAL_PHONE_MARK, PmsConstant.OFFICAL_PHONE);
+		
+		// 获取URL中的参数，判断是否为渠道参数
+		// target 是标识流量来源
+		String target = request.getParameter("target");
+		if(StringUtils.isNotBlank(target)) {
+			final SourceChannelsEnum sce = SourceChannelsEnum.getEnum(target);
+			if(sce != null) {
+				// 判断session中是否含有标识流量来源
+				final String target_desc = (String) session.getAttribute(PmsConstant.SOURCE_CHANNELS);
+				if(StringUtils.isBlank(target_desc) || !(sce.getDesc().equals(target_desc)))
+					request.getSession().setAttribute(PmsConstant.SOURCE_CHANNELS, sce.getDesc());
+			}
+		}
 		return true;
 	}
 

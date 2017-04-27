@@ -143,7 +143,7 @@ function loginOrder(){
 				clearDate();
 			}
 		}, getContextPath() + '/order/deliver', 
-			{indentName : $("#videoName").val(),
+			{indentName : '网站-移动-' + $("#videoName").val(),
 			productId :$("#videoId").val() ,
 			teamId : $('#teamId').val(),
 			serviceId : $('#serviceId').val(),
