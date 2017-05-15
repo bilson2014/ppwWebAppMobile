@@ -14,7 +14,6 @@
 <spring:url value="/resources/lib/jquery/plugins.js" var="pluginJs"/>
 <spring:url value="/resources/lib/jquery.json/jquery.json-2.4.min.js" var="jsonJs"/>
 <spring:url value="/resources/js/common.js" var="commonJs"/>
-<spring:url value="/resources/js/youku-player.js" var="ykJs" />
 <spring:url value="/resources/js/news/newsList.js" var="newsListJs"/>
 <!-- img path -->
 <spring:url value="/resources/images" var="imgPath" />
