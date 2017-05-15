@@ -1,8 +1,9 @@
 <%@ page contentType="text/html;charset=UTF-8"%>
-<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
-<%@ taglib prefix="r" uri="/mytaglib"%>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%-- import CSS --%>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="r" uri="/mytaglib" %><%-- import CSS --%>
 <spring:url value="/resources/css/projectLine/projectSetting.css" var="pSetCss" />
 <%-- import JS --%>
 <spring:url value="/resources/lib/jquery/jquery-2.0.3.min.js"
@@ -46,6 +47,8 @@
 <script src="${jqueryJs}"></script>
 <script src="${commonJs}"></script>
 <script src="${pCommon}"></script>
+<script type="text/javascript"
+	src="/resources/lib/jquery.json/jquery.json-2.4.min.js"></script>
 
 </head>
 <body>
@@ -80,13 +83,13 @@
 										<a><div class="active">${tag.chanpinName}</div></a>
 								 </c:if>
 								 <c:if test="${product.chanpinName != tag.chanpinName }">
-										<a href="/std/product/index?chanpinId=${tag.chanpinId }"><div>${tag.chanpinName}</div></a>
+										<a href="/product/${tag.englishName }/main"><div>${tag.chanpinName}</div></a>
 								 </c:if>
 							</c:forEach>
 				</c:if>
 	    </div>
 	    <div class="showType">
-	         <a href="/std/product/index?chanpinId=${product.chanpinId }"><div>产品概述</div></a>
+	         <a href="/product/${product.englishName }/set"><div>产品概述</div></a>
 	         <div >产品配置</div>
 	    </div> 
 	   
@@ -97,15 +100,15 @@
               <div class="typeMod">
                     <div class="modItem active" id="normal">
                         <div class="info">标准版产品</div>
-                        <div class="price">39800元</div>
+                        <div class="price"><span id="normal_prive"></span>元</div>
                     </div>
                     <div class="modItem" id="k2">
                         <div class="info">增强版产品</div>
-                        <div class="price">59800元</div>
+                        <div class="price"><span id="k2_prive"></span>元</div>
                     </div>
                     <div class="modItem" id="k4">
                         <div class="info">尊享版产品</div>
-                        <div class="price">99800元</div>
+                        <div class="price"><span id="k4_prive"></span>元</div>
                     </div>
               </div>
            <div class="setCard">   

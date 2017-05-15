@@ -74,23 +74,20 @@
 										<a><div class="active">${tag.chanpinName}</div></a>
 								 </c:if>
 								 <c:if test="${product.chanpinName != tag.chanpinName }">
-										<a href="/std/product/index?chanpinId=${tag.chanpinId }"><div>${tag.chanpinName}</div></a>
+										<a href="/product/${tag.englishName }/main"><div>${tag.chanpinName}</div></a>
 								 </c:if>
 							</c:forEach>
 				</c:if>
 	    </div>
 	    <div class="showType">
 	         <div>产品概述</div>
-	         <a href="/std/product/config?chanpinId=${product.chanpinId }"><div style="border:none">产品配置</div></a>
+	         <a href="/product/${product.englishName }/set"><div style="border:none">产品配置</div></a>
 	    </div>  
 	    
 	<div class="pagePhone" id="pagePhone">
+		<div  id="bannerArray" class="hide">${product.chanpinBannerUrl }</div>
 	    <div class="setImg">
-	    	         	<c:if test="${! empty productList}">
-							<c:forEach items="${productList }" var="tag">
-                                <img src="${imgPath }/projectLine/motion/test.jpg">
-							</c:forEach>
-				        </c:if>
+	    	         	
 	    </div>
 	    
 	    <div class="motion">
@@ -103,7 +100,7 @@
 	          </div>
 	    </div>
 	    <!-- 优势 -->
-	    <div class="pGood">
+	 <%--    <div class="pGood">
 	         <div class="title">产品优势</div>
 	         <div id="featureArray" class="hide">${product.chanpinFeature }</div>
 	         <div class="pContent" id="featureView">
@@ -128,7 +125,7 @@
 	                   <div>大大大声道</div>
 	               </div>
 	          </div>
-	    </div>
+	    </div> --%>
 	    <!-- 应用案例 -->
 	     <div class="exam">
 	         <div class="title">应用案例</div>

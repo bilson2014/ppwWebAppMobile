@@ -6,7 +6,7 @@ $().ready(function() {
 		var cId = $('#CConfigId').val();
 		var tId = $('#CTimeID').val();
 		var subId = $('#CSubjoinID').val();
-		window.location.href= '/std/product/confirm?configId='+cId +'&timeId='+tId +'&subJoin='+subId;
+		//window.location.href= '/std/product/confirm?configId='+cId +'&timeId='+tId +'&subJoin='+subId;
 	});
 
 });
@@ -99,7 +99,7 @@ function initConfig() {
 			}
 			initModel($('#normal').attr('data-id'));
 		}
-	}, getContextPath()+'/std/product/config/list?chanpinId='+productId, null);
+	}, getContextPath()+'/product/config/list?chanpinId='+productId, null);
 }
 
 function buildCar1(obj){
@@ -114,6 +114,7 @@ function buildCar1(obj){
 		}
 	}
 	$('#normal').attr('data-id',obj.chanpinconfigurationId);
+	$('#normal_prive').text(obj.basePrice);
 	var html1 = [
 	             '<div class="cardItem normal" data-id="'+obj.chanpinconfigurationId+'">',
 	             '         <div class="showProduct">',
@@ -129,6 +130,7 @@ function buildCar1(obj){
 }
 function buildCar2(obj){
 	var tags = obj.tags;
+	$('#k2_prive').text(obj.basePrice);
 	var tag = '';
 	if(tags != null){
 		var tagArray = tags.split(" ");
@@ -164,6 +166,7 @@ function buildCar3(obj){
 		}
 	}
 	$('#k4').attr('data-id',obj.chanpinconfigurationId);
+	$('#k4_prive').text(obj.basePrice);
 	var html1 = [
 	             '<div class="cardItem k4">',
 	             '         <div class="showProduct">',
@@ -277,7 +280,7 @@ function createSubjoinMod(obj){
 
 function createTime(obj,num){
 	var card = $(".typeMod div.active");
-	var cardPrice = $(card).find('.price').text();
+	var cardPrice = $(card).find('span').text();
 	var setArray = new Array;
 	setArray.push(cardPrice);
 	if(obj.computeType == 0){
@@ -330,7 +333,7 @@ function calculatedValue(num){
 	if(add.length > 0){
 		for (var int = 0; int < add.length; int++) {
 			var nowAdd = '+' + $(add[int]).find('.name').text();
-			var nowPrice =$(add[int]).find('.price').text();
+			var nowPrice =$(add[int]).find('span').text();
 		    addSet =addSet + nowAdd;
 		    priceArray.push(nowPrice);
 			priceArray.push("+");

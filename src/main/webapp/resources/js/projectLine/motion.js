@@ -1,10 +1,25 @@
-
 $().ready(function() {
 	initScene();
-	initFeature();
+	//initFeature();
 	initProduct();
-	
+	initBanner();
 });
+
+function initBanner() {
+	var str = $('#bannerArray').text().trim();
+	var view = $('.setImg');
+	view.html('');
+	var json = $.evalJSON(str);
+	if (json != null && json.length > 0) {
+		for (var int = 0; int < json.length; int++) {
+			var jj = json[int];
+			if (jj.type == 0) {
+				var html = '<img src="'+getDfsHostName() + jj.url+'">';
+				view.append(html);
+			}
+		}
+	}
+}
 
 //应用场景
 function initScene(){
@@ -27,7 +42,7 @@ function initScene(){
 				}
 			}
 		}
-	}, getContextPath() +'/std/product/scene/'+productId, null);
+	}, getContextPath() +'/product/scene/'+productId, null);
 }
 
 //产品优势
