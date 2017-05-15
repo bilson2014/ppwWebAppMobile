@@ -352,7 +352,7 @@ function loginOrder(){
 		csrftoken:$("#csrftoken").val(),
 		indent_tele:'',
 		indent_recomment:$("#submit-indent-recomment").text(),
-		indentName:'直接下单',
+		indentName:'网站-移动-首页banner',
 		productId:-1,
 		teamId:-1,
 		serviceId:-1,

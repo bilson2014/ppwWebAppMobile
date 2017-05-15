@@ -22,9 +22,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.paipianwang.pat.common.config.PublicConfig;
-import com.paipianwang.pat.common.constant.PmsConstant;
 import com.paipianwang.pat.common.entity.SessionInfo;
-import com.paipianwang.pat.common.enums.SourceChannelsEnum;
 import com.paipianwang.pat.common.util.ValidateUtil;
 import com.paipianwang.pat.common.web.domain.ResourceToken;
 import com.paipianwang.pat.facade.employee.entity.PmsJob;
@@ -59,24 +57,18 @@ public class PCController extends BaseController {
 
 	@Autowired
 	final private PmsTeamFacade pmsTeamFacade = null;
-	
+
 	@Autowired
 	final private PmsProductFacade pmsProductFacade = null;
 
 	@RequestMapping("/")
-	public ModelAndView portalView(final String target,final ModelMap model, HttpServletRequest request) {
+	public ModelAndView portalView(final String target, final ModelMap model, HttpServletRequest request) {
+
 		SessionInfo sessionInfo = getCurrentInfo(request);
 		model.put("sessionInfo", sessionInfo);
-		
-		// target 是标识流量来源
-		if(StringUtils.isNotBlank(target)) {
-			final SourceChannelsEnum sce = SourceChannelsEnum.getEnum(target);
-			if(sce != null)
-				request.getSession().setAttribute(PmsConstant.SOURCE_CHANNELS, sce.getDesc());
-		}
 		return new ModelAndView("/portal", model);
 	}
-	
+
 	// 下单成功后跳转至成功页面
 	@RequestMapping("/success")
 	public ModelAndView successView(final ModelMap model) {
@@ -209,7 +201,7 @@ public class PCController extends BaseController {
 		final List<PmsProductSolr> list = solrService.queryDocs(token.getSolrUrl(), query);
 		for (PmsProductSolr pmsProductSolr : list) {
 			String tags = pmsProductSolr.getTags();
-			if(StringUtils.isNotBlank(tags))
+			if (StringUtils.isNotBlank(tags))
 				pmsProductSolr.setTags(tags.trim().replaceAll("(\\s*)(,|，|\\s+)(\\s*)", " "));
 		}
 		return list;

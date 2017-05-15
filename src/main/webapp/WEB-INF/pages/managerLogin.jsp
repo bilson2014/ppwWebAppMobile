@@ -64,7 +64,7 @@
 				                  <input placeholder="用户名" id="user_phoneNumber">
 				              </div>
 				              <div class="loginItemPhone">
-				                  <input placeholder="密码" id="user_passWord">
+				                  <input placeholder="密码" id="user_passWord" type="password">
 				              </div>
 				              <div class="loginIng" id="submitBtn">登录</div>
 		              </div>

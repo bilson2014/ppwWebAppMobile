@@ -27,6 +27,11 @@
 
 	<mvc:view-controller path="/company-service.html"
 		view-name="/company-service" />
+		
+	<mvc:view-controller path="/wang" view-name="/standardized/requireForm" />
+	
+	<mvc:view-controller path="/list" view-name="/standardized/requireList" />
+	
 
 	<mvc:view-controller path="/testRem/rem" view-name="/testRem/rem" />
 
@@ -59,7 +64,12 @@
 	<mvc:view-controller path="/costweixin" view-name="/costcalculateweixin" />
 	<mvc:view-controller path="/costtoutiao" view-name="/costcalculatetoutiao" />
 	
-	
+	<!-- 产品线 -->
+	<mvc:view-controller path="/motion" view-name="/projectLine/motion" />
+	<mvc:view-controller path="/pList" view-name="/projectLine/projectList" />
+	<mvc:view-controller path="/pOrder" view-name="/projectLine/projectOrder" />
+	<mvc:view-controller path="/pSet" view-name="/projectLine/projectSetting" />
+	<!-- 产品线End -->
 	<mvc:view-controller path="/repwd" view-name="/repwd" />
 	<mvc:view-controller path="/play" view-name="/play" />
 	<mvc:view-controller path="/searchs" view-name="/searchs" />
@@ -74,6 +84,8 @@
 	<mvc:view-controller path="/pLogin" view-name="/loginChoose/proPhoneLogin" />
     <mvc:view-controller path="/userInfo" view-name="/customer/userInfo" />
     <mvc:view-controller path="/phoneCost" view-name="/cost/phoneCost" />
+    
+    
     
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver"
 		p:prefix="/WEB-INF/pages/" p:suffix=".jsp" />

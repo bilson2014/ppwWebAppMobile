@@ -14,7 +14,7 @@ $footer-order-height: 120px; // 底部高度
 $footer-content-height: 40px; // 底部拍片按钮内容高度
 html,
 body {
-    font-family: "PingFang SC",  "Microsoft YaHei", "微软雅黑", "STHeiti", "WenQuanYi Micro Hei", SimSun;
+    font-family: "PingFang SC", "Microsoft YaHei", "微软雅黑", "STHeiti", "WenQuanYi Micro Hei", SimSun;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
@@ -213,7 +213,11 @@ a {
         bottom: 0;
         left: 0;
         background: transparent;
-        
+    }
+    .searchType {
+        position: absolute;
+        right: 1.9rem;
+        top: 0.4rem;
     }
 }
 
@@ -232,7 +236,6 @@ a {
         height: 20px;
         width: 20px;
     }
-
     ul {
         margin: 0 auto;
         width: 70px;
@@ -251,7 +254,6 @@ a {
         }
     }
 }
-
 
 .wordLeftRight {
     width: 70px;
@@ -602,7 +604,6 @@ transform: scale(1); */
     }
     .loginOut {
         border: none !important;
-
     }
 }
 

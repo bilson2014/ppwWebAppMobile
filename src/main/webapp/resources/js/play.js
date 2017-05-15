@@ -13,19 +13,15 @@ $().ready(function() {
     $('#verification_code_recover_btn').off('click').on('click',verificationCodeBtn);
     $('#submitOrder').off('click').on('click',submitOrder);
     $('.orderVideo').off('click').on('click',function(){
-    	
     	var loginTel = $('#rolephone').val();
-    	
     	if(loginTel!=null && loginTel!= "" ){
     		loginOrder();
     	}else{
     		$('#orderTo').show();
     	}
-    	 
     });
     $('#checkSuccess').off('click').on('click',function(){
     	$('#orderSuccess').hide();
-    	
     });
     $('#closeOrder').off('click').on('click',function(){
     	$('#orderTo').hide();
@@ -143,7 +139,7 @@ function loginOrder(){
 				clearDate();
 			}
 		}, getContextPath() + '/order/deliver', 
-			{indentName : $("#videoName").val(),
+			{indentName : '网站-移动-' + $("#videoName").val(),
 			productId :$("#videoId").val() ,
 			teamId : $('#teamId').val(),
 			serviceId : $('#serviceId').val(),
