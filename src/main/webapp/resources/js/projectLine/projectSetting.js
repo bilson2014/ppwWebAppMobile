@@ -2,14 +2,18 @@ var configCache;
 $().ready(function() {
 	pSet.init();
 	initConfig();
+	getConfirm();
+});
+
+
+function getConfirm(){
 	$('#confirm').on('click',function(){
 		var cId = $('#CConfigId').val();
 		var tId = $('#CTimeID').val();
 		var subId = $('#CSubjoinID').val();
 		//window.location.href= '/std/product/confirm?configId='+cId +'&timeId='+tId +'&subJoin='+subId;
 	});
-
-});
+}
 
 /**
  * 主页业务处理部分
@@ -118,7 +122,7 @@ function buildCar1(obj){
 	var html1 = [
 	             '<div class="cardItem normal" data-id="'+obj.chanpinconfigurationId+'">',
 	             '         <div class="showProduct">',
-	             '              <img src="'+getDfsHostName() +obj.chanpinconfigurationPicLDUrl +'">',
+	             '              <img src="'+getDfsHostName() +obj.chanpinconfigurationPicLDUr +'">',
                  '         </div>',
 	             '              <div class="des">'+obj.chanpinconfigurationDescription+'</div>',
 	             '               <div class="setTags">',
@@ -130,7 +134,6 @@ function buildCar1(obj){
 }
 function buildCar2(obj){
 	var tags = obj.tags;
-	$('#k2_prive').text(obj.basePrice);
 	var tag = '';
 	if(tags != null){
 		var tagArray = tags.split(" ");
@@ -141,10 +144,11 @@ function buildCar2(obj){
 		}
 	}
 	$('#k2').attr('data-id',obj.chanpinconfigurationId);
+	$('#k2_prive').text(obj.basePrice);
 	var html1 = [
 	             '<div class="cardItem k2" data-id="'+obj.chanpinconfigurationId+'">',
 	             '         <div class="showProduct">',
-	             '              <img src="'+getDfsHostName() +obj.chanpinconfigurationPicLDUrl +'">',
+	             '              <img src="'+getDfsHostName() +obj.chanpinconfigurationPicLDUr +'">',
                  '         </div>',
 	             '              <div class="des">'+obj.chanpinconfigurationDescription+'</div>',
 	             '               <div class="setTags">',
@@ -170,7 +174,7 @@ function buildCar3(obj){
 	var html1 = [
 	             '<div class="cardItem k4">',
 	             '         <div class="showProduct">',
-	             '              <img src="'+getDfsHostName() +obj.chanpinconfigurationPicLDUrl +'">',
+	             '              <img src="'+getDfsHostName() +obj.chanpinconfigurationPicLDUr +'">',
                  '         </div>',
 	             '              <div class="des">'+obj.chanpinconfigurationDescription+'</div>',
 	             '               <div class="setTags">',
@@ -198,7 +202,7 @@ function initModel(id){
 					var mod = productModule[int2];
 					var type = mod.pinConfiguration_ProductModule.cpmModuleType;
 					if(type == 0){
-						v1.append(createMustMod(mod));
+						v1.append(createMustMod(mod,int2));
 					}
 					else{
 						v2.append(createSubjoinMod(mod));
@@ -208,7 +212,7 @@ function initModel(id){
 			if(dimensions != null && dimensions.length > 0){
 				for (var int3 = 0; int3 < dimensions.length; int3++) {
 					var dd = dimensions[int3];
-					var html = createTime(dd,int);
+					var html = createTime(dd,int3);
 					v3.append(html);
 				}
 			}
@@ -226,15 +230,15 @@ function initModel(id){
 //				$('#CSubjoinID').val($(this).attr('data-id'));
 //			});
 			
-			$('.setItem').off('click').on('click', function() {
+			$('.aItem').off('click').on('click', function() {
 				var clas = $(this).hasClass('active');
 				if(clas){
 					$(this).removeClass('active');
 				}else{
 					$(this).addClass('active');
 				}
-				calculatedValue();
-				var v3 = $(".setItem");
+				calculatedValue(1);
+				var v3 = $(".aItem");
 				if(v3.length > 0){
 					var dId = '';
 					for (var int4 = 0; int4 < v3.length; int4++) {
@@ -255,11 +259,15 @@ function initModel(id){
 	}
 }
 
-function createMustMod(obj){
+function createMustMod(obj,num){
+	var hasDes="";   
+	if(num<2){
+		hasDes="(赠送)";
+	   } 
 	var html = ['<div class="cItem">',
 				'    <div class="pTitle">'+obj.moduleName+'</div>',
-				'    <div class="info">内容</div>',
-				'    <div class="other">(赠送)</div>',
+				'    <div class="info">'+obj.description+'</div>',
+				'    <div class="other">'+hasDes+'</div>',
 				'</div>'].join('');
 	return html;
 }
@@ -270,7 +278,7 @@ function createSubjoinMod(obj){
 				'       <img src="'+getDfsHostName() +obj.pic +'">',
 				'       <div class="itemContent">',
 				'       	<div class="name">'+obj.moduleName+'</div>',
-				'       	<div class="price">'+obj.pinConfiguration_ProductModule.cpmModulePrice+'元</div>',
+				'       	<div ><span class="price">'+obj.pinConfiguration_ProductModule.cpmModulePrice+'</span>元</div>',
 				'       	<div>'+obj.description+'</div>',
 				'       </div>',
 				'</div>'
@@ -306,15 +314,15 @@ function createTime(obj,num){
 	if(num>0){
 	    var html = [
 					'<div class="tItem" data-id="'+obj.dimensionId+'">',
-					'<span class="time">'+realPrice+'</span>',
-					'<div>'+obj.rowValue+'<span>元</span></div>',
+					'<span class="time name">'+obj.rowName+'</span>',
+					'<div><span class="price">'+realPrice+'</span>元</div>',
 					'</div>'
 		            ].join('');
 	}else{
 	    var html = [
 					'<div class="tItem active" data-id="'+obj.dimensionId+'">',
-					'<span class="time">'+obj.rowName+'</span>',
-					'<div>'+obj.rowValue+'<span>元</span></div>',
+					'<span class="time name">'+obj.rowName+'</span>',
+					'<div><span class="price">'+realPrice+'</span>元</div>',
 					'</div>'
 		            ].join('');
 	}
@@ -327,27 +335,29 @@ function calculatedValue(num){
 	var typeMod = $(".typeMod .active");
 	var addSet = $(".addSet div.active");
 	var timeSet = $(".timeSet div.active");
-	var typeModText = "["+$(v0).find('.info').text()+"]";
-	var addSetText = "["+$(v3).find('.time').text()+"]";
-	var timeSetText = "["+$(v2).find('.name').text()+"]";
-	if(add.length > 0){
-		for (var int = 0; int < add.length; int++) {
-			var nowAdd = '+' + $(add[int]).find('.name').text();
-			var nowPrice =$(add[int]).find('span').text();
-		    addSet =addSet + nowAdd;
+	var typeModText = "["+$(typeMod).find('.info').text()+"]";
+	var addSetText = "";
+	var timeSetText = "["+$(timeSet).find('.name').text()+"]";
+	var timePrice =  $(timeSet).find('.price').text();
+
+	if(addSet.length > 0){
+		for (var int = 0; int < addSet.length; int++) {
+			var nowAdd = '+' + '[' + $(addSet[int]).find('.name').text() +']';
+			var nowPrice =$(addSet[int]).find('.price').text();
+			addSetText =addSetText + nowAdd;
 		    priceArray.push(nowPrice);
 			priceArray.push("+");
 		}
 	}
 	if(num >0){
-			$('.showDes').text('您选择了: '+ typeModText + '+' + timeSetText  +'+'+ addSetText);
+			$('.showDes').text('您选择了: '+ typeModText + '+' + timeSetText + addSetText);
 	   }else{
 		   $('.showDes').text('您选择了: '+ typeModText + '+' + timeSetText);
 	   }
 	
 	priceArray.push(timePrice);
-	
-	if(timePrice!=''&&add.length > 0){
+
+	if(timePrice!=''){
 		$.ajax({
 			url :  getContextPath()+'/product/compute',
 			type : 'POST',

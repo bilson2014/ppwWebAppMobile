@@ -35,7 +35,7 @@
 <meta content="telephone=no" name="format-detection">
 <meta name="keywords" content="宣传片制作,产品宣传片制作,企业宣传片制作,微电影制作,MG动画制作">
 <meta name="description" content="拍片网主营宣传片制作、微电影制作、MG动画制作等各种视频内容制作，拍片网是最大的企业视频内容制作平台。拍片就上拍片网！">
-<title>|拍片网标准产品线</title>
+<title>${product.chanpinName}|拍片网标准产品线</title>
 
 <link rel="stylesheet" href="${motionCss}">
 <link rel="shortcut icon" href="/resources/images/favicon.ico">
@@ -63,7 +63,7 @@
 		<div class="phoneHeader">
 		     <a id="openMenu"><img src="${imgPath }/index/toMenu.png"></a>
 		     <img class="searchType" src="${imgPath}/projectLine/projectSet/moreChoose.png">
-		     <div>图形动画</div>
+		     <div>${product.chanpinName}</div>
 		     <a href="/std/product/config?chanpinId=${product.chanpinId }"><div class="toBuy">购买</div></a>
 	    </div>
 	    
@@ -86,8 +86,7 @@
 	    
 	<div class="pagePhone" id="pagePhone">
 		<div  id="bannerArray" class="hide">${product.chanpinBannerUrl }</div>
-	    <div class="setImg">
-	    	         	
+	    <div class="setImg">         	
 	    </div>
 	    
 	    <div class="motion">

@@ -188,7 +188,7 @@
                 div {
                     text-align: left;
                 }
-                .cTitle {
+                .pTitle {
                     color: $border-line;
                     font-size: $size40;
                 }
@@ -348,6 +348,7 @@
     text-align: center;
     font-size: $size36;
     color: $border-line;
+    line-height: 0.5rem;
 }
 
 .showPrice {

@@ -36,9 +36,7 @@
 <meta content="telephone=no" name="format-detection">
 <meta name="keywords" content="宣传片制作,产品宣传片制作,企业宣传片制作,微电影制作,MG动画制作">
 <meta name="description" content="拍片网主营宣传片制作、微电影制作、MG动画制作等各种视频内容制作，拍片网是最大的企业视频内容制作平台。拍片就上拍片网！">
-<title>拍片网  专业商业视频服务</title>
-
-
+<title>${product.chanpinName}|拍片网标准产品线</title>
 <link rel="stylesheet" href="${pSetCss }">
 <link rel="shortcut icon" href="/resources/images/favicon.ico">
 <!--[if lt IE 9]>
@@ -72,7 +70,7 @@
 	    <div class="phoneHeader">
 		     <a id="openMenu"><img src="${imgPath }/index/toMenu.png"></a>
 		     <img class="searchType" src="${imgPath}/projectLine/projectSet/moreChoose.png">
-		     <div>图形动画</div>
+		     <div>${product.chanpinName}</div>
 		     <div class="toBuy hide">购买</div>
 	    </div>
 	    
@@ -89,14 +87,13 @@
 				</c:if>
 	    </div>
 	    <div class="showType">
-	         <a href="/product/${product.englishName }/set"><div>产品概述</div></a>
+	         <a href="/product/${product.englishName }/main"><div>产品概述</div></a>
 	         <div >产品配置</div>
 	    </div> 
-	   
-	    
+	  
         <div class="pagePhone" id="pagePhone">
           <div id="step1">
-              <div class="title">寻找适合你的图形动画</div>
+              <div class="title">寻找适合你的${product.chanpinName}</div>
               <div class="typeMod">
                     <div class="modItem active" id="normal">
                         <div class="info">标准版产品</div>
@@ -140,7 +137,7 @@
                              <div>服务套餐<span>Service Packages</span></div>
                          </div>
                          <div class="sContent setPack">
-<!--                         <div class="cItem">
+                         <!--<div class="cItem">
                                   <div class="cTitle">这个是标题</div>
                                   <div class="info">这个是内容这个是内容这个是内容这个是内容这个是内容这个是内容</div>
                                   <div class="other">(赠送)</div>
@@ -151,7 +148,7 @@
               <div class="toNext">下一步</div>
            </div>
            <!--时长 附加服务  -->
-           <div id="step2">
+           <div id="step2" class="setMargin">
                
           <div class="titleTime ">时长<span>Length</span></div>
 	        <div class="timeContent timeSet">
@@ -179,7 +176,7 @@
 	            <div class="showPrice">
 	                 <span>总价格</span>
 	                 <span>¥</span>
-	                 <span id="setTotalPrice">96800</span>
+	                 <span id="setTotalPrice"></span>
 	            </div>
 	            <div class="btnDiv">
 	                   <div class="goBefore">上一步</div>

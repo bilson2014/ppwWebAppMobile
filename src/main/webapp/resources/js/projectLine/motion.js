@@ -14,7 +14,7 @@ function initBanner() {
 		for (var int = 0; int < json.length; int++) {
 			var jj = json[int];
 			if (jj.type == 0) {
-				var html = '<img src="'+getDfsHostName() + jj.url+'">';
+				var html = '<div style="background:url('+getDfsHostName() + jj.url+') no-repeat center top"></div>';
 				view.append(html);
 			}
 		}
@@ -68,15 +68,42 @@ function initFeature(){
 }
 //产品案例
 function initProduct(){
-	var view = $('.eContent');
-	view.html('');
-			var html = [
-						'<div class="contentItem" style="${imgPath }/projectLine/motion/test.jpg">',
-						'     <div class="itemTitle">华为智能机顶盒国际版</div>	',
-						'     <div class="itemTag">产品宣传片 / 电视机顶盒 / 智能硬件 / AE包装 / 3D</div>	',
-						'     <div class="itemBack"></div>',
-						'</div>'
-			           ].join('');
-			view.append(html);
+	
+	var productId = $('#productId').val();
+	loadData(
+			function(res) {
+				var view = $('.eContent');
+				view.html('');
+						for (var int = 0; int < res.length; int++) {
+							var rr = res[int];
+						
+							var tags = rr.product.tags;
+							var ptags = '';
+							if(tags != null && tags != '' && tags != undefined){
+								var arr = tags.split(' ');
+								
+								if(arr != null && arr.length >0){
+									for (var int1 = 0; int1 < arr.length; int1++) {
+										if(int1 !=0 )
+											ptags += '/';
+										ptags += arr[int1];
+									}
+								}
+							}
+							
+							var html = [
+							            '<a href="/play/'+rr.product.teamId+'_'+rr.productId+'.html">',
+										'<div class="contentItem">',
+										'     <img src="' + getDfsHostName() + rr.product.picHDUrl + '">',
+										'     <div class="itemTitle">'+rr.product.productName+'</div>	',
+										'     <div class="itemTag">'+ptags+'</div>	',
+										'     <div class="itemBack"></div>',
+										'</div></a>'
+							           ].join('');
+								view.append(html);
+						}
+						product();
+			}, getContextPath() + '/product/case?productId=' + productId, null);
+
 }
 
