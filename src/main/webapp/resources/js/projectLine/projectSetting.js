@@ -4,8 +4,6 @@ $().ready(function() {
 	initConfig();
 	getConfirm();
 });
-
-
 function getConfirm(){
 	$('#confirm').on('click',function(){
 		var cId = $('#CConfigId').val();
@@ -14,11 +12,9 @@ function getConfirm(){
 		window.location.href= '/product/confirm/indent?configId='+cId +'&timeId='+tId +'&subJoin='+subId;
 	});
 }
-
 /**
  * 主页业务处理部分
  */
-
 var pSet= {
 	init:function(){
 		this.initOption();
@@ -292,10 +288,11 @@ function createSubjoinMod(obj){
 	var html = [
 				'<div class="aItem" data-id="'+obj.productModuleId+'">',
 				'       <img src="'+getDfsHostName() +obj.pic +'">',
+				'       <div class="mod"></div>' ,      
 				'       <div class="itemContent">',
 				'       	<div class="name">'+obj.moduleName+'</div>',
 				'       	<div ><span class="price">'+obj.pinConfiguration_ProductModule.cpmModulePrice+'</span>元</div>',
-				'       	<div>'+getHtml+'</div>',
+				'       	<div >'+getHtml+'</div>',
 				'       </div>',
 				'</div>'
 	            ].join('');
@@ -307,7 +304,6 @@ function createTime(obj,num){
 	var cardPrice = $(card).find('span').text();
 	var setArray = new Array;
 	setArray.push(cardPrice);
-	
 	if(obj.computeType == 0){
 		setArray.push("*");
 	}
