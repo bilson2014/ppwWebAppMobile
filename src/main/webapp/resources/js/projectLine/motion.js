@@ -29,11 +29,22 @@ function initScene(){
 			var rows = res.result.rows;
 			var view = $('#sceneView');
 			view.html('');
-			if(rows != null && rows.length > 0){
+			if(rows != null && rows.length < 2){
 				for (var int = 0; int < rows.length; int++) {
 					var rr = rows[int];
 					var html = [
 								'<div class="mItem">',
+								'	<img src="'+getDfsHostName() + rr.scenenPicLDUrl +'">',
+								'	<div>'+rr.sceneName+'</div>',
+								'</div>'
+					            ].join('');
+					view.append(html);
+				}
+			}else{
+				for (var int = 0; int < rows.length; int++) {
+					var rr = rows[int];
+					var html = [
+								'<div class="m2Item">',
 								'	<img src="'+getDfsHostName() + rr.scenenPicLDUrl +'">',
 								'	<div>'+rr.sceneName+'</div>',
 								'</div>'

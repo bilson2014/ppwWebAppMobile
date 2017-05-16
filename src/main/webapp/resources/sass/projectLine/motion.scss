@@ -15,17 +15,14 @@ body {
     background: $gray-dark;
 }
 
-
 //设置图片
 .setImg {
     font-size: 0;
-
-    div{
-    	width: 100%;
-    	height: 14.74rem;
+    div {
+        width: 100%;
+        height: 14.74rem;
         position: relative;
         background-size: 13.14rem 14.74rem !important;
-        
     }
 }
 
@@ -41,6 +38,26 @@ body {
     .mContent {
         font-size: 0;
         padding-bottom: 1.15rem;
+        .m2Item {
+            width: 100%;
+            text-align: center;
+            width: 4.5rem;
+            margin-top: 0.6rem;
+            img:nth-child(2n) {
+                margin-left: 0.2rem;
+            }
+            img {
+                width: 100%;
+                height: 2.52rem;
+            }
+            div {
+                margin-top: 0.3rem;
+                text-align: center;
+                @include ellipsis;
+                color: $border-line;
+                font-size: $size40;
+            }
+        }
         .mItem:nth-child(2n) {
             margin-left: 0.2rem;
         }
@@ -141,13 +158,12 @@ body {
         height: 5.65rem;
         position: relative;
         margin-right: 0.1rem;
-
-        img{
-           position: absolute;
-           width: 100%;
-           height: 100%;
-           top:0;
-           left:0;
+        img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
         }
         .itemTitle {
             color: white;
