@@ -11,7 +11,7 @@ function getConfirm(){
 		var cId = $('#CConfigId').val();
 		var tId = $('#CTimeID').val();
 		var subId = $('#CSubjoinID').val();
-		//window.location.href= '/std/product/confirm?configId='+cId +'&timeId='+tId +'&subJoin='+subId;
+		window.location.href= '/product/confirm/indent?configId='+cId +'&timeId='+tId +'&subJoin='+subId;
 	});
 }
 
@@ -109,6 +109,7 @@ function initConfig() {
 function buildCar1(obj){
 	var tags = obj.tags;
 	var tag = '';
+	
 	if(tags != null){
 		var tagArray = tags.split(" ");
 		if(tagArray!=null && tagArray.length >0){
@@ -117,12 +118,13 @@ function buildCar1(obj){
 			}
 		}
 	}
+	$('#CConfigId').val(obj.chanpinconfigurationId);
 	$('#normal').attr('data-id',obj.chanpinconfigurationId);
 	$('#normal_prive').text(obj.basePrice);
 	var html1 = [
 	             '<div class="cardItem normal" data-id="'+obj.chanpinconfigurationId+'">',
 	             '         <div class="showProduct">',
-	             '              <img src="'+getDfsHostName() +obj.chanpinconfigurationPicLDUr +'">',
+	             '              <img src="'+getDfsHostName() +obj.chanpinconfigurationPicLDUrl +'">',
                  '         </div>',
 	             '              <div class="des">'+obj.chanpinconfigurationDescription+'</div>',
 	             '               <div class="setTags">',
@@ -148,7 +150,7 @@ function buildCar2(obj){
 	var html1 = [
 	             '<div class="cardItem k2" data-id="'+obj.chanpinconfigurationId+'">',
 	             '         <div class="showProduct">',
-	             '              <img src="'+getDfsHostName() +obj.chanpinconfigurationPicLDUr +'">',
+	             '              <img src="'+getDfsHostName() +obj.chanpinconfigurationPicLDUrl +'">',
                  '         </div>',
 	             '              <div class="des">'+obj.chanpinconfigurationDescription+'</div>',
 	             '               <div class="setTags">',
@@ -174,7 +176,7 @@ function buildCar3(obj){
 	var html1 = [
 	             '<div class="cardItem k4">',
 	             '         <div class="showProduct">',
-	             '              <img src="'+getDfsHostName() +obj.chanpinconfigurationPicLDUr +'">',
+	             '              <img src="'+getDfsHostName() +obj.chanpinconfigurationPicLDUrl +'">',
                  '         </div>',
 	             '              <div class="des">'+obj.chanpinconfigurationDescription+'</div>',
 	             '               <div class="setTags">',
@@ -291,6 +293,7 @@ function createTime(obj,num){
 	var cardPrice = $(card).find('span').text();
 	var setArray = new Array;
 	setArray.push(cardPrice);
+	
 	if(obj.computeType == 0){
 		setArray.push("*");
 	}
@@ -319,6 +322,7 @@ function createTime(obj,num){
 					'</div>'
 		            ].join('');
 	}else{
+		$('#CTimeID').val(obj.dimensionId);
 	    var html = [
 					'<div class="tItem active" data-id="'+obj.dimensionId+'">',
 					'<span class="time name">'+obj.rowName+'</span>',

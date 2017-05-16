@@ -64,7 +64,7 @@
 		     <a id="openMenu"><img src="${imgPath }/index/toMenu.png"></a>
 		     <img class="searchType" src="${imgPath}/projectLine/projectSet/moreChoose.png">
 		     <div>${product.chanpinName}</div>
-		     <a href="/std/product/config?chanpinId=${product.chanpinId }"><div class="toBuy">购买</div></a>
+		     <a href="/product/${product.englishName }/set"><div class="toBuy">购买</div></a>
 	    </div>
 	    
 	    <div class="headerTags">

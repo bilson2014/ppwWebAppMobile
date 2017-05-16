@@ -13,7 +13,7 @@ function initBanner() {
 	if (json != null && json.length > 0) {
 		for (var int = 0; int < json.length; int++) {
 			var jj = json[int];
-			if (jj.type == 0) {
+			if (jj.type == 1) {
 				var html = '<div style="background:url('+getDfsHostName() + jj.url+') no-repeat center top"></div>';
 				view.append(html);
 			}
@@ -80,8 +80,7 @@ function initProduct(){
 							var tags = rr.product.tags;
 							var ptags = '';
 							if(tags != null && tags != '' && tags != undefined){
-								var arr = tags.split(' ');
-								
+								var arr = tags.split(' ');								
 								if(arr != null && arr.length >0){
 									for (var int1 = 0; int1 < arr.length; int1++) {
 										if(int1 !=0 )
@@ -102,8 +101,6 @@ function initProduct(){
 							           ].join('');
 								view.append(html);
 						}
-						product();
 			}, getContextPath() + '/product/case?productId=' + productId, null);
-
 }
 

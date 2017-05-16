@@ -65,6 +65,7 @@
 	<input type="hidden" id="productId" value="${product.chanpinId }">
 	<input type="hidden" id="CSubjoinID">
 	<input type="hidden" id="CTimeID">
+	<input type="hidden" id="CConfigId"> 
 	    
 	    <jsp:include flush="true" page="../menu.jsp"></jsp:include>
 	    <div class="phoneHeader">
