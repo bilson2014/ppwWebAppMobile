@@ -29,7 +29,7 @@ function initScene(){
 			var rows = res.result.rows;
 			var view = $('#sceneView');
 			view.html('');
-			if(rows != null && rows.length < 2){
+			if(rows.length > 2){
 				for (var int = 0; int < rows.length; int++) {
 					var rr = rows[int];
 					var html = [
