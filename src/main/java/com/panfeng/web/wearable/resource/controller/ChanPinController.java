@@ -77,51 +77,6 @@ public class ChanPinController extends BaseController {
 		return new ModelAndView("/projectLine/motion", model);
 	}
 
-	@RequestMapping("/product/{englishName}/order")
-	public ModelAndView indentConfirmView(@PathVariable("englishName") String englishName,ModelMap model, Long configId, Long timeId, String subJoin,Double price) {
-		// 顶部所有产品分类
-		DataGrid<PmsChanPin> allChanPin = pmsChanPinFacade.getAllChanPin();
-		if (allChanPin != null) {
-			List<PmsChanPin> rows = allChanPin.getRows();
-			model.addAttribute("productList", rows);
-		}
-		PmsChanPin chanPinInfo = pmsChanPinFacade.getInfoByEnglishName(englishName);
-		model.addAttribute("product", chanPinInfo);
-		PmsChanPinConfiguration config = pmsChanPinConfigurationFacade.getChanPinConfigurationInfo(configId);
-		model.addAttribute("config", config);
-		List<PmsDimension> pmsDimensions = config.getPmsDimensions();
-		if (ValidateUtil.isValid(pmsDimensions)) {
-			for (PmsDimension pmsDimension : pmsDimensions) {
-				if (pmsDimension.getDimensionId().equals(timeId)) {
-					model.addAttribute("time", pmsDimension);
-					System.err.println(pmsDimension.toString());
-				}
-			}
-		}
-		List<PmsProductModule> pmsProductModule = config.getPmsProductModule();
-		if (ValidateUtil.isValid(pmsProductModule) && ValidateUtil.isValid(subJoin)) {
-			List<PmsProductModule> list = new ArrayList<PmsProductModule>();
-			String[] split = subJoin.split(",");
-			if (split != null && split.length > 0) {
-				for (PmsProductModule pmsProductModule2 : pmsProductModule) {
-					Integer cpmModuleType = pmsProductModule2.getPinConfiguration_ProductModule().getCpmModuleType();
-					if (cpmModuleType.equals(1)) {
-						for (int i = 0; i < split.length; i++) {
-							Long sId = Long.valueOf(split[i]);
-							if (pmsProductModule2.getProductModuleId().equals(sId)) {
-								list.add(pmsProductModule2);
-							}
-						}
-					}
-				}
-				model.addAttribute("subjoin", list);
-				model.addAttribute("price", price);
-				model.addAttribute("subjoinId", subJoin);
-			}
-		}
-		return new ModelAndView("/projectLine/projectOrder");
-	}
-
 	@RequestMapping("/product/confirm/indent")
 	public ModelAndView indentConfirm2(Long configId, Long timeId, String subJoin, HttpServletRequest request) {
 		PmsChanPinConfiguration config = pmsChanPinConfigurationFacade.getChanPinConfigurationInfo(configId);
@@ -138,27 +93,33 @@ public class ChanPinController extends BaseController {
 		}
 		List<PmsProductModule> pmsProductModule = config.getPmsProductModule();
 		List<PmsProductModule> sub = new ArrayList<>();
-		String[] split = subJoin.split(",");
-		if (ValidateUtil.isValid(pmsProductModule) && split != null && split.length > 0) {
-			Iterator<PmsProductModule> in = pmsProductModule.iterator();
-			while (in.hasNext()) {
-				PmsProductModule productModule = (PmsProductModule) in.next();
-				Integer cpmModuleType = productModule.getPinConfiguration_ProductModule().getCpmModuleType();
-				if (cpmModuleType.equals(1)) {
-					sub.add(productModule);
-					in.remove();
-				}
+
+		Iterator<PmsProductModule> in = pmsProductModule.iterator();
+		while (in.hasNext()) {
+			PmsProductModule productModule = (PmsProductModule) in.next();
+			Integer cpmModuleType = productModule.getPinConfiguration_ProductModule().getCpmModuleType();
+			if (cpmModuleType.equals(1)) {
+				sub.add(productModule);
+				in.remove();
 			}
-			Iterator<PmsProductModule> iterator = sub.iterator();
-			while (iterator.hasNext()) {
-				PmsProductModule productModule = (PmsProductModule) iterator.next();
-				for (int i = 0; i < split.length; i++) {
-					Long sId = Long.valueOf(split[i]);
-					if (productModule.getProductModuleId().equals(sId)) {
-						pmsProductModule.add(productModule);
+		}
+
+		if (ValidateUtil.isValid(subJoin)) {
+			String[] split = subJoin.split(",");
+			if (ValidateUtil.isValid(pmsProductModule) && split != null && split.length != 0) {
+				Iterator<PmsProductModule> iterator = sub.iterator();
+				while (iterator.hasNext()) {
+					PmsProductModule productModule = (PmsProductModule) iterator.next();
+					for (int i = 0; i < split.length; i++) {
+						Long sId = Long.valueOf(split[i]);
+						if (productModule.getProductModuleId().equals(sId)) {
+							pmsProductModule.add(productModule);
+						}
 					}
 				}
 			}
+		} else {
+
 		}
 
 		PmsIndentConfirm pmsIndentConfirm = new PmsIndentConfirm();
