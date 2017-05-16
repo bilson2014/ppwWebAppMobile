@@ -38,11 +38,11 @@ var pSet= {
 	    	$(this).addClass('active');
 	    });
 		$('.showMoreDiv').off('click').on('click',function(){
-            $('.setInfo').show();
+            $('.setInfo').slideDown();
             $('.showMoreDiv').hide();
 	    });
 		$('#closeInfo').off('click').on('click',function(){
-			$('.setInfo').hide();
+			$('.setInfo').slideUp();
             $('.showMoreDiv').show();
 	    });
 		$('#normal').off('click').on('click',function(){
@@ -109,7 +109,9 @@ function initConfig() {
 function buildCar1(obj){
 	var tags = obj.tags;
 	var tag = '';
-	
+	var text = obj.chanpinconfigurationDescription;
+	var setHtml = text;
+	var getHtml = setHtml.replace(/\r?\n/g,"<br/>").replace(/\s/g,"&nbsp;");
 	if(tags != null){
 		var tagArray = tags.split(" ");
 		if(tagArray!=null && tagArray.length >0){
@@ -126,7 +128,7 @@ function buildCar1(obj){
 	             '         <div class="showProduct">',
 	             '              <img src="'+getDfsHostName() +obj.chanpinconfigurationPicLDUrl +'">',
                  '         </div>',
-	             '              <div class="des">'+obj.chanpinconfigurationDescription+'</div>',
+	             '              <div class="des">'+getHtml+'</div>',
 	             '               <div class="setTags">',
 	             tag,
 	             '               </div>',
@@ -137,6 +139,9 @@ function buildCar1(obj){
 function buildCar2(obj){
 	var tags = obj.tags;
 	var tag = '';
+	var text = obj.chanpinconfigurationDescription;
+	var setHtml = text;
+	var getHtml = setHtml.replace(/\r?\n/g,"<br/>").replace(/\s/g,"&nbsp;");
 	if(tags != null){
 		var tagArray = tags.split(" ");
 		if(tagArray!=null && tagArray.length >0){
@@ -152,7 +157,7 @@ function buildCar2(obj){
 	             '         <div class="showProduct">',
 	             '              <img src="'+getDfsHostName() +obj.chanpinconfigurationPicLDUrl +'">',
                  '         </div>',
-	             '              <div class="des">'+obj.chanpinconfigurationDescription+'</div>',
+	             '              <div class="des">'+getHtml+'</div>',
 	             '               <div class="setTags">',
 	             tag,
 	             '               </div>',
@@ -163,6 +168,9 @@ function buildCar2(obj){
 function buildCar3(obj){
 	var tags = obj.tags;
 	var tag = '';
+	var text = obj.chanpinconfigurationDescription;
+	var setHtml = text;
+	var getHtml = setHtml.replace(/\r?\n/g,"<br/>").replace(/\s/g,"&nbsp;");
 	if(tags != null){
 		var tagArray = tags.split(" ");
 		if(tagArray!=null && tagArray.length >0){
@@ -178,7 +186,7 @@ function buildCar3(obj){
 	             '         <div class="showProduct">',
 	             '              <img src="'+getDfsHostName() +obj.chanpinconfigurationPicLDUrl +'">',
                  '         </div>',
-	             '              <div class="des">'+obj.chanpinconfigurationDescription+'</div>',
+	             '              <div class="des">'+getHtml+'</div>',
 	             '               <div class="setTags">',
 	             tag,
 	             '               </div>',
@@ -262,26 +270,32 @@ function initModel(id){
 }
 
 function createMustMod(obj,num){
-	var hasDes="";   
+	var hasDes="";
+	var text = obj.description;
+	var setHtml = text;
+	var getHtml = setHtml.replace(/\r?\n/g,"<br/>");
 	if(num<2){
 		hasDes="(赠送)";
 	   } 
 	var html = ['<div class="cItem">',
 				'    <div class="pTitle">'+obj.moduleName+'</div>',
-				'    <div class="info">'+obj.description+'</div>',
+				'    <div class="info">'+getHtml+'</div>',
 				'    <div class="other">'+hasDes+'</div>',
 				'</div>'].join('');
 	return html;
 }
 
 function createSubjoinMod(obj){
+	var text = obj.description;
+	var setHtml = text;
+	var getHtml = setHtml.replace(/\r?\n/g,"<br/>").replace(/\s/g,"&nbsp;");
 	var html = [
 				'<div class="aItem" data-id="'+obj.productModuleId+'">',
 				'       <img src="'+getDfsHostName() +obj.pic +'">',
 				'       <div class="itemContent">',
 				'       	<div class="name">'+obj.moduleName+'</div>',
 				'       	<div ><span class="price">'+obj.pinConfiguration_ProductModule.cpmModulePrice+'</span>元</div>',
-				'       	<div>'+obj.description+'</div>',
+				'       	<div>'+getHtml+'</div>',
 				'       </div>',
 				'</div>'
 	            ].join('');

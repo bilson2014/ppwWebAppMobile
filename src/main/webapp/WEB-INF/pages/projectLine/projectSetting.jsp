@@ -70,8 +70,8 @@
 	    <jsp:include flush="true" page="../menu.jsp"></jsp:include>
 	    <div class="phoneHeader">
 		     <a id="openMenu"><img src="${imgPath }/index/toMenu.png"></a>
-		     <img class="searchType" src="${imgPath}/projectLine/projectSet/moreChoose.png">
-		     <div>${product.chanpinName}</div>
+		     <img class="searchType choose" src="${imgPath}/projectLine/projectSet/moreChoose.png">
+		     <div class="choose">${product.chanpinName}</div>
 		     <div class="toBuy hide">购买</div>
 	    </div>
 	    
@@ -158,7 +158,7 @@
 	                 <div>39800<span>元</span></div>
 	            </div> -->
 	        </div>
-	        <div class="title">附加服务<span>Additional Services</span></div>
+	        <div class="titleTime">附加服务<span>Additional Services</span></div>
 	        <div class="additional addSet">
 	             <%-- <div class="aItem">
 	                 <img src="${imgPath}/projectLine/motion/test.jpg">

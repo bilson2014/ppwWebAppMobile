@@ -5,7 +5,7 @@
 @import "compass/typography/text/ellipsis";
 @import "normalize";
 .toBuy {
-    width: 1.1rem;
+    width: 2.1rem;
     height: 0.6rem;
     line-height: 0.6rem;
     color: white;
@@ -17,6 +17,7 @@
     border-radius: 2px;
     right: 0.54rem;
     margin-top: -0.25rem;
+
 }
 
 .roateType {
@@ -73,7 +74,7 @@
         height: 1.3rem;
         line-height: 1.3rem;
         color: white;
-        font-size: $size28;
+        font-size: $size36;
         text-align: center;
         margin: 0 auto;
     }
@@ -85,7 +86,7 @@
 .searchType {
     position: absolute;
     right: 50% !important;
-    margin-right: -2rem !important;
+    margin-right: -2.5rem !important;
     top: 0.4rem;
 }
 
