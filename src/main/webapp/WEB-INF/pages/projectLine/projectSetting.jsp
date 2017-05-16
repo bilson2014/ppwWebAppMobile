@@ -6,17 +6,12 @@
 <%@ taglib prefix="r" uri="/mytaglib" %><%-- import CSS --%>
 <spring:url value="/resources/css/projectLine/projectSetting.css" var="pSetCss" />
 <%-- import JS --%>
-<spring:url value="/resources/lib/jquery/jquery-2.0.3.min.js"
-	var="jqueryJs" />
-	
-
+<spring:url value="/resources/lib/jquery/jquery-2.0.3.min.js" var="jqueryJs" />
 <spring:url value="/resources/js/common.js" var="commonJs" />
 <spring:url value="/resources/js/projectLine/projectSetting.js" var="pSetJs" />
 <spring:url value="/resources/js/projectLine/pCommon.js" var="pCommon" />
 <spring:url value="/resources/lib/jquery.lazyload/lazysizes.min.js" var="lazyloadJs"/>
 <spring:url value="/resources/images" var="imgPath" />
-
-
 
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -45,9 +40,7 @@
 <script src="${jqueryJs}"></script>
 <script src="${commonJs}"></script>
 <script src="${pCommon}"></script>
-<script type="text/javascript"
-	src="/resources/lib/jquery.json/jquery.json-2.4.min.js"></script>
-
+<script type="text/javascript" src="/resources/lib/jquery.json/jquery.json-2.4.min.js"></script>
 </head>
 <body>
 
