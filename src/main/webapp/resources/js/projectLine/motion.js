@@ -84,8 +84,8 @@ function initProduct(){
 								if(arr != null && arr.length >0){
 									for (var int1 = 0; int1 < arr.length; int1++) {
 										if(int1 !=0 )
-											ptags += '/';
-										ptags += arr[int1];
+										   ptags += '/';
+										   ptags += arr[int1];
 									}
 								}
 							}
@@ -94,7 +94,7 @@ function initProduct(){
 							            '<a href="/play/'+rr.product.teamId+'_'+rr.productId+'.html">',
 										'<div class="contentItem">',
 										'     <img src="' + getDfsHostName() + rr.product.picLDUrl + '">',
-										'     <div class="itemTitle">'+rr.product.productName+'</div>	',
+										'     <div class="itemTitle">'+rr.product.productName+'</div>',
 										'     <div class="itemTag">'+ptags+'</div>	',
 										'     <div class="itemBack"></div>',
 										'</div></a>'
