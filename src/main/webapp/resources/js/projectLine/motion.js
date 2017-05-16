@@ -88,8 +88,7 @@ function initProduct(){
 										   ptags += arr[int1];
 									}
 								}
-							}
-							
+							}							
 							var html = [
 							            '<a href="/play/'+rr.product.teamId+'_'+rr.productId+'.html">',
 										'<div class="contentItem">',
