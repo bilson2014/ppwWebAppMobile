@@ -12,7 +12,7 @@ var pCommon = {
 		this.search();
 	},
 	search:function(){
-	$('.searchType').off('click').on('click',function(){
+	$('.choose').off('click').on('click',function(){
 		 if($('.searchType').hasClass('roateType')){
 			 $('.searchType').removeClass('roateType');
 			 $('.showType').hide();
