@@ -573,8 +573,26 @@ function successToolTipShow(word) {
 	$('#errorDiv').slideDown('normal');
 	successIntervalObj = window.setInterval(hideSuccessTooltip, 3000);
 }
-
 function hideSuccessTooltip() {
 	$('#errorDiv').hide('normal');
 }
+//滚动控制用
+var handler = function () {
+    event.preventDefault();
+    event.stopPropagation();
+};
+var OpenMask = function()
+{
+    //document.body.addEventListener('touchmove',handler,false);
+    //document.body.addEventListener('wheel',handler,false);
+//	$(document).getElementById('pagePhone').addEventListener('touchmove',handler,false);
+//	$(document).getElementById('pagePhone').addEventListener('wheel',handler,false); 
+	$('.pagePhone').css('overflow','hidden');
+};
+var CloseMask = function()
+{
+//    document.body.removeEventListener('touchmove',handler,false);
+//    document.body.removeEventListener('wheel',handler,false);
+	$('.pagePhone').css('overflow','auto');
+};
 

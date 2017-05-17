@@ -35,6 +35,16 @@
 		<property name="defaultDestinationName" value="${smsQueue}"/>
 	</bean>
 	
+	<bean id="mailJmsTemplate" class="org.springframework.jms.core.JmsTemplate">
+		<property name="connectionFactory" ref="connectionFactory" />
+		<property name="defaultDestinationName" value="${mailQueue}"/>
+	</bean>
+	
+	<bean id="logJmsTemplate" class="org.springframework.jms.core.JmsTemplate">
+		<property name="connectionFactory" ref="connectionFactory" />
+		<property name="defaultDestinationName" value="${logQueue}"/>
+	</bean>
+	
 	<bean id="fileConverJmsTemplate" class="org.springframework.jms.core.JmsTemplate">
 		<property name="connectionFactory" ref="connectionFactory" />
 		<property name="defaultDestinationName" value="${fileConverQueue}"/>

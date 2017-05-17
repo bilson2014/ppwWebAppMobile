@@ -1,0 +1,179 @@
+@import "compass/css3";
+@import "constant";
+@import "mixin";
+@import "common_portal";
+@import "variables";
+@import "compass/typography/text/ellipsis";
+@import "normalize";
+@import "pmotion";
+.pagePhone {
+    padding-top: 2.6rem;
+    background: $gray-dark;
+}
+
+.setMargin{
+    padding-top: 1rem;
+}
+
+.title {
+    color: white;
+    font-size: $size46;
+    padding-left: 0.8rem;
+    span {
+        color: $size30;
+        font-size: $size30;
+        margin-left: 0.2rem;
+    }
+}
+
+.timeContent {
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    font-size: 0;
+    padding-left: 0.8rem;
+    margin-top: 0.6rem;
+    margin-bottom: 0.8rem;
+    .active {
+        border: 1px solid $red-base !important;
+        color: $red-base !important;
+    }
+    .tItem {
+        display: inline-block;
+        vertical-align: top;
+        width: 3rem;
+        height: 2rem;
+        border: 1px solid $gray;
+        border-radius: 8px;
+        color: white;
+        text-align: center;
+        padding-top: 0.4rem;
+        margin-right: 0.1rem;
+        span {
+            font-size: $size30;
+        }
+        div {
+            font-size: $size46;
+            margin-top: 0.2rem;
+            span {
+                font-size: $size28 !important;
+            }
+        }
+    }
+}
+
+.additional {
+    white-space: nowrap;
+    overflow-x:auto;
+    overflow-y:hidden;
+    font-size: 0;
+    padding-left: 0.8rem;
+    padding-bottom: 0.2rem;
+    margin-top: 0.6rem;
+    margin-bottom: 0.8rem;
+    .aItem {
+        display: inline-block;
+        vertical-align: top;
+        width: 8.34rem;
+        height: 3.11rem;
+        border: 1px solid $gray;
+        border-radius: 4px;
+        color: $gray-light;
+        padding: 0.3rem 0.55rem 0 0.55rem;
+        margin-right: 0.2rem;
+        padding-bottom: 0.2rem;
+        img {
+            width: 2.4rem;
+            height: 2.4rem;
+            vertical-align: top;
+            display: inline-block;
+            border-radius: 50%;
+        }
+        .itemContent {
+            vertical-align: top;
+            display: inline-block;
+            margin-left: 0.3rem;
+            width: 4rem;
+            margin-right: 0.2rem;
+            div:nth-child(1) {
+                font-size: $size46;
+                color: $gray-light;
+                margin-top: 0.1rem;
+                @include ellipsis;
+            }
+            div:nth-child(2) {
+                font-size: $size40;
+                color: $gray;
+                margin-top: 0.2rem;
+                margin-bottom: 0.2rem;
+                @include ellipsis;
+            }
+            div:nth-child(3) {
+                font-size: $size40;
+                color: $gray;
+                height: 1rem;
+                white-space: initial;
+            }
+        }
+    }
+}
+
+.line {
+    width: 9.2rem;
+    height: 1px;
+    border: 1px dashed $gray-light !important;
+    margin: 0 auto;
+    margin-top: 0.6rem;
+    margin-bottom: 0.6rem;
+}
+
+.showDes {
+    width: 7.77rem;
+    margin: 0 auto;
+    text-align: center;
+    font-size: $size36;
+    color: $border-line;
+}
+
+.showPrice {
+    text-align: center;
+    font-size: 0;
+    margin-top: 0.8rem;
+    margin-bottom: 0.8rem;
+    span:nth-child(1) {
+        color: white;
+        font-size: $size36;
+    }
+    span:nth-child(2) {
+        color: $red-base;
+        font-size: $size36;
+        margin-left: 0.3rem;
+        margin-right: 0.1rem;
+    }
+    span:nth-child(3) {
+        color: $red-base;
+        font-size: $size60;
+    }
+}
+
+.btnDiv {
+    font-size: 0;
+    width: 8rem;
+    margin: 0 auto;
+    margin-bottom: 0.7rem;
+    div:nth-child(1) {
+        margin-right: 0.4rem;
+    }
+    div {
+        display: inline-block;
+        vertical-align: top;
+        width: 3.8rem;
+        height: 1.1rem;
+        line-height: 1.1rem;
+        color: white;
+        font-size: $size40;
+        background: $red-base;
+        border-radius: 1rem;
+        text-align: center;
+    }
+}
