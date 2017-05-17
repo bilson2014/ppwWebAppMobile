@@ -104,8 +104,11 @@ function initProduct(){
 							            '<a href="/play/'+rr.product.teamId+'_'+rr.productId+'.html">',
 										'<div class="contentItem">',
 										'     <img src="' + getDfsHostName() + rr.product.picLDUrl + '">',
-										'     <div class="itemTitle">'+rr.pName+'</div>',
-										'     <div class="itemTag">'+ptags+'</div>	',
+										'     <div class="itemDiv">                                     ',
+										'        <div class="itemTitle">'+rr.pName+'</div>              ' ,
+										'        <div class="itemTag">'+rr.customerRestimonial+'</div>	',
+										'        <img src="/resources/images/projectLine/projectList/knowMore.png">',
+										'     </div>                                                     ',
 										'     <div class="itemBack"></div>',
 										'</div></a>'
 							           ].join('');
