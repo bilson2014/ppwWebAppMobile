@@ -59,6 +59,25 @@
 	<input type="hidden" id="CSubjoinID">
 	<input type="hidden" id="CTimeID">
 	<input type="hidden" id="CConfigId"> 
+	
+	<div class="model" id="orderCheck">
+	         <div class="success">
+	            <img src="/resources/images/index/success.png" class="lazyload">
+	            <div id="showStatues">确认下单</div>
+	            <div class="checkSuccess" id="checkSuccess">确认</div>
+	            <div class="checkBack" id="checkFlase">取消</div>
+	         </div>
+	</div>
+	
+	<div class="model" id="orderSuccess">
+	         <div class="success">
+	            <img src="/resources/images/index/success.png" class="lazyload">
+	            <div id="showStatues">下单成功</div>
+	            <div class="desc">已生成订单并发送邮件到您的邮箱</div>
+	            <a href="/"><div class="checkSuccess" id="checkSuccess">确认</div></a>
+	         </div>
+	</div>
+	
 	    
 	    <jsp:include flush="true" page="../menu.jsp"></jsp:include>
 	    <div class="phoneHeader">

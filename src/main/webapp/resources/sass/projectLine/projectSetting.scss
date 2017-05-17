@@ -11,6 +11,26 @@
     background-image: linear-gradient(-179deg, #1C1A34 0%, #282F37 100%);
 }
 
+.success {
+    .checkSuccess,
+    .checkBack {
+        width: 50%;
+        height: 0.7rem !important;
+        margin: 0 auto;
+        text-align: $size36;
+        text-align: center;
+        color:white !important;
+        line-height: 0.7rem;
+        border-radius: 4px;
+    }
+    .checkSuccess {
+        background: $red-base;
+    }
+    .checkBack {
+        background: $gray-light;
+    }
+}
+
 .title {
     font-size: $size46;
     color: white;
@@ -55,6 +75,9 @@
         }
         div:nth-child(2) {
             font-size: $size40;
+            span {
+                font-size: $size36 !important;
+            }
         }
     }
 }
@@ -151,7 +174,7 @@
 }
 
 .setInfo {
-    background:black;
+    background: black;
     padding-top: 0.8rem;
     padding-bottom: 0.2rem;
     display: none;

@@ -87,9 +87,7 @@
 	    
 	<div class="pagePhone" id="pagePhone">
 		<div  id="bannerArray" class="hide">${product.chanpinBannerUrl }</div>
-	    <div class="setImg">         	
-	    </div>
-	    
+	    <div class="setImg"></div>
 	    <div class="motion">
 	          <div class="title">应用场景</div>    
 	          <div class="mContent"  id="sceneView">
