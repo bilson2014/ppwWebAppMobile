@@ -88,7 +88,7 @@
 						<div class="listCard">
 				             <img class="cardImg" src="${file_locate_storage_path }${tag.product.picLDUrl}">
 				             <div class="cardContent">
-				                    <div class="contentTitle">${tag.product.productName}</div>
+				                    <div class="contentTitle">${tag.pName}</div>
 							        <div class="contentDes">${tag.customerRestimonial}</div>
 							        <img src="${imgPath}/projectLine/projectList/knowMore.png">
 				              </div>

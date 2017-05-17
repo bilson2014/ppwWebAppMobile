@@ -104,7 +104,7 @@ function initProduct(){
 							            '<a href="/play/'+rr.product.teamId+'_'+rr.productId+'.html">',
 										'<div class="contentItem">',
 										'     <img src="' + getDfsHostName() + rr.product.picLDUrl + '">',
-										'     <div class="itemTitle">'+rr.product.productName+'</div>',
+										'     <div class="itemTitle">'+rr.pName+'</div>',
 										'     <div class="itemTag">'+ptags+'</div>	',
 										'     <div class="itemBack"></div>',
 										'</div></a>'

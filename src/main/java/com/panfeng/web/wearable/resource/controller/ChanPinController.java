@@ -10,6 +10,7 @@ import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -91,9 +92,11 @@ public class ChanPinController extends BaseController {
 	}
 
 	@RequestMapping("/product/confirm/indent")
-	public ModelAndView indentConfirm2(Long configId, Long timeId, String subJoin, HttpServletRequest request) {
+	public BaseMsg indentConfirm2(Long configId, Long timeId, String subJoin, HttpServletRequest request) {
 		PmsChanPinConfiguration config = pmsChanPinConfigurationFacade.getChanPinConfigurationInfo(configId);
-
+		BaseMsg	baseMsg = new BaseMsg();
+		baseMsg.setErrorCode(BaseMsg.ERROR);
+		baseMsg.setErrorMsg("下单失败！");
 		List<PmsDimension> pmsDimensions = config.getPmsDimensions();
 		if (ValidateUtil.isValid(pmsDimensions)) {
 			Iterator<PmsDimension> iterator = pmsDimensions.iterator();
@@ -165,11 +168,12 @@ public class ChanPinController extends BaseController {
 
 					String string = stringBuilder.toString();
 					sendMail(string, config.computePrice() + "", currentInfo);
-					return new ModelAndView("/portal");
+					baseMsg.setErrorCode(BaseMsg.NORMAL);
+					baseMsg.setErrorMsg("下单成功！");
 				}
 			}
 		}
-		return new ModelAndView("/error");
+		return baseMsg;
 	}
 
 	@RequestMapping("/product/scene/{chanpinId}")
@@ -305,9 +309,11 @@ public class ChanPinController extends BaseController {
 		if (ValidateUtil.isValid(baseModel)) {
 			for (PmsProductModule module : baseModel) {
 				sb.append("&emsp;&emsp;&emsp;");
-				sb.append(module.getModuleName());
-				sb.append("&emsp;&emsp; 价格：");
-				sb.append(module.getPinConfiguration_ProductModule().getCpmModulePrice());
+				String head = "";
+				head += module.getModuleName();
+				head = formatRow(head);
+				head += "价格：" + module.getPinConfiguration_ProductModule().getCpmModulePrice();
+				sb.append(head);
 				sb.append("<br>");
 			}
 		}
@@ -316,9 +322,11 @@ public class ChanPinController extends BaseController {
 		if (ValidateUtil.isValid(dimensionsList)) {
 			for (PmsDimension dimension : dimensionsList) {
 				sb.append("&emsp;&emsp;&emsp;");
-				sb.append(dimension.getRowName());
-				sb.append("&emsp;&emsp; 价格：");
-				sb.append(PmsChanPinConfiguration.computePrice(configuration) + "");
+				String head = "";
+				head += dimension.getRowName();
+				head = formatRow(head);
+				head += "价格：" + PmsChanPinConfiguration.computePrice(configuration) + "";
+				sb.append(head);
 				sb.append("<br>");
 			}
 		}
@@ -327,14 +335,39 @@ public class ChanPinController extends BaseController {
 		if (ValidateUtil.isValid(subjoinModel)) {
 			for (PmsProductModule module : subjoinModel) {
 				sb.append("&emsp;&emsp;&emsp;");
-				sb.append(module.getModuleName());
-				sb.append("&emsp;&emsp; 价格：");
-				sb.append(module.getPinConfiguration_ProductModule().getCpmModulePrice());
+				String head = "";
+				head += module.getModuleName();
+				head = formatRow(head);
+				head += "价格：" + module.getPinConfiguration_ProductModule().getCpmModulePrice();
+				sb.append(head);
 				sb.append("<br>");
 			}
 		}
 
 		return sb.toString();
+	}
+	
+	static String space = "&emsp;";
+	static int rowLength = 15;
+
+	private String formatRow(String head) {
+		String result = "";
+		if (ValidateUtil.isValid(head)) {
+			int srtLength = head.length();
+			char[] charArray = head.toCharArray();
+			String[] resArray = new String[rowLength];
+			for (int i = 0; i < resArray.length; i++) {
+				if (i < srtLength) {
+					char c = charArray[i];
+					resArray[i] = String.valueOf(c);
+				} else {
+					resArray[i] = space;
+				}
+			}
+			result = StringUtils.join(resArray, "");
+		}
+
+		return result;
 	}
 
 }
