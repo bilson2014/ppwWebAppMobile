@@ -9,7 +9,8 @@ function getConfirm(){
 		var cId = $('#CConfigId').val();
 		var tId = $('#CTimeID').val();
 		var subId = $('#CSubjoinID').val();
-		window.location.href= '/product/confirm/indent?configId='+cId +'&timeId='+tId +'&subJoin='+subId;
+		var price = $('#setTotalPrice').text();
+		window.location.href= '/product/confirm/indent?configId='+cId +'&timeId='+tId +'&subJoin='+subId+'&price='+price;
 	});
 }
 /**
@@ -354,7 +355,7 @@ function calculatedValue(num){
 			priceArray.push("+");
 		}
 	}
-	if(num >0){
+	if(addSet.length > 0){
 			$('.showDes').text('您选择了: '+ typeModText + '+' + timeSetText + addSetText);
 	   }else{
 		   $('.showDes').text('您选择了: '+ typeModText + '+' + timeSetText);
