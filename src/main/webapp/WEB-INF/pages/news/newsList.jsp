@@ -14,8 +14,8 @@
 <spring:url value="/resources/lib/jquery/plugins.js" var="pluginJs"/>
 <spring:url value="/resources/lib/jquery.json/jquery.json-2.4.min.js" var="jsonJs"/>
 <spring:url value="/resources/js/common.js" var="commonJs"/>
-<spring:url value="/resources/js/youku-player.js" var="ykJs" />
 <spring:url value="/resources/js/news/newsList.js" var="newsListJs"/>
+<spring:url value="/resources/lib/jquery.scrollstop/jquery.scrollstop.min.js" var="scrollstopJs"/>
 <!-- img path -->
 <spring:url value="/resources/images" var="imgPath" />
 <!DOCTYPE html>
@@ -98,10 +98,10 @@
 <script src="${pluginJs }"></script>
 <script src="${jsonJs }"></script>
 <script src="${commonJs }"></script>
+<script src="${scrollstopJs}"></script>
 <script src="${newsListJs}"></script>
 
 <!-- 加载Mob share 控件 -->
 <script id="-mob-share" src="http://f1.webshare.mob.com/code/mob-share.js?appkey=8c49c537a706"></script>
-<script type="text/javascript" src="http://player.youku.com/jsapi"></script>
 </body>
 </html>

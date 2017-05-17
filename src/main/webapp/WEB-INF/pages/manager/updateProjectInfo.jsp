@@ -5,21 +5,16 @@
 <spring:url value="/resources/lib/Bootstrap/css/bootstrap.min.css" var="bootstrapCss"/>
 <spring:url value="/resources/css/common.css" var="commonCss"/>
 <spring:url value="/resources/css/manager/updateProjectInfo.css" var="updateProjectInfoCss"/>
-<%-- <spring:url value="/resources/lib/AirDatepicker/dist/css/datepicker.min.css" var="datepickerCss" /> --%>
 <spring:url value="/resources/lib/DateTimePicker/DateTimePicker.css" var="datepickerCss" />
 
-
 <%-- import JS --%>
-
 <spring:url value="/resources/lib/jquery/jquery-2.0.3.min.js" var="jqueryJs"/>
 <spring:url value="/resources/lib/jquery/plugins.js" var="pluginJs"/>
 <spring:url value="/resources/lib/jquery.json/jquery.json-2.4.min.js" var="jsonJs"/>
 <spring:url value="/resources/lib/Bootstrap/js/bootstrap.min.js" var="bootstrapJs"/>
 <spring:url value="/resources/js/commonCopy.js" var="commonJs"/>
 <spring:url value="/resources/js/manager/updateProjectInfo.js" var="updateProjectInfoJs"/>
-<%-- <spring:url value="/resources/lib/AirDatepicker/dist/js/datepicker.min.js" var="datepickerJs" /> --%>
 <spring:url value="/resources/lib/DateTimePicker/DateTimePicker.js" var="datepickerJs" />
-<%-- <spring:url value="/resources/lib/AirDatepicker/dist/js/i18n/datepicker.zh.js" var="datepickerZhJs" /> --%>
 <spring:url value="/resources/lib/DateTimePicker/i18n/DateTimePicker-i18n.js" var="datepickerZhJs" />
 <!-- imgPath -->
 <spring:url value="/resources/images" var="imgPath" />
@@ -41,12 +36,10 @@
     <link rel="stylesheet" href="${updateProjectInfoCss}">
     <link rel="stylesheet" href="${datepickerCss}">
    
-    
 	<!--[if lt IE 9]>
 		<script>window.html5 || document.write('<script src="html5shivJs"><\/script>')</script>
 	<![endif]-->
 
-	
 	<script src="${jqueryJs }"></script>
 	<script src="${pluginJs }"></script>
 	<script src="${jsonJs }"></script>
@@ -120,6 +113,17 @@
 			          <div class="secondDiv">
 			            <div class="form-group">
 			            <select class="form-control" id="projectSource">
+			            	<option value="推广">推广</option>
+							<option value="活动">活动</option>
+							<option value="新媒体">新媒体</option>
+							<option value="渠道">渠道</option>
+							<option value="线下拓展">线下拓展</option>
+							<option value="市场活动">市场活动</option>
+							<option value="社区运营">社区运营</option>
+							<option value="自主开发">自主开发</option>
+							<option value="电销">电销</option>
+							<option value="复购">复购</option>
+							<option value="推荐">推荐</option>
 			            </select>
 			            </div>
 			           </div> 

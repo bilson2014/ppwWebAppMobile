@@ -545,21 +545,12 @@ public class VersionManagerController extends BaseController {
 		}
 		return new ArrayList<>();
 	}
-
+	
 	/**
-	 * 添加简单客户
+	 * 跳转项目信息页面
+	 * @param model
+	 * @return
 	 */
-	/*@RequestMapping("/projects/user/save/simple")
-	public long addSimpleUser(@RequestBody final PmsUser user, final HttpServletRequest request) {
-		final String url = PublicConfig.URL_PREFIX + "portal/user/save/simple";
-		String str = HttpUtil.httpPost(url, user, request);
-		if (str != null && !"".equals(str)) {
-			return JsonUtil.toBean(str, Long.class);
-		} else
-			return -1;
-	}*/
-
-	// /////////////////////////flowcontroller///////////////////////////////
 	@RequestMapping("/flow/add-view")
 	public ModelAndView flowView(final ModelMap model) {
 		return new ModelAndView("/manager/updateProjectInfo", model);
