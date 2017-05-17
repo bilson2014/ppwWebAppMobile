@@ -25,6 +25,7 @@ import com.paipianwang.pat.common.util.JsonUtil;
 import com.paipianwang.pat.common.util.ValidateUtil;
 import com.paipianwang.pat.facade.product.entity.PmsChanPin;
 import com.paipianwang.pat.facade.product.entity.PmsChanPinConfiguration;
+import com.paipianwang.pat.facade.product.entity.PmsChanPinConfiguration_ProductModule;
 import com.paipianwang.pat.facade.product.entity.PmsDimension;
 import com.paipianwang.pat.facade.product.entity.PmsIndentConfirm;
 import com.paipianwang.pat.facade.product.entity.PmsProductModule;
@@ -130,8 +131,6 @@ public class ChanPinController extends BaseController {
 					}
 				}
 			}
-		} else {
-
 		}
 
 		PmsIndentConfirm pmsIndentConfirm = new PmsIndentConfirm();
@@ -156,13 +155,16 @@ public class ChanPinController extends BaseController {
 				Long valueOf = Long.valueOf(object.toString());
 				if (valueOf > 0) {
 					// 发送邮件
-					StringBuilder stringBuffer = new StringBuilder();
-					stringBuffer.append("产品线：");
-					stringBuffer.append(chanPinInfo.getChanpinName());
-					stringBuffer.append("   配置：");
-					stringBuffer.append(config.getChanpinconfigurationName());
-					String string = stringBuffer.toString();
-					sendMail(string, config.computePrice()+"", currentInfo);
+					StringBuilder stringBuilder = new StringBuilder();
+					stringBuilder.append("产品线：");
+					stringBuilder.append(chanPinInfo.getChanpinName());
+					stringBuilder.append("<br/>配置：");
+					stringBuilder.append(config.getChanpinconfigurationName());
+					stringBuilder.append("<br>");
+					stringBuilder.append(configJoin(config));
+
+					String string = stringBuilder.toString();
+					sendMail(string, config.computePrice() + "", currentInfo);
 					return new ModelAndView("/portal");
 				}
 			}
@@ -279,4 +281,60 @@ public class ChanPinController extends BaseController {
 			}
 		}
 	}
+
+	private String configJoin(PmsChanPinConfiguration configuration) {
+		StringBuilder sb = new StringBuilder();
+		List<PmsProductModule> list = configuration.getPmsProductModule();
+		List<PmsDimension> dimensionsList = configuration.getPmsDimensions();
+
+		List<PmsProductModule> baseModel = new ArrayList<>();
+		List<PmsProductModule> subjoinModel = new ArrayList<>();
+		for (PmsProductModule productModule : list) {
+			if (productModule.getPinConfiguration_ProductModule() != null) {
+				PmsChanPinConfiguration_ProductModule config = productModule.getPinConfiguration_ProductModule();
+				Integer cpmModuleType = config.getCpmModuleType();
+				if (cpmModuleType.equals(1)) {
+					subjoinModel.add(productModule);
+				} else {
+					baseModel.add(productModule);
+				}
+			}
+		}
+		sb.append("基础服务：<br>");
+		// 基础价格计算
+		if (ValidateUtil.isValid(baseModel)) {
+			for (PmsProductModule module : baseModel) {
+				sb.append("&emsp;&emsp;&emsp;");
+				sb.append(module.getModuleName());
+				sb.append("&emsp;&emsp; 价格：");
+				sb.append(module.getPinConfiguration_ProductModule().getCpmModulePrice());
+				sb.append("<br>");
+			}
+		}
+		sb.append("时长：<br>");
+		// 时长增益
+		if (ValidateUtil.isValid(dimensionsList)) {
+			for (PmsDimension dimension : dimensionsList) {
+				sb.append("&emsp;&emsp;&emsp;");
+				sb.append(dimension.getRowName());
+				sb.append("&emsp;&emsp; 价格：");
+				sb.append(PmsChanPinConfiguration.computePrice(configuration) + "");
+				sb.append("<br>");
+			}
+		}
+		sb.append("附加服务：<br>");
+		// 附件包价格计算
+		if (ValidateUtil.isValid(subjoinModel)) {
+			for (PmsProductModule module : subjoinModel) {
+				sb.append("&emsp;&emsp;&emsp;");
+				sb.append(module.getModuleName());
+				sb.append("&emsp;&emsp; 价格：");
+				sb.append(module.getPinConfiguration_ProductModule().getCpmModulePrice());
+				sb.append("<br>");
+			}
+		}
+
+		return sb.toString();
+	}
+
 }
