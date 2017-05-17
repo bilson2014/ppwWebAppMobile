@@ -12,12 +12,16 @@
 }
 
 .success {
+
+    .desc{
+       margin-bottom: 0.5rem;
+    }
     .checkSuccess,
     .checkBack {
         width: 50%;
         height: 0.7rem !important;
         margin: 0 auto;
-        text-align: $size36;
+        font-size: $size36!important;
         text-align: center;
         color:white !important;
         line-height: 0.7rem;
