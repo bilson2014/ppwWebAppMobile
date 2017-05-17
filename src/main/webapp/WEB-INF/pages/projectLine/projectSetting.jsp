@@ -82,7 +82,8 @@
 	    </div>
 	    <div class="showType">
 	         <a href="/product/${product.englishName }/main"><div>产品概述</div></a>
-	         <div >产品配置</div>
+	         <a href="/product/${product.englishName }/case"><div>全部案例</div></a>
+	         <a href="/product/${product.englishName }/set"><div style="border:none">产品配置</div></a>
 	    </div> 
 	  
         <div class="pagePhone" id="pagePhone">

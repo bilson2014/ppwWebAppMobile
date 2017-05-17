@@ -5,3 +5,53 @@
 @import "variables";
 @import "compass/typography/text/ellipsis";
 @import "normalize";
+@import "pmotion";
+.pagePhone {
+    font-size: 0;
+    background: black !important;
+    height: auto !important;
+}
+
+.setMargin {
+        padding-top: 2.6rem;
+}
+
+.listCard {
+    width: 100%;
+    position: relative;
+    .cardImg {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+    .cardContent {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        background-color: rgba(0, 0, 0, 0.4);
+        text-align: center;
+        .contentTitle {
+            margin-top: 1.6rem;
+            font-size: $size40;
+            color: white;
+            font-weight: bold;
+        }
+        .contentDes {
+            margin-top: 0.4rem;
+            margin-bottom: 0.4rem;
+            font-size: $size30;
+            color: white;
+            line-height: 0.5rem;
+        }
+        img {
+            width: 2.4rem;
+            height: 0.6rem;
+        }
+    }
+}
