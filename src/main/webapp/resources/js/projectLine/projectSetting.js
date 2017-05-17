@@ -6,11 +6,24 @@ $().ready(function() {
 });
 function getConfirm(){
 	$('#confirm').on('click',function(){
-		var cId = $('#CConfigId').val();
-		var tId = $('#CTimeID').val();
-		var subId = $('#CSubjoinID').val();
-		var price = $('#setTotalPrice').text();
-		window.location.href= '/product/confirm/indent?configId='+cId +'&timeId='+tId +'&subJoin='+subId+'&price='+price;
+		showModSuccess();	
+	});
+}
+
+function showModSuccess(){
+	var cId = $('#CConfigId').val();
+	var tId = $('#CTimeID').val();
+	var subId = $('#CSubjoinID').val();
+	var price = $('#setTotalPrice').text();
+	$('#orderCheck').show();
+	$('#checkSuccess').on('click',function(){
+		loadData(function(res){
+			$('#orderCheck').hide();
+			$('#orderSuccess').show();
+		}, getContextPath()+'/product/confirm/indent?configId='+cId +'&timeId='+tId +'&subJoin='+subId+'&price='+price, null);
+	});
+	$('#checkFlase').on('click',function(){
+		$('#orderCheck').hide();
 	});
 }
 /**
