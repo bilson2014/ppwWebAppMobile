@@ -11,13 +11,13 @@ function getConfirm(){
 }
 
 function showModSuccess(){
+	var cId = $('#CConfigId').val();
+	var tId = $('#CTimeID').val();
+	var subId = $('#CSubjoinID').val();
+	var price = $('#setTotalPrice').text();
 	$('#orderCheck').show();
 	$('#checkSuccess').on('click',function(){
 		loadData(function(res){
-			var cId = $('#CConfigId').val();
-			var tId = $('#CTimeID').val();
-			var subId = $('#CSubjoinID').val();
-			var price = $('#setTotalPrice').text();
 			$('#orderCheck').hide();
 			$('#orderSuccess').show();
 		}, getContextPath()+'/product/confirm/indent?configId='+cId +'&timeId='+tId +'&subJoin='+subId+'&price='+price, null);

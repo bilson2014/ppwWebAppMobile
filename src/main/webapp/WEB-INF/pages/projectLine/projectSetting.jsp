@@ -62,7 +62,7 @@
 	
 	<div class="model" id="orderCheck">
 	         <div class="success">
-	            <img src="/resources/images/index/success.png" class="lazyload">
+	            <img src="/resources/images/index/check.png" class="lazyload">
 	            <div id="showStatues">确认下单</div>
 	            <div class="checkSuccess" id="checkSuccess">确认</div>
 	            <div class="checkBack" id="checkFlase">取消</div>
@@ -77,8 +77,7 @@
 	            <a href="/"><div class="checkSuccess" id="checkSuccess">确认</div></a>
 	         </div>
 	</div>
-	
-	    
+	  
 	    <jsp:include flush="true" page="../menu.jsp"></jsp:include>
 	    <div class="phoneHeader">
 		     <a id="openMenu"><img src="${imgPath }/index/toMenu.png"></a>
