@@ -36,7 +36,7 @@
     }
     .active {
         border-color: $red-base !important;
-        color: $red-base;
+        color: $red-base !important;
         position: relative;
         z-index: 5;
     }
@@ -48,13 +48,12 @@
         vertical-align: top;
         border: 1px solid #979797;
         text-align: center;
+        color: $border-line-light;
         div:nth-child(1) {
-            color: $border-line;
             margin-top: 0.2rem;
             margin-bottom: 0.2rem;
         }
         div:nth-child(2) {
-            color: $border-line-light;
             font-size: $size40;
         }
     }
@@ -152,7 +151,7 @@
 }
 
 .setInfo {
-    background-image: linear-gradient(-179deg, #1C1A34 0%, #282F37 100%);
+    background:black;
     padding-top: 0.8rem;
     padding-bottom: 0.2rem;
     display: none;

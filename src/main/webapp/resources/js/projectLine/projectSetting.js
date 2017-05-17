@@ -48,6 +48,8 @@ var pSet= {
 			  $(this).addClass('active');
 			  initModel($(this).attr('data-id'));
 			  $('#CConfigId').val($(this).attr('data-id'));
+			  $('.setInfo').slideUp();
+	          $('.showMoreDiv').show();
 		});
 		$('#k2').off('click').on('click',function(){
 			  $('.cardItem').hide();
@@ -56,6 +58,8 @@ var pSet= {
 			  $(this).addClass('active');
 			  initModel($(this).attr('data-id'));
 			  $('#CConfigId').val($(this).attr('data-id'));
+			  $('.setInfo').slideUp();
+	          $('.showMoreDiv').show();
 		});
 		$('#k4').off('click').on('click',function(){
 			  $('.cardItem').hide();
@@ -64,6 +68,8 @@ var pSet= {
 			  $(this).addClass('active');
 			  initModel($(this).attr('data-id'));
 			  $('#CConfigId').val($(this).attr('data-id'));
+			  $('.setInfo').slideUp();
+	          $('.showMoreDiv').show();
 		});
 		$('.toNext').off('click').on('click',function(){
 			  $('#step1').hide();
