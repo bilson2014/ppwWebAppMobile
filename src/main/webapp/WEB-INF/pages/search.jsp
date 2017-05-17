@@ -6,7 +6,6 @@
 <%@ taglib prefix="r" uri="/mytaglib"%>
 <%@ page import="java.lang.Integer"%>
 <%@ page import="java.util.List"%>
-<%-- <%@ page import="com.panfeng.film.resource.model.Solr"%> --%>
 
 <%-- import CSS --%>
 <spring:url value="/resources/lib/Bootstrap/css/bootstrap.min.css"

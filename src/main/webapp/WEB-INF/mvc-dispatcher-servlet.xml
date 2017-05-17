@@ -84,6 +84,7 @@
 	<mvc:view-controller path="/pLogin" view-name="/loginChoose/proPhoneLogin" />
     <mvc:view-controller path="/userInfo" view-name="/customer/userInfo" />
     <mvc:view-controller path="/phoneCost" view-name="/cost/phoneCost" />
+    <mvc:view-controller path="/calculate" view-name="/cost/phoneCost" />
     
     
     

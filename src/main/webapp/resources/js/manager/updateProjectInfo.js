@@ -11,13 +11,12 @@ var projectSource ={
 		    init:function(){
 		    	this.showReferrer();
 		    	this.initReferrerInput();
-		    	this.loadSource();//加载来源信息
 		    	this.getProjectInfo();//若是更新项目,加载原有信息
 		    	this.addOrUpdateProject();//添加or更新项目
 		    },  
 		    showReferrer:function(){
 		    	$("#projectSource").on('change',function(){
-		   		 if($("#projectSource").val().trim()=='个人信息下单'){
+		   		 if($("#projectSource").val().trim()=='推荐'){
 		   			 $("#referrer").removeClass('hide');
 		   		 }
 		   		 else{
@@ -63,15 +62,6 @@ var projectSource ={
 		    	}, getContextPath() + '/mgr/projects/get/reffers', $.toJSON({
 		    		name:inputString
 		    	}));
-		    },
-		    loadSource:function(){
-		    	loadData(function(msg) {
-		    		var select=$("#projectSource");
-		    		for (var int = 0; int < msg.length; int++) {
-		    			var li=$("<option>"+msg[int].name+"</option>");
-		    			select.append(li);
-		    		}
-		    	}, getContextPath() + '/mgr/projects/getProjectTags', null);
 		    },
 		    getProjectInfo:function(){
 		    	var _this = this;
@@ -120,7 +110,7 @@ var projectSource ={
 		    		$("#teamName").val(msg.teamName);
 		    		$("#teamContact").val(msg.teamContact);
 		    		$("#teamPhone").val(msg.teamPhone);
-		    		if(msg.source=='个人信息下单'){
+		    		if(msg.source=='推荐'){
 			   			 $("#referrer").removeClass('hide');
 			   		 }
 			   		 else{
@@ -129,7 +119,7 @@ var projectSource ={
 		    		$("#projectSource").val(msg.source);
 		    		//add wangliming 2016.5.10 11:28 begin
 		    		//-->添加推荐人
-		    		if($("#projectSource").val().trim()=='个人信息下单'){
+		    		if($("#projectSource").val().trim()=='推荐'){
 		    			$("#div-friendship").removeClass('hide');
 		    			$("#referrer-Id-hidden").val(msg.referrerId);
 		    			$("#input-referrer").val(msg.referrerName);
@@ -1042,7 +1032,7 @@ function hasPirce(){
 }
 
 function getReferrer() {
-	if($("#projectSource").val().trim()=='个人信息下单'){
+	if($("#projectSource").val().trim()=='推荐'){
 		 return  $("#referrer-Id-hidden").val();
 	 }
 	 else{

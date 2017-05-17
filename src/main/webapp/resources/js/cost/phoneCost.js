@@ -67,7 +67,7 @@ function loginOrder(){
 			indentId : indentId,
 			description : description,
 			verification_code:'',
-			indentName : 'PC-移动-成本计算器'
+			indentName : '网站-移动-成本计算器'
 		}));
 	}else{
 		loadData(function(result) {
@@ -154,7 +154,7 @@ function noLoginOrder(){
 					equipment : equipment,
 					actor : actor,
 					animation : animation,
-					indentName : 'PC-移动-成本计算器',
+					indentName : '网站-移动-成本计算器',
 					phone : phone,
 					indentId : indentId,
 					description : description,
