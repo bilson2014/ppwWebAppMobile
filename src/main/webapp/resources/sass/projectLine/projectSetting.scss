@@ -18,14 +18,15 @@
     }
     .checkSuccess,
     .checkBack {
-        width: 50%;
-        height: 0.7rem !important;
-        margin: 0 auto;
-        font-size: $size36!important;
-        text-align: center;
-        color:white !important;
-        line-height: 0.7rem;
-        border-radius: 4px;
+    width: 7rem !important;
+    height: 1.1rem !important;
+    background: #fe5453;
+    border-radius: 70px;
+    color: white !important;
+    font-size:$size40;
+    line-height: 1.1rem;
+    margin-top: 0.8rem;
+    margin: 0 auto;
     }
     .checkSuccess {
         background: $red-base;
@@ -78,9 +79,9 @@
             margin-bottom: 0.2rem;
         }
         div:nth-child(2) {
-            font-size: $size40;
+            font-size: $size36;
             span {
-                font-size: $size36 !important;
+                font-size: $size40 !important;
             }
         }
     }
