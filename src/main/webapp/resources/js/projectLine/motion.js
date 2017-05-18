@@ -1,6 +1,6 @@
 $().ready(function() {
 	initScene();
-	//initFeature();
+    //initFeature();
 	initProduct();
 	initBanner();
 });
