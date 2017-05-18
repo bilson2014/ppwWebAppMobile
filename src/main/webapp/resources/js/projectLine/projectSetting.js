@@ -15,6 +15,7 @@ function showModSuccess(){
 	var tId = $('#CTimeID').val();
 	var subId = $('#CSubjoinID').val();
 	var price = $('#setTotalPrice').text();
+	loadInfoToSuccess(price);
 	$('#orderCheck').show();
 	$('#checkSuccess').on('click',function(){
 		loadData(function(res){
@@ -25,6 +26,30 @@ function showModSuccess(){
 	$('#checkFlase').on('click',function(){
 		$('#orderCheck').hide();
 	});
+}
+
+function loadInfoToSuccess(price){
+	$('#checkPrice').text(price);
+	var typeMod = $(".typeMod .active");
+	var addSet = $(".addSet div.active");
+	var timeSet = $(".timeSet div.active");
+	var addDiv = $('#addTypeContent');
+	if(addSet.length > 0){
+		$('#addType').show();
+		addDiv.html('');
+		for (var int = 0; int < addSet.length; int++) {
+			var nowAdd = '+' + '[' + $(addSet[int]).find('.name').text() +']';
+			  var html = [
+							'<div class="contentItem">'+$(addSet[int]).find('.name').text()+'</div>',
+				  ].join('');
+			  addDiv.append(html);
+		}
+		
+	}else{
+		$('#addType').hide();
+	}
+	$('#modName').text($(typeMod).find('.info').text());
+	$('#timeName').text($(timeSet).find('.name').text());
 }
 /**
  * 主页业务处理部分
