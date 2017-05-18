@@ -35,7 +35,7 @@ function initScene(){
 					var html = [
 								'<div class="mItem">',
 								'	<img src="'+getDfsHostName() + rr.scenenPicLDUrl +'">',
-								'	<div>'+rr.sceneName+'</div>',
+								'	<div>'+rr.sceneDescription+'</div>',
 								'</div>'
 					            ].join('');
 					view.append(html);

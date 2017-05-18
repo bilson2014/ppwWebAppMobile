@@ -233,7 +233,8 @@
     width: 9.2rem;
     margin: 0 auto;
     font-size: 0;
-    margin-bottom: 0.8rem;
+    margin-bottom: 0.7rem;
+    text-align: center;
     .tItem:nth-child(3) {
         margin-right: 0;
     }
@@ -242,6 +243,7 @@
         height: 0.6rem;
         line-height: 0.6rem;
         margin-right: 0.1rem;
+        margin-bottom: 0.1rem;
         background-image: linear-gradient(-180deg, #EAC322 0%, #FDCE3A 47%, #B08312 52%, #DA932E 100%);
         font-size: $size28;
         color: $gray-dark;
