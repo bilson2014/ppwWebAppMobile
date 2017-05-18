@@ -61,11 +61,36 @@
 	<input type="hidden" id="CConfigId"> 
 	
 	<div class="model" id="orderCheck">
-	         <div class="success">
-	            <img src="/resources/images/index/check.png" class="lazyload">
-	            <div id="showStatues">确认下单</div>
-	            <div class="checkSuccess" id="checkSuccess">确认</div>
-	            <div class="checkBack" id="checkFlase">取消</div>
+	         <div class="checkItem">
+	            <div class="checkTitle">
+	                 <div>您购买详细如下</div>
+	                 <div>总价格</div> 
+	                 <div>¥</div>
+	                 <div id="checkPrice">9800</div>    
+	            </div>
+	            <div class="cmItem">
+	                 <div class="cmTitle">基础套餐</div>
+	                 <div class="content">
+	                      <div class="contentItem" id="modName"></div>
+	                 </div>
+	            </div>
+	              <div class="cmItem">
+	                 <div class="cmTitle">时长</div>
+	                 <div class="content">
+	                      <div class="contentItem" id="timeName"></div>
+	                 </div>
+	            </div>
+	              <div class="cmItem" id="addType">
+	                 <div class="cmTitle">附加包类型</div>
+	                 <div class="content" id="addTypeContent">
+	                     
+	                 </div>
+	            </div>
+	            <div class="checkBtn">
+	                <div class="btnBack" id="checkFlase">返回</div>
+		            <div class="btnSuccess" id="checkSuccess">提交</div>
+	            </div>
+
 	         </div>
 	</div>
 	
