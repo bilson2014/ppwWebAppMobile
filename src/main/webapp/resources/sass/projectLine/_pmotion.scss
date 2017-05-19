@@ -50,22 +50,26 @@
         display: inline-block;
         vertical-align: top;
         margin-left: 0.5rem;
+        margin-right: 0.1rem;
         width: 1.88rem;
         height: 0.6rem;
         text-align: center;
         line-height: 0.6rem;
         position: relative;
-        top: 0.25rem;
+        top: 0.3rem;
     }
+
     a:last-child {
         div {
             font-size: $size36;
-            margin-left:3rem;
+            margin-left:3.5rem;
             width: 1.88rem;
             height: 0.6rem;
             color: white !important;
             background: $red-base;
-            border-radius: 8px;
+            border-radius: 6px;
+            position: absolute;
+            right:0.5rem;
         }
     }
     .active {
@@ -103,7 +107,7 @@
     }
     a:last-child{
         div{
-            border: none;
+            border: none !important;
         }
     }
 }
