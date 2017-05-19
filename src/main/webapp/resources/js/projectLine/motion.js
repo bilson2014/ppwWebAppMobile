@@ -1,6 +1,6 @@
 $().ready(function() {
 	initScene();
-	//initFeature();
+    //initFeature();
 	initProduct();
 	initBanner();
 });
@@ -35,7 +35,7 @@ function initScene(){
 					var html = [
 								'<div class="mItem">',
 								'	<img src="'+getDfsHostName() + rr.scenenPicLDUrl +'">',
-								'	<div>'+rr.sceneName+'</div>',
+								'	<div>'+rr.sceneDescription+'</div>',
 								'</div>'
 					            ].join('');
 					view.append(html);
@@ -104,8 +104,11 @@ function initProduct(){
 							            '<a href="/play/'+rr.product.teamId+'_'+rr.productId+'.html">',
 										'<div class="contentItem">',
 										'     <img src="' + getDfsHostName() + rr.product.picLDUrl + '">',
-										'     <div class="itemTitle">'+rr.pName+'</div>',
-										'     <div class="itemTag">'+ptags+'</div>	',
+										'     <div class="itemDiv">                                     ',
+										'        <div class="itemTitle">'+rr.pName+'</div>              ' ,
+										'        <div class="itemTag">'+rr.customerRestimonial+'</div>	',
+										'        <img src="/resources/images/projectLine/projectList/knowMore.png">',
+										'     </div>                                                     ',
 										'     <div class="itemBack"></div>',
 										'</div></a>'
 							           ].join('');

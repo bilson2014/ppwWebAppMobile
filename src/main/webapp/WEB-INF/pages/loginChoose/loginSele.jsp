@@ -53,21 +53,18 @@
 
 	  <div class="pagePhone">
 	         <div class="choosePage">
-	         
 	              <div class="loginItem">
 	                    <div>我是客户</div>
 	                    <div>让所有企业都能够享受  高品质的视频服务</div>
 	                    <a href="/login"><img src="${imgPath}/login/cus.png"></a>
 	              </div>
-	              
 	              <div class="loginItem">
 	                    <div>我是导演</div>
 	                    <div>让每个导演都能拍出优秀作品</div>
 	                    <a href="/pLogin"><img src="${imgPath}/login/pro.png"></a>
 	              </div>
-	              
 	              <a href="regSele"><div class="toLogin">还没有账号? 请<span>注册</span></div></a>
-	              <a href="/mgr/login"><div class="proLogin">视频管家登录</div></a>
+	              <a href="/mgr/login"><div class="proLogin">内部员工登录</div></a>
 	         </div>
 	  </div>
 </body>

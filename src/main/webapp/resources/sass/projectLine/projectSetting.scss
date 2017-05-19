@@ -11,22 +11,111 @@
     background-image: linear-gradient(-179deg, #1C1A34 0%, #282F37 100%);
 }
 
-.success {
+#orderCheck {
+    .checkItem {
+        width: 9.6rem;
+        height: auto;
+        background: white;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        margin-top: -7rem;
+        margin-left: -4.8rem;
+        border-radius: 16px;
+        font-size: 0;
+        .checkTitle {
+            width: 100%;
+            height: 1.6rem;
+            line-height: 1.6rem;
+            border-bottom: 1px solid #979797;
+            margin-bottom: 0.4rem;
+            div {
+                display: inline-block;
+                vertical-align: top;
+            }
+            div:nth-child(1) {
+                font-size: $size40;
+                color: $gray-dark;
+                font-weight: bold;
+                margin-left: .65rem;
+            }
+            div:nth-child(2) {
+                font-size: $size36;
+                color: $gray-dark;
+                margin-left: 2.2rem;
+            }
+            div:nth-child(3) {
+                font-size: $size36;
+                color: $red-base;
+                margin-left: .15rem;
+                margin-right: .15rem;
+            }
+            div:nth-child(4) {
+                font-size: $size50;
+                color: $red-base;
+            }
+        }
+        .cmItem {
+            .cmTitle {
+                font-size: $size40;
+                color: $gray;
+                margin-left: 0.65rem;
+                margin-bottom: 0.3rem;
+            }
+            .contentItem {
+                width: 7rem;
+                height: 0.9rem;
+                border-radius: 8px;
+                margin: 0 auto;
+                color: $gray;
+                font-size: $size40;
+                text-align: center;
+                line-height: 0.88rem;
+                border: 1px solid $gray-light;
+                margin-bottom: 0.3rem;
+            }
+        }
+        .checkBtn {
+            width: 8rem;
+            margin: 0 auto;
+            font-size: 0;
+            margin-top: 0.4rem;
+            margin-bottom: 0.8rem;
+            .btnSuccess,
+            .btnBack {
+                width: 3.8rem;
+                height: 1.1rem;
+                line-height: 1.1rem;
+                font-size: $size40;
+                text-align: center;
+                display: inline-block;
+                vertical-align: top;
+                background: $red-base;
+                border-radius: 100px;
+                color:white;
+            }
+            .btnBack {
+                margin-right: 0.4rem;
+            }
+        }
+    }
+}
 
-    .desc{
-       margin-bottom: 0.5rem;
+.success {
+    .desc {
+        margin-bottom: 0.5rem;
     }
     .checkSuccess,
     .checkBack {
-    width: 7rem !important;
-    height: 1.1rem !important;
-    background: #fe5453;
-    border-radius: 70px;
-    color: white !important;
-    font-size:$size40;
-    line-height: 1.1rem;
-    margin-top: 0.8rem;
-    margin: 0 auto;
+        width: 7rem !important;
+        height: 1.1rem !important;
+        background: #fe5453;
+        border-radius: 70px;
+        color: white !important;
+        font-size: $size40;
+        line-height: 1.1rem;
+        margin-top: 0.8rem;
+        margin: 0 auto;
     }
     .checkSuccess {
         background: $red-base;
@@ -144,15 +233,17 @@
     width: 9.2rem;
     margin: 0 auto;
     font-size: 0;
-    margin-bottom: 0.8rem;
-    .tItem:nth-child(3) {
-        margin-right: 0;
+    margin-bottom: 0.7rem;
+    text-align: center;
+    .tItem:nth-child(2),.tItem:nth-child(5) {
+        margin-right: 0.1rem;
+        margin-left: 0.1rem;
     }
     .tItem {
         width: 3rem;
         height: 0.6rem;
         line-height: 0.6rem;
-        margin-right: 0.1rem;
+        margin-bottom: 0.1rem;
         background-image: linear-gradient(-180deg, #EAC322 0%, #FDCE3A 47%, #B08312 52%, #DA932E 100%);
         font-size: $size28;
         color: $gray-dark;
@@ -297,10 +388,10 @@
             font-size: $size30;
         }
         div {
-            font-size: $size46;
+            font-size: $size36;
             margin-top: 0.2rem;
             span {
-                font-size: $size28 !important;
+                font-size: $size40 !important;
             }
         }
     }

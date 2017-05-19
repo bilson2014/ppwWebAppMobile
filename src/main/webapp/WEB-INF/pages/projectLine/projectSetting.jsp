@@ -61,11 +61,36 @@
 	<input type="hidden" id="CConfigId"> 
 	
 	<div class="model" id="orderCheck">
-	         <div class="success">
-	            <img src="/resources/images/index/check.png" class="lazyload">
-	            <div id="showStatues">确认下单</div>
-	            <div class="checkSuccess" id="checkSuccess">确认</div>
-	            <div class="checkBack" id="checkFlase">取消</div>
+	         <div class="checkItem">
+	            <div class="checkTitle">
+	                 <div>您购买详细如下</div>
+	                 <div>总价格</div> 
+	                 <div>¥</div>
+	                 <div id="checkPrice">9800</div>    
+	            </div>
+	            <div class="cmItem">
+	                 <div class="cmTitle">基础套餐</div>
+	                 <div class="content">
+	                      <div class="contentItem" id="modName"></div>
+	                 </div>
+	            </div>
+	              <div class="cmItem">
+	                 <div class="cmTitle">时长</div>
+	                 <div class="content">
+	                      <div class="contentItem" id="timeName"></div>
+	                 </div>
+	            </div>
+	              <div class="cmItem" id="addType">
+	                 <div class="cmTitle">附加包类型</div>
+	                 <div class="content" id="addTypeContent">
+	                     
+	                 </div>
+	            </div>
+	            <div class="checkBtn">
+	                <div class="btnBack" id="checkFlase">返回</div>
+		            <div class="btnSuccess" id="checkSuccess">提交</div>
+	            </div>
+
 	         </div>
 	</div>
 	
@@ -86,7 +111,12 @@
 		     <div class="toBuy hide">购买</div>
 	    </div>
 	    
-	    <div class="headerTags">
+	         <div class="headerTags">
+           	 <a href="/product/${product.englishName }/main"><div>产品概述</div></a>
+	         <a href="/product/${product.englishName }/case"><div>全部案例</div></a>
+	         <a href="/product/${product.englishName }/set"><div style="border:none">产品配置</div></a>
+	  </div>
+	    <div class="showType">
 	         	<c:if test="${! empty productList}">
 							<c:forEach items="${productList }" var="tag">
 								 <c:if test="${product.chanpinName == tag.chanpinName }">
@@ -97,11 +127,6 @@
 								 </c:if>
 							</c:forEach>
 				</c:if>
-	    </div>
-	    <div class="showType">
-	         <a href="/product/${product.englishName }/main"><div>产品概述</div></a>
-	         <a href="/product/${product.englishName }/case"><div>全部案例</div></a>
-	         <a href="/product/${product.englishName }/set"><div style="border:none">产品配置</div></a>
 	    </div> 
 	  
         <div class="pagePhone" id="pagePhone">
@@ -140,7 +165,6 @@
                    <div>展开了解详情</div>
                    <img src="${imgPath}/index/getMore.png">
               </div>
-              
               <div class="setInfo">
                      <div class="setInfoWidth">
                          <div class="close" id="closeInfo">

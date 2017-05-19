@@ -67,7 +67,12 @@
 		     <a href="/product/${product.englishName }/set"><div class="toBuy">产品配置</div></a>
 	    </div>
 	    
-	    <div class="headerTags">
+	      <div class="headerTags">
+           	 <a href="/product/${product.englishName }/main"><div class="active">产品概述</div></a>
+	         <a href="/product/${product.englishName }/case"><div>全部案例</div></a>
+	         <a href="/product/${product.englishName }/set"><div style="border:none">产品配置</div></a>
+	  </div>
+	    <div class="showType">
 	         	<c:if test="${! empty productList}">
 							<c:forEach items="${productList }" var="tag">
 								 <c:if test="${product.chanpinName == tag.chanpinName }">
@@ -78,12 +83,7 @@
 								 </c:if>
 							</c:forEach>
 				</c:if>
-	    </div>
-	    <div class="showType">
-	         <a href="/product/${product.englishName }/main"><div>产品概述</div></a>
-	         <a href="/product/${product.englishName }/case"><div>全部案例</div></a>
-	         <a href="/product/${product.englishName }/set"><div style="border:none">产品配置</div></a>
-	    </div>  
+	    </div> 
 	    
 	<div class="pagePhone" id="pagePhone">
 		<div  id="bannerArray" class="hide">${product.chanpinBannerUrl }</div>

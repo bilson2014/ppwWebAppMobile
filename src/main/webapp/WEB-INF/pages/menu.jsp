@@ -80,7 +80,15 @@
 			                       <div>我的项目</div>
 			                  </div>
 		                 </a>
-		             </r:identity>     
+		             </r:identity>
+		                  <r:identity role="employee">    
+		                 <a href="/product/MotionGraphicsforPublicPresentation/main">
+			                  <div class="menuItem">
+			                       <img src="${imgPath}/menu/product.png">
+			                       <div>视频产品</div>
+			                  </div>
+		                 </a>
+	                  </r:identity>       
 	                 <a href="/search?q=*">
 		                  <div class="menuItem">
 		                       <img src="${imgPath}/menu/editMenu.png">
