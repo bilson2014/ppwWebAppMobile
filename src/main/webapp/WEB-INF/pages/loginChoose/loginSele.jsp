@@ -67,7 +67,7 @@
 	              </div>
 	              
 	              <a href="regSele"><div class="toLogin">还没有账号? 请<span>注册</span></div></a>
-	              <a href="/mgr/login"><div class="proLogin">视频管家登录</div></a>
+	              <a href="/mgr/login"><div class="proLogin">内部员工登录</div></a>
 	         </div>
 	  </div>
 </body>

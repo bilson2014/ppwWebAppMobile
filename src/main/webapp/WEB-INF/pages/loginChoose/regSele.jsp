@@ -59,7 +59,6 @@
 	 <jsp:include flush="true" page="../menu.jsp"></jsp:include> 
 	
 	<div class="errorDiv"  id="errorDiv" style="display: none;">error</div>
-
 	  <div class="pagePhone">
 	         <div class="choosePage">
 	              <div class="loginItem">
@@ -73,10 +72,8 @@
 	                    <a href="/proRegister"><img src="${imgPath}/login/pro.png"></a>
 	              </div>
 	              <a href="/loginSele"><div class="toLogin">还没有账号? 请<span>登录</span></div></a>
-	              <a href="/mgr/login"><div class="proLogin">视频管家登录</div></a>
+	              <a href="/mgr/login"><div class="proLogin">内部员工登录</div></a>
 	         </div>
-
 	  </div>
-
 </body>
 </html>

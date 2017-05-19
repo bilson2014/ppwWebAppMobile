@@ -14,6 +14,9 @@ function showModSuccess(){
 	var cId = $('#CConfigId').val();
 	var tId = $('#CTimeID').val();
 	var subId = $('#CSubjoinID').val();
+	if(subId == undefined){
+		subId = "";
+	}
 	var price = $('#setTotalPrice').text();
 	loadInfoToSuccess(price);
 	$('#orderCheck').show();
