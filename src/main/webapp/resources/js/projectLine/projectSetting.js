@@ -19,8 +19,13 @@ function showModSuccess(){
 	$('#orderCheck').show();
 	$('#checkSuccess').on('click',function(){
 		loadData(function(res){
-			$('#orderCheck').hide();
-			$('#orderSuccess').show();
+			if(res.errorCode == 500){
+	    		window.location.href='/mgr/login';
+	    	}else{
+				$('#orderCheck').hide();
+				$('#orderSuccess').show();
+	    	}
+
 		}, getContextPath()+'/product/confirm/indent?configId='+cId +'&timeId='+tId +'&subJoin='+subId+'&price='+price, null);
 	});
 	$('#checkFlase').on('click',function(){
