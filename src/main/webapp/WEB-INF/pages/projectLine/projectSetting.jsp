@@ -111,23 +111,7 @@
 		     <div class="toBuy hide">购买</div>
 	    </div>
 	    
-	    <div class="headerTags">
-	         	<c:if test="${! empty productList}">
-							<c:forEach items="${productList }" var="tag">
-								 <c:if test="${product.chanpinName == tag.chanpinName }">
-										<a><div class="active">${tag.chanpinName}</div></a>
-								 </c:if>
-								 <c:if test="${product.chanpinName != tag.chanpinName }">
-										<a href="/product/${tag.englishName }/main"><div>${tag.chanpinName}</div></a>
-								 </c:if>
-							</c:forEach>
-				</c:if>
-	    </div>
-	    <div class="showType">
-	         <a href="/product/${product.englishName }/main"><div>产品概述</div></a>
-	         <a href="/product/${product.englishName }/case"><div>全部案例</div></a>
-	         <a href="/product/${product.englishName }/set"><div style="border:none">产品配置</div></a>
-	    </div> 
+	    <jsp:include flush="true" page="pTags.jsp"></jsp:include> 
 	  
         <div class="pagePhone" id="pagePhone">
           <div id="step1">
@@ -165,7 +149,6 @@
                    <div>展开了解详情</div>
                    <img src="${imgPath}/index/getMore.png">
               </div>
-              
               <div class="setInfo">
                      <div class="setInfoWidth">
                          <div class="close" id="closeInfo">

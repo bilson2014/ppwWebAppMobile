@@ -17,6 +17,7 @@
     border-radius: 4px;
     right: 0.54rem;
     margin-top: -0.25rem;
+    display: none;
 }
 
 .roateType {
@@ -38,29 +39,42 @@
     font-size: 0;
     height: 1.3rem;
     width: 100%;
-    line-height: 1.3rem;
     position: fixed;
-    top: 1.3rem;
     left: 0;
     z-index: 11;
     background: $gray-dark;
+    top: 1.3rem;
     div {
         font-size: $size40;
         color: $gray-light;
         display: inline-block;
         vertical-align: top;
-        margin-left: 0.8rem;
+        margin-left: 0.5rem;
+        width: 1.88rem;
+        height: 0.6rem;
+        text-align: center;
+        line-height: 0.6rem;
+        position: relative;
+        top: 0.25rem;
     }
-    div:last-child {
-        margin-right: 0.8rem;
+    a:last-child {
+        div {
+            font-size: $size36;
+            margin-left:3rem;
+            width: 1.88rem;
+            height: 0.6rem;
+            color: white !important;
+            background: $red-base;
+            border-radius: 8px;
+        }
     }
     .active {
-        color: $red-base;
+        color: $red-base !important;
     }
 }
 
 .showType {
-    height: 3.9rem;
+    height: auto;
     width: 100%;
     position: fixed;
     top: 1.25rem;
@@ -85,6 +99,11 @@
     a:nth-child(2) {
         div {
             border-bottom: 1px solid $gray-light;
+        }
+    }
+    a:last-child{
+        div{
+            border: none;
         }
     }
 }
