@@ -163,6 +163,7 @@ public class PCController extends BaseController {
 				product.setTeamDescription(team.getTeamDescription());
 				product.setTeamName(team.getTeamName());
 				product.setTeamPhotoUrl(team.getTeamPhotoUrl());
+				model.addAttribute("teamFlag", team.getFlag());
 			}
 		}
 		model.addAttribute("product", product);

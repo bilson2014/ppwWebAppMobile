@@ -31,7 +31,6 @@
 	<mvc:view-controller path="/wang" view-name="/standardized/requireForm" />
 	
 	<mvc:view-controller path="/list" view-name="/standardized/requireList" />
-	
 
 	<mvc:view-controller path="/testRem/rem" view-name="/testRem/rem" />
 
@@ -149,6 +148,12 @@
 		<mvc:interceptor>
 			<mvc:mapping path="/suggest/**"/>
 			<bean class="com.panfeng.web.wearable.intercepter.SuggestResourceInterceptor" />
+		</mvc:interceptor>
+		
+		<!-- 产品线相关 -->
+		<mvc:interceptor>
+			<mvc:mapping path="/product/MotionGraphicsforPublicPresentation/main"/>
+			<bean class="com.panfeng.web.wearable.filter.ProductCaseInterceptor" />
 		</mvc:interceptor>
 		
 	</mvc:interceptors>
