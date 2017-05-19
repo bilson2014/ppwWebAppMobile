@@ -95,7 +95,7 @@
         text-align: center;
         margin: 0 auto;
     }
-    a:nth-child(1) {
+    a:nth-child{
         div {
             border-bottom: 1px solid $gray-light;
         }
