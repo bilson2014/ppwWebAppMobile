@@ -28,8 +28,12 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.paipianwang.pat.common.config.PublicConfig;
 import com.paipianwang.pat.common.constant.PmsConstant;
+import com.paipianwang.pat.common.entity.PmsResult;
 import com.paipianwang.pat.common.entity.SessionInfo;
 import com.paipianwang.pat.common.util.ValidateUtil;
+import com.paipianwang.pat.facade.product.entity.PmsEmployeeProductLink;
+import com.paipianwang.pat.facade.product.entity.PmsProduct;
+import com.paipianwang.pat.facade.product.service.PmsEmployeeProductLinkFacade;
 import com.paipianwang.pat.facade.right.entity.PmsEmployee;
 import com.paipianwang.pat.facade.right.entity.PmsRole;
 import com.paipianwang.pat.facade.right.service.PmsEmployeeFacade;
@@ -73,6 +77,9 @@ public class VersionManagerController extends BaseController {
 	
 	@Autowired
 	private ResourceService resourceService = null;
+	
+	@Autowired
+	private PmsEmployeeProductLinkFacade pmsEmployeeProductLinkFacade;
 	
 	@Autowired
 	private EmployeeThirdLogin employeeThirdLogin = null;
@@ -800,14 +807,87 @@ public class VersionManagerController extends BaseController {
 		indentComment.setIcUserType(info.getSessionType());
 	}
 
-	// -------------------------------------------------phone-----------------------------------------------------------------------
-
 	// 手机端项目主页
 	@RequestMapping("/index")
 	public ModelAndView goToIndex(ModelMap model, HttpServletRequest request) {
 		SessionInfo sessionInfo = getCurrentInfo(request);
 		model.put("userInfo", sessionInfo);
 		return new ModelAndView("/project", model);
+	}
+	
+	/**
+	 * 跳转 内部员工的 作品收藏页面
+	 * 
+	 * @return
+	 */
+	@RequestMapping("/favourites")
+	public ModelAndView view(HttpServletRequest request, ModelMap map) {
+		final SessionInfo info = (SessionInfo) request.getSession().getAttribute(PmsConstant.SESSION_INFO);
+		if(info != null) {
+			List<PmsProduct> list = pmsEmployeeProductLinkFacade.findProductIdsByEmployeeId(info.getReqiureId());
+			map.put("productList", list);
+		}
+		return new ModelAndView("collect", map);
+	}
+	
+	/**
+	 * 删除收藏作品
+	 * @param productId 作品ID
+	 * @return
+	 */
+	@RequestMapping("/favourites/remove/{productId}")
+	public PmsResult deleteFavourites(@PathVariable("productId") final Long productId, final HttpServletRequest request) {
+		PmsResult prst = new PmsResult();
+		if(productId != null) {
+			final SessionInfo info = (SessionInfo) request.getSession().getAttribute(PmsConstant.SESSION_INFO);
+			if(info != null) {
+				List<PmsEmployeeProductLink> list = new ArrayList<PmsEmployeeProductLink>();
+				PmsEmployeeProductLink link = new PmsEmployeeProductLink();
+				link.setEmployeeId(info.getReqiureId());
+				link.setProductId(productId);
+				list.add(link);
+				boolean result = pmsEmployeeProductLinkFacade.deleteByEmployeeIdsAndproIds(list);
+				prst.setResult(result);
+				return prst;
+			} else {
+				// session 为空
+				prst.setErr("请重新登录!");
+			}
+		} else {
+			// 作品ID为空
+			prst.setErr("请选择作品删除!");
+		}
+		prst.setResult(false);
+		return prst;
+	}
+	
+	/**
+	 * 添加作品收藏
+	 * @param productId 作品ID
+	 * @return
+	 */
+	@RequestMapping("/favourites/add/{productId}")
+	public PmsResult addFavourites(@PathVariable("productId") final Long productId, final HttpServletRequest request) {
+		PmsResult prst = new PmsResult();
+		if(productId != null) {
+			final SessionInfo info = (SessionInfo) request.getSession().getAttribute(PmsConstant.SESSION_INFO);
+			if(info != null) {
+				PmsEmployeeProductLink link = new PmsEmployeeProductLink();
+				link.setEmployeeId(info.getReqiureId());
+				link.setProductId(productId);
+				boolean result = pmsEmployeeProductLinkFacade.save(link);
+				prst.setResult(result);
+				return prst;
+			} else {
+				// session 为空
+				prst.setErr("请重新登录!");
+			}
+		} else {
+			// 作品ID为空
+			prst.setErr("请选择作品删除!");
+		}
+		prst.setResult(false);
+		return prst;
 	}
 
 	/**
