@@ -88,19 +88,14 @@
     display: none;
     div {
         width: 80%;
-        height: 1.3rem;
-        line-height: 1.3rem;
+        height: 1.1rem;
+        line-height: 1.1rem;
         color: white;
         font-size: $size36;
         text-align: center;
         margin: 0 auto;
     }
-    a:nth-child(1) {
-        div {
-            border-bottom: 1px solid $gray-light;
-        }
-    }
-    a:nth-child(2) {
+    a{
         div {
             border-bottom: 1px solid $gray-light;
         }
