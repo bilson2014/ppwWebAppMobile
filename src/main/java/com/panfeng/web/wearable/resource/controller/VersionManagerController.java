@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.nio.charset.Charset;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -79,7 +80,7 @@ public class VersionManagerController extends BaseController {
 	private ResourceService resourceService = null;
 	
 	@Autowired
-	private PmsEmployeeProductLinkFacade pmsEmployeeProductLinkFacade;
+	private PmsEmployeeProductLinkFacade pmsEmployeeProductLinkFacade = null;
 	
 	@Autowired
 	private EmployeeThirdLogin employeeThirdLogin = null;
@@ -877,6 +878,36 @@ public class VersionManagerController extends BaseController {
 				link.setProductId(productId);
 				boolean result = pmsEmployeeProductLinkFacade.save(link);
 				prst.setResult(result);
+				return prst;
+			} else {
+				// session 为空
+				prst.setErr("请重新登录!");
+			}
+		} else {
+			// 作品ID为空
+			prst.setErr("请选择作品删除!");
+		}
+		prst.setResult(false);
+		return prst;
+	}
+	
+	/**
+	 * 判断该影片是否被当前登录者收藏
+	 * @param productId 作品ID
+	 * @return true | false
+	 */
+	@RequestMapping("/favourites/judge/{productId}")
+	public PmsResult judgeFavourites(@PathVariable("productId") final Long productId, final HttpServletRequest request) {
+		// 判断该影片是否是收藏的
+		PmsResult prst = new PmsResult();
+		if(productId != null) {
+			final SessionInfo info = (SessionInfo) request.getSession().getAttribute(PmsConstant.SESSION_INFO);
+			if(info != null) {
+				Map<String ,Object> param = new HashMap<String, Object>();
+				param.put("employeeId", info.getReqiureId());
+				param.put("productId", productId);
+				List<PmsEmployeeProductLink> list = pmsEmployeeProductLinkFacade.findLinkByParam(param);
+				prst.setResult(ValidateUtil.isValid(list));
 				return prst;
 			} else {
 				// session 为空
