@@ -10,6 +10,7 @@ $().ready(function() {
     play.initData();
     play.order();
     play.showMore();
+    saveVideo();
     $('#verification_code_recover_btn').off('click').on('click',verificationCodeBtn);
     $('#submitOrder').off('click').on('click',submitOrder);
     $('.orderVideo').off('click').on('click',function(){
@@ -30,6 +31,45 @@ $().ready(function() {
     	clearDate();
     });
 });
+
+
+function saveVideo(){	
+	loadData(function(flag){
+		if(flag.result){
+			$('#managerCollect').removeClass('save');
+			$('#showSave').hide();
+		}else{
+			$('#managerCollect').addClass('save');
+			$('#showSave').hide();
+		}
+	}, getContextPath() + '/mgr/favourites/judge/' + $('#videoId').val(), null);
+	
+	$('#managerCollect').off('click').on('click',function(){
+		if($(this).hasClass('save')){
+			loadData(function(flag){
+				if(flag){
+					$('#managerCollect').removeClass('save');
+					$('#showSave').fadeIn();
+					$('#showSave').text('已收藏');
+					setTimeout(function() {
+							$('#showSave').fadeOut();
+			            }, 1000);
+				}
+			}, getContextPath() + '/mgr/favourites/add/' + $('#play-unique').val(), null);
+		}else{
+			loadData(function(flag){
+				if(flag){
+					$('#managerCollect').addClass('save');
+					$('#showSave').fadeIn();
+					$('#showSave').text('已取消');
+					 setTimeout(function() {
+						    $('#showSave').fadeOut();
+			            }, 1000);
+				}
+			}, getContextPath() + '/mgr/favourites/remove/' + $('#play-unique').val(), null);
+		}
+	});
+}
 
 play = {
     initData: function() {
@@ -110,13 +150,33 @@ function createCard(msg){
 		}
 	}
 	var $body1 = ''
-		+'   <a href="/play/'+tema+'_'+pro+'.html">'
 		+'		 <div class="contentItem" style="background:url('+getDfsHostName()+''+msg.picLDUrl+') no-repeat">'
-		+'			   <div class="itemTitle">'+msg.productName+'</div>'
+		if(msg.indentProjectId < 0){
+			+'       <img class="roleImg" src="/resources/images/video/roleOur.png">'
+		}
+	    if(msg.indentProjectId > 0){
+			+'       <img class="roleImg" src="/resources/images/video/rolePlay.png">'
+       	}
+	    if(msg.teamFlag == 0){
+			+'       <img class="roleImg" src="/resources/images/video/rolePro.png">'
+		}
+		+'            <div class="itemS">'
+		+'			         <div class="itemTitle">'+msg.productName+'</div>'
 		+'					 <div class="itemTag">'+tags+'</div>'
-		+'					 <div class="itemBack"></div>'
-		+'		 </div> '
+		+'                   <div class="toProvider">'
+		 if(msg.teamFlag != 4 && msg.teamFlag != null){
+				+'	                 <a href="'+getContextPath() +'/provider/info/'+msg.teamId+'.html';+'">'
+		        +'                      <img src="'+getDfsHostName()+''+msg.teamPhotoUrl+'">'
+		        +'                      <div class="proName">'+msg.teamName+'</div> '
+		        +'                   </a>'
+		 }
+        +'                   </div>'
+		+'            </div>'
+		+'   <a href="/play/'+tema+'_'+pro+'.html">'
+		+'			  <div class="itemBack"></div>'
 		+'	 </a>'
+		+'		 </div> '
+
 	return $body1;		
 };
 

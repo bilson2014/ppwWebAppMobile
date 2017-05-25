@@ -3,6 +3,7 @@
 @import "mixin";
 @import "common_portal";
 @import "normalize";
+@import "common_card";
 body {
     font-family: "PingFang SC", "Microsoft YaHei", "微软雅黑", "STHeiti" !important;
 }
@@ -50,44 +51,7 @@ body {
     top: 0.4rem;
 }
 
-.contentItem {
-    width: 100%;
-    background-size: 100% 100% !important;
-    position: relative;
-    img {
-        height: 100%;
-        width: 100%;
-    }
-    .itemTitle {
-        color: white;
-        font-size: 0.4rem;
-        width: 8rem;
-        @include ellipsis;
-        position: absolute;
-        bottom: 1rem;
-        left: 0.6rem;
-        font-weight: bold;
-        z-index: 3;
-        line-height: 25px;
-    }
-    .itemTag {
-        color: white;
-        font-size: 0.26rem;
-        position: absolute;
-        bottom: 0.1rem;
-        left: 0.6rem;
-        z-index: 3;
-        height: 0.8rem;
-        overflow: hidden;
-    }
-    .itemBack {
-        position: absolute;
-        top:0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.4);
-    }
-}
+
 
 //搜索
 .hideBox {
