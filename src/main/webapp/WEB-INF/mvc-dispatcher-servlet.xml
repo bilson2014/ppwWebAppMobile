@@ -63,11 +63,8 @@
 	<mvc:view-controller path="/costweixin" view-name="/costcalculateweixin" />
 	<mvc:view-controller path="/costtoutiao" view-name="/costcalculatetoutiao" />
 	
-	<!-- 产品线 -->
-	<mvc:view-controller path="/motion" view-name="/projectLine/motion" />
-	<mvc:view-controller path="/pList" view-name="/projectLine/projectList" />
-	<mvc:view-controller path="/pOrder" view-name="/projectLine/projectOrder" />
-	<mvc:view-controller path="/pSet" view-name="/projectLine/projectSetting" />
+	<!-- test -->
+    <mvc:view-controller path="/testS" view-name="/manager/collect" />
 	<!-- 产品线End -->
 	<mvc:view-controller path="/repwd" view-name="/repwd" />
 	<mvc:view-controller path="/play" view-name="/play" />
@@ -84,8 +81,6 @@
     <mvc:view-controller path="/userInfo" view-name="/customer/userInfo" />
     <mvc:view-controller path="/phoneCost" view-name="/cost/phoneCost" />
     <mvc:view-controller path="/calculate" view-name="/cost/phoneCost" />
-    
-    
     
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver"
 		p:prefix="/WEB-INF/pages/" p:suffix=".jsp" />
