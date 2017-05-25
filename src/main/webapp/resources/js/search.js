@@ -83,13 +83,11 @@ var search = {
 						$('#'+industryArr[int]).addClass('checkActive');
 				}
 			}
-			
 			if(genreArr != null && genreArr.length >0){
 				for (var int = 0; int < genreArr.length; int++) {
 						$('#'+genreArr[int]).addClass('checkActive');
 				}
 			}
-			
 			parsePrice();
 		},
         showTags : function(){
@@ -102,7 +100,6 @@ var search = {
         			$('#typeTagsShow').removeClass('noShow');
         		}
         	});
-        	
         	$('#wType').off('click').on('click',function(){
         		if($('#workTags').hasClass('typeActive')){
         			$('#workTags').removeClass('typeActive');
@@ -317,17 +314,27 @@ function createVideo(product){
 			}
 		}
 	}
+	
+	var htmlAdd = '<a href="'+getContextPath()+'/provider/info/'+product.teamId+'.html"><img src="'+getDfsHostName()+product.teamPhotoUrl+'"><div>'+product.teamName+'</div></a>';
+	if(teamFlag == 4 && teamFlag == null ){
+		htmlAdd ='';
+	}
 	var body = [
-					'<a class="videoItem" href="/play/'+product.teamId+'_'+product.productId+'.html">',
 					'<div class="contentItem"">',
+					      '<a class="videoItem" href="/play/'+product.teamId+'_'+product.productId+'.html">',
 					      '<img src='+url+'> ',
+					      '</a>',
+					      '<div class="itemS">',
 					      '<div class="itemTitle">'+product.productName+'</div>',
 					      '<div class="itemTag">',
 					      ptags,
 					      '</div>',
+					      '<div class="toProvider">',
+					      htmlAdd,
+					      '</div>',
+					      '</div>',
 					      '<div class="itemBack"></div>',
 					'</div>',
-					'</a>'
 				].join('');
 	return body;
 }

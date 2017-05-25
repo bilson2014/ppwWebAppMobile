@@ -138,20 +138,33 @@
     <c:if test="${!empty list}">
 					<!-- not empty -->
 	    <c:forEach items="${list }" var="solr" varStatus="status">
-	     	<a  class="videoItem" href="<spring:url value='/play/${solr.teamId}_${solr.productId }.html'/>">
+
 			   <div class="contentItem">
-			         <img class="lazyload" data-src="${file_locate_storage_path }${solr.picLDUrl }">
-                     <div class="itemTitle">${solr.productName}</div>
-                     <div class="itemTag">
-	                     <c:forEach items="${fn:split(fn:trim(solr.tags),' ') }" var="tag" end="2" varStatus="stat">
-	                              <c:if test="${stat.index < 5}">
-									 <c:if test="${stat.index > 0}">/</c:if>${tag} 
-								   </c:if>	
-						 </c:forEach>
+			       	<a  class="videoItem" href="<spring:url value='/play/${solr.teamId}_${solr.productId }.html'/>">
+			          <img class="lazyload" data-src="${file_locate_storage_path }${solr.picLDUrl }">
+			        </a> 
+			         <img class="roleImg" src="${imgPath }/video/roleOur.png">
+			         <div class="itemS">
+	                     <div class="itemTitle">${solr.productName}</div>
+	                     <div class="itemTag">
+		                     <c:forEach items="${fn:split(fn:trim(solr.tags),' ') }" var="tag" end="2" varStatus="stat">
+		                              <c:if test="${stat.index < 5}">
+										 <c:if test="${stat.index > 0}">/</c:if>${tag} 
+									   </c:if>	
+							 </c:forEach>
+	                     </div>
+	                     	 <div class="toProvider">
+	                     	    <c:if test="${not empty solr.teamFlag && solr.teamFlag != 4 }">
+	                     	        <a href="<spring:url value='/provider/info_${solr.teamId }.html'/>">
+			                         <img src="${file_locate_storage_path }${solr.teamPhotoUrl }">
+			                         <div class="proName">${solr.teamName }</div>
+			                       </a>  
+			                     </c:if>  
+			                 </div>
                      </div>
                      <div class="itemBack"></div>
 			   </div>
-		    </a>
+		 
 	    </c:forEach>
 	</c:if>
 	
