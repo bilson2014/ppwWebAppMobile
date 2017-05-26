@@ -60,11 +60,11 @@ public class RequireController extends BaseController {
 		}
 		return baseMsg;
 	}
-	@RequestMapping("/require")
+	/*@RequestMapping("/require")
 	public ModelAndView requireView(Long indentId,ModelMap model){
 		model.addAttribute("indentId", indentId);
 		return new ModelAndView("/standardized/requireForm",model);
-	}
+	}*/
 	
 	/**
 	 * 跳转需求表单页。新增和修改和查看

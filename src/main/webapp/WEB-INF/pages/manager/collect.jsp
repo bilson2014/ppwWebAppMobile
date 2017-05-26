@@ -80,24 +80,24 @@
 																</c:forEach>
 													    </c:if>
 								                     </div>
-								                     <div class="toProvider">
+								                     <div class="toProvider" data-value="<spring:url value='/provider/info_${solr.teamId }.html'/>">
 								                       <c:if test="${not empty solr.teamFlag && solr.teamFlag != 4 }"> 
-										                         <a href="<spring:url value='/provider/info_${solr.teamId }.html'/>">
 														              <img src="${file_locate_storage_path }${solr.teamPhotoUrl }">
 														              <div  class="proName">${solr.teamName}</div>
-													             </a> 
 												        </c:if> 
 								                     </div>
 							                     </div>
-							                     <a href="<spring:url value='/play/${solr.teamId }_${solr.productId }.html'/>" target="_blank">		
-							                       <div class="itemBack"></div>
-							                      </a> 
+							                   	
+							                       <div class="itemBack" data-value="<spring:url value='/play/${solr.teamId }_${solr.productId }.html'/>" target="_blank"></div>
+							                      
 							                     <div class="itemDel del-btn" id="${solr.productId}">删除</div>
 										   </div>
          	     				 </c:forEach>  
 				     </c:if> 
+				     		<jsp:include flush="true" page="../foot.jsp"></jsp:include> 
 				  </div>   
-		<jsp:include flush="true" page="../foot.jsp"></jsp:include>  
+ 
+
 
 	<script src="${jqueryJs }"></script>
 	<script src="${pluginJs }"></script>

@@ -55,7 +55,8 @@
 
                 if (isShow != "true") {
 
-                    console.log("鼠标抬起:", isShow,target);
+                   // console.log("鼠标抬起:", isShow,target);
+                    
                     target.animate({
                         left: 0
                     },300);
