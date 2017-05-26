@@ -81,8 +81,10 @@ var search = {
 			
 			var industry = $('#industry').val(); // 行业
 			var genre = $('#genre').val();; // 类型
+			var dim = $('#production').val();; // 维度
 			var industryArr = industry.split(' ');
 			var genreArr = genre.split(' ');
+			var dimArr = dim.split(' ');
 			if(industryArr != null && industryArr.length >0){
 				for (var int = 0; int < industryArr.length; int++) {
 						$('#'+industryArr[int]).addClass('checkActive');
@@ -91,6 +93,11 @@ var search = {
 			if(genreArr != null && genreArr.length >0){
 				for (var int = 0; int < genreArr.length; int++) {
 						$('#'+genreArr[int]).addClass('checkActive');
+				}
+			}
+			if(dimArr != null && dimArr.length >0){
+				for (var int = 0; int < dimArr.length; int++) {
+						$('#'+dimArr[int]).addClass('checkActive');
 				}
 			}
 			parsePrice();
@@ -114,6 +121,17 @@ var search = {
         			$('#workTagsShow').removeClass('noShow');
         		}
         	});
+        	$('#wDimension').off('click').on('click',function(){
+        		if($('#dimension').hasClass('typeActive')){
+        			$('#dimension').removeClass('typeActive');
+        			$('#dimensionShow').addClass('noShow');
+        		}else{
+        			$('#dimension').addClass('typeActive');
+        			$('#dimensionShow').removeClass('noShow');
+        		}
+        	});
+        	
+        	
         	
         	var base_business = $(".tags");
         	var currCount = $(".tags").length;
@@ -168,7 +186,17 @@ var search = {
 		 var tags = createTags(busArray[int]);
 		 $('#workTagsShow').append(tags);
 	    }
-     //end  
+     //end 
+       //维度	
+       for (var int = 0; int < 6; int++) {
+          	var tags = createTags(proArray[int]);
+          	$('#dimensionItem').append(tags);
+        } 	
+       for (var int = 6; int < proArray.length; int++) {
+		 var tags = createTags(proArray[int]);
+		 $('#dimensionShow').append(tags);
+	    }
+     //end   
       },
 }
 function createTags(name){
@@ -182,11 +210,14 @@ function toSearch(){
 		var typeNoShow = $('#typeTagsShow').find('.checkActive');
 		var ubsShow = $('#workTagsItem').find('.checkActive');
 		var ubsNoShow = $('#workTagsShow').find('.checkActive');
+		var dimShow = $('#dimensionItem').find('.checkActive');
+		var dimNoShow = $('#dimensionShow').find('.checkActive');
 		var lowPrice = $('#lowPrice').val();
 		var heightPrice = $('#heightPrice').val();
 		var type = '&industry=';
 		var ubs = '&genre=';
 		var price = '&price=';
+		var dim = '&production='
 		var searchQ = '/search?q=*';
 	    for (var int = 0; int < typeShow.length; int++) {
 	    	type = type+$(typeShow[int]).text()+ ' ';
@@ -200,6 +231,12 @@ function toSearch(){
 		}
 	    for (var int = 0; int < ubsNoShow.length; int++) {
 	    	ubs = ubs + $(ubsNoShow[int]).text() + ' ';
+		}
+	    for (var int = 0; int < dimShow.length; int++) {
+	    	dim = dim + $(dimShow[int]).text()+ ' ';
+		}
+	    for (var int = 0; int < dimNoShow.length; int++) {
+	    	dim = dim + $(dimNoShow[int]).text() + ' ';
 		}
 	    if(lowPrice!="" && heightPrice!=""){
 		    	price = price +"["+lowPrice+" TO "+heightPrice+"]";
@@ -218,8 +255,10 @@ function toSearch(){
 	    
 	    	searchQ = searchQ+ubs;
 	    }
+	    if(dim !='&production='){
+	    	searchQ = searchQ+dim;
+	    }
 	    if(price !='&price='){
-	    
 	    	searchQ = searchQ+price;
 	    }
 	    window.location.href=getContextPath()+searchQ;

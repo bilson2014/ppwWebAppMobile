@@ -64,8 +64,8 @@
 	<input type="hidden" value='${q }' id="q"/>
 	<input type="hidden" value="${industry }" id="industry"/>
 	<input type="hidden" value="${genre }" id="genre"/>
+	<input type="hidden" value="${production}" id="production"/>
 	<input type="hidden" value="${price }" id="price"/>
-	<input type="hidden" value="${length}" id="length"/>
 	<input type="hidden" value="${total }" id="total"/>
 	<input type="hidden" value="${isMore }" id="isMore"/>
 
@@ -105,7 +105,19 @@
 		     <div class="itemTags noShow" id="workTagsShow">
 		        
 		    </div>
-	     </div>
+	    </div>
+	    
+	     <div class="searchItem">
+		     <div class="typeTitle" id="dimension">
+		        <div>维度:</div>
+		        <img src="${imgPath }/index/flow.png" id="wDimension">
+		     </div>
+		     <div class="itemTags" id="dimensionItem">
+		     </div>
+		     <div class="itemTags noShow" id="dimensionShow">
+		        
+		    </div>
+	    </div>
 	     
 	     <div class="searchItem noborder">
 		     <div class="typeTitle">
