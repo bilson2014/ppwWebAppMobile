@@ -508,7 +508,7 @@ transform: scale(1); */
 }
 
 .menuTop {
-    height: 5.3rem;
+    height: 4rem;
     width: 9rem;
     border-bottom: 1px solid $gray-light;
     margin: 0 auto;
@@ -520,7 +520,7 @@ transform: scale(1); */
         font-size: 0.4rem;
         position: absolute;
         width: 100%;
-        bottom: 0.6rem;
+        bottom: 0.4rem;
     }
     .userLogo {
         margin-top: 1.3rem;
@@ -529,19 +529,19 @@ transform: scale(1); */
         margin: 0 auto;
         border-radius: 100%;
         position: relative;
-        top: 1.4rem;
+        top: .5rem;
     }
     .close {
         position: absolute;
         width: 0.8rem;
         left: 2rem;
-        top: 2.4rem;
+        top: 1.5rem;
     }
     .edit {
         position: absolute;
         width: 0.8rem;
         right: 2rem;
-        top: 2.4rem;
+        top: 1.5rem;
     }
     margin-bottom: 1rem;
 }
