@@ -5,12 +5,12 @@ import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 
-import org.apache.commons.lang3.StringUtils;
 import org.apache.solr.client.solrj.SolrQuery;
 import org.apache.solr.client.solrj.SolrQuery.ORDER;
 import org.apache.solr.client.solrj.impl.HttpSolrClient;
 import org.springframework.stereotype.Service;
 
+import com.paipianwang.pat.common.util.ValidateUtil;
 import com.paipianwang.pat.common.web.domain.ResourceToken;
 import com.paipianwang.pat.common.web.service.impl.BaseSolrServiceImpl;
 import com.paipianwang.pat.facade.information.entity.PmsNewsSolr;
@@ -31,20 +31,34 @@ public class SolrServiceImpl extends BaseSolrServiceImpl implements SolrService 
 		try {
 			final SolrQuery query = new SolrQuery();
 			query.set("defType", "edismax");
-			query.set("qf", "productName^1 tags^0.8 teamName^0.4");
+			query.set("qf", "productName^80 tags^70 teamName^10");
 			query.set("q.alt", "*:*");
 
 			// 整合bf，增强搜索字段的权重
-			if (StringUtils.isNotBlank(condition)) {
-				String frep = condition.replaceAll(",", " ").replaceAll(" +", " ");
-				StringBuffer sb = new StringBuffer();
-				for (String element : frep.split(" ")) {
-					sb.append("*");
-					sb.append(element);
-					sb.append("*");
+			if (ValidateUtil.isValid(condition)) {
+				// 分词
+				String freq = condition.replaceAll(",", " ").replaceAll(" +", " ");
+				List<String> words = this.getAnalysis(token.getSolrUrl(), freq);
+				if (ValidateUtil.isValid(words)) {
+					StringBuffer sb = new StringBuffer();
+					for (int i = 0; i < words.size(); i++) {
+						String str = words.get(i);
+						if (ValidateUtil.isValid(str)) {
+							sb.append("termfreq(productName,*");
+							sb.append(str);
+							sb.append("*),");
+							sb.append("termfreq(tags,*");
+							sb.append(str);
+							if (i == (words.size() - 1))
+								sb.append("*)");
+							else
+								sb.append("*),");
+						}
+					}
+
+					// query 注入 termfreq 函数
+					query.set("bf", "sum(" + sb.toString() + ")^1500");
 				}
-				query.set("bf",
-						"sum(termfreq(productName," + sb.toString() + "),div(termfreq(tags," + sb.toString() + "),3))^80");
 			}
 
 			condition = KeywordUtils.mergeQConcition(view);
@@ -59,11 +73,6 @@ public class SolrServiceImpl extends BaseSolrServiceImpl implements SolrService 
 			// 如果价格区间为空，则设置为全部
 			if (view.getPriceFq() != null && !"".equals(view.getPriceFq())) {
 				query.addFilterQuery("price:" + view.getPriceFq());
-			}
-
-			// 如果时长区间为空，则设置为全部
-			if (view.getLengthFq() != null && !"".equals(view.getLengthFq())) {
-				query.addFilterQuery("length:" + view.getLengthFq());
 			}
 
 			// 开启高亮

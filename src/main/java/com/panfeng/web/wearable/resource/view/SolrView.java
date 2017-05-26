@@ -22,6 +22,8 @@ public class SolrView extends Pagination{
 	
 	private String genre = null; // 类型
 	
+	private String production = null; // 制作
+	
 	private boolean more = false; // 是否相关性推荐
 	
 	private String recomendFq = null; // 推荐值筛选字段
@@ -112,6 +114,14 @@ public class SolrView extends Pagination{
 
 	public void setRecomendFq(String recomendFq) {
 		this.recomendFq = recomendFq;
+	}
+
+	public String getProduction() {
+		return production;
+	}
+
+	public void setProduction(String production) {
+		this.production = production;
 	}
 
 }
