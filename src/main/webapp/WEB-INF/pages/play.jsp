@@ -52,6 +52,7 @@
 	 </r:identity>
 	 <r:identity role="employee">
 	    <input type="hidden" id="rolephone" value="1314520ppw" />
+	    <input type="hidden" id="rolephoneImg" value="1314520ppw" />
 	 </r:identity>
 	 
 	<input type="hidden" id="storage_node" value="${file_locate_storage_path }" />
@@ -69,6 +70,10 @@
 	<input type="hidden" id="second" value="${product.mcoms }" />
 	<input type="hidden" id="tags" value="${product.tags }">
 	<input type="hidden" id="csrftoken" name="csrftoken" value="${csrftoken}" />
+    <r:identity role="employee">
+	    <input type="hidden" id="rolephone" value="1314520ppw" />
+	    <input type="hidden" id="rolephoneImg" value="1314520ppw" />
+	 </r:identity>
 
 	<div class="phoneHeader">
 		<a id="openMenu"><img src="${imgPath }/index/toMenu.png"></a> 

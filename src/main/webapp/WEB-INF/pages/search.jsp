@@ -132,6 +132,11 @@
 	    </div>
 </div>
 	
+	 <r:identity role="employee">
+	    <input type="hidden" id="rolephone" value="1314520ppw" />
+	    <input type="hidden" id="rolephoneImg" value="1314520ppw" />
+	 </r:identity>
+	
 	<div class="pagePhone">
 
 	<div class="hideMenu">
@@ -140,19 +145,29 @@
 	    <c:forEach items="${list }" var="solr" varStatus="status">
 
 			   <div class="contentItem">
-			       	<a  class="videoItem" href="<spring:url value='/play/${solr.teamId}_${solr.productId }.html'/>">
+			       
 			          <img class="lazyload" data-src="${file_locate_storage_path }${solr.picLDUrl }">
-			        </a> 
-			         <img class="roleImg" src="${imgPath }/video/roleOur.png">
+			                                 <r:identity role="employee">   
+			        							    <c:if test="${solr.indentProjectId < 0 }">
+												          <img class="roleImg" src="${imgPath }/video/roleOur.png">
+													 </c:if>
+													 <c:if test="${solr.indentProjectId > 0 }">
+													      <img class="roleImg" src="${imgPath }/video/rolePlay.png">
+													 </c:if>
+													 <c:if test="${solr.indentProjectId == 0 }">
+													      <img class="roleImg" src="${imgPath }/video/rolePro.png">
+													 </c:if>
+											</r:identity>		 
 			         <div class="itemS">
-	                     <div class="itemTitle">${solr.productName}</div>
-	                     <div class="itemTag">
-		                     <c:forEach items="${fn:split(fn:trim(solr.tags),' ') }" var="tag" end="2" varStatus="stat">
-		                              <c:if test="${stat.index < 5}">
-										 <c:if test="${stat.index > 0}">/</c:if>${tag} 
-									   </c:if>	
-							 </c:forEach>
-	                     </div>
+
+			                   <div class="itemTitle">${solr.productName}</div>
+			                     <div class="itemTag">
+				                     <c:forEach items="${fn:split(fn:trim(solr.tags),' ') }" var="tag" end="2" varStatus="stat">
+				                              <c:if test="${stat.index < 5}">
+												 <c:if test="${stat.index > 0}">/</c:if>${tag} 
+											   </c:if>	
+									 </c:forEach>
+								</div>	 
 	                     	 <div class="toProvider">
 	                     	    <c:if test="${not empty solr.teamFlag && solr.teamFlag != 4 }">
 	                     	        <a href="<spring:url value='/provider/info_${solr.teamId }.html'/>">
@@ -162,9 +177,10 @@
 			                     </c:if>  
 			                 </div>
                      </div>
+                  <a  class="videoItem" href="<spring:url value='/play/${solr.teamId}_${solr.productId }.html'/>">  
                      <div class="itemBack"></div>
+                  </a>   
 			   </div>
-		 
 	    </c:forEach>
 	</c:if>
 	
