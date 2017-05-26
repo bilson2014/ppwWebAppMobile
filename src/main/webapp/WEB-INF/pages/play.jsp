@@ -125,9 +125,11 @@
 		</div>
 		<div class="videoSet">
 		   <div class="videoTitle">${product.productName }</div>
-		   <div class="videoSave" id="managerCollect">
-		      <div id="showSave">已收藏</div>
-		   </div>
+		   <r:identity role="employee">
+			   <div class="videoSave" id="managerCollect">
+			      <div id="showSave">已收藏</div>
+			   </div>
+		   </r:identity>
 		</div>  
 		<div class="videoTag">
 			<c:if test="${not empty product.tags }">
