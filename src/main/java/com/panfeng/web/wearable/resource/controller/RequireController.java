@@ -35,7 +35,6 @@ public class RequireController extends BaseController {
 		param.setBegin((page - 1) * rows);
 		param.setLimit(rows);
 		Map<String, Object> paramMap = new HashMap<String, Object>();
-		//paramMap.put("id", view.getIndentId());
 		final DataGrid<PmsRequire> dataGrid = pmsRequireFacade.listWithPagination(param, paramMap);
 		return dataGrid;
 	}
@@ -60,6 +59,7 @@ public class RequireController extends BaseController {
 		}
 		return baseMsg;
 	}
+
 	/*@RequestMapping("/require")
 	public ModelAndView requireView(Long indentId,ModelMap model){
 		model.addAttribute("indentId", indentId);
