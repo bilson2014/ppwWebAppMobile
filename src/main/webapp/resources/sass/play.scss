@@ -361,6 +361,11 @@ body {
     background-position-y: 0px !important;
 }
 
+.itemS{
+    position: absolute !important;
+    bottom: 0;
+}
+
 .videoSave {
     width: 0.5rem;
     height: 0.5rem;
@@ -371,7 +376,7 @@ body {
     top: 0rem;
     right:0rem;
     div {
-        width: 0.56rem;
+        width: 1.5rem;
         height: 0.3rem;
         color: $gray-light;
         font-size: $size30;

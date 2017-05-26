@@ -59,17 +59,17 @@
         	          <c:if test="${!empty productList}">
 		                         <c:forEach items="${productList }" var="solr" varStatus="status">
 							           <div class="contentItem session-box">
-							                  	<a href="<spring:url value='/play/${solr.teamId }_${solr.productId }.html'/>" target="_blank">		
+							                  	
 										          <img class="lazyload" src="${file_locate_storage_path }${solr.picLDUrl }">
-										        </a> 
-										             <c:if test="${solr.indentProjectId < 0 }">
-												          <img class="roleImg" src="/resources/images/play/roleOur.png">
+										     
+					        					    <c:if test="${solr.indentProjectId < 0 }">
+												          <img class="roleImg" src="${imgPath }/video/roleOur.png">
 													 </c:if>
 													 <c:if test="${solr.indentProjectId > 0 }">
-													      <img class="roleImg" src="/resources/images/play/rolePlay.png">
+													      <img class="roleImg" src="${imgPath }/video/rolePlay.png">
 													 </c:if>
 													 <c:if test="${solr.indentProjectId == 0 }">
-													      <img class="roleImg" src="/resources/images/play/rolePro.png">
+													      <img class="roleImg" src="${imgPath }/video/rolePro.png">
 													 </c:if>
 										         <div class="itemS">
 								                     <div class="itemTitle">${solr.productName }</div>
@@ -89,12 +89,14 @@
 												        </c:if> 
 								                     </div>
 							                     </div>
-							                     <div class="itemBack"></div>
+							                     <a href="<spring:url value='/play/${solr.teamId }_${solr.productId }.html'/>" target="_blank">		
+							                       <div class="itemBack"></div>
+							                      </a> 
 							                     <div class="itemDel del-btn" id="${solr.productId}">删除</div>
 										   </div>
-					         	      </div> 
          	     				 </c:forEach>  
 				     </c:if> 
+				  </div>   
 		<jsp:include flush="true" page="../foot.jsp"></jsp:include>  
 
 	<script src="${jqueryJs }"></script>

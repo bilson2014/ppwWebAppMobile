@@ -305,7 +305,6 @@ function createVideo(product){
 	var ptags = '';
 	if(tags != null && tags != '' && tags != undefined){
 		var arr = tags.split(' ');
-		
 		if(arr != null && arr.length >0){
 			for (var int = 0; int < arr.length; int++) {
 				if(int !=0 )
@@ -314,16 +313,30 @@ function createVideo(product){
 			}
 		}
 	}
+	var loginTel = $('#rolephoneImg').val();
+	var htmlAddImg = 0;
+	var indentProjectId = parseInt(product.indentProjectId);
+	if(loginTel!=null && loginTel!= "" ){
+		if(indentProjectId < 0){
+			htmlAddImg = '<img class="roleImg" src="/resources/images/video/roleOur.png">';
+		}
+	    if(indentProjectId > 0){
+	    	htmlAddImg = '<img class="roleImg" src="/resources/images/video/rolePlay.png">';
+       	}
+	    if(indentProjectId == 0){
+	    	htmlAddImg = '<img class="roleImg" src="/resources/images/video/rolePro.png">';
+		}
+	}
 	
 	var htmlAdd = '<a href="'+getContextPath()+'/provider/info/'+product.teamId+'.html"><img src="'+getDfsHostName()+product.teamPhotoUrl+'"><div>'+product.teamName+'</div></a>';
-	if(teamFlag == 4 && teamFlag == null ){
+	var itemFlag = parseInt(teamFlag);
+	if(itemFlag == 4 || itemFlag == null ){
 		htmlAdd ='';
 	}
 	var body = [
 					'<div class="contentItem"">',
-					      '<a class="videoItem" href="/play/'+product.teamId+'_'+product.productId+'.html">',
 					      '<img src='+url+'> ',
-					      '</a>',
+					      htmlAddImg,
 					      '<div class="itemS">',
 					      '<div class="itemTitle">'+product.productName+'</div>',
 					      '<div class="itemTag">',
@@ -333,7 +346,9 @@ function createVideo(product){
 					      htmlAdd,
 					      '</div>',
 					      '</div>',
+					      '<a class="videoItem" href="/play/'+product.teamId+'_'+product.productId+'.html">',
 					      '<div class="itemBack"></div>',
+					      '</a>',
 					'</div>',
 				].join('');
 	return body;

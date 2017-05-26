@@ -92,7 +92,7 @@
 	                  <r:identity role="employee">  
 	                     <a href="/mgr/favourites">
 			                  <div class="menuItem">
-			                       <img src="${imgPath}/menu/product.png">
+			                       <img src="${imgPath}/menu/favorite.png">
 			                       <div>我的收藏</div>
 			                  </div>
 		                 </a>
