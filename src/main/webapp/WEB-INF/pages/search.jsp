@@ -105,7 +105,19 @@
 		     <div class="itemTags noShow" id="workTagsShow">
 		        
 		    </div>
-	     </div>
+	    </div>
+	    
+	     <div class="searchItem">
+		     <div class="typeTitle" id="dimension">
+		        <div>维度:</div>
+		        <img src="${imgPath }/index/flow.png" id="wType">
+		     </div>
+		     <div class="itemTags" id="dimensionItem">
+		     </div>
+		     <div class="itemTags noShow" id="dimensionShow">
+		        
+		    </div>
+	    </div>
 	     
 	     <div class="searchItem noborder">
 		     <div class="typeTitle">

@@ -163,7 +163,17 @@ var search = {
 		 var tags = createTags(busArray[int]);
 		 $('#workTagsShow').append(tags);
 	    }
-     //end  
+     //end 
+       //维度	
+       for (var int = 0; int < 6; int++) {
+          	var tags = createTags(busArray[int]);
+          	$('#dimensionItem').append(tags);
+        } 	
+       for (var int = 6; int < busArray.length; int++) {
+		 var tags = createTags(busArray[int]);
+		 $('#dimensionShow').append(tags);
+	    }
+     //end   
       },
 }
 function createTags(name){
@@ -177,6 +187,8 @@ function toSearch(){
 		var typeNoShow = $('#typeTagsShow').find('.checkActive');
 		var ubsShow = $('#workTagsItem').find('.checkActive');
 		var ubsNoShow = $('#workTagsShow').find('.checkActive');
+		var dimShow = $('#dimensionItem').find('.checkActive');
+		var dimNoShow = $('#dimensionShow').find('.checkActive');
 		var lowPrice = $('#lowPrice').val();
 		var heightPrice = $('#heightPrice').val();
 		var type = '&industry=';
