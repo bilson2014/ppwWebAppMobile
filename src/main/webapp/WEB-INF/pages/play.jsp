@@ -52,6 +52,7 @@
 	 </r:identity>
 	 <r:identity role="employee">
 	    <input type="hidden" id="rolephone" value="1314520ppw" />
+	    <input type="hidden" id="rolephoneImg" value="1314520ppw" />
 	 </r:identity>
 	 
 	<input type="hidden" id="storage_node" value="${file_locate_storage_path }" />
@@ -69,6 +70,10 @@
 	<input type="hidden" id="second" value="${product.mcoms }" />
 	<input type="hidden" id="tags" value="${product.tags }">
 	<input type="hidden" id="csrftoken" name="csrftoken" value="${csrftoken}" />
+    <r:identity role="employee">
+	    <input type="hidden" id="rolephone" value="1314520ppw" />
+	    <input type="hidden" id="rolephoneImg" value="1314520ppw" />
+	 </r:identity>
 
 	<div class="phoneHeader">
 		<a id="openMenu"><img src="${imgPath }/index/toMenu.png"></a> 
@@ -118,7 +123,12 @@
 				 <source src="" id="playVideo" type="video/mp4">
 			</video>
 		</div>
-		<div class="videoTitle">${product.productName }</div>
+		<div class="videoSet">
+		   <div class="videoTitle">${product.productName }</div>
+		   <div class="videoSave" id="managerCollect">
+		      <div id="showSave">已收藏</div>
+		   </div>
+		</div>  
 		<div class="videoTag">
 			<c:if test="${not empty product.tags }">
 				<c:forEach items="${fn:split(product.tags,' ') }" var="tag">
@@ -139,7 +149,6 @@
 		<div class="videoContent">
 			<div class="content">${product.teamDescription }</div>
 			<div class="orderVideo">预约拍片</div>
-			
 			<c:if test="${teamFlag !=null && teamFlag == 1 }">
 				<a href="<spring:url value='/provider/info_${product.teamId }.html'/>">
 					<div class="videoCompany">

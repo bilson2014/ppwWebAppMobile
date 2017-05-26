@@ -4,6 +4,7 @@
 @import "constant";
 @import "mixin";
 @import "common_portal";
+@import "common_card";
 @import "compass/typography/text/ellipsis";
 body {
     overflow: hidden;
@@ -24,9 +25,11 @@ body {
     color: #e3e3e3;
     font-size: $size46;
     margin-top: 0.85rem;
+    width: 8rem;
+    text-align: left;
+    margin-top: 0.6rem;
     margin-bottom: 0.6rem;
-    width: 100%;
-    text-align: center;
+    padding-left: 0.3rem;
 }
 
 .videoTag {
@@ -178,39 +181,12 @@ body {
     .contentItem {
         display: inline-block;
         vertical-align: top;
-        width: 10rem;
+        width: 10rem !important;
         height: 100%;
         background-size: 100% 100% !important;
         position: relative;
         margin-right: 0.1rem;
-        .itemTitle {
-            color: white;
-            font-size: 0.4rem;
-            width: 8rem;
-            @include ellipsis;
-            position: absolute;
-            bottom: 1rem;
-            left: 0.6rem;
-            font-weight: bold;
-            z-index: 3;
-        }
-        .itemTag {
-            color: white;
-            font-size: $size28;
-            position: absolute;
-            bottom: 0.1rem;
-            left: 0.6rem;
-            z-index: 3;
-            height: 0.8rem;
-            overflow: hidden;
-            width: 9rem;
-        }
-        .itemBack {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.4);
-        }
+       
     }
     .anliContent::-webkit-scrollbar {
         width: 0px;
@@ -370,4 +346,47 @@ body {
 #teamPhoto {
     background: white;
     padding: 2px;
+}
+
+//收藏
+
+
+.videoSet{
+    width: 9.2rem;
+    position: relative;
+    margin: 0 auto;
+}
+
+.save {
+    background-position-y: 0px !important;
+}
+
+.itemS{
+    position: absolute !important;
+    bottom: 0;
+}
+
+.videoSave {
+    width: 0.5rem;
+    height: 0.5rem;
+    background: url(/resources/images/video/saveBtn.png) no-repeat;
+    background-size: 0.5rem 1rem !important;
+    background-position-y: -17px;
+    position: absolute;
+    top: 0rem;
+    right:0rem;
+    div {
+        width: 1.5rem;
+        height: 0.3rem;
+        color: $gray-light;
+        font-size: $size30;
+        text-align: center;
+        line-height: 0.3rem;
+        position: absolute;
+        top: -0.5rem;
+        background: $gray-dark;
+        border-radius: 4px;
+        right: -0.5rem;
+        display: none;
+    }
 }

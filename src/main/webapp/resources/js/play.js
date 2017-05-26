@@ -10,6 +10,7 @@ $().ready(function() {
     play.initData();
     play.order();
     play.showMore();
+    saveVideo();
     $('#verification_code_recover_btn').off('click').on('click',verificationCodeBtn);
     $('#submitOrder').off('click').on('click',submitOrder);
     $('.orderVideo').off('click').on('click',function(){
@@ -30,6 +31,49 @@ $().ready(function() {
     	clearDate();
     });
 });
+
+
+function saveVideo(){	
+	var loginTel = $('#rolephoneImg').val();
+	if(loginTel!=null && loginTel!= "" ){
+		loadData(function(flag){
+			if(flag.result){
+				$('#managerCollect').addClass('save');
+				$('#showSave').hide();
+			}else{
+				$('#managerCollect').removeClass('save');
+				$('#showSave').hide();
+			}
+		}, getContextPath() + '/mgr/favourites/judge/' + $('#videoId').val(), null);
+	}
+	
+	$('#managerCollect').off('click').on('click',function(){
+		if($(this).hasClass('save')){
+			loadData(function(flag){
+				if(flag){
+					$('#managerCollect').removeClass('save');
+					$('#showSave').fadeIn();
+					$('#showSave').text('已取消');
+					 setTimeout(function() {
+						    $('#showSave').fadeOut();
+			            }, 1000);
+				}
+			}, getContextPath() + '/mgr/favourites/remove/' + $('#videoId').val(), null);
+		}else{
+			loadData(function(flag){
+				if(flag){
+					$('#managerCollect').addClass('save');
+					$('#showSave').fadeIn();
+					$('#showSave').text('已收藏');
+					setTimeout(function() {
+							$('#showSave').fadeOut();
+			            }, 1000);
+				}
+			}, getContextPath() + '/mgr/favourites/add/' + $('#videoId').val(), null);
+
+		}
+	});
+}
 
 play = {
     initData: function() {
@@ -99,6 +143,8 @@ function createCard(msg){
 	var str = msg.tags;
 	var spl = str.split(" ");
 	var tags = "";
+	var indentProjectId = parseInt(msg.indentProjectId);
+	var itemFlag = parseInt(msg.teamFlag);
 	for (var int = 0; int < spl.length; int++) {
 		if(int>4){
 			break;
@@ -109,14 +155,38 @@ function createCard(msg){
 			tags += spl[int] ;
 		}
 	}
+	var loginTel = $('#rolephoneImg').val();
 	var $body1 = ''
-		+'   <a href="/play/'+tema+'_'+pro+'.html">'
-		+'		 <div class="contentItem" style="background:url('+getDfsHostName()+''+msg.picLDUrl+') no-repeat">'
-		+'			   <div class="itemTitle">'+msg.productName+'</div>'
-		+'					 <div class="itemTag">'+tags+'</div>'
-		+'					 <div class="itemBack"></div>'
-		+'		 </div> '
-		+'	 </a>'
+		$body1 +='		 <div class="contentItem" style="background:url('+getDfsHostName()+''+msg.picLDUrl+') no-repeat">';
+	
+		if(loginTel!=null && loginTel!= "" ){
+			if(indentProjectId < 0){
+				$body1 +='       <img class="roleImg" src="/resources/images/video/roleOur.png">';
+			}
+		    if(indentProjectId > 0){
+		    	$body1 +='       <img class="roleImg" src="/resources/images/video/rolePlay.png">';
+	       	}
+		    if(indentProjectId == 0){
+		    	$body1 +='       <img class="roleImg" src="/resources/images/video/rolePro.png">';
+			}
+		}
+	    $body1 +='            <div class="itemS">';
+		$body1 +='			         <div class="itemTitle">'+msg.productName+'</div>';
+		$body1 +='					 <div class="itemTag">'+tags+'</div>';
+		$body1 +='                   <div class="toProvider">';
+		 if(itemFlag != 4 && itemFlag != null){
+			 $body1 +='	                 <a href="'+getHostName() +'/provider/info_'+msg.teamId+'.html'+'">';
+			 $body1 +='                      <img src="'+getDfsHostName()+''+msg.teamPhotoUrl+'">';
+			 $body1 +='                      <div class="proName">'+msg.teamName+'</div> ';
+			 $body1 +='                   </a>';
+		 }
+	    $body1 +='                   </div>';
+	    $body1 +='            </div>';
+	    $body1 +='   <a href="/play/'+tema+'_'+pro+'.html">';
+	    $body1 +='			  <div class="itemBack"></div>';
+	    $body1 +='	 </a>';
+	    $body1 +='		 </div> ';
+
 	return $body1;		
 };
 

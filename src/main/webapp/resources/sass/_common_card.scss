@@ -102,4 +102,97 @@ $video-image-height720: 405px; // 视频图片的高度(720px)
 }
 
 
-
+//案例卡
+.contentItem {
+    width: 100%;
+    background-size: 100% 100% !important;
+    position: relative;
+    white-space: nowrap;
+    img {
+        height: 100%;
+        width: 100%;
+    }
+    .roleImg {
+        width: 1.2rem !important;
+        height: 0.4rem !important;
+        position: absolute;
+        top: 0.3rem;
+        right: 0;
+        z-index: 10;
+    }
+    .itemS {
+        position: relative;
+        top: 0;
+        left: 0;
+        z-index: 3;
+        .itemTitle {
+            color: white;
+            font-size: 0.4rem;
+            width: 8rem;
+            @include ellipsis;
+            position: absolute;
+            bottom: 2.3rem;
+            left: 0.6rem;
+            font-weight: bold;
+            line-height: 25px;
+        }
+        .itemTag {
+            color: white;
+            font-size: 0.26rem;
+            position: absolute;
+            bottom: 1.3rem;
+            left: 0.6rem;
+            height: 0.8rem;
+            overflow: hidden;
+        }
+        .toProvider {
+            width: 100%;
+            height: 1.1rem;
+            position: absolute;
+            bottom: 0rem;
+            font-size: 0;
+            z-index: 4;
+            img,
+            div {
+                display: inline-block;
+                vertical-align: middle;
+            }
+            img {
+                height: 0.6rem;
+                width: 0.6rem;
+                border-radius: 100%;
+                position: relative;
+                left: 0.6rem;
+            }
+            div {
+                color: white;
+                font-size: $size30;
+                position: relative;
+                left:0.8rem;
+            }
+        }
+    }
+    .itemBack {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.4);
+        a{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .del-btn {
+        height: 100%;
+        width: 60px;
+        line-height: 100%;
+        position: absolute;
+        right: -60px;
+        background:$red-base;
+        top: 0;
+        color: white;
+        font-size: $size30;
+        text-align: center;
+    }
+}

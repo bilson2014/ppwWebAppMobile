@@ -11,6 +11,9 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.paipianwang.pat.common.entity.DataGrid;
 import com.paipianwang.pat.common.entity.PageParam;
+import com.paipianwang.pat.common.util.ValidateUtil;
+import com.paipianwang.pat.facade.indent.entity.PmsIndent;
+import com.paipianwang.pat.facade.indent.service.PmsIndentFacade;
 import com.paipianwang.pat.facade.product.entity.PmsRequire;
 import com.paipianwang.pat.facade.product.service.PmsRequireFacade;
 import com.panfeng.web.wearable.domain.BaseMsg;
@@ -22,6 +25,9 @@ public class RequireController extends BaseController {
 	@Autowired
 	private PmsRequireFacade pmsRequireFacade;
 
+	@Autowired
+	private PmsIndentFacade pmsIndentFacade;
+	
 	@RequestMapping("/require/list")
 	public DataGrid<PmsRequire> getAll(final PmsRequire view, final PageParam param) {
 		final long page = param.getPage();
@@ -59,5 +65,28 @@ public class RequireController extends BaseController {
 		model.addAttribute("indentId", indentId);
 		return new ModelAndView("/standardized/requireForm",model);
 	}
+	
+	/**
+	 * 跳转需求表单页。新增和修改和查看
+	 * 这代码只有老天懂
+	 * @param indentId
+	 * @param requireId
+	 * @param model
+	 * @return
+	 */
+	@RequestMapping("/require")
+	public ModelAndView requireView(Long indentId,Long requireId, ModelMap model) {
+		model.addAttribute("indentId", indentId);
+		if(!ValidateUtil.isValid(requireId)){
+			PmsIndent indent = pmsIndentFacade.findIndentById(indentId);
+			requireId = indent.getRequireId();
+		}
+		if (ValidateUtil.isValid(requireId)) {
+			PmsRequire require = pmsRequireFacade.getRequireInfo(requireId);
+			model.addAttribute("require", require);
+		}
+		return new ModelAndView("/standardized/requireForm", model);
+	}
+
 	
 }

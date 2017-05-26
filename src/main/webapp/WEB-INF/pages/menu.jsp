@@ -81,14 +81,22 @@
 			                  </div>
 		                 </a>
 		             </r:identity>
-		                  <r:identity role="employee">    
+		             <r:identity role="employee">    
 		                 <a href="/product/MotionGraphicsforPublicPresentation/main">
 			                  <div class="menuItem">
 			                       <img src="${imgPath}/menu/product.png">
 			                       <div>视频产品</div>
 			                  </div>
 		                 </a>
-	                  </r:identity>       
+	                  </r:identity> 
+	                  <r:identity role="employee">  
+	                     <a href="/mgr/favourites">
+			                  <div class="menuItem">
+			                       <img src="${imgPath}/menu/favorite.png">
+			                       <div>我的收藏</div>
+			                  </div>
+		                 </a>
+		               </r:identity>  
 	                 <a href="/search?q=*">
 		                  <div class="menuItem">
 		                       <img src="${imgPath}/menu/editMenu.png">

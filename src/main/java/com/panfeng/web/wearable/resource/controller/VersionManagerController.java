@@ -828,7 +828,7 @@ public class VersionManagerController extends BaseController {
 			List<PmsProduct> list = pmsEmployeeProductLinkFacade.findProductIdsByEmployeeId(info.getReqiureId());
 			map.put("productList", list);
 		}
-		return new ModelAndView("collect", map);
+		return new ModelAndView("/manager/collect", map);
 	}
 	
 	/**

@@ -83,13 +83,11 @@ var search = {
 						$('#'+industryArr[int]).addClass('checkActive');
 				}
 			}
-			
 			if(genreArr != null && genreArr.length >0){
 				for (var int = 0; int < genreArr.length; int++) {
 						$('#'+genreArr[int]).addClass('checkActive');
 				}
 			}
-			
 			parsePrice();
 		},
         showTags : function(){
@@ -102,7 +100,6 @@ var search = {
         			$('#typeTagsShow').removeClass('noShow');
         		}
         	});
-        	
         	$('#wType').off('click').on('click',function(){
         		if($('#workTags').hasClass('typeActive')){
         			$('#workTags').removeClass('typeActive');
@@ -308,7 +305,6 @@ function createVideo(product){
 	var ptags = '';
 	if(tags != null && tags != '' && tags != undefined){
 		var arr = tags.split(' ');
-		
 		if(arr != null && arr.length >0){
 			for (var int = 0; int < arr.length; int++) {
 				if(int !=0 )
@@ -317,17 +313,43 @@ function createVideo(product){
 			}
 		}
 	}
+	var loginTel = $('#rolephoneImg').val();
+	var htmlAddImg = 0;
+	var indentProjectId = parseInt(product.indentProjectId);
+	if(loginTel!=null && loginTel!= "" ){
+		if(indentProjectId < 0){
+			htmlAddImg = '<img class="roleImg" src="/resources/images/video/roleOur.png">';
+		}
+	    if(indentProjectId > 0){
+	    	htmlAddImg = '<img class="roleImg" src="/resources/images/video/rolePlay.png">';
+       	}
+	    if(indentProjectId == 0){
+	    	htmlAddImg = '<img class="roleImg" src="/resources/images/video/rolePro.png">';
+		}
+	}
+	
+	var htmlAdd = '<a href="'+getContextPath()+'/provider/info/'+product.teamId+'.html"><img src="'+getDfsHostName()+product.teamPhotoUrl+'"><div>'+product.teamName+'</div></a>';
+	var itemFlag = parseInt(teamFlag);
+	if(itemFlag == 4 || itemFlag == null ){
+		htmlAdd ='';
+	}
 	var body = [
-					'<a class="videoItem" href="/play/'+product.teamId+'_'+product.productId+'.html">',
 					'<div class="contentItem"">',
 					      '<img src='+url+'> ',
+					      htmlAddImg,
+					      '<div class="itemS">',
 					      '<div class="itemTitle">'+product.productName+'</div>',
 					      '<div class="itemTag">',
 					      ptags,
 					      '</div>',
+					      '<div class="toProvider">',
+					      htmlAdd,
+					      '</div>',
+					      '</div>',
+					      '<a class="videoItem" href="/play/'+product.teamId+'_'+product.productId+'.html">',
 					      '<div class="itemBack"></div>',
+					      '</a>',
 					'</div>',
-					'</a>'
 				].join('');
 	return body;
 }
