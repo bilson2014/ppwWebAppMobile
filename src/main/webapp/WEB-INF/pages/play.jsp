@@ -155,8 +155,8 @@
 				<a href="<spring:url value='/provider/info_${product.teamId }.html'/>">
 					<div class="videoCompany">
 						<div class="cLogo">
-							<img id="teamPhoto" src="${imgPath}/index/test.png"> <img
-								src="${imgPath}/index/true.png">
+							<img id="teamPhoto" src="${imgPath}/index/test.png"> 
+							<img src="${imgPath}/index/true.png">
 						</div>
 						<div>${product.teamName}</div>
 						<div>更多作品</div>
