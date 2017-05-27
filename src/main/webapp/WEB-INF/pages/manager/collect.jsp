@@ -62,15 +62,15 @@
 							                  	
 										          <img class="lazyload" src="${file_locate_storage_path }${solr.picLDUrl }">
 										     
-					        					    <c:if test="${solr.indentProjectId < 0 }">
-												          <img class="roleImg" src="${imgPath }/video/roleOur.png">
-													 </c:if>
-													 <c:if test="${solr.indentProjectId > 0 }">
-													      <img class="roleImg" src="${imgPath }/video/rolePlay.png">
-													 </c:if>
-													 <c:if test="${solr.indentProjectId == 0 }">
-													      <img class="roleImg" src="${imgPath }/video/rolePro.png">
-													 </c:if>
+					        					   <c:if test="${solr.teamFlag == 1 && solr.indentProjectId != 0 }">
+														<img class="roleImg" src="${imgPath }/video/roleOur.png">
+													</c:if>
+													<c:if test="${solr.teamFlag == 4 }">
+														<img class="roleImg" src="${imgPath }/video/rolePlay.png">
+													</c:if>
+													<c:if test="${solr.teamFlag == 1 && solr.indentProjectId == 0 }">
+														<img class="roleImg" src="${imgPath }/video/rolePro.png">
+													</c:if>
 										         <div class="itemS">
 								                     <div class="itemTitle">${solr.productName }</div>
 								                     <div class="itemTag">

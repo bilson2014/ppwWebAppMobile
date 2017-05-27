@@ -360,21 +360,22 @@ function createVideo(product){
 	var loginTel = $('#rolephoneImg').val();
 	var htmlAddImg = 0;
 	var indentProjectId = parseInt(product.indentProjectId);
+	var itemFlag = parseInt(teamFlag);
 	if(loginTel!=null && loginTel!= "" ){
-		if(indentProjectId < 0){
-			htmlAddImg = '<img class="roleImg" src="/resources/images/video/roleOur.png">';
+	    
+	    if(indentProjectId != 0 && itemFlag == 1){
+	    	htmlAddImg +='<img class="roleImg" src="/resources/images/video/roleOur.png">';
 		}
-	    if(indentProjectId > 0){
-	    	htmlAddImg = '<img class="roleImg" src="/resources/images/video/rolePlay.png">';
+	    if(itemFlag == 4){
+	    	htmlAddImg +='<img class="roleImg" src="/resources/images/video/rolePlay.png">';
        	}
-	    if(indentProjectId == 0){
-	    	htmlAddImg = '<img class="roleImg" src="/resources/images/video/rolePro.png">';
+	    if(indentProjectId == 0 && itemFlag == 1){
+	    	htmlAddImg +='<img class="roleImg" src="/resources/images/video/rolePro.png">';
 		}
 	}
 	
 	var htmlAdd = '<a href="'+getContextPath()+'/provider/info/'+product.teamId+'.html"><img src="'+getDfsHostName()+product.teamPhotoUrl+'"><div>'+product.teamName+'</div></a>';
-	var itemFlag = parseInt(teamFlag);
-	if(itemFlag == 4 || itemFlag == null ){
+	if(itemFlag == 4){
 		htmlAdd ='';
 	}
 	var body = [

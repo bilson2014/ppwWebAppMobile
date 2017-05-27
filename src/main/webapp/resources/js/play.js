@@ -160,21 +160,21 @@ function createCard(msg){
 		$body1 +='		 <div class="contentItem" style="background:url('+getDfsHostName()+''+msg.picLDUrl+') no-repeat">';
 	
 		if(loginTel!=null && loginTel!= "" ){
-			if(indentProjectId < 0){
-				$body1 +='       <img class="roleImg" src="/resources/images/video/roleOur.png">';
+			if(indentProjectId != 0 && itemFlag == 1){
+				$body1 +='<img class="roleImg" src="/resources/images/video/roleOur.png">';
 			}
-		    if(indentProjectId > 0){
-		    	$body1 +='       <img class="roleImg" src="/resources/images/video/rolePlay.png">';
+		    if(itemFlag == 4){
+		    	$body1 +='<img class="roleImg" src="/resources/images/video/rolePlay.png">';
 	       	}
-		    if(indentProjectId == 0){
-		    	$body1 +='       <img class="roleImg" src="/resources/images/video/rolePro.png">';
+		    if(indentProjectId == 0 && itemFlag == 1){
+		    	$body1 +='<img class="roleImg" src="/resources/images/video/rolePro.png">';
 			}
 		}
 	    $body1 +='            <div class="itemS">';
 		$body1 +='			         <div class="itemTitle">'+msg.productName+'</div>';
 		$body1 +='					 <div class="itemTag">'+tags+'</div>';
 		$body1 +='                   <div class="toProvider">';
-		 if(itemFlag != 4 && itemFlag != null){
+		 if(itemFlag != 4){
 			 $body1 +='	                 <a href="'+getHostName() +'/provider/info_'+msg.teamId+'.html'+'">';
 			 $body1 +='                      <img src="'+getDfsHostName()+''+msg.teamPhotoUrl+'">';
 			 $body1 +='                      <div class="proName">'+msg.teamName+'</div> ';
