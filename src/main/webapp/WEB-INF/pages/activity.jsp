@@ -17,7 +17,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>双十拍片节</title>
+<title>双十拍片节－拍片网</title>
 <meta name="keywords"
 	content="hwSlider滑动图片插件,jQuery触屏滑动轮播图片,hwSlider滑动焦点图演示" />
 <meta name="description"

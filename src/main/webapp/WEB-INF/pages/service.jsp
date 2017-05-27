@@ -24,7 +24,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
 	<meta name="keywords" content="宣传片制作流程,拍片服务流程">
 	<meta name="description" content="拍片网平台上的宣传片制作流程以及整个拍片服务流程。拍片就上拍片网！">
-	<title>服务流程 | 拍片网</title>
+	<title>服务流程－拍片网</title>
 	<link rel="shortcut icon" href="${imgPath}/favicon.ico" >
 	<link rel="stylesheet" href="${commonCss}">
 	<link rel="stylesheet" href="${serviceCss}">

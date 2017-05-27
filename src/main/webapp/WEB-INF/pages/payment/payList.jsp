@@ -28,7 +28,7 @@
 	<!-- iphone 手机默认全屏 -->
 	<meta name="apple-mobile-web-app-capable" content="yes" />
 	<!-- 取消数字被识别为电话号码 -->
-	<title>订单</title>
+	<title>订单－拍片网</title>
 	<link rel="stylesheet" href="${paylistCss }">
 	<!--[if lt IE 9]>
 		<script>window.html5 || document.write('<script src="html5shivJs"><\/script>')</script>

@@ -29,7 +29,7 @@
 <meta content="telephone=no" name="format-detection">
 <meta name="keywords" content="宣传片制作,产品宣传片制作,企业宣传片制作,微电影制作,MG动画制作">
 <meta name="description" content="拍片网主营宣传片制作、微电影制作、MG动画制作等各种视频内容制作，拍片网是最大的企业视频内容制作平台。拍片就上拍片网！">
-<title>拍片网  专业商业视频服务</title>
+<title>专业商业视频服务－拍片网</title>
 <script src="${jqueryJs }"></script>
 <script src="${commonJs }"></script>
 <script src="${scrollstopJs}"></script>

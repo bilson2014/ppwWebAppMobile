@@ -19,7 +19,7 @@
 	<meta name="apple-mobile-web-app-capable" content="yes" />
 	<!-- 取消数字被识别为电话号码 -->
 	<meta name="format-detection" content="telephone=no" />
-	<title>拍片网-移动端_订单成功提示页面</title>
+	<title>移动端_订单成功提示页面－拍片网</title>
 	
 	<link rel="shortcut icon" href="${imgPath }/favicon.ico" >
 	<link rel="stylesheet" href="${successCss }">

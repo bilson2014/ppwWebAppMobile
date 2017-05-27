@@ -34,7 +34,7 @@
 	<meta name="keywords" content="拍片网-成本计算器">
 	<meta name="description" content="">
 	<meta name="baidu-site-verification" content="dMz6jZpIwd" />
-	<title>拍片网－成本计算器</title>
+	<title>成本计算器－拍片网</title>
     <link rel="stylesheet" href="/resources/css/costCalculator.css">
     <link rel="stylesheet" href="/resources/lib/swiper/swiper-3.3.1.min.css">
     <link rel="stylesheet" href="/resources/lib/Bootstrap/css/bootstrap.min.css">

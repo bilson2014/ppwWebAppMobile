@@ -122,6 +122,7 @@ var pSet= {
 			  $('#step1').hide();
 			  $('#step2').show();
 			  calculatedValue(0);
+			  $('.pagePhone').scrollTop(0);
 		});
 		$('.goBefore').off('click').on('click',function(){
 			  $('#step2').hide(); 
