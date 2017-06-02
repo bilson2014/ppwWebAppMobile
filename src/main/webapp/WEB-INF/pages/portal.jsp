@@ -90,7 +90,7 @@
 		<a>
 		 <img id="openMenu"  class="lazyload" data-src="/resources/images/index/toMenu.png">
 		</a>
-		<a href="/searchview">  
+		<a href="/list.html">  
 		 <img  class="lazyload" data-src="/resources/images/index/toSearch.png">
 		</a> 
 		<a>
@@ -136,7 +136,7 @@
 		                  <li class="title">低预算拍大片 不满意全额退款</li>
 		                  <li class="line"></li>
 		                  <li class="desc">低于行业均价30%以上 平台托管制作费</li>
-		                  <a  href="/phoneCost"> <li class="icon bannerAni"><img src="/resources/images/index/calc.png"></li></a>
+		                  <a  href="/cost/cal"> <li class="icon bannerAni"><img src="/resources/images/index/calc.png"></li></a>
 	                 </ul>
 	             </div>
 	            <div class="swiper-slide">

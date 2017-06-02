@@ -22,11 +22,9 @@
 
 	<mvc:view-controller path="/member" view-name="/company/member" />
 
-	<mvc:view-controller path="/order-flow.html"
-		view-name="/service" />
+	<mvc:view-controller path="/order-flow.html" view-name="/service" />
 
-	<mvc:view-controller path="/company-service.html"
-		view-name="/company-service" />
+	<mvc:view-controller path="/company-service.html" view-name="/company-service" />
 		
 	<mvc:view-controller path="/wang" view-name="/standardized/requireForm" />
 	
@@ -39,9 +37,6 @@
 
 	<mvc:view-controller path="/manager/updateProjectInfo"
 		view-name="/manager/updateProjectInfo" />
-
-	<mvc:view-controller path="/about-us.html"
-		view-name="/about-us" />
 
 	<mvc:view-controller path="/company-activity.html"
 		view-name="/company-activity" />
@@ -63,14 +58,12 @@
 	<mvc:view-controller path="/costweixin" view-name="/costcalculateweixin" />
 	<mvc:view-controller path="/costtoutiao" view-name="/costcalculatetoutiao" />
 	
-	<!-- test -->
-    <mvc:view-controller path="/testS" view-name="/manager/collect" />
 	<!-- 产品线End -->
 	<mvc:view-controller path="/repwd" view-name="/repwd" />
 	<mvc:view-controller path="/play" view-name="/play" />
 	<mvc:view-controller path="/searchs" view-name="/searchs" />
 	<mvc:view-controller path="/newsInfo" view-name="/news/newsInfo" />
-	<mvc:view-controller path="/about" view-name="/about" />
+	<mvc:view-controller path="/about-us.html" view-name="/about-us" />
 	<mvc:view-controller path="/pif" view-name="/provider/providerInfoPhones" />
 	<mvc:view-controller path="/mg" view-name="/salesman/mgActive" />
 	<mvc:view-controller path="/register" view-name="/loginChoose/register" />
@@ -79,8 +72,7 @@
 	<mvc:view-controller path="/regSele" view-name="/loginChoose/regSele" />
 	<mvc:view-controller path="/pLogin" view-name="/loginChoose/proPhoneLogin" />
     <mvc:view-controller path="/userInfo" view-name="/customer/userInfo" />
-    <mvc:view-controller path="/phoneCost" view-name="/cost/phoneCost" />
-    <mvc:view-controller path="/calculate" view-name="/cost/phoneCost" />
+    <mvc:view-controller path="/cost/cal" view-name="/cost/phoneCost" />
     
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver"
 		p:prefix="/WEB-INF/pages/" p:suffix=".jsp" />
@@ -103,20 +95,6 @@
 			<mvc:mapping path="/phone/user/**" />
 			<bean class="com.panfeng.web.wearable.filter.UserInfoInterceptor" />
 		</mvc:interceptor>
-
-		<!-- 当设置多个拦截器时,先按顺序调用 preHandle 方法,然后逆序调用每个拦截器的 postHandle 和 afterCompletion 
-			方法 -->
-		<!-- <mvc:interceptor> <mvc:mapping path="/provider/**" /> <mvc:exclude-mapping 
-			path="/provider/info_**" /> <mvc:exclude-mapping path="/provider/repwd" /> 
-			<mvc:exclude-mapping path="/provider/updatePwd" /> <mvc:exclude-mapping path="/provider/thirdLogin" 
-			/> <mvc:exclude-mapping path="/provider/bind" /> <mvc:exclude-mapping path="/provider/register" 
-			/> <mvc:exclude-mapping path="/provider/leader" /> <mvc:exclude-mapping path="/provider/update/leaderInfomation" 
-			/> <mvc:exclude-mapping path="/provider/recover" /> <mvc:exclude-mapping 
-			path="/provider/header" /> <mvc:exclude-mapping path="/provider/doLogin" 
-			/> <mvc:exclude-mapping path="/provider/checkExisting" /> <mvc:exclude-mapping 
-			path="/provider/info/register" /> <mvc:exclude-mapping path="/provider/info/recover" 
-			/> <mvc:exclude-mapping path="/provider/login/**" /> <bean class="com.panfeng.web.wearable.filter.ProviderInterceptor" 
-			/> </mvc:interceptor> -->
 
 		<!-- 视频管家登陆拦截器 -->
 		<mvc:interceptor>
