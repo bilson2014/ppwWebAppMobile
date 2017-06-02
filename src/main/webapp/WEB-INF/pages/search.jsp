@@ -175,20 +175,20 @@
 							</c:if>
 						</r:identity>
 						<div class="itemS">
-
-							<div class="itemTitle">${solr.productName}</div>
-							<div class="itemTag">
-								<c:forEach items="${fn:split(fn:trim(solr.tags),' ') }"
-									var="tag" end="2" varStatus="stat">
-									<c:if test="${stat.index < 5}">
-										<c:if test="${stat.index > 0}">/</c:if>${tag} 
-											   </c:if>
-								</c:forEach>
-							</div>
+                           <a href="<spring:url value='/provider/info_${solr.teamId }.html'/>">
+								<div class="itemTitle">${solr.productName}</div>
+								<div class="itemTag">
+									<c:forEach items="${fn:split(fn:trim(solr.tags),' ') }"
+										var="tag" end="2" varStatus="stat">
+										<c:if test="${stat.index < 5}">
+											<c:if test="${stat.index > 0}">/</c:if>${tag} 
+												   </c:if>
+									</c:forEach>
+								</div>
+							</a>
 							<div class="toProvider">
 								<c:if test="${not empty solr.teamFlag && solr.teamFlag != 4 }">
-									<a
-										href="<spring:url value='/provider/info_${solr.teamId }.html'/>">
+									<a href="<spring:url value='/provider/info_${solr.teamId }.html'/>">
 										<img src="${file_locate_storage_path }${solr.teamPhotoUrl }">
 										<div class="proName">${solr.teamName }</div>
 									</a>

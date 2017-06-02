@@ -55,6 +55,9 @@ body {
 .setContent {
     color: $border-line !important;
     font-size: 0.34rem;
+    div,p,label,span{
+         color:white!important;
+    }
     img {
         width: 100%;
         height: 5.175rem;
