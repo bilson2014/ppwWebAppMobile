@@ -134,7 +134,7 @@ public class NewPhoneController extends BaseController {
 		return new ModelAndView("/order", model);
 	}
 
-	@RequestMapping("/searchview")
+	@RequestMapping("/list.html")
 	public ModelAndView searchView(final ModelMap model) {
 
 		return new ModelAndView("/searchView", model);

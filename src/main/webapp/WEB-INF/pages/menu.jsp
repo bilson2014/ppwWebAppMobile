@@ -29,7 +29,7 @@
 	                    <img class="close" id="editInfo" src="${imgPath}/menu/edit.png">
 	                  </r:identity>
 	                  <r:identity role="customer">
-	                       <a href="/phone/user/index"><img class="userLogo" id="getImgUrl" src="${file_locate_storage_path }${sessionScope.sessionInfo.photo}"></a> 
+	                       <a href="/mgr/index"><img class="userLogo" id="getImgUrl" src="${file_locate_storage_path }${sessionScope.sessionInfo.photo}"></a> 
 	                       <img class="close" id="editInfo" src="${imgPath}/menu/edit.png">
 	                  </r:identity>
 	                  <r:identity role="employee">
@@ -58,7 +58,7 @@
 		                  </div>
 	                 </a>
 	                 <r:identity role="provider">
-		                 <a href="/provider/index">
+		                 <a href="/mgr/index">
 			                  <div class="menuItem">
 			                       <img src="${imgPath}/menu/myPro.png">
 			                       <div>我的项目</div>
@@ -66,7 +66,7 @@
 		                 </a>
 		             </r:identity>
 		             <r:identity role="customer">
-		                 <a href="/phone/user/index">
+		                 <a href="/mgr/index">
 			                  <div class="menuItem">
 			                       <img src="${imgPath}/menu/myPro.png">
 			                       <div>我的项目</div>
@@ -103,7 +103,7 @@
 		                       <div>精品案例</div>
 		                  </div>
 	                 </a>
-	                 <a href="/phoneCost">
+	                 <a href="/cost/cal">
 		                  <div class="menuItem">
 		                       <img src="${imgPath}/menu/cost.png">
 		                       <div>成本估算</div>
@@ -115,7 +115,7 @@
 		                       <div>服务流程</div>
 		                  </div>
 	                 </a>
-	                    <a href="/about">
+	                    <a href="/about-us.html">
 		                  <div class="menuItem">
 		                       <img src="${imgPath}/menu/about.png">
 		                       <div>关于我们</div>

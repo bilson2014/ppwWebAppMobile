@@ -77,7 +77,7 @@
 
 	<div class="phoneHeader">
 		<a id="openMenu"><img src="${imgPath }/index/toMenu.png"></a> 
-		<a href="/searchview"> <img src="${imgPath}/index/toSearch.png"></a>
+		<a href="/list.html"> <img src="${imgPath}/index/toSearch.png"></a>
 		<a href="/"><img class="ppwLogo" src="${imgPath}/index/logoH.png"></a>
 	</div>
 
@@ -149,9 +149,9 @@
 		<div class="videoInfo">影片简介 </div>
 		<div class="videoEn">Project Summary</div>
 		<div class="videoContent">
-			<div class="content">${product.teamDescription }</div>
+			<div class="content">${product.pDescription }</div>
 			<div class="orderVideo">预约拍片</div>
-			<c:if test="${teamFlag !=null && teamFlag == 1 }">
+			<c:if test="${teamFlag == 1 }">
 				<a href="<spring:url value='/provider/info_${product.teamId }.html'/>">
 					<div class="videoCompany">
 						<div class="cLogo">

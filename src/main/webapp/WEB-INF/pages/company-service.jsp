@@ -69,7 +69,7 @@
 					</a>
 				</dd>
 				<dd>
-					<a href="<spring:url value="/searchview"/>" target="_self">
+					<a href="<spring:url value="/list.html"/>" target="_self">
 						<div class="search"></div>
 					</a>
 				</dd>

@@ -106,7 +106,7 @@ display: inline-block;
 	<r:identity role="customer">
 		<input type="hidden" id="role" value="customer">
 		<!--banner 区  -->
-		<a href="/phone/user/exinfo">
+		<a href="/user/info">
 			<div class="topHeader">
 				<div class="topContent">
 					<div class="infoHeadSide sameLine ">
