@@ -91,10 +91,6 @@
 	    <div class="motion">
 	          <div class="title">应用场景</div>    
 	          <div class="mContent"  id="sceneView">
-	               <%-- <div class="mItem">
-	                   <img src='${imgPath }/projectLine/motion/test.jpg'>
-	                   <div>大大大声道</div>
-	               </div> --%>
 	          </div>
 	    </div>
 	    <!-- 优势 -->
@@ -128,11 +124,6 @@
 	     <div class="exam">
 	         <div class="title">应用案例</div>
 	         <div class="eContent">
-<%-- 		         <div class="contentItem" style="${imgPath }/projectLine/motion/test.jpg">			   
-		              <div class="itemTitle">华为智能机顶盒国际版</div>					 
-		              <div class="itemTag">产品宣传片 / 电视机顶盒 / 智能硬件 / AE包装 / 3D</div>					 
-		              <div class="itemBack"></div>		 
-		         </div> --%>
 		     </div>    
 	    </div>
 	    	
