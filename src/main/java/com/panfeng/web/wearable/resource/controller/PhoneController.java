@@ -7,17 +7,11 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
-
-import com.paipianwang.pat.common.constant.PmsConstant;
-import com.paipianwang.pat.common.entity.SessionInfo;
-import com.paipianwang.pat.facade.user.entity.PmsUser;
-import com.paipianwang.pat.facade.user.service.PmsUserFacade;
 
 @RestController
 @RequestMapping("/phone")
@@ -27,9 +21,6 @@ public class PhoneController extends BaseController {
 
 	final Logger logger = LoggerFactory.getLogger("error");
 	
-	@Autowired
-	private final PmsUserFacade pmsUserFacade = null;
-
 	/**
 	 * 活动页面 下单
 	 */
@@ -65,30 +56,4 @@ public class PhoneController extends BaseController {
 		return new ModelAndView("/classify");
 	}
 
-	@RequestMapping("/user/index")
-	public ModelAndView goToIndex(ModelMap modelMap, HttpServletRequest request) {
-		SessionInfo sessionInfo = getCurrentInfo(request);
-		modelMap.put("userInfo", sessionInfo);
-		return new ModelAndView("/project", modelMap);
-	}
-
-	@RequestMapping("/user/exinfo")
-	public ModelAndView userInfo(ModelMap modelMap, HttpServletRequest request) {
-		SessionInfo sessionInfo = getCurrentInfo(request);
-		String userType = sessionInfo.getSessionType();
-		long id = sessionInfo.getReqiureId();
-		switch (userType) {
-		case PmsConstant.ROLE_CUSTOMER:
-			final PmsUser user = pmsUserFacade.findUserById(id);
-			modelMap.put("userinfo", user);
-			return new ModelAndView("/customer/customerInfo", modelMap);
-		case PmsConstant.ROLE_EMPLOYEE:
-			return null;
-		case PmsConstant.ROLE_PROVIDER:
-			return null;
-		}
-
-		return null;
-	}
-	
 }

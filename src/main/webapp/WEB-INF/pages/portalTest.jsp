@@ -80,7 +80,7 @@
 				</a>
 			</r:identity>
 			<r:identity role="customer">
-				<a href="/phone/user/index" target="_self">
+				<a href="/mgr/index" target="_self">
 					<ul>
 						<li>
 							<img src="/resources/images/portal/mySelf.png">
@@ -110,7 +110,7 @@
 				
 				<%-- <a href="<spring:url value='/provider/info_0.html'/>"> --%>
 				<%-- <a href="<spring:url value='/author/${product.teamId}'/>"> --%>
-				<a href="/provider/index" target="_self">
+				<a href="/mgr/index" target="_self">
 					<ul>
 						<li><img src="/resources/images/portal/project.png"></li>
 						<li class="wordMid" style="font-size: 12px; text-shadow: none">我的项目</li>
@@ -175,7 +175,7 @@
 					</a>
 				</dd>
 				<dd>
-					<a href="/searchview" target="_self">
+					<a href="/list.html" target="_self">
 						<div class="search"></div>
 					</a>
 				</dd>

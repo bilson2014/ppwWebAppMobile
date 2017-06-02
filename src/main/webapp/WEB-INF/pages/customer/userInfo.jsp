@@ -87,7 +87,7 @@
 
     <div class="phoneHeader">
 	     <a><img src="${imgPath }/index/toMenu.png"></a>
-	     <a href="/searchview">  
+	     <a href="/list.html">  
 		 <img  src="${imgPath}/index/toSearch.png">
 		</a> 
 	     <div>个人信息</div>

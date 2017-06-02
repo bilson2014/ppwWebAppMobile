@@ -20,6 +20,7 @@ import com.paipianwang.pat.common.config.PublicConfig;
 import com.paipianwang.pat.common.constant.PmsConstant;
 import com.paipianwang.pat.common.entity.SessionInfo;
 import com.paipianwang.pat.facade.user.entity.PmsUser;
+import com.paipianwang.pat.facade.user.service.PmsUserFacade;
 import com.panfeng.web.wearable.domain.BaseMsg;
 import com.panfeng.web.wearable.service.SmsService;
 import com.panfeng.web.wearable.util.DataUtil;
@@ -36,7 +37,42 @@ public class UserController extends BaseController {
 	final Logger logger = LoggerFactory.getLogger("error");
 
 	final Logger serLogger = LoggerFactory.getLogger("service");
+	
+	@Autowired
+	private final PmsUserFacade pmsUserFacade = null;
 
+	/*@RequestMapping("/user/index")
+	public ModelAndView goToIndex(ModelMap modelMap, HttpServletRequest request) {
+		SessionInfo sessionInfo = getCurrentInfo(request);
+		modelMap.put("userInfo", sessionInfo);
+		return new ModelAndView("/project", modelMap);
+	}*/
+	
+	/**
+	 * 用户信息页
+	 * @param modelMap
+	 * @param request
+	 * @return
+	 */
+	@RequestMapping("/info")
+	public ModelAndView userInfo(ModelMap modelMap, HttpServletRequest request) {
+		SessionInfo sessionInfo = getCurrentInfo(request);
+		String userType = sessionInfo.getSessionType();
+		long id = sessionInfo.getReqiureId();
+		switch (userType) {
+		case PmsConstant.ROLE_CUSTOMER:
+			final PmsUser user = pmsUserFacade.findUserById(id);
+			modelMap.put("userinfo", user);
+			return new ModelAndView("/customer/customerInfo", modelMap);
+		case PmsConstant.ROLE_EMPLOYEE:
+			return null;
+		case PmsConstant.ROLE_PROVIDER:
+			return null;
+		}
+
+		return null;
+	}
+	
 	/**
 	 * 发送验证码
 	 */
