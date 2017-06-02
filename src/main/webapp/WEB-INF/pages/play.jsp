@@ -31,8 +31,8 @@
 <meta name="format-detection" content="telephone=no" />
 <meta name="keywords" content="${product.tags }">
 <meta name="description"
-	content="${product.pDescription }">
-<title>${product.productName } | 拍片网</title>
+	content="拍片网平台上覆盖企业形象宣传片、产品tvc广告片、品牌微电影、病毒视频、mg动画、专题片等各种视频。${product.pDescription }">
+<title>${product.productName }-拍片网</title>
 
 <link rel="shortcut icon" href="${imgPath }/favicon.ico">
 <link rel="stylesheet" href="${playCss }">

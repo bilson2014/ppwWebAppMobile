@@ -54,7 +54,9 @@
 	content="宣传片,广告片,微电影,病毒视频,MG动画,宣传片,产品宣传片,企业宣传片,创意广告片,企业微电影,产品微电影,病毒视频">
 <meta name="description"
 	content="拍片网平台汇聚了入驻导演原创精品宣传片视频案例，免费创意策划，价格透明，不满意全额退款">
-<title>精品案例 | 拍片网</title>
+
+<title>企业产品宣传片_tvc广告片_企业微电影视频案例-拍片网</title>
+
 
 <link rel="shortcut icon" href="${imgPath }/favicon.ico">
 <link rel="stylesheet" href="${bootstrapCss }">
@@ -151,6 +153,7 @@
 
 	<div class="pagePhone">
 
+
 		<div class="hideMenu">
 			<c:if test="${!empty list}">
 				<!-- not empty -->
@@ -210,6 +213,7 @@
 
 		</div>
 		<jsp:include flush="true" page="foot.jsp"></jsp:include>
+
 	</div>
 	<script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
 	<script src="${jqueryJs}"></script>

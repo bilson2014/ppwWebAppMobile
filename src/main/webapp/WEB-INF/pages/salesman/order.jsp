@@ -28,7 +28,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
 	<!-- iphone 手机默认全屏 -->
 	<meta name="apple-mobile-web-app-capable" content="yes" />
-	<title>拍片网－移动端_订单页</title>
+	<title>移动端_订单页－拍片网</title>
 
 	<link rel="shortcut icon" href="${imgPath }/favicon.ico" >
 	<link rel="stylesheet" href="${bootstrapAlertCss }">

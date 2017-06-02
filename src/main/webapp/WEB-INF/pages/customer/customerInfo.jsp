@@ -41,7 +41,7 @@
 	<meta name="apple-mobile-web-app-capable" content="yes" />
 	<!-- 取消数字被识别为电话号码 -->
 	<meta content="telephone=no" name="format-detection">
-<title>个人信息</title>
+<title>个人信息－拍片网</title>
 <link rel="shortcut icon" href="${imgPath}/favicon.ico">
 <link rel="stylesheet" href="${bootstrapCss}">
 <link rel="stylesheet" href="${commonCss}">

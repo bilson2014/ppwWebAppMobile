@@ -35,7 +35,7 @@
 <meta name="keywords" content="${news.title}">
 <meta name="description"
 	content="新闻资讯频道将提供拍片网的案例分享、企业动态、行业资讯等影视行业资讯。">
-<title>${news.title} | 拍片网</title>
+<title>${news.title}－拍片网</title>
 
 <link rel="shortcut icon" href="${imgPath }/favicon.ico">
 <link rel="stylesheet" href="${newsInfoCss }">

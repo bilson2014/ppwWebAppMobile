@@ -25,7 +25,7 @@
 	<meta name="format-detection" content="telephone=no" />
 	<meta name="keywords" content="拍片网平台上的宣传片制作流程以及整个拍片服务流程。拍片就上拍片网！">
 	<meta name="description" content="拍片网平台简介，拍片网是一个开放、共享、透明、公正的一个视频制作服务平台，了解更多拍片网平台服务和拍片网平台愿景">
-	<title>关于我们 | 拍片网</title>
+	<title>关于我们 －拍片网</title>
 	<link rel="shortcut icon" href="${imgPath }/favicon.ico" >
 	<link rel="stylesheet" href="${aboutCss}">
 	
