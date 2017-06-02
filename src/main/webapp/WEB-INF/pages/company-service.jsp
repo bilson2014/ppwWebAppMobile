@@ -54,27 +54,17 @@
 
 </head>
 <body>
+
+	<div class="phoneHeader">
+		<a id="openMenu"><img src="${imgPath }/index/toMenu.png"></a> 
+		<a class="hide" href="/list.html"> <img src="${imgPath}/index/toSearch.png"></a>
+		<a href="/"><img class="ppwLogo" src="${imgPath}/index/logoH.png"></a>
+	</div>
+
+	<jsp:include flush="true" page="menu.jsp"></jsp:include>
+
 <div class="wrap">
-	<div class="header">
-			<!-- logo -->
-			<dl class="header-ul">
-				<dd>
-					<a href="javascript:history.back(-1);">
-						<div class="back"></div>
-					</a>
-				</dd>
-				<dd>
-					<a href="<spring:url value="/"/>" target="_self">
-						<div class="logo"></div>
-					</a>
-				</dd>
-				<dd>
-					<a href="<spring:url value="/list.html"/>" target="_self">
-						<div class="search"></div>
-					</a>
-				</dd>
-			</dl>
-		</div>
+	
 		 <div class="agreemen">
 			<h1>网站使用协议</h1>
 			<h2>第一条 本站服务条款的确认和接纳</h1>
