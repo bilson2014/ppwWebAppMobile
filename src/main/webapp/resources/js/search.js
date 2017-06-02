@@ -360,7 +360,7 @@ function createVideo(product){
 	var loginTel = $('#rolephoneImg').val();
 	var htmlAddImg = 0;
 	var indentProjectId = parseInt(product.indentProjectId);
-	var itemFlag = parseInt(teamFlag);
+	var itemFlag = parseInt(product.teamFlag);
 	if(loginTel!=null && loginTel!= "" ){
 	    
 	    if(indentProjectId != 0 && itemFlag == 1){
