@@ -64,13 +64,13 @@
 		     <a id="openMenu"><img src="${imgPath }/index/toMenu.png"></a>
 		     <img class="searchType choose" src="${imgPath}/projectLine/projectSet/moreChoose.png">
 		     <div class="choose">${product.chanpinName}</div>
-		     <a href="/product/${product.englishName }/set"><div class="toBuy">产品配置</div></a>
+		     <a href="/product/${product.englishName }/set"><div class="toBuy">套餐配置</div></a>
 	    </div>
 	    
 	      <div class="headerTags">
            	 <a href="/product/${product.englishName }/main"><div class="active">产品概述</div></a>
 	         <a href="/product/${product.englishName }/case"><div>全部案例</div></a>
-	         <a href="/product/${product.englishName }/set"><div style="border:none">产品配置</div></a>
+	         <a href="/product/${product.englishName }/set"><div style="border:none">套餐配置</div></a>
 	  </div>
 	    <div class="showType">
 	         	<c:if test="${! empty productList}">
