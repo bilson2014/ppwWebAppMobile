@@ -58,7 +58,7 @@ var play = {
 			
 			var $col = '<label>￥</label>';
 			if(originalPrice == 0)
-				$col += '暂无报价<label class="doraction">暂无报价</label>';
+				$col += '欢迎询价<label class="doraction">欢迎询价</label>';
 			else {
 				if(originalPrice == realPrice) {
 					$col += thousandCount(originalPrice);
