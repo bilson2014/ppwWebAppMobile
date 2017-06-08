@@ -12,6 +12,8 @@ public class SolrView extends Pagination{
 	
 	private String tagsFq = null; // 标签类型
 	
+	private String idFq = null; // ID区间筛选
+	
 	private String condition = null; // 搜索条件
 	
 	private int sortord = 0; // 0：升序 1：降序
@@ -60,6 +62,14 @@ public class SolrView extends Pagination{
 		this.itemFq = itemFq;
 	}
 	
+	public String getIdFq() {
+		return idFq;
+	}
+
+	public void setIdFq(String idFq) {
+		this.idFq = idFq;
+	}
+
 	public int getSortord() {
 		return sortord;
 	}

@@ -14,6 +14,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.ModelMap;
+import org.springframework.util.Base64Utils;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -26,7 +27,9 @@ import com.paipianwang.pat.common.entity.SessionInfo;
 import com.paipianwang.pat.common.util.ValidateUtil;
 import com.paipianwang.pat.common.web.domain.ResourceToken;
 import com.paipianwang.pat.facade.employee.entity.PmsJob;
+import com.paipianwang.pat.facade.information.entity.PmsNews;
 import com.paipianwang.pat.facade.information.entity.PmsProductSolr;
+import com.paipianwang.pat.facade.information.service.PmsNewsFacade;
 import com.paipianwang.pat.facade.product.entity.PmsProduct;
 import com.paipianwang.pat.facade.product.service.PmsProductFacade;
 import com.paipianwang.pat.facade.team.entity.PmsTeam;
@@ -60,6 +63,9 @@ public class PCController extends BaseController {
 
 	@Autowired
 	final private PmsProductFacade pmsProductFacade = null;
+
+	@Autowired
+	final PmsNewsFacade pmsNewsFacade = null;
 
 	@RequestMapping("/")
 	public ModelAndView portalView(final String target, final ModelMap model, HttpServletRequest request) {
@@ -298,5 +304,39 @@ public class PCController extends BaseController {
 			baseMsg.setErrorMsg("list is null");
 		}
 		return baseMsg;
+	}
+
+	/**
+	 * 跳转新闻详情
+	 */
+	@RequestMapping(value = "/news/article-{newId}.html")
+	public ModelAndView getRecommendNews(@PathVariable("newId") final Integer newId, final HttpServletRequest request,
+			final ModelMap model) {
+
+		// 当前新闻
+		PmsNews pmsNews = new PmsNews();
+
+		// 获取新闻详情
+		if (newId != null) {
+			pmsNews = pmsNewsFacade.findNewsById(newId);
+			String content = pmsNews.getContent();
+			byte[] b;
+			try {
+				b = content.getBytes("UTF-8");
+				content = new String(Base64Utils.decode(b), "UTF-8");
+			} catch (UnsupportedEncodingException e) {
+				e.printStackTrace();
+			}
+			pmsNews.setContent(content);
+
+		} else {
+			// 请求不存在的新闻
+			return new ModelAndView("/error");
+		}
+
+		model.addAttribute("news", pmsNews);
+
+		return new ModelAndView("/news/newsInfo");
+
 	}
 }
