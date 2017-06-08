@@ -171,8 +171,10 @@ function createCard(msg){
 			}
 		}
 	    $body1 +='            <div class="itemS">';
+		 $body1 +='	                 <a href="'+getHostName() +'/provider/info_'+msg.teamId+'.html'+'">';
 		$body1 +='			         <div class="itemTitle">'+msg.productName+'</div>';
 		$body1 +='					 <div class="itemTag">'+tags+'</div>';
+		 $body1 +='	                 </a>';
 		$body1 +='                   <div class="toProvider">';
 		 if(itemFlag != 4){
 			 $body1 +='	                 <a href="'+getHostName() +'/provider/info_'+msg.teamId+'.html'+'">';

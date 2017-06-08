@@ -38,7 +38,7 @@
 <meta content="telephone=no" name="format-detection">
 <meta name="keywords" content="企业形象宣传片,宣传片制作,产品宣传片制作,北京宣传片拍摄,tvc广告片,品牌微电影,mg动画制作公司">
 <meta name="description" content="拍片网是专业的商业视频服务平台,主要为中小企业提供:企业形象宣传片,宣传片制作,产品tvc广告片拍摄,品牌微电影制作,mg动画制作等视频内容。拍片就上拍片网！">
-<title>拍片网－最大的互联网影视内容制作服务平台</title>
+<title>拍片网-商业视频制作服务平台,宣传片,tvc广告,短视频制作</title>
 <script src="${jqueryJs }"></script>
 <script src="${commonJs }"></script>
 <script src="${scrollstopJs}"></script>
