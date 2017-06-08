@@ -65,7 +65,8 @@ public class SolrServiceImpl extends BaseSolrServiceImpl implements SolrService 
 			query.setQuery(condition);
 			query.set("pf", "productName tags teamName");
 			query.set("tie", "0.1");
-			query.setFields("teamId,teamName,productId,productName,orignalPrice,price,picLDUrl,tags,indentProjectId,teamPhotoUrl,teamFlag");
+			query.setFields(
+					"teamId,teamName,productId,productName,orignalPrice,price,picLDUrl,tags,indentProjectId,teamPhotoUrl,teamFlag");
 
 			query.setStart(Integer.parseInt(String.valueOf(view.getBegin())));
 			query.setRows(Integer.parseInt(String.valueOf(view.getLimit())));
@@ -117,6 +118,11 @@ public class SolrServiceImpl extends BaseSolrServiceImpl implements SolrService 
 		// 设置推荐区间
 		if (view.getRecomendFq() != null && !"".equals(view.getRecomendFq())) {
 			query.addFilterQuery("recommend:" + view.getRecomendFq());
+		}
+
+		// 设置ID区间
+		if (view.getIdFq() != null && !"".equals(view.getIdFq())) {
+			query.addFilterQuery("-id:" + view.getIdFq());
 		}
 
 		query.setStart(Integer.parseInt(String.valueOf(view.getBegin())));
