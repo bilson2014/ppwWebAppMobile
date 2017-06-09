@@ -39,7 +39,7 @@ var activity = {
 					$body += '<dd>'+ product.pDescription +'</dd>';
 					$body += '<dt><label>￥: </label>';
 					if(realPrice == 0)
-						$body += '暂无报价<label class="doraction">暂无报价</label>';
+						$body += '欢迎询价<label class="doraction">欢迎询价</label>';
 					else
 						$body += thousandCount(realPrice) + '<label class="doraction">'+ thousandCount(originalPrice) +'</label>';
 					$body += '</dt>';

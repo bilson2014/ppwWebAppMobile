@@ -77,7 +77,7 @@ function loadProduct(list){
 			$body += '<dd>'+ product.pDescription +'</dd>';
 			$body += '<dt><label>￥ </label>';
 			if(originalPrice == 0)
-				$body += '暂无报价<label class="doraction">暂无报价</label>';
+				$body += '欢迎询价<label class="doraction">欢迎询价</label>';
 			else {
 				if(originalPrice == realPrice){ // 原价与折扣价相等，则不显示原价
 					$body += thousandCount(originalPrice);

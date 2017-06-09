@@ -1,6 +1,5 @@
 package com.panfeng.web.wearable.resource.controller;
 
-import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
 import java.util.HashMap;
 import java.util.List;
@@ -14,7 +13,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.ModelMap;
-import org.springframework.util.Base64Utils;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -25,7 +23,6 @@ import com.paipianwang.pat.common.config.PublicConfig;
 import com.paipianwang.pat.common.util.SolrUtil;
 import com.paipianwang.pat.common.util.ValidateUtil;
 import com.paipianwang.pat.common.web.domain.ResourceToken;
-import com.paipianwang.pat.facade.information.entity.PmsNews;
 import com.paipianwang.pat.facade.information.entity.PmsNewsSolr;
 import com.paipianwang.pat.facade.information.entity.PmsProductSolr;
 import com.panfeng.web.wearable.domain.BaseMsg;
@@ -151,29 +148,6 @@ public class SolrController extends BaseController {
 		return new ModelAndView("news/newsList", model);
 	}
 
-	/**
-	 * 新闻便签数据获取（最热，推荐）
-	 * 
-	 * @param q
-	 * @param model
-	 * @param request
-	 * @return
-	 * @throws Exception
-	 */
-	@RequestMapping("/get/news/tag")
-	public List<PmsNewsSolr> searchNewByTagsView(String q, HttpServletRequest request) throws Exception {
-		final SolrView view = new SolrView();
-		if ("最热资讯".equals(q)) {
-			// 筛选 推荐值大于0 的新闻
-			view.setRecomendFq("[1 TO *]");
-			q = null;
-		}
-		view.setCondition(q);
-		view.setLimit(20l);
-		final List<PmsNewsSolr> list = solrService.queryNewDocs(PublicConfig.SOLR_NEWS_URL, view);
-		return list;
-	}
-
 	// 搜索分页
 	@RequestMapping("/search/news/pagination")
 	public List<PmsNewsSolr> searchNewsPagination(@RequestBody final SolrView view, final HttpServletRequest request)
@@ -190,33 +164,6 @@ public class SolrController extends BaseController {
 		return list;
 	}
 
-	/**
-	 * 跳转新闻详情
-	 */
-	@RequestMapping(value = "/news/article-{newId}.html")
-	public ModelAndView getRecommendNews(@PathVariable("newId") final Integer newId, final HttpServletRequest request,
-			final ModelMap model, PmsNews n) {
-		n.setId(Long.parseLong(newId + ""));
-		final String url = PublicConfig.URL_PREFIX + "portal/news/info";
-		String str = HttpUtil.httpPost(url, n, request);
-		if (str != null && !"".equals(str)) {
-			try {
-				PmsNews news = JsonUtil.toBean(str, PmsNews.class);
-				String content = news.getContent();
-				byte[] b = content.getBytes("UTF-8");
-				content = new String(Base64Utils.decode(b), "UTF-8");
-				news.setContent(content);
-				model.addAttribute("news", news);
-			} catch (UnsupportedEncodingException e) {
-				e.printStackTrace();
-			}
-		} else {
-			// 请求不存在的新闻
-			return new ModelAndView("/error");
-		}
-
-		return new ModelAndView("/news/newsInfo");
-	}
 
 	/**
 	 * 播放界面获取更多推荐作品 根据tags来搜索 参数：condition 表示tag标签
@@ -244,7 +191,8 @@ public class SolrController extends BaseController {
 			}
 			query.set("pf", "tags^2.3 productName");
 			query.set("tie", "0.1");
-			query.setFields("teamId,teamName,productId,productName,orignalPrice,price,picLDUrl,tags,indentProjectId,teamPhotoUrl,teamFlag");
+			query.setFields(
+					"teamId,teamName,productId,productName,orignalPrice,price,picLDUrl,tags,indentProjectId,teamPhotoUrl,teamFlag");
 			query.setStart((int) solrView.getBegin());
 			query.setRows((int) solrView.getLimit());
 

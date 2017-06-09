@@ -139,10 +139,10 @@
 			</c:if>
 		</div>
 		<c:if test="${product.serviceRealPrice != 0}">
-	                    	<div class="videoPrice">¥ ${product.serviceRealPrice}</div>
+	                    	<div class="videoPrice">￥${product.serviceRealPrice}</div>
 	     </c:if>
 		 <c:if test="${product.servicePrice == 0}">
-	                    	<div class="videoPrice">¥ 暂无报价</div>
+	                    	<div class="videoPrice">￥欢迎询价</div>
 	     </c:if>
 
 		<!-- 影片简介 -->
