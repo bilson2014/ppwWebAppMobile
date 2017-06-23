@@ -85,6 +85,7 @@ public class CostCalculateController extends BaseController {
 		indent.setId(calculate.getIndentId());
 		
 		String indentName = calculate.getIndentName();
+		indent.setIndentSource(calculate.getIndentSource());
 		indent.setIndentName((StringUtils.isNotEmpty(indentName) ? indentName : "网站-移动-成本计算器"));
 		indent.setIndentType(0);
 		indent.setServiceId(-1l);

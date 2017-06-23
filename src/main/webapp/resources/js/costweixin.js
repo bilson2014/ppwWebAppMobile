@@ -207,7 +207,8 @@ function getPrice(){
 			indentId : $('#phoneCode').attr('data-content'),
 			description : description,
 			verification_code:verification_code,
-			target:"weixin"
+			target:"weixin",
+			indentSource : 1
 		}));
     }
 }
