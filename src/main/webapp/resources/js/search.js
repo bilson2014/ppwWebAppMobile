@@ -337,6 +337,7 @@ function loadProduction(start){
 		limit : pageSize,
 		condition : $('#q').val().trim(),
 		industry : $('#industry').val().trim(),
+		production : $('#production').val().trim(),
 		genre : $('#genre').val().trim(),
 		priceFq : $('#price').val(),
 		lengthFq : $('#length').val()

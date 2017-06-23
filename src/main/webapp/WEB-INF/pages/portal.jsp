@@ -201,7 +201,7 @@
 	<div class="secondContent">
 	      <div class="title">热门案例</div>
 	      <div class="conDiv">
-	              <a href='/search?q=&industry=*宣传片'>
+	              <a href='/search?q=*宣传片'>
 			          <div class="conItem leftItem">
 			             <img class="lazyload" data-src="/resources/images/index/video.png">
 			             <div class="type">宣传片</div>
@@ -215,7 +215,7 @@
 		          </a>
 	      </div>
 	       <div class="conDiv noBot">
-	              <a href="/search?q=广告">
+	              <a href="/search?q=*广告">
 			          <div class="conItem leftItem">
 			             <img class="lazyload" data-src="/resources/images/index/ad.png">
 			             <div class="type">广告片</div>
