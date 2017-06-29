@@ -49,7 +49,28 @@ public class SolrController extends BaseController {
 			final String price, final boolean isMore, final ModelMap model, final HttpServletRequest request)
 			throws Exception {
 
-		q = q.replaceAll("“+", "\"").replaceAll("”+", "\"");
+		// 检查 参数q 是否为空
+		if (ValidateUtil.isValid(q)) {
+			// 处理停词问题
+			if (q.contains("宣传片") || q.contains("广告")) {
+				final StringBuffer sb = new StringBuffer();
+				q = q.replaceAll("“+", "\"").replaceAll("”+", "\"").replaceAll(",", " ").replaceAll(" +", " ");
+				String[] tags = q.split(" ");
+				for (int i = 0; i < tags.length; i++) {
+					String tag = tags[i];
+					if ("宣传片".equals(tags[i]) || "广告".equals(tags[i])) {
+						tag = "*" + tag;
+					}
+					if (i < tags.length - 1)
+						sb.append(tag).append(" ");
+					else
+						sb.append(tag);
+				}
+				q = sb.toString();
+			}
+		} else
+			q = "*";
+
 		model.addAttribute("q", q);
 		model.addAttribute("price", price);
 		model.addAttribute("production", production);
@@ -163,7 +184,6 @@ public class SolrController extends BaseController {
 		final List<PmsNewsSolr> list = solrService.queryNewDocs(PublicConfig.SOLR_NEWS_URL, view);
 		return list;
 	}
-
 
 	/**
 	 * 播放界面获取更多推荐作品 根据tags来搜索 参数：condition 表示tag标签

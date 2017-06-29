@@ -32,6 +32,16 @@ public class CostCalculate {
 
 	private String indentName = null; // 订单名称
 
+	private Integer indentSource;
+
+	public Integer getIndentSource() {
+		return indentSource;
+	}
+
+	public void setIndentSource(Integer indentSource) {
+		this.indentSource = indentSource;
+	}
+
 	public String getTarget() {
 		return target;
 	}

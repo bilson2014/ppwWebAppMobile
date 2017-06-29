@@ -9,6 +9,8 @@
 		                   http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd">
 
 	<mvc:resources location="/resources/" mapping="/resources/**" />
+	<mvc:resources location="/" mapping="/robots.txt" />
+	<mvc:resources location="/" mapping="/sitemap.xml" />
 	
 	<context:component-scan base-package="com.panfeng.web.wearable.resource.controller" />
 

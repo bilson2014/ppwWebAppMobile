@@ -134,15 +134,15 @@
               <div class="title">寻找适合你的${product.chanpinName}</div>
               <div class="typeMod">
                     <div class="modItem active" id="normal">
-                        <div class="info">标准版产品</div>
+                        <div class="info"></div>
                         <div class="price"><span id="normal_prive"></span>元</div>
                     </div>
                     <div class="modItem" id="k2">
-                        <div class="info">增强版产品</div>
+                        <div class="info"></div>
                         <div class="price"><span id="k2_prive"></span>元</div>
                     </div>
                     <div class="modItem" id="k4">
-                        <div class="info">尊享版产品</div>
+                        <div class="info"></div>
                         <div class="price"><span id="k4_prive"></span>元</div>
                     </div>
               </div>

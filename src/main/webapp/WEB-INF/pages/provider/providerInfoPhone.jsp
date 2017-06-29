@@ -145,7 +145,7 @@
 		<c:if test="${product.teamId >0}">
 			<a href="/play/${product.teamId}_${product.productId }.html">
 				<div class="contentItem contentAnimation"
-					style="background:url(${file_locate_storage_path}${product.picHDUrl}) no-repeat">
+					style="background:url(${file_locate_storage_path}${product.picLDUrl}) no-repeat">
 					<div class="itemTitle">${product.productName}</div>
 					<div class="itemTag">
 						<c:forEach items="${fn:split(fn:trim(product.tags),' ') }"
