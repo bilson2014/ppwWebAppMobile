@@ -53,12 +53,19 @@
 
 	<mvc:view-controller path="/error" view-name="/error" />
 
+    <mvc:view-controller path="/404" view-name="/404" />
+
 	<mvc:view-controller path="/threeLogin" view-name="/threeLogin" />
 	
 	<!-- cost -->
 	<mvc:view-controller path="/costcode" view-name="/cost/costcalculate" />
 	<mvc:view-controller path="/costweixin" view-name="/costcalculateweixin" />
 	<mvc:view-controller path="/costtoutiao" view-name="/costcalculatetoutiao" />
+	
+	<!-- test -->
+	
+	<mvc:view-controller path="/cosmetic" view-name="/salesman/cosmetic" />
+	
 	
 	<!-- 产品线End -->
 	<mvc:view-controller path="/repwd" view-name="/repwd" />

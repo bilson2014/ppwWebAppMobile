@@ -170,6 +170,7 @@ function buildCar1(obj){
 	$('#CConfigId').val(obj.chanpinconfigurationId);
 	$('#normal').attr('data-id',obj.chanpinconfigurationId);
 	$('#normal_prive').text(obj.basePrice);
+	$('#normal').find('.info').text(obj.chanpinconfigurationName);
 	var html1 = [
 	             '<div class="cardItem normal" data-id="'+obj.chanpinconfigurationId+'">',
 	             '         <div class="showProduct">',
@@ -196,6 +197,7 @@ function buildCar2(obj){
 	}
 	$('#k2').attr('data-id',obj.chanpinconfigurationId);
 	$('#k2_prive').text(obj.basePrice);
+	$('#k2').find('.info').text(obj.chanpinconfigurationName);
 	var html1 = [
 	             '<div class="cardItem k2" data-id="'+obj.chanpinconfigurationId+'">',
 	             '         <div class="showProduct">',
@@ -222,6 +224,7 @@ function buildCar3(obj){
 	}
 	$('#k4').attr('data-id',obj.chanpinconfigurationId);
 	$('#k4_prive').text(obj.basePrice);
+	$('#k4').find('.info').text(obj.chanpinconfigurationName);
 	var html1 = [
 	             '<div class="cardItem k4">',
 	             '         <div class="showProduct">',

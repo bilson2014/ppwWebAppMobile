@@ -216,7 +216,8 @@ function loginOrder(){
 			teamId : $('#teamId').val(),
 			serviceId : $('#serviceId').val(),
 			csrftoken : $('#csrftoken').val(),
-			indent_tele : $('#rolephone').val()
+			indent_tele : $('#rolephone').val(),
+			indentSource : 1
 			});
 	
 }
@@ -245,7 +246,8 @@ function noLoginOrder(){
 			csrftoken : $('#csrftoken').val(),
 			phoneCode : $('#verificationCodeValue').val(),
 			indent_recomment:'样片名称:'+$("#videoName").val()+',价格:'+$("#originalPrice").val(),
-			indent_tele : telephone
+			indent_tele : telephone,
+			indentSource : 1
 			});
 	}
 }
