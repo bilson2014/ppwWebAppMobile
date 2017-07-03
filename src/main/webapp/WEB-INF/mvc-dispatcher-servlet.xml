@@ -53,7 +53,7 @@
 
 	<mvc:view-controller path="/error" view-name="/error" />
 
-    <mvc:view-controller path="/error404" view-name="/error404" />
+    <mvc:view-controller path="/404" view-name="/404" />
 
 	<mvc:view-controller path="/threeLogin" view-name="/threeLogin" />
 	

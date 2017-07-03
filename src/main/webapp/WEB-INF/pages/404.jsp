@@ -13,7 +13,6 @@
 <spring:url value="/resources/js/common.js" var="commonJs"/>
 <spring:url value="/resources/js/search-suggest.js" var="suggestJs"/>
 <spring:url value="/resources/lib/jquery/jquery-2.0.3.min.js" var="jqueryJs"/>
-<spring:url value="/resources/js/error404.js" var="errorJs"/>
 <!-- import img path -->
 <spring:url value="/resources/images" var="imgPath" />
 <!DOCTYPE html>
@@ -51,11 +50,11 @@
    <img class="logoerror" src="${imgPath }/icons/error404.png"></a></img>
     <div class="en">Oops. The page you were looking for doesn’t exist</div>
 	<div class="centerWord">诶呀!您要找的页面不存在...</div>
-	<div class="autoBack">自动返回主页 <span id="last3">3</span>秒</div>
+	<div class="autoBack"></div>
 	<a href="/"><div class="backIndex btn-c-r">返回主页</div></a>
 			
 	<script src="${jqueryJs }"></script>
 	<script src="${commonJs }"></script>
-	<script src="${errorJs }"></script>
+
 </body>
 </html>
