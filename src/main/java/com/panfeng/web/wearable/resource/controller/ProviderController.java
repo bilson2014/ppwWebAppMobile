@@ -897,15 +897,7 @@ public class ProviderController extends BaseController {
 			String strtags = team.getBusiness();
 			if (ValidateUtil.isValid(strtags)) {
 				try {
-					String[] tagsarray = strtags.split("\\,");
-					List<Integer> ids = new ArrayList<>();
-					for (int i = 0; i < tagsarray.length; i++) {
-						ids.add(Integer.parseInt(tagsarray[i]));
-					}
-					List<String> tags = pmsTeamFacade.getTags(ids);
-					if (ValidateUtil.isValid(tags)) {
-						modelMap.addAttribute("providerTags", JsonUtil.toJson(tags));
-					}
+					modelMap.addAttribute("providerTags", JsonUtil.toJson(strtags.split(",")));
 				} catch (NumberFormatException e) {
 					e.printStackTrace();
 				} catch (Exception e) {
