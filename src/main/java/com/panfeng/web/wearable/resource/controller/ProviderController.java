@@ -1,7 +1,5 @@
 package com.panfeng.web.wearable.resource.controller;
 
-import java.io.UnsupportedEncodingException;
-import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -302,28 +300,6 @@ public class ProviderController extends BaseController {
 	}
 
 	/**
-	 * 更新供应商基本信息
-	 * 
-	 * @param team
-	 *            团队信息(供应商名称、简介、地址、邮箱等)
-	 * @return 成功返回 true, 失败返回 false
-	 */
-	@RequestMapping("/update/teamInfomation")
-	public boolean updateTeamInformation(final HttpServletRequest request, @RequestBody final PmsTeam team) {
-
-		if (team != null) {
-			try {
-				return updateInfo(team, request);
-			} catch (UnsupportedEncodingException e) {
-				logger.error(
-						"ProviderController method:updateTeamInformation() Privder infomartion encode error On updateTeamInformation Method ...");
-				e.printStackTrace();
-			}
-		}
-		return false;
-	}
-
-	/**
 	 * 供应商注册引导页信息保存
 	 * 
 	 * @param team
@@ -515,71 +491,6 @@ public class ProviderController extends BaseController {
 		return msg;
 	}
 
-	// 跳转至 上传页面
-	@RequestMapping("/product/{action}/{providerId}/{productId}")
-	public ModelAndView productView(@PathVariable("action") final String action,
-			@PathVariable("providerId") final long providerId, @PathVariable("productId") final long productId,
-			final ModelMap model, final HttpServletRequest request) {
-
-		PmsProduct product = new PmsProduct();
-		if (productId != 0 && "modify".equals(action)) {
-			// 修改
-			final String url = PublicConfig.URL_PREFIX + "portal/product/static/data/" + productId;
-			final String json = HttpUtil.httpGet(url, request);
-			if (json != null && !"".equals(json)) {
-				product = JsonUtil.toBean(json, PmsProduct.class);
-				String sid = product.getSessionId();
-				if (sid == null || "".equals(sid))
-					product.setSessionId(DataUtil.getUuid());
-			}
-		}
-		model.addAttribute("cKey", providerId);
-		model.addAttribute("productKey", productId);
-		model.addAttribute("action", action);
-		model.addAttribute("sId", product.getServiceId());
-		model.addAttribute("model", product);
-		return new ModelAndView("provider/upload", model);
-	}
-
-	/**
-	 * 根据ID获取产品
-	 * 
-	 * @param productId
-	 *            视频唯一标识
-	 * @return 视频信息
-	 */
-	@RequestMapping("/product/data/{productId}")
-	public PmsProduct loadProductById(final HttpServletRequest request, @PathVariable("productId") long productId) {
-		// 如果 传来的ID值为-1，说明是 保存操作，从session中取值
-		final String url = PublicConfig.URL_PREFIX + "portal/product/static/data/" + productId;
-		final String json = HttpUtil.httpGet(url, request);
-		PmsProduct product = new PmsProduct();
-		if (json != null && !"".equals(json)) {
-			product = JsonUtil.toBean(json, PmsProduct.class);
-		}
-		return product;
-	}
-
-	/**
-	 * 获取唯一视频
-	 * 
-	 * @param providerId
-	 *            供应商唯一编号
-	 * @return 视频编号
-	 */
-	@RequestMapping("/loadVideo/{providerId}")
-	public long loadProductByProviderId(@PathVariable("providerId") final long providerId,
-			final HttpServletRequest request) {
-
-		final String url = PublicConfig.URL_PREFIX + "portal/product/static/data/loadSingleProduct/" + providerId;
-		final String json = HttpUtil.httpGet(url, request);
-		long productId = 0l;
-		if (json != null && !"".equals(json)) {
-			productId = JsonUtil.toBean(json, Long.class);
-		}
-		return productId;
-	}
-
 	// 检查文件是否符合规范
 	public String checkFile(final MultipartFile file) {
 		if (file != null && !file.isEmpty()) {
@@ -703,71 +614,6 @@ public class ProviderController extends BaseController {
 			return team;
 		}
 		return null;
-	}
-
-	public boolean updateInfo(final PmsTeam team, final HttpServletRequest request)
-			throws UnsupportedEncodingException {
-		// 转码
-		final String teamName = team.getTeamName();
-		final String teamDesc = team.getTeamDescription();
-		final String address = team.getAddress();
-		final String email = team.getEmail();
-		final String linkman = team.getLinkman();
-		final String webchat = team.getWebchat();
-		final String officialSite = team.getOfficialSite();
-		final String scale = team.getScale();
-		final String businessDesc = team.getBusinessDesc();
-		final String demand = team.getDemand();
-		final String description = team.getDescription();
-
-		if (teamName != null && !"".equals(teamName)) {
-			team.setTeamName(URLEncoder.encode(teamName, "UTF-8"));
-		}
-
-		if (teamDesc != null && !"".equals(teamDesc)) {
-			team.setTeamDescription(URLEncoder.encode(teamDesc, "UTF-8"));
-		}
-
-		if (address != null && !"".equals(address)) {
-			team.setAddress(URLEncoder.encode(address, "UTF-8"));
-		}
-
-		if (email != null && !"".equals(email)) {
-			team.setEmail(URLEncoder.encode(email, "UTF-8"));
-		}
-
-		if (linkman != null && !"".equals(linkman)) {
-			team.setLinkman(URLEncoder.encode(linkman, "UTF-8"));
-		}
-
-		if (webchat != null && !"".equals(webchat)) {
-			team.setWebchat(URLEncoder.encode(webchat, "UTF-8"));
-		}
-
-		if (officialSite != null && !"".equals(officialSite)) {
-			team.setOfficialSite(URLEncoder.encode(officialSite, "UTF-8"));
-		}
-
-		if (scale != null && !"".equals(scale)) {
-			team.setScale(URLEncoder.encode(scale, "UTF-8"));
-		}
-
-		if (businessDesc != null && !"".equals(businessDesc)) {
-			team.setBusinessDesc(URLEncoder.encode(businessDesc, "UTF-8"));
-		}
-
-		if (demand != null && !"".equals(demand)) {
-			team.setDemand(URLEncoder.encode(demand, "UTF-8"));
-		}
-
-		if (description != null && !"".equals(description)) {
-			team.setDescription(URLEncoder.encode(description, "UTF-8"));
-		}
-
-		final String updateUrl = PublicConfig.URL_PREFIX + "portal/team/static/data/updateTeamInformation";
-		final String json = HttpUtil.httpPost(updateUrl, team, request);
-		final boolean flag = JsonUtil.toBean(json, Boolean.class);
-		return flag;
 	}
 
 	@RequestMapping("/wechat/callback.do")

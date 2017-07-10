@@ -228,6 +228,12 @@ public class IndentController extends BaseController {
 		return new ModelAndView("/employee/indentList", modelMap);
 	}
 
+	/**
+	 * 订单分页查询
+	 * @param paramMap
+	 * @param request
+	 * @return
+	 */
 	@RequestMapping(value = "/list/page", produces = "application/json; charset=UTF-8")
 	public DataGrid<PmsIndent> listWithPagination(@RequestBody Map<String, Object> paramMap,
 			HttpServletRequest request) {

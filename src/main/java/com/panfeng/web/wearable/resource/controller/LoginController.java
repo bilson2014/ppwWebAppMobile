@@ -42,8 +42,6 @@ import com.panfeng.web.wearable.resource.model.Info;
 import com.panfeng.web.wearable.security.AESUtil;
 import com.panfeng.web.wearable.service.SmsService;
 import com.panfeng.web.wearable.util.DataUtil;
-import com.panfeng.web.wearable.util.HttpUtil;
-import com.panfeng.web.wearable.util.JsonUtil;
 
 /**
  * 登陆事件 控制器
@@ -356,12 +354,12 @@ public class LoginController extends BaseController {
 				final String password = AESUtil.Decrypt(user.getPassword(), PmsConstant.UNIQUE_KEY);
 				// MD5 加密
 				user.setPassword(DataUtil.md5(password));
-				final String url = PublicConfig.URL_PREFIX + "portal/user/modify/loginName";
-				String str = HttpUtil.httpPost(url, user, request);
-				if (str != null && !"".equals(str)) {
-					boolean result = JsonUtil.toBean(str, Boolean.class);
+				
+				boolean ret =  pmsUserFacade.modifyUserLoginName(user) > 0 ? true : false;
+
+				if (ret) {
 					// 添加 session
-					return new BaseMsg(BaseMsg.NORMAL, "请求正常", result);
+					return new BaseMsg(BaseMsg.NORMAL, "请求正常", true);
 				} else {
 					return new BaseMsg(BaseMsg.ERROR, "服务器繁忙，请稍候再试...", false);
 				}
