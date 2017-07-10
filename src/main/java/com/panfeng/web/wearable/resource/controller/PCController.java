@@ -256,21 +256,7 @@ public class PCController extends BaseController {
 				// 加载导演标签
 				String strtags = pmsTeam.getBusiness();
 				if (ValidateUtil.isValid(strtags)) {
-					try {
-						String[] tagsarray = strtags.split("\\,");
-						List<Integer> ids = new ArrayList<>();
-						for (int i = 0; i < tagsarray.length; i++) {
-							ids.add(Integer.parseInt(tagsarray[i]));
-						}
-						List<String> tags = pmsTeamFacade.getTags(ids);
-						if (ValidateUtil.isValid(tags)) {
-							pmsTeam.setBusiness(JsonUtil.toJson(tags));
-						}
-					} catch (NumberFormatException e) {
-						e.printStackTrace();
-					} catch (Exception e) {
-						e.printStackTrace();
-					}
+					pmsTeam.setBusiness(JsonUtil.toJson(strtags.split(",")));
 				} else {
 					logger.error("provider business is null ...");
 				}

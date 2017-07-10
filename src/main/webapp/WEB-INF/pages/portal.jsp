@@ -221,10 +221,10 @@
 			             <div class="type">广告片</div>
 			          </div>
 		          </a>
-		           <a href="/search?q=&industry=病毒视频">
+		           <a href="/search?q=&industry=MG动画">
 			          <div class="conItem">
 			             <img class="lazyload" data-src="/resources/images/index/spread.png">
-			             <div class="type">病毒视频</div>
+			             <div class="type">MG动画</div>
 			          </div>
 		          </a>
 	      </div>
