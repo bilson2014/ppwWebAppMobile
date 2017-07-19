@@ -27,6 +27,9 @@ import com.paipianwang.pat.common.entity.SessionInfo;
 import com.paipianwang.pat.common.util.ValidateUtil;
 import com.paipianwang.pat.common.web.domain.ResourceToken;
 import com.paipianwang.pat.facade.employee.entity.PmsJob;
+import com.paipianwang.pat.facade.employee.entity.PmsStaff;
+import com.paipianwang.pat.facade.employee.service.PmsJobFacade;
+import com.paipianwang.pat.facade.employee.service.PmsStaffFacade;
 import com.paipianwang.pat.facade.information.entity.PmsNews;
 import com.paipianwang.pat.facade.information.entity.PmsProductSolr;
 import com.paipianwang.pat.facade.information.service.PmsNewsFacade;
@@ -36,8 +39,6 @@ import com.paipianwang.pat.facade.team.entity.PmsTeam;
 import com.paipianwang.pat.facade.team.service.PmsTeamFacade;
 import com.paipianwang.pat.facade.user.entity.PmsUser;
 import com.panfeng.web.wearable.domain.BaseMsg;
-import com.panfeng.web.wearable.resource.model.Staff;
-import com.panfeng.web.wearable.resource.view.ProductView;
 import com.panfeng.web.wearable.resource.view.SolrView;
 import com.panfeng.web.wearable.service.SolrService;
 import com.panfeng.web.wearable.util.HttpUtil;
@@ -66,6 +67,12 @@ public class PCController extends BaseController {
 
 	@Autowired
 	final PmsNewsFacade pmsNewsFacade = null;
+	
+	@Autowired
+	final PmsJobFacade pmsJobFacade = null;
+	
+	@Autowired
+	final PmsStaffFacade pmsStaffFacade = null;
 
 	@RequestMapping("/")
 	public ModelAndView portalView(final String target, final ModelMap model, HttpServletRequest request) {
@@ -107,27 +114,6 @@ public class PCController extends BaseController {
 
 		serLogger.info("PCController Redirect Activity order page,product_id:" + productId);
 		return new ModelAndView("order", model);
-	}
-
-	/**
-	 * 加载 视频列表
-	 * 
-	 * @param view
-	 *            条件
-	 * @return List<PmsProduct> 产品列表
-	 */
-	@RequestMapping(value = "/product/listWithCondition", method = RequestMethod.POST, produces = "application/json; charset=UTF-8")
-	public List<PmsProduct> list(@RequestBody final ProductView view, final HttpServletRequest request) {
-
-		List<PmsProduct> list = new ArrayList<PmsProduct>();
-		final String url = PublicConfig.URL_PREFIX + "portal/product/static/listWithCondition";
-		String str = HttpUtil.httpPost(url, view, request);
-		if (str != null && !"".equals(str)) {
-			list = JsonUtil.toList(str);
-		}
-
-		serLogger.info("List With Condition,productType:" + view.getProductType());
-		return list;
 	}
 
 	/**
@@ -245,22 +231,13 @@ public class PCController extends BaseController {
 	@RequestMapping("/member.html")
 	public ModelAndView introduceView(final HttpServletRequest request, final ModelMap model) throws Exception {
 
-		// 查询所有人信息
-		final String url = PublicConfig.URL_PREFIX + "portal/staff/static/list";
-		final String json = HttpUtil.httpGet(url, request);
-		List<Staff> list = new ArrayList<Staff>();
-		if (ValidateUtil.isValid(json)) {
-			list = JsonUtil.fromJsonArray(json, Staff.class);
-			model.addAttribute("list", list);
-		}
+		// 查询公司人员信息
+		List<PmsStaff> list = pmsStaffFacade.getAll();
+		model.addAttribute("list", list);
 
-		List<PmsJob> jobList = new ArrayList<PmsJob>();
-		final String jobUrl = PublicConfig.URL_PREFIX + "portal/job/static/list";
-		final String str = HttpUtil.httpGet(jobUrl, request);
-		if (ValidateUtil.isValid(str)) {
-			jobList = JsonUtil.fromJsonArray(str, PmsJob.class);
-			model.addAttribute("jobList", jobList);
-		}
+		final List<PmsJob> jobList = pmsJobFacade.getAll();
+		model.addAttribute("jobList", jobList);
+		
 		SessionInfo sessionInfo = getCurrentInfo(request);
 		model.put("sessionInfo", sessionInfo);
 		return new ModelAndView("/member");

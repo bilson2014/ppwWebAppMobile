@@ -21,7 +21,6 @@ import org.springframework.web.servlet.ModelAndView;
 import com.paipianwang.pat.common.config.PublicConfig;
 import com.paipianwang.pat.common.constant.PmsConstant;
 import com.paipianwang.pat.common.util.DateUtils;
-import com.paipianwang.pat.common.util.ValidateUtil;
 import com.paipianwang.pat.facade.indent.entity.PmsIndent;
 import com.paipianwang.pat.facade.indent.service.PmsIndentFacade;
 import com.paipianwang.pat.facade.product.entity.PmsProduct;
@@ -34,7 +33,6 @@ import com.paipianwang.pat.facade.team.entity.PmsTeam;
 import com.paipianwang.pat.facade.team.service.PmsTeamFacade;
 import com.panfeng.web.wearable.mq.service.SmsMQService;
 import com.panfeng.web.wearable.security.AESUtil;
-import com.panfeng.web.wearable.util.HttpUtil;
 import com.panfeng.web.wearable.util.IndentUtil;
 import com.panfeng.web.wearable.util.JsonUtil;
 
@@ -229,19 +227,8 @@ public class SalesmanController extends BaseController {
 	@RequestMapping("/salesman/load/product")
 	public List<PmsProduct> loadSalesProduct(final HttpServletRequest request) {
 
-		final String url = PublicConfig.URL_PREFIX + "portal/product/static/data/salesproduct";
-		final String json = HttpUtil.httpGet(url, request);
-		if (ValidateUtil.isValid(json)) {
-			try {
-				final List<PmsProduct> list = JsonUtil.fromJsonArray(json, PmsProduct.class);
-				return list;
-			} catch (Exception e) {
-				logger.error("Load PmsSalesman product error ...");
-				e.printStackTrace();
-			}
-		}
-
-		return null;
+		final List<PmsProduct> list = pmsProductFacade.loadSalesProduct();
+		return list;
 	}
 
 	/**

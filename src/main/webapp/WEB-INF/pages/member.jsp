@@ -67,7 +67,6 @@ html {
 							<img class="infoHead lazyload" width="79" height="79"
 								alt="${staff.staffName}_拍片网"
 								src="/resources/images/icons/lazyloading2.png"
-								<%-- data-original="<spring:url value='/staff/img${staff.staffImageUrl }'/>"> --%>
 								data-src="${file_locate_storage_path}${staff.staffImageUrl }">
 						</div>
 						<ul class="contentWord${status.index}">

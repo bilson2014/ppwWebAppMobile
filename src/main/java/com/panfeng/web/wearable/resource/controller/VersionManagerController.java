@@ -51,7 +51,6 @@ import com.panfeng.web.wearable.resource.model.IndentComment;
 import com.panfeng.web.wearable.resource.model.IndentFlow;
 import com.panfeng.web.wearable.resource.model.IndentProject;
 import com.panfeng.web.wearable.resource.model.IndentResource;
-import com.panfeng.web.wearable.resource.model.Staff;
 import com.panfeng.web.wearable.resource.model.Wechat;
 import com.panfeng.web.wearable.security.AESUtil;
 import com.panfeng.web.wearable.service.EmployeeThirdLogin;
@@ -84,7 +83,7 @@ public class VersionManagerController extends BaseController {
 	
 	@Autowired
 	private EmployeeThirdLogin employeeThirdLogin = null;
-
+	
 	static String UNIQUE = "unique_e";
 	static String LINKMAN = "username_e";
 
@@ -267,58 +266,6 @@ public class VersionManagerController extends BaseController {
 		return false;
 	}
 
-//	@RequestMapping("/recover/pwd")
-//	public Info recover(final HttpServletRequest request, @RequestBody final PmsEmployee e) throws Exception {
-//
-//		final HttpSession session = request.getSession();
-//		// 密码重置
-//		final String code = (String) session.getAttribute("code");
-//		// 是否是测试程序
-//		boolean isTest = com.panfeng.film.util.Constants.AUTO_TEST.equals("yes") ? true : false;
-//		Info info = new Info(); // 信息载体
-//		// 判断验证码
-//		if (!"".equals(code) && code != null) {
-//			if (isTest || code.equals(e.getVerification_code())) {
-//				if (e.getEmployeePassword() != null && !"".equals(e.getEmployeePassword())) {
-//					// AES 密码解密
-//					final String password = AESUtil.Decrypt(e.getEmployeePassword(), PublicConfig.UNIQUE_KEY);
-//					// MD5 加密
-//					e.setEmployeePassword(DataUtil.md5(password));
-//					final String url = PublicConfig.URL_PREFIX + "portal/manager/static/editPwd";
-//					String str = HttpUtil.httpPost(url, e, request);
-//					Boolean result = null;
-//					if (str != null && !"".equals(str)) {
-//						result = JsonUtil.toBean(str, Boolean.class);
-//						// 添加 session
-//						session.removeAttribute("code"); // 移除验证码
-//						info.setKey(result);
-//						return info;
-//					} else {
-//						// 注册失败
-//						info.setKey(false);
-//						info.setValue("服务器繁忙，请稍候再试...");
-//						return info;
-//					}
-//
-//				} else {
-//					// 验证码不匹配
-//					info.setKey(false);
-//					info.setValue("密码为空!");
-//					return info;
-//				}
-//			} else {
-//				// 验证码不匹配
-//				info.setKey(false);
-//				info.setValue("短信验证码不正确!");
-//				return info;
-//			}
-//		} else {
-//			// 验证码为空
-//			info.setKey(false);
-//			info.setValue("点击获取验证码!");
-//			return info;
-//		}
-//	}
 	// ////////////////////////////////////project/////////////////////////////////////////////////////////////
 
 	@RequestMapping(value = "/projects/save", method = RequestMethod.POST, produces = "application/json; charset=UTF-8")
@@ -363,27 +310,11 @@ public class VersionManagerController extends BaseController {
 		return new ArrayList<>();
 	}
 
-	@RequestMapping(value = "/projects/get/reffers", method = RequestMethod.POST, produces = "application/json; charset=UTF-8")
-	public List<IndentProject> getReffers(@RequestBody BizBean bizBean, final HttpServletRequest request) {
-		// fill userinfo
-		// fillUserInfo(request, indentProject);
-
-		final String url = PublicConfig.URL_PREFIX + "portal/getEmployeeListByReffer";
-		String str = HttpUtil.httpPost(url, bizBean, request);
-		// PmsUser information = null;
-		if (str != null && !"".equals(str)) {
-			return JsonUtil.toList(str);
-		}
-
-		return new ArrayList<>();
-	}
-
 	@RequestMapping(value = "/projects/search/employee/list", method = RequestMethod.POST, produces = "application/json; charset=UTF-8")
 	public List<PmsEmployee> searchEmployee(@RequestBody BizBean bizBean, final HttpServletRequest request) {
 		// fill userinfo
 		final String url = PublicConfig.URL_PREFIX + "portal/search/employee/list";
 		String str = HttpUtil.httpPost(url, bizBean, request);
-		// PmsUser information = null;
 		if (str != null && !"".equals(str)) {
 			return JsonUtil.toList(str);
 		}
@@ -544,16 +475,6 @@ public class VersionManagerController extends BaseController {
 		return new ArrayList<>();
 	}
 
-	@RequestMapping("/projects/staff/static/list")
-	public List<Staff> getStaffList(final HttpServletRequest request) {
-		final String url = PublicConfig.URL_PREFIX + "/portal/staff/static/list";
-		String str = HttpUtil.httpGet(url, request);
-		if (str != null && !"".equals(str)) {
-			return JsonUtil.toList(str);
-		}
-		return new ArrayList<>();
-	}
-	
 	/**
 	 * 跳转项目信息页面
 	 * @param model
