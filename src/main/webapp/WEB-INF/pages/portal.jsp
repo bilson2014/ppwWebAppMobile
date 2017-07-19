@@ -270,14 +270,7 @@
 	<div class="thirdContent">
 	        <div class="ourCusTitle">导演工作室</div>
 		    <div class="ourCus"></div>
-	       <a href="/proRegister">
-	    		<div class="join">
-                                                      加入我们
-                </div>
-           </a>
-	               
 		     <div class="ourCusTitle">我们的客户</div>
-		     
 		     <div class="showLogo">
 		          <img class="lazyload" data-src="/resources/images/index/logo1.png">
 		          <img class="lazyload" data-src="/resources/images/index/logo2.png">
