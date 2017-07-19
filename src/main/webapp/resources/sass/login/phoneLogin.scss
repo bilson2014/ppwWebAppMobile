@@ -68,9 +68,10 @@ body {
 }
 
 .loginItem {
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
     background: transparent;
     text-align: center;
+    margin-top: 3rem;
     div:nth-child(1) {
         color: #e3e3e3;
         font-size: $size46;
@@ -97,6 +98,7 @@ body {
     text-align: center;
     font-size: $size36;
     color: white;
+    margin-bottom: 0.1rem;
     span {
         color: $red-base;
     }

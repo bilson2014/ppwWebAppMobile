@@ -177,11 +177,6 @@
 			<div class="infoTitle" id="description">来自全球56个城市,1562名导演已经加入</div>
 			<div class="infoTitle" id="description">汇聚世界作品100000+</div>
 			<div class="infoTitle" id="description">2000+客户在这里发布拍片需求</div>
-			<div id="btn">
-				<a href="/proRegister">
-					<div class="checkBtn">加入我们</div>
-				</a>
-			</div>
 		</div>
 		<jsp:include flush="true" page="../foot.jsp"></jsp:include>
 
