@@ -88,7 +88,7 @@
 			              </div>
 			              <!-- <a href="/repwd" class="forgetPw"><div>忘记了密码?</div></a> -->
 			              <div class="loginIng" id="submitBtn-user">用户登录</div>
-			               <a href="/regSele"><div class="noLogin">还没有账号? 请<span>注册</span></div></a>
+			               <a href="/register"><div class="noLogin">还没有账号? 请<span>注册</span></div></a>
 	              </div>
 	              
 	               <div class="loginPhone active" id="useLoginDiv">
