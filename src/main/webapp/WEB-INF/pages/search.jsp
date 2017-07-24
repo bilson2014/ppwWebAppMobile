@@ -50,12 +50,10 @@
 	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
 <!-- iphone 手机默认全屏 -->
 <meta name="apple-mobile-web-app-capable" content="yes" />
-<meta name="keywords"
-	content="宣传片,广告片,微电影,病毒视频,MG动画,宣传片,产品宣传片,企业宣传片,创意广告片,企业微电影,产品微电影,病毒视频">
-<meta name="description"
-	content="拍片网平台汇聚了入驻导演原创精品宣传片视频案例，免费创意策划，价格透明，不满意全额退款">
+<meta name="keywords"	content="${keywords}">
+<meta name="description" content="${description}">
 
-<title>企业产品宣传片_tvc广告片_企业微电影视频案例-拍片网</title>
+<title>${title}</title>
 
 
 <link rel="shortcut icon" href="${imgPath }/favicon.ico">
