@@ -44,13 +44,17 @@
 </head>
 <script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
 <body>
-     <r:identity role="provider">
-	    <input type="hidden" id="rolephone" value="1314520ppw" />              
+	 
+	 <r:identity role="provider">
+	    <input type="hidden" id="rolephone" value="1314520ppw" />
+	    <input type="hidden" id="role" value="供应商" />              
 	 </r:identity>
 	 <r:identity role="customer">
 	    <input type="hidden" id="rolephone" value="1314520ppw" />
+	    
 	 </r:identity>
 	 <r:identity role="employee">
+	    <input type="hidden" id="role" value="管家" />
 	    <input type="hidden" id="rolephone" value="1314520ppw" />
 	    <input type="hidden" id="rolephoneImg" value="1314520ppw" />
 	 </r:identity>
@@ -82,15 +86,14 @@
 	</div>
 
 	<jsp:include flush="true" page="menu.jsp"></jsp:include>
+	 <jsp:include flush="true" page="modelTool.jsp"></jsp:include> 
 
 	<div class="model" id="orderSuccess">
 		<div class="success">
 			<img src="${imgPath}/index/success.png">
 			<div id="showStatues">恭喜您下单成功</div>
 			<div>视频管家将会在两个小时内与您沟通</div>
-			<div>
-				<a href="/">返回首页</a>
-			</div>
+			<div><a href="/">返回首页</a></div>
 			<div id="checkSuccess">确认</div>
 		</div>
 	</div>

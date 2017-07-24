@@ -8,7 +8,10 @@
 @import "compass/typography/text/ellipsis";
 body {
     overflow: hidden;
-    background: $gray-dark;
+    
+}
+.pagePhone{
+    background: $gray-dark !important;
 }
 
 .videoShow {

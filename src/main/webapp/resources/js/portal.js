@@ -297,14 +297,13 @@ var curCounts = 0; // 当前剩余秒数 - 注册
 var InterValObj; // timer变量，控制时间 - 注册
 function subPaipian(){
 	
-	var loginTel = $('#rolephone').val();
 	
-	if(loginTel!=null && loginTel!= "" ){
-		loginOrder();
+	var role = $('#role').val();
+	if(role!=null && role!= "" ){
+			loginOrder();
 	}else{
 		noLoginOrder();
 	}
-	
 	$('#getPhoneCode').off("click").on('click',function(){
 		$('#error').hide();
 		$('#codeError').hide();
@@ -330,35 +329,43 @@ function subPaipian(){
 function loginOrder(){
 	
 	$('#subPaipian').off("click").on("click",function(){	
-	
-	loadData2(function(msg){
-		if(msg.ret){
-			$('.comOrder').hide();
-			$('#orderSuccess').show().addClass('moedlActive');
-			$('#error').hide();
-			$('#codeError').hide();
-			$('#showStatues').text('恭喜您下单成功');
+		var role = $('#role').val();
+		if(role !="" && role !="客户"){
+		var setInfo = "您现在以"+role+"身份登陆，不能下单，请退出登陆后重新下单，或联系我们400-660-9728"
+		$('#showInfo').show();
+		$('#setInfo').text(setInfo);	
+		}else{
+			loadData2(function(msg){
+				if(msg.ret){
+					$('.comOrder').hide();
+					$('#orderSuccess').show().addClass('moedlActive');
+					$('#error').hide();
+					$('#codeError').hide();
+					$('#showStatues').text('恭喜您下单成功');
+				}
+				else{
+					$('.comOrder').hide();
+					$('#orderSuccess').show().addClass('moedlActive');
+					$('#error').hide();
+					$('#codeError').hide();
+					$('#showStatues').text('服务器异常请之后再试');
+				}
+				flag = true;
+			}, getContextPath() + '/order/deliver', 
+				{	
+				csrftoken:$("#csrftoken").val(),
+				indent_tele:'',
+				indent_recomment:$("#submit-indent-recomment").text(),
+				indentName:'网站-移动-首页banner',
+				productId:-1,
+				teamId:-1,
+				serviceId:-1,
+				phoneCode : '',
+				indentSource : 1
+			});	
 		}
-		else{
-			$('.comOrder').hide();
-			$('#orderSuccess').show().addClass('moedlActive');
-			$('#error').hide();
-			$('#codeError').hide();
-			$('#showStatues').text('服务器异常请之后再试');
-		}
-		flag = true;
-	}, getContextPath() + '/order/deliver', 
-		{	
-		csrftoken:$("#csrftoken").val(),
-		indent_tele:'',
-		indent_recomment:$("#submit-indent-recomment").text(),
-		indentName:'网站-移动-首页banner',
-		productId:-1,
-		teamId:-1,
-		serviceId:-1,
-		phoneCode : '',
-		indentSource : 1
-	});	
+		
+
 	});
 }
 

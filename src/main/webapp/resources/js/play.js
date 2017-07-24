@@ -197,6 +197,15 @@ function submitOrder(){
 }
 
 function loginOrder(){
+	
+	
+	var role = $('#role').val();
+	if(role !="" && role !="客户"){
+	var setInfo = "您现在以"+role+"身份登陆，不能下单，请退出登陆后重新下单，或联系我们400-660-9728"
+	$('#showInfo').show();
+	$('#setInfo').text(setInfo);	
+	}else{
+	
 		loadData2(function(msg){
 			if(msg.ret){
 				//showSuccess();
@@ -219,6 +228,7 @@ function loginOrder(){
 			indent_tele : $('#rolephone').val(),
 			indentSource : 1
 			});
+	}
 	
 }
 
