@@ -59,7 +59,7 @@
 	                    <a href="/login"><img src="${imgPath}/login/cus.png"></a>
 	              </div>
 	              <a href="/register"><div class="toLogin">还没有账号? 请<span>注册</span></div></a>
-	              <div class="toLogin">导演登录/注册请移至PC端</div>
+	              <div class="toLogin">创作团队登录/注册请移至PC端</div>
 	              <a href="/mgr/login"><div class="proLogin">内部员工登录</div></a>
 	         </div>
 	  </div>
