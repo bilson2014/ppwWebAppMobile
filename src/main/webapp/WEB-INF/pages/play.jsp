@@ -47,14 +47,14 @@
 	 
 	 <r:identity role="provider">
 	    <input type="hidden" id="rolephone" value="1314520ppw" />
-	    <input type="hidden" id="role" value="供应商" />              
+	    <input type="hidden" id="role" value="创作团队" />              
 	 </r:identity>
 	 <r:identity role="customer">
 	    <input type="hidden" id="rolephone" value="1314520ppw" />
-	    
+	    <input type="hidden" id="role" value="客户" />         
 	 </r:identity>
 	 <r:identity role="employee">
-	    <input type="hidden" id="role" value="管家" />
+	    <input type="hidden" id="role" value="内部员工" />
 	    <input type="hidden" id="rolephone" value="1314520ppw" />
 	    <input type="hidden" id="rolephoneImg" value="1314520ppw" />
 	 </r:identity>
@@ -74,10 +74,7 @@
 	<input type="hidden" id="second" value="${product.mcoms }" />
 	<input type="hidden" id="tags" value="${product.tags }">
 	<input type="hidden" id="csrftoken" name="csrftoken" value="${csrftoken}" />
-    <r:identity role="employee">
-	    <input type="hidden" id="rolephone" value="1314520ppw" />
-	    <input type="hidden" id="rolephoneImg" value="1314520ppw" />
-	 </r:identity>
+
 
 	<div class="phoneHeader">
 		<a id="openMenu"><img src="${imgPath }/index/toMenu.png"></a> 
