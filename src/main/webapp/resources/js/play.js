@@ -228,7 +228,7 @@ function loginOrder(){
 			csrftoken : $('#csrftoken').val(),
 			indent_tele : $('#rolephone').val(),
 			indent_recomment:'样片名称:'+$("#videoName").val()+',价格:'+$("#originalPrice").val(),
-			indentSource : 1
+			indentSource : 18
 			});
 	}
 	
@@ -259,7 +259,7 @@ function noLoginOrder(){
 			phoneCode : $('#verificationCodeValue').val(),
 			indent_recomment:'样片名称:'+$("#videoName").val()+',价格:'+$("#originalPrice").val(),
 			indent_tele : telephone,
-			indentSource : 1
+			indentSource : 18
 			});
 	}
 }
