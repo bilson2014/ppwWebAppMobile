@@ -740,7 +740,7 @@ body {
                     margin-bottom: 10px;
                     .noteArea {
                         width: 100%;
-                        height: 50px;
+                        min-height: 50px;
                         margin-top: 10px;
                         div {
                             display: inline-block;
@@ -758,6 +758,7 @@ body {
                             vertical-align: top;
                             margin-left: 5px;
                             margin-top: 2px;
+                            width: 75%;
                         }
                         li {
                             line-height: 20px;
@@ -769,17 +770,16 @@ body {
                         li:nth-child(2) {
                             font-size: $font-size-base;
                             color: $gray;
-                            width: 100px;
-                            @media screen and (max-width: 360px) {
-                                width: 100px;
-                            }
-                            @media screen and (min-width: 360px) and (max-width: 390px) {
-                                width: 120px;
-                            }
-                            @media screen and (min-width: 390px) and (max-width: 460px) {
-                                width: 140px;
-                            }
-                            @include ellipsis;
+                            // width: 100px;
+                            // @media screen and (max-width: 360px) {
+                            //     width: 100px;
+                            // }
+                            // @media screen and (min-width: 360px) and (max-width: 390px) {
+                            //     width: 120px;
+                            // }
+                            // @media screen and (min-width: 390px) and (max-width: 460px) {
+                            //     width: 140px;
+                            // }
                         }
                     }
                 }
@@ -787,6 +787,7 @@ body {
         }
     }
 }
+
 
 .deg0 {
     background-image: linear-gradient(left, red 10%, transparent 10%);
