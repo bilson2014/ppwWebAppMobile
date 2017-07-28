@@ -25,7 +25,9 @@
 <body>
       
 	<div class="modelTool" id="showInfo">
+	        
 	         <div class="success">
+	            <img src="${imgPath}/orderManager/waring.png">
 	            <div id="setInfo">恭喜您下单成功</div>
 	            <div id="closeInfo">确认</div>
 	         </div>

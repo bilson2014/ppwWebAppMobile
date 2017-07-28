@@ -263,8 +263,6 @@ function noLoginOrder(){
 	}
 }
 
-
-
 function checkData(type){
 	var telephone = $('#phoneNumber').val().trim();
 	var verificationCodeValue =	$("#verificationCodeValue").val().trim();

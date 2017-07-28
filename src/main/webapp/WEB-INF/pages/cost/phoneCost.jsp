@@ -152,6 +152,9 @@
 	                     <r:identity role="provider">
 	                     <img class="slideBgLogin6" src="${imgPath}/cost/gPhone6.png">
 	                     </r:identity>
+	                     <r:identity role="employee">
+	                     <img class="slideBgLogin6" src="${imgPath}/cost/gPhone6.png">
+	                     </r:identity>
 	                     <r:noLogin>
 		                  <img class="slideBg6" src="${imgPath}/cost/gPhone6.png">
 			                  <div class="item">
