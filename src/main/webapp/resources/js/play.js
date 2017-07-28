@@ -201,7 +201,7 @@ function loginOrder(){
 	var role = $('#role').val();
 	if(role !="" && role !="客户"){
 		var setInfo = "您现在登陆角色是" + role
-		+ "</br>请退出登陆后重新下单，或联系我们400-660-9728"
+		+ "</br>请退出登陆后重新下单，或联系我们</br>400-660-9728"
 	$('#showInfo').show();
 	$('#setInfo').html(setInfo);	
 
