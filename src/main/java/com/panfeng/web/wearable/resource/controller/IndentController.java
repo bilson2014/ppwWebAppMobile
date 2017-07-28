@@ -28,6 +28,7 @@ import com.paipianwang.pat.common.util.DateUtils;
 import com.paipianwang.pat.common.util.JsonUtil;
 import com.paipianwang.pat.common.util.ValidateUtil;
 import com.paipianwang.pat.common.web.security.AESUtil;
+import com.paipianwang.pat.facade.indent.entity.IndentSource;
 import com.paipianwang.pat.facade.indent.entity.PmsIndent;
 import com.paipianwang.pat.facade.indent.service.PmsIndentFacade;
 import com.paipianwang.pat.facade.product.entity.PmsProduct;
@@ -188,8 +189,10 @@ public class IndentController extends BaseController {
 				if (indent.getIndentName().indexOf("banner") > -1) {
 					// 首页banner下单
 					indentName += "-直接下单";
-				} else if (indent.getIndentName().indexOf("首页-移动") > -1) {
+					indent.setIndentSource(IndentSource.wechat_direct.getValue());
+				} else if (indent.getIndentName().indexOf("网站-移动") > -1) {
 					indentName += productName;
+					indent.setIndentSource(IndentSource.wechat_product.getValue());
 				}
 				indent.setIndentName(indentName);
 			}

@@ -16,6 +16,7 @@ import com.paipianwang.pat.common.config.PublicConfig;
 import com.paipianwang.pat.common.constant.PmsConstant;
 import com.paipianwang.pat.common.entity.SessionInfo;
 import com.paipianwang.pat.common.util.DateUtils;
+import com.paipianwang.pat.facade.indent.entity.IndentSource;
 import com.paipianwang.pat.facade.indent.entity.PmsIndent;
 import com.paipianwang.pat.facade.indent.service.PmsIndentFacade;
 import com.panfeng.web.wearable.mq.service.SmsMQService;
@@ -82,12 +83,14 @@ public class CostCalculateController extends BaseController {
 			indent.setIndent_tele(telephone == null ? calculate.getPhone() : telephone);
 			String sessionType = info.getSessionType();
 			String indent_recomment = indent.getIndent_recomment();
+			//供应商和内部员工不新建订单
 			switch (sessionType) {
 			case PmsConstant.ROLE_PROVIDER:
 				indent_recomment = "供应商  " + indent_recomment;
-				break;
+				return map;
 			case PmsConstant.ROLE_EMPLOYEE:
 				indent_recomment = "内部员工   "+ indent_recomment;
+				return map;
 			}
 			indent.setIndent_recomment(indent_recomment);
 		}
@@ -113,6 +116,7 @@ public class CostCalculateController extends BaseController {
 			// 流量来自媒体
 			indentName = "新媒体-" + source_channels + "-成本计算器";
 			indent.setIndentName(indentName);
+			indent.setIndentSource(IndentSource.wechat_cost.getValue());
 		}
 		
 		long indentId = 0;

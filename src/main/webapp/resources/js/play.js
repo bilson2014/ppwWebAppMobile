@@ -198,13 +198,13 @@ function submitOrder(){
 
 function loginOrder(){
 	
-	
 	var role = $('#role').val();
 	if(role !="" && role !="客户"){
 		var setInfo = "您现在登陆角色是" + role
 		+ "</br>请退出登陆后重新下单，或联系我们400-660-9728"
 	$('#showInfo').show();
 	$('#setInfo').html(setInfo);	
+
 	}else{
 	
 		loadData2(function(msg){
@@ -227,6 +227,7 @@ function loginOrder(){
 			serviceId : $('#serviceId').val(),
 			csrftoken : $('#csrftoken').val(),
 			indent_tele : $('#rolephone').val(),
+			indent_recomment:'样片名称:'+$("#videoName").val()+',价格:'+$("#originalPrice").val(),
 			indentSource : 18
 			});
 	}
