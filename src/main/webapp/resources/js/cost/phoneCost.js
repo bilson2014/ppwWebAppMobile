@@ -68,7 +68,7 @@ function loginOrder(){
 			description : description,
 			verification_code:'',
 			indentName : '网站-移动-成本计算器',
-			indentSource : 1
+			indentSource : 17
 		}));
 	}else{
 		loadData(function(result) {
@@ -95,7 +95,7 @@ function loginOrder(){
 			indentId : indentId,
 			description : description,
 			verification_code:'',
-			indentSource : 1
+			indentSource : 17
 		}));
 	}
 	
@@ -161,7 +161,7 @@ function noLoginOrder(){
 					indentId : indentId,
 					description : description,
 					verification_code:verification_code,
-					indentSource : 1
+					indentSource : 17
 				}));
 			}else{
 				loadData(function(result) {
@@ -188,7 +188,7 @@ function noLoginOrder(){
 					indentId : indentId,
 					description : description,
 					verification_code:verification_code,
-					indentSource : 1
+					indentSource : 17
 				}));
 			}
 		}

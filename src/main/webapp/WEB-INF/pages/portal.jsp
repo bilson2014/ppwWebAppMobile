@@ -55,17 +55,27 @@
 </head>
 <body>
 
-     <r:identity role="provider">
-	    <input type="hidden" id="rolephone" value="1314520ppw" />              
+
+	 
+	 <r:identity role="provider">
+	    <input type="hidden" id="rolephone" value="1314520ppw" />
+	    <input type="hidden" id="role" value="创作团队" />   
+	    <input type="hidden" id="roletype" value="provider">            
 	 </r:identity>
 	 <r:identity role="customer">
 	    <input type="hidden" id="rolephone" value="1314520ppw" />
+	    <input type="hidden" id="role" value="客户" />     
+	    <input type="hidden" id="roletype" value="customer">    
 	 </r:identity>
 	 <r:identity role="employee">
+	    <input type="hidden" id="role" value="内部员工" />
 	    <input type="hidden" id="rolephone" value="1314520ppw" />
+	    <input type="hidden" id="rolephoneImg" value="1314520ppw" />
+	    <input type="hidden" id="roletype" value="employee">
 	 </r:identity>
 	            
 	<input type="hidden" id="storage_node" value="${file_locate_storage_path }" />
+	
 	<div class="model" id="orderSuccess">
 	         <div class="success">
 	            <img data-src="/resources/images/index/success.png" class="lazyload">
@@ -84,6 +94,7 @@
 		    </div> 
 	    </div>
 	    
+	    <jsp:include flush="true" page="modelTool.jsp"></jsp:include> 
 	    <jsp:include flush="true" page="menu.jsp"></jsp:include> 
 	    
 	 <div class="headerCom">
