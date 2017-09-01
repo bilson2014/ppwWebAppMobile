@@ -57,7 +57,7 @@
 					            <img id="icon" src="resources/images/cosmetic/icon.png">
 					      </div> 
 			          </div> 
-			          
+			       
 			         <div class="swiper-slide">
 			              <img src="resources/images/cosmetic/4t.jpg">
 			             

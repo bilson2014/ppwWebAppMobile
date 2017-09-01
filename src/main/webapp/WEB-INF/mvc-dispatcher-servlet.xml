@@ -65,7 +65,8 @@
 	<!-- test -->
 	
 	<mvc:view-controller path="/cosmetic" view-name="/salesman/cosmetic" />
-	
+	<mvc:view-controller path="/cosmetic2" view-name="/salesman/cosmetic2" />
+	<mvc:view-controller path="/employ" view-name="/salesman/employment" />
 	
 	<!-- 产品线End -->
 	<mvc:view-controller path="/repwd" view-name="/repwd" />
