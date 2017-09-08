@@ -21,10 +21,8 @@
 	var="jsonJs" />
 <spring:url value="/resources/js/common.js" var="commonJs" />
 <spring:url value="/resources/js/imgLazyLoad.js" var="imgLazyLoadingJs" />
-<spring:url value="/resources/js/provider/providerInfoLeader.js"
-	var="providerInfoLeaderJs" />
-<spring:url value="/resources/lib/jquery/waypoints.min.js"
-	var="waypoints" />
+<spring:url value="/resources/js/provider/providerInfoLeader.js" var="providerInfoLeaderJs" />
+<spring:url value="/resources/lib/jquery/waypoints.min.js" var="waypoints" />
 <spring:url value="/resources/lib/merge/iosSelect.js" var="iosSelectJs" />
 
 <!-- imgPath -->

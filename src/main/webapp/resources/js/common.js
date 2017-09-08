@@ -1,5 +1,11 @@
 var InterValObj; // timer变量，控制时间  
 var PopInterValObj, oTimer, successIntervalObj;
+//var UrlDo = "www.apaipian.com";
+var UrlDo = "localhost";
+//var UrlDo = "192.169.0.157";
+
+//var Url = "http://www.apaipian.com:8087/";
+var Url = "http://localhost:7070/";
 
 $().ready(function(){
 	windowChange(); 
@@ -58,6 +64,16 @@ $().ready(function(){
 	getDefImg();
 	initShare();
 });
+
+function getUrlDo(){
+	return UrlDo;
+}
+
+function getUrl(){
+	return Url;
+}
+
+
 function windowChange(){
 	var screenWidth = parseInt(document.body.clientWidth);
 	var fontSize = parseInt(screenWidth/1080*100);

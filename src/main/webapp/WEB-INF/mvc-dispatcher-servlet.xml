@@ -33,6 +33,8 @@
 	<mvc:view-controller path="/list" view-name="/standardized/requireList" />
 
 	<mvc:view-controller path="/testRem/rem" view-name="/testRem/rem" />
+	
+	<mvc:view-controller path="/flow" view-name="/flow/flowList" />
 
 	<mvc:view-controller path="/provider/providerInfoLeader"
 		view-name="/provider/providerInfoLeader" />
