@@ -752,6 +752,13 @@ public class ProviderController extends BaseController {
 			} else {
 				logger.error("provider business is null ...");
 			}
+			//优先使用昵称
+			if(ValidateUtil.isValid(team.getDisplayName())){
+				team.setTeamName(team.getDisplayName());
+			}
+			if(ValidateUtil.isValid(team.getDisplayImg())){
+				team.setTeamPhotoUrl(team.getDisplayImg());
+			}
 		} else {
 			logger.error("PmsTeam is null ...");
 		}
