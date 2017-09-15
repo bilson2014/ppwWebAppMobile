@@ -2,6 +2,8 @@
     <wb-module deploy-name="wearable-device-3.0-SNAPSHOT">
         <wb-resource deploy-path="/" source-path="/target/m2e-wtp/web-resources"/>
         <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
         <dependent-module archiveName="pat-common-config-1.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/pat-common-config/pat-common-config">
             <dependency-type>uses</dependency-type>
         </dependent-module>
@@ -39,6 +41,6 @@
             <dependency-type>uses</dependency-type>
         </dependent-module>
         <property name="java-output-path" value="/wearable-device/target/classes"/>
-        <property name="context-root" value="/"/>
+        <property name="context-root" value="wearable-device"/>
     </wb-module>
 </project-modules>
