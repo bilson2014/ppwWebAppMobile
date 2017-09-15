@@ -36,9 +36,9 @@
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <!-- 取消数字被识别为电话号码 -->
 <meta content="telephone=no" name="format-detection">
-<meta name="keywords" content="企业形象宣传片,宣传片制作,产品宣传片制作,北京宣传片拍摄,tvc广告片,品牌微电影,mg动画制作公司">
-<meta name="description" content="拍片网是专业的商业视频服务平台,主要为中小企业提供:企业形象宣传片,宣传片制作,产品tvc广告片拍摄,品牌微电影制作,mg动画制作等视频内容。拍片就上拍片网！">
-<title>拍片网-商业视频制作服务平台,宣传片,tvc广告,短视频制作</title>
+<meta name="keywords" content="宣传片,宣传片制作, 品牌微电影,tvc广告片,广告片拍摄, mg动画,短视频,商业视频">
+<meta name="description" content="拍片网是专业的商业视频服务平台，提供：宣传片、产品tvc广告拍摄、品牌微电影、mg动画等短视频内容制作。成本托管，免费创意策划，海量样片，价格透明。拍片就上拍片网！">
+<title>拍片网_商业视频制作平台, 宣传片,tvc广告拍摄,品牌微电影, mg动画,短视频</title>
 <script src="${jqueryJs }"></script>
 <script src="${commonJs }"></script>
 <script src="${scrollstopJs}"></script>

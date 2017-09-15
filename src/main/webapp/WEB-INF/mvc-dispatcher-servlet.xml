@@ -33,6 +33,8 @@
 	<mvc:view-controller path="/list" view-name="/standardized/requireList" />
 
 	<mvc:view-controller path="/testRem/rem" view-name="/testRem/rem" />
+	
+	<mvc:view-controller path="/flow" view-name="/flow/flowList" />
 
 	<mvc:view-controller path="/provider/providerInfoLeader"
 		view-name="/provider/providerInfoLeader" />
@@ -65,7 +67,8 @@
 	<!-- test -->
 	
 	<mvc:view-controller path="/cosmetic" view-name="/salesman/cosmetic" />
-	
+	<mvc:view-controller path="/cosmetic2" view-name="/salesman/cosmetic2" />
+	<mvc:view-controller path="/employ" view-name="/salesman/employment" />
 	
 	<!-- 产品线End -->
 	<mvc:view-controller path="/repwd" view-name="/repwd" />

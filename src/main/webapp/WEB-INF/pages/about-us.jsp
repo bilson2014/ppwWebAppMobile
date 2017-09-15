@@ -23,9 +23,9 @@
 	<meta name="apple-mobile-web-app-capable" content="yes" />
 	<!-- 取消数字被识别为电话号码 -->
 	<meta name="format-detection" content="telephone=no" />
-	<meta name="keywords" content="拍片网平台上的宣传片制作流程以及整个拍片服务流程。拍片就上拍片网！">
-	<meta name="description" content="拍片网平台简介，拍片网是一个开放、共享、透明、公正的一个视频制作服务平台，了解更多拍片网平台服务和拍片网平台愿景">
-	<title>关于我们 －拍片网</title>
+	<meta name="keywords" content="宣传片制作公司,宣传片拍摄公司,tvc广告片制作,短视频制作平台">
+	<meta name="description" content="拍片网是综合性PGC广告短视频制作服务平台，独创“制作费托管”模式，立足北京，服务全国。企业宣传片制作，产品宣传片拍摄，tvc广告片制作，一站式服务，上拍片网。">
+	<title>宣传片制作公司_tvc广告片拍摄公司_短视频制作平台-拍片网</title>
 	<link rel="shortcut icon" href="${imgPath }/favicon.ico" >
 	<link rel="stylesheet" href="${aboutCss}">
 	

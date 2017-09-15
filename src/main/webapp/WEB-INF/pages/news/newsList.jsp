@@ -31,9 +31,9 @@
 	<meta name="apple-mobile-web-app-capable" content="yes" />
 	<!-- 取消数字被识别为电话号码 -->
 	<meta name="format-detection" content="telephone=no" />
-	<meta name="keywords" content="拍片网资讯,拍片网动态">
-	<meta name="description" content="新闻资讯频道将提供拍片网的案例分享、企业动态、行业资讯等影视行业资讯。">
-	<title>新闻资讯 －拍片网</title>
+	<meta name="keywords" content="宣传片制作报价,宣传片制作成本,宣传片脚本,宣传片策划,宣传片创意">
+	<meta name="description" content="宣传片创意策划免费分享平台，正在找企业宣传片制作公司？想了解产品宣传片制作成本及报价？上拍片网，彻底解决您的烦恼！品牌商业宣传片等更多有价值的信息等你来发现。">
+	<title>宣传片制作报价_宣传片制作成本_宣传片脚本_宣传片创意策划-拍片网</title>
 	
 	<link rel="shortcut icon" href="${imgPath }/favicon.ico" >
 	<link rel="stylesheet" href="${newsListCss }">

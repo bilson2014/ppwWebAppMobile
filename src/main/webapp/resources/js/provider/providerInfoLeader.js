@@ -68,8 +68,7 @@ function initAddrSelector() {
 					twoThreeRelation : 1,
 					oneLevelId: domShengID.val(),
 				    twoLevelId: domShiID.val(),
-					callback : function(selectOneObj, selectTwoObj,
-							selectThreeObj) {
+					callback : function(selectOneObj, selectTwoObj,selectThreeObj) {
 						domSheng.val(selectOneObj.value);
 						domShengID.val(selectOneObj.id);
 						domShi.val(selectTwoObj.value);
@@ -99,7 +98,6 @@ function checkType() {
 		}
 		getBusiness();
 	});
-
 }
 
 function getBusiness() {
