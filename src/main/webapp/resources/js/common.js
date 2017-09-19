@@ -1,15 +1,20 @@
 var InterValObj; // timer变量，控制时间  
 var PopInterValObj, oTimer, successIntervalObj;
+
+//绑定域名
 //var UrlDo = "www.apaipian.com";
 //var UrlDo = "localhost";
-//var UrlDo = "192.168.0.157";
+var UrlDo = "192.168.0.157";
 
+//绑定域名流程
 //var Url = "http://www.apaipian.com:8087/";
 //var Url = "http://localhost:7070/";
-//var Url = "http://192.168.0.157:7070/";
-var Url = "test.apaipian.com";
-//var phoneUrl = 'http://192.168.0.157:8080/project/phone/';
-var phoneUrl = "test.apaipian.com:8087/project/phone/";
+var Url = "http://192.168.0.157:7070/";
+//var Url = "test.apaipian.com";
+//绑定域名流程phone
+var phoneUrl = 'http://192.168.0.157:8080/project/phone/';
+//var phoneUrl = "test.apaipian.com:8087/project/phone/";
+//var phoneUrl = "localohost:8080/project/phone/";
 
 $().ready(function(){
 	windowChange(); 

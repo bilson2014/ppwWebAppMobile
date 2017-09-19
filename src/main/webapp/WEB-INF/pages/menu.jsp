@@ -64,6 +64,12 @@
 			                       <div>我的项目</div>
 			                  </div>
 		                 </a>
+		                 <a href="/flow">
+			                  <div class="menuItem">
+			                       <img src="${imgPath}/menu/myPro.png">
+			                       <div>我的项目<span style="color:#fe5453">Beta</span></div>
+			                  </div>
+		                 </a>
 		             </r:identity>
 		             <r:identity role="customer">
 		                 <a href="/mgr/index">
@@ -72,12 +78,24 @@
 			                       <div>我的项目</div>
 			                  </div>
 		                 </a>
+		                  <a href="/flow">
+			                  <div class="menuItem">
+			                       <img src="${imgPath}/menu/myPro.png">
+			                       <div>我的项目<span style="color:#fe5453">Beta</span></div>
+			                  </div>
+		                 </a>
 		             </r:identity> 
 		             <r:identity role="employee">
 		                 <a href="/mgr/index">
 			                  <div class="menuItem">
 			                       <img src="${imgPath}/menu/myPro.png">
 			                       <div>我的项目</div>
+			                  </div>
+		                 </a>
+		                  <a href="/flow">
+			                  <div class="menuItem">
+			                       <img src="${imgPath}/menu/myPro.png">
+			                       <div>我的项目<span style="color:#fe5453">Beta</span></div>
 			                  </div>
 		                 </a>
 		             </r:identity>
