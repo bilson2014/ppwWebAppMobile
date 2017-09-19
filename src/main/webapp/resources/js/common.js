@@ -1,11 +1,15 @@
 var InterValObj; // timer变量，控制时间  
 var PopInterValObj, oTimer, successIntervalObj;
 //var UrlDo = "www.apaipian.com";
-var UrlDo = "localhost";
-//var UrlDo = "192.169.0.157";
+//var UrlDo = "localhost";
+//var UrlDo = "192.168.0.157";
 
 //var Url = "http://www.apaipian.com:8087/";
-var Url = "http://localhost:7070/";
+//var Url = "http://localhost:7070/";
+//var Url = "http://192.168.0.157:7070/";
+var Url = "test.apaipian.com";
+//var phoneUrl = 'http://192.168.0.157:8080/project/phone/';
+var phoneUrl = "test.apaipian.com:8087/project/phone/";
 
 $().ready(function(){
 	windowChange(); 
@@ -63,6 +67,7 @@ $().ready(function(){
 	getImgUrl();
 	getDefImg();
 	initShare();
+	
 });
 
 function getUrlDo(){
@@ -71,6 +76,10 @@ function getUrlDo(){
 
 function getUrl(){
 	return Url;
+}
+
+function getphoneUrl(){
+	return phoneUrl;
 }
 
 

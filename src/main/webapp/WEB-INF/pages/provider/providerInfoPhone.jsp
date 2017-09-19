@@ -19,8 +19,7 @@
 <spring:url value="/resources/lib/jquery/jquery-2.0.3.min.js"
 	var="jqueryJs" />
 <spring:url value="/resources/lib/jquery/plugins.js" var="pluginJs" />
-<spring:url value="/resources/lib/jquery.json/jquery.json-2.4.min.js"
-	var="jsonJs" />
+<spring:url value="/resources/lib/jquery.json/jquery.json-2.4.min.js" var="jsonJs" />
 <spring:url value="/resources/js/common.js" var="commonJs" />
 <spring:url value="/resources/js/imgLazyLoad.js" var="imgLazyLoadingJs" />
 <spring:url value="/resources/js/provider/providerInfoPhone.js"
@@ -122,7 +121,6 @@
 			<div class="titleDes">导演简介</div>
 			<div class="titleDesEn">Director profile</div>
 			<div class="introduceTitle"></div>
-
 			<div class="introduceLine"></div>
 		</div>
 

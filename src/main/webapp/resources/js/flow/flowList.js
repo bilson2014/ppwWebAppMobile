@@ -1,8 +1,11 @@
 var hasHeight = true;
 var scrollHeight = 0;
+//var frameUrl = 'http://localhost:8080/project/phone/';
+var frameUrl = getphoneUrl();
 $().ready(function() {	
 	document.domain = getUrlDo();
 	    setMinHieght();
+	    btnEven();
 	$(window).resize(function () {          
 		setMinHieght();
 	});
@@ -10,7 +13,6 @@ $().ready(function() {
 	  $('.pagePhone').scroll(function() {
 		  var pageScroll = $('.pagePhone').scrollTop();
 		  var isScroll = $($('.frame').prop('contentWindow').document).find('#isScroll').val();
-		  
 		  if(isScroll != null && isScroll != "" && isScroll != undefined){
 			  if(hasHeight){
 					 scrollHeight = $($('.frame').prop('contentWindow').document).find('.menuTag').offset().top;
@@ -21,11 +23,46 @@ $().ready(function() {
 		  }else{
 			  $($('.frame').prop('contentWindow').document).find('.frameHead').css('top',pageScroll);
 		  }
-		
 	  });
+	  setTimeout(function(){$('.frame').attr('src',frameUrl+"projectFlow");},800);
 });
 
 function setMinHieght(){
 	var minHeight = $(window).height(); 
 	$('.frame').css('min-height',minHeight);
+}
+
+function btnEven(){
+	
+	$('#toMission').off('click').on('click',function(){
+		initItem($(this));
+		var url =  $($('.frame').prop('contentWindow').document).find('#url').val();
+		$('.frame').attr('src',frameUrl+"todo"+url);
+	});
+	$('#toInfo').off('click').on('click',function(){
+		initItem($(this));
+		var url =  $($('.frame').prop('contentWindow').document).find('#url').val();
+		$('.frame').attr('src',frameUrl+"flowinfo"+url);
+		});
+	$('#toFlow').off('click').on('click',function(){
+		initItem($(this));
+		var url =  $($('.frame').prop('contentWindow').document).find('#url').val();
+		$('.frame').attr('src',frameUrl+"flow"+url);
+	});
+	$('#toMessage').off('click').on('click',function(){
+		initItem($(this));
+		var url =  $($('.frame').prop('contentWindow').document).find('#url').val();
+		$('.frame').attr('src',frameUrl+"message"+url);
+	});
+	$('#toFile').off('click').on('click',function(){
+		initItem($(this));
+		var url =  $($('.frame').prop('contentWindow').document).find('#url').val();
+		$('.frame').attr('src',frameUrl+"resource"+url);
+	});
+	
+}
+
+function initItem(item){
+	$('.footBot .item').removeClass('checkItem');
+	item.addClass('checkItem');
 }
