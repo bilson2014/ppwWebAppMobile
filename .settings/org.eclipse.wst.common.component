@@ -42,9 +42,7 @@
             <dependency-type>uses</dependency-type>
         </dependent-module>
 
-        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/test/java"/>
-
         <property name="java-output-path" value="/wearable-device/target/classes"/>
-        <property name="context-root" value="wearable-device"/>
+        <property name="context-root" value="/"/>
     </wb-module>
 </project-modules>
