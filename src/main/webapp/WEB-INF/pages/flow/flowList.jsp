@@ -59,23 +59,23 @@
 	</div>
 	
 	<div class="footBot">
-	         <div class="item checkItem">
+	         <div class="item" id="toMission">
 	              <div class="mission"></div>
 	              <div>任务</div>
 	         </div>
-	         <div class="item">
+	         <div class="item" id="toInfo">
 	              <div class="info"></div>
 	              <div>信息</div>
 	         </div>
-	         <div class="item">
+	         <div class="item" id="toFlow">
 	              <div class="flow"></div>
 	              <div>流程</div>
 	         </div>
-	         <div class="item">
+	         <div class="item" id="toMessage">
 	              <div class="talk"></div>
 	              <div>留言</div>
 	         </div>
-	         <div class="item">
+	         <div class="item" id="toFile">
 	              <div class="file"></div>
 	              <div>文件</div>
 	         </div>
@@ -83,7 +83,7 @@
 
 	<div class="pagePhone" style="opacity:0">
 		     <div class="productListArea">
-		               <iframe class="frame" id="content-frame" class="iframe" src="http://localhost:8080/pif"></iframe>
+		               <iframe class="frame" id="content-frame" class="iframe" src="http://localhost:8080/project/phone/projectFlow"></iframe>
 		     </div>	
 	</div>	    
 

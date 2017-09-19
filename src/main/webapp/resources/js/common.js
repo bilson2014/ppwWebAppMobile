@@ -64,6 +64,7 @@ $().ready(function(){
 	getImgUrl();
 	getDefImg();
 	initShare();
+	
 });
 
 function getUrlDo(){
@@ -72,6 +73,10 @@ function getUrlDo(){
 
 function getUrl(){
 	return Url;
+}
+
+function getphoneUrl(){
+	return phoneUrl;
 }
 
 

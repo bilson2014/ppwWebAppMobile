@@ -141,12 +141,23 @@
 				</c:forEach>
 			</c:if>
 		</div>
-		<c:if test="${product.serviceRealPrice != 0}">
-	                    	<div class="videoPrice">￥${product.serviceRealPrice}</div>
-	     </c:if>
-		 <c:if test="${product.servicePrice == 0}">
-	                    	<div class="videoPrice">￥欢迎询价</div>
-	     </c:if>
+		<r:identity role="employee">
+			<c:if test="${product.serviceRealPrice != 0}">
+		                    	<div class="videoPrice">￥${product.serviceRealPrice}</div>
+		     </c:if>
+			 <c:if test="${product.servicePrice == 0}">
+		                    	<div class="videoPrice">￥欢迎询价</div>
+		     </c:if>
+	     </r:identity>
+	     	             <r:identity role="provider">
+	                	   <div class="videoPrice">￥欢迎询价</div>
+	                	</r:identity>   
+	                	<r:identity role="provider">
+	                	   <div class="videoPrice">￥欢迎询价</div>
+	                	</r:identity>
+	                    <r:noLogin>
+	                	   <div class="videoPrice">￥欢迎询价</div>
+	                	</r:noLogin>
 
 		<!-- 影片简介 -->
 		<div class="videoInfo">影片简介 </div>
@@ -172,8 +183,7 @@
 		<div class="videoInfo">相关推荐 </div>
 		<div class="videoEn">Recommended for you</div>
         <div class="videoLines"></div>
-		<div class="anliContent" id="anliContent">
-		</div>
+		<div class="anliContent" id="anliContent"></div>
 		<a href="/search?q=*&industry=${product.tags}">
 			<div class="moreAnli">更多相关推荐</div>
 		</a>

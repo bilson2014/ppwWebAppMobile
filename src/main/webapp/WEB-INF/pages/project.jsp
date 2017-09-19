@@ -317,8 +317,7 @@ display: inline-block;
 		</div>
 	</r:multPermission>
 	<!-- webshare -->
-	<div class="-mob-share-ui-button -mob-share-open" id="share-open"
-		style="visibility: hidden;"></div>
+	<div class="-mob-share-ui-button -mob-share-open" id="share-open" style="visibility: hidden;"></div>
 	<div class="-mob-share-ui" style="display: none">
 		<ul class="-mob-share-list">
 			<li class="-mob-share-weixin share"><p>微信</p></li>
@@ -329,7 +328,6 @@ display: inline-block;
 		<div class="-mob-share-close">取消</div>
 	</div>
 	<div class="-mob-share-ui-bg"></div>
-	<script id="-mob-share"
-		src="https://f1.webshare.mob.com/code/mob-share.js?appkey=8c49c537a706"></script>
+	<script id="-mob-share" src="https://f1.webshare.mob.com/code/mob-share.js?appkey=8c49c537a706"></script>
 </body>
 </html>
