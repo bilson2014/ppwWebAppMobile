@@ -1,7 +1,7 @@
 var hasHeight = true;
 var scrollHeight = 0;
 //var frameUrl = 'http://localhost:8080/project/phone/';
-var frameUrl = getphoneUrl();
+var frameUrl = "http://"+getphoneUrl();
 $().ready(function() {	
 	document.domain = getUrlDo();
 	    setMinHieght();
@@ -24,7 +24,7 @@ $().ready(function() {
 			  $($('.frame').prop('contentWindow').document).find('.frameHead').css('top',pageScroll);
 		  }
 	  });
-	  setTimeout(function(){$('.frame').attr('src',frameUrl+"projectFlow");},800);
+	  $('.frame').attr('src',frameUrl+"projectFlow");
 });
 
 function setMinHieght(){
@@ -36,27 +36,28 @@ function btnEven(){
 	
 	$('#toMission').off('click').on('click',function(){
 		initItem($(this));
-		var url =  $($('.frame').prop('contentWindow').document).find('#url').val();
+		//var url =  $($('.frame').prop('contentWindow').document).find('#url').val();
+		var url = $(this).attr('data-content');
 		$('.frame').attr('src',frameUrl+"todo"+url);
 	});
 	$('#toInfo').off('click').on('click',function(){
 		initItem($(this));
-		var url =  $($('.frame').prop('contentWindow').document).find('#url').val();
+		var url = $(this).attr('data-content');
 		$('.frame').attr('src',frameUrl+"flowinfo"+url);
 		});
 	$('#toFlow').off('click').on('click',function(){
 		initItem($(this));
-		var url =  $($('.frame').prop('contentWindow').document).find('#url').val();
+		var url = $(this).attr('data-content');
 		$('.frame').attr('src',frameUrl+"flow"+url);
 	});
 	$('#toMessage').off('click').on('click',function(){
 		initItem($(this));
-		var url =  $($('.frame').prop('contentWindow').document).find('#url').val();
+		var url = $(this).attr('data-content');
 		$('.frame').attr('src',frameUrl+"message"+url);
 	});
 	$('#toFile').off('click').on('click',function(){
 		initItem($(this));
-		var url =  $($('.frame').prop('contentWindow').document).find('#url').val();
+		var url = $(this).attr('data-content');
 		$('.frame').attr('src',frameUrl+"resource"+url);
 	});
 	
