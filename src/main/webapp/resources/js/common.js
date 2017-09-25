@@ -15,7 +15,7 @@ var Url = "http://localhost:7070/";
 //绑定域名流程phone
 //var phoneUrl = 'http://192.168.0.157:8080/project/phone/';
 //var phoneUrl = "test.apaipian.com:8087/project/phone/";
-var phoneUrl = "localohost:7070/project/phone/";
+var phoneUrl = "http://localhost:7070/project/phone/";
 
 $().ready(function(){
 	windowChange(); 
