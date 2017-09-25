@@ -83,7 +83,7 @@
 
 	<div class="pagePhone" style="opacity:0">
 		     <div class="productListArea">
-		               <iframe class="frame" id="content-frame" class="iframe" src="http://localhost:8080/project/phone/projectFlow"></iframe>
+		             <iframe class="frame" id="content-frame" class="iframe" src=""></iframe>
 		     </div>	
 	</div>	    
 

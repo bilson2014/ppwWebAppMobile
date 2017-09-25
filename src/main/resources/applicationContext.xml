@@ -88,6 +88,6 @@
 		<constructor-arg index="4" value="${redis.password}" />
 	</bean>
 	
-	<import resource="dubbo/dubbo-consumer.xml" />
+	<import resource="dubbo/dubbo-consumer-redirect.xml" />
 	<import resource="spring-mq.xml" />
 </beans>
