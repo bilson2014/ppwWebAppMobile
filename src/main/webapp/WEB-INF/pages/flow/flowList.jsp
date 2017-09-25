@@ -83,11 +83,9 @@
 
 	<div class="pagePhone" style="opacity:0">
 		     <div class="productListArea">
-<<<<<<< HEAD
+
 		               <iframe class="frame" id="content-frame" class="iframe" src=""></iframe>
-=======
-		             <iframe class="frame" id="content-frame" class="iframe" src=""></iframe>
->>>>>>> 7779074c6ca0e4be9619d63bf5fc9cae8158d4c4
+
 		     </div>	
 	</div>	    
 
