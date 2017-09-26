@@ -5,9 +5,8 @@ var PopInterValObj, oTimer, successIntervalObj;
 //var UrlDo = "www.apaipian.com";
 var UrlDo = "localhost";
 //var UrlDo = "test.apaipian.com";
-//var UrlDo = "192.168.0.157";
+
 //绑定域名流程
-//var Url = "http://www.apaipian.com:8087/";
 
 var Url = "http://localhost:8080/";
 //var Url = "http://192.168.0.157:7070/";
@@ -16,6 +15,7 @@ var Url = "http://localhost:8080/";
 //var phoneUrl = 'http://192.168.0.157:8080/project/phone/';
 //var phoneUrl = "test.apaipian.com:7070/project/phone/";
 var phoneUrl = "localhost:8080/project/phone/";
+
 
 $().ready(function(){
 	windowChange(); 
