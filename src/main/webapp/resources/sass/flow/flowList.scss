@@ -10,10 +10,14 @@
         a {
             text-decoration: none;
         }
+        
+        .headerCom{
+            background: $gray-dark !important;
+        }
 
         body {
             overflow: hidden;
-            background: black;
+             background: $gray-dark !important;
         }
 
         .pagePhone {

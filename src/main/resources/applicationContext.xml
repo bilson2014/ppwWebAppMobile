@@ -23,14 +23,15 @@
 	<!-- 扫描service -->
 	<context:component-scan base-package="com.panfeng.web.wearable.service,
 										  com.panfeng.web.wearable.dao,
-										  com.panfeng.web.wearable.mq" />
+										  com.panfeng.web.wearable.mq,
+										  com.panfeng.web.wearable.filter" />
 
 	<!-- log here -->
-	<bean id="callMonitor" class="com.panfeng.web.wearable.util.CallMonitor" />
+	<!-- <bean id="callMonitor" class="com.panfeng.web.wearable.util.CallMonitor" />
 
 	<aop:aspectj-autoproxy>
 		<aop:include name="callMonitor" />
-	</aop:aspectj-autoproxy>
+	</aop:aspectj-autoproxy> -->
 
 	<!-- kaptcha -->
 	<bean id="captchaProducer" class="com.google.code.kaptcha.impl.DefaultKaptcha">  

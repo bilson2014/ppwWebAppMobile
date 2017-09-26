@@ -12,9 +12,9 @@ var UrlDo = "test.apaipian.com";
 var Url = "http://test.apaipian.com:7070/";
 
 //绑定域名流程phone
-//var phoneUrl = 'http://192.168.0.157:8080/project/phone/';
 var phoneUrl = "http://test.apaipian.com:7070/project/phone/";
 //var phoneUrl = "http://localhost:7070/project/phone/";
+//var phoneUrl = "http://www.apaipian.com:8070/project/phone/";
 
 $().ready(function(){
 	windowChange(); 
@@ -534,30 +534,9 @@ var share = {
 var _hmt = _hmt || [];
 (function() {
   var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?d06b1b59bcfc102e4e6c4ad89bc4f0f6";
+  hm.src = "https://hm.baidu.com/hm.js?93ab42264ae7c05828fe3f88b039b7a6";
   var s = document.getElementsByTagName("script")[0]; 
   s.parentNode.insertBefore(hm, s);
-})();
-/*var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "//hm.baidu.com/hm.js?e6cdc36f100fe051e5adec56d084b6ca";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();*/
-
-var _vds = _vds || [];
-window._vds = _vds;
-(function(){
-  _vds.push(['setAccountId', '9f2e33a3d43b5d78']);
-  (function() {
-    var vds = document.createElement('script');
-    vds.type='text/javascript';
-    vds.async = true;
-    vds.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'dn-growing.qbox.me/vds.js';
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(vds, s);
-  })();
 })();
 
 
