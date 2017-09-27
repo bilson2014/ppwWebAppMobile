@@ -3,17 +3,17 @@ var PopInterValObj, oTimer, successIntervalObj;
 
 //绑定域名
 //var UrlDo = "www.apaipian.com";
-var UrlDo = "localhost";
-//var UrlDo = "test.apaipian.com";
+//var UrlDo = "localhost";
+var UrlDo = "test.apaipian.com";
 
 //绑定域名流程
 //var Url = "http://www.apaipian.com:8087/";
-var Url = "http://localhost:7070/";
-//var Url = "http://test.apaipian.com:7070/";
+//var Url = "http://localhost:7070/";
+var Url = "http://test.apaipian.com:7070/";
 
 //绑定域名流程phone
-//var phoneUrl = "test.apaipian.com:7070/project/phone/";
-var phoneUrl = "localhost:7070/project/phone/";
+var phoneUrl = "test.apaipian.com:7070/project/phone/";
+//var phoneUrl = "localhost:7070/project/phone/";
 //var phoneUrl = "www.apaipian.com:8070/project/phone/";
 
 $().ready(function(){
@@ -531,13 +531,13 @@ var share = {
 		}
 }
 
-var _hmt = _hmt || [];
+/*var _hmt = _hmt || [];
 (function() {
   var hm = document.createElement("script");
   hm.src = "https://hm.baidu.com/hm.js?93ab42264ae7c05828fe3f88b039b7a6";
   var s = document.getElementsByTagName("script")[0]; 
   s.parentNode.insertBefore(hm, s);
-})();
+})();*/
 
 
 function menuInit(){
