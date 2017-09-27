@@ -3,18 +3,18 @@ var PopInterValObj, oTimer, successIntervalObj;
 
 //绑定域名
 //var UrlDo = "www.apaipian.com";
-//var UrlDo = "localhost";
-var UrlDo = "test.apaipian.com";
+var UrlDo = "localhost";
+//var UrlDo = "test.apaipian.com";
 
 //绑定域名流程
 //var Url = "http://www.apaipian.com:8087/";
-//var Url = "http://localhost:7070/";
-var Url = "http://test.apaipian.com:7070/";
+var Url = "http://localhost:7070/";
+//var Url = "http://test.apaipian.com:7070/";
 
 //绑定域名流程phone
-var phoneUrl = "http://test.apaipian.com:7070/project/phone/";
-//var phoneUrl = "http://localhost:7070/project/phone/";
-//var phoneUrl = "http://www.apaipian.com:8070/project/phone/";
+//var phoneUrl = "test.apaipian.com:7070/project/phone/";
+var phoneUrl = "localhost:7070/project/phone/";
+//var phoneUrl = "www.apaipian.com:8070/project/phone/";
 
 $().ready(function(){
 	windowChange(); 
