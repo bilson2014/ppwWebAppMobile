@@ -7,11 +7,21 @@ var UrlDo = "localhost";
 //var UrlDo = "test.apaipian.com";
 
 //绑定域名流程
+
+var Url = "http://localhost:8080/";
+//var Url = "http://192.168.0.157:7070/";
+//var Url = "test.apaipian.com";
+//var Url = "apaipian.com";
+//绑定域名流程phone
+//var phoneUrl = "m.apaipian.com:8087/project/phone/";
+//var phoneUrl = 'http://192.168.0.157:8080/project/phone/';
+
 //var Url = "http://apaipian.com:8087/";
 var Url = "http://localhost:7070/";
 //var Url = "http://test.apaipian.com:7070/";
 
 //绑定域名流程phone
+
 //var phoneUrl = "test.apaipian.com:7070/project/phone/";
 var phoneUrl = "localhost:7070/project/phone/";
 //var phoneUrl = "apaipian.com:8087/project/phone/";
@@ -433,10 +443,13 @@ function checkMobile(str) {
  */
 function checkEmail(str){
 	reg = /^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
-	if(str.match(reg))
-		return true; 
-	else
+	if(str.match(reg)){
+		return true;
+	}
+	else{
 		return false;
+	}
+		
 }
 
 function checkNumber(str){

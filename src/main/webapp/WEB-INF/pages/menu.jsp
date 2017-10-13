@@ -86,7 +86,7 @@
 		                 </a>
 		             </r:identity> 
 		             <r:identity role="employee">
-		                 <a href="/mgr/index">
+		                 <a href="/flow">
 			                  <div class="menuItem">
 			                       <img src="${imgPath}/menu/myPro.png">
 			                       <div>我的项目</div>

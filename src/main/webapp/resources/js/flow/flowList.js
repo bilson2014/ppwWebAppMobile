@@ -60,6 +60,13 @@ function btnEven(){
 		$('.frame').attr('src',frameUrl+"resource"+url);
 	});
 	
+	$('#toSearch').off('click').on('click',function(){
+        $('#toSearch').hide();
+		$('.frame').attr('src',frameUrl+"pfs");
+	});
+	
+	
+	
 }
 
 function initItem(item){
