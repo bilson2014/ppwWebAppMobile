@@ -23,8 +23,7 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=9,chrome=1">
-<meta name="viewport"
-	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
 <!-- iphone 手机默认全屏 -->
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <!-- 取消数字被识别为电话号码 -->
@@ -50,8 +49,8 @@
 		<a>
 		 <img id="openMenu"  class="lazyload" data-src="/resources/images/index/toMenu.png">
 		</a>
-		<a href="/list.html">  
-		 <img  class="lazyload" data-src="/resources/images/index/toSearch.png">
+		<a >  
+		 <img id="toSearch"  class="lazyload" data-src="/resources/images/index/toSearch.png">
 		</a> 
 		<a>
 		  <img class="ppwLogos lazyload" data-src="/resources/images/index/logoW.png">

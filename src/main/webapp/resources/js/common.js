@@ -2,7 +2,7 @@ var InterValObj; // timer变量，控制时间
 var PopInterValObj, oTimer, successIntervalObj;
 
 //绑定域名
-//var UrlDo = "www.apaipian.com";
+//var UrlDo = "apaipian.com";
 var UrlDo = "localhost";
 //var UrlDo = "test.apaipian.com";
 
@@ -10,7 +10,9 @@ var UrlDo = "localhost";
 var Url = "http://localhost:8080/";
 //var Url = "http://192.168.0.157:7070/";
 //var Url = "test.apaipian.com";
+//var Url = "apaipian.com";
 //绑定域名流程phone
+//var phoneUrl = "m.apaipian.com:8087/project/phone/";
 //var phoneUrl = 'http://192.168.0.157:8080/project/phone/';
 //var phoneUrl = "test.apaipian.com:7070/project/phone/";
 var phoneUrl = "localhost:8080/project/phone/";
@@ -434,10 +436,13 @@ function checkMobile(str) {
  */
 function checkEmail(str){
 	reg = /^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
-	if(str.match(reg))
-		return true; 
-	else
+	if(str.match(reg)){
+		return true;
+	}
+	else{
 		return false;
+	}
+		
 }
 
 function checkNumber(str){
