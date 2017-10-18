@@ -32,10 +32,10 @@
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <!-- 取消数字被识别为电话号码 -->
 <meta name="format-detection" content="telephone=no" />
-<meta name="keywords" content="${news.title}">
+<meta name="keywords" content="${news.seoKeywords}">
 <meta name="description"
-	content="新闻资讯频道将提供拍片网的案例分享、企业动态、行业资讯等影视行业资讯。">
-<title>${news.title}－拍片网</title>
+	content="${news.seoDescription}">
+<title>${news.seoTitle}－拍片网</title>
 
 <link rel="shortcut icon" href="${imgPath }/favicon.ico">
 <link rel="stylesheet" href="${newsInfoCss }">
