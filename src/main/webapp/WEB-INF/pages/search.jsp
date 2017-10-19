@@ -74,6 +74,11 @@
 	<input type="hidden" value="${price }" id="price" />
 	<input type="hidden" value="${total }" id="total" />
 	<input type="hidden" value="${isMore }" id="isMore" />
+	<r:identity role="employee">
+		<input type="hidden" id="rolephone" value="1314520ppw" />
+		<input type="hidden" id="rolephoneImg" value="1314520ppw" />
+	</r:identity>
+
 
 	<input type="hidden" id="storage_node"
 		value="${file_locate_storage_path }" />
@@ -157,10 +162,7 @@
 		</div>
 	</div>
 
-	<r:identity role="employee">
-		<input type="hidden" id="rolephone" value="1314520ppw" />
-		<input type="hidden" id="rolephoneImg" value="1314520ppw" />
-	</r:identity>
+
 
 	<div class="pagePhone">
 

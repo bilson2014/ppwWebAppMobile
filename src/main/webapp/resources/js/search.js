@@ -100,16 +100,19 @@ var search = {
 						$('#'+dimArr[int]).addClass('checkActive');
 				}
 			}
-			if(source == 'source=paipianwang'){
-				$('#pai').addClass('checkActive');
-			}
-			if(source == 'source=case'){
-				$('#case').addClass('checkActive');
-			}
-			if(source == 'source=team'){
-				$('#team').addClass('checkActive');
-			}
 			
+			var role = $('#rolephone').val();
+			if(role!=null && role!= "" ){
+				if(source == 'source=paipianwang'){
+					$('#pai').addClass('checkActive');
+				}
+				if(source == 'source=case'){
+					$('#case').addClass('checkActive');
+				}
+				if(source == 'source=team'){
+					$('#team').addClass('checkActive');
+				}
+			}
 			parsePrice();
 		},
         showTags : function(){
@@ -393,8 +396,11 @@ function createVideo(product){
 	    	htmlAddImg +='<img class="roleImg" src="/resources/images/video/rolePro.png">';
 		}
 	}
-	
-	var htmlAdd = '<a href="'+getContextPath()+'/provider/info/'+product.teamId+'.html"><img src="'+getDfsHostName()+product.teamPhotoUrl+'"><div>'+product.teamName+'</div></a>';
+	var headUrl = getDfsHostName()+sUrl;
+	   if(sUrl==null || sUrl== "" ){
+		   headUrl = "/resources/images/default.png";
+	   }
+	var htmlAdd = '<a href="'+getContextPath()+'/provider/info/'+product.teamId+'.html"><img src="'+headUrl+'"><div>'+product.teamName+'</div></a>';
 	if(itemFlag == 4){
 		htmlAdd ='';
 	}
