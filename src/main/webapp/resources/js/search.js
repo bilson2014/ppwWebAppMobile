@@ -78,10 +78,10 @@ var search = {
 		},
 		//回显
 		getTags : function(){
-			
 			var industry = $('#industry').val(); // 行业
-			var genre = $('#genre').val();; // 类型
-			var dim = $('#production').val();; // 维度
+			var genre = $('#genre').val(); // 类型
+			var dim = $('#production').val(); // 维度
+			var source= $('#source').val(); // 来源
 			var industryArr = industry.split(' ');
 			var genreArr = genre.split(' ');
 			var dimArr = dim.split(' ');
@@ -100,6 +100,16 @@ var search = {
 						$('#'+dimArr[int]).addClass('checkActive');
 				}
 			}
+			if(source == 'source=paipianwang'){
+				$('#pai').addClass('checkActive');
+			}
+			if(source == 'source=case'){
+				$('#case').addClass('checkActive');
+			}
+			if(source == 'source=team'){
+				$('#team').addClass('checkActive');
+			}
+			
 			parsePrice();
 		},
         showTags : function(){
@@ -130,9 +140,6 @@ var search = {
         			$('#dimensionShow').removeClass('noShow');
         		}
         	});
-        	
-        	
-        	
         	var base_business = $(".tags");
         	var currCount = $(".tags").length;
         	base_business.on('click', function() {
@@ -164,7 +171,17 @@ var search = {
          		$('.searchBoxInit').addClass('searchInit');
          		$('.pagePhone').removeClass('noTouch');
          	})
-         	
+         	//来源
+            var base_source = $(".tagsSource");
+        	var base_source_curr = $(".tagsSource").length;
+        	base_source_curr.on('click', function() {
+        		if ($(this).hasClass('checkActive')) {
+        			$(this).removeClass('checkActive');
+        		} else {
+        			$(".tagsSource").removeClass('checkActive');
+        			$(this).addClass('checkActive');
+        		}
+        	});
         },
         showTagsItem:function(){
      //类型   	
@@ -214,6 +231,7 @@ function toSearch(){
 		var dimNoShow = $('#dimensionShow').find('.checkActive');
 		var lowPrice = $('#lowPrice').val();
 		var heightPrice = $('#heightPrice').val();
+		var tagsSource = $('#tagsSource');
 		var type = '&industry=';
 		var ubs = '&genre=';
 		var price = '&price=';
@@ -221,7 +239,6 @@ function toSearch(){
 		var searchQ = '/search?q=*';
 	    for (var int = 0; int < typeShow.length; int++) {
 	    	type = type+$(typeShow[int]).text()+ ' ';
-			
 		}
 	    for (var int = 0; int < typeNoShow.length; int++) {
 			type = type+$(typeNoShow[int]).text()+ ' ';
@@ -239,7 +256,7 @@ function toSearch(){
 	    	dim = dim + $(dimNoShow[int]).text() + ' ';
 		}
 	    if(lowPrice!="" && heightPrice!=""){
-		    	price = price +"["+lowPrice+" TO "+heightPrice+"]";
+		    price = price +"["+lowPrice+" TO "+heightPrice+"]";
 	    }
 	    if(lowPrice=="" &&  heightPrice!=""){
 	    	price = price +"[*" + " TO "+heightPrice+"]";
@@ -261,8 +278,10 @@ function toSearch(){
 	    if(price !='&price='){
 	    	searchQ = searchQ+price;
 	    }
+	    if(tagsSource.length > 0){
+	    	searchQ = searchQ+tagsSource.attr('data-id');
+	    }
 	    window.location.href=getContextPath()+searchQ;
-	   	    
 	});
 }
 

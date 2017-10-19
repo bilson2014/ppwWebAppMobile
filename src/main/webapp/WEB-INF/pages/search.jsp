@@ -136,6 +136,19 @@
 						<div data-low="100000" class="tagsPrice">10万以上</div>
 					</div>
 				</div>
+				<div class="itemTags noShow" id="dimensionShow"></div>
+			</div>
+			
+			<div class="searchItem noborder">
+				<div class="typeTitle">
+					<div>来源:</div>
+				</div>
+				<div class="itemTags" id="dimensionItem"></div>
+						<div class="tagsSource" data-id="&source=paipianwang" id="pai">拍片网</div>
+						<div class="tagsSource" data-id="&source=case" id="case">案例</div>
+						<div class="tagsSource" data-id="&source=team" id="team">供应商</div>
+				</div>
+				<div class="itemTags noShow" id="dimensionShow"></div>
 			</div>
 		</div>
 		<div class="checkBtn" id="checkBtn">
