@@ -5,6 +5,7 @@ import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.apache.commons.lang.StringUtils;
 import org.apache.solr.client.solrj.SolrQuery;
 import org.apache.solr.client.solrj.SolrQuery.ORDER;
 import org.apache.solr.client.solrj.impl.HttpSolrClient;
@@ -91,6 +92,20 @@ public class SolrServiceImpl extends BaseSolrServiceImpl implements SolrService 
 			// 如果价格区间为空，则设置为全部
 			if (view.getPriceFq() != null && !"".equals(view.getPriceFq())) {
 				query.addFilterQuery("price:" + view.getPriceFq());
+			}
+
+			// 如果来源不为空，则设置为全部
+			final String source = view.getSourceFq();
+			if (StringUtils.isNotBlank(source)) {
+				if ("paipianwang".equals(source)) {
+					query.addFilterQuery("teamFlag:1");
+					query.addFilterQuery("-indentProjectId:0");
+				} else if ("case".equals(source)) {
+					query.addFilterQuery("teamFlag:4");
+				} else if ("team".equals(source)) {
+					query.addFilterQuery("teamFlag:1");
+					query.addFilterQuery("indentProjectId:0");
+				}
 			}
 
 			// 开启高亮
