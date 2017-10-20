@@ -74,6 +74,8 @@
 	<input type="hidden" value="${price }" id="price" />
 	<input type="hidden" value="${total }" id="total" />
 	<input type="hidden" value="${isMore }" id="isMore" />
+	<input type="hidden" value="${source }" id="source" />
+	
 	<r:identity role="employee">
 		<input type="hidden" id="rolephone" value="1314520ppw" />
 		<input type="hidden" id="rolephoneImg" value="1314520ppw" />
@@ -121,6 +123,8 @@
 				<div class="itemTags noShow" id="dimensionShow"></div>
 			</div>
 
+
+<r:identity role="employee">
 			<div class="searchItem noborder">
 				<div class="typeTitle">
 					<div>价格区间(元) :</div>
@@ -148,14 +152,16 @@
 				<div class="typeTitle">
 					<div>来源:</div>
 				</div>
-				<div class="itemTags" id="dimensionItem"></div>
+				<div class="itemTags" id="tagsSourceItem">
 						<div class="tagsSource" data-id="&source=paipianwang" id="pai">拍片网</div>
 						<div class="tagsSource" data-id="&source=case" id="case">案例</div>
 						<div class="tagsSource" data-id="&source=team" id="team">供应商</div>
 				</div>
 				<div class="itemTags noShow" id="dimensionShow"></div>
-			</div>
+			</div>	
+		</r:identity>		
 		</div>
+
 		<div class="checkBtn" id="checkBtn">
 			<div id="cancle">取消</div>
 			<div id="toSearch">完成</div>
