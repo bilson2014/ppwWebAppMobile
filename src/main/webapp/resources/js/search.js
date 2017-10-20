@@ -103,13 +103,13 @@ var search = {
 			
 			var role = $('#rolephone').val();
 			if(role!=null && role!= "" ){
-				if(source == 'source=paipianwang'){
+				if(source == 'paipianwang'){
 					$('#pai').addClass('checkActive');
 				}
-				if(source == 'source=case'){
+				if(source == 'case'){
 					$('#case').addClass('checkActive');
 				}
-				if(source == 'source=team'){
+				if(source == 'team'){
 					$('#team').addClass('checkActive');
 				}
 			}
@@ -177,7 +177,7 @@ var search = {
          	//来源
             var base_source = $(".tagsSource");
         	var base_source_curr = $(".tagsSource").length;
-        	base_source_curr.on('click', function() {
+        	base_source.on('click', function() {
         		if ($(this).hasClass('checkActive')) {
         			$(this).removeClass('checkActive');
         		} else {
@@ -234,7 +234,7 @@ function toSearch(){
 		var dimNoShow = $('#dimensionShow').find('.checkActive');
 		var lowPrice = $('#lowPrice').val();
 		var heightPrice = $('#heightPrice').val();
-		var tagsSource = $('#tagsSource');
+		var tagsSource = $('#tagsSourceItem').find('.checkActive').attr('data-id');
 		var type = '&industry=';
 		var ubs = '&genre=';
 		var price = '&price=';
@@ -246,44 +246,47 @@ function toSearch(){
 	    for (var int = 0; int < typeNoShow.length; int++) {
 			type = type+$(typeNoShow[int]).text()+ ' ';
 		}
+        if(type !='&industry='){
+	    	
+	    	searchQ = searchQ+type;
+	    }
 	    for (var int = 0; int < ubsShow.length; int++) {
 	    	ubs = ubs + $(ubsShow[int]).text()+ ' ';
 		}
 	    for (var int = 0; int < ubsNoShow.length; int++) {
 	    	ubs = ubs + $(ubsNoShow[int]).text() + ' ';
 		}
+	    if(ubs !='&genre='){
+		    
+	    	searchQ = searchQ+ubs;
+	    }
 	    for (var int = 0; int < dimShow.length; int++) {
 	    	dim = dim + $(dimShow[int]).text()+ ' ';
 		}
 	    for (var int = 0; int < dimNoShow.length; int++) {
 	    	dim = dim + $(dimNoShow[int]).text() + ' ';
 		}
-	    if(lowPrice!="" && heightPrice!=""){
-		    price = price +"["+lowPrice+" TO "+heightPrice+"]";
-	    }
-	    if(lowPrice=="" &&  heightPrice!=""){
-	    	price = price +"[*" + " TO "+heightPrice+"]";
-	    }
-	    if(heightPrice=="" && lowPrice!=""){
-	    	price = price +"["+lowPrice+" TO "+"*]";
-	    }
-	    if(type !='&industry='){
-	    	
-	    	searchQ = searchQ+type;
-	    }
-	    if(ubs !='&genre='){
-	    
-	    	searchQ = searchQ+ubs;
-	    }
 	    if(dim !='&production='){
 	    	searchQ = searchQ+dim;
 	    }
-	    if(price !='&price='){
-	    	searchQ = searchQ+price;
-	    }
-	    if(tagsSource.length > 0){
-	    	searchQ = searchQ+tagsSource.attr('data-id');
-	    }
+	    var loginTel = $('#rolephone').val();
+	    if(loginTel!=null && loginTel!= "" && loginTel!=undefined){
+		    if(lowPrice!="" && heightPrice!=""){
+			    price = price +"["+lowPrice+" TO "+heightPrice+"]";
+		    }
+		    if(lowPrice=="" &&  heightPrice!=""){
+		    	price = price +"[*" + " TO "+heightPrice+"]";
+		    }
+		    if(heightPrice=="" && lowPrice!=""){
+		    	price = price +"["+lowPrice+" TO "+"*]";
+		    }
+		    if(price !='&price='){
+		    	searchQ = searchQ+price;
+		    }
+		    if(tagsSource!=undefined){
+		    	searchQ = searchQ+tagsSource;
+		    }
+	   }
 	    window.location.href=getContextPath()+searchQ;
 	});
 }
