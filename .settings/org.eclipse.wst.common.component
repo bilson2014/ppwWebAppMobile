@@ -43,6 +43,6 @@
         </dependent-module>
 
         <property name="java-output-path" value="/wearable-device/target/classes"/>
-        <property name="context-root" value="/"/>
+        <property name="context-root" value="wearable-device"/>
     </wb-module>
 </project-modules>
