@@ -1,0 +1,153 @@
+﻿@import "common";
+@import "buttons";
+@import "video";
+@import "bootstrap-grid";
+@import "fontSize";
+@import "compass/typography/text/ellipsis";
+@import "common_portal";
+body {
+    width: 100%;
+    height: 100%;
+    font-family: "Microsoft YaHei", "微软雅黑", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1.4rem;
+    color: #333;
+    background-color: #f9fbfb
+}
+
+.swiper-slide {
+    .top {
+        position: absolute;
+        top: 0;
+        height: 50%;
+    }
+    .cen {
+        width: 100%;
+        height: 28%;
+        background: #000;
+        z-index: 2;
+        position: absolute;
+        top: 50%;
+        .order {
+            height: 100%;
+            .phone {
+                width: 75%;
+                height: 55px;
+                margin: 0 auto;
+                #phone {
+                    width: 100%;
+                    border: none;
+                    font-size: 13px;
+                    height: 30px;
+                    background-color: transparent;
+                    border-radius: 5px;
+                    line-height: 30px;
+                    padding-left: 3%;
+                    border: 1px solid #5e9fc9;
+                    outline: none;
+                }
+                .var {
+                    margin-top: -27px;
+                    line-height: 21px;
+                    color: #d2dfe8;
+                    background-color: #5385aa;
+                    width: 30%;
+                    height: 21px;
+                    font-size: 13px;
+                    border-radius: 5px;
+                    margin-left: 72%;
+                }
+                .error {
+                    color: #f95d64;
+                    font-size: 12px;
+                    text-align: left;
+                    margin-top: 13px;
+                }
+            }
+            .number {
+                width: 75%;
+                height: 55px;
+                margin: 0 auto;
+                margin-top: 5px;
+                #num {
+                    width: 100%;
+                    border: none;
+                    font-size: 13px;
+                    height: 30px;
+                    background-color: transparent;
+                    border-radius: 5px;
+                    line-height: 30px;
+                    padding-left: 3%;
+                    border: 1px solid #5e9fc9;
+                    outline: none;
+                }
+                .error {
+                    color: #f95d64;
+                    font-size: 12px;
+                    text-align: left;
+                    margin-top: 8px;
+                }
+            }
+            .btnSub {
+                width: 75%;
+                height: 25px;
+                margin: 0 auto;
+                margin-top: 11px;
+                color: #fff;
+                background-color: #fa535b;
+                border: none;
+                border: 1px solid #a12831;
+                border-radius: 5px;
+                font-size: 17px;
+            }
+        }
+    }
+    .model {
+        background-color: rgba(0, 0, 0, 0.7);
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        z-index: 20;
+        display: none;
+        .success {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -4.5rem;
+            margin-left: -4.5rem;
+            width: 9rem;
+            height: 9rem;
+            background: white;
+            text-align: center;
+            border-radius: 18px;
+            img {
+                width: 40%;
+                height: 40%;
+                margin-top: 1.2rem;
+            }
+            #showStatues {
+                color: #333;
+                font-size: 0.5rem;
+                margin-top: 0.6rem;
+                margin-bottom: 0.4rem;
+            }
+            #checkSuccess {
+                color: white;
+                font-size: 0.36rem;
+                width: 4rem;
+                height: 1rem;
+                line-height: 1rem;
+                text-align: center;
+                border-radius: 100px;
+                background: #fe5453;
+                box-shadow: 0 4px 8px 0;
+                margin: 0 auto;
+                margin-top: 35px;
+            }
+        }
+    }
+    .bto {
+        position: absolute;
+        bottom: 0;
+        height: 15%;
+    }
+}
