@@ -78,10 +78,10 @@ var search = {
 		},
 		//回显
 		getTags : function(){
-			
 			var industry = $('#industry').val(); // 行业
-			var genre = $('#genre').val();; // 类型
-			var dim = $('#production').val();; // 维度
+			var genre = $('#genre').val(); // 类型
+			var dim = $('#production').val(); // 维度
+			var source= $('#source').val(); // 来源
 			var industryArr = industry.split(' ');
 			var genreArr = genre.split(' ');
 			var dimArr = dim.split(' ');
@@ -98,6 +98,19 @@ var search = {
 			if(dimArr != null && dimArr.length >0){
 				for (var int = 0; int < dimArr.length; int++) {
 						$('#'+dimArr[int]).addClass('checkActive');
+				}
+			}
+			
+			var role = $('#rolephone').val();
+			if(role!=null && role!= "" ){
+				if(source == 'paipianwang'){
+					$('#pai').addClass('checkActive');
+				}
+				if(source == 'case'){
+					$('#case').addClass('checkActive');
+				}
+				if(source == 'team'){
+					$('#team').addClass('checkActive');
 				}
 			}
 			parsePrice();
@@ -130,9 +143,6 @@ var search = {
         			$('#dimensionShow').removeClass('noShow');
         		}
         	});
-        	
-        	
-        	
         	var base_business = $(".tags");
         	var currCount = $(".tags").length;
         	base_business.on('click', function() {
@@ -164,7 +174,17 @@ var search = {
          		$('.searchBoxInit').addClass('searchInit');
          		$('.pagePhone').removeClass('noTouch');
          	})
-         	
+         	//来源
+            var base_source = $(".tagsSource");
+        	var base_source_curr = $(".tagsSource").length;
+        	base_source.on('click', function() {
+        		if ($(this).hasClass('checkActive')) {
+        			$(this).removeClass('checkActive');
+        		} else {
+        			$(".tagsSource").removeClass('checkActive');
+        			$(this).addClass('checkActive');
+        		}
+        	});
         },
         showTagsItem:function(){
      //类型   	
@@ -214,6 +234,7 @@ function toSearch(){
 		var dimNoShow = $('#dimensionShow').find('.checkActive');
 		var lowPrice = $('#lowPrice').val();
 		var heightPrice = $('#heightPrice').val();
+		var tagsSource = $('#tagsSourceItem').find('.checkActive').attr('data-id');
 		var type = '&industry=';
 		var ubs = '&genre=';
 		var price = '&price=';
@@ -221,48 +242,52 @@ function toSearch(){
 		var searchQ = '/search?q=*';
 	    for (var int = 0; int < typeShow.length; int++) {
 	    	type = type+$(typeShow[int]).text()+ ' ';
-			
 		}
 	    for (var int = 0; int < typeNoShow.length; int++) {
 			type = type+$(typeNoShow[int]).text()+ ' ';
 		}
+        if(type !='&industry='){
+	    	
+	    	searchQ = searchQ+type;
+	    }
 	    for (var int = 0; int < ubsShow.length; int++) {
 	    	ubs = ubs + $(ubsShow[int]).text()+ ' ';
 		}
 	    for (var int = 0; int < ubsNoShow.length; int++) {
 	    	ubs = ubs + $(ubsNoShow[int]).text() + ' ';
 		}
+	    if(ubs !='&genre='){
+		    
+	    	searchQ = searchQ+ubs;
+	    }
 	    for (var int = 0; int < dimShow.length; int++) {
 	    	dim = dim + $(dimShow[int]).text()+ ' ';
 		}
 	    for (var int = 0; int < dimNoShow.length; int++) {
 	    	dim = dim + $(dimNoShow[int]).text() + ' ';
 		}
-	    if(lowPrice!="" && heightPrice!=""){
-		    	price = price +"["+lowPrice+" TO "+heightPrice+"]";
-	    }
-	    if(lowPrice=="" &&  heightPrice!=""){
-	    	price = price +"[*" + " TO "+heightPrice+"]";
-	    }
-	    if(heightPrice=="" && lowPrice!=""){
-	    	price = price +"["+lowPrice+" TO "+"*]";
-	    }
-	    if(type !='&industry='){
-	    	
-	    	searchQ = searchQ+type;
-	    }
-	    if(ubs !='&genre='){
-	    
-	    	searchQ = searchQ+ubs;
-	    }
 	    if(dim !='&production='){
 	    	searchQ = searchQ+dim;
 	    }
-	    if(price !='&price='){
-	    	searchQ = searchQ+price;
-	    }
+	    var loginTel = $('#rolephone').val();
+	    if(loginTel!=null && loginTel!= "" && loginTel!=undefined){
+		    if(lowPrice!="" && heightPrice!=""){
+			    price = price +"["+lowPrice+" TO "+heightPrice+"]";
+		    }
+		    if(lowPrice=="" &&  heightPrice!=""){
+		    	price = price +"[*" + " TO "+heightPrice+"]";
+		    }
+		    if(heightPrice=="" && lowPrice!=""){
+		    	price = price +"["+lowPrice+" TO "+"*]";
+		    }
+		    if(price !='&price='){
+		    	searchQ = searchQ+price;
+		    }
+		    if(tagsSource!=undefined){
+		    	searchQ = searchQ+tagsSource;
+		    }
+	   }
 	    window.location.href=getContextPath()+searchQ;
-	   	    
 	});
 }
 
@@ -374,8 +399,11 @@ function createVideo(product){
 	    	htmlAddImg +='<img class="roleImg" src="/resources/images/video/rolePro.png">';
 		}
 	}
-	
-	var htmlAdd = '<a href="'+getContextPath()+'/provider/info/'+product.teamId+'.html"><img src="'+getDfsHostName()+product.teamPhotoUrl+'"><div>'+product.teamName+'</div></a>';
+	var headUrl = getDfsHostName()+sUrl;
+	   if(sUrl==null || sUrl== "" ){
+		   headUrl = "/resources/images/default.png";
+	   }
+	var htmlAdd = '<a href="'+getContextPath()+'/provider/info/'+product.teamId+'.html"><img src="'+headUrl+'"><div>'+product.teamName+'</div></a>';
 	if(itemFlag == 4){
 		htmlAdd ='';
 	}
