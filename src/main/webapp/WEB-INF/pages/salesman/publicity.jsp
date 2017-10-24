@@ -12,7 +12,7 @@
 	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
 	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
 	<meta name="keywords" content="">
-	<meta name="description" content="这里有一个你不能错过的工作机会">
+	<meta name="description" content="2000元现金红包到账，请注意查收!">
 	<meta name="baidu-site-verification" content="dMz6jZpIwd" />
 	<title>品牌套餐 重磅钜惠</title>
    
