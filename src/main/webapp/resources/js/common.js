@@ -5,13 +5,11 @@ var PopInterValObj, oTimer, successIntervalObj;
 var UrlDo = "apaipian.com";
 //var UrlDo = "localhost";
 //var UrlDo = "test.apaipian.com";
-
 //绑定域名流程
-
 //var Url = "http://localhost:8080/";
 //var Url = "test.apaipian.com";
-var Url = "apaipian.com";
 
+var Url = "apaipian.com";
 //绑定域名流程phone
 //var phoneUrl = "test.apaipian.com:7070/project/phone/";
 var phoneUrl = "apaipian.com:8087/project/phone/";
