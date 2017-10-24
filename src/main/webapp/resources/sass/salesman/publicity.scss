@@ -15,10 +15,12 @@ body {
 }
 
 .swiper-slide {
+    position: relative;
     .top {
         position: absolute;
         top: 0;
         height: 50%;
+        width: 100%;
     }
     .cen {
         width: 100%;
@@ -122,13 +124,21 @@ body {
             img {
                 width: 40%;
                 height: 40%;
-                margin-top: 1.2rem;
+                margin-top: 0.9rem;
             }
             #showStatues {
                 color: #333;
-                font-size: 0.5rem;
+                font-size: 0.65rem;
                 margin-top: 0.6rem;
                 margin-bottom: 0.4rem;
+            }
+            #showText {
+                color: #333;
+                width: 80%;
+                margin: 0 auto;
+                line-height: initial;
+                font-size: 0.5rem;
+                margin-bottom: 0.2rem;
             }
             #checkSuccess {
                 color: white;
@@ -141,7 +151,7 @@ body {
                 background: #fe5453;
                 box-shadow: 0 4px 8px 0;
                 margin: 0 auto;
-                margin-top: 35px;
+                margin-top: 0.4rem;
             }
         }
     }
@@ -149,5 +159,6 @@ body {
         position: absolute;
         bottom: 0;
         height: 15%;
+        width: 100%;
     }
 }

@@ -14,7 +14,7 @@
 	<meta name="keywords" content="">
 	<meta name="description" content="这里有一个你不能错过的工作机会">
 	<meta name="baidu-site-verification" content="dMz6jZpIwd" />
-	<title>品牌质感</title>
+	<title>品牌套餐 重磅钜惠</title>
    
 	<!--[if lt IE 9]>
 		<script>window.html5 || document.write('<script src="html5shivJs"><\/script>')</script>
@@ -39,20 +39,21 @@
 				                 </video>  
 
 					         </div>  
-					         <img src="/resources/images/publicity/publicity1.jpg">
+					         <img src="/resources/images/publicity/publicity11.jpg">
 					    </div>			  
 			         <div class="swiper-slide">
 			          <img src="/resources/images/publicity/publicity2.jpg">
 			             
 			          </div> 
 			         <div class="swiper-slide">
-			             <div class='top'>
+			            <div class='top'>
 			             	<a href="tel:400-660-9728"> 
 			             		<img src="/resources/images/publicity/publicity33.png">
 			             	</a>
 			             </div>
+			             
 			             <div class='cen'>
-							   <form id="order-form" role="form" target="_blank" method="post" autocomplete="off" accept-charset="UTF-8">
+							   <form id="order-form" role="form"  method="post" autocomplete="off" accept-charset="UTF-8">
 								<input type="hidden" id="csrftoken" name="csrftoken" value="${csrftoken}"/>
 								<input type="hidden" id="token" name="token" value="${token}"/>
 								<input type="hidden" id="indentName" name="indentName" value="活动-头条-MG"/>
@@ -72,16 +73,17 @@
 					              </div>					             
 				              </form>
 			              </div>  
-			              <div class='model' id='orderSuccess'>
+			          <div class='model' id='orderSuccess'>
 					               <div class='success'>
 					              	   <img data-src='/resources/images/index/success.png' class=' lazyloaded' src='/resources/images/index/success.png'>
-					              	   <div id='showStatues'>恭喜你报名成功</div>
+					              	   <div id='showStatues'>提交成功!</div>
+					              	   <div id='showText'>客服人员会尽快和您取得联系</div>
 					              	   <div id='checkSuccess'>确认</div>					             
 					              </div>
-					              </div>
-			             <div class='bto'> 
-			             	<img src="/resources/images/publicity/publicity3.png">
-			             </div>  
+					       </div>
+			             
+			             	<img class='bto' src="/resources/images/publicity/publicity3.png">
+			            
 			          </div>  
 			             
 
@@ -95,7 +97,6 @@
     <script id="-mob-share" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
     <script src="/resources/lib/jquery/jquery-2.0.3.min.js"></script>
     <script src="/resources/lib/jquery.json/jquery.json-2.4.min.js"></script> 
-   
     <script src="/resources/lib/swiper/swiper.min.js"></script>
     <script src="/resources/js/common.js"></script>
     <script src="/resources/js/salesman/publicity.js"></script>

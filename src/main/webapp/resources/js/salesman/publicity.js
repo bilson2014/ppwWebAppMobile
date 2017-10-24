@@ -2,10 +2,14 @@ var InterValObj; // timer变量，控制时间
 var count = 60; // 间隔函数，1秒执行  
 var sendCodeFlag = true;
 $().ready(function() {
+	
+	var localsrc=window.location.href;
+	
 	init();
 	setHeight();
 	initShareNew();
 	success();	
+	
 });
 function varphone(){
 	var phone=$('#phone').val();
@@ -39,25 +43,23 @@ function success(){
 						return false;
 					 }else{
 						 $('#numerror').text('');
-						 $('#order-form').submit();
 						 window.clearInterval(InterValObj);
 						 $('#varnum').text('获取验证码');
 						 $('#phone').val('');
 						 $('#num').val('');
-						 $('#orderSuccess').attr('style','display:block;');
-						 
+						 $('#orderSuccess').attr('style','display:block;');						 
 					 }	 
 				 }, getContextPath() + '/order/deliver', 
 				 {	
 					csrftoken:$("#csrftoken").val(),
 					indent_tele:$('#phone').val(),
 //					indent_recomment:$("#submit-indent-recomment").text(),
-					indentName:'网站-移动-首页banner',
+					indentName:'线上-活动',//订单名称
 					productId:-1,
 					teamId:-1,
 					serviceId:-1,
 					phoneCode : $('#num').val(),
-					indentSource : 16			
+					indentSource : 2//订单来源编号			
 				  });	
 			}			 
 		}				 
@@ -170,21 +172,6 @@ function init() {
 	            }
 	           }
 	    });
-      
-	/*    var swiper3 = new Swiper('.step2',{
-	        pagination: '.swiper-pagination-H',
-	        paginationClickable: true,
-	        loop:true,
-	    });*/
-	    /*
-	    var swiper4 = new Swiper('.step4',{
-	        pagination: '.swiper-pagination-H',
-	        paginationClickable: true,
-	    });
-	    var swiper6 = new Swiper('.step6',{
-	        pagination: '.swiper-pagination-H',
-	        paginationClickable: true,
-	    });*/
 }
 	
 
@@ -200,8 +187,8 @@ function initShareNew(){
     });
     wx.ready(function(){
         wx.onMenuShareAppMessage({
-            title: '这简直不像一条招聘广告', // 分享标题
-            desc: '这里有一个你不能错过的工作机会', // 分享描述
+        	 title: '品牌套餐 重磅钜惠', // 分享标题
+             desc: '2000元现金红包到账，请注意查收!', // 分享描述
             link: 'http://m.apaipian.com/employ', // 分享链接
             imgUrl: 'http://m.apaipian.com/resources/images/employee/em1.png', // 分享图标
             type: 'link', // 分享类型,music、video或link，不填默认为link
@@ -214,16 +201,14 @@ function initShareNew(){
     /*  wx.error(function(res){
         });*/
         wx.onMenuShareTimeline({
-            title: '这简直不像一条招聘广告', // 分享标题
-            desc: '这里有一个你不能错过的工作机会', // 分享描述
+            title: '品牌套餐 重磅钜惠', // 分享标题
+            desc: '2000元现金红包到账，请注意查收!', // 分享描述
             link: 'http://m.apaipian.com/employ', // 分享链接
             imgUrl: 'http://m.apaipian.com/resources/images/employee/em1.png', // 分享图标
             type: 'link', // 分享类型,music、video或link，不填默认为link
             dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
         });
-    });
-		
-		
+    });	
 }
 	
 
