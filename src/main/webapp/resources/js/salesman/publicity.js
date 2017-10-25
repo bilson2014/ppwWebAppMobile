@@ -42,12 +42,13 @@ function success(){
 						$('#numerror').text('*'+ result.message);
 						return false;
 					 }else{
+						 $('#orderSuccess').attr('style','display:block;');	
 						 $('#numerror').text('');
 						 window.clearInterval(InterValObj);
 						 $('#varnum').text('获取验证码');
 						 $('#phone').val('');
 						 $('#num').val('');
-						 $('#orderSuccess').attr('style','display:block;');						 
+						 sendCodeFlag = true;						 					 
 					 }	 
 				 }, getContextPath() + '/order/deliver', 
 				 {	
@@ -67,7 +68,7 @@ function success(){
 	//验证码
 	$('#varnum').on('click',function(){		
 		if(varphone()){
-			if(sendCodeFlag){//防止多次点击}			
+			if(sendCodeFlag){//防止多次点击			
 				sendCodeFlag = false;
 				var phone=$('#phone').val();
 				verification(phone,'varnum');			
@@ -187,10 +188,10 @@ function initShareNew(){
     });
     wx.ready(function(){
         wx.onMenuShareAppMessage({
-        	 title: '品牌套餐 重磅钜惠', // 分享标题
-             desc: '2000元现金红包到账，请注意查收!', // 分享描述
+        	title: '品牌套餐 重磅钜惠', // 分享标题
+            desc: '2000元现金红包到账，请注意查收!', // 分享描述
             link: 'http://m.apaipian.com/activity/vi', // 分享链接
-            imgUrl: 'http://m.apaipian.com/resources/images/employee/em1.png', // 分享图标
+            imgUrl: 'http://m.apaipian.com/resources/images/publicity/pp.jpg', // 分享图标
             type: 'link', // 分享类型,music、video或link，不填默认为link
             dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
         /*    success: function () { 
@@ -204,7 +205,7 @@ function initShareNew(){
             title: '品牌套餐 重磅钜惠', // 分享标题
             desc: '2000元现金红包到账，请注意查收!', // 分享描述
             link: 'http://m.apaipian.com/activity/vi', // 分享链接
-            imgUrl: 'http://m.apaipian.com/resources/images/employee/em1.png', // 分享图标
+            imgUrl: 'http://m.apaipian.com/resources/images/publicity/pp.jpg', // 分享图标
             type: 'link', // 分享类型,music、video或link，不填默认为link
             dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
         });

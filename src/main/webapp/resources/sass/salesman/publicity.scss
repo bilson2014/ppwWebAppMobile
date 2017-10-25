@@ -18,8 +18,8 @@ body {
     position: relative;
     .top {
         position: absolute;
-        top: 0;
-        height: 50%;
+        // top: 0;
+        height: 100%;
         width: 100%;
     }
     .cen {
@@ -27,10 +27,12 @@ body {
         height: 28%;
         background: #000;
         z-index: 2;
-        position: absolute;
-        top: 50%;
+        // position: absolute;
+        // position: fixed;
+        margin-top: 48%;
         .order {
             height: 100%;
+            background: #000;
             .phone {
                 width: 75%;
                 height: 55px;
@@ -69,7 +71,6 @@ body {
                 width: 75%;
                 height: 55px;
                 margin: 0 auto;
-                margin-top: 5px;
                 #num {
                     width: 100%;
                     border: none;
@@ -93,7 +94,6 @@ body {
                 width: 75%;
                 height: 25px;
                 margin: 0 auto;
-                margin-top: 11px;
                 color: #fff;
                 background-color: #fa535b;
                 border: none;
@@ -156,8 +156,8 @@ body {
         }
     }
     .bto {
-        position: absolute;
-        bottom: 0;
+        // position: absolute;
+        // bottom: 0;
         height: 15%;
         width: 100%;
     }

@@ -28,70 +28,61 @@
       <img  src="/resources/images/employee/em1.png">
 </div>
 <body>
-
     <div class="swiper-container swiperVertical swiper-container-vertical">
 		 <div class="swiper-wrapper ">
-			          <div class="swiper-slide banner stepBtn-1">
-				             <div class="mpa-video" id="playVideo" data-type-id="61" data-type="mpa-video" style="margin: 0rem; display: block; width:100%"> 
-				                 <span class="mpa-video-play-icon"></span> 
-				                 <video  id="toPlayVideo"  loop="loop" x-webkit-airplay="true" webkit-playsinline="" playsinline="true" preload="auto" poster="/resources/images/employee/em1.png" style="width:100%;  margin-top: -1px;"> 
-				                     <source type="video/mp4" src="http://106.75.14.48:8888/group1/M00/00/79/CgptuFnuuYmAQ8BRAB-4koFR3rE226.mp4"> 
-				                 </video>  
-
-					         </div>  
-					         <img src="/resources/images/publicity/publicity11.jpg">
-					    </div>			  
-			         <div class="swiper-slide">
-			          <img src="/resources/images/publicity/publicity2.jpg">
-			             
-			          </div> 
-			         <div class="swiper-slide">
-			            <div class='top'>
-			             	<a href="tel:400-660-9728"> 
-			             		<img src="/resources/images/publicity/publicity33.png">
-			             	</a>
-			             </div>
-			             
-			             <div class='cen'>
-							   <form id="order-form" role="form"  method="post" autocomplete="off" accept-charset="UTF-8">
-								<input type="hidden" id="csrftoken" name="csrftoken" value="${csrftoken}"/>
-								<input type="hidden" id="token" name="token" value="${token}"/>
-								<input type="hidden" id="indentName" name="indentName" value="活动-头条-MG"/>
-								<input type="hidden" id="indent_recomment" name="indent_recomment" value="123"/>
-					              <div class="order">
-					                  <div class='phone'>
-					                  	 <input type="text" maxlength="20" id="phone" placeholder='请输入您的手机号'/>
-					                     <div class="var" id='varnum' >获取验证码</div>
-					                     <p class="error" id='phoneerror'></p>
-					                  </div>
-					                  <div class='number'>
-					                  	 <input  type="text" maxlength="10"  id="num"  placeholder='请输入验证码'/>
-					                     <p class="error" id='numerror'></p>       
-					                  </div>
-					                     					                  
-					                  <button type="button" class="btnSub" id='btnSub'>立即报名</button>
-					              </div>					             
-				              </form>
-			              </div>  
-			          <div class='model' id='orderSuccess'>
-					               <div class='success'>
-					              	   <img data-src='/resources/images/index/success.png' class=' lazyloaded' src='/resources/images/index/success.png'>
-					              	   <div id='showStatues'>提交成功!</div>
-					              	   <div id='showText'>客服人员会尽快和您取得联系</div>
-					              	   <div id='checkSuccess'>确认</div>					             
+			 <div class="swiper-slide banner stepBtn-1">
+				 <div class="mpa-video" id="playVideo" data-type-id="61" data-type="mpa-video" style="margin: 0rem; display: block; width:100%"> 
+				      <span class="mpa-video-play-icon"></span> 
+				      <video  id="toPlayVideo"  loop="loop" x-webkit-airplay="true" webkit-playsinline="" playsinline="true" preload="auto" poster="/resources/images/publicity/pp.jpg" style="width:100%;  margin-top: -1px;"> 
+				           <source type="video/mp4" src="http://106.75.14.48:8888/group1/M00/00/79/CgptuFnuuYmAQ8BRAB-4koFR3rE226.mp4"> 
+				      </video>  
+				 </div>  
+				 <img src="/resources/images/publicity/publicity11.jpg">
+		     </div>                     			  
+		     <div class="swiper-slide">
+			      <img src="/resources/images/publicity/publicity2.jpg">
+	          </div> 
+			 <div class="swiper-slide">
+			        <div class='top'>
+			            <a href="tel:400-660-9728"> 
+			             	<!--  <img src="/resources/images/publicity/publicity33.png">-->
+			             	<img src="/resources/images/publicity/aa.png">
+			             </a>
+			        </div>
+			        <div class='cen'>
+						<form id="order-form" role="form"  method="post" autocomplete="off" accept-charset="UTF-8">
+						    <input type="hidden" id="csrftoken" name="csrftoken" value="${csrftoken}"/>
+						    <input type="hidden" id="token" name="token" value="${token}"/>
+						    <input type="hidden" id="indentName" name="indentName" value="活动-头条-MG"/>
+							<input type="hidden" id="indent_recomment" name="indent_recomment" value="123"/>
+					        <div class="order">
+					             <div class='phone'>
+					                  <input type="text" maxlength="20" id="phone" placeholder='请输入您的手机号'/>
+					                  <div class="var" id='varnum' >获取验证码</div>
+					                  <p class="error" id='phoneerror'></p>
 					              </div>
-					       </div>
-			             
-			             	<img class='bto' src="/resources/images/publicity/publicity3.png">
-			            
+					              <div class='number'>
+					                   <input  type="text" maxlength="10"  id="num"  placeholder='请输入验证码'/>
+					                   <p class="error" id='numerror'></p>       
+					               </div>     					                  
+					               <button type="button" class="btnSub" id='btnSub'>立即报名</button>
+					         </div>					             
+				          </form>
 			          </div>  
-			             
-
-   </div>  
-   
-     <div class="icon spIcon">
-	<img id="icon" src="/resources/images/cost/icon.png">
-     </div>
+			        <div class='model' id='orderSuccess'>
+					        <div class='success'>
+					            <img data-src='/resources/images/index/success.png' class=' lazyloaded' src='/resources/images/index/success.png'>
+					            <div id='showStatues'>提交成功!</div>
+					            <div id='showText'>客服人员会尽快和您取得联系</div>
+					            <div id='checkSuccess'>确认</div>					             
+					         </div>
+					  </div>
+			          <!-- <img class='bto' src="/resources/images/publicity/publicity3.png">     -->
+			  </div>          
+         </div>  
+         <div class="icon spIcon">
+	     <img id="icon" src="/resources/images/cost/icon.png">
+    </div>
     
     <script id="-mob-share" src="http://f1.webshare.mob.com/code/mob-share.js?appkey=8c49c537a706"></script>
     <script id="-mob-share" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
