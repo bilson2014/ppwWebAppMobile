@@ -40,11 +40,11 @@ body {
                 #phone {
                     width: 100%;
                     border: none;
-                    font-size: 13px;
-                    height: 30px;
+                    font-size: 0.13rem;
+                    height: 1rem;
                     background-color: transparent;
-                    border-radius: 5px;
-                    line-height: 30px;
+                    border-radius: 0.2rem;
+                    line-height: 1rem;
                     padding-left: 3%;
                     border: 1px solid #5e9fc9;
                     outline: none;
@@ -62,9 +62,9 @@ body {
                 }
                 .error {
                     color: #f95d64;
-                    font-size: 12px;
+                    font-size: 0.12rem;
                     text-align: left;
-                    margin-top: 13px;
+                    margin-top: 0.13rem;
                 }
             }
             .number {
@@ -74,32 +74,34 @@ body {
                 #num {
                     width: 100%;
                     border: none;
-                    font-size: 13px;
-                    height: 30px;
+                    font-size: 0.13rem;
+                    height: 1rem;
                     background-color: transparent;
                     border-radius: 5px;
-                    line-height: 30px;
+                    line-height: 1rem;
                     padding-left: 3%;
                     border: 1px solid #5e9fc9;
                     outline: none;
                 }
                 .error {
                     color: #f95d64;
-                    font-size: 12px;
+                    font-size: 0.12rem;
                     text-align: left;
-                    margin-top: 8px;
+                    margin-top: 0.08rem;
                 }
             }
             .btnSub {
                 width: 75%;
-                height: 25px;
+                height: 1rem;
                 margin: 0 auto;
+                display: block;
+                margin-left: 12%;
                 color: #fff;
                 background-color: #fa535b;
                 border: none;
                 border: 1px solid #a12831;
                 border-radius: 5px;
-                font-size: 17px;
+                font-size: 0.6rem;
             }
         }
     }
