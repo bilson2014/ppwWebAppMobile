@@ -52,10 +52,10 @@ body {
         bottom: 0.5rem;
         background: white;
         .order {
-            height: 100%;
             .phone {
-                width: 75%;
+                width: 90%;
                 margin: 0 auto;
+                margin-bottom: 0.5rem;
                 #phone {
                     width: 100%;
                     border: none;
@@ -67,16 +67,17 @@ body {
                     padding-left: 3%;
                     outline: none;
                     position: relative;
+                    color:$gray;
                 }
                 .var {
-                    margin-top: -27px;
-                    line-height: 21px;
-                    color: #4d4d4d;
-                    width: 30%;
-                    height: 21px;
-                    font-size: 13px;
+                    font-size: $size30;
+                    color:#4d4d4d;
+                    height: 0.8rem;
+                    line-height: 0.8rem;
+                    padding-left: 0.5rem;
                     position: absolute;
-                    right: 0rem;
+                    right: 0.5rem;
+                    top: 0.15rem;
                     border-left: 1px solid #4d4d4d;
                 }
                 .error {
@@ -87,8 +88,9 @@ body {
                 }
             }
             .number {
-                width: 75%;
+                width: 90%;
                 margin: 0 auto;
+                margin-bottom: 0.5rem;
                 #num {
                     width: 100%;
                     border: none;
@@ -99,6 +101,7 @@ body {
                     line-height: 30px;
                     padding-left: 3%;
                     outline: none;
+                    color:$gray;
                 }
                 .error {
                     color: #f95d64;
@@ -108,15 +111,15 @@ body {
                 }
             }
             .btnSub {
-                width: 75%;
-                height: 25px;
+                width: 90%;
+                height: 1rem;
+                line-height: 1rem;
                 margin: 0 auto;
                 color: #fff;
                 background-color: #fa535b;
                 border: none;
-                border: 1px solid #a12831;
                 border-radius: 5px;
-                font-size: 17px;
+                font-size: $size36;
             }
         }
     }
