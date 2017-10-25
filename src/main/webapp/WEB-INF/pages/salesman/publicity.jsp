@@ -37,16 +37,16 @@
 				           <source type="video/mp4" src="http://106.75.14.48:8888/group1/M00/00/79/CgptuFnuuYmAQ8BRAB-4koFR3rE226.mp4"> 
 				      </video>  
 				 </div>  
-				 <img src="/resources/images/publicity/publicity11.jpg">
-		     </div>                     			  
+		        <img src="/resources/images/publicity/publicity1.jpg"> 
+		     </div>
+		                        			  
 		     <div class="swiper-slide">
 			      <img src="/resources/images/publicity/publicity2.jpg">
 	          </div> 
 			 <div class="swiper-slide">
 			        <div class='top'>
-			            <a href="tel:400-660-9728"> 
-			             	<!--  <img src="/resources/images/publicity/publicity33.png">-->
-			             	<img src="/resources/images/publicity/aa.png">
+			            <a href="tel:400-660-9728"> 	             	
+			             	<img src="/resources/images/publicity/publicity3.png">
 			             </a>
 			        </div>
 			        <div class='cen'>
@@ -76,8 +76,7 @@
 					            <div id='showText'>客服人员会尽快和您取得联系</div>
 					            <div id='checkSuccess'>确认</div>					             
 					         </div>
-					  </div>
-			          <!-- <img class='bto' src="/resources/images/publicity/publicity3.png">     -->
+					  </div>			         
 			  </div>          
          </div>  
          <div class="icon spIcon">
