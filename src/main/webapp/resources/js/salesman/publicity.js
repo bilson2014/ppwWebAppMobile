@@ -9,26 +9,10 @@ $().ready(function() {
 	setHeight();
 	initShareNew();
 	success();	
-	window.onorientationchange=function(){
-		orient();
-		   };
+
 });
 
-function orient() {
-    //alert('gete');
-    if (window.orientation == 0 || window.orientation == 180) {
-        $("body").attr("class", "portrait");
-        orientation = 'portrait';
-        alert(4);
-        return false;
-    }
-    else if (window.orientation == 90 || window.orientation == -90) {
-        $("body").attr("class", "landscape");
-        orientation = 'portrait';
-        alert(5);
-        return false;
-    }
-}
+
 
 function varphone(){
 	var phone=$('#phone').val();
