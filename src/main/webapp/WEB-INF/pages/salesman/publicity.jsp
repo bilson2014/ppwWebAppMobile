@@ -59,11 +59,11 @@
 					             <div class='phone'>
 					                  <input type="text" maxlength="20" id="phone" placeholder='请输入您的手机号'/>
 					                  <div class="var" id='varnum' >获取验证码</div>
-					                  <p class="error" id='phoneerror'>Vgdfgdg</p>
+					                  <p class="error" id='phoneerror'></p>
 					              </div>
 					              <div class='number'>
 					                   <input  type="text" maxlength="10"  id="num"  placeholder='请输入验证码'/>
-					                   <p class="error" id='numerror'>dfsdfsfs</p>       
+					                   <p class="error" id='numerror'></p>       
 					               </div>     					                  
 					               <button type="button" class="btnSub" id='btnSub'>立即报名</button>
 					         </div>					             
