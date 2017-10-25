@@ -154,8 +154,8 @@
 				</div>
 				<div class="itemTags" id="tagsSourceItem">
 						<div class="tagsSource" data-id="&source=paipianwang" id="pai">拍片网</div>
-						<div class="tagsSource" data-id="&source=case" id="case">案例</div>
 						<div class="tagsSource" data-id="&source=team" id="team">供应商</div>
+						<div class="tagsSource" data-id="&source=case" id="case">案例</div>
 				</div>
 				<div class="itemTags noShow" id="dimensionShow"></div>
 			</div>	
