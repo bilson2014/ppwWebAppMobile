@@ -4,14 +4,13 @@ var sendCodeFlag = true;
 $().ready(function() {
 	
 	var localsrc=window.location.href;
-	
 	init();
 	setHeight();
 	initShareNew();
 	success();	
-
+	var screenWidth = document.documentElement.clientWidth;
+	$('body').css('width',screenWidth); 
 });
-
 
 
 function varphone(){
@@ -57,7 +56,6 @@ function success(){
 				 {	
 					csrftoken:$("#csrftoken").val(),
 					indent_tele:$('#phone').val(),
-//					indent_recomment:$("#submit-indent-recomment").text(),
 					indentName:'线上-活动',//订单名称
 					productId:-1,
 					teamId:-1,
@@ -139,6 +137,9 @@ function setHeight(){
 	  var screenWidth = document.documentElement.clientWidth;
       var setHeight= screenWidth/16*9;
 	  $('#playVideo').css('height',setHeight);
+	  var iconHeight=$('.pageOneIcon').height();
+      var top = setHeight - (iconHeight/2);
+      $('.pageOneIcon').css('top',top);
 }
 
 function init() {
@@ -149,8 +150,6 @@ function init() {
 		$('#toPlayVideo').off('click').on('click',function(){
 			document.getElementById('toPlayVideo').play();
 		});
-		
-	
        var swiperV = new Swiper('.swiperVertical', {
 	        direction: 'vertical',
 	        pagination: '.swiper-pagination-v',
@@ -163,11 +162,11 @@ function init() {
 	        	 }
 	            if(index == 1){
 	            	document.addEventListener("WeixinJSBridgeReady", function () {
-//	     		    	document.getElementById('toPlayFullVideo').play();
+	     		    	document.getElementById('toPlayFullVideo').play();
 	     		     }, false);
-//	     		    document.getElementById('toPlayFullVideo').play();
+	     		    document.getElementById('toPlayFullVideo').play();
 	     			$('#toPlayFullVideo').off('click').on('click',function(){
-//	     				document.getElementById('toPlayFullVideo').play();
+	     				document.getElementById('toPlayFullVideo').play();
 	     			});
 	            	$('.serWord').removeClass('animation');
 	            }
@@ -191,10 +190,10 @@ function initShareNew(){
     });
     wx.ready(function(){
         wx.onMenuShareAppMessage({
-        	title: '品牌套餐 重磅钜惠', // 分享标题
-            desc: '2000元现金红包到账，请注意查收!', // 分享描述
+        	title: '9999元拍企业视频名片', // 分享标题
+            desc: '精准覆盖10000+用户', // 分享描述
             link: 'http://m.apaipian.com/activity/vi', // 分享链接
-            imgUrl: 'http://m.apaipian.com/resources/images/publicity/pp.jpg', // 分享图标
+            imgUrl: 'http://m.apaipian.com/resources/images/employee/em1.png', // 分享图标
             type: 'link', // 分享类型,music、video或link，不填默认为link
             dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
         /*    success: function () { 
@@ -205,10 +204,10 @@ function initShareNew(){
     /*  wx.error(function(res){
         });*/
         wx.onMenuShareTimeline({
-            title: '品牌套餐 重磅钜惠', // 分享标题
-            desc: '2000元现金红包到账，请注意查收!', // 分享描述
+            title: '9999元拍企业视频名片', // 分享标题
+            desc: '精准覆盖10000+用户', // 分享描述
             link: 'http://m.apaipian.com/activity/vi', // 分享链接
-            imgUrl: 'http://m.apaipian.com/resources/images/publicity/pp.jpg', // 分享图标
+            imgUrl: 'http://m.apaipian.com/resources/images/employee/em1.png', // 分享图标
             type: 'link', // 分享类型,music、video或link，不填默认为link
             dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
         });
