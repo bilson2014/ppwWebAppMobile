@@ -12,7 +12,7 @@ var UrlDo = "apaipian.com";
 var Url = "apaipian.com";
 //绑定域名流程phone
 //var phoneUrl = "test.apaipian.com:7070/project/phone/";
-var phoneUrl = "apaipian.com:8087/project/phone/";
+var phoneUrl = "m.apaipian.com:8087/project/phone/";
 
 $().ready(function(){
 	windowChange(); 
