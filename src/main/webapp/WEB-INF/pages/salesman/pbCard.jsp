@@ -39,7 +39,7 @@
 				      </video>  
 				 </div>  
 				 <img class="pageOneIcon" src="/resources/images/salesMan/pbCard/pageOneIcon.png">
-				 <img src="/resources/images/salesMan/pbCard/pageOne.jpg">
+				 <img class="pageOne" src="/resources/images/salesMan/pbCard/pageOne.jpg">
 		     </div>                     			  
 		     <div class="swiper-slide">
 			       <div class="full-video" id="playFullVideo" data-type-id="61" data-type="mpa-video" style="margin: 0rem; display: block; width:100%"> 
@@ -57,7 +57,7 @@
 			             </a>
 			        </div> -->
 			        <div class='top'>
-			            <img src="/resources/images/salesMan/pbCard/pageThree.jpg">
+			            <img class="pageThree" src="/resources/images/salesMan/pbCard/pageThree.jpg">
 			        </div>
 			        <div class='cen'>
 						<form id="order-form" role="form"  method="post" autocomplete="off" accept-charset="UTF-8">

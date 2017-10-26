@@ -157,7 +157,7 @@ function init() {
 	       // loop:true,
 	        onSlideNextEnd: function(swiper){
 	        	var index = swiper.activeIndex;
-	        	 if(index != 2){
+	        	 if(index == 0){
 	        		 $('.spIcon').show();
 	        	 }
 	            if(index == 1){
@@ -169,8 +169,9 @@ function init() {
 	     				document.getElementById('toPlayFullVideo').play();
 	     			});
 	            	$('.serWord').removeClass('animation');
+	            	document.getElementById('toPlayVideo').pause();
 	            }
-	            if(index == 2){
+	            if(index == 1){
 	            	$('.spIcon').hide();
 	            }
 	           }

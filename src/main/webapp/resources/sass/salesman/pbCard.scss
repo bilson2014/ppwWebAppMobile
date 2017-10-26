@@ -17,11 +17,31 @@ body {
     background: white !important;
 }
 
+.stepBtn-1{
+    background: #f5f5f5 !important;
+}
+
+.pageOne{
+    position: absolute;
+    bottom: 2.5rem;
+    height: auto !important;
+    left:0;
+}
+
+.mpa-video{
+    left:0;
+}
+
+.pageThree{
+    height: auto !important;
+}
+
 .pageOneIcon {
     width: 3.885rem !important;
     height: 1.92rem !important;
     position: absolute;
     left: 0.4rem;
+    z-index: 99999999999999999999999999;
 }
 
 #icon {
@@ -43,19 +63,22 @@ body {
         position: absolute; // top: 0;
         height: 100%;
         width: 100%;
+        left:0;
     }
     .cen {
         width: 100%;
         height: 28%;
         z-index: 2;
         position: absolute;
-        bottom: 0.5rem;
+        bottom: 0rem;
+        left:0px;
         background: white;
         .order {
             .phone {
-                width: 90%;
+                width: 85%;
                 margin: 0 auto;
                 margin-bottom: 0.5rem;
+                position: relative;
                 #phone {
                     width: 100%;
                     border: none;
@@ -63,15 +86,15 @@ body {
                     height: 1rem;
                     background-color: #ebebeb;
                     border-radius: 5px;
-                    line-height: 30px;
-                    padding-left: 3%;
+                    line-height: 1rem;
+                    text-indent: 0.2rem;
                     outline: none;
                     position: relative;
-                    color:$gray;
+                    color: $gray !important;
                 }
                 .var {
                     font-size: $size30;
-                    color:#4d4d4d;
+                    color: #4d4d4d;
                     height: 0.8rem;
                     line-height: 0.8rem;
                     padding-left: 0.5rem;
@@ -82,26 +105,26 @@ body {
                 }
                 .error {
                     color: #f95d64;
-                    font-size: 12px;
+                    font-size: $size30;
                     text-align: left;
                     margin-top: 13px;
                 }
             }
             .number {
-                width: 90%;
+                width: 85%;
                 margin: 0 auto;
                 margin-bottom: 0.5rem;
                 #num {
                     width: 100%;
                     border: none;
-                    font-size: 13px;
+                    font-size: $size30;
                     height: 1rem;
                     background-color: #ebebeb;
                     border-radius: 5px;
-                    line-height: 30px;
-                    padding-left: 3%;
+                    line-height: 1rem;
+                    text-indent: 0.2rem;
                     outline: none;
-                    color:$gray;
+                    color: $gray !important;
                 }
                 .error {
                     color: #f95d64;
@@ -111,7 +134,7 @@ body {
                 }
             }
             .btnSub {
-                width: 90%;
+                width: 85%;
                 height: 1rem;
                 line-height: 1rem;
                 margin: 0 auto;
@@ -120,6 +143,7 @@ body {
                 border: none;
                 border-radius: 5px;
                 font-size: $size36;
+                padding: 0;
             }
         }
     }
@@ -180,5 +204,62 @@ body {
         // bottom: 0;
         height: 15%;
         width: 100%;
+    }
+}
+
+
+
+.icon img {
+    position: relative;
+    top:-0.3rem;
+    -webkit-animation: hideShows 1s infinite linear !important;
+    -moz-animation: hideShows 1s infinite linear !important;
+    -o-animation: hideShows 1s infinite linear !important;
+    animation: hideShows 1s infinite linear !important;
+}
+
+
+
+@-webkit-keyframes hideShows {
+    0% {
+        top: 0px;
+        opacity: 0
+    }
+    100% {
+        top: -0.3rem ;
+        opacity: 1
+    }
+}
+
+@-moz-keyframes hideShows {
+    0% {
+        top: 0px;
+        opacity: 0
+    }
+    100% {
+        top: -0.3rem;
+        opacity: 1
+    }
+}
+
+@-o-keyframes hideShows {
+    0% {
+        top: 0px;
+        opacity: 0
+    }
+    100% {
+        top: -0.3rem;
+        opacity: 1
+    }
+}
+
+@keyframes hideShows {
+    0% {
+        top: 0px;
+        opacity: 0
+    }
+    100% {
+        top: -0.3rem;
+        opacity: 1
     }
 }
