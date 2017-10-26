@@ -1,0 +1,266 @@
+﻿@import "common";
+@import "buttons";
+@import "video";
+@import "bootstrap-grid";
+@import "fontSize";
+@import "compass/typography/text/ellipsis";
+@import "common_portal";
+body {
+    height: 100%;
+    font-family: "Microsoft YaHei", "微软雅黑", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1.4rem;
+    color: #333;
+    background-color: white !important;
+}
+
+.swiper-slide {
+    background: white !important;
+}
+
+.stepBtn-1 {
+    background: #fff !important;
+}
+
+.pageOne {
+    position: absolute;
+    bottom: 2.5rem;
+    height: auto !important;
+    left: 0;
+}
+
+.mpa-video {
+    left: 0;
+}
+
+.pageThree {
+    height: auto !important;
+}
+
+.pageOneIcon {
+    width: 3.885rem !important;
+    height: 1.92rem !important;
+    position: absolute;
+    left: 0.4rem;
+    z-index: 99999999999999999999999999;
+}
+
+#icon {
+    width: 2.86rem;
+    height: 1.09rem;
+}
+
+.rotate {
+    transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+}
+
+.swiper-slide {
+    position: relative;
+    .one {
+        height: auto;
+        position: absolute;
+    }
+    .two {}
+    .top {
+        position: absolute; // top: 0;
+        height: 100%;
+        width: 100%;
+        left: 0;
+    }
+    .cen {
+        width: 100%;
+        height: 28%;
+        z-index: 2;
+        position: absolute;
+        bottom: 0rem;
+        left: 0px;
+        background: white;
+        .order {
+            .phone {
+                width: 85%;
+                margin: 0 auto;
+                margin-bottom: 0.5rem;
+                position: relative;
+                #phone {
+                    width: 100%;
+                    border: none;
+                    font-size: $size30;
+                    height: 1rem;
+                    background-color: #ebebeb;
+                    border-radius: 5px;
+                    line-height: 1rem;
+                    text-indent: 0.2rem;
+                    outline: none;
+                    position: relative;
+                    color: $gray !important;
+                }
+                .var {
+                    font-size: $size30;
+                    color: #4d4d4d;
+                    height: 0.8rem;
+                    line-height: 0.8rem;
+                    padding-left: 0.5rem;
+                    position: absolute;
+                    right: 0.5rem;
+                    top: 0.15rem;
+                    border-left: 1px solid #4d4d4d;
+                }
+                .error {
+                    color: #f95d64;
+                    font-size: $size30;
+                    text-align: left;
+                    margin-top: 13px;
+                }
+            }
+            .number {
+                width: 85%;
+                margin: 0 auto;
+                margin-bottom: 0.5rem;
+                #num {
+                    width: 100%;
+                    border: none;
+                    font-size: $size30;
+                    height: 1rem;
+                    background-color: #ebebeb;
+                    border-radius: 5px;
+                    line-height: 1rem;
+                    text-indent: 0.2rem;
+                    outline: none;
+                    color: $gray !important;
+                }
+                .error {
+                    color: #f95d64;
+                    font-size: 12px;
+                    text-align: left;
+                    margin-top: 8px;
+                }
+            }
+            .btnSub {
+                width: 85%;
+                height: 1rem;
+                line-height: 1rem;
+                margin: 0 auto;
+                color: #fff;
+                background-color: #fa535b;
+                border: none;
+                border-radius: 5px;
+                font-size: $size36;
+                padding: 0;
+            }
+        }
+    }
+    .model {
+        background-color: rgba(0, 0, 0, 0.7);
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        z-index: 20;
+        display: none;
+        .success {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -4.5rem;
+            margin-left: -4.5rem;
+            width: 9rem;
+            height: 9rem;
+            background: white;
+            text-align: center;
+            border-radius: 18px;
+            img {
+                width: 40%;
+                height: 40%;
+                margin-top: 0.9rem;
+            }
+            #showStatues {
+                color: #333;
+                font-size: 0.65rem;
+                margin-top: 0.6rem;
+                margin-bottom: 0.4rem;
+            }
+            #showText {
+                color: #333;
+                width: 80%;
+                margin: 0 auto;
+                line-height: initial;
+                font-size: 0.5rem;
+                margin-bottom: 0.2rem;
+            }
+            #checkSuccess {
+                color: white;
+                font-size: 0.36rem;
+                width: 4rem;
+                height: 1rem;
+                line-height: 1rem;
+                text-align: center;
+                border-radius: 100px;
+                background: #fe5453;
+                box-shadow: 0 4px 8px 0;
+                margin: 0 auto;
+                margin-top: 0.4rem;
+            }
+        }
+    }
+    .bto {
+        // position: absolute;
+        // bottom: 0;
+        height: 15%;
+        width: 100%;
+    }
+}
+
+.icon img {
+    position: relative;
+    top: -0.3rem;
+    -webkit-animation: hideShows 1s infinite linear !important;
+    -moz-animation: hideShows 1s infinite linear !important;
+    -o-animation: hideShows 1s infinite linear !important;
+    animation: hideShows 1s infinite linear !important;
+}
+
+@-webkit-keyframes hideShows {
+    0% {
+        top: 0px;
+        opacity: 0
+    }
+    100% {
+        top: -0.3rem;
+        opacity: 1
+    }
+}
+
+@-moz-keyframes hideShows {
+    0% {
+        top: 0px;
+        opacity: 0
+    }
+    100% {
+        top: -0.3rem;
+        opacity: 1
+    }
+}
+
+@-o-keyframes hideShows {
+    0% {
+        top: 0px;
+        opacity: 0
+    }
+    100% {
+        top: -0.3rem;
+        opacity: 1
+    }
+}
+
+@keyframes hideShows {
+    0% {
+        top: 0px;
+        opacity: 0
+    }
+    100% {
+        top: -0.3rem;
+        opacity: 1
+    }
+}
