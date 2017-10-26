@@ -148,9 +148,7 @@ function init() {
 	    document.getElementById('toPlayVideo').play();
 		$('#toPlayVideo').off('click').on('click',function(){
 			document.getElementById('toPlayVideo').play();
-		});
-		
-	
+		});		
        var swiperV = new Swiper('.swiperVertical', {
 	        direction: 'vertical',
 	        pagination: '.swiper-pagination-v',
@@ -173,14 +171,29 @@ function init() {
 	            }
 	            if(index == 2){
 	            	$('.spIcon').hide();
+	            }	            
+	            if (index!=0){
+	            	 document.addEventListener("WeixinJSBridgeReady", function () {
+	         	    	document.getElementById('toPlayVideo').pause();
+	         	     }, false);
+	         	    document.getElementById('toPlayVideo').pause();         		
 	            }
+	            if (index==0){
+	            	 document.addEventListener("WeixinJSBridgeReady", function () {
+	            		 document.getElementById('toPlayVideo').play();
+		         	     }, false);
+	            	     document.getElementById('toPlayVideo').play();
+		         		$('#toPlayVideo').off('click').on('click',function(){
+		         			document.getElementById('toPlayVideo').play();
+		         	});
+	            }
+	            
 	           }
 	    });
 }
 	
 
-function initShareNew(){
-	
+function initShareNew(){	
 	wx.config({
         debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
         appId: 'wxb5f2540cff5*****', // 必填，公众号的唯一标识
