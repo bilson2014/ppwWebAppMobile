@@ -67,11 +67,10 @@
 	<mvc:view-controller path="/activity/Pbusinesscard" view-name="/salesman/pbCard" />
 	
 	<!-- test -->
-	
 	<mvc:view-controller path="/cosmetic" view-name="/salesman/cosmetic" />
 	<mvc:view-controller path="/cosmetic2" view-name="/salesman/cosmetic2" />
 	<mvc:view-controller path="/employ" view-name="/salesman/employment" />
-	<mvc:view-controller path="/activity/vi" view-name="/salesman/publicity" />	
+	<mvc:view-controller path="/activity/vi" view-name="/salesman/publicity" />
 	<mvc:view-controller path="/activity/airwing" view-name="/salesman/flyPlay" />
 
 	<!-- 产品线End -->
@@ -89,9 +88,6 @@
 	<mvc:view-controller path="/pLogin" view-name="/loginChoose/proPhoneLogin" />
     <mvc:view-controller path="/userInfo" view-name="/customer/userInfo" />
     <mvc:view-controller path="/cost/cal" view-name="/cost/phoneCost" />
-    
-    
-   
     
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver"
 		p:prefix="/WEB-INF/pages/" p:suffix=".jsp" />

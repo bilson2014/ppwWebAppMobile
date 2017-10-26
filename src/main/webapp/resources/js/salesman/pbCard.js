@@ -62,7 +62,8 @@ function success(){
 					productId:-1,
 					teamId:-1,
 					serviceId:-1,
-					phoneCode : $('#num').val(),
+					phoneCode:$('#num').val(),
+					target:'Pbusinesscard',
 					indentSource : 2//订单来源编号			
 				  });	
 			}			 
