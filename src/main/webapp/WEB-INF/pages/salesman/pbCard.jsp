@@ -10,7 +10,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=9,chrome=1">
 	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0, user-scalable=0" name="viewport" />
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0, user-scalable=no" name="viewport" />
 	<meta name="keywords" content="">
 	<meta name="description" content="精准覆盖10000+用户">
 	<meta name="baidu-site-verification" content="dMz6jZpIwd" />
@@ -21,7 +21,6 @@
 	<![endif]-->
 	<script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
 	<link rel="stylesheet" href="/resources/lib/swiper/swiper.min.css">
-	<link rel="stylesheet" href="/resources/css/salesman/cosmetic.css">
 	<link rel="stylesheet" href="/resources/css/salesman/pbCard.css">
 </head>
 <div class="hidden">
@@ -38,13 +37,13 @@
 				           <source type="video/mp4" src="http://106.75.77.53:8888/group1/M00/00/78/CgpsbFnwLOOAIZKwAA7fUpvV37A429.mp4"> 
 				      </video>  
 				 </div>  
-				 <img class="pageOneIcon" src="/resources/images/salesMan/pbCard/pageOneIcon.png">
-				 <img src="/resources/images/salesMan/pbCard/pageOne.jpg">
+				<!--  <img class="pageOneIcon" src="/resources/images/salesMan/pbCard/pageOneIcon.png"> -->
+				 <img class="pageOne" src="/resources/images/salesMan/pbCard/pageOne.jpg">
 		     </div>                     			  
-		     <div class="swiper-slide">
+		     <div class="swiper-slide twoSlide">
 			       <div class="full-video" id="playFullVideo" data-type-id="61" data-type="mpa-video" style="margin: 0rem; display: block; width:100%"> 
 				                 <span class="mpa-video-play-icon"></span> 
-				                 <video  playsinline="true" webkit-playsinline="true"   id="toPlayFullVideo"  loop="loop" x-webkit-airplay="true" webkit-playsinline="" playsinline="true" preload="auto" poster="/resources/images/salesMan/pbCard/pageTwoVideo.jpg" style="width:100%;  margin-top: -1px;"> 
+				                 <video  playsinline="true" webkit-playsinline="true"   id="toPlayFullVideo"  loop="loop" x-webkit-airplay="true" webkit-playsinline="" playsinline="true" preload="auto" poster="/resources/images/salesMan/pbCard/pageTwoVideo.jpg"> 
 				                     <source type="video/mp4" src="http://106.75.77.53:8888/group1/M00/00/7A/CgptuFnwXceAQW53AD5DNbwVtYA150.mp4"> 
 				                 </video> 
 					         </div> 
@@ -57,27 +56,29 @@
 			             </a>
 			        </div> -->
 			        <div class='top'>
-			            <img src="/resources/images/salesMan/pbCard/pageThree.jpg">
+			            <img class="pageThree" src="/resources/images/salesMan/pbCard/pageThree.jpg">
 			        </div>
 			        <div class='cen'>
-						<form id="order-form" role="form"  method="post" autocomplete="off" accept-charset="UTF-8">
+				<%-- 		<form id="order-form" role="form"  method="post" autocomplete="off" accept-charset="UTF-8">
 						    <input type="hidden" id="csrftoken" name="csrftoken" value="${csrftoken}"/>
 						    <input type="hidden" id="token" name="token" value="${token}"/>
 						    <input type="hidden" id="indentName" name="indentName" value="线上-活动"/>
-							<input type="hidden" id="indent_recomment" name="indent_recomment" value="123"/>
+							<input type="hidden" id="indent_recomment" name="indent_recomment" value="123"/> --%>
 					        <div class="order">
 					             <div class='phone'>
-					                  <input type="text" maxlength="20" id="phone" placeholder='请输入您的手机号'/>
+					                  <input class="input" type="text" maxlength="20" id="phone" placeholder='请输入您的手机号'/>
 					                  <div class="var" id='varnum' >获取验证码</div>
 					                  <p class="error" id='phoneerror'></p>
 					              </div>
-					              <div class='number'>
-					                   <input  type="text" maxlength="10"  id="num"  placeholder='请输入验证码'/>
-					                   <p class="error" id='numerror'></p>       
-					               </div>     					                  
-					               <button type="button" class="btnSub" id='btnSub'>现在下单</button>
+					              <div class='phone'>
+					                   <input class="input"  type="text" maxlength="10"  id="num"  placeholder='请输入验证码'/>
+					                   <p class="error" id='numerror'></p>
+					              </div>  
+					               <div class='phone'>
+					                   <input type="button" class="btnSub"  id='btnSub' value="现在下单"></input>
+					               </div>   			                  
 					         </div>					             
-				          </form>
+				         <!--  </form> -->
 			          </div>  
 			        <div class='model' id='orderSuccess'>
 					        <div class='success'>

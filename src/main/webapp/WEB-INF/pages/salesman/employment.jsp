@@ -28,7 +28,6 @@
       <img  src="/resources/images/employee/em1.png">
 </div>
 <body>
-
     <div class="swiper-container swiperVertical swiper-container-vertical">
 		 <div class="swiper-wrapper ">
 			          <div class="swiper-slide banner stepBtn-1">

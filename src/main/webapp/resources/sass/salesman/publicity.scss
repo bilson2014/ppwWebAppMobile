@@ -34,72 +34,73 @@ body {
             height: 100%;
             background: #000;
             .phone {
-                width: 75%;
+                width: 8.5rem;
                 height: 55px;
                 margin: 0 auto;
                 #phone {
-                    width: 100%;
+                    width: 97%;
                     border: none;
-                    font-size: 13px;
-                    height: 30px;
+                    font-size: 0.4rem;
+                    height: 1rem;
                     background-color: transparent;
-                    border-radius: 5px;
-                    line-height: 30px;
+                    border-radius: 0.2rem;
+                    line-height: 1rem;
                     padding-left: 3%;
                     border: 1px solid #5e9fc9;
                     outline: none;
                 }
                 .var {
-                    margin-top: -27px;
-                    line-height: 21px;
+                    margin-top: -0.9rem;
+                    line-height: 0.65rem;
                     color: #d2dfe8;
                     background-color: #5385aa;
                     width: 30%;
-                    height: 21px;
-                    font-size: 13px;
+                    height: 0.65rem;
+                    font-size: 0.4rem;
                     border-radius: 5px;
-                    margin-left: 72%;
+                    margin-left: 68%;
                 }
                 .error {
                     color: #f95d64;
-                    font-size: 12px;
+                    font-size: 0.12rem;
                     text-align: left;
-                    margin-top: 13px;
+                    margin-top: 0.2rem;
                 }
             }
             .number {
-                width: 75%;
+                width: 8.5rem;
                 height: 55px;
                 margin: 0 auto;
                 #num {
-                    width: 100%;
+                    width: 97%;
                     border: none;
-                    font-size: 13px;
-                    height: 30px;
+                    font-size: 0.4rem;
+                    height: 1rem;
                     background-color: transparent;
                     border-radius: 5px;
-                    line-height: 30px;
+                    line-height: 1rem;
                     padding-left: 3%;
                     border: 1px solid #5e9fc9;
                     outline: none;
                 }
                 .error {
                     color: #f95d64;
-                    font-size: 12px;
+                    font-size: 0.12rem;
                     text-align: left;
-                    margin-top: 8px;
+                    margin-top: 0.08rem;
                 }
             }
             .btnSub {
-                width: 75%;
-                height: 25px;
+                width: 7.5rem;
+                height: 1rem;
                 margin: 0 auto;
+                display: block;
                 color: #fff;
                 background-color: #fa535b;
                 border: none;
                 border: 1px solid #a12831;
                 border-radius: 5px;
-                font-size: 17px;
+                font-size: 0.6rem;
             }
         }
     }
@@ -160,5 +161,10 @@ body {
         // bottom: 0;
         height: 15%;
         width: 100%;
+    }
+    #toPlayVideo {
+        position: absolute;
+        top: 0;
+        left: 0;
     }
 }

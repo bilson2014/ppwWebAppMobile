@@ -9,7 +9,9 @@ $().ready(function() {
 	initShareNew();
 	success();	
 	var screenWidth = document.documentElement.clientWidth;
+	var screenHeight = document.documentElement.clientHeight;
 	$('body').css('width',screenWidth); 
+	/*$('body').css('height',screenHeight); */
 });
 
 
@@ -137,9 +139,8 @@ function setHeight(){
 	  var screenWidth = document.documentElement.clientWidth;
       var setHeight= screenWidth/16*9;
 	  $('#playVideo').css('height',setHeight);
-	  var iconHeight=$('.pageOneIcon').height();
-      var top = setHeight - (iconHeight/2);
-      $('.pageOneIcon').css('top',top);
+	  var imgH = setHeight+15;
+      $('.pageOne').css('top',imgH);
 }
 
 function init() {
@@ -157,7 +158,7 @@ function init() {
 	       // loop:true,
 	        onSlideNextEnd: function(swiper){
 	        	var index = swiper.activeIndex;
-	        	 if(index != 2){
+	        	 if(index == 0){
 	        		 $('.spIcon').show();
 	        	 }
 	            if(index == 1){
@@ -169,8 +170,12 @@ function init() {
 	     				document.getElementById('toPlayFullVideo').play();
 	     			});
 	            	$('.serWord').removeClass('animation');
+	            	document.getElementById('toPlayVideo').pause();
 	            }
-	            if(index == 2){
+	            if(index != 1){
+	            	document.getElementById('toPlayFullVideo').pause();
+	            }
+	            if(index == 1){
 	            	$('.spIcon').hide();
 	            }
 	           }
