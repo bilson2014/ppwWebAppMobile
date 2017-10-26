@@ -24,7 +24,7 @@
 	<link rel="stylesheet" href="/resources/css/salesman/flyPlay.css">
 </head>
 <div class="hidden">  
-      <img  src="/resources/images/salesMan/flyPlay/share.jpg">
+      <img  src="/resources/images/salesMan/flyPlay/share.png">
 </div>
 
 <body>
