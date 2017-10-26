@@ -63,7 +63,8 @@ function success(){
 					teamId:-1,
 					serviceId:-1,
 					phoneCode : $('#num').val(),
-					indentSource : 2//订单来源编号			
+					indentSource : 2,//订单来源编号	
+					target:'vi'
 				  });	
 			}			 
 		}				 
