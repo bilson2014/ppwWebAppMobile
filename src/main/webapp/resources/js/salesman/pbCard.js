@@ -9,7 +9,9 @@ $().ready(function() {
 	initShareNew();
 	success();	
 	var screenWidth = document.documentElement.clientWidth;
+	var screenHeight = document.documentElement.clientHeight;
 	$('body').css('width',screenWidth); 
+	/*$('body').css('height',screenHeight); */
 });
 
 
