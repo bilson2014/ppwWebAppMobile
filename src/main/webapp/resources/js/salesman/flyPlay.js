@@ -180,6 +180,12 @@ function init() {
 	            if(index == 1){
 	            	$('.spIcon').hide();
 	            }
+	            if(index == 2){
+	            	 $('.spIcon').show();	
+	            }
+	            if(index == 3){
+	            	$('.spIcon').hide();	
+	            }
 	           }
 	    });
 }

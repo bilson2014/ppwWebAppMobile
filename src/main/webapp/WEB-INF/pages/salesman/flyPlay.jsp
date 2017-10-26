@@ -55,7 +55,7 @@
 			 <div class="swiper-slide">
 			    
 			        <div class='top'>
-			            <img class="pageThree" src="/resources/images/salesMan/pbCard/pageThree.jpg">
+			            <img class="pageThree" src="/resources/images/salesMan/flyPlay/dosl.png">
 			        </div>
 			        <div class='cen'>
 				
