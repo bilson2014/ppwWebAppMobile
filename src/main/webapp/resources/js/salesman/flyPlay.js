@@ -2,17 +2,14 @@ var InterValObj; // timer变量，控制时间
 var count = 60; // 间隔函数，1秒执行  
 var sendCodeFlag = true;
 $().ready(function() {
-	
 	var localsrc=window.location.href;
-	
 	init();
 	setHeight();
 	initShareNew();
 	success();	
-
+	var screenWidth = document.documentElement.clientWidth;
+	$('body').css('width',screenWidth); 
 });
-
-
 
 function varphone(){
 	var phone=$('#phone').val();
@@ -57,7 +54,6 @@ function success(){
 				 {	
 					csrftoken:$("#csrftoken").val(),
 					indent_tele:$('#phone').val(),
-//					indent_recomment:$("#submit-indent-recomment").text(),
 					indentName:'线上-活动',//订单名称
 					productId:-1,
 					teamId:-1,
@@ -80,8 +76,7 @@ function success(){
 	})
 	//报名成功弹框确认事件
 	$('#checkSuccess').on('click',function(){
-		$('#orderSuccess').attr('style','display:none;');
-		
+		$('#orderSuccess').attr('style','display:none;');		
 	})
 }
 //AJAX POST
@@ -130,15 +125,22 @@ function verification(phone,ID){
 			$('#'+ID).text('重新获取');
 			$('#'+ID).removeAttr('disabled');
 		}			
-	}, getContextPath() + '/login/verification/' + phone, null);		
-		
+	}, getContextPath() + '/login/verification/' + phone, null);				
 }
-
-
 function setHeight(){
-	  var screenWidth = document.documentElement.clientWidth;
+//	  var screenWidth = document.documentElement.clientWidth;
+//      var setHeight= screenWidth/16*9;
+//	  $('#playVideo').css('height',setHeight);
+//	  var iconHeight=$('.pageOneIcon').height();
+//      var top = setHeight - (iconHeight/2);
+//      $('.pageOneIcon').css('top',top);
+//      
+      
+      var screenWidth = document.documentElement.clientWidth;
       var setHeight= screenWidth/16*9;
 	  $('#playVideo').css('height',setHeight);
+	  var imgH = setHeight+15;
+      $('.pageOne').css('top',imgH);
 }
 
 function init() {
@@ -148,7 +150,7 @@ function init() {
 	    document.getElementById('toPlayVideo').play();
 		$('#toPlayVideo').off('click').on('click',function(){
 			document.getElementById('toPlayVideo').play();
-		});		
+		});
        var swiperV = new Swiper('.swiperVertical', {
 	        direction: 'vertical',
 	        pagination: '.swiper-pagination-v',
@@ -156,9 +158,9 @@ function init() {
 	       // loop:true,
 	        onSlideNextEnd: function(swiper){
 	        	var index = swiper.activeIndex;
-//	        	 if(index != 3){
-//	        		 $('.spIcon').show();
-//	        	 }
+	        	 if(index == 0){
+	        		 $('.spIcon').show();	        		 
+	        	 }
 	            if(index == 1){
 	            	document.addEventListener("WeixinJSBridgeReady", function () {
 	     		    	document.getElementById('toPlayFullVideo').play();
@@ -168,44 +170,21 @@ function init() {
 	     				document.getElementById('toPlayFullVideo').play();
 	     			});
 	            	$('.serWord').removeClass('animation');
+	            	document.getElementById('toPlayVideo').pause();
+	            }
+	            if(index != 1){
+	            	document.getElementById('toPlayFullVideo').pause();
+	            }
+	            if(index == 1){
 	            	$('.spIcon').hide();
 	            }
-	            if(index == 3){
-	            	$('.spIcon').hide();
-	            }	            
-	            if (index!=0){
-	            	 document.addEventListener("WeixinJSBridgeReady", function () {
-	         	    	document.getElementById('toPlayVideo').pause();
-	         	     }, false);
-	         	    document.getElementById('toPlayVideo').pause();         		
-	            }
-	            if (index != 1){
-	            	document.addEventListener("WeixinJSBridgeReady", function () {
-	     		    	document.getElementById('toPlayFullVideo').pause();
-	     		     }, false);
-	     		    document.getElementById('toPlayFullVideo').pause();
-	     			
-	            }
-	            if (index==2){
-	            	 $('.spIcon').show();
-	            }
-	            if (index==0){
-	            	 document.addEventListener("WeixinJSBridgeReady", function () {
-	            		 document.getElementById('toPlayVideo').play();
-		         	     }, false);
-	            	     document.getElementById('toPlayVideo').play();
-		         		$('#toPlayVideo').off('click').on('click',function(){
-		         			document.getElementById('toPlayVideo').play();
-		         	});
-		         	$('.spIcon').show();
-	            }
-	            
 	           }
 	    });
 }
 	
 
-function initShareNew(){	
+function initShareNew(){
+	
 	wx.config({
         debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
         appId: 'wxb5f2540cff5*****', // 必填，公众号的唯一标识
@@ -216,10 +195,10 @@ function initShareNew(){
     });
     wx.ready(function(){
         wx.onMenuShareAppMessage({
-        	title: '品牌套餐 重磅钜惠', // 分享标题
-            desc: '2000元现金红包到账，请注意查收!', // 分享描述
+        	title: '中飞艾维-电力巡检领导者', // 分享标题
+            desc: '无人机一站式电力飞巡服务', // 分享描述
             link: 'http://m.apaipian.com/activity/vi', // 分享链接
-            imgUrl: 'http://m.apaipian.com/resources/images/publicity/pp.jpg', // 分享图标
+            imgUrl: 'http://m.apaipian.com/resources/images/salesMan/flyPlay/share.jpg', // 分享图标
             type: 'link', // 分享类型,music、video或link，不填默认为link
             dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
         /*    success: function () { 
@@ -230,10 +209,10 @@ function initShareNew(){
     /*  wx.error(function(res){
         });*/
         wx.onMenuShareTimeline({
-            title: '品牌套餐 重磅钜惠', // 分享标题
-            desc: '2000元现金红包到账，请注意查收!', // 分享描述
+            title: '中飞艾维-电力巡检领导者', // 分享标题
+            desc: '无人机一站式电力飞巡服务', // 分享描述
             link: 'http://m.apaipian.com/activity/vi', // 分享链接
-            imgUrl: 'http://m.apaipian.com/resources/images/publicity/pp.jpg', // 分享图标
+            imgUrl: 'http://m.apaipian.com/resources/images/salesMan/flyPlay/share.jpg', // 分享图标
             type: 'link', // 分享类型,music、video或link，不填默认为link
             dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
         });
