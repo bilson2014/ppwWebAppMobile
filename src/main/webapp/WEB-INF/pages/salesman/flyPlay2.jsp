@@ -14,16 +14,16 @@
 	<meta name="keywords" content="">
 	<meta name="description" content="无人机一站式电力飞巡服务">
 	<meta name="baidu-site-verification" content="dMz6jZpIwd" />
-	<title>中飞艾维-电力巡检领导者</title>
-   
+	<title>中飞艾维-电力巡检领导者</title>  
 	<!--[if lt IE 9]>
 		<script>window.html5 || document.write('<script src="html5shivJs"><\/script>')</script>
 	<![endif]-->
 	<script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
 	<link rel="stylesheet" href="/resources/lib/swiper/swiper.min.css">
+	<link rel="stylesheet" href="/resources/css/salesman/cosmetic.css">
 	<link rel="stylesheet" href="/resources/css/salesman/flyPlay.css">
 </head>
-<div class="hidden">  
+<div class="hidden">
       <img  src="/resources/images/salesMan/flyPlay/share.jpg">
 </div>
 
@@ -35,45 +35,46 @@
 				      <span class="mpa-video-play-icon"></span> 
 				      <video  playsinline="true" webkit-playsinline="true"  id="toPlayVideo"  loop="loop" x-webkit-airplay="true" webkit-playsinline="" playsinline="true" preload="auto" poster="/resources/images/salesMan/flyPlay/small.jpg" style="width:100%;  margin-top: -1px;"> 
 				           <source type="video/mp4" src="http://106.75.14.109:8888/group1/M00/00/B3/CgpmTlnxZn-AO7iUABZysWYDWwA861.mp4"> 
-				      </video>  
+				      </video> 
 				 </div>  
-				
 				 <img class="pageOne" src="/resources/images/salesMan/flyPlay/fly1.png">
 		     </div>                     			  
-		     <div class="swiper-slide twoSlide">
+		     <div class="swiper-slide">
 			       <div class="full-video" id="playFullVideo" data-type-id="61" data-type="mpa-video" style="margin: 0rem; display: block; width:100%"> 
-				                 <span class="mpa-video-play-icon"></span> 
-				                 <video  playsinline="true" webkit-playsinline="true"   id="toPlayFullVideo"  loop="loop" x-webkit-airplay="true" webkit-playsinline="" playsinline="true" preload="auto" poster="/resources/images/salesMan/flyPlay/big.jpg"> 
-				                     <source type="video/mp4" src="http://106.75.14.109:8888/group1/M00/00/B3/CgpmTlnxZreASZOpAEQ3sBnAyxU783.mp4"> 
-				                 </video> 
-					         </div> 
-	          </div> 
-	           <div class="swiper-slide">
+				        <span class="mpa-video-play-icon"></span> 
+				        <video  playsinline="true" webkit-playsinline="true"   id="toPlayFullVideo"  loop="loop" x-webkit-airplay="true" webkit-playsinline="" playsinline="true" preload="auto" poster="/resources/images/salesMan/flyPlay/big.jpg" style="width:100%;  margin-top: -1px;"> 
+				             <source type="video/mp4" src="http://106.75.14.109:8888/group1/M00/00/B3/CgpmTlnxZreASZOpAEQ3sBnAyxU783.mp4"> 
+				        </video>
+					</div> 
+	          </div>
+	        
+	         <div class="swiper-slide">
 			      <img class='one' src="/resources/images/salesMan/flyPlay/fly3.png">
 			      <img class='two' src="/resources/images/salesMan/flyPlay/fly33.png">
-	         </div>
+	         </div> 
 			 <div class="swiper-slide">
-			    
 			        <div class='top'>
 			            <img class="pageThree" src="/resources/images/salesMan/pbCard/pageThree.jpg">
 			        </div>
 			        <div class='cen'>
-				
+						<form id="order-form" role="form"  method="post" autocomplete="off" accept-charset="UTF-8">
+						    <input type="hidden" id="csrftoken" name="csrftoken" value="${csrftoken}"/>
+						    <input type="hidden" id="token" name="token" value="${token}"/>
+						    <input type="hidden" id="indentName" name="indentName" value="线上-活动"/>
+							<input type="hidden" id="indent_recomment" name="indent_recomment" value="123"/>
 					        <div class="order">
 					             <div class='phone'>
-					                  <input class="input" type="text" maxlength="20" id="phone" placeholder='请输入您的手机号'/>
+					                  <input type="text" maxlength="20" id="phone" placeholder='请输入您的手机号'/>
 					                  <div class="var" id='varnum' >获取验证码</div>
 					                  <p class="error" id='phoneerror'></p>
 					              </div>
-					              <div class='phone'>
-					                   <input class="input"  type="text" maxlength="10"  id="num"  placeholder='请输入验证码'/>
-					                   <p class="error" id='numerror'></p>
-					              </div>  
-					               <div class='phone'>
-					                   <input type="button" class="btnSub"  id='btnSub' value="现在下单"></input>
-					               </div>   			                  
+					              <div class='number'>
+					                   <input  type="text" maxlength="10"  id="num"  placeholder='请输入验证码'/>
+					                   <p class="error" id='numerror'></p>       
+					               </div>     					                  
+					               <button type="button" class="btnSub" id='btnSub'>现在下单</button>
 					         </div>					             
-				         <!--  </form> -->
+				          </form>
 			          </div>  
 			        <div class='model' id='orderSuccess'>
 					        <div class='success'>
@@ -82,8 +83,7 @@
 					            <div id='showText'>客服人员会尽快和您取得联系</div>
 					            <div id='checkSuccess'>确认</div>					             
 					         </div>
-					  </div>
-			          <!-- <img class='bto' src="/resources/images/publicity/publicity3.png">     -->
+					  </div>			         
 			  </div>          
          </div>  
          <div class="icon spIcon">

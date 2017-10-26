@@ -2,7 +2,6 @@ var InterValObj; // timer变量，控制时间
 var count = 60; // 间隔函数，1秒执行  
 var sendCodeFlag = true;
 $().ready(function() {
-	
 	var localsrc=window.location.href;
 	init();
 	setHeight();
@@ -11,7 +10,6 @@ $().ready(function() {
 	var screenWidth = document.documentElement.clientWidth;
 	$('body').css('width',screenWidth); 
 });
-
 
 function varphone(){
 	var phone=$('#phone').val();
@@ -78,8 +76,7 @@ function success(){
 	})
 	//报名成功弹框确认事件
 	$('#checkSuccess').on('click',function(){
-		$('#orderSuccess').attr('style','display:none;');
-		
+		$('#orderSuccess').attr('style','display:none;');		
 	})
 }
 //AJAX POST
@@ -128,18 +125,22 @@ function verification(phone,ID){
 			$('#'+ID).text('重新获取');
 			$('#'+ID).removeAttr('disabled');
 		}			
-	}, getContextPath() + '/login/verification/' + phone, null);		
-		
+	}, getContextPath() + '/login/verification/' + phone, null);				
 }
-
-
 function setHeight(){
-	  var screenWidth = document.documentElement.clientWidth;
+//	  var screenWidth = document.documentElement.clientWidth;
+//      var setHeight= screenWidth/16*9;
+//	  $('#playVideo').css('height',setHeight);
+//	  var iconHeight=$('.pageOneIcon').height();
+//      var top = setHeight - (iconHeight/2);
+//      $('.pageOneIcon').css('top',top);
+//      
+      
+      var screenWidth = document.documentElement.clientWidth;
       var setHeight= screenWidth/16*9;
 	  $('#playVideo').css('height',setHeight);
-	  var iconHeight=$('.pageOneIcon').height();
-      var top = setHeight - (iconHeight/2);
-      $('.pageOneIcon').css('top',top);
+	  var imgH = setHeight+15;
+      $('.pageOne').css('top',imgH);
 }
 
 function init() {
@@ -158,11 +159,7 @@ function init() {
 	        onSlideNextEnd: function(swiper){
 	        	var index = swiper.activeIndex;
 	        	 if(index == 0){
-	        		 $('.spIcon').show();
-	        		 document.getElementById('toPlayFullVideo').pause();
-	        		 document.addEventListener("WeixinJSBridgeReady", function () {
-	        			 document.getElementById('toPlayFullVideo').pause();
-		     		 }, false);
+	        		 $('.spIcon').show();	        		 
 	        	 }
 	            if(index == 1){
 	            	document.addEventListener("WeixinJSBridgeReady", function () {
@@ -175,11 +172,11 @@ function init() {
 	            	$('.serWord').removeClass('animation');
 	            	document.getElementById('toPlayVideo').pause();
 	            }
+	            if(index != 1){
+	            	document.getElementById('toPlayFullVideo').pause();
+	            }
 	            if(index == 1){
 	            	$('.spIcon').hide();
-	            }
-	            if(index == 2){
-	            	document.getElementById('toPlayFullVideo').pause();
 	            }
 	           }
 	    });
