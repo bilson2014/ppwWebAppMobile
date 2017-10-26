@@ -34,11 +34,11 @@ body {
             height: 100%;
             background: #000;
             .phone {
-                width: 75%;
+                width: 8.5rem;
                 height: 55px;
                 margin: 0 auto;
                 #phone {
-                    width: 100%;
+                    width: 97%;
                     border: none;
                     font-size: 0.4rem;
                     height: 1rem;
@@ -58,7 +58,7 @@ body {
                     height: 0.65rem;
                     font-size: 0.4rem;
                     border-radius: 5px;
-                    margin-left: 72%;
+                    margin-left: 68%;
                 }
                 .error {
                     color: #f95d64;
@@ -68,11 +68,11 @@ body {
                 }
             }
             .number {
-                width: 75%;
+                width: 8.5rem;
                 height: 55px;
                 margin: 0 auto;
                 #num {
-                    width: 100%;
+                    width: 97%;
                     border: none;
                     font-size: 0.4rem;
                     height: 1rem;
@@ -91,11 +91,10 @@ body {
                 }
             }
             .btnSub {
-                width: 75%;
+                width: 7.5rem;
                 height: 1rem;
                 margin: 0 auto;
                 display: block;
-                margin-left: 12%;
                 color: #fff;
                 background-color: #fa535b;
                 border: none;
@@ -162,5 +161,10 @@ body {
         // bottom: 0;
         height: 15%;
         width: 100%;
+    }
+    #toPlayVideo {
+        position: absolute;
+        top: 0;
+        left: 0;
     }
 }

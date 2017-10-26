@@ -71,9 +71,10 @@
 	<mvc:view-controller path="/cosmetic" view-name="/salesman/cosmetic" />
 	<mvc:view-controller path="/cosmetic2" view-name="/salesman/cosmetic2" />
 	<mvc:view-controller path="/employ" view-name="/salesman/employment" />
-	
 	<mvc:view-controller path="/activity/vi" view-name="/salesman/publicity" />
-
+	
+	<!-- <mvc:view-controller path="/activity/flyPlay" view-name="/salesman/flyPlay" />
+	<mvc:view-controller path="/activity/flyingPlay" view-name="/salesman/flyingPlay" /> -->
 
 	<!-- 产品线End -->
 	<mvc:view-controller path="/repwd" view-name="/repwd" />
