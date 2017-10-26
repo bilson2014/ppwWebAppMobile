@@ -339,6 +339,14 @@ body {
     }
 }
 
-.one {
+.swiper-slide .one {
     position: absolute;
+    top: 0;
+    height: auto;
+}
+
+.swiper-slide .two {
+    position: absolute;
+    bottom: 0;
+    height: auto;
 }
