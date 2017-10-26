@@ -137,9 +137,8 @@ function setHeight(){
 	  var screenWidth = document.documentElement.clientWidth;
       var setHeight= screenWidth/16*9;
 	  $('#playVideo').css('height',setHeight);
-	  var iconHeight=$('.pageOneIcon').height();
-      var top = setHeight - (iconHeight/2);
-      $('.pageOneIcon').css('top',top);
+	  var imgH = setHeight+15;
+      $('.pageOne').css('top',imgH);
 }
 
 function init() {
@@ -170,6 +169,9 @@ function init() {
 	     			});
 	            	$('.serWord').removeClass('animation');
 	            	document.getElementById('toPlayVideo').pause();
+	            }
+	            if(index != 1){
+	            	document.getElementById('toPlayFullVideo').pause();
 	            }
 	            if(index == 1){
 	            	$('.spIcon').hide();
