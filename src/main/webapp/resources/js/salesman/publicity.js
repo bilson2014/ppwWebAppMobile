@@ -21,14 +21,13 @@ function isIos(){
 
 function varphone(){
 	var phone=$('#phone').val();
-	var reg = /^(0|86|17951)?(13[0-9]|15[012356789]|17[01678]|18[0-9]|14[57])[0-9]{8}$/;
 	console.log(phone);
 	console.log($('#phoneerror').text());
 	if (phone==''||phone==null||phone==undefined){
 		$('#phoneerror').text('*手机号不能为空');
 		return false;
 	}
-	if(!phone.match(reg)){
+	if(!checkMobile(phone)){
 		$('#phoneerror').text('*请输入正确的手机号');
 		return false;
 	} 
@@ -68,7 +67,8 @@ function success(){
 					teamId:-1,
 					serviceId:-1,
 					phoneCode : $('#num').val(),
-					indentSource : 2//订单来源编号			
+					indentSource : 2,//订单来源编号	
+					target:'vi'
 				  });	
 			}			 
 		}				 
