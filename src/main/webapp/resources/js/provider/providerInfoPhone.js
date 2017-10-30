@@ -1,4 +1,5 @@
 $().ready(function(){
+	merchantBridge();
 	var tag = $('#id_tags').val();
 	var root = $('.adb');
 	if(tag !=null && tag != ''){

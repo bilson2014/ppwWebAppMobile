@@ -14,7 +14,7 @@
 	<meta name="keywords" content="">
 	<meta name="description" content="精准覆盖10000+用户">
 	<meta name="baidu-site-verification" content="dMz6jZpIwd" />
-	<title>9999元拍企业视频名片</title>
+	<title>拍片网-企业视频名片</title>
    
 	<!--[if lt IE 9]>
 		<script>window.html5 || document.write('<script src="html5shivJs"><\/script>')</script>
@@ -49,46 +49,15 @@
 					         </div> 
 	          </div> 
 			 <div class="swiper-slide">
-			       <!--  <div class='top'>
-			            <a href="tel:400-660-9728"> 
-			             	 <img src="/resources/images/publicity/publicity33.png">
-			             	<img src="/resources/images/publicity/aa.png">
-			             </a>
-			        </div> -->
 			        <div class='top'>
-			            <img class="pageThree" src="/resources/images/salesMan/pbCard/pageThree.jpg">
+			            <img class="pageThree" src="/resources/images/salesMan/pbCard/pageThree.png">
 			        </div>
-			        <div class='cen'>
-				<%-- 		<form id="order-form" role="form"  method="post" autocomplete="off" accept-charset="UTF-8">
-						    <input type="hidden" id="csrftoken" name="csrftoken" value="${csrftoken}"/>
-						    <input type="hidden" id="token" name="token" value="${token}"/>
-						    <input type="hidden" id="indentName" name="indentName" value="线上-活动"/>
-							<input type="hidden" id="indent_recomment" name="indent_recomment" value="123"/> --%>
-					        <div class="order">
-					             <div class='phone'>
-					                  <input class="input" type="text" maxlength="20" id="phone" placeholder='请输入您的手机号'/>
-					                  <div class="var" id='varnum' >获取验证码</div>
-					                  <p class="error" id='phoneerror'></p>
-					              </div>
-					              <div class='phone'>
-					                   <input class="input"  type="text" maxlength="10"  id="num"  placeholder='请输入验证码'/>
-					                   <p class="error" id='numerror'></p>
-					              </div>  
-					               <div class='phone'>
-					                   <input type="button" class="btnSub"  id='btnSub' value="现在下单"></input>
-					               </div>   			                  
-					         </div>					             
-				         <!--  </form> -->
-			          </div>  
-			        <div class='model' id='orderSuccess'>
-					        <div class='success'>
-					            <img data-src='/resources/images/index/success.png' class=' lazyloaded' src='/resources/images/index/success.png'>
-					            <div id='showStatues'>提交成功!</div>
-					            <div id='showText'>客服人员会尽快和您取得联系</div>
-					            <div id='checkSuccess'>确认</div>					             
-					         </div>
-					  </div>
-			          <!-- <img class='bto' src="/resources/images/publicity/publicity3.png">     -->
+			        <a href="/">
+			         <img class="pageThreeB" src="/resources/images/salesMan/pbCard/pageThreeB.png">
+			        </a> 
+			         <a href="/activity/order">
+		                <div class="needCard">你也需要一条视频名片？</div>
+		             </a>  
 			  </div>          
          </div>  
          <div class="icon spIcon">

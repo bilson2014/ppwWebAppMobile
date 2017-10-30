@@ -10,6 +10,7 @@ $().ready(function() {
 	 init();
 	 getVerificationCode();
 	 controlCost();
+	 merchantBridge();
 });
 function controlCost(){
 	

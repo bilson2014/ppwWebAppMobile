@@ -6,6 +6,7 @@ var add = true ;
 var reSet = false;
 $().ready(function() {
 	newsInfo.initData();
+	merchantBridge();
 });
 var newsInfo = {
 		initData : function() { // 加载分类信息

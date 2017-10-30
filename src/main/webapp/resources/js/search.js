@@ -13,6 +13,7 @@ $().ready(function(){
 	touchLis();
 	initLazySizes();
 	search.getTags();
+	merchantBridge();
 });
 
 function getItemHeight(){

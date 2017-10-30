@@ -5,6 +5,7 @@ var PopInterValObj, oTimer, successIntervalObj;
 $().ready(function(){
 	checkTap();
 	login.init();
+	merchantBridge();
 });
 //成功信息 提示框弹出方法
 function successToolTipShow(word) {

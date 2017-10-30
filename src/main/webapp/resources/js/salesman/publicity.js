@@ -12,6 +12,11 @@ $().ready(function() {
 
 });
 
+function isIos(){
+	var u = navigator.userAgent;
+	var isIOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+	return isIOS;
+}
 
 
 function varphone(){
@@ -58,7 +63,7 @@ function success(){
 					csrftoken:$("#csrftoken").val(),
 					indent_tele:$('#phone').val(),
 //					indent_recomment:$("#submit-indent-recomment").text(),
-					indentName:'线上-活动',//订单名称
+					indentName:'VI+视频套餐推广',//订单名称
 					productId:-1,
 					teamId:-1,
 					serviceId:-1,
@@ -142,13 +147,15 @@ function setHeight(){
 }
 
 function init() {
-	    document.addEventListener("WeixinJSBridgeReady", function () {
-	    	document.getElementById('toPlayVideo').play();
-	     }, false);
-	    document.getElementById('toPlayVideo').play();
-		$('#toPlayVideo').off('click').on('click',function(){
-			document.getElementById('toPlayVideo').play();
-		});		
+	if(isIos()){
+		   document.addEventListener("WeixinJSBridgeReady", function () {
+		    	document.getElementById('toPlayVideo').play();
+		     }, false);
+		    document.getElementById('toPlayVideo').play();
+			$('#toPlayVideo').off('click').on('click',function(){
+				document.getElementById('toPlayVideo').play();
+			});
+	}		
        var swiperV = new Swiper('.swiperVertical', {
 	        direction: 'vertical',
 	        pagination: '.swiper-pagination-v',
@@ -160,13 +167,15 @@ function init() {
 //	        		 $('.spIcon').show();
 //	        	 }
 	            if(index == 1){
-	            	document.addEventListener("WeixinJSBridgeReady", function () {
-	     		    	document.getElementById('toPlayFullVideo').play();
-	     		     }, false);
-	     		    document.getElementById('toPlayFullVideo').play();
-	     			$('#toPlayFullVideo').off('click').on('click',function(){
-	     				document.getElementById('toPlayFullVideo').play();
-	     			});
+	            	if(isIos()){
+	            	 	document.addEventListener("WeixinJSBridgeReady", function () {
+		     		    	document.getElementById('toPlayFullVideo').play();
+		     		     }, false);
+		     		    document.getElementById('toPlayFullVideo').play();
+		     			$('#toPlayFullVideo').off('click').on('click',function(){
+		     				document.getElementById('toPlayFullVideo').play();
+		     			});
+	            	}
 	            	$('.serWord').removeClass('animation');
 	            	$('.spIcon').hide();
 	            }
@@ -181,10 +190,9 @@ function init() {
 	            }
 	            if (index != 1){
 	            	document.addEventListener("WeixinJSBridgeReady", function () {
-	     		    	document.getElementById('toPlayFullVideo').pause();
-	     		     }, false);
-	     		    document.getElementById('toPlayFullVideo').pause();
-	     			
+	         	    	document.getElementById('toPlayFullVideo').pause();
+	         	     }, false);
+	     		    document.getElementById('toPlayFullVideo').pause();     		    
 	            }
 	            if (index==2){
 	            	 $('.spIcon').show();

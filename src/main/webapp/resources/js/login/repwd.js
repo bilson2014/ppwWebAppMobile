@@ -5,6 +5,7 @@ $().ready(function(){
     
 	//user_login.init();
 	rePwdCus.init();
+	merchantBridge();
 
 });
 

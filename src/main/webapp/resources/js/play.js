@@ -11,6 +11,7 @@ $().ready(function() {
     play.order();
     play.showMore();
     saveVideo();
+    merchantBridge();
     $('#verification_code_recover_btn').off('click').on('click',verificationCodeBtn);
     $('#submitOrder').off('click').on('click',submitOrder);
     $('.orderVideo').off('click').on('click',function(){
