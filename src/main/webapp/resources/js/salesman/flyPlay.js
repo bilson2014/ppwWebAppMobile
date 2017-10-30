@@ -13,12 +13,11 @@ $().ready(function() {
 
 function varphone() {
 	var phone = $('#phone').val();
-	var reg = /^(0|86|17951)?(13[0-9]|15[012356789]|17[01678]|18[0-9]|14[57])[0-9]{8}$/;
 	if (phone == '' || phone == null || phone == undefined) {
 		$('#phoneerror').text('*手机号不能为空');
 		return false;
 	}
-	if (!phone.match(reg)) {
+	if (!checkMobile(phone)) {
 		$('#phoneerror').text('*请输入正确的手机号');
 		return false;
 	}
