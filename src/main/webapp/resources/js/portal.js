@@ -13,6 +13,7 @@ $().ready(function() {
 	portal.getProviderItem();
 	subPaipian();
 	getCardWord();
+	merchantBridge();
 	
 	$('#source').attr('src','http://www.apaipian.com/product/video/paipianwangMovie.mp4');
 	$('#header3Video').load();

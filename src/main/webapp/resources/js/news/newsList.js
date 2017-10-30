@@ -12,6 +12,7 @@ var currentPage = 1;
 $().ready(function() {
 	newsList.touchLis();
 	newsList.initCategory();
+	merchantBridge();
 });
 
 var newsList = {

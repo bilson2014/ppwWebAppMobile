@@ -5,6 +5,7 @@ var PopInterValObj, oTimer, successIntervalObj;
 $().ready(function(){
 	login.init();
 	checkTap();
+	merchantBridge();
 });
 
 function SetUsrRemainTime(){

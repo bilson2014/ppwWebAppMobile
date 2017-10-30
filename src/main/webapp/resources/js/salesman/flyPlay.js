@@ -24,11 +24,65 @@ function varphone() {
 	$('#phoneerror').text('');
 	return true;
 }
+
+function success(){
+	//立即报名
+	$('#btnSub').on('click',function(){
+		if (varphone()){
+			var num=$('#num').val();
+			if (num==''||num==null||num==undefined){
+				 $('#numerror').text('*验证码不能为空');
+				 return false;
+			}else {
+				loadData2(function(result){	
+					console.log(result);
+					 if (!result.ret){
+						$('#numerror').text('*'+ result.message);
+						return false;
+					 }else{
+						 $('#orderSuccess').attr('style','display:block;');	
+						 $('#numerror').text('');
+						 window.clearInterval(InterValObj);
+						 $('#varnum').text('获取验证码');
+						 $('#phone').val('');
+						 $('#num').val('');
+						 sendCodeFlag = true;						 					 
+					 }	 
+				 }, getContextPath() + '/order/deliver', 
+				 {	
+					csrftoken:$("#csrftoken").val(),
+					indent_tele:$('#phone').val(),
+					indentName:'中飞艾维',//订单名称
+					productId:-1,
+					teamId:-1,
+					serviceId:-1,
+					phoneCode : $('#num').val(),
+					indentSource : 2//订单来源编号			
+				  });	
+			}			 
+		}				 
+	})
+	//验证码
+	$('#varnum').on('click',function(){		
+		if(varphone()){
+			if(sendCodeFlag){//防止多次点击			
+				sendCodeFlag = false;
+				var phone=$('#phone').val();
+				verification(phone,'varnum');			
+			}
+		}
+	})
+	//报名成功弹框确认事件
+	$('#checkSuccess').on('click',function(){
+		$('#orderSuccess').attr('style','display:none;');		
+	})
+
 function success() {
 	//访问中飞官网
 	$('#two').off('click').on('click',function(){
 		window.location.href='http://www.airwing.net.cn/';
 	});
+
 }
 // AJAX POST
 function loadData2(Func, url, param) {
@@ -87,7 +141,56 @@ function setHeight() {
 	$('.pageOne').css('top', imgH);
 }
 
+function isIos(){
+	var u = navigator.userAgent;
+	var isIOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+	return isIOS;
+}
+
 function init() {
+
+	if(isIos()){
+		   document.addEventListener("WeixinJSBridgeReady", function () {
+		    	document.getElementById('toPlayVideo').play();
+		     }, false);
+		    document.getElementById('toPlayVideo').play();
+			$('#toPlayVideo').off('click').on('click',function(){
+				document.getElementById('toPlayVideo').play();
+			});
+	}
+       var swiperV = new Swiper('.swiperVertical', {
+	        direction: 'vertical',
+	        pagination: '.swiper-pagination-v',
+	        paginationClickable: true ,
+	       // loop:true,
+	        onSlideNextEnd: function(swiper){
+	        	var index = swiper.activeIndex;
+	        	 if(index == 0){
+	        		 $('.spIcon').show();	        		 
+	        	 }
+	            if(index == 1){
+	            	if(isIos()){
+	            		document.addEventListener("WeixinJSBridgeReady", function () {
+		     		    	document.getElementById('toPlayFullVideo').play();
+		     		     }, false);
+		     		    document.getElementById('toPlayFullVideo').play();
+		     			$('#toPlayFullVideo').off('click').on('click',function(){
+		     				document.getElementById('toPlayFullVideo').play();
+		     	 		});
+	             	}
+	            
+	            	$('.serWord').removeClass('animation');
+	            	document.getElementById('toPlayVideo').pause();
+	            }
+	            if(index != 1){
+	            	document.getElementById('toPlayFullVideo').pause();
+	            }
+	            if(index == 1){
+	            	$('.spIcon').hide();
+	            }
+	           }
+	    });
+
 	document.addEventListener("WeixinJSBridgeReady", function() {
 		document.getElementById('toPlayVideo').play();
 	}, false);
@@ -127,6 +230,7 @@ function init() {
 			}
 		}
 	});
+
 }
 
 function initShareNew() {
@@ -164,4 +268,5 @@ function initShareNew() {
 							dataUrl : '', // 如果type是music或video，则要提供数据链接，默认为空
 						});
 			});
+    }
 }

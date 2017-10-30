@@ -4,6 +4,7 @@ var curCount; // 当前剩余秒数
 var PopInterValObj, oTimer, successIntervalObj;
 $().ready(function(){
 	register.init_user();
+	merchantBridge();
 });
 
 //成功信息 提示框弹出方法

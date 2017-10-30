@@ -11,7 +11,22 @@ $().ready(function() {
 	var screenHeight = document.documentElement.clientHeight;
 	$('body').css('width',screenWidth); 
 	/*$('body').css('height',screenHeight); */
+	if(isIos()){
+		   document.addEventListener("WeixinJSBridgeReady", function () {
+		    	document.getElementById('toPlayVideo').play();
+		     }, false);
+		    document.getElementById('toPlayVideo').play();
+			$('#toPlayVideo').off('click').on('click',function(){
+				document.getElementById('toPlayVideo').play();
+			});
+	}
 });
+
+function isIos(){
+	var u = navigator.userAgent;
+	var isIOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+	return isIOS;
+}
 
 
 function varphone(){
@@ -39,7 +54,7 @@ function success(){
 				 $('#numerror').text('*验证码不能为空');
 				 return false;
 			}else {
-				loadData2(function(result){	
+				loadData(function(result){	
 					console.log(result);
 					 if (!result.ret){
 						$('#numerror').text('*'+ result.message);
@@ -57,7 +72,7 @@ function success(){
 				 {	
 					csrftoken:$("#csrftoken").val(),
 					indent_tele:$('#phone').val(),
-					indentName:'线上-活动',//订单名称
+					indentName:'拍片网视频名片',//订单名称
 					productId:-1,
 					teamId:-1,
 					serviceId:-1,
@@ -84,23 +99,7 @@ function success(){
 		
 	})
 }
-//AJAX POST
-function loadData2(Func,url,param){
-	$.ajax({
-		url : url,
-		type : 'POST',
-		data : param,
-		dataType : 'json',
-		success : function(data){
-			Func(data);
-		},
-		error : function(jqXHR, textStatus, errorThrown) {
-			console.error('ajax(' + url + ')[' + jqXHR.status + ']' + jqXHR.statusText);
-			console.error(jqXHR.responseText);
-			console.error('[' + textStatus + ']' + errorThrown);
-		}
-	});
-}
+
 function verification(phone,ID){
 	curCount = count;
 	// 发送验证码	
@@ -144,13 +143,7 @@ function setHeight(){
 }
 
 function init() {
-	    document.addEventListener("WeixinJSBridgeReady", function () {
-	    	document.getElementById('toPlayVideo').play();
-	     }, false);
-	    document.getElementById('toPlayVideo').play();
-		$('#toPlayVideo').off('click').on('click',function(){
-			document.getElementById('toPlayVideo').play();
-		});
+	 
        var swiperV = new Swiper('.swiperVertical', {
 	        direction: 'vertical',
 	        pagination: '.swiper-pagination-v',
@@ -162,13 +155,22 @@ function init() {
 	        		 $('.spIcon').show();
 	        	 }
 	            if(index == 1){
-	            	document.addEventListener("WeixinJSBridgeReady", function () {
-	     		    	document.getElementById('toPlayFullVideo').play();
-	     		     }, false);
-	     		    document.getElementById('toPlayFullVideo').play();
-	     			$('#toPlayFullVideo').off('click').on('click',function(){
-	     				document.getElementById('toPlayFullVideo').play();
-	     			});
+	            	if(isIos()){
+	         		   document.addEventListener("WeixinJSBridgeReady", function () {
+	         		    	document.getElementById('toPlayVideo').play();
+	         		     }, false);
+	         		    document.getElementById('toPlayVideo').play();
+	         			$('#toPlayVideo').off('click').on('click',function(){
+	         				document.getElementById('toPlayVideo').play();
+	         			});
+	         		   document.addEventListener("WeixinJSBridgeReady", function () {
+	         		    	document.getElementById('toPlayFullVideo').play();
+	         		     }, false);
+	         		    document.getElementById('toPlayFullVideo').play();
+	         			$('#toPlayFullVideo').off('click').on('click',function(){
+	         				document.getElementById('toPlayFullVideo').play();
+	         			});
+	         	}
 	            	$('.serWord').removeClass('animation');
 	            	document.getElementById('toPlayVideo').pause();
 	            }
@@ -178,7 +180,10 @@ function init() {
 	            if(index == 1){
 	            	$('.spIcon').hide();
 	            }
-	           }
+	            if(index == 2){
+	            	 $('.spIcon').hide();
+	            }
+	          }
 	    });
 }
 	
