@@ -140,10 +140,8 @@ function initShareNew() {
 		jsApiList : [ 'onMenuShareAppMessage', 'onMenuShareTimeline' ]
 	// 必填，需要使用的JS接口列表
 	});
-	wx
-			.ready(function() {
-				wx
-						.onMenuShareAppMessage({
+	wx.ready(function() {
+				wx.onMenuShareAppMessage({
 							title : '中飞艾维-电力巡检领导者', // 分享标题
 							desc : '无人机一站式电力飞巡服务', // 分享描述
 							link : 'http://m.apaipian.com/activity/airwing', // 分享链接
@@ -157,8 +155,7 @@ function initShareNew() {
 				/*
 				 * wx.error(function(res){ });
 				 */
-				wx
-						.onMenuShareTimeline({
+				wx.onMenuShareTimeline({
 							title : '中飞艾维-电力巡检领导者', // 分享标题
 							desc : '无人机一站式电力飞巡服务', // 分享描述
 							link : 'http://m.apaipian.com/activity/airwing', // 分享链接
