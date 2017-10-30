@@ -38,16 +38,17 @@ body {
                 height: 55px;
                 margin: 0 auto;
                 #phone {
-                    width: 97%;
+                    width: 100%;
                     border: none;
                     font-size: 0.4rem;
                     height: 1rem;
                     background-color: transparent;
                     border-radius: 0.2rem;
                     line-height: 1rem;
-                    padding-left: 3%;
+                    text-indent: 0.2rem;
                     border: 1px solid #5e9fc9;
                     outline: none;
+                    margin: 0 auto;
                 }
                 .var {
                     margin-top: -0.9rem;
@@ -72,16 +73,17 @@ body {
                 height: 55px;
                 margin: 0 auto;
                 #num {
-                    width: 97%;
+                    width: 100%;
                     border: none;
                     font-size: 0.4rem;
                     height: 1rem;
                     background-color: transparent;
                     border-radius: 5px;
                     line-height: 1rem;
-                    padding-left: 3%;
+                    text-indent: 0.2rem;
                     border: 1px solid #5e9fc9;
                     outline: none;
+                    margin: 0 auto;
                 }
                 .error {
                     color: #f95d64;
