@@ -55,8 +55,11 @@
 			        <a href="/">
 			         <img class="pageThreeB" src="/resources/images/salesMan/pbCard/pageThreeB.png">
 			        </a> 
+			        
 			         <a href="/activity/order">
-		                <div class="needCard">你也需要一条视频名片？</div>
+			            <div class="cardBottom">
+			                <div class="needCard">你也需要一条企业视频名片？  》</div>
+		                </div> 
 		             </a>  
 			  </div>          
          </div>  

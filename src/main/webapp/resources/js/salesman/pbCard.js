@@ -143,7 +143,7 @@ function setHeight(){
 }
 
 function init() {
-	 
+	   var swiperSlideNum = $('.swiper-slide').length;
        var swiperV = new Swiper('.swiperVertical', {
 	        direction: 'vertical',
 	        pagination: '.swiper-pagination-v',
@@ -180,8 +180,9 @@ function init() {
 	            if(index == 1){
 	            	$('.spIcon').hide();
 	            }
-	            if(index == 2){
+	            if(index == (swiperSlideNum - 1)){
 	            	 $('.spIcon').hide();
+	            	 $('.needCard').addClass('openAnim');
 	            }
 	          }
 	    });
@@ -223,6 +224,8 @@ function initShareNew(){
         });
     });	
 }
+
+
 	
 
 
