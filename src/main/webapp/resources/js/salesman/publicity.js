@@ -18,7 +18,6 @@ function isIos(){
 	return isIOS;
 }
 
-
 function varphone(){
 	var phone=$('#phone').val();
 	console.log(phone);
@@ -61,14 +60,18 @@ function success(){
 				 {	
 					csrftoken:$("#csrftoken").val(),
 					indent_tele:$('#phone').val(),
+<<<<<<< HEAD
+					indentName:'线上-活动',//订单名称
+=======
 //					indent_recomment:$("#submit-indent-recomment").text(),
 					indentName:'VI+视频套餐推广',//订单名称
+>>>>>>> aa1ae231f8f63c00341b7e117e5a808e31a7926f
 					productId:-1,
 					teamId:-1,
 					serviceId:-1,
 					phoneCode : $('#num').val(),
-					indentSource : 2,//订单来源编号	
-					target:'vi'
+					indentSource : 2,//订单来源编号
+					salesmanUniqueId : 'vi'
 				  });	
 			}			 
 		}				 
