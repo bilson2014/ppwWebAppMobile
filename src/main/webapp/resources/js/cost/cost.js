@@ -9,6 +9,7 @@ $().ready(function() {
 	 init();
 	 getVerificationCode();
 	 initTools();
+	 merchantBridge();
 
 });
 function init() {

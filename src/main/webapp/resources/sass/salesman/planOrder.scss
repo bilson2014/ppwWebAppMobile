@@ -128,46 +128,6 @@ body {
             }
         }
     }
-    .pageThreeB {
-        position: absolute;
-        bottom: 0.5rem;
-        left: 0;
-        height: auto !important;
-    }
-    .cardBottom {
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        font-size: .5rem;
-        color: white;
-        background: $red-base;
-        text-align: center;
-        height: 1.2rem;
-        line-height: 1.2rem;
-    }
-    .needCard {
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        font-size: .5rem;
-        color: white;
-        background: transparent;
-        text-align: center;
-        height: 1.2rem;
-        line-height: 1.2rem;
-    }
-    .openAnim {
-        -webkit-animation: cardAnim 1.8s infinite linear;
-        -moz-animation: cardAnim 1.8s infinite linear;
-        -o-animation: cardAnim 1.8s infinite linear;
-        animation: cardAnim 1.8s infinite linear;
-        -webkit-animation-iteration-count: 3;
-        -moz-animation-iteration-count: 3;
-        -o-animation-iteration-count: 3;
-        animation-iteration-count: 3;
-    }
     .model {
         background-color: rgba(0, 0, 0, 0.7);
         position: fixed;
@@ -226,64 +186,8 @@ body {
     }
 }
 
-@-webkit-keyframes cardAnim {
-    0% {
-        left: 0rem;
-    }
-    35% {
-        left: 0.5rem;
-    }
-    70% {
-        left: -0.5rem;
-    }
-    100% {
-        left: 0rem;
-    }
-}
-
-@-moz-keyframes cardAnim {
-    0% {
-        left: 0rem;
-    }
-    35% {
-        left: 0.5rem;
-    }
-    70% {
-        left: -0.5rem;
-    }
-    100% {
-        left: 0rem;
-    }
-}
-
-@-o-keyframes cardAnim {
-    0% {
-        left: 0rem;
-    }
-    35% {
-        left: 0.5rem;
-    }
-    70% {
-        left: -0.5rem;
-    }
-    100% {
-        left: 0rem;
-    }
-}
-
-@keyframes cardAnim {
-    0% {
-        left: 0rem;
-    }
-    35% {
-        left: 0.5rem;
-    }
-    70% {
-        left: -0.5rem;
-    }
-    100% {
-        left: 0rem;
-    }
+.icon {
+    bottom: 0.2rem !important;
 }
 
 .icon img {
@@ -415,7 +319,7 @@ body {
 
 .icon {
     position: absolute;
-    bottom: 0.2rem !important;
+    bottom: 40px;
     z-index: 5;
     width: 100%;
     text-align: center
@@ -433,4 +337,16 @@ body {
         bottom: 0;
         left: 0;
     }
+}
+
+.swiper-slide .one {
+    position: absolute;
+    top: 0;
+    height: auto;
+}
+
+.swiper-slide .two {
+    position: absolute;
+    bottom: 0;
+    height: auto;
 }
