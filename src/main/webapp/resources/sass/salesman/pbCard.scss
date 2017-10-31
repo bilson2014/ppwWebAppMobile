@@ -18,7 +18,7 @@ body {
 }
 
 .stepBtn-1 {
-    background: #f5f5f5 !important;
+    background: #fff !important;
 }
 
 .pageOne {
@@ -134,7 +134,6 @@ body {
         left: 0;
         height: auto !important;
     }
-
     .cardBottom {
         position: absolute;
         left: 0;
@@ -156,10 +155,9 @@ body {
         color: white;
         background: transparent;
         text-align: center;
-        height: 1.7rem;
-        line-height: 1.7rem;
+        height: 1.2rem;
+        line-height: 1.2rem;
     }
-
     .openAnim {
         -webkit-animation: cardAnim 1.8s infinite linear;
         -moz-animation: cardAnim 1.8s infinite linear;
@@ -170,7 +168,6 @@ body {
         -o-animation-iteration-count: 3;
         animation-iteration-count: 3;
     }
-
     .model {
         background-color: rgba(0, 0, 0, 0.7);
         position: fixed;
@@ -229,14 +226,10 @@ body {
     }
 }
 
-<<<<<<< HEAD
-=======
-
 @-webkit-keyframes cardAnim {
     0% {
         left: 0rem;
     }
-
     35% {
         left: 0.5rem;
     }
@@ -252,7 +245,6 @@ body {
     0% {
         left: 0rem;
     }
-
     35% {
         left: 0.5rem;
     }
@@ -268,7 +260,6 @@ body {
     0% {
         left: 0rem;
     }
-
     35% {
         left: 0.5rem;
     }
@@ -284,7 +275,6 @@ body {
     0% {
         left: 0rem;
     }
-
     35% {
         left: 0.5rem;
     }
@@ -295,8 +285,6 @@ body {
         left: 0rem;
     }
 }
-
-
 
 .icon img {
     position: relative;

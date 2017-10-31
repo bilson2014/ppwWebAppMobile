@@ -68,7 +68,12 @@
 			<div class="swiper-slide">
 				<img class='one' src="/resources/images/salesMan/flyPlay/fly3.png">
 				<img class='two' id='two' src="/resources/images/salesMan/flyPlay/fly33.png">
-				<a href='/activity/order' class='three'>你也需要一条企业视频名片？</a>
+				<a href='/activity/order' >
+					<div class='cardBottom'>
+						<div class='needCard'>你也需要一条企业视频名片？  》</div>
+					</div>
+				
+				</a>
 			</div>
 		</div>
 		<div class="icon spIcon">

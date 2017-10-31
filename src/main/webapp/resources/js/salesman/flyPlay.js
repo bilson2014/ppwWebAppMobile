@@ -159,6 +159,7 @@ function init() {
 				document.getElementById('toPlayVideo').play();
 			});
 	}
+	var swiperSlideNum=$('.swiper-slide').length;
        var swiperV = new Swiper('.swiperVertical', {
 	        direction: 'vertical',
 	        pagination: '.swiper-pagination-v',
@@ -187,6 +188,10 @@ function init() {
 	            	document.getElementById('toPlayFullVideo').pause();
 	            }
 	            if(index == 1){
+	            	$('.spIcon').hide();
+	            }
+	            if(index==(swiperSlideNum-1)){
+	            	$('.needCard').addClass('openAnim');
 	            	$('.spIcon').hide();
 	            }
 	           }
