@@ -7,6 +7,7 @@ $().ready(function() {
 	setHeight();
 	initShareNew();
 	success();
+	varphone()
 	var screenWidth = document.documentElement.clientWidth;
 	$('body').css('width', screenWidth);
 });
@@ -76,7 +77,7 @@ function success(){
 	$('#checkSuccess').on('click',function(){
 		$('#orderSuccess').attr('style','display:none;');		
 	})
-
+}
 function success() {
 	//访问中飞官网
 	$('#two').off('click').on('click',function(){
@@ -230,7 +231,6 @@ function init() {
 			}
 		}
 	});
-
 }
 
 function initShareNew() {
@@ -268,5 +268,5 @@ function initShareNew() {
 							dataUrl : '', // 如果type是music或video，则要提供数据链接，默认为空
 						});
 			});
-    }
-}
+	}
+
