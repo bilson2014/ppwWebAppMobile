@@ -63,7 +63,7 @@ function success(){
 					teamId:-1,
 					serviceId:-1,
 					phoneCode:$('#num').val(),
-					target:'Pbusinesscard',
+					salesmanUniqueId : 'Pbusinesscard',
 					indentSource : 2//订单来源编号			
 				  });	
 			}			 

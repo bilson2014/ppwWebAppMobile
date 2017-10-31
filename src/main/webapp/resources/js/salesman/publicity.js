@@ -12,8 +12,6 @@ $().ready(function() {
 
 });
 
-
-
 function varphone(){
 	var phone=$('#phone').val();
 	var reg = /^(0|86|17951)?(13[0-9]|15[012356789]|17[01678]|18[0-9]|14[57])[0-9]{8}$/;
@@ -57,14 +55,13 @@ function success(){
 				 {	
 					csrftoken:$("#csrftoken").val(),
 					indent_tele:$('#phone').val(),
-//					indent_recomment:$("#submit-indent-recomment").text(),
 					indentName:'线上-活动',//订单名称
 					productId:-1,
 					teamId:-1,
 					serviceId:-1,
 					phoneCode : $('#num').val(),
-					indentSource : 2,//订单来源编号	
-					target:'vi'
+					indentSource : 2,//订单来源编号
+					salesmanUniqueId : 'vi'
 				  });	
 			}			 
 		}				 
