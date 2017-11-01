@@ -4,9 +4,7 @@ var sendCodeFlag = true;
 $().ready(function() {	
 	var localsrc=window.location.href;
 	init();
-	
 	initShareNew();
-	
 	var screenWidth = document.documentElement.clientWidth;
 	var screenHeight = document.documentElement.clientHeight;
 	$('body').css('width',screenWidth); 
@@ -90,10 +88,10 @@ function initShareNew(){
     });
     wx.ready(function(){
         wx.onMenuShareAppMessage({
-        	title: '拍片网-企业视频名片', // 分享标题
+        	title: '钉钉-企业视频名片', // 分享标题
             desc: '', // 分享描述
-            link: 'http://m.apaipian.com/activity/psample', // 分享链接
-            imgUrl: 'http://m.apaipian.com/resources/images/employee/em1.png', // 分享图标
+            link: 'http://m.apaipian.com/activity/dingsample', // 分享链接
+            imgUrl: 'http://m.apaipian.com/resources/images/salesMan/ding/dd.png', // 分享图标
             type: 'link', // 分享类型,music、video或link，不填默认为link
             dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
         /*    success: function () { 
@@ -104,10 +102,10 @@ function initShareNew(){
     /*  wx.error(function(res){
         });*/
         wx.onMenuShareTimeline({
-            title: '拍片网-企业视频名片', // 分享标题
+            title: '钉钉-企业视频名片', // 分享标题
             desc: '', // 分享描述
-            link: 'http://m.apaipian.com/activity/psample', // 分享链接
-            imgUrl: 'http://m.apaipian.com/resources/images/employee/em1.png', // 分享图标
+            link: 'http://m.apaipian.com/activity/dingsample', // 分享链接
+            imgUrl: 'http://m.apaipian.com/resources/images/salesMan/ding/dd.png', // 分享图标
             type: 'link', // 分享类型,music、video或link，不填默认为link
             dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
         });
