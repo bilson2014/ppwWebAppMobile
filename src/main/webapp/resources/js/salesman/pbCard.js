@@ -72,7 +72,8 @@ function success(){
 				 {	
 					csrftoken:$("#csrftoken").val(),
 					indent_tele:$('#phone').val(),
-					indentName:'拍片网视频名片',//订单名称
+					indentName:'线上-活动',//订单名称
+					indent_recomment:'拍片网视频名片',//订单名称
 					productId:-1,
 					teamId:-1,
 					serviceId:-1,

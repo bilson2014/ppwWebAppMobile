@@ -12,7 +12,7 @@
 	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
 	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0, user-scalable=no" name="viewport" />
 	<meta name="keywords" content="">
-	<meta name="description" content="">
+	<meta name="description" content="企业视频名片">
 	<meta name="baidu-site-verification" content="dMz6jZpIwd" />
 	<title>拍片网-企业视频名片</title>
    

@@ -60,12 +60,8 @@ function success(){
 				 {	
 					csrftoken:$("#csrftoken").val(),
 					indent_tele:$('#phone').val(),
-<<<<<<< HEAD
 					indentName:'线上-活动',//订单名称
-=======
-//					indent_recomment:$("#submit-indent-recomment").text(),
-					indentName:'VI+视频套餐推广',//订单名称
->>>>>>> aa1ae231f8f63c00341b7e117e5a808e31a7926f
+					indent_recomment:'VI+视频套餐推广',//订单名称
 					productId:-1,
 					teamId:-1,
 					serviceId:-1,

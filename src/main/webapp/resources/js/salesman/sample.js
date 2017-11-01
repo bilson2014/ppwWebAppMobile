@@ -91,7 +91,7 @@ function initShareNew(){
     wx.ready(function(){
         wx.onMenuShareAppMessage({
         	title: '拍片网-企业视频名片', // 分享标题
-            desc: '', // 分享描述
+            desc: '企业视频名片', // 分享描述
             link: 'http://m.apaipian.com/activity/psample', // 分享链接
             imgUrl: 'http://m.apaipian.com/resources/images/employee/em1.png', // 分享图标
             type: 'link', // 分享类型,music、video或link，不填默认为link
@@ -105,7 +105,7 @@ function initShareNew(){
         });*/
         wx.onMenuShareTimeline({
             title: '拍片网-企业视频名片', // 分享标题
-            desc: '', // 分享描述
+            desc: '企业视频名片', // 分享描述
             link: 'http://m.apaipian.com/activity/psample', // 分享链接
             imgUrl: 'http://m.apaipian.com/resources/images/employee/em1.png', // 分享图标
             type: 'link', // 分享类型,music、video或link，不填默认为link

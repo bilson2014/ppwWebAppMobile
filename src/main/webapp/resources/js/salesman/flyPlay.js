@@ -52,8 +52,9 @@ function success(){
 				 }, getContextPath() + '/order/deliver', 
 				 {	
 					csrftoken:$("#csrftoken").val(),
-					indent_tele:$('#phone').val(),
-					indentName:'中飞艾维',//订单名称
+					indent_tele:$('#phone').val(),					
+					indentName:'线上-活动',//订单名称
+					indent_recomment:'中飞艾维',//订单名称
 					productId:-1,
 					teamId:-1,
 					serviceId:-1,
