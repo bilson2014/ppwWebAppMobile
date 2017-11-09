@@ -7,6 +7,7 @@ $().ready(function() {
 	setHeight();
 	initShareNew();
 	success();
+	varphone()
 	var screenWidth = document.documentElement.clientWidth;
 	$('body').css('width', screenWidth);
 });
@@ -51,13 +52,15 @@ function success(){
 				 }, getContextPath() + '/order/deliver', 
 				 {	
 					csrftoken:$("#csrftoken").val(),
-					indent_tele:$('#phone').val(),
-					indentName:'中飞艾维',//订单名称
+					indent_tele:$('#phone').val(),					
+					indentName:'线上-活动',//订单名称
+					indent_recomment:'中飞艾维',//订单名称
 					productId:-1,
 					teamId:-1,
 					serviceId:-1,
 					phoneCode : $('#num').val(),
-					indentSource : 2//订单来源编号			
+					indentSource : 2,//订单来源编号
+					salesmanUniqueId : 'airwing'
 				  });	
 			}			 
 		}				 
@@ -76,7 +79,7 @@ function success(){
 	$('#checkSuccess').on('click',function(){
 		$('#orderSuccess').attr('style','display:none;');		
 	})
-
+}
 function success() {
 	//访问中飞官网
 	$('#two').off('click').on('click',function(){
@@ -158,6 +161,7 @@ function init() {
 				document.getElementById('toPlayVideo').play();
 			});
 	}
+	var swiperSlideNum=$('.swiper-slide').length;
        var swiperV = new Swiper('.swiperVertical', {
 	        direction: 'vertical',
 	        pagination: '.swiper-pagination-v',
@@ -186,6 +190,10 @@ function init() {
 	            	document.getElementById('toPlayFullVideo').pause();
 	            }
 	            if(index == 1){
+	            	$('.spIcon').hide();
+	            }
+	            if(index==(swiperSlideNum-1)){
+	            	$('.needCard').addClass('openAnim');
 	            	$('.spIcon').hide();
 	            }
 	           }
@@ -230,7 +238,6 @@ function init() {
 			}
 		}
 	});
-
 }
 
 function initShareNew() {
@@ -268,5 +275,5 @@ function initShareNew() {
 							dataUrl : '', // 如果type是music或video，则要提供数据链接，默认为空
 						});
 			});
-    }
-}
+	}
+

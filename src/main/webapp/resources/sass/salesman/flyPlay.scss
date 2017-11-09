@@ -351,12 +351,95 @@ body {
     height: auto;
 }
 
-.swiper-slide .three {
-    width: 100%;
-    height: 1rem;
-    background: #146091;
-    position: absolute;
-    bottom: 0;
-    line-height: 1rem;
-    font-size: 0.5rem;
+.swiper-slide {
+    .cardBottom {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        font-size: .5rem;
+        color: white;
+        background: #146091;
+        text-align: center;
+        height: 1.2rem;
+        line-height: 1.2rem;
+    }
+    .needCard {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        font-size: .5rem;
+        color: white;
+        background: transparent;
+        text-align: center;
+        height: 1.2rem;
+        line-height: 1.2rem;
+    }
+    .openAnim {
+        -webkit-animation: cardAnim 1.5s infinite linear;
+        -moz-animation: cardAnim 1.5s infinite linear;
+        -o-animation: cardAnim 1.5s infinite linear;
+        animation: cardAnim 1.5s infinite linear;
+    }
+}
+
+@-webkit-keyframes cardAnim {
+    0% {
+        left: 0rem;
+    }
+    35% {
+        left: 0.5rem;
+    }
+    70% {
+        left: -0.5rem;
+    }
+    100% {
+        left: 0rem;
+    }
+}
+
+@-moz-keyframes cardAnim {
+    0% {
+        left: 0rem;
+    }
+    35% {
+        left: 0.5rem;
+    }
+    70% {
+        left: -0.5rem;
+    }
+    100% {
+        left: 0rem;
+    }
+}
+
+@-o-keyframes cardAnim {
+    0% {
+        left: 0rem;
+    }
+    35% {
+        left: 0.5rem;
+    }
+    70% {
+        left: -0.5rem;
+    }
+    100% {
+        left: 0rem;
+    }
+}
+
+@keyframes cardAnim {
+    0% {
+        left: 0rem;
+    }
+    35% {
+        left: 0.5rem;
+    }
+    70% {
+        left: -0.5rem;
+    }
+    100% {
+        left: 0rem;
+    }
 }

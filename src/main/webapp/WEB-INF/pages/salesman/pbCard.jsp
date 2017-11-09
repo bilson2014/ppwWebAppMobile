@@ -38,7 +38,7 @@
 				      </video>  
 				 </div>  
 				<!--  <img class="pageOneIcon" src="/resources/images/salesMan/pbCard/pageOneIcon.png"> -->
-				 <img class="pageOne" src="/resources/images/salesMan/pbCard/pageOne.jpg">
+				 <img class="pageOne" src="/resources/images/salesMan/pbCard/pageOne.png">
 		     </div>                     			  
 		     <div class="swiper-slide twoSlide">
 			       <div class="full-video" id="playFullVideo" data-type-id="61" data-type="mpa-video" style="margin: 0rem; display: block; width:100%"> 

@@ -63,14 +63,17 @@
 	<mvc:view-controller path="/costcode" view-name="/cost/costcalculate" />
 	<mvc:view-controller path="/costweixin" view-name="/costcalculateweixin" />
 	<mvc:view-controller path="/costtoutiao" view-name="/costcalculatetoutiao" />
-	<!-- 活动 -->
+	<!-- 活动 -->    <!--   -->
 	<mvc:view-controller path="/activity/Pbusinesscard" view-name="/salesman/pbCard" />
-	
+	<mvc:view-controller path="/activity/psample" view-name="/salesman/sample"/>
+	<mvc:view-controller path="/activity/dingsample" view-name="/salesman/ding"/>
 	<!-- test -->
 	<mvc:view-controller path="/cosmetic" view-name="/salesman/cosmetic" />
 	<mvc:view-controller path="/cosmetic2" view-name="/salesman/cosmetic2" />
 	<mvc:view-controller path="/employ" view-name="/salesman/employment" />
-	<mvc:view-controller path="/activity/vi" view-name="/salesman/publicity" />
+
+	<!--   /activity/vi -->
+	<mvc:view-controller path="/resources/salesman/vi/index.html" view-name="/salesman/publicity" />
 	<mvc:view-controller path="/activity/airwing" view-name="/salesman/flyPlay" /> 
 	<mvc:view-controller path="/activity/order" view-name="/salesman/planOrder" />
 			
