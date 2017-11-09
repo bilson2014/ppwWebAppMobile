@@ -58,6 +58,9 @@ body {
     div,p,label,span{
          color:white!important;
     }
+    span{
+        background: transparent !important; 
+    }
     img {
         width: 100%;
         height: auto;
