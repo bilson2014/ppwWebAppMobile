@@ -255,8 +255,9 @@ function initModel(id){
 				for (var int2 = 0; int2 < productModule.length; int2++) {
 					var mod = productModule[int2];
 					var type = mod.pinConfiguration_ProductModule.cpmModuleType;
+					var price =productModule[int2].pinConfiguration_ProductModule.cpmModulePrice;
 					if(type == 0){
-						v1.append(createMustMod(mod,int2));
+						v1.append(createMustMod(mod,int2,price));
 					}
 					else{
 						v2.append(createSubjoinMod(mod));
@@ -313,11 +314,14 @@ function initModel(id){
 	}
 }
 
-function createMustMod(obj,num){
+function createMustMod(obj,num,price){
 	var hasDes="";
-	if(num<2){
-		hasDes="(赠送)";
-	   } 
+//	if(num<2){
+//		hasDes="(免费)";
+//	   } 
+	if(price == 0){
+		hasDes="(免费)";
+	   }  
 	var html = ['<div class="cItem">',
 				'    <div class="pTitle">'+obj.moduleName+'</div>',
 				'    <div class="info">'+obj.description+'</div>',
