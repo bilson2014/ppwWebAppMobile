@@ -10,16 +10,13 @@ $().ready(function() {
 	var screenWidth = document.documentElement.clientWidth;
 	var screenHeight = document.documentElement.clientHeight;
 	$('body').css('width',screenWidth); 
-	/*$('body').css('height',screenHeight); */
-	if(isIos()){
 		   document.addEventListener("WeixinJSBridgeReady", function () {
 		    	document.getElementById('toPlayVideo').play();
 		     }, false);
-		    document.getElementById('toPlayVideo').play();
+		   document.getElementById('toPlayVideo').play();
 			$('#toPlayVideo').off('click').on('click',function(){
 				document.getElementById('toPlayVideo').play();
 			});
-	}
 });
 
 function isIos(){

@@ -34,7 +34,7 @@
 				 <div class="mpa-video" id="playVideo" data-type-id="61" data-type="mpa-video" style="margin: 0rem; display: block; width:100%"> 
 				      <span class="mpa-video-play-icon"></span> 
 				      <video  id="toPlayVideo"  loop="loop" x-webkit-airplay="true" webkit-playsinline="" playsinline="true" preload="auto" poster="/resources/images/publicity/pp.jpg" style="width:100%;  margin-top: -1px;"> 
-				           <source type="video/mp4" src="http://106.75.14.48:8888/group1/M00/00/79/CgptuFnuuYmAQ8BRAB-4koFR3rE226.mp4"> 
+				           <source type="video/mp4" src="${file_locate_storage_path}/group1/M00/00/79/CgptuFnuuYmAQ8BRAB-4koFR3rE226.mp4"> 
 				      </video>  
 				 </div>  
 		        <img src="/resources/images/publicity/publicity1.jpg"> 
@@ -43,7 +43,7 @@
 			       <div class="full-video" id="playFullVideo" data-type-id="61" data-type="mpa-video" style="margin: 0rem; display: block; width:100%"> 
 				        <span class="mpa-video-play-icon"></span> 
 				        <video  playsinline="true" webkit-playsinline="true"   id="toPlayFullVideo"  loop="loop" x-webkit-airplay="true" webkit-playsinline="" playsinline="true" preload="auto" poster="/resources/images/publicity/big.jpg" style="width:100%;  margin-top: -1px;"> 
-				             <source type="video/mp4" src="http://106.75.14.109:8888/group1/M00/00/7A/CgptuFnxat6AVWOXAFaK1MUX_cI828.mp4"> 
+				             <source type="video/mp4" src="${file_locate_storage_path}/group1/M00/00/7A/CgptuFnxat6AVWOXAFaK1MUX_cI828.mp4"> 
 				        </video>
 					</div> 
 	          </div>                  			  
