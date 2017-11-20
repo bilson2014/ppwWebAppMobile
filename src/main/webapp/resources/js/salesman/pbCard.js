@@ -15,11 +15,11 @@ $().ready(function() {
 		   document.addEventListener("WeixinJSBridgeReady", function () {
 		    	document.getElementById('toPlayVideo').play();
 		     }, false);
-		    document.getElementById('toPlayVideo').play();
-			$('#toPlayVideo').off('click').on('click',function(){
-				document.getElementById('toPlayVideo').play();
-			});
+		   document.getElementById('toPlayVideo').play();
 	}
+	$('#toPlayVideo').off('click').on('click',function(){
+		document.getElementById('toPlayVideo').play();
+	});
 });
 
 function isIos(){

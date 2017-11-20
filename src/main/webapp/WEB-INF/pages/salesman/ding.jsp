@@ -30,8 +30,8 @@
 <body>
    <div class="mpa-video" id="playVideo" data-type-id="61" data-type="mpa-video" style="margin: 0rem; display: block; width:100%"> 
 		<span class="mpa-video-play-icon"></span> 
-		<video  playsinline="true" webkit-playsinline="true"  id="toPlayVideo"  loop="loop" x-webkit-airplay="true" webkit-playsinline="" playsinline="true" preload="auto" poster="/resources/images/salesMan/ding/sam.jpg" style="width:100%;  margin-top: -1px;"> 
-			<source type="video/mp4" src="http://106.75.77.53:8888/group1/M00/00/B4/CgpmTln5PF-AYL2VAIpv3vZE2uI315.mp4"> 
+		<video autoplay  playsinline="true" webkit-playsinline="true"  id="toPlayVideo"  loop="loop" x-webkit-airplay="true" webkit-playsinline="" playsinline="true" preload="auto" poster="/resources/images/salesMan/ding/sam.jpg" style="width:100%;  margin-top: -1px;"> 
+			<source type="video/mp4" src="http://106.75.77.53:8888/group1/M00/00/B4/Cgpw7FoFUrOAJVfeAEAUix5M0JE653.mp4"> 
 		</video>  
 		<img class="samples" src="/resources/images/salesMan/ding/ding.png">
 	</div>				   

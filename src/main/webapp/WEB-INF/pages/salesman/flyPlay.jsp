@@ -45,7 +45,7 @@
 						poster="/resources/images/salesMan/flyPlay/small.jpg"
 						style="width: 100%; margin-top: -1px;">
 						<source type="video/mp4"
-							src="http://106.75.14.109:8888/group1/M00/00/B3/CgpmTlnxZn-AO7iUABZysWYDWwA861.mp4">
+							src="${file_locate_storage_path}/group1/M00/00/B3/CgpmTlnxZn-AO7iUABZysWYDWwA861.mp4">
 					</video>
 				</div>
 				<img class="pageOne"
@@ -61,7 +61,7 @@
 						webkit-playsinline="" playsinline="true" preload="auto"
 						poster="/resources/images/salesMan/flyPlay/big.jpg">
 						<source type="video/mp4"
-							src="http://106.75.14.109:8888/group1/M00/00/B3/CgpmTlnxZreASZOpAEQ3sBnAyxU783.mp4">
+							src="${file_locate_storage_path}/group1/M00/00/B3/CgpmTlnxZreASZOpAEQ3sBnAyxU783.mp4">
 					</video>
 				</div>
 			</div>

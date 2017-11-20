@@ -157,10 +157,11 @@ function init() {
 		    	document.getElementById('toPlayVideo').play();
 		     }, false);
 		    document.getElementById('toPlayVideo').play();
-			$('#toPlayVideo').off('click').on('click',function(){
-				document.getElementById('toPlayVideo').play();
-			});
+			
 	}
+	$('#toPlayVideo').off('click').on('click',function(){
+		document.getElementById('toPlayVideo').play();
+	});
 	var swiperSlideNum=$('.swiper-slide').length;
        var swiperV = new Swiper('.swiperVertical', {
 	        direction: 'vertical',
