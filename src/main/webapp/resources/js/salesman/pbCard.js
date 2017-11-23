@@ -20,6 +20,13 @@ $().ready(function() {
 	$('#toPlayVideo').off('click').on('click',function(){
 		document.getElementById('toPlayVideo').play();
 	});
+	$('#toPlayFullVideo').off('click').on('click',function(){
+		document.getElementById('toPlayFullVideo').play();
+	});
+	
+	/*alert('屏幕高='+window.screen.height);
+	alert('实际高='+$('body').height());*/
+	
 });
 
 function isIos(){
@@ -27,7 +34,6 @@ function isIos(){
 	var isIOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
 	return isIOS;
 }
-
 
 function varphone(){
 	var phone=$('#phone').val();
@@ -45,6 +51,7 @@ function varphone(){
 	$('#phoneerror').text('');
 	return true;
 }
+
 function success(){
 	//立即报名
 	$('#btnSub').on('click',function(){
