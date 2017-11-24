@@ -112,7 +112,7 @@ function loginOrder(){
 				csrftoken:$("#csrftoken").val(),
 				indent_tele:'',
 				indent_recomment : '线上-SEM-价格区间',
-				indentName : '线上-SEM',
+				indentName: '线上-SEM',
 				productId:-1,
 				teamId:-1,
 				serviceId:-1,
@@ -157,13 +157,13 @@ function noLoginOrder(){
 						{	
 						csrftoken:$("#csrftoken").val(),
 						indent_tele:$("#indent_tele").val(),
-						indent_recomment:$("#submit-indent-recomment").text(),
-						indentName:'网站-移动-首页banner',
+						indent_recomment : '线上-SEM-价格区间',
+						indentName : '线上-SEM',
 						productId:-1,
 						teamId:-1,
 						serviceId:-1,
 						phoneCode : $('#phoneCode').val(),
-						indentSource : 16
+						indentSource : 22
 					});	
 				}
 		}
