@@ -19,18 +19,23 @@ $().ready(function() {
 			 $('#img'+nowImg).addClass('activeImg');	 
 		 }
 	},5000);
-	$('.slideBox .prev').addClass('.addstyle');
+//	$('#adds').css('height','70rem');
+	$('.slideBox .bd ul li').css('height','20rem');
 	setInterval(function(){
 		if (a){
+			$('.slideBox .next').css('right','2%');
 			$('.slideBox .next').css('opacity','1');
-			$('.slideBox .prev').css('opacity','0.5');
+			$('.slideBox .prev').css('opacity','1');
+			$('.slideBox .prev').css('left','2%');
 			a=false;
 		}else {
-			$('.slideBox .next').css('opacity','0.5');
-			$('.slideBox .prev').css('opacity','1');
+			$('.slideBox .next').css('right','5%');
+			$('.slideBox .next').css('opacity','0.3');
+			$('.slideBox .prev').css('opacity','0.3');
+			$('.slideBox .prev').css('left','5%');
 			a=true;
 		}	
-	},400);
+	},500);
 	jQuery(".slideBox").slide({mainCell:".bd ul",effect:"fold",});
 
 });
@@ -106,17 +111,15 @@ function loginOrder(){
 				{	
 				csrftoken:$("#csrftoken").val(),
 				indent_tele:'',
-				indent_recomment:$("#submit-indent-recomment").text(),
-				indentName:'网站-移动-首页banner',
+				indent_recomment : '线上-SEM-价格区间',
+				indentName : '线上-SEM',
 				productId:-1,
 				teamId:-1,
 				serviceId:-1,
 				phoneCode : '',
-				indentSource : 16
+				indentSource : 22
 			});	
 		}
-		
-
 	});
 }
 

@@ -103,8 +103,8 @@ area {
 .logo {
     width: 217px;
     height: 70px;
-    margin-left: 11%;
-    margin-top: 13%;
+    left: 11%;
+    top: 7%;
     position: absolute;
 }
 
@@ -113,8 +113,8 @@ area {
 
 .slideBox .prev {
     position: absolute;
-    left: 2%;
-    top: 63%;
+    left: 5%;
+    top: 80%;
     margin-top: -25px;
     display: block;
     width: 1rem;
@@ -127,8 +127,8 @@ area {
 
 .slideBox .next {
     position: absolute;
-    left: 2%;
-    top: 63%;
+    left: 5%;
+    top: 80%;
     margin-top: -25px;
     display: block;
     width: 1rem;
@@ -141,7 +141,7 @@ area {
 
 .slideBox .next {
     left: auto;
-    right: 2%;
+    right: 5%;
     background-position: 8px 5px;
 }
 
@@ -163,9 +163,9 @@ area {
 
 .slideBox {
     width: 100%;
-    height: auto;
+    height: 50%;
     position: absolute;
-    margin-top: 20%;
+    top: 10%;
 }
 
 .slideBox .bd {
@@ -176,13 +176,14 @@ area {
 
 .slideBox .bd ul {
     width: 100%;
-    height: 11rem;
+    height: 11rem !important;
     overflow: hidden;
 }
 
 .slideBox .bd img {
-    width: 100%;
-    height: auto;
+    width: 84%;
+    height: 47%;
+    margin: 0 auto;
     vertical-align: bottom;
     display: block;
 }
@@ -234,7 +235,7 @@ area {
     height: 5%;
     left: 15%;
     position: absolute;
-    bottom: 5.5rem;
+    top: 70%;
 }
 
 .getPhone .getPhoneItem {
@@ -290,7 +291,20 @@ area {
     background: #fe5453;
     border-radius: 4rem;
     position: absolute;
-    bottom: 1.8rem;
+    top: 89%;
+    left: 15%;
+}
+
+.showStatues {
+    color: white;
+    font-size: 0.5rem;
+    width: 70%;
+    height: 1.1rem;
+    line-height: 1.1rem;
+    text-align: center;
+    border-radius: 4rem;
+    position: absolute;
+    top: 84%;
     left: 15%;
 }
 
