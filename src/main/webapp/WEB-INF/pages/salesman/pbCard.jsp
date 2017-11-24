@@ -73,9 +73,8 @@
     <script src="/resources/lib/jquery.json/jquery.json-2.4.min.js"></script> 
     <script src="/resources/lib/swiper/swiper.min.js"></script>
     <script src="/resources/js/common.js"></script>
+    <script src="/resources/lib/video/video.min.js"></script>
     <script src="/resources/js/salesman/pbCard.js"></script>
-   
-  
 
 </body>
 </html>

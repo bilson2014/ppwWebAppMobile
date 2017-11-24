@@ -76,6 +76,7 @@
 	<mvc:view-controller path="/resources/salesman/vi/index.html" view-name="/salesman/publicity" />
 	<mvc:view-controller path="/activity/airwing" view-name="/salesman/flyPlay" /> 
 	<mvc:view-controller path="/activity/order" view-name="/salesman/planOrder" />
+	<mvc:view-controller path="/pbTest" view-name="/salesman/pbTest" />
 			
 	<!-- 产品线End -->
 	<mvc:view-controller path="/repwd" view-name="/repwd" />
