@@ -1,0 +1,387 @@
+/* CSS Document */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    font-size: 14px;
+    color: #333;
+    background: #fff;
+    font-family: "Microsoft Yahei";
+    height: 100%;
+    width: 100%;
+}
+
+ul li {
+    list-style: none;
+    vertical-align: bottom;
+}
+
+a,
+span {
+    text-decoration: none;
+    color: #000;
+    transition: all 0.5s ease-in-out 0s;
+    -moz-transition: all 0.5s ease-in-out 0s;
+    -webkit-transition: all 0.5s ease-in-out 0s;
+    -o-transition: all 0.5s ease-in-out 0s;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+img {
+    border: none;
+    vertical-align: middle;
+}
+
+table {
+    border: none;
+    padding: 0;
+    margin: 0;
+    border-collapse: collapse;
+    overflow: hidden;
+}
+
+table tr {
+    white-space: 0;
+}
+
+table tr td {
+    vertical-align: middle;
+}
+
+.clear {
+    clear: both;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    line-height: 100%;
+}
+
+:focus {
+    outline: none;
+}
+
+a,
+area {
+    blr: expression(this.onFocus=this.blur())
+}
+
+.container {
+    width: 1200px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.clear {
+    clear: both;
+}
+
+.hide {
+    display: none;
+}
+
+
+/*------------------------------------HEAD-----------------------------------------*/
+
+.logo {
+    width: 217px;
+    height: 70px;
+    margin-left: 11%;
+    margin-top: 13%;
+    position: absolute;
+}
+
+
+/* 下面是前/后按钮代码，如果不需要删除即可 */
+
+.slideBox .prev {
+    position: absolute;
+    left: 2%;
+    top: 63%;
+    margin-top: -25px;
+    display: block;
+    width: 1rem;
+    height: 1.5rem;
+    background: url(../images/slider-arrow.png) -3rem 0rem no-repeat;
+    background-size: 6.5rem 1rem;
+    filter: alpha(opacity=50);
+    opacity: 0.5;
+}
+
+.slideBox .next {
+    position: absolute;
+    left: 2%;
+    top: 63%;
+    margin-top: -25px;
+    display: block;
+    width: 1rem;
+    height: 1.5rem;
+    background: url(../images/slider-arrow.png) -3rem 0rem no-repeat;
+    background-size: 6.5rem 1rem;
+    filter: alpha(opacity=50);
+    opacity: 0.5;
+}
+
+.slideBox .next {
+    left: auto;
+    right: 2%;
+    background-position: 8px 5px;
+}
+
+.slideBox .addstyle {
+    filter: alpha(opacity=100);
+    opacity: 1;
+}
+
+.slideBox .prevStop {
+    display: none;
+}
+
+.slideBox .nextStop {
+    display: none;
+}
+
+
+/* banner css */
+
+.slideBox {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    margin-top: 20%;
+}
+
+.slideBox .bd {
+    position: relative;
+    width: 100%;
+    z-index: 0;
+}
+
+.slideBox .bd ul {
+    width: 100%;
+    height: 11rem;
+    overflow: hidden;
+}
+
+.slideBox .bd img {
+    width: 100%;
+    height: auto;
+    vertical-align: bottom;
+    display: block;
+}
+
+.backImg {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+}
+
+.backImg div {
+    position: absolute;
+    background-color: rgba(51, 51, 51, 0.6);
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+}
+
+.backImg img {
+    position: absolute;
+    width: 100%;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+    opacity: 0;
+    -webkit-transition: transform 4s, opacity 1.2s;
+    -moz-transition: transform 4s, opacity 1.2s;
+    -o-transition: transform 4s, opacity 1.2s;
+    transition: transform 4s, opacity 1.2s;
+}
+
+.backImg .activeImg {
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
+    opacity: 1;
+}
+
+
+/* 下面是前/后按钮代码，如果不需要删除即可 */
+
+.getPhone {
+    color: white;
+    font-size: 0.45rem;
+    width: 70%;
+    height: 5%;
+    left: 15%;
+    position: absolute;
+    bottom: 5.5rem;
+}
+
+.getPhone .getPhoneItem {
+    width: 100%;
+    position: absolute;
+    margin-top: 1.7rem;
+}
+
+.getPhone .getCode {
+    height: 1.2rem;
+    line-height: 1.2rem;
+    color: #fff;
+    width: 34%;
+    border-left: 0.08rem solid #fe5453;
+    position: absolute;
+    top: 18%;
+    right: 3%;
+    text-align: right;
+}
+
+.getPhone input {
+    background: none;
+    width: 96%;
+    height: 1rem;
+    line-height: 1.08rem;
+    text-align: left;
+    border-color: #fe5453;
+    border-radius: 4rem;
+    border-width: 0.1rem;
+    margin: 0 auto;
+    font-size: 0.5rem;
+    outline: none;
+    color: #fff;
+    padding-left: 0.31rem;
+    position: absolute;
+}
+
+.getPhone .error {
+    font-size: 0.4rem;
+    color: #fe5453;
+    position: absolute;
+    top: 1.2rem;
+    display: none;
+}
+
+.order {
+    color: white;
+    font-size: 0.5rem;
+    width: 70%;
+    height: 1.1rem;
+    line-height: 1.1rem;
+    text-align: center;
+    background: #fe5453;
+    border-radius: 4rem;
+    position: absolute;
+    bottom: 1.8rem;
+    left: 15%;
+}
+
+@keyframes showname {
+    0% {
+        opacity: 0;
+        margin-left: -190px;
+        background-position: -190px bottom;
+    }
+    10% {
+        opacity: 1;
+        margin-left: 0;
+        background-position: -190px bottom;
+    }
+    80% {
+        opacity: 1;
+        margin-left: 0;
+        background-position: 0 bottom;
+    }
+    100% {
+        opacity: 0;
+        margin-left: 0;
+        background-position: 0 bottom;
+    }
+}
+
+@-moz-keyframes showname {
+    0% {
+        opacity: 0;
+        margin-left: -190px;
+        background-position: -190px bottom;
+    }
+    10% {
+        opacity: 1;
+        margin-left: 0;
+        background-position: -190px bottom;
+    }
+    80% {
+        opacity: 1;
+        margin-left: 0;
+        background-position: 0 bottom;
+    }
+    100% {
+        opacity: 0;
+        margin-left: 0;
+        background-position: 0 bottom;
+    }
+}
+
+@-webkit-keyframes showname {
+    0% {
+        opacity: 0;
+        margin-left: -190px;
+        background-position: -190px bottom;
+    }
+    10% {
+        opacity: 1;
+        margin-left: 0;
+        background-position: -190px bottom;
+    }
+    80% {
+        opacity: 1;
+        margin-left: 0;
+        background-position: 0 bottom;
+    }
+    100% {
+        opacity: 0;
+        margin-left: 0;
+        background-position: 0 bottom;
+    }
+}
+
+@-o-keyframes showname {
+    0% {
+        opacity: 0;
+        margin-left: -190px;
+        background-position: -190px bottom;
+    }
+    10% {
+        opacity: 1;
+        margin-left: 0;
+        background-position: -190px bottom;
+    }
+    80% {
+        opacity: 1;
+        margin-left: 0;
+        background-position: 0 bottom;
+    }
+    100% {
+        opacity: 0;
+        margin-left: 0;
+        background-position: 0 bottom;
+    }
+}

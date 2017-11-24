@@ -127,13 +127,11 @@ function isWeiXin() {
 
 var portal = {
 	initData : function() { // 加载分类信息
-
 		 var banner = new Swiper('.swiper-container', {
 		        loop: true,
 		        grabCursor: true,
 		        autoplay: 5000,
 		    });
-		 
 		 $('#checkSuccess').on('click',function(){
 			 $('#orderSuccess').hide();
 		 });
