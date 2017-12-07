@@ -28,16 +28,16 @@ function loginOrder(){
 	var team = $('.tags2').siblings('.team').attr('data-content');
 	var equipment = $('.tags3').siblings('.equipment').attr('data-content');
 	var actor = $('.tags4').siblings('.actor').attr('data-content');
-	var animation = $('.tags5').siblings('animation').attr('data-content');
+	var animation = $('.tags5').siblings('.animation').attr('data-content');
 	var videoTypeText = $('.tags1').siblings('.type').text();
 	var teamText = $('.tags2').siblings('.team').text();
 	var equipmentText = $('.tags3').siblings('.equipment').text();
 	var actorText = $('.tags4').siblings('.actor').text();
-	var animationText = $('.tags5').siblings('animation').text();
+	var animationText = $('.tags5').siblings('.animation').text();
 	var time = $('#time').text();
 	var indentId = $('#phone').attr('data-content');
 	var description = [ "视频类别:" + videoTypeText, ",时长: 未选择", ",导演团队:" + teamText,
-			",拍摄设备:" + equipmentText, ",演员:" + actorText, ",动画:" + animationText ].join("");
+			",拍摄设备:" + equipmentText, ",演员:" + actorText, ",配音:" + animationText ].join("");
 	var phone = $('#rolephone').val();
 	if(first){
 		add = false;
@@ -108,17 +108,17 @@ function noLoginOrder(){
 		var team = $('.tags2').siblings('.team').attr('data-content');
 		var equipment = $('.tags3').siblings('.equipment').attr('data-content');
 		var actor = $('.tags4').siblings('.actor').attr('data-content');
-		var animation = $('.tags5').siblings('animation').attr('data-content');
+		var animation = $('.tags5').siblings('.animation').attr('data-content');
 		var videoTypeText = $('.tags1').siblings('.type').text();
 		var teamText = $('.tags2').siblings('.team').text();
 		var equipmentText = $('.tags3').siblings('.equipment').text();
 		var actorText = $('.tags4').siblings('.actor').text();
-		var animationText = $('.tags5').siblings('animation').text();
+		var animationText = $('.tags5').siblings('.animation').text();
 		
 		var time = $('#time').text();
 		var indentId = $('#phone').attr('data-content');
 		var description = [ "视频类别:" + videoTypeText, ",时长: 未选择", ",导演团队:" + teamText,
-				",拍摄设备:" + equipmentText, ",演员:" + actorText, ",动画:" + animationText ].join("");
+				",拍摄设备:" + equipmentText, ",演员:" + actorText, ",配音:" + animationText ].join("");
 		var phone = $('#phone').val();
 		var verification_code = $('#phoneCode').val();
 		if(add){

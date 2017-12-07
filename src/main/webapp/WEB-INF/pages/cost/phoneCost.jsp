@@ -85,12 +85,21 @@
 	                 <div class="title">1/5.  您想拍个什么片子？</div>
 	                 <div class="line"></div>
 	                 <div class="tags">
-	                    <div class="tags1" data-content="0">A.活动视频</div>
+	                    <!-- <div class="tags1" data-content="0">A.活动视频</div>
 	                    <div class="tags1" data-content="3">D.微电影</div>
 	                    <div class="tags1" data-content="1">B.TVC广告</div>
 	                    <div class="tags1" data-content="4">E.融资路演</div>
 	                    <div class="tags1" data-content="2">C.宣传片</div>
-	                    <div class="tags1" data-content="5">F.众筹视频</div>
+	                    <div class="tags1" data-content="5">F.众筹视频</div> -->
+	                    
+	                    <div class="tags1" data-content="0">A.企业宣传</div>
+	                    <div class="tags1" data-content="4">E.三维展示</div>
+	                    <div class="tags1" data-content="1">B.广告TVC</div>
+	                    <div class="tags1" data-content="5">F.视频名片</div>
+	                    <div class="tags1" data-content="2">C.微电影</div>
+	                    <div class="tags1" data-content="6">G.电商视频</div>
+	                    <div class="tags1" data-content="3">D.MG动画</div>
+	                    <div class="tags1" data-content="7">H.活动及课件</div>
 	                 </div>
 	            </div>
 	            <div class="swiper-slide">
@@ -122,26 +131,26 @@
 	            </div>
 	            <div class="swiper-slide">
 	                 <img class="slideBg4" src="${imgPath}/cost/gPhone4.png">
-	                 <div class="title">4/5.  选演员当然要选专业的！</div>
+	                 <div class="title">4/5.  选演员当然要选资深的！</div>
 	                 <div class="title topT">您需要的是？</div>
 	                 <div class="line"></div>
 	                 <div class="tags">
                            <div class="tags4" data-content="0">A.自有演员</div>
                            <div class="tags4" data-content="1">B.普通演员</div>
                            <div class="tags4" data-content="2">C.专业演员</div>
-                           <div class="tags4" data-content="3">D.不需要演员</div>
+                         <!--   <div class="tags4" data-content="3">D.不需要演员</div> -->
 	                 </div>
 	            </div>
 	            <div class="swiper-slide">
 	                 <img class="slideBg5" src="${imgPath}/cost/gPhone5.png">
-	                 <div class="title">5/5.  您偏爱哪种动画效果</div>
+	                 <div class="title">5/5.  选配音当然是选专业的！</div>
 	                 <div class="title topT">您需要的是？</div>
 	                 <div class="line"></div>
 	                 <div class="tags">
-                           <div class="tags5" data-content="0">A.没有也行</div>
-                           <div class="tags5" data-content="1">B.二维动画</div>
-                           <div class="tags5" data-content="2">C.三维动画</div>
-                           <div class="tags5" data-content="3">D.MG图形动画</div>
+                           <div class="tags5" data-content="0">A.无配音</div>
+                           <div class="tags5" data-content="1">B.专业配音</div>
+                           <div class="tags5" data-content="2">C.广播级配音</div>
+                           <div class="tags5" data-content="3">D.广告级配音</div>
 	                 </div>
 	            </div>
 	            <div class="swiper-slide swiper-no-swiping" >
