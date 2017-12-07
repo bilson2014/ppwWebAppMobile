@@ -97,7 +97,7 @@ public class ActivityController extends BaseController{
 			}
 		}
 		map.put("code", 1);
-		int cost = calculateService.dealCost(PmsConstant.TYPE_ADD_TEAM,calculate);
+		int cost = calculateService.dealCost(PmsConstant.TYPE_ADD_TEAM,PmsConstant.TYPE_ADD_EQUIPMENT,calculate);
 		map.put("cost", cost);
 		//提交订单
 		PmsIndent indent = new PmsIndent();
