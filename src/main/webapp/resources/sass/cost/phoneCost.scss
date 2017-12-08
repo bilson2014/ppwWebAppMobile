@@ -129,6 +129,12 @@ body {
     margin-top: -1.38rem;
 }
 
+.slideBg3-4 {
+    width: 6.94rem;
+    height: 3.62rem;
+    margin-top: -1.38rem;
+}
+
 .slideBg4 {
     width: 6.94rem;
     height: 3.62rem;
@@ -203,6 +209,7 @@ body {
     }
     .tags2,
     .tags3,
+    .tags3-4,
     .tags4,
     .tags5 {
         width: 100%;
@@ -216,6 +223,7 @@ body {
         vertical-align: top;
         margin-right: 0.4rem;
     }
+    .tags3-4,
     .tags4,
     .tags5 {
         margin-bottom: 0.4rem;
@@ -236,6 +244,7 @@ body {
 .type,
 .team,
 .equipment,
+.times,
 .actor,
 .animation {
     border: 1px solid $red-base !important;
