@@ -239,6 +239,12 @@ function init() {
 	 
 	 $('.reCost').on('click',function(){
 		 swiper.slideTo(0, 1000, false);//切换到第一个slide，速度为1秒
+		 $('.tags1').removeClass('type');
+		 $('.tags2').removeClass('team');
+		 $('.tags3').removeClass('equipment');
+		 $('.tags3-4').removeClass('times');
+		 $('.tags4').removeClass('actor');
+		 $('.tags5').removeClass('animation');
 		 $('#step1').show();
 		 $('#step2').hide();
 		 $('#step3').hide();

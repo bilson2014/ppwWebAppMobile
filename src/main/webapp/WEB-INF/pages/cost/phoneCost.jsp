@@ -130,7 +130,7 @@
 	                 </div>
 	            </div>
 	            <div class="swiper-slide">
-	                 <img class="slideBg3-4" src="${imgPath}/cost/gPhone3.png">
+	                 <img class="slideBg3-4" src="${imgPath}/cost/gPhone33.png">
 	                 <div class="title">4/6.  您需要多长时间的片子？</div>
 	                 <div class="title topT"></div>
 	                 <div class="line"></div>
