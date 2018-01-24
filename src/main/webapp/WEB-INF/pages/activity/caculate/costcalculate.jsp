@@ -259,19 +259,18 @@
         </div>
        
     </div> 
-            
-             <a href="javascript:void(0);">
-						<div class="-mob-share-ui -mob-share-ui-theme -mob-share-ui-theme-slide-bottom" style="display: none">
-							<ul class="-mob-share-list">
-						        <li class="-mob-share-weixin" id="weixin"><p>微信</p></li>
-						        <li class="-mob-share-qzone"><p>QQ空间</p></li>
-						        <li class="-mob-share-qq" id="qq"><p>QQ好友</p></li>
-							    <li class="-mob-share-weibo"><p>新浪微博</p></li>
-					       	</ul>
-						    <div class="-mob-share-close">取消</div>
-						</div>
-						<div class="-mob-share-ui-bg"></div>
-					</a>     
+    <a href="javascript:void(0);">
+		<div class="-mob-share-ui -mob-share-ui-theme -mob-share-ui-theme-slide-bottom" style="display: none">
+			<ul class="-mob-share-list">
+				<li class="-mob-share-weixin" id="weixin"><p>微信</p></li>
+				<li class="-mob-share-qzone"><p>QQ空间</p></li>
+				<li class="-mob-share-qq" id="qq"><p>QQ好友</p></li>
+				<li class="-mob-share-weibo"><p>新浪微博</p></li>
+			</ul>
+			<div class="-mob-share-close">取消</div>
+		</div>
+		<div class="-mob-share-ui-bg"></div>
+	</a>     
 
     <script src="${jqueryJs }"></script>
     <script src="${testRemJs }"></script>
@@ -279,5 +278,8 @@
     <script src="${swiperJs }"></script>
     <script src="${costJs }"></script>
     <script id="-mob-share" src="http://f1.webshare.mob.com/code/mob-share.js?appkey=8c49c537a706"></script>
+    
+    
+    
 </body>
 </html>
