@@ -49,7 +49,9 @@
 
 <body>
 
-	<input type="hidden" id='target'>
+<!-- 	<input type="hidden" id='target'> -->
+	
+		<input type="hidden" id="target" value="${uniqueId }">
 <audio controls="controls" hidden="hidden" autoplay="autoplay" loop="loop">
 	<source src="/resources/music/music.mp3" type="audio/mpeg" />
 </audio>
@@ -67,7 +69,8 @@
 </div>
 
 <div class="modalShow" id="code">       
-       <img id="sCode" class="sCode" src="/resources/images/cost/costImg.png">
+       <!-- <img id="sCode" class="sCode" src="/resources/images/cost/costImg.png"> -->
+       <img id="sCode" class="sCode" src="/resources/images/cost/code.jpg">
 </div>
 
 <div class="modalShow" id="showWeixin">  
@@ -264,7 +267,7 @@
                   
 			       <div class="phoneCard " id="phoneCard">
 			            <div class="errorPhone hide">
-			               <input placeholder="输入您的手机号" id="phone" value="18210367466">
+			               <input placeholder="输入您的手机号" id="phone" value="">
 			            </div>
 			            <div class="errorInfo" id="errorInfo"></div>
 			            <div class="errorPhone codePhone hide" id="codePhone">
@@ -320,18 +323,18 @@
         <!-- <div class="swiper-pagination"></div> -->
     </div> 
             
-             <a href="javascript:void(0);">
-						<div class="-mob-share-ui -mob-share-ui-theme -mob-share-ui-theme-slide-bottom" style="display: none">
-							<ul class="-mob-share-list">
-						        <li class="-mob-share-weixin" id="weixin"><p>微信</p></li>
-						        <li class="-mob-share-qzone"><p>QQ空间</p></li>
-						        <li class="-mob-share-qq" id="qq"><p>QQ好友</p></li>
-							    <li class="-mob-share-weibo"><p>新浪微博</p></li>
-					       	</ul>
-						    <div class="-mob-share-close">取消</div>
-						</div>
-						<div class="-mob-share-ui-bg"></div>
-					</a>     
+     <a href="javascript:void(0);">
+		<div class="-mob-share-ui -mob-share-ui-theme -mob-share-ui-theme-slide-bottom" style="display: none">
+			<ul class="-mob-share-list">
+				<li class="-mob-share-weixin" id="weixin"><p>微信</p></li>
+				<li class="-mob-share-qzone"><p>QQ空间</p></li>
+				<li class="-mob-share-qq" id="qq"><p>QQ好友</p></li>
+				<li class="-mob-share-weibo"><p>新浪微博</p></li>
+			</ul>
+			<div class="-mob-share-close">取消</div>
+		</div>
+		<div class="-mob-share-ui-bg"></div>
+	</a>     
 
     <script src="${jqueryJs }"></script>
     <script src="${testRemJs }"></script>
@@ -340,23 +343,7 @@
     <script src="${costJs }"></script>
     <script id="-mob-share" src="http://f1.webshare.mob.com/code/mob-share.js?appkey=8c49c537a706"></script>
     
-    <!--放到body 的js  -->
-   <!--  <script type="text/javascript">
-        (function(root) {
-            root._tt_config = true;
-            var ta = document.createElement('script'); ta.type = 'text/javascript'; ta.async = true;
-            ta.src = document.location.protocol + '//' + 's3.pstatp.com/bytecom/resource/track_log/src/toutiao-track-log.js';
-            ta.onerror = function () {
-                var request = new XMLHttpRequest();
-                var web_url = window.encodeURIComponent(window.location.href);
-                var js_url  = ta.src;
-                var url = '//ad.toutiao.com/link_monitor/cdn_failed?web_url=' + web_url + '&js_url=' + js_url + '&convert_id=84968393060';
-                request.open('GET', url, true);
-                request.send(null);
-            }
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ta, s);
-        })(window);
-    </script> -->
+
     
 </body>
 </html>

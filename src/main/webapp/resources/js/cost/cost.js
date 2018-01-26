@@ -212,8 +212,6 @@ function getPrice(){
 	var animation = $('.red-7').attr('data-content') == undefined ? 0 : $('.red-7').attr('data-content');
 	var animationText = $('.red-7').attr('data-text') == undefined ? '无配音' :  $('.red-7').attr('data-text');
 
-//	var time = '0';
-//	var timeText = '1~3分钟';
 	var indentId = $('#phoneCode').attr('data-content');
 	var description = [ "视频类别:" + videoTypeText, ",导演团队:" + teamText,",拍摄设备:" + equipmentText, 
 		",时长:" + videotimeText,  ",演员:" + actorText, ",配音:" + animationText ].join("");
@@ -246,17 +244,18 @@ function getPrice(){
 					$('#errorCode').text(job.msg);					
 				}
              
-		}, getContextPath() + '/calculate/cost2', $.toJSON({
+		}, getContextPath() + '/activity/calculate/result', $.toJSON({
 			videoType : videoType,
-			time:videotime,
 			team : team,
 			equipment :equipment ,
 			actor : actor,
 			animation : animation,
+			time:videotime,
+			phone : $('#phone').val(),
+			indentId : $('#phoneCode').attr('data-content'),
 			description : description,
 			verification_code:verification_code,
-			target:"",
-			indentSource : 1
+			target:$('#target').val()
 		}));
 	}
 
