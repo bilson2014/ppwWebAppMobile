@@ -1,6 +1,6 @@
 var hasHeight = true;
 var scrollHeight = 0;
-var frameUrl = "http://"+getphoneUrl();
+var frameUrl = getphoneUrl();
 $().ready(function() {	
 	document.domain = getUrlDo();
 	    setMinHieght();
