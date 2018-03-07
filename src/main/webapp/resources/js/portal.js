@@ -215,8 +215,8 @@ var portal = {
 					         '<img src="/resources/images/index/true.png">'+
 					     '</div>'+
 						  '<div class="proContent">'+
-				                '<div class="title">'+item.teamName+'</div>'+
-				                '<div class="des">'+item.description+'</div>'+
+				                '<div class="title" style="margin-top: 20px;">'+item.teamName+'</div>'+
+				                /*'<div class="des">'+item.description+'</div>'+*/
 				                '<div class="tags">';
 					 if(json!=null && json !=''){
 						 for (var int = 0; int < json.length; int++) {

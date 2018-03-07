@@ -172,7 +172,6 @@
 
 	<div class="pagePhone">
 
-
 		<div class="hideMenu">
 			<c:if test="${!empty list}">
 				<!-- not empty -->
