@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="keywords" content="企业宣传片制作,企业宣传片拍摄,宣传片价格">
+<meta name="description" content="拍片网_商业视频内容制作平台：宣传片、广告片、MG动画、微电影，成本劲省30%，价格同行业最低。企业宣传片拍 摄，上拍片网，享受一站式精致服务。">
+<title>企业宣传片拍摄价格-宣传片制作公司-拍片网</title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<script src="js/jquery-1.8.3.min.js"></script>
+ <script src="js/jquery.SuperSlide.2.1.1.js"></script> 
+<!-- <script src="js/bplayer.js"></script> -->
+<script src="js/index.js"></script>
+<script src="/resources/js/common.js"></script>
+
+</head>
+
+<body>
+<input type='hidden' id='csrftoken'>
+ 	<div class="backImg">
+	        <img id="img1" class="lazyloaded" data-src="/resources/images/index/back1.jpg" src="/resources/images/index/back1.jpg">
+	        <img id="img2" class="lazyloaded" data-src="/resources/images/index/back2.jpg" src="/resources/images/index/back2.jpg">
+	        <img id="img3" class="lazyloaded" data-src="/resources/images/index/back3.jpg" src="/resources/images/index/back3.jpg">
+	        <img id="img4" class="lazyloaded" data-src="/resources/images/index/back4.jpg" src="/resources/images/index/back4.jpg">
+	        <img id="img5" class="lazyloaded" data-src="/resources/images/index/back5.jpg" src="/resources/images/index/back5.jpg">
+	        <div></div>
+	</div>
+	<div class='logo'>
+		<img src="images/logo.png" />
+	</div>
+	<div class="banner slideBox" id="slideBox">
+		<div class="bd">
+			<ul>
+				<li><img src="images/banner1.png" /></li>
+				<li><img src="images/banner2.png" /></li>
+				<li><img src="images/banner3.png" /></li>
+				<li><img src="images/banner4.png" /></li>
+			</ul>
+		</div>
+		<a class="prev" href="javascript:void(0)"></a>
+		<a class="next" href="javascript:void(0)"></a>
+   </div>
+   
+   
+    <form id="order-form" role="form" method="post" autocomplete="off" accept-charset="UTF-8">
+				<c:if test="false">
+					<input type="hidden" id="indentName" name="indentName" value="新订单-手机下单">	
+				</c:if>
+				<c:if test="true">
+					<input type="hidden" id="indentName" name="indentName" value="微信底部广告">
+				</c:if>
+				<input type="hidden" id="csrftoken" name="csrftoken" value="30e1727e75114ea58a67c2da43c44d07">
+				<input type="hidden" id="token" name="token" value="">	
+		    	<div class="getPhone">
+		    		<input type="number" maxlength="16" id="indent_tele" placeholder="填写手机号">
+		    		<div class="error" id="error">手机号错误</div>
+		    		<div class="getPhoneItem">
+			    		<input type="number" maxlength="16" id="phoneCode" placeholder="输入验证码">
+			    		<div class="getCode" id="getPhoneCode">发送验证码</div>
+			    		<div class="error" id="codeError">错误</div>
+		    		</div>
+		    	</div>
+		    	
+    	<div class="order" id="subPaipian">预约拍片</div>
+    	<div class="showStatues" id="showStatues"></div>
+    </form>
+   <!--  <script type="text/javascript">
+		jQuery(".slideBox").slide({mainCell:".bd ul",effect:"fold",autoPlay:true,delayTime:1000,});
+	</script> -->
+</body>
+</html>

@@ -82,33 +82,42 @@
 	        <div class="swiper-wrapper">
 	            <div class="swiper-slide">
 	                 <img class="slideBg" src="${imgPath}/cost/gPhone1.png">
-	                 <div class="title">1/5.  您想拍个什么片子？</div>
+	                 <div class="title">1/6.  您想拍个什么片子？</div>
 	                 <div class="line"></div>
 	                 <div class="tags">
-	                    <div class="tags1" data-content="0">A.活动视频</div>
+	                    <!-- <div class="tags1" data-content="0">A.活动视频</div>
 	                    <div class="tags1" data-content="3">D.微电影</div>
 	                    <div class="tags1" data-content="1">B.TVC广告</div>
 	                    <div class="tags1" data-content="4">E.融资路演</div>
 	                    <div class="tags1" data-content="2">C.宣传片</div>
-	                    <div class="tags1" data-content="5">F.众筹视频</div>
+	                    <div class="tags1" data-content="5">F.众筹视频</div> -->
+	                    
+	                    <div class="tags1" data-content="0">A.企业宣传</div>
+	                    <div class="tags1" data-content="4">E.三维展示</div>
+	                    <div class="tags1" data-content="1">B.广告TVC</div>
+	                    <div class="tags1" data-content="5">F.视频名片</div>
+	                    <div class="tags1" data-content="2">C.微电影</div>
+	                    <div class="tags1" data-content="6">G.电商视频</div>
+	                    <div class="tags1" data-content="3">D.MG动画</div>
+	                    <div class="tags1" data-content="7">H.活动及课件</div>
 	                 </div>
 	            </div>
 	            <div class="swiper-slide">
 	                 <img class="slideBg2" src="${imgPath}/cost/gPhone2.png">
-	                 <div class="title">2/5.  您想选用哪个导演？</div>
+	                 <div class="title">2/6.  您想选用哪个导演？</div>
 	                 <div class="line"></div>
 	                 <div class="tags">
-                           <div class="tags2" data-content="0">A.专业级导演</div>
+                           <div class="tags2" data-content="0">A.专业级导演团队</div>
                            <div class="tags2Desc">三年工作经验,拥有十部以上成功作品案例</div>
-                           <div class="tags2" data-content="1">B.广告级导演</div>
+                           <div class="tags2" data-content="1">B.广告级导演团队</div>
                            <div class="tags2Desc">五年工作经验,拥有几十部知名品牌的成功案例</div>
-                           <div class="tags2" data-content="2">C.电影级导演</div>
+                           <div class="tags2" data-content="2">C.电影级导演团队</div>
                            <div class="tags2Desc">十年工作经验,拥有国际知名品牌的成功作品案例</div>
 	                 </div>
 	            </div>
 	            <div class="swiper-slide">
 	                 <img class="slideBg3" src="${imgPath}/cost/gPhone3.png">
-	                 <div class="title">3/5.  您想选用哪种档次的</div>
+	                 <div class="title">3/6.  您想选用哪种档次的</div>
 	                 <div class="title topT">拍摄设备？</div>
 	                 <div class="line"></div>
 	                 <div class="tags">
@@ -121,27 +130,38 @@
 	                 </div>
 	            </div>
 	            <div class="swiper-slide">
+	                 <img class="slideBg3-4" src="${imgPath}/cost/gPhone33.png">
+	                 <div class="title">4/6.  您需要多长时间的片子？</div>
+	                 <div class="title topT"></div>
+	                 <div class="line"></div>
+	                 <div class="tags">
+                           <div class="tags3-4" data-content="0">A.1 ~ 3 分钟</div>
+                           <div class="tags3-4" data-content="1">B.3 ~ 5 分钟</div>
+                           <div class="tags3-4" data-content="2">C.5 ~ 10 分钟</div>
+	                 </div>
+	            </div>
+	            <div class="swiper-slide">
 	                 <img class="slideBg4" src="${imgPath}/cost/gPhone4.png">
-	                 <div class="title">4/5.  选演员当然要选专业的！</div>
+	                 <div class="title">5/6.  选演员当然要选资深的！</div>
 	                 <div class="title topT">您需要的是？</div>
 	                 <div class="line"></div>
 	                 <div class="tags">
                            <div class="tags4" data-content="0">A.自有演员</div>
                            <div class="tags4" data-content="1">B.普通演员</div>
                            <div class="tags4" data-content="2">C.专业演员</div>
-                           <div class="tags4" data-content="3">D.不需要演员</div>
+                         <!--   <div class="tags4" data-content="3">D.不需要演员</div> -->
 	                 </div>
 	            </div>
 	            <div class="swiper-slide">
 	                 <img class="slideBg5" src="${imgPath}/cost/gPhone5.png">
-	                 <div class="title">5/5.  您偏爱哪种动画效果</div>
+	                 <div class="title">6/6.  选配音当然是选专业的！</div>
 	                 <div class="title topT">您需要的是？</div>
 	                 <div class="line"></div>
 	                 <div class="tags">
-                           <div class="tags5" data-content="0">A.没有也行</div>
-                           <div class="tags5" data-content="1">B.二维动画</div>
-                           <div class="tags5" data-content="2">C.三维动画</div>
-                           <div class="tags5" data-content="3">D.MG图形动画</div>
+                           <div class="tags5" data-content="0">A.无配音</div>
+                           <div class="tags5" data-content="1">B.专业配音</div>
+                           <div class="tags5" data-content="2">C.广播级配音</div>
+                           <div class="tags5" data-content="3">D.广告级配音</div>
 	                 </div>
 	            </div>
 	            <div class="swiper-slide swiper-no-swiping" >
@@ -184,7 +204,10 @@
 	                          <div class="priceInfo">按照您的需求,拍片大概会花费</div>
 	                          <div class="priceLine"></div>
 	                          <div class="reCost">再次计算</div>
-	                          <div class="returnBack"  onclick="JavaScript:history.back(-1);">返回上一级</div>
+	                          <a href='/'>
+	                          	<div class="returnBack"  onclick="JavaScript:history.back(-1);">返回首页</div>
+	                          </a>
+	                          
 	                      </div>
 	                </div>
 	            </div>

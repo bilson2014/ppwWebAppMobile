@@ -49,7 +49,9 @@
 
 <body>
 
-	<input type="hidden" id='target'>
+<!-- 	<input type="hidden" id='target'> -->
+	
+		<input type="hidden" id="target" value="${uniqueId }">
 <audio controls="controls" hidden="hidden" autoplay="autoplay" loop="loop">
 	<source src="/resources/music/music.mp3" type="audio/mpeg" />
 </audio>
@@ -67,7 +69,8 @@
 </div>
 
 <div class="modalShow" id="code">       
-       <img id="sCode" class="sCode" src="/resources/images/cost/costImg.png">
+       <!-- <img id="sCode" class="sCode" src="/resources/images/cost/costImg.png"> -->
+       <img id="sCode" class="sCode" src="/resources/images/cost/code.jpg">
 </div>
 
 <div class="modalShow" id="showWeixin">  
@@ -106,22 +109,33 @@
       
 
       <div class="swiper-slide step2">
-                <img style="width:100%" src="/resources/images/cost/step2TB.png">
-                <img class="step2Ani" style="width:100%" src="/resources/images/cost/step2Ani.png">
+                <img style="width:100%;  margin-bottom: 0.5rem;" src="/resources/images/cost/step2TB.png">
+                              
+                <img class="step2Ani" style="width:100% " src="/resources/images/cost/step2Ani.png">
+                 
                 <div class="stepBtn-2 step2A anA" data-content="0">
-                    <div class="" data-content="0" data-text="活动视频"></div>
+                    <div class="" data-content="0" data-text="企业宣传"></div>
                 </div>
                <div class="stepBtn-2 step2B anB" data-content="0">
-                    <div data-content="1" data-text="TVC广告"></div>
+                    <div data-content="1" data-text="广告TVC"></div>
                 </div>
                 <div class="stepBtn-2 step2C anC" data-content="0">
-                    <div data-content="2" data-text="宣传片"></div>
+                    <div data-content="2" data-text="微电影"></div>
                 </div>
                 <div class="stepBtn-2 step2D anD" data-content="0">
-                    <div data-content="3" data-text="微电影"></div>
+                    <div data-content="3" data-text="MG动画"></div>
                 </div>
                 <div class="stepBtn-2 step2E anE" data-content="0">
-                    <div data-content="4" data-text="融资路演"></div>
+                    <div data-content="4" data-text="三维展示"></div>
+                </div>
+                <div class="stepBtn-2 step2F anF" data-content="0">
+                    <div data-content="5" data-text="视频名片"></div>
+                </div>
+                <div class="stepBtn-2 step2G anG" data-content="0">
+                    <div data-content="6" data-text="电商视频"></div>
+                </div>
+                <div class="stepBtn-2 step2H anH" data-content="0">
+                    <div data-content="7" data-text="活动及课件"></div>
                 </div>
 		         <div class="icon spIcon">
 		            <img id="icon" src="/resources/images/cost/icon.png">
@@ -133,85 +147,108 @@
 		             <img style="width:100%; position: absolute;top: 0rem;left: 0rem;z-index:1" src="/resources/images/cost/step3Logo.png">
 		             <div class="step3Q"></div>
 		                <div class="stepBtn-3 step3A anA" >
-		                     <div class="" data-content="0" data-text="专业级导演"></div>
+		                     <div class="" data-content="0" data-text="专业级导演团队"></div>
 		                </div>
 		                <div class="step3AI"></div>
 		                  <div class="stepBtn-3 step3B anB" >
-		                     <div class="" data-content="1" data-text="广告级导演"></div>
+		                     <div class="" data-content="1" data-text="广告级导演团队"></div>
 		                </div>
 		                 <div class="step3BI"></div>
 		                  <div class="stepBtn-3 step3C anC" >
-		                     <div class="" data-content="2" data-text="电影级导演"></div>
+		                     <div class="" data-content="2" data-text="电影级导演团队"></div>
 		                </div>
 		                 <div class="step3CI"></div>
 		                          <div class="icon">
             <img src="/resources/images/cost/icon.png">
          </div>   
             </div>
+            
             <div class="swiper-slide step4">
                 <img style="width:100%" src="/resources/images/cost/step4TB.png">
                 <img class="step2Ani" style="width:100%" src="/resources/images/cost/step4Video.png">
 		             <div class="step4Q"></div>
 		                <div class="stepBtn-4 step4A anA" data-content="0">
-		                     <div class="" data-content="0" data-text="专业级设备"></div>
+		                     <div class="" data-content="0" data-text="专业级设备(HD)"></div>
 		                </div>
 		                <div class="step4AI"></div>
 		                  <div class="stepBtn-4 step4B anB" data-content="0">
-		                     <div class="" data-content="1" data-text="广告级设备"></div>
+		                     <div class="" data-content="1" data-text="广告级设备(2K)"></div>
 		                </div>
 		                 <div class="step4BI"></div>
 		                  <div class="stepBtn-4 step4C anC" data-content="0">
-		                     <div class="" data-content="2" data-text="电影级设备"></div>
+		                     <div class="" data-content="2" data-text="电影级设备(4K)"></div>
 		                </div>
 		                 <div class="step4CI"></div>
 		                          <div class="icon">
             <img src="/resources/images/cost/icon.png">
          </div>   
-            </div>
-            <div class="swiper-slide step5">
-                          <img style="width:100%;position:relative;z-index:1" src="/resources/images/cost/step5TB.png">
-                           <img class="step5L" style="width:100%" src="/resources/images/cost/step5L.png">
-                         
-		                 <div class="step5Q"></div>
-		                <div class="stepBtn-5 step5A anA">
-		                     <div class="" data-content="1" data-text="自有演员"></div>
-		                </div>
+       </div>
+       
+       <!--片子长短  -->
+     <div class="swiper-slide step5">
+          <img style="width:100%;position:relative;z-index:1" src="/resources/images/cost/step5TB.png">
+          <img class="step5L" style="width:100%" src="/resources/images/cost/step5Video.png">
+          <div class="step5Q"></div>
+		  <div class="stepBtn-5 step5A anA">
+		      <div class="" data-content="0" data-text="1 ~ 3 分钟"></div>
+		  </div>
 		               
-		                  <div class="stepBtn-5 step5B anB">
-		                     <div class="" data-content="2" data-text="普通演员"></div>
-		                </div>
+		  <div class="stepBtn-5 step5B anB">
+		       <div class="" data-content="1" data-text="3 ~ 5 分钟"></div>
+		  </div>
 		               
-		                  <div class="stepBtn-5 step5C anC">
-		                     <div class="" data-content="3" data-text="专业演员"></div>
-		                </div>
+		 <div class="stepBtn-5 step5C anC">
+		        <div class="" data-content="2" data-text="5 ~ 10 分钟"></div>
+		 </div>
 		                
-		                  <div class="stepBtn-5 step5D anD">
-		                     <div class="" data-content="0" data-text="不需要演员"></div>
-		                </div>
-		                         <div class="icon spIcon">
+		
+		 <div class="icon spIcon">
             <img src="/resources/images/cost/icon.png">
          </div>   
+	</div>
+
+	<div class="swiper-slide step6">
+          <img style="width:100%;position:relative;z-index:1" src="/resources/images/cost/step6TB.png">
+          <img class="step6L" style="width:100%" src="/resources/images/cost/step6L.png">
+          <div class="step6Q"></div>
+		  <div class="stepBtn-6 step6A anA">
+		      <div class="" data-content="0" data-text="自有演员"></div>
+		  </div>
+		               
+		  <div class="stepBtn-6 step6B anB">
+		       <div class="" data-content="1" data-text="普通演员"></div>
+		  </div>
+		               
+		 <div class="stepBtn-6 step6C anC">
+		        <div class="" data-content="2" data-text="专业演员"></div>
+		 </div>
 		                
-            </div>
-            <div class="swiper-slide step6">
-                  <img class="tb" style="width:100%" src="/resources/images/cost/step6TB.png">
-                  <img class="tt" style="width:100%" src="/resources/images/cost/step6tt.png">
+		
+		 <div class="icon spIcon">
+            <img src="/resources/images/cost/icon.png">
+         </div>   
+	</div>
+	
+	
+            <div class="swiper-slide step7">
+                  <img class="tb" style="width:100%" src="/resources/images/cost/step7TB.png">
+                  <img class="tt" style="width:100%" src="/resources/images/cost/step7tt.png">
                   <img style="width:100%; position: absolute;top: 0rem;left: 0rem;z-index:1" src="/resources/images/cost/step3Logo.png">
-		                 <div class="step6Q"></div>
-		                <div class="stepBtn-6 step6A anA">
-		                     <div class="" data-content="0" data-text="没有也行"></div>
+		                 <div class="step7Q"></div>
+		                <div class="stepBtn-7 step7A anA">
+		                     <div class="" data-content="0" data-text="无配音"></div>
 		                </div>
 		               
-		                  <div class="stepBtn-6 step6B anB">
-		                     <div class="" data-content="2" data-text="二维动画"></div>
+		                  <div class="stepBtn-7 step7B anB">
+		                     <div class="" data-content="1" data-text="专业配音"></div>
 		                </div>
 		               
-		                  <div class="stepBtn-6 step6C anC">
-		                     <div class="" data-content="1" data-text="三维动画"></div>
+		                  <div class="stepBtn-7 step7C anC">
+		                     <div class="" data-content="2" data-text="广播级配音"></div>
 		                </div>
 		                
-		                  <div class="stepBtn-6 step6D anD">
-		                     <div class="" data-content="3" data-text="MG图形动画"></div>
+		                  <div class="stepBtn-7 step7D anD">
+		                     <div class="" data-content="3" data-text="广告级配音"></div>
 		                </div>
           <div class="icon">
             <img src="/resources/images/cost/icon.png">
@@ -219,7 +256,8 @@
 
             </div>
             
-            <div class="swiper-slide step6">
+            <!-- <div class="swiper-slide step6"> -->
+            <div class="swiper-slide step7">
             
                    <img class="step6Img" src="/resources/images/cost/step6Top.png">
                     <div class="toOrderDiv errorPhoneReset">
@@ -229,7 +267,7 @@
                   
 			       <div class="phoneCard " id="phoneCard">
 			            <div class="errorPhone hide">
-			               <input placeholder="输入您的手机号" id="phone" value="18210367466">
+			               <input placeholder="输入您的手机号" id="phone" value="">
 			            </div>
 			            <div class="errorInfo" id="errorInfo"></div>
 			            <div class="errorPhone codePhone hide" id="codePhone">
@@ -250,11 +288,8 @@
                                    <div class="priceInfo">
 					                   <img src="/resources/images/cost/priceInfo.png">
 					               </div>
-							        <div class="getPrice"><span>￥</span><span id="getPriceSpan"></span></div>
- 							        <div class="time">
-							           <img src="/resources/images/cost/time.png">
-							        </div>
-					        
+							        <div class="getPrice"  style="padding-top: 0.2rem;"><span>¥</span><span id="getPriceSpan"></span></div>
+ 							    
 					         </div>
 					     
                           </div>
@@ -288,18 +323,18 @@
         <!-- <div class="swiper-pagination"></div> -->
     </div> 
             
-             <a href="javascript:void(0);">
-						<div class="-mob-share-ui -mob-share-ui-theme -mob-share-ui-theme-slide-bottom" style="display: none">
-							<ul class="-mob-share-list">
-						        <li class="-mob-share-weixin" id="weixin"><p>微信</p></li>
-						        <li class="-mob-share-qzone"><p>QQ空间</p></li>
-						        <li class="-mob-share-qq" id="qq"><p>QQ好友</p></li>
-							    <li class="-mob-share-weibo"><p>新浪微博</p></li>
-					       	</ul>
-						    <div class="-mob-share-close">取消</div>
-						</div>
-						<div class="-mob-share-ui-bg"></div>
-					</a>     
+     <a href="javascript:void(0);">
+		<div class="-mob-share-ui -mob-share-ui-theme -mob-share-ui-theme-slide-bottom" style="display: none">
+			<ul class="-mob-share-list">
+				<li class="-mob-share-weixin" id="weixin"><p>微信</p></li>
+				<li class="-mob-share-qzone"><p>QQ空间</p></li>
+				<li class="-mob-share-qq" id="qq"><p>QQ好友</p></li>
+				<li class="-mob-share-weibo"><p>新浪微博</p></li>
+			</ul>
+			<div class="-mob-share-close">取消</div>
+		</div>
+		<div class="-mob-share-ui-bg"></div>
+	</a>     
 
     <script src="${jqueryJs }"></script>
     <script src="${testRemJs }"></script>
@@ -307,5 +342,8 @@
     <script src="${swiperJs }"></script>
     <script src="${costJs }"></script>
     <script id="-mob-share" src="http://f1.webshare.mob.com/code/mob-share.js?appkey=8c49c537a706"></script>
+    
+
+    
 </body>
 </html>

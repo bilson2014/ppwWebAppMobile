@@ -63,7 +63,8 @@
 	<mvc:view-controller path="/costcode" view-name="/cost/costcalculate" />
 	<mvc:view-controller path="/costweixin" view-name="/costcalculateweixin" />
 	<mvc:view-controller path="/costtoutiao" view-name="/costcalculatetoutiao" />
-	<!-- 活动 -->    <!--   -->
+
+	<!-- 活动 --> 
 	<mvc:view-controller path="/activity/Pbusinesscard" view-name="/salesman/pbCard" />
 	<mvc:view-controller path="/activity/psample" view-name="/salesman/sample"/>
 	<mvc:view-controller path="/activity/dingsample" view-name="/salesman/ding"/>

@@ -97,7 +97,7 @@ public class ActivityController extends BaseController{
 			}
 		}
 		map.put("code", 1);
-		int cost = calculateService.dealCost(PmsConstant.TYPE_ADD_TEAM,calculate);
+		int cost = calculateService.dealCost(PmsConstant.TYPE_ADD_TEAM,PmsConstant.TYPE_ADD_EQUIPMENT,calculate);
 		map.put("cost", cost);
 		//提交订单
 		PmsIndent indent = new PmsIndent();
@@ -118,13 +118,14 @@ public class ActivityController extends BaseController{
 		indent.setIndentName(indentName + targetName);
 		indent.setIndentType(0);
 		indent.setServiceId(-1l);
-		indent.setIndentPrice(0d);
+		indent.setIndentPrice(cost);
 		indent.setProductId(-1);
 		indent.setTeamId(-1);
 		indent.setSecond(0l);
 		indent.setProductId(-1l);
 		indent.setIndentNum(" ");
 		indent.setIndent_recomment(calculate.getDescription()+",预期金额:"+cost);
+		indent.setIndentSource(calculate.getIndentSource());
 		
 		long indentId = 0;
 		if (indent.getId() == 0) {

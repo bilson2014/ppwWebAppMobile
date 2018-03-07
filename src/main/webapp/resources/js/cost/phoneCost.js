@@ -27,17 +27,19 @@ function loginOrder(){
 	var videoType = $('.tags1').siblings('.type').attr('data-content');
 	var team = $('.tags2').siblings('.team').attr('data-content');
 	var equipment = $('.tags3').siblings('.equipment').attr('data-content');
+	var time = $('.tags3-4').siblings('.times').attr('data-content');
 	var actor = $('.tags4').siblings('.actor').attr('data-content');
-	var animation = $('.tags5').siblings('animation').attr('data-content');
+	var animation = $('.tags5').siblings('.animation').attr('data-content');
 	var videoTypeText = $('.tags1').siblings('.type').text();
 	var teamText = $('.tags2').siblings('.team').text();
 	var equipmentText = $('.tags3').siblings('.equipment').text();
+	var timeText = $('.tags3-4').siblings('.times').text();
 	var actorText = $('.tags4').siblings('.actor').text();
-	var animationText = $('.tags5').siblings('animation').text();
-	var time = $('#time').text();
+	var animationText = $('.tags5').siblings('.animation').text();
+//	var time = $('#time').text();
 	var indentId = $('#phone').attr('data-content');
-	var description = [ "视频类别:" + videoTypeText, ",时长: 未选择", ",导演团队:" + teamText,
-			",拍摄设备:" + equipmentText, ",演员:" + actorText, ",动画:" + animationText ].join("");
+	var description = [ "视频类别:" + videoTypeText, ",时长: "+timeText, ",导演团队:" + teamText,
+			",拍摄设备:" + equipmentText, ",演员:" + actorText, ",配音:" + animationText ].join("");
 	var phone = $('#rolephone').val();
 	if(first){
 		add = false;
@@ -65,6 +67,7 @@ function loginOrder(){
 			actor : actor,
 			animation : animation,
 			phone : '',
+			time:time,
 			indentId : indentId,
 			description : description,
 			verification_code:'',
@@ -93,6 +96,7 @@ function loginOrder(){
 			actor : actor,
 			animation : animation,
 			phone : '',
+			time:time,
 			indentId : indentId,
 			description : description,
 			verification_code:'',
@@ -107,18 +111,20 @@ function noLoginOrder(){
 		var videoType = $('.tags1').siblings('.type').attr('data-content');
 		var team = $('.tags2').siblings('.team').attr('data-content');
 		var equipment = $('.tags3').siblings('.equipment').attr('data-content');
+		var time = $('.tags3-4').siblings('.times').attr('data-content');
 		var actor = $('.tags4').siblings('.actor').attr('data-content');
-		var animation = $('.tags5').siblings('animation').attr('data-content');
+		var animation = $('.tags5').siblings('.animation').attr('data-content');
 		var videoTypeText = $('.tags1').siblings('.type').text();
 		var teamText = $('.tags2').siblings('.team').text();
 		var equipmentText = $('.tags3').siblings('.equipment').text();
+		var timeText = $('.tags3-4').siblings('.times').text();
 		var actorText = $('.tags4').siblings('.actor').text();
-		var animationText = $('.tags5').siblings('animation').text();
+		var animationText = $('.tags5').siblings('.animation').text();
 		
-		var time = $('#time').text();
+//		var time = $('#time').text();
 		var indentId = $('#phone').attr('data-content');
-		var description = [ "视频类别:" + videoTypeText, ",时长: 未选择", ",导演团队:" + teamText,
-				",拍摄设备:" + equipmentText, ",演员:" + actorText, ",动画:" + animationText ].join("");
+		var description = [ "视频类别:" + videoTypeText, ",时长: "+timeText, ",导演团队:" + teamText,
+				",拍摄设备:" + equipmentText, ",演员:" + actorText, ",配音:" + animationText ].join("");
 		var phone = $('#phone').val();
 		var verification_code = $('#phoneCode').val();
 		if(add){
@@ -158,6 +164,7 @@ function noLoginOrder(){
 					actor : actor,
 					animation : animation,
 					indentName : '网站-移动-成本计算器',
+					time : time,
 					phone : phone,
 					indentId : indentId,
 					description : description,
@@ -186,6 +193,7 @@ function noLoginOrder(){
 					actor : actor,
 					animation : animation,
 					phone : phone,
+					time : time,
 					indentId : indentId,
 					description : description,
 					verification_code:verification_code,
@@ -215,12 +223,15 @@ function init() {
 	        		initStep3(swiper);
 	        		break;
 	        	case 4:
-	        		initStep4(swiper);
+	        		initStepfor(swiper);
 	        		break;
 	        	case 5:
+	        		initStep4(swiper);
+	        		break;
+	        	case 6:
 	        		initStep5(swiper);
 	        		break;
-	        	}
+        		}
 	        }
 	    });
 	 
@@ -228,6 +239,12 @@ function init() {
 	 
 	 $('.reCost').on('click',function(){
 		 swiper.slideTo(0, 1000, false);//切换到第一个slide，速度为1秒
+		 $('.tags1').removeClass('type');
+		 $('.tags2').removeClass('team');
+		 $('.tags3').removeClass('equipment');
+		 $('.tags3-4').removeClass('times');
+		 $('.tags4').removeClass('actor');
+		 $('.tags5').removeClass('animation');
 		 $('#step1').show();
 		 $('#step2').hide();
 		 $('#step3').hide();
@@ -256,6 +273,12 @@ function controlActive(swiper){
 		swiper.slideNext();
 	});
 	
+	$('.tags3-4').off('click').on('click',function(){
+		$('.tags3-4').removeClass('times');
+		$(this).addClass('times');
+		swiper.slideNext();
+	});
+	
 	$('.tags4').off('click').on('click',function(){
 		$('.tags4').removeClass('actor');
 		$(this).addClass('actor');
@@ -267,6 +290,7 @@ function controlActive(swiper){
 		$(this).addClass('animation');
 		swiper.slideNext();
 	});
+	
 	
 	$('.closeInfo').off('click').on('click',function(){
 		$('#noInfo').hide();
@@ -295,6 +319,16 @@ function initStep3(swiper){
 		swiper.slidePrev();
 	}
 }
+
+
+function initStepfor(swiper){
+	if($('.tags3-4').hasClass('times')){
+	}else{
+		$('#noInfo').show();
+		swiper.slidePrev();
+	}
+}
+
 function initStep4(swiper){
 	if($('.tags4').hasClass('actor')){
 	}else{

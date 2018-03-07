@@ -71,7 +71,7 @@ public class CostCalculateController extends BaseController {
 			}
 		}
 		map.put("code", 1);
-		int cost = calculateService.dealCost(PmsConstant.TYPE_ADD_TEAM,calculate);
+		int cost = calculateService.dealCost(PmsConstant.TYPE_ADD_TEAM,PmsConstant.TYPE_ADD_EQUIPMENT,calculate);
 		map.put("cost", cost);
 		//提交订单
 		PmsIndent indent = new PmsIndent();
@@ -137,7 +137,7 @@ public class CostCalculateController extends BaseController {
 	public Map<String, Object> costCalculate2(@RequestBody CostCalculate calculate, HttpServletRequest request) {
 		Map<String, Object> map = new HashMap<>();
 		map.put("code", 1);
-		int cost = calculateService.dealCost(PmsConstant.TYPE_ADD_TEAM, calculate);
+		int cost = calculateService.dealCost(PmsConstant.TYPE_ADD_TEAM,PmsConstant.TYPE_ADD_EQUIPMENT, calculate);
 		map.put("cost", cost);
 		return map;
 	}
