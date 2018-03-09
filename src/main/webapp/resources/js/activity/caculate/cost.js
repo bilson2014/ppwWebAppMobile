@@ -256,7 +256,8 @@ function getPrice(){
 			description : description,
 			verification_code:verification_code,
 			target:$('#target').val(),
-			indentSource:'17'
+			indentSource:'17',
+			salesmanUniqueId:$('#target').val()
 		}));
 	}
 
