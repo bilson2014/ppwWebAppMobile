@@ -228,8 +228,8 @@ function initShareNew(){
         wx.onMenuShareAppMessage({
         	title: '品牌套餐 重磅钜惠', // 分享标题
             desc: '2000元现金红包到账，请注意查收!', // 分享描述
-            link: 'http://m.apaipian.com/resources/salesman/vi/index.html', // 分享链接
-            imgUrl: 'http://m.apaipian.com/resources/images/publicity/pp.jpg', // 分享图标
+            link: 'https://m.apaipian.com/resources/salesman/vi/index.html', // 分享链接
+            imgUrl: 'https://m.apaipian.com/resources/images/publicity/pp.jpg', // 分享图标
             type: 'link', // 分享类型,music、video或link，不填默认为link
             dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
         /*    success: function () { 
@@ -242,8 +242,8 @@ function initShareNew(){
         wx.onMenuShareTimeline({
             title: '品牌套餐 重磅钜惠', // 分享标题
             desc: '2000元现金红包到账，请注意查收!', // 分享描述
-            link: 'http://m.apaipian.com/resources/salesman/vi/index.html', // 分享链接
-            imgUrl: 'http://m.apaipian.com/resources/images/publicity/pp.jpg', // 分享图标
+            link: 'https://m.apaipian.com/resources/salesman/vi/index.html', // 分享链接
+            imgUrl: 'https://m.apaipian.com/resources/images/publicity/pp.jpg', // 分享图标
             type: 'link', // 分享类型,music、video或link，不填默认为link
             dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
         });
