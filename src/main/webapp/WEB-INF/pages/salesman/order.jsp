@@ -57,6 +57,7 @@
 				<input type="hidden" id="csrftoken" name="csrftoken" value="${csrftoken}"/>
 				<input type="hidden" id="token" name="token" value="${token}"/>
 				<input type="hidden" id="indentName" name="indentName" value="财神营销活动"/>
+				<input type="hidden" name="indentSource" value="2">
 				<input type="hidden" id="indent_recomment" name="indent_recomment" value="${recomment}"/>
 				<div class="order-section">
 					<div class="order-input-wrap">

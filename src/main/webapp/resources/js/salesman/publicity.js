@@ -9,6 +9,13 @@ $().ready(function() {
 	setHeight();
 	initShareNew();
 	success();	
+	
+	
+	$('#toPlayFullVideo').off('click').on('click',function(){
+		document.getElementById('toPlayFullVideo').play();
+	});
+	
+	
 
 });
 
@@ -60,7 +67,7 @@ function success(){
 				 {	
 					csrftoken:$("#csrftoken").val(),
 					indent_tele:$('#phone').val(),
-					indentName:'线上-活动',//订单名称
+					indentName:'推广-移动-VI视频套餐',//订单名称
 					indent_recomment:'VI+视频套餐推广',//订单名称
 					productId:-1,
 					teamId:-1,
