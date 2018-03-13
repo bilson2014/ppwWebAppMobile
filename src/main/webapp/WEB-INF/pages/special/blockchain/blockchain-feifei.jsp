@@ -68,7 +68,7 @@
 	     <a href="/"><img class="ppwLogo" src="${imgPath}/index/logoH.png"></a>
 	</div>
 	
-	 <jsp:include flush="true" page="../menu.jsp"></jsp:include> 
+	 <jsp:include flush="true" page="../../menu.jsp"></jsp:include> 
 	
 <div class="modalShow" id="noInfo">       
       <div class="noInfo closeInfo">
