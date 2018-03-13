@@ -95,6 +95,10 @@
     <mvc:view-controller path="/userInfo" view-name="/customer/userInfo" />
     <mvc:view-controller path="/cost/cal" view-name="/cost/phoneCost" />
     
+    <!-- 区块链 模块 -->
+    <mvc:view-controller path="/channel01.html" view-name="/blockchain/blockchain" />
+    
+    
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver"
 		p:prefix="/WEB-INF/pages/" p:suffix=".jsp" />
 

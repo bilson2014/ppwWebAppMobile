@@ -58,18 +58,17 @@
         position: relative;
         top: 0.3rem;
     }
-
     a:last-child {
         div {
             font-size: $size36;
-            margin-left:3.5rem;
+            margin-left: 3.5rem;
             width: 1.88rem;
             height: 0.6rem;
             color: white !important;
             background: $red-base;
             border-radius: 6px;
             position: absolute;
-            right:0.5rem;
+            right: 0.5rem;
         }
     }
     .active {
@@ -95,13 +94,13 @@
         text-align: center;
         margin: 0 auto;
     }
-    a{
+    a {
         div {
             border-bottom: 1px solid $gray-light;
         }
     }
-    a:last-child{
-        div{
+    a:last-child {
+        div {
             border: none !important;
         }
     }
@@ -110,6 +109,6 @@
 .searchType {
     position: absolute;
     right: 50% !important;
-    margin-right: -2.2rem !important;
+    margin-right: -2.4rem !important;
     top: 0.4rem;
 }
