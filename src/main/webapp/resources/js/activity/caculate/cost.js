@@ -256,8 +256,13 @@ function getPrice(){
 			description : description,
 			verification_code:verification_code,
 			target:$('#target').val(),
+<<<<<<< HEAD
 			indentSource:'17',//订单来源编号
 			salesmanUniqueId:'costcpa',//标识
+=======
+			indentSource:'17',
+			salesmanUniqueId:$('#target').val()
+>>>>>>> f4f2af9b46bd1dff8a051af4df1b85f5cbaaedbd
 		}));
 	}
 

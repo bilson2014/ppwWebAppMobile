@@ -19,7 +19,7 @@
 	<!--[if lt IE 9]>
 		<script>window.html5 || document.write('<script src="html5shivJs"><\/script>')</script>
 	<![endif]-->
-	<script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+	<script src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
 	<link rel="stylesheet" href="/resources/lib/swiper/swiper.min.css">
 	<link rel="stylesheet" href="/resources/css/salesman/pbCard.css">
 </head>
@@ -67,8 +67,8 @@
 	     <img id="icon" src="/resources/images/salesMan/pbCard/pageOneGo.png">
     </div>
     
-    <script id="-mob-share" src="http://f1.webshare.mob.com/code/mob-share.js?appkey=8c49c537a706"></script>
-    <script id="-mob-share" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script id="-mob-share" src="https://f1.webshare.mob.com/code/mob-share.js?appkey=8c49c537a706"></script>
+    <script id="-mob-share" src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
     <script src="/resources/lib/jquery/jquery-2.0.3.min.js"></script>
     <script src="/resources/lib/jquery.json/jquery.json-2.4.min.js"></script> 
     <script src="/resources/lib/swiper/swiper.min.js"></script>

@@ -19,7 +19,7 @@
 	<!--[if lt IE 9]>
 		<script>window.html5 || document.write('<script src="html5shivJs"><\/script>')</script>
 	<![endif]-->
-	<script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+	<script src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
 	<link rel="stylesheet" href="/resources/lib/swiper/swiper.min.css">
 	<link rel="stylesheet" href="/resources/css/salesman/cosmetic.css">
 	<link rel="stylesheet" href="/resources/css/salesman/publicity.css">
@@ -34,7 +34,7 @@
 				 <div class="mpa-video" id="playVideo" data-type-id="61" data-type="mpa-video" style="margin: 0rem; display: block; width:100%"> 
 				      <span class="mpa-video-play-icon"></span> 
 				      <video  id="toPlayVideo"  loop="loop" x-webkit-airplay="true" webkit-playsinline="" playsinline="true" preload="auto" poster="/resources/images/publicity/pp.jpg" style="width:100%;  margin-top: -1px;"> 
-				           <source type="video/mp4" src="${file_locate_storage_path}/group1/M00/00/79/CgptuFnuuYmAQ8BRAB-4koFR3rE226.mp4"> 
+				           <source type="video/mp4" src="https://fileb.apaipian.com/group1/M00/00/79/CgptuFnuuYmAQ8BRAB-4koFR3rE226.mp4"> 
 				      </video>  
 				 </div>  
 		        <img src="/resources/images/publicity/publicity1.jpg"> 
@@ -43,7 +43,7 @@
 			       <div class="full-video" id="playFullVideo" data-type-id="61" data-type="mpa-video" style="margin: 0rem; display: block; width:100%"> 
 				        <span class="mpa-video-play-icon"></span> 
 				        <video  playsinline="true" webkit-playsinline="true"   id="toPlayFullVideo"  loop="loop" x-webkit-airplay="true" webkit-playsinline="" playsinline="true" preload="auto" poster="/resources/images/publicity/big.jpg" style="width:100%;  margin-top: -1px;"> 
-				             <source type="video/mp4" src="${file_locate_storage_path}/group1/M00/00/7A/CgptuFnxat6AVWOXAFaK1MUX_cI828.mp4"> 
+				             <source type="video/mp4" src="https://filea.apaipian.com/group1/M00/00/7A/CgptuFnxat6AVWOXAFaK1MUX_cI828.mp4"> 
 				        </video>
 					</div> 
 	          </div>                  			  
@@ -90,8 +90,8 @@
 	     <img id="icon" src="/resources/images/cost/icon.png">
     </div>
     
-    <script id="-mob-share" src="http://f1.webshare.mob.com/code/mob-share.js?appkey=8c49c537a706"></script>
-    <script id="-mob-share" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script id="-mob-share" src="https://f1.webshare.mob.com/code/mob-share.js?appkey=8c49c537a706"></script>
+    <script id="-mob-share" src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
     <script src="/resources/lib/jquery/jquery-2.0.3.min.js"></script>
     <script src="/resources/lib/jquery.json/jquery.json-2.4.min.js"></script> 
     <script src="/resources/lib/swiper/swiper.min.js"></script>

@@ -160,7 +160,11 @@ public class SalesmanController extends BaseController {
 				else
 					indent.setIndentName(indent.getIndentName() + "(" + nIndent.getSalesmanUniqueId() + ")");
 			}
-
+			indent.setTeamId(nIndent.getTeamId());
+			indent.setProductId(nIndent.getProductId());
+			indent.setServiceId(nIndent.getServiceId());
+			indent.setSalesmanUniqueId(nIndent.getSalesmanUniqueId());
+			
 			long teamId = indent.getTeamId();
 			long productId = indent.getProductId();
 			Long serviceId = indent.getServiceId();
@@ -174,11 +178,7 @@ public class SalesmanController extends BaseController {
 				indent.setSecond(ser.getMcoms());
 				indent.setIndentPrice(ser.getServiceRealPrice());
 				indent.setProduct_name(productName);
-			}
-			indent.setTeamId(nIndent.getTeamId());
-			indent.setProductId(nIndent.getProductId());
-			indent.setServiceId(nIndent.getServiceId());
-			indent.setSalesmanUniqueId(nIndent.getSalesmanUniqueId());
+			}			
 
 			boolean res = pmsIndentFacade.saveOrder(indent);
 			if (res) {

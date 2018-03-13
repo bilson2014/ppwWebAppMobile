@@ -25,9 +25,6 @@ function isIos(){
 	return isIOS;
 }
 
-
-
-
 function init() {
 	   var swiperSlideNum = $('.swiper-slide').length;
        var swiperV = new Swiper('.swiperVertical', {
@@ -89,8 +86,8 @@ function initShareNew(){
         wx.onMenuShareAppMessage({
         	title: '钉钉-企业视频名片', // 分享标题
             desc: '企业视频名片', // 分享描述
-            link: 'http://m.apaipian.com/activity/dingsample', // 分享链接
-            imgUrl: 'http://m.apaipian.com/resources/images/salesMan/ding/dd.png', // 分享图标
+            link: 'https://m.apaipian.com/activity/dingsample', // 分享链接
+            imgUrl: 'https://m.apaipian.com/resources/images/salesMan/ding/dd.png', // 分享图标
             type: 'link', // 分享类型,music、video或link，不填默认为link
             dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
         /*    success: function () { 

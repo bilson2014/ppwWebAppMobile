@@ -43,7 +43,7 @@
 	<script src="${commonJs }"></script>
 	<script src="${orderJs }"></script>
 	<script src="${RemJs}"></script>
-	<script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+	<script src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
 </head>
 <body>
 	<div class="wrap">
@@ -57,11 +57,12 @@
 				<input type="hidden" id="csrftoken" name="csrftoken" value="${csrftoken}"/>
 				<input type="hidden" id="token" name="token" value="${token}"/>
 				<input type="hidden" id="indentName" name="indentName" value="财神营销活动"/>
+				<input type="hidden" name="indentSource" value="2">
 				<input type="hidden" id="indent_recomment" name="indent_recomment" value="${recomment}"/>
 				<div class="order-section">
 					<div class="order-input-wrap">
 					    <div id="label-message" class="errorMessage ">请输入正确的手机格式</div>
-						<input class="btnborder" type="text" placeholder="输入手机号" id="indent_tele" name="indent_tele"/>
+						<input class="btnborder" type="text" style="color:#333 !important" placeholder="输入手机号" id="indent_tele" name="indent_tele"/>
 						<button type="button" id="order-btn" style="padding:0 2px;">立即领红包</button>
 					</div>
 				</div>

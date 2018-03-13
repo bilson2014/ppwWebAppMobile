@@ -80,7 +80,7 @@ public class SolrServiceImpl extends BaseSolrServiceImpl implements SolrService 
 			}
 
 			query.setQuery(search_words);
-			query.setQuery(condition);
+//			query.setQuery(condition);
 			query.set("pf", "productName tags teamName");
 			query.set("tie", "0.1");
 			query.setFields(

@@ -8,7 +8,7 @@ function doLogin(){
 			if(result.ret){
 				window.location.href=getContextPath()+ '/';
 			}else {
-                 alert('登录失败请联系郭阳');
+                 alert('登录失败请联系技术部王涛');
 			}
 		}, getContextPath() + '/mgr/doLogin', $.toJSON({
 			employeeLoginName : $('#user_phoneNumber').val().trim(),
