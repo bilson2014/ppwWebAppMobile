@@ -78,6 +78,10 @@
 	<mvc:view-controller path="/activity/airwing" view-name="/salesman/flyPlay" /> 
 	<mvc:view-controller path="/activity/order" view-name="/salesman/planOrder" />
 	<mvc:view-controller path="/pbTest" view-name="/salesman/pbTest" />
+	
+	<!--   区块链 -->
+		
+	<mvc:view-controller path="/bt" view-name="/special/specialType/blockchain-type" />
 			
 	<!-- 产品线End -->
 	<mvc:view-controller path="/repwd" view-name="/repwd" />

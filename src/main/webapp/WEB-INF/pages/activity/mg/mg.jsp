@@ -55,7 +55,7 @@
 				
 	              <div class="order">
 	                  <div class="title">您的姓名</div>
-	                  <input type="text" maxlength="10" id="user_name"  />
+	                  <input type="text" maxlength="10" name="user_name" id="user_name"  />
 	                  <div class="error" id="nameError">请填写您的姓名</div>
 	                  <div class="title">您的手机号</div>
 	                  <input type="number" oninput="if(value.length>11)value=value.slice(0,11)"  id="indent_tele" name="indent_tele" />
