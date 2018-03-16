@@ -157,6 +157,12 @@
 		                       <div>帮助</div>
 		                  </div>
 	                    </a> 
+	                     <a class='/resources/salesman/index.html'>
+		                  <div class="menuItem">
+		                       <img src="${imgPath}/menu/special.png">
+		                       <div>特色专题</div>
+		                  </div>
+	                    </a>          
 	           </div>
 	           <img class="closeMenu" id="closeMenu" src="${imgPath}/menu/cMenu.png">
 	           <div class="showMore" id="showMore">
