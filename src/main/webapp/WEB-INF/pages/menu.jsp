@@ -157,7 +157,7 @@
 		                       <div>帮助</div>
 		                  </div>
 	                    </a> 
-	                     <a class='/resources/salesman/index.html'>
+	                     <a href='/resources/salesman/index.html'>
 		                  <div class="menuItem">
 		                       <img src="${imgPath}/menu/special.png">
 		                       <div>特色专题</div>
