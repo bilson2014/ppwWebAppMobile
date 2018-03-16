@@ -16,9 +16,9 @@ input[type=button] {
     outline: none
 }
 
-.cardTitle{
-	font-weight:600;
-	    bottom: .9rem !important;
+.cardTitle {
+    font-weight: 600;
+    bottom: .9rem !important;
 }
 
 input[placeholder],
@@ -35,8 +35,9 @@ input[placeholder],
     z-index: 10;
     height: 100%;
 }
-.setBanner{
-	margin-top:1.4rem;
+
+.setBanner {
+    margin-top: 1.4rem;
 }
 
 .pagePhone {
@@ -53,9 +54,9 @@ input[placeholder],
     background: #333;
 }
 
-.modelG{
-	background£ºblack !important;
-	opacity:0.5 !important;
+.modelG {
+    background: black !important;
+    opacity: 0.4 !important;
 }
 
 .headerCom img {

@@ -297,8 +297,7 @@
 		          <img class="lazyload" data-src="/resources/images/index/logo12.png">
 		          <img class="lazyload" data-src="/resources/images/index/logo13.png">
 		          <img class="lazyload" data-src="/resources/images/index/logo14.png">
-		     </div>
-		     
+		     </div>		     
 		     <jsp:include flush="true" page="foot.jsp"></jsp:include> 
 		     
 	</div>	    
