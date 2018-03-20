@@ -80,9 +80,15 @@
 	<mvc:view-controller path="/pbTest" view-name="/salesman/pbTest" />
 	
 	<!--   区块链 -->
-		
-	<mvc:view-controller path="/bt" view-name="/special/specialType/blockchain-type" />
-			
+	<mvc:view-controller path="/resources/salesman/index.html" view-name="/salesman/special/index" /> 
+	<mvc:view-controller path="/resources/salesman/indexs.html" view-name="/salesman/special/indexs" /> 
+	<mvc:view-controller path="/resources/salesman/channel01.html" view-name="/salesman/special/channel01" /> 	
+	<mvc:view-controller path="/resources/salesman/channel02.html" view-name="/salesman/special/channel02" /> 	
+	<mvc:view-controller path="/resources/salesman/channel03.html" view-name="/salesman/special/channel03" /> 	
+	<mvc:view-controller path="/resources/salesman/channel04.html" view-name="/salesman/special/channel04" /> 	
+	<mvc:view-controller path="/resources/salesman/channel05.html" view-name="/salesman/special/channel05" />
+	
+	 	
 	<!-- 产品线End -->
 	<mvc:view-controller path="/repwd" view-name="/repwd" />
 	<mvc:view-controller path="/play" view-name="/play" />
