@@ -35,6 +35,46 @@ function check(){
 		return;
 	}
 	$('#indent_recomment').val(name + phone);
-	$('#order-form').attr('action',getContextPath() + '/activity/mg/submit').submit();
+//	$('#order-form').attr('action',getContextPath() + '/activity/mg/submit').submit();
+	
+	loadData2(function(result){	
+		 if (result.ret){
+			 window.location.href="/activity/success";
+		 }else{
+			 window.location.href="/activity/error";					 					 
+		 }	 
+	 }, getContextPath() + '/order/salesman', 
+	{
+		csrftoken:$("#csrftoken").val(),
+		token:$("#token").val(),
+		salesmanUniqueId:$("#salesmanUniqueId").val(),
+		indentSource:$("#indentSource").val(),
+		user_name:$("#user_name").val(),
+		indent_tele:$('#indent_tele').val(),
+		indentName:'mg动画促销',
+		indent_recomment:'联系人:'+$("#user_name").val(),
+		productId:-1,
+		teamId:-1,
+		serviceId:-1
+	  });
 }
+
+//AJAX POST
+function loadData2(Func,url,param){
+	$.ajax({
+		url : url,
+		type : 'POST',
+		data : param,
+		dataType : 'json',
+		success : function(data){
+			Func(data);
+		},
+		error : function(jqXHR, textStatus, errorThrown) {
+			console.error('ajax(' + url + ')[' + jqXHR.status + ']' + jqXHR.statusText);
+			console.error(jqXHR.responseText);
+			console.error('[' + textStatus + ']' + errorThrown);
+		}
+	});
+}
+
 

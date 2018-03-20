@@ -38,6 +38,7 @@ import com.paipianwang.pat.facade.product.service.PmsServiceFacade;
 import com.panfeng.web.wearable.domain.BaseMsg;
 import com.panfeng.web.wearable.domain.Result;
 import com.panfeng.web.wearable.mq.service.SmsMQService;
+import com.panfeng.web.wearable.service.IndentService;
 
 @RestController
 @RequestMapping("/order")
@@ -58,6 +59,9 @@ public class IndentController extends BaseController {
 
 	@Autowired
 	final private PmsIndentFacade pmsIndentFacade = null;
+	
+	@Autowired
+	final private IndentService indentService=null;
 
 	/**
 	 * 移动端-提交订单
@@ -71,17 +75,19 @@ public class IndentController extends BaseController {
 		request.setCharacterEncoding("UTF-8");
 		try {
 			String token = indent.getToken();
-			// token 解密
-			token = AESUtil.Decrypt(token, PmsConstant.ORDER_TOKEN_UNIQUE_KEY);
+			if(ValidateUtil.isValid(token)){
+				// token 解密
+				token = AESUtil.Decrypt(token, PmsConstant.ORDER_TOKEN_UNIQUE_KEY);
 
-			final PmsIndent nIndent = JsonUtil.toBean(token, PmsIndent.class);
-			indent.setTeamId(nIndent.getTeamId());
-			indent.setProductId(nIndent.getProductId());
-			indent.setServiceId(nIndent.getServiceId());
-			if (StringUtils.isNotBlank(nIndent.getProduct_name())) {
-				String productName = nIndent.getProduct_name();
-				indent.setIndent_recomment("样片名称:" + productName);
-			}
+				final PmsIndent nIndent = JsonUtil.toBean(token, PmsIndent.class);
+				indent.setTeamId(nIndent.getTeamId());
+				indent.setProductId(nIndent.getProductId());
+				indent.setServiceId(nIndent.getServiceId());
+				if (StringUtils.isNotBlank(nIndent.getProduct_name())) {
+					String productName = nIndent.getProduct_name();
+					indent.setIndent_recomment("样片名称:" + productName);
+				}
+			}	
 
 			final long teamId = indent.getTeamId();
 			final long productId = indent.getProductId();
@@ -302,4 +308,80 @@ public class IndentController extends BaseController {
 		}
 		return baseMsg;
 	}
+	
+	//-------------活动/分销统一下单处理------------------
+	
+		/**
+		 * 分销/活动待验证码下单
+		 * @param indent
+		 * @param request
+		 * @param phoneCode
+		 * @return
+		 * @throws UnsupportedEncodingException
+		 */
+		@RequestMapping(value = "/salesman/verify", method = RequestMethod.POST, produces = "application/json; charset=UTF-8")
+		public Result withCode(final PmsIndent indent, final HttpServletRequest request,
+				@RequestParam(required = false) String phoneCode) throws UnsupportedEncodingException{
+
+			final HttpSession session = request.getSession();
+			// 判断该用户是否登录
+			final SessionInfo info = (SessionInfo) session.getAttribute(PmsConstant.SESSION_INFO);
+			boolean flag = false;
+
+			//----------验证码处理-------------
+			if (info != null) {
+				// 登录之后，不需要判断验证码
+				indent.setIndent_tele(info.getTelephone());
+				
+				String sessionType = info.getSessionType();
+				String indent_recomment = indent.getIndent_recomment();
+				if(indent_recomment==null){
+					indent_recomment="";
+				}
+				switch (sessionType) {
+				case PmsConstant.ROLE_PROVIDER:
+					indent_recomment = "供应商  " + indent_recomment;
+					break;
+				case PmsConstant.ROLE_EMPLOYEE:
+					indent_recomment = "内部员工   "+ indent_recomment;
+				}
+				indent.setIndent_recomment(indent_recomment);
+				
+				flag = true;
+			} else {
+				// 未登录，需要判断验证码
+				String code = (String) session.getAttribute("code");
+				String codeOfPhone = (String) request.getSession().getAttribute("codeOfphone");
+				if (null != phoneCode && phoneCode.equals("-1")) {
+					flag = true;
+				} else {
+					if (null != code && null != codeOfPhone && null != phoneCode && code.equals(phoneCode)
+							&& codeOfPhone.equals(indent.getIndent_tele())) {
+						flag = true;
+					}
+				}
+			}
+
+			if (flag) {
+				request.setCharacterEncoding("UTF-8");
+				return indentService.saveIndent(indent, session);
+			}
+			return new Result(false, "验证码有误！");
+		}
+		
+		/**
+		 * 分销/活动下单
+		 * @param indent
+		 * @param request
+		 * @return
+		 * @throws UnsupportedEncodingException
+		 */
+		@RequestMapping(value = "/salesman", method = RequestMethod.POST, produces = "application/json; charset=UTF-8")
+		public Result withoutCode(final PmsIndent indent, final HttpServletRequest request) throws UnsupportedEncodingException{
+
+			final HttpSession session = request.getSession();
+			
+			request.setCharacterEncoding("UTF-8");
+			return indentService.saveIndent(indent, session);
+		}
 }

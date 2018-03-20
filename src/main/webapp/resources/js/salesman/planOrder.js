@@ -49,7 +49,7 @@ function success(){
 						 $('#num').val('');
 						 sendCodeFlag = true;						 					 
 					 }	 
-				 }, getContextPath() + '/order/deliver', 
+				 }, getContextPath() + '/order/salesman/verify', 
 				 {	
 					csrftoken:$("#csrftoken").val(),
 					indent_tele:$('#phone').val(),
@@ -97,6 +97,7 @@ function loadData2(Func,url,param){
 		}
 	});
 }
+
 function verification(phone,ID){
 	curCount = count;
 	// 发送验证码	
