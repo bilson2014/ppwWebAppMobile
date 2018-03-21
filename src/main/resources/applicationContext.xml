@@ -24,7 +24,8 @@
 	<context:component-scan base-package="com.panfeng.web.wearable.service,
 										  com.panfeng.web.wearable.dao,
 										  com.panfeng.web.wearable.mq,
-										  com.panfeng.web.wearable.filter" />
+										  com.panfeng.web.wearable.filter,
+										  com.panfeng.web.wearable.util" />
 
 	<!-- log here -->
 	<bean id="callMonitor" class="com.panfeng.web.wearable.util.CallMonitor" />
