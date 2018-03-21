@@ -154,7 +154,7 @@
 		       </a>
 		        <a href="https://m.apaipian.com/play/18_26455.html">
 		             <div class="videoCard">
-		                  <img class="videoBanner" alt='互连众信-资产360-小叨' src="https://filed.apaipian.com/group1/M00/00/BB/CgpsbFqx3QqAHqnMAAE3MwlJBL0430.jpg">
+		                  <img class="videoBanner" alt='互连众信-资产360-小叨' src="https://filea.apaipian.com/group1/M00/00/F6/CgpmTlqyMC-AKxtFAAMT4dxcCWs519.jpg">
 		                   <div class="modelG"></div>
 		                  <div class="cardTitle">互连众信-资产360-小叨</div>
 		                  <div class="cardDes"></div>
@@ -170,7 +170,7 @@
 		       </a>
 		       <a href="https://m.apaipian.com/play/1379_17448.html">
 		             <div class="videoCard">
-		                  <img class="videoBanner" alt='量化派-信用钱包英文版' src="https://filec.apaipian.com/group1/M00/00/BB/CgpsbFqx3bCAC2tPAAG0JdMKgFk958.jpg">
+		                  <img class="videoBanner" alt='量化派-信用钱包英文版' src="https://filea.apaipian.com/group1/M00/00/BC/CgptuFqyCBmATfGwAAIco_CvkUA986.jpg">
 		                   <div class="modelG"></div>
 		                  <div class="cardTitle">量化派-信用钱包英文版</div>
 		                  <div class="cardDes"></div>

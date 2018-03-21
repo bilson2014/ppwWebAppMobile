@@ -281,7 +281,7 @@
 	
 		       <a href="https://m.apaipian.com/play/683_26128.html">
 		             <div class="videoCard">
-		                  <img class="videoBanner" src="https://filea.apaipian.com/group1/M00/00/BC/CgptuFqx0CWACS9CAAGHcgqR-wE042.jpg">
+		                  <img class="videoBanner" src="https://filea.apaipian.com/group1/M00/00/BB/CgpsbFqyICyARek_AAJP_UIlDVQ490.jpg">
 		                   <div class="modelG"></div>
 		                  <div class="cardTitle">趣链科技-趣赢信任 链铸未来</div>
 		                  <div class="cardDes"> </div>
