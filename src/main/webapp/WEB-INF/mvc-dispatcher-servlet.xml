@@ -85,13 +85,13 @@
 	<mvc:view-controller path="/pbTest" view-name="/salesman/pbTest" />
 	
 	<!--   区块链 -->
-	<mvc:view-controller path="/resources/salesman/index.html" view-name="/salesman/special/index" /> 
-	<mvc:view-controller path="/resources/salesman/indexs.html" view-name="/salesman/special/indexs" /> 
-	<mvc:view-controller path="/resources/salesman/channel01.html" view-name="/salesman/special/channel01" /> 	
-	<mvc:view-controller path="/resources/salesman/channel02.html" view-name="/salesman/special/channel02" /> 	
-	<mvc:view-controller path="/resources/salesman/channel03.html" view-name="/salesman/special/channel03" /> 	
-	<mvc:view-controller path="/resources/salesman/channel04.html" view-name="/salesman/special/channel04" /> 	
-	<mvc:view-controller path="/resources/salesman/channel05.html" view-name="/salesman/special/channel05" />
+	<mvc:view-controller path="/special" view-name="/salesman/special/index" /> 
+	<mvc:view-controller path="/salesman/special/indexs.html" view-name="/salesman/special/indexs" /> 
+	<mvc:view-controller path="/salesman/special/channel01.html" view-name="/salesman/special/channel01" /> 	
+	<mvc:view-controller path="/salesman/special/channel02.html" view-name="/salesman/special/channel02" /> 	
+	<mvc:view-controller path="/salesman/special/channel03.html" view-name="/salesman/special/channel03" /> 	
+	<mvc:view-controller path="/salesman/special/channel04.html" view-name="/salesman/special/channel04" /> 	
+	<mvc:view-controller path="/salesman/special/channel05.html" view-name="/salesman/special/channel05" />
 	
 	 	
 	<!-- 产品线End -->
