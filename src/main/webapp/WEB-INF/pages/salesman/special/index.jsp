@@ -58,26 +58,26 @@
    	
    	<div class='biao'>
    		<div class='hot'>热门频道</div>
-   		<a href='/salesman/special/indexs.html'>更多   <img src="${imgPath}/salesMan/special/index/more.png" alt="更多"/> </a>
+   		<a href='http://zhuanti.apaipian.com/indexs.html'>更多   <img src="${imgPath}/salesMan/special/index/more.png" alt="更多"/> </a>
    	</div>
    	
    	<div class='hots'>
    		<div class="swiper-container">
 			<div class="swiper-wrapper">
 	    		<div class="swiper-slide">
-		    		<a href='/salesman/special/channel01.html'><img src="${imgPath}/salesMan/special/index/page1.png" alt="区块链"/></a>  
+		    		<a href='http://zhuanti.apaipian.com/channel01.html'><img src="${imgPath}/salesMan/special/index/page1.png" alt="区块链"/></a>  
 	        	</div>
 	        	<div class="swiper-slide">
-					<a href='/salesman/special/channel02.html'><img src="${imgPath}/salesMan/special/index/page2.png" alt="互联网金融"/></a>
+					<a href='http://zhuanti.apaipian.com/channel02.html'><img src="${imgPath}/salesMan/special/index/page2.png" alt="互联网金融"/></a>
 	        	</div>
 	        	<div class="swiper-slide">
-		    		<a href='/salesman/special/channel03.html'><img src="${imgPath}/salesMan/special/index/page3.png" alt="发布会"/></a>  
+		    		<a href='http://zhuanti.apaipian.com/channel03.html'><img src="${imgPath}/salesMan/special/index/page3.png" alt="发布会"/></a>  
 	        	</div>
 	        	<div class="swiper-slide">
-					<a href='/salesman/special/channel04.html'><img src="${imgPath}/salesMan/special/index/page4.png" alt="投资"/></a>
+					<a href='http://zhuanti.apaipian.com/channel04.html'><img src="${imgPath}/salesMan/special/index/page4.png" alt="投资"/></a>
 	        	</div>
 	        	<div class="swiper-slide">
-		    		<a href='/salesman/special/channel05.html'><img src="${imgPath}/salesMan/special/index/page5.png" alt="医美"/></a>  
+		    		<a href='http://zhuanti.apaipian.com/channel05.html'><img src="${imgPath}/salesMan/special/index/page5.png" alt="医美"/></a>  
 	        	</div>
 	    	</div>
    		</div>

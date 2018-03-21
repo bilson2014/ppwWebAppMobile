@@ -10,10 +10,10 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=9,chrome=1">
 	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0, user-scalable=no" name="viewport" />
-	<meta name="keywords" content="">
-	<meta name="description" content="">
+	<meta name="keywords" content="创业融资视频,路演视频,公司理念宣传片,概念产品展示视频">
+	<meta name="description" content="拍一部优秀的宣传片，3分钟打动投资人，让您在路演中脱颖而出，实现创业梦。成功的路演视频全在这里了，概念型的产品宣传视频应该则么做？上拍片网，解决您的一切视频需求。">
 	<meta name="baidu-site-verification" content="dMz6jZpIwd" />
-	<title></title>
+	<title>创业融资视频-路演视频-公司理念宣传片-概念产品展示视频-拍片网</title>
 	<!--[if lt IE 9]>
 		<script>window.html5 || document.write('<script src="html5shivJs"><\/script>')</script>
 	<![endif]-->
@@ -210,13 +210,7 @@
 		             </div>
 		       </a>
 		  </div>
-	
-	
-   	
-  
 
-   
-	
 
 	<div class="footPhone">
 		<div class="leftContent">

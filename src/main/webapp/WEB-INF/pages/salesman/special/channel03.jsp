@@ -10,10 +10,10 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=9,chrome=1">
 	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0, user-scalable=no" name="viewport" />
-	<meta name="keywords" content="">
-	<meta name="description" content="">
+	<meta name="keywords" content="发布会短视频,产品宣传片,发布会开场视频,会议暖场片">
+	<meta name="description" content="新产品发布会怎么少得了短视频，优秀的产品宣传片能让您的新品先声夺人、光芒四射。发布会开场视频、会议暖场片、产品广告片制作，尽在拍片网！">
 	<meta name="baidu-site-verification" content="dMz6jZpIwd" />
-	<title></title>
+	<title>发布会短视频-产品宣传片-发布会开场视频-会议暖场片-拍片网</title>
 	<!--[if lt IE 9]>
 		<script>window.html5 || document.write('<script src="html5shivJs"><\/script>')</script>
 	<![endif]-->

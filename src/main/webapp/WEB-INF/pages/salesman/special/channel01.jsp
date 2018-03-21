@@ -99,15 +99,7 @@
 		                  <div class="cardDes"> </div>
 		             </div>
 		       </a>
-		       <a href="https://m.apaipian.com/play/1910_28019.html">
-		             <div class="videoCard">
-		                  <img class="videoBanner" alt='新经币 NEM(XEM)'  src="https://fileb.apaipian.com/group1/M00/00/BB/CgpsbFqxxmOAfJ7oAAHhVew76Ow967.jpg">
-		                  <div class="modelG"></div>
-		                  <div class="cardTitle">新经币 NEM(XEM)</div>
-		                  <div class="cardDes"> </div>
-		             </div>
-		       </a>
-		       <a href="https://m.apaipian.com/play/1910_28018.html">
+		        <a href="https://m.apaipian.com/play/1910_28018.html">
 		             <div class="videoCard">
 		                  <img class="videoBanner" alt='DigixDAO(DGD)' src="https://filec.apaipian.com/group1/M00/00/BB/CgpsbFqxxsGAWolpAAF_c3ydJL4170.jpg">
 		                  <div class="modelG"></div>
@@ -115,6 +107,8 @@
 		                  <div class="cardDes"> </div>
 		             </div>
 		       </a>
+		       
+		      
 		       <a href="https://m.apaipian.com/play/1910_28026.html">
 		             <div class="videoCard">
 		                  <img class="videoBanner" alt='以太坊 Ethereum(ETH)' src="https://fileb.apaipian.com/group1/M00/00/F4/Cgpw7FqxxvGADiEGAAFPcdlXyLo695.jpg">
@@ -128,6 +122,14 @@
 		                  <img class="videoBanner" alt='源石币 RaiBlocks(Nano)' src="https://fileb.apaipian.com/group1/M00/00/BC/CgptuFqxx-CAI8scAAG1-lgomwI540.jpg">
 		                  <div class="modelG"></div>
 		                  <div class="cardTitle">源石币 RaiBlocks(Nano)</div>
+		                  <div class="cardDes"> </div>
+		             </div>
+		       </a>
+		       <a href="https://m.apaipian.com/play/1910_28019.html">
+		             <div class="videoCard">
+		                  <img class="videoBanner" alt='新经币 NEM(XEM)'  src="https://fileb.apaipian.com/group1/M00/00/BB/CgpsbFqxxmOAfJ7oAAHhVew76Ow967.jpg">
+		                  <div class="modelG"></div>
+		                  <div class="cardTitle">新经币 NEM(XEM)</div>
 		                  <div class="cardDes"> </div>
 		             </div>
 		       </a>
@@ -163,14 +165,7 @@
 		                  <div class="cardDes"> </div>
 		             </div>
 		       </a>
-		        <a href="https://m.apaipian.com/play/1910_28007.html">
-		             <div class="videoCard">
-		                  <img class="videoBanner" alt='小蚁 NEO-更名介绍' src="https://fileb.apaipian.com/group1/M00/00/BA/CgpsbFqvLRuAYEJfAAEaoMJ63ag785.jpg">
-		                  <div class="modelG"></div>
-		                  <div class="cardTitle">小蚁 NEO-更名介绍</div>
-		                  <div class="cardDes"> </div>
-		             </div>
-		       </a>
+		        
 		        <a href="https://m.apaipian.com/play/1910_28008.html">
 		             <div class="videoCard">
 		                  <img class="videoBanner" alt='比特币现金 Bitcoin Cash(BCH)' src="https://filed.apaipian.com/group1/M00/00/F6/CgpmTlqxy5-ALpiTAADZRoXPS58518.jpg">
@@ -219,44 +214,11 @@
 		                  <div class="cardDes"> </div>
 		             </div>
 		       </a>
-		        <a href="https://m.apaipian.com/play/1910_27997.html">
+		      <a href="https://m.apaipian.com/play/1910_26504.html">
 		             <div class="videoCard">
-		                  <img class="videoBanner" alt='门罗币 Monero(XMR)-The Essentials' src="https://filea.apaipian.com/group1/M00/00/BB/CgpsbFqxzi6AGupHAACPMbdtTzg656.jpg">
-		                  <div class="modelG"></div>
-		                  <div class="cardTitle">门罗币 Monero(XMR)-The Essentials</div>
-		                  <div class="cardDes"> </div>
-		             </div>
-		       </a>
-		        <a href="https://m.apaipian.com/play/1910_28025.html">
-		             <div class="videoCard">
-		                  <img class="videoBanner" alt='量子链 QTUM' src="https://filea.apaipian.com/group1/M00/00/F4/Cgpw7Fqxzr2ACwbUAADzoLMJGVc822.jpg">
-		                  <div class="modelG"></div>
-		                  <div class="cardTitle">量子链 QTUM</div>
-		                  <div class="cardDes"> </div>
-		             </div>
-		       </a>
-	
-		       <a href="https://m.apaipian.com/play/683_26119.html">
-		             <div class="videoCard">
-		                  <img class="videoBanner" src="https://filea.apaipian.com/group1/M00/00/F6/CgpmTlqxz3CAJqHfAADaoSN7NWw365.jpg">
+		                  <img class="videoBanner" src="https://filec.apaipian.com/group1/M00/00/BC/CgptuFqx0vyAAos5AAGqTizA-Is876.jpg">
 		                   <div class="modelG"></div>
-		                  <div class="cardTitle">AMD-The Trinity Foundation</div>
-		                  <div class="cardDes"> </div>
-		             </div>
-		       </a>
-		       <a href="https://m.apaipian.com/play/683_26128.html">
-		             <div class="videoCard">
-		                  <img class="videoBanner" src="https://filea.apaipian.com/group1/M00/00/BC/CgptuFqx0CWACS9CAAGHcgqR-wE042.jpg">
-		                   <div class="modelG"></div>
-		                  <div class="cardTitle">趣链科技-趣赢信任 链铸未来</div>
-		                  <div class="cardDes"> </div>
-		             </div>
-		       </a>
-		        <a href="https://m.apaipian.com/play/1910_26513.html">
-		             <div class="videoCard">
-		                  <img class="videoBanner" src="https://fileb.apaipian.com/group1/M00/00/F6/CgpmTlqx0ISAUMoPAAEMWLq0SiM947.jpg">
-		                   <div class="modelG"></div>
-		                  <div class="cardTitle">ICON-前景</div>
+		                  <div class="cardTitle">Bankera-发展历程</div>
 		                  <div class="cardDes"> </div>
 		             </div>
 		       </a>
@@ -268,27 +230,39 @@
 		                  <div class="cardDes"> </div>
 		             </div>
 		       </a>
-		        <a href="https://m.apaipian.com/play/1910_26467.html">
+		        <a href="https://m.apaipian.com/play/1910_27997.html">
 		             <div class="videoCard">
-		                  <img class="videoBanner" src="https://fileb.apaipian.com/group1/M00/00/F4/Cgpw7Fqx0ZWAE234AAF05-kKCiw169.jpg">
-		                   <div class="modelG"></div>
-		                  <div class="cardTitle">什么是区块链</div>
+		                  <img class="videoBanner" alt='门罗币 Monero(XMR)-The Essentials' src="https://filea.apaipian.com/group1/M00/00/BB/CgpsbFqxzi6AGupHAACPMbdtTzg656.jpg">
+		                  <div class="modelG"></div>
+		                  <div class="cardTitle">门罗币 Monero(XMR)-The Essentials</div>
 		                  <div class="cardDes"> </div>
 		             </div>
 		       </a>
-		        
-		       
-		       
-		      
-		       <a href="https://m.apaipian.com/play/1910_26504.html">
+		       <a href="https://m.apaipian.com/play/1910_28007.html">
 		             <div class="videoCard">
-		                  <img class="videoBanner" src="https://filec.apaipian.com/group1/M00/00/BC/CgptuFqx0vyAAos5AAGqTizA-Is876.jpg">
-		                   <div class="modelG"></div>
-		                  <div class="cardTitle">Bankera-发展历程</div>
+		                  <img class="videoBanner" alt='小蚁 NEO-更名介绍' src="https://fileb.apaipian.com/group1/M00/00/BA/CgpsbFqvLRuAYEJfAAEaoMJ63ag785.jpg">
+		                  <div class="modelG"></div>
+		                  <div class="cardTitle">小蚁 NEO-更名介绍</div>
 		                  <div class="cardDes"> </div>
 		             </div>
 		       </a>
-		       <a href="https://m.apaipian.com/play/1910_26505.html">
+		        <a href="https://m.apaipian.com/play/1910_28025.html">
+		             <div class="videoCard">
+		                  <img class="videoBanner" alt='量子链 QTUM' src="https://filea.apaipian.com/group1/M00/00/F4/Cgpw7Fqxzr2ACwbUAADzoLMJGVc822.jpg">
+		                  <div class="modelG"></div>
+		                  <div class="cardTitle">量子链 QTUM</div>
+		                  <div class="cardDes"> </div>
+		             </div>
+		       </a>
+		        <a href="https://m.apaipian.com/play/1910_26513.html">
+		             <div class="videoCard">
+		                  <img class="videoBanner" src="https://fileb.apaipian.com/group1/M00/00/F6/CgpmTlqx0ISAUMoPAAEMWLq0SiM947.jpg">
+		                   <div class="modelG"></div>
+		                  <div class="cardTitle">ICON-前景</div>
+		                  <div class="cardDes"> </div>
+		             </div>
+		       </a>
+		        <a href="https://m.apaipian.com/play/1910_26505.html">
 		             <div class="videoCard">
 		                  <img class="videoBanner" src="https://filea.apaipian.com/group1/M00/00/F4/Cgpw7Fqx03CASP4MAAHuvf9SYyU746.jpg">
 		                   <div class="modelG"></div>
@@ -296,7 +270,6 @@
 		                  <div class="cardDes"> </div>
 		             </div>
 		       </a>
-		       
 		       <a href="https://m.apaipian.com/play/1910_26497.html">
 		             <div class="videoCard">
 		                  <img class="videoBanner" src="https://filea.apaipian.com/group1/M00/00/BB/CgpsbFqx07-ASv4QAAEYxVHoECs814.jpg">
@@ -305,9 +278,37 @@
 		                  <div class="cardDes"> </div>
 		             </div>
 		       </a>
-		       <a href="https://m.apaipian.com/play/92_224.html">
+	
+		       <a href="https://m.apaipian.com/play/683_26128.html">
 		             <div class="videoCard">
-		                  <img class="videoBanner" src="https://filed.apaipian.com/group1/M00/00/07/Cgpw7FgZw8OAHXQyAACIyRzPuXY145.jpg">
+		                  <img class="videoBanner" src="https://filea.apaipian.com/group1/M00/00/BC/CgptuFqx0CWACS9CAAGHcgqR-wE042.jpg">
+		                   <div class="modelG"></div>
+		                  <div class="cardTitle">趣链科技-趣赢信任 链铸未来</div>
+		                  <div class="cardDes"> </div>
+		             </div>
+		       </a>
+		       
+		      
+		        <a href="https://m.apaipian.com/play/1910_26467.html">
+		             <div class="videoCard">
+		                  <img class="videoBanner" src="https://fileb.apaipian.com/group1/M00/00/F4/Cgpw7Fqx0ZWAE234AAF05-kKCiw169.jpg">
+		                   <div class="modelG"></div>
+		                  <div class="cardTitle">什么是区块链</div>
+		                  <div class="cardDes"> </div>
+		             </div>
+		       </a>
+		        <a href="https://m.apaipian.com/play/683_26119.html">
+		             <div class="videoCard">
+		                  <img class="videoBanner" src="https://filea.apaipian.com/group1/M00/00/F6/CgpmTlqxz3CAJqHfAADaoSN7NWw365.jpg">
+		                   <div class="modelG"></div>
+		                  <div class="cardTitle">AMD-The Trinity Foundation</div>
+		                  <div class="cardDes"> </div>
+		             </div>
+		       </a>
+		      
+		       <a href="https://m.apaipian.com/play/18_28055.html">
+		             <div class="videoCard">
+		                  <img class="videoBanner" src="https://filea.apaipian.com/group1/M00/00/F6/CgpmTlqx1I2AVVN6AAFTXhn-IJE490.jpg">
 		                   <div class="modelG"></div>
 		                  <div class="cardTitle">智力收益价值链 IQ Benefit Chain(IQB-C)</div>
 		                  <div class="cardDes"> </div>
