@@ -37,7 +37,7 @@
 	     <a href="/"><img class="ppwLogo" src="${imgPath}/index/logoH.png"></a>
 	</div>
 	<jsp:include flush="true" page="../../menu.jsp"></jsp:include>
-
+<div class="pagePhone">
 	<div class='first'>
 		<div class="swiper-container">
 			<div class="swiper-wrapper">
@@ -239,6 +239,8 @@
 			<br>百度统计 站长统计
 		</div>
 	</div>
+	
+</div>	
     
 
     <script src="/resources/lib/jquery/jquery-2.0.3.min.js"></script>

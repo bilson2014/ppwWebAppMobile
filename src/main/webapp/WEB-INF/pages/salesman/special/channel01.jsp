@@ -44,7 +44,7 @@
 		<div class="setBanner">
 		     <img src="${imgPath}/salesMan/special/channel01/banner.png" alt='区块链'>
 		<!--      <div class="product">产品详情</div>
-		     <div class="showVideo">观看视频</div> -->
+		          <div class="showVideo">观看视频</div> -->
 		 </div>
 		 <div class="title">
 		       主题视频区
@@ -107,8 +107,6 @@
 		                  <div class="cardDes"> </div>
 		             </div>
 		       </a>
-		       
-		      
 		       <a href="https://m.apaipian.com/play/1910_28026.html">
 		             <div class="videoCard">
 		                  <img class="videoBanner" alt='以太坊 Ethereum(ETH)' src="https://fileb.apaipian.com/group1/M00/00/F4/Cgpw7FqxxvGADiEGAAFPcdlXyLo695.jpg">
