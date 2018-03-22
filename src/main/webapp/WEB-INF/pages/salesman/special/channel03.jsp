@@ -19,7 +19,7 @@
 	<![endif]-->
 	<script src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
 	<link rel="stylesheet" href="/resources/lib/swiper/swiper.min.css">
-	<link rel="stylesheet" href="/resources/css/salesman/special/channel03.css">
+	<link rel="stylesheet" href="/resources/css/salesman/special/channel.css">
 
 
 	<!-- imgPath -->

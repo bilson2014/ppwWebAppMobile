@@ -19,7 +19,7 @@
 	<![endif]-->
 	<script src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
 	<link rel="stylesheet" href="/resources/lib/swiper/swiper.min.css">
-	<link rel="stylesheet" href="/resources/css/salesman/special/channel02.css">
+	<link rel="stylesheet" href="/resources/css/salesman/special/channel.css">
 
 	<!-- imgPath -->
 	<spring:url value="/resources/images" var="imgPath" />
@@ -58,6 +58,7 @@
 		       </a>
 		       <a href="https://m.apaipian.com/play/1911_21342.html">
 		             <div class="videoCard">
+
 		                  <img class="videoBanner" alt='爱钱进' src="https://filea.apaipian.com/group1/M00/00/F6/CgpmTlqx2KWALSfFAAJOfx50WRw163.jpg">
 		                   <div class="modelG"></div>
 		                  <div class="cardTitle">爱钱进</div>
@@ -67,7 +68,7 @@
 		       <a href="https://m.apaipian.com/play/1911_21415.html">
 		             <div class="videoCard">
 		                  <img class="videoBanner" alt='悟空理财' src="https://filea.apaipian.com/group1/M00/00/F4/Cgpw7Fqx2RiAH8j_AAJn4T9YQgM778.jpg">
-		                   <div class="modelG"></div>
+		                  <div class="modelG"></div>
 		                  <div class="cardTitle">悟空理财</div>
 		                  <div class="cardDes"></div>
 		             </div>
@@ -218,8 +219,13 @@
 		       </a>
 		        <a href="https://m.apaipian.com/play/1911_21449.html">
 		             <div class="videoCard">
+<<<<<<< HEAD:src/main/webapp/resources/salesman/channel02.html
+		                  <img class="videoBanner" src="https://filed.apaipian.com/group1/M00/00/91/CgpsbFouWAuAIXEWAABekdM79AM049.jpg">
+		                  <div class="modelG"></div>
+=======
 		                  <img class="videoBanner" alt='宜人贷' src="https://filec.apaipian.com/group1/M00/00/F6/CgpmTlqx36qAU8LdAADGItvXcsg082.jpg">
 		                   <div class="modelG"></div>
+>>>>>>> e5d8fe2f32a873129082051710bf5e84749b860b:src/main/webapp/WEB-INF/pages/salesman/special/channel02.jsp
 		                  <div class="cardTitle">宜人贷</div>
 		                  <div class="cardDes"></div>
 		             </div>

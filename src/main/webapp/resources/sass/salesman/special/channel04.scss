@@ -50,14 +50,9 @@
     background: #1C1A34;
 }
 
-.videoCard {
-    width: 100%;
-    display: flex;
-    position: relative;
-    overflow: hidden;
-}
-
 .videoBanner {
+    position: absolute;
+    z-index: 1;
     width: 100%;
 }
 
@@ -68,7 +63,7 @@
     position: absolute;
     left: 0.8rem;
     bottom: 1.2rem;
-    z-index: 3;
+    z-index: 100;
 }
 
 .cardDes {
@@ -83,7 +78,7 @@
 
 .modelG {
     position: absolute;
-    z-index: 1;
+    z-index: 99;
     width: 100%;
     height: 100%;
     background: #000;
