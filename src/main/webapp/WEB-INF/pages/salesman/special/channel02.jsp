@@ -238,11 +238,8 @@
 		                  <div class="cardDes"></div>
 		             </div>
 		       </a>
-		    
-		  </div>
-
-</div>
-	 <jsp:include flush="true" page="../../foot.jsp"></jsp:include> 
+		   </div>
+	<jsp:include flush="true" page="../../foot.jsp"></jsp:include> 
     <script src="/resources/lib/jquery/jquery-2.0.3.min.js"></script>
     <script src="/resources/js/common.js"></script>	
     <script src="/resources/js/salesman/special/channel02.js"></script>

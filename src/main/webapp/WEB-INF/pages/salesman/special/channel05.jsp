@@ -20,7 +20,6 @@
 	<script src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
 	<link rel="stylesheet" href="/resources/lib/swiper/swiper.min.css">
 	<link rel="stylesheet" href="/resources/css/salesman/special/channel.css">
-	<link rel="stylesheet" href="/resources/css/salesman/special/index.css">
 
 
 	<!-- imgPath -->
@@ -36,9 +35,9 @@
 	     <a href="/"><img class="ppwLogo" src="${imgPath}/index/logoH.png" alt='logo'></a>
 	</div>
 	<jsp:include flush="true" page="../../menu.jsp"></jsp:include>
+	
 
-	<div class="pagePhone">
-			
+	<div class="pagePhone">			
 		  <div class="setBanner">
 		     <img src="${imgPath}/salesMan/special/channel05/banner.jpg" alt='医疗美容'>
 		  <!--    <div class="product">产品详情</div>
@@ -241,11 +240,8 @@
 		             </div>
 		       </a>
 		  </div>
-   	</div>
-
-
-    	 <jsp:include flush="true" page="../../foot.jsp"></jsp:include> 
-
+  
+    <jsp:include flush="true" page="../../foot.jsp"></jsp:include> 
     <script src="/resources/lib/jquery/jquery-2.0.3.min.js"></script>
     <script src="/resources/js/common.js"></script>	
     <script src="/resources/js/salesman/special/channel05.js"></script>

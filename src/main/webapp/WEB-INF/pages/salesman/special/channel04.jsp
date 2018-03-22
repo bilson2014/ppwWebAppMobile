@@ -26,8 +26,6 @@
 	<spring:url value="/resources/images" var="imgPath" />
 	<link rel="shortcut icon" href="/resources/images/favicon.ico">
 </head>
-
-
 <body>
    
 	<div class="phoneHeader">
@@ -207,8 +205,7 @@
 		             </div>
 		       </a>
 		  </div>
-	
-    </div>
+
 	 <jsp:include flush="true" page="../../foot.jsp"></jsp:include> 
     <script src="/resources/lib/jquery/jquery-2.0.3.min.js"></script>
     <script src="/resources/js/common.js"></script>	

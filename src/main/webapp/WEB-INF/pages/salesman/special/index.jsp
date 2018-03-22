@@ -56,7 +56,7 @@
    	</div>
    	
    	<div class='hots'>
-   		<div class="swiper-container"  style="height: auto;width: 100%;">
+   		<div class="swiper-container swiper-container-horizontal"  style="height: auto;width: 100%;">
 			<div class="swiper-wrapper">
 	    		<div class="swiper-slide">
 		    		<a href='https://m.apaipian.com/special/channel01.html'><img src="${imgPath}/salesMan/special/index/page1.png" alt="区块链"/></a>  
@@ -209,8 +209,7 @@
    	</div>
  -->
 	 <jsp:include flush="true" page="../../foot.jsp"></jsp:include> 
-
-
+	 
     <script src="/resources/lib/jquery/jquery-2.0.3.min.js"></script>
  	<!-- <script src="/resources/lib/swiper/swiper.min.js"></script> -->
     <script src="/resources/js/common.js"></script>	

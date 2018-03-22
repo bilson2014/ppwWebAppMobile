@@ -310,10 +310,8 @@
 		                  <div class="cardTitle">智力收益价值链 IQ Benefit Chain(IQB-C)</div>
 		                  <div class="cardDes"> </div>
 		             </div>
-		       </a>
-		    
+		       </a>	    
 		  </div>
-</div>
 	<jsp:include flush="true" page="../../foot.jsp"></jsp:include> 
     
    
