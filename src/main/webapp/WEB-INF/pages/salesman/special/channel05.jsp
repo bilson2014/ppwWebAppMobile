@@ -32,9 +32,6 @@
    
 	<div class="phoneHeader">
 	     <a id="openMenu"><img src="${imgPath }/index/toMenu.png" alt='菜单'></a>
-	     <a href="">  
-		  <img  src="">
-		 </a>
 	     <a href="/"><img class="ppwLogo" src="${imgPath}/index/logoH.png" alt='logo'></a>
 	</div>
 	<jsp:include flush="true" page="../../menu.jsp"></jsp:include>
@@ -53,7 +50,7 @@
 		  <div class="videoArea">
 		       <a href="https://m.apaipian.com/play/1112_5106.html">
 		             <div class="videoCard">
-		                  <img class="videoBanner" alt='美莱-医疗美容医院' src="https://filea.apaipian.com/group1/M00/00/BB/CgpsbFqx_LGAPpy3AAGNzxGwq-E839.jpg">
+		                  <img class="videoBanner" alt='美莱-医疗美容医院' src="https://filec.apaipian.com/group1/M00/00/BB/CgpsbFqx_LGAPpy3AAGNzxGwq-E839.jpg">
 		                  <div class="modelG"></div>
 		                  <div class="cardTitle">美莱-医疗美容医院</div>
 		                  <div class="cardDes"></div>

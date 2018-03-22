@@ -31,10 +31,7 @@
 
 <body style="background: #1C1A34;">
 	<div class="phoneHeader">
-	     <a id="openMenu"><img src="${imgPath }/index/toMenu.png"></a>
-	     <a href="">  
-		  <img  src="">
-		 </a>
+	     <a id="openMenu"><img src="${imgPath }/index/toMenu.png"></a>	    
 	     <a href="/"><img class="ppwLogo" src="${imgPath}/index/logoH.png"></a>
 	</div>
 	<jsp:include flush="true" page="../../menu.jsp"></jsp:include>
@@ -44,44 +41,36 @@
    	</div>
    	
    	<div class='selection'>
-   		<a class='models' href='http://zhuanti.apaipian.com/channel01.html'>
+   		<a class='models' href='http://m.apaipian.com/special/channel01.html'>
    			<img class='eye' src="${imgPath}/salesMan/special/index/p1.jpg" alt="三分钟说清区块链"/>
    			<div class='font'>
    				<span>三分钟说清区块链 这样的视频正是你所需要的</span>
    			</div>
    		</a>
-   		<a class='models' href='http://zhuanti.apaipian.com/channel02.html'>
+   		<a class='models' href='http://m.apaipian.com/special/channel02.html'>
    			<img class='eye' src="${imgPath}/salesMan/special/index/p2.jpg" alt="互联网金融"/>
    			<div class='font'>
    				<span>视频让互联网金融宣传更精彩 </span>
    			</div>
    		</a>
-   		<a class='models' href='http://zhuanti.apaipian.com/channel03.html'>
+   		<a class='models' href='http://m.apaipian.com/special/channel03.html'>
    			<img class='eye' src="${imgPath}/salesMan/special/index/p3.jpg" alt="新品发布会"/>
    			<div class='font'>
    				<span>极致惊艳 燃爆发布会现场</span>				
    			</div>
    		</a>
-   		<a class='models' href='http://zhuanti.apaipian.com/channel04.html'>
+   		<a class='models' href='http://m.apaipian.com/special/channel04.html'>
    			<img class='eye' src="${imgPath}/salesMan/special/index/p4.jpg" alt="创业 · 融资 · 路演"/>
    			<div class='font'>
    				<span>创业融资 视频更能打动投资人</span>
    			</div>
    		</a>
-   		<a class='models' href='http://zhuanti.apaipian.com/channel05.html'>
+   		<a class='models' href='http://m.apaipian.com/special/channel05.html'>
    			<img class='eye' src="${imgPath}/salesMan/special/index/p5.jpg" alt="医疗 · 美容"/>
    			<div class='font'>
    				<span>医美行业宣传片 绽放极致诱惑</span>
    			</div>
-   		</a>
-   		<!-- <a class='model' href='#'>
-   			<img class='eye' src="images/p.png" alt=""/>
-   			<div class='font'>
-   				<span></span>
-   				<p></p>
-   			</div>
-   		</a> -->
-   		
+   		</a>	
    	</div>
    	
    	<div class="footPhone">
@@ -109,7 +98,7 @@
 			<br>百度统计 站长统计
 		</div>
 	</div>
-    
+    <div style="height: 1.5rem;background: #333;"></div>
      <script src="/resources/lib/jquery/jquery-2.0.3.min.js"></script>
  	<!-- <script src="/resources/lib/swiper/swiper.min.js"></script> -->
     <script src="/resources/js/common.js"></script>	

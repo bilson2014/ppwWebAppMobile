@@ -283,19 +283,13 @@ area {
     display: block;
 }
 
-.rightContent div {
-    font-size: 0.4rem;
-    color: #d1d1d1;
-    margin-top: 0.2rem;
-}
-
 .footPhone {
     border-top: 1px solid #999;
     background: #333;
     padding-left: 0.8rem;
     padding-right: 0.8rem;
     font-size: 0;
-    padding-top: 0.3rem;
+    padding-top: 0.8rem;
 }
 
 .footPhone .logoFoot {
@@ -365,12 +359,6 @@ area {
     width: 4.6rem;
 }
 
-.differentItem {
-    line-height: 0.45rem;
-    position: relative;
-    top: -0.1rem;
-}
-
 .footBottom {
     width: 100%;
     border-top: 1px dashed #999;
@@ -389,5 +377,10 @@ area {
     }
     .ppwLogo {
         top: 0 !important;
+    }
+    a:nth-child(2) {
+        position: relative !important;
+        right: 0 !important;
+        margin-top: 0 !important;
     }
 }

@@ -156,7 +156,7 @@
 		                       <div>帮助</div>
 		                  </div>
 	                    </a> 
-	                     <a href='http://zhuanti.apaipian.com'>
+	                     <a href='http://m.apaipian.com/special'>
 		                  <div class="menuItem">
 		                       <img src="${imgPath}/menu/special.png">
 		                       <div>特色专题</div>
