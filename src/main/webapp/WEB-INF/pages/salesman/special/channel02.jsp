@@ -216,13 +216,8 @@
 		       </a>
 		        <a href="https://m.apaipian.com/play/1911_21449.html">
 		             <div class="videoCard">
-<<<<<<< HEAD:src/main/webapp/resources/salesman/channel02.html
-		                  <img class="videoBanner" src="https://filed.apaipian.com/group1/M00/00/91/CgpsbFouWAuAIXEWAABekdM79AM049.jpg">
-		                  <div class="modelG"></div>
-=======
-		                  <img class="videoBanner" alt='宜人贷' src="https://filec.apaipian.com/group1/M00/00/F6/CgpmTlqx36qAU8LdAADGItvXcsg082.jpg">
+		                  <img class="videoBanner" alt='宜人贷' src="https://filea.apaipian.com/group1/M00/00/F6/CgpmTlqx36qAU8LdAADGItvXcsg082.jpg">
 		                   <div class="modelG"></div>
->>>>>>> e5d8fe2f32a873129082051710bf5e84749b860b:src/main/webapp/WEB-INF/pages/salesman/special/channel02.jsp
 		                  <div class="cardTitle">宜人贷</div>
 		                  <div class="cardDes"></div>
 		             </div>
@@ -272,7 +267,6 @@
 			<br>百度统计 站长统计
 		</div>
 	</div>
-    <div style="height: 1.5rem;background: #333;"></div>
 
     <script src="/resources/lib/jquery/jquery-2.0.3.min.js"></script>
     <script src="/resources/js/common.js"></script>	

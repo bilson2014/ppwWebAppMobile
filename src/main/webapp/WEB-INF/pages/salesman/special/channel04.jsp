@@ -234,7 +234,7 @@
 			<br>百度统计 站长统计
 		</div>
 	</div>
-	<div style="height: 1.5rem;background: #333;"></div>
+	
     </div>
 
     <script src="/resources/lib/jquery/jquery-2.0.3.min.js"></script>
