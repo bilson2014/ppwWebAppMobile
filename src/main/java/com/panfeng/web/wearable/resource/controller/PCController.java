@@ -2,8 +2,8 @@ package com.panfeng.web.wearable.resource.controller;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
-import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -23,9 +23,11 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.paipianwang.pat.common.config.PublicConfig;
+import com.paipianwang.pat.common.constant.PmsConstant;
 import com.paipianwang.pat.common.entity.SessionInfo;
 import com.paipianwang.pat.common.util.ValidateUtil;
 import com.paipianwang.pat.common.web.domain.ResourceToken;
+import com.paipianwang.pat.common.web.file.FastDFSClient;
 import com.paipianwang.pat.facade.employee.entity.PmsJob;
 import com.paipianwang.pat.facade.employee.entity.PmsStaff;
 import com.paipianwang.pat.facade.employee.service.PmsJobFacade;
@@ -38,6 +40,7 @@ import com.paipianwang.pat.facade.product.service.PmsProductFacade;
 import com.paipianwang.pat.facade.team.entity.PmsTeam;
 import com.paipianwang.pat.facade.team.service.PmsTeamFacade;
 import com.paipianwang.pat.facade.user.entity.PmsUser;
+import com.panfeng.web.wearable.dao.StorageLocateDao;
 import com.panfeng.web.wearable.domain.BaseMsg;
 import com.panfeng.web.wearable.resource.view.SolrView;
 import com.panfeng.web.wearable.service.SolrService;
@@ -73,6 +76,9 @@ public class PCController extends BaseController {
 	
 	@Autowired
 	final PmsStaffFacade pmsStaffFacade = null;
+	
+	@Autowired
+	private final StorageLocateDao storageDao = null;
 
 	@RequestMapping("/")
 	public ModelAndView portalView(final String target, final ModelMap model, HttpServletRequest request) {
@@ -317,5 +323,33 @@ public class PCController extends BaseController {
 
 		return new ModelAndView("/news/newsInfo");
 
+	}
+	
+	@RequestMapping(value="/getStorageUrl")
+	public BaseMsg getStorageUrl(final HttpServletRequest request){
+		BaseMsg result=new BaseMsg();
+		final Map<String, String> nodeMap = storageDao.getStorageFromRedis(PmsConstant.STORAGE_NODE_RELATIONSHIP);
+		// 获取最优Storage节点
+		final String serviceIP = FastDFSClient.locateSource();
+		String ip = "";
+		final StringBuffer sbf = new StringBuffer();
+		sbf.append("https://");
+		
+		if(ValidateUtil.isValid(serviceIP)) {
+			ip = nodeMap.get(serviceIP);
+			if(ValidateUtil.isValid(ip)) {
+				sbf.append(ip);
+//				sbf.append(":8888/");
+			} else {
+				sbf.append(PublicConfig.FDFS_BACKUP_SERVER_PATH);
+			}
+		} else {
+			sbf.append(PublicConfig.FDFS_BACKUP_SERVER_PATH);
+		}
+		
+//		mv.addObject(PmsConstant.FILE_LOCATE_STORAGE_PATH, sbf.toString());
+		result.setResult(sbf.toString());
+		
+		return result;
 	}
 }

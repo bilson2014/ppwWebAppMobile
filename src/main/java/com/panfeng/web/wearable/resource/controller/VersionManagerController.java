@@ -112,6 +112,17 @@ public class VersionManagerController extends BaseController {
 						result.setRet(false);
 						result.setMessage("用户名或密码错误!");
 					}
+					
+					if(result.isRet()){
+						//登录前拿到过滤器中存入的登录页前的那个存入session中的URL
+						String prePage = (String)  request.getSession().getAttribute("prePage");
+						if(ValidateUtil.isValid(prePage)){
+							request.getSession().removeAttribute("prePage");
+							result.setMessage(prePage);
+						}else{
+							result.setMessage("/");
+						}
+					}
 					return result;
 					
 					

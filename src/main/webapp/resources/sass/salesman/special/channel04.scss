@@ -1,0 +1,94 @@
+﻿@import "common";
+@import "buttons";
+@import "video";
+@import "model";
+@import "fontSize";
+@import "common_portal";
+.setBanner {
+    position: relative
+}
+
+.setBanner img {
+    width: 100%;
+    display: flex;
+}
+
+.product {
+    width: 3.8rem;
+    height: 1rem;
+    color: white;
+    line-height: 1rem;
+    font-size: 0.4rem;
+    text-align: center;
+    background: #fe5453;
+    position: absolute;
+    bottom: 1.55rem;
+    left: 1.4rem;
+    border-radius: 1rem;
+}
+
+.showVideo {
+    width: 3.8rem;
+    height: 1rem;
+    color: white;
+    line-height: 1rem;
+    font-size: 0.4rem;
+    text-align: center;
+    background: #fe5453;
+    position: absolute;
+    bottom: 1.55rem;
+    right: 1.4rem;
+    border-radius: 1rem;
+}
+
+.title {
+    height: 2.5rem;
+    color: white;
+    font-size: 0.46rem;
+    line-height: 2.5rem;
+    text-align: center;
+    background: #1C1A34;
+}
+
+.videoBanner {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+}
+
+.cardTitle {
+    font-size: 0.4rem;
+    color: #FFFFFF;
+    letter-spacing: 0.6px;
+    position: absolute;
+    left: 0.8rem;
+    bottom: 1.2rem;
+    z-index: 100;
+}
+
+.cardDes {
+    font-size: 0.28rem;
+    color: white;
+    letter-spacing: 0.45px;
+    position: absolute;
+    left: 0.8rem;
+    bottom: 0.6rem;
+    z-index: 3
+}
+
+.modelG {
+    position: absolute;
+    z-index: 99;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.3;
+}
+
+.phoneHeader {
+    height: 1.5rem !important;
+}
+
+.pagePhone {
+    margin-top: 1.5rem !important;
+}

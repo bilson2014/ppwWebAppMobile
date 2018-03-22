@@ -50,8 +50,8 @@
               <form id="order-form" role="form" method="post" autocomplete="off" accept-charset="UTF-8">
 				<input type="hidden" id="csrftoken" name="csrftoken" value="${csrftoken}"/>
 				<input type="hidden" id="token" name="token" value="${token}"/>
-				<input type="hidden" name="salesmanUniqueId" value="${uniqueId}">
-				<input type="hidden" name="indentSource" value="22">
+				<input type="hidden" id="salesmanUniqueId" name="salesmanUniqueId" value="${uniqueId}">
+				<input type="hidden" id="indentSource" name="indentSource" value="22">
 				
 	              <div class="order">
 	                  <div class="title">您的姓名</div>

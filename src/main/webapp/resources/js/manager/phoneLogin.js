@@ -6,7 +6,7 @@ function doLogin(){
 		// 登陆
 		loadData(function(result){
 			if(result.ret){
-				window.location.href=getContextPath()+ '/';
+				window.location.href=getContextPath()+ result.message;
 			}else {
                  alert('登录失败请联系技术部王涛');
 			}

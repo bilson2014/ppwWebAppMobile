@@ -1,9 +1,12 @@
 package com.panfeng.web.wearable.resource.controller;
 
+import java.io.UnsupportedEncodingException;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,19 +15,31 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.paipianwang.pat.common.config.PublicConfig;
 import com.paipianwang.pat.common.constant.PmsConstant;
+import com.paipianwang.pat.common.entity.SessionInfo;
 import com.paipianwang.pat.common.util.DateUtils;
+import com.paipianwang.pat.common.util.JsonUtil;
+import com.paipianwang.pat.common.util.ValidateUtil;
+import com.paipianwang.pat.common.web.security.AESUtil;
+import com.paipianwang.pat.facade.indent.entity.IndentSource;
 import com.paipianwang.pat.facade.indent.entity.PmsIndent;
 import com.paipianwang.pat.facade.indent.service.PmsIndentFacade;
+import com.paipianwang.pat.facade.product.entity.PmsProduct;
+import com.paipianwang.pat.facade.product.entity.PmsService;
+import com.paipianwang.pat.facade.product.service.PmsProductFacade;
+import com.paipianwang.pat.facade.product.service.PmsServiceFacade;
 import com.paipianwang.pat.facade.sales.entity.PmsSalesman;
 import com.paipianwang.pat.facade.sales.service.PmsSalesmanFacade;
+import com.panfeng.web.wearable.domain.Result;
 import com.panfeng.web.wearable.mq.service.SmsMQService;
 import com.panfeng.web.wearable.resource.model.CostCalculate;
 import com.panfeng.web.wearable.service.CostCalculateService;
+import com.panfeng.web.wearable.service.IndentService;
 
 /**
  * 活动控制器
@@ -47,6 +62,10 @@ public class ActivityController extends BaseController{
 	
 	@Autowired
 	private final SmsMQService smsMQService = null;
+	
+	@Autowired
+	private final IndentService indentService=null;
+	
 	
 	/**
 	 * 渠道-成本计算器下单
@@ -105,17 +124,22 @@ public class ActivityController extends BaseController{
 		indent.setIndentId(calculate.getIndentId());
 		indent.setId(calculate.getIndentId());
 		
-		String indentName = "活动-";
-		String targetName = "未知";
+//		String indentName = "分销-";
+//		String targetName = "未知";
 		final String uniqueId = calculate.getTarget();
 		if(StringUtils.isNotBlank(uniqueId)) {
-			PmsSalesman pmsSalesman = pmsSalesmanFacade.findSalesmanByUniqueId(uniqueId);
+			/*PmsSalesman pmsSalesman = pmsSalesmanFacade.findSalesmanByUniqueId(uniqueId);
 			targetName = pmsSalesman == null ? null : pmsSalesman.getSalesmanName();
 			indent.setSalesmanName(pmsSalesman.getSalesmanName());
 			indent.setSalesmanUniqueId(uniqueId);
+			if(uniqueId.equals("costcpa")){
+				targetName="移动-算算拍片成本";//CPA-算算拍片成本
+			}*/
+			indent.setSalesmanUniqueId(uniqueId);
+			indentService.editSalesmanIndent(indent);
 		}
 		
-		indent.setIndentName(indentName + targetName);
+//		indent.setIndentName(indentName + targetName);
 		indent.setIndentType(0);
 		indent.setServiceId(-1l);
 		indent.setIndentPrice(cost);
@@ -148,8 +172,8 @@ public class ActivityController extends BaseController{
 	 * @return
 	 */
 	public boolean isValid(final String uniqueId) {
-		final PmsSalesman saleman = pmsSalesmanFacade.findSalesmanByUniqueId(uniqueId);
-		return saleman == null ? false : true;
+		final List<PmsSalesman> saleman = pmsSalesmanFacade.findSalesmanByUniqueId(uniqueId,PmsSalesman.TYPE_MOBILE);
+		return ValidateUtil.isValid(saleman) ? true : false;
 	}
 	
 	/**
@@ -168,14 +192,22 @@ public class ActivityController extends BaseController{
 		return new ModelAndView("/activity/error");
 	}
 	
-	@RequestMapping(value = "/mg/submit", method = RequestMethod.POST, produces = "application/json; charset=UTF-8")
-	public ModelAndView mgResultView(final PmsIndent pmsIndent) {
+	/*@RequestMapping(value = "/mg/submit", method = RequestMethod.POST, produces = "application/json; charset=UTF-8")
+	public ModelAndView mgResultView(final PmsIndent pmsIndent, final HttpServletRequest request) {
+		
+		Result result=indentService.saveIndent(pmsIndent, request.getSession());
+		if(result.isRet()){
+			return new ModelAndView("/activity/success");
+		}else{
+			return new ModelAndView("/activity/error");
+		}
+		
 		// 下单人员手机号码
 		final String userPhone = pmsIndent.getIndent_tele();
 		if(StringUtils.isNotBlank(userPhone)) {
 			final String uniqueId = pmsIndent.getSalesmanUniqueId();
 			
-			String indentName = "活动-";
+			String indentName = "分销-";
 			String targetName = "未知";
 			if(StringUtils.isNotBlank(uniqueId)) {
 				// 获取 活动信息
@@ -184,11 +216,14 @@ public class ActivityController extends BaseController{
 				targetName = salesman.getSalesmanName();
 				pmsIndent.setSalesmanUniqueId(uniqueId);
 				pmsIndent.setSalesmanName(salesman.getSalesmanName());
+				if(uniqueId.equals("mgactivity")){
+					targetName="移动-mg动画促销";
+				}
 			}
 			final String userName = pmsIndent.getUser_name();
 			// 获取用户姓名
 			if(StringUtils.isNotBlank(userName)) {
-				pmsIndent.setUser_name(userName);
+				pmsIndent.setRealName(userName);
 				pmsIndent.setIndent_recomment("联系人:" + userName);
 			}
 			pmsIndent.setIndentName(indentName + targetName);
@@ -211,5 +246,7 @@ public class ActivityController extends BaseController{
 			}
 		}
 		return new ModelAndView("/activity/error");
-	}
+	}*/
+	
+	
 }

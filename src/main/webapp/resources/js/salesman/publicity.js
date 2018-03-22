@@ -63,7 +63,7 @@ function success(){
 						 $('#num').val('');
 						 sendCodeFlag = true;						 					 
 					 }	 
-				 }, getContextPath() + '/order/deliver', 
+				 }, getContextPath() + '/order/salesman/verify', 
 				 {	
 					csrftoken:$("#csrftoken").val(),
 					indent_tele:$('#phone').val(),

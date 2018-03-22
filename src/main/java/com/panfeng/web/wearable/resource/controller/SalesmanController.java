@@ -21,8 +21,8 @@ import org.springframework.web.servlet.ModelAndView;
 import com.paipianwang.pat.common.config.PublicConfig;
 import com.paipianwang.pat.common.constant.PmsConstant;
 import com.paipianwang.pat.common.util.DateUtils;
+import com.paipianwang.pat.common.util.ValidateUtil;
 import com.paipianwang.pat.facade.indent.entity.PmsIndent;
-import com.paipianwang.pat.facade.indent.service.PmsIndentFacade;
 import com.paipianwang.pat.facade.product.entity.PmsProduct;
 import com.paipianwang.pat.facade.product.entity.PmsService;
 import com.paipianwang.pat.facade.product.service.PmsProductFacade;
@@ -31,8 +31,10 @@ import com.paipianwang.pat.facade.sales.entity.PmsSalesman;
 import com.paipianwang.pat.facade.sales.service.PmsSalesmanFacade;
 import com.paipianwang.pat.facade.team.entity.PmsTeam;
 import com.paipianwang.pat.facade.team.service.PmsTeamFacade;
+import com.panfeng.web.wearable.domain.Result;
 import com.panfeng.web.wearable.mq.service.SmsMQService;
 import com.panfeng.web.wearable.security.AESUtil;
+import com.panfeng.web.wearable.service.IndentService;
 import com.panfeng.web.wearable.util.IndentUtil;
 import com.panfeng.web.wearable.util.JsonUtil;
 
@@ -52,14 +54,17 @@ public class SalesmanController extends BaseController {
 	@Autowired
 	private PmsSalesmanFacade pmsSalesmanFacade = null;
 
-	@Autowired
-	private PmsIndentFacade pmsIndentFacade = null;
+//	@Autowired
+//	private PmsIndentFacade pmsIndentFacade = null;
 
-	@Autowired
+	/*@Autowired
 	private PmsServiceFacade pmsServiceFacade = null;
 
 	@Autowired
 	private SmsMQService smsMQService = null;
+	
+	@Autowired
+	private IndentService indentService;*/
 
 	/**
 	 * 手机分销人直接下单页
@@ -142,23 +147,28 @@ public class SalesmanController extends BaseController {
 	 * 
 	 * @throws UnsupportedEncodingException
 	 */
-	@RequestMapping(value = "/salesman/order/submit", method = RequestMethod.POST, produces = "application/json; charset=UTF-8")
+	/*@RequestMapping(value = "/salesman/order/submit", method = RequestMethod.POST, produces = "application/json; charset=UTF-8")
 	public ModelAndView successViewOnPhone(final PmsIndent indent, final HttpServletRequest request,
 			final ModelMap model) throws UnsupportedEncodingException {
 
 		request.setCharacterEncoding("UTF-8");
+		
+		Result result=indentService.saveIndent(indent, request.getSession());
+		if(result.isRet()){
+			return new ModelAndView("/salesman/success");
+		}else{
+			return new ModelAndView("/salesman/error");
+		}
 		try {
 			String token = indent.getToken();
 			// token 解密
 			token = AESUtil.Decrypt(token, PmsConstant.ORDER_TOKEN_UNIQUE_KEY);
 			final PmsIndent nIndent = JsonUtil.toBean(token, PmsIndent.class);
-			if (!HasDigit(nIndent.getSalesmanUniqueId())) {// 代表微信 今日头条等特定人
-				if ("微信".equals(nIndent.getSalesmanUniqueId()))
-					indent.setIndentName("活动-成本计算器-微信朋友圈");
-				else if ("头条".equals(nIndent.getSalesmanUniqueId()))
-					indent.setIndentName("活动-成本计算器-头条");
-				else
-					indent.setIndentName(indent.getIndentName() + "(" + nIndent.getSalesmanUniqueId() + ")");
+			if(ValidateUtil.isValid(nIndent.getSalesmanUniqueId())){
+				final PmsSalesman salesman = pmsSalesmanFacade.findSalesmanByUniqueId(nIndent.getSalesmanUniqueId());
+				if(salesman!=null){
+					indent.setIndentName("分销-"+salesman.getSalesmanName()+"-财神促销");
+				}
 			}
 			indent.setTeamId(nIndent.getTeamId());
 			indent.setProductId(nIndent.getProductId());
@@ -204,8 +214,7 @@ public class SalesmanController extends BaseController {
 			e.printStackTrace();
 		}
 		return new ModelAndView("/salesman/error");
-	}
-
+	}*/
 	@RequestMapping("/salesman/{uniqueId}")
 	public ModelAndView page(@PathVariable("uniqueId") final String uniqueId, final ModelMap model,
 			final HttpServletRequest request) {
@@ -239,8 +248,8 @@ public class SalesmanController extends BaseController {
 	 * @return
 	 */
 	public boolean isValid(final String uniqueId) {
-		final PmsSalesman saleman = pmsSalesmanFacade.findSalesmanByUniqueId(uniqueId);
-		return saleman == null ? false : true;
+		final List<PmsSalesman> saleman = pmsSalesmanFacade.findSalesmanByUniqueId(uniqueId,PmsSalesman.TYPE_MOBILE);
+		return ValidateUtil.isValid(saleman) ? true : false;
 	}
 
 	// 判断一个字符串是否含有数字
