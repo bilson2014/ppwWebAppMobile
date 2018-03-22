@@ -269,9 +269,9 @@
 			<br>百度统计 站长统计
 		</div>
 	</div>
-    
+    <div style="height: 1.5rem;background: #333;"></div>
 
-       <script src="/resources/lib/jquery/jquery-2.0.3.min.js"></script>
+    <script src="/resources/lib/jquery/jquery-2.0.3.min.js"></script>
     <script src="/resources/js/common.js"></script>	
     <script src="/resources/js/salesman/special/channel02.js"></script>
 

@@ -29,7 +29,7 @@
 </head>
 
 
-<body>
+<body style="background: #1C1A34;">
 	<div class="phoneHeader">
 	     <a id="openMenu"><img src="${imgPath }/index/toMenu.png"></a>
 	     <a href="">  

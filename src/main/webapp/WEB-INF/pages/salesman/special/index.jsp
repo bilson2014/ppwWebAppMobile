@@ -62,7 +62,7 @@
    	</div>
    	
    	<div class='hots'>
-   		<div class="swiper-container">
+   		<%-- <div class="swiper-container">
 			<div class="swiper-wrapper">
 	    		<div class="swiper-slide">
 		    		<a href='http://zhuanti.apaipian.com/channel01.html'><img src="${imgPath}/salesMan/special/index/page1.png" alt="区块链"/></a>  
@@ -80,7 +80,7 @@
 		    		<a href='http://zhuanti.apaipian.com/channel05.html'><img src="${imgPath}/salesMan/special/index/page5.png" alt="医美"/></a>  
 	        	</div>
 	    	</div>
-   		</div>
+   		</div> --%>
    		
    		<div class='block'>
    			<ul>

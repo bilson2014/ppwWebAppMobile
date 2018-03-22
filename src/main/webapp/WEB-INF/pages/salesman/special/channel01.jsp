@@ -341,7 +341,9 @@
 			 © 2016 北京拍片乐科技有限公司 京ICP备16066831号-1  
 			<br>百度统计 站长统计
 		</div>
+		
 	</div>
+	<div style="height: 1.5rem;background: #333;"></div>
     
     <!-- <video style="width:0px;opacity:0" controls="" loop="" poster="/resources/images/index/moreInfo.JPG" name="media" id="header3Video" class="active"> 
 		<source src="" id="source" type="video/mp4">
