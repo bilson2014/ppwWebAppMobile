@@ -2,6 +2,7 @@ $().ready(function() {
 	
 	var mySwiper = new Swiper('.first .swiper-container', {
 		autoplay: true,//可选选项，自动滑动
+		loop: true,
 	})
 
 	var swiper = new Swiper('.hots .swiper-container', {

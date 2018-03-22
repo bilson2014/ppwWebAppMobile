@@ -28,18 +28,16 @@
 
 
 <body>
-   
 	<div class="phoneHeader">
 	     <a id="openMenu"><img src="${imgPath }/index/toMenu.png"></a>
-	     <a href="">  
-		  <img  src="">
-		 </a>
 	     <a href="/"><img class="ppwLogo" src="${imgPath}/index/logoH.png"></a>
 	</div>
 	<jsp:include flush="true" page="../../menu.jsp"></jsp:include>
+
 <div class="pagePhone">
+
 	<div class='first'>
-		<div class="swiper-container">
+		 <div class="swiper-container"  style="height: auto;width: 100%;">
 			<div class="swiper-wrapper">
 	    		<div class="swiper-slide">
 		    		<a href='#'><img src="${imgPath}/salesMan/special/index/banner01.jpg" alt="互联网金融"/></a>  
@@ -50,34 +48,32 @@
 	        	<div class="swiper-slide">
 		    		<a href='#'><img src="${imgPath}/salesMan/special/index/banner03.jpg" alt="宣传片"/></a> 
 	        	</div>
-	           
 	    	</div>
-   		</div>
+   		</div> 
 	</div>
-	
-   	
+ 	
    	<div class='biao'>
    		<div class='hot'>热门频道</div>
-   		<a href='http://zhuanti.apaipian.com/indexs.html'>更多   <img src="${imgPath}/salesMan/special/index/more.png" alt="更多"/> </a>
+   		<a href='https://m.apaipian.com/special/indexs.html'>更多   <img src="${imgPath}/salesMan/special/index/more.png" alt="更多"/> </a>
    	</div>
    	
    	<div class='hots'>
-   		<div class="swiper-container">
+   		<div class="swiper-container"  style="height: auto;width: 100%;">
 			<div class="swiper-wrapper">
 	    		<div class="swiper-slide">
-		    		<a href='http://zhuanti.apaipian.com/channel01.html'><img src="${imgPath}/salesMan/special/index/page1.png" alt="区块链"/></a>  
+		    		<a href='https://m.apaipian.com/special/channel01.html'><img src="${imgPath}/salesMan/special/index/page1.png" alt="区块链"/></a>  
 	        	</div>
 	        	<div class="swiper-slide">
-					<a href='http://zhuanti.apaipian.com/channel02.html'><img src="${imgPath}/salesMan/special/index/page2.png" alt="互联网金融"/></a>
+					<a href='https://m.apaipian.com/special/channel02.html'><img src="${imgPath}/salesMan/special/index/page2.png" alt="互联网金融"/></a>
 	        	</div>
 	        	<div class="swiper-slide">
-		    		<a href='http://zhuanti.apaipian.com/channel03.html'><img src="${imgPath}/salesMan/special/index/page3.png" alt="发布会"/></a>  
+		    		<a href='https://m.apaipian.com/special/channel03.html'><img src="${imgPath}/salesMan/special/index/page3.png" alt="发布会"/></a>  
 	        	</div>
 	        	<div class="swiper-slide">
-					<a href='http://zhuanti.apaipian.com/channel04.html'><img src="${imgPath}/salesMan/special/index/page4.png" alt="投资"/></a>
+					<a href='https://m.apaipian.com/special/channel04.html'><img src="${imgPath}/salesMan/special/index/page4.png" alt="投资"/></a>
 	        	</div>
 	        	<div class="swiper-slide">
-		    		<a href='http://zhuanti.apaipian.com/channel05.html'><img src="${imgPath}/salesMan/special/index/page5.png" alt="医美"/></a>  
+		    		<a href='https://m.apaipian.com/special/channel05.html'><img src="${imgPath}/salesMan/special/index/page5.png" alt="医美"/></a>  
 	        	</div>
 	    	</div>
    		</div>
@@ -92,8 +88,10 @@
    				<li><a href='https://m.apaipian.com/search?q=*&industry=TVC'>TVC</a></li>
    				<li><a href='https://m.apaipian.com/search?q=*&industry=%E7%97%85%E6%AF%92%E8%A7%86%E9%A2%91'>病毒视频</a></li>
    			</ul>
-   		</div>
+   		</div> 
    	</div>
+
+
 
    	<!-- <div class='biao' style="background: #1C1A34;">
    		<div class='hot'>专题精选</div>
@@ -212,7 +210,7 @@
    		
    	</div>
  -->
-	
+	 <jsp:include flush="true" page="../../foot.jsp"></jsp:include> 
 
 	<div class="footPhone">
 		<div class="leftContent">
@@ -243,12 +241,15 @@
 </div>	
     
 
+
     <script src="/resources/lib/jquery/jquery-2.0.3.min.js"></script>
  	<!-- <script src="/resources/lib/swiper/swiper.min.js"></script> -->
     <script src="/resources/js/common.js"></script>	
     <script src="/resources/js/salesman/special/swiper.min.js"></script> 
 	<script src="/resources/js/salesman/special/jquery.SuperSlide.2.1.1.js"></script> 
     <script src="/resources/js/salesman/special/index.js"></script>
+
+
 
 </body>
 </html>

@@ -30,10 +30,7 @@
 <body>
    
 	<div class="phoneHeader">
-	     <a id="openMenu"><img src="${imgPath }/index/toMenu.png" alt='菜单'></a>
-	     <a href="">  
-		  <img  src="">
-		 </a>
+	     <a id="openMenu"><img src="${imgPath }/index/toMenu.png" alt='菜单'></a>	     
 	     <a href="/"><img class="ppwLogo" src="${imgPath}/index/logoH.png" alt='logo'></a>
 	</div>
 	<jsp:include flush="true" page="../../menu.jsp"></jsp:include>
@@ -219,13 +216,8 @@
 		       </a>
 		        <a href="https://m.apaipian.com/play/1911_21449.html">
 		             <div class="videoCard">
-<<<<<<< HEAD:src/main/webapp/resources/salesman/channel02.html
-		                  <img class="videoBanner" src="https://filed.apaipian.com/group1/M00/00/91/CgpsbFouWAuAIXEWAABekdM79AM049.jpg">
-		                  <div class="modelG"></div>
-=======
-		                  <img class="videoBanner" alt='宜人贷' src="https://filec.apaipian.com/group1/M00/00/F6/CgpmTlqx36qAU8LdAADGItvXcsg082.jpg">
+		                  <img class="videoBanner" alt='宜人贷' src="https://filea.apaipian.com/group1/M00/00/F6/CgpmTlqx36qAU8LdAADGItvXcsg082.jpg">
 		                   <div class="modelG"></div>
->>>>>>> e5d8fe2f32a873129082051710bf5e84749b860b:src/main/webapp/WEB-INF/pages/salesman/special/channel02.jsp
 		                  <div class="cardTitle">宜人贷</div>
 		                  <div class="cardDes"></div>
 		             </div>
@@ -249,35 +241,9 @@
 		    
 		  </div>
 
-
-	<div class="footPhone">
-		<div class="leftContent">
-			<img class="logoFoot" src="${imgPath}/index/logoH.png">
-			<div class="footItem">
-		    	<div class="service">服务热线  : </div>
-		    	<div>400-660-9728</div>
-			</div>
-			<div class="footItem">
-				<div class="cMail">公司邮箱  : </div>
-		    	<div>bdmarket@paipianwang.cn</div>
-			</div>
-			<div class="footItem">
-		     	<div class="cAddress">公司地址  : </div>
-		    	<div class="differentItem">北京市朝阳区国贸建外SOHO东区6号楼25层</div>
-			</div>
-		</div>
-		<div class="rightContent">
-		    <img src="${imgPath}/index/footCode.png">
-		    <div>拍片网官微</div>
-		</div>
-		<div class="footBottom">
-			 © 2016 北京拍片乐科技有限公司 京ICP备16066831号-1  
-			<br>百度统计 站长统计
-		</div>
-	</div>
-    
-
-       <script src="/resources/lib/jquery/jquery-2.0.3.min.js"></script>
+</div>
+	 <jsp:include flush="true" page="../../foot.jsp"></jsp:include> 
+    <script src="/resources/lib/jquery/jquery-2.0.3.min.js"></script>
     <script src="/resources/js/common.js"></script>	
     <script src="/resources/js/salesman/special/channel02.js"></script>
 

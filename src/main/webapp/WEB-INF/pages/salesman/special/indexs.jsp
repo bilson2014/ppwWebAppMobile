@@ -29,87 +29,55 @@
 </head>
 
 
-<body>
+<body style="background: #1C1A34;">
 	<div class="phoneHeader">
-	     <a id="openMenu"><img src="${imgPath }/index/toMenu.png"></a>
-	     <a href="">  
-		  <img  src="">
-		 </a>
+	     <a id="openMenu"><img src="${imgPath }/index/toMenu.png"></a>	    
 	     <a href="/"><img class="ppwLogo" src="${imgPath}/index/logoH.png"></a>
 	</div>
 	<jsp:include flush="true" page="../../menu.jsp"></jsp:include>
 
+<div class="pagePhone">
     <div class='biao' style="margin-top: 1.5rem;background: #1C1A34;">
    		<div class='hot'>热门频道</div>
    	</div>
    	
    	<div class='selection'>
-   		<a class='models' href='http://zhuanti.apaipian.com/channel01.html'>
+   		<a class='models' href='https://m.apaipian.com/special/channel01.html'>
    			<img class='eye' src="${imgPath}/salesMan/special/index/p1.jpg" alt="三分钟说清区块链"/>
    			<div class='font'>
    				<span>三分钟说清区块链 这样的视频正是你所需要的</span>
    			</div>
    		</a>
-   		<a class='models' href='http://zhuanti.apaipian.com/channel02.html'>
+   		<a class='models' href='https://m.apaipian.com/special/channel02.html'>
    			<img class='eye' src="${imgPath}/salesMan/special/index/p2.jpg" alt="互联网金融"/>
    			<div class='font'>
    				<span>视频让互联网金融宣传更精彩 </span>
    			</div>
    		</a>
-   		<a class='models' href='http://zhuanti.apaipian.com/channel03.html'>
+   		<a class='models' href='https://m.apaipian.com/special/channel03.html'>
    			<img class='eye' src="${imgPath}/salesMan/special/index/p3.jpg" alt="新品发布会"/>
    			<div class='font'>
    				<span>极致惊艳 燃爆发布会现场</span>				
    			</div>
    		</a>
-   		<a class='models' href='http://zhuanti.apaipian.com/channel04.html'>
+   		<a class='models' href='https://m.apaipian.com/special/channel04.html'>
    			<img class='eye' src="${imgPath}/salesMan/special/index/p4.jpg" alt="创业 · 融资 · 路演"/>
    			<div class='font'>
    				<span>创业融资 视频更能打动投资人</span>
    			</div>
    		</a>
-   		<a class='models' href='http://zhuanti.apaipian.com/channel05.html'>
+   		<a class='models' href='https://m.apaipian.com/special/channel05.html'>
    			<img class='eye' src="${imgPath}/salesMan/special/index/p5.jpg" alt="医疗 · 美容"/>
    			<div class='font'>
    				<span>医美行业宣传片 绽放极致诱惑</span>
    			</div>
-   		</a>
-   		<!-- <a class='model' href='#'>
-   			<img class='eye' src="images/p.png" alt=""/>
-   			<div class='font'>
-   				<span></span>
-   				<p></p>
-   			</div>
-   		</a> -->
-   		
+   		</a>	
    	</div>
+   	<jsp:include flush="true" page="../../foot.jsp"></jsp:include>
+ 
+ </div>  	 
    	
-   	<div class="footPhone">
-		<div class="leftContent">
-			<img class="logoFoot" src="${imgPath}/index/logoH.png">
-			<div class="footItem">
-		    	<div class="service">服务热线  : </div>
-		    	<div>400-660-9728</div>
-			</div>
-			<div class="footItem">
-				<div class="cMail">公司邮箱  : </div>
-		    	<div>bdmarket@paipianwang.cn</div>
-			</div>
-			<div class="footItem">
-		     	<div class="cAddress">公司地址  : </div>
-		    	<div class="differentItem">北京市朝阳区国贸建外SOHO东区6号楼25层</div>
-			</div>
-		</div>
-		<div class="rightContent">
-		    <img src="${imgPath}/index/footCode.png">
-		    <div>拍片网官微</div>
-		</div>
-		<div class="footBottom">
-			 © 2016 北京拍片乐科技有限公司 京ICP备16066831号-1  
-			<br>百度统计 站长统计
-		</div>
-	</div>
-    
+   
      <script src="/resources/lib/jquery/jquery-2.0.3.min.js"></script>
  	<!-- <script src="/resources/lib/swiper/swiper.min.js"></script> -->
     <script src="/resources/js/common.js"></script>	

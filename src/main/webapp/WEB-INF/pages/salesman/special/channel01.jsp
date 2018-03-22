@@ -30,22 +30,19 @@
 <body>
    
 	<div class="phoneHeader">
-	     <a id="openMenu"><img src="${imgPath }/index/toMenu.png" alt='菜单'></a>
-	     <a href="">  
-		  <img  src="">
-		 </a>
+	     <a id="openMenu"><img src="${imgPath }/index/toMenu.png" alt='菜单'></a>	    
 	     <a href="/"><img class="ppwLogo" src="${imgPath}/index/logoH.png" alt='logo'></a>
 	</div>
 	<jsp:include flush="true" page="../../menu.jsp"></jsp:include>
-
-	
-   	
   	<div class="pagePhone">
 		<div class="setBanner">
 		     <img src="${imgPath}/salesMan/special/channel01/banner.png" alt='区块链'>
-		<!--      <div class="product">产品详情</div>
-		          <div class="showVideo">观看视频</div> -->
+			 <a class="product" href='https://m.apaipian.com/product/EnterpriseMotionGraphics/main'>产品详情</a>
+		     <div class="showVideo">视频介绍</div> 
 		 </div>
+		 <video style="width:0px;opacity:0;position:absolute;" controls="" loop="" poster="/resources/images/banner/moreInfo.JPG" name="media" id="header3Video" class="active"> 
+			<source src="" id="source" type="video/mp4">
+		</video> 		 
 		 <div class="title">
 		       主题视频区
 		 </div>
@@ -314,36 +311,10 @@
 		       </a>
 		    
 		  </div>
-	
-	<div class="footPhone">
-		<div class="leftContent">
-			<img class="logoFoot" src="${imgPath}/index/logoH.png">
-			<div class="footItem">
-		    	<div class="service">服务热线  : </div>
-		    	<div>400-660-9728</div>
-			</div>
-			<div class="footItem">
-				<div class="cMail">公司邮箱  : </div>
-		    	<div>bdmarket@paipianwang.cn</div>
-			</div>
-			<div class="footItem">
-		     	<div class="cAddress">公司地址  : </div>
-		    	<div class="differentItem">北京市朝阳区国贸建外SOHO东区6号楼25层</div>
-			</div>
-		</div>
-		<div class="rightContent">
-		    <img src="${imgPath}/index/footCode.png">
-		    <div>拍片网官微</div>
-		</div>
-		<div class="footBottom">
-			 © 2016 北京拍片乐科技有限公司 京ICP备16066831号-1  
-			<br>百度统计 站长统计
-		</div>
-	</div>
+</div>
+	<jsp:include flush="true" page="../../foot.jsp"></jsp:include> 
     
-    <!-- <video style="width:0px;opacity:0" controls="" loop="" poster="/resources/images/index/moreInfo.JPG" name="media" id="header3Video" class="active"> 
-		<source src="" id="source" type="video/mp4">
-	</video> -->
+   
 
     <script src="/resources/lib/jquery/jquery-2.0.3.min.js"></script>
     <script src="/resources/js/common.js"></script>	

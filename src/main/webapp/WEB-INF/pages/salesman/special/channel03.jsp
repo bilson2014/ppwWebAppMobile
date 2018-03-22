@@ -32,9 +32,6 @@
    
 	<div class="phoneHeader">
 	     <a id="openMenu"><img src="${imgPath }/index/toMenu.png" alt='菜单'></a>
-	     <a href="">  
-		  <img  src="">
-		 </a>
 	     <a href="/"><img class="ppwLogo" src="${imgPath}/index/logoH.png" alt='logo'></a>
 	</div>
 	<jsp:include flush="true" page="../../menu.jsp"></jsp:include>
@@ -211,35 +208,11 @@
 		             </div>
 		       </a>
 		  </div>
-
-
-	<div class="footPhone">
-		<div class="leftContent">
-			<img class="logoFoot" src="${imgPath}/index/logoH.png">
-			<div class="footItem">
-		    	<div class="service">服务热线  : </div>
-		    	<div>400-660-9728</div>
-			</div>
-			<div class="footItem">
-				<div class="cMail">公司邮箱  : </div>
-		    	<div>bdmarket@paipianwang.cn</div>
-			</div>
-			<div class="footItem">
-		     	<div class="cAddress">公司地址  : </div>
-		    	<div class="differentItem">北京市朝阳区国贸建外SOHO东区6号楼25层</div>
-			</div>
-		</div>
-		<div class="rightContent">
-		    <img src="${imgPath}/index/footCode.png">
-		    <div>拍片网官微</div>
-		</div>
-		<div class="footBottom">
-			 © 2016 北京拍片乐科技有限公司 京ICP备16066831号-1  
-			<br>百度统计 站长统计
-		</div>
-	</div>
-    
-
+   
+</div>
+	 <jsp:include flush="true" page="../../foot.jsp"></jsp:include> 
+	 
+	 
     <script src="/resources/lib/jquery/jquery-2.0.3.min.js"></script>
     <script src="/resources/js/common.js"></script>	
     <script src="/resources/js/salesman/special/channel03.js"></script>
