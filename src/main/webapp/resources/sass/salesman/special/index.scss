@@ -108,8 +108,10 @@ area {
 /*------------------------------------HEAD-----------------------------------------*/
 
 body {
-    overflow: scroll;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch !important;
     -webkit-overflow-scrolling: touch;
+    // -webkit-overflow-scrolling: touch;
 }
 
 .logo {
@@ -272,113 +274,96 @@ body {
     width: 94%;
 }
 
-
-/* 底部 */
-
-.rightContent,
-.leftContent {
-    display: inline-block;
-    vertical-align: top;
-}
-
-.rightContent {
-    text-align: center;
-    margin-left: 0.3rem;
-}
-
-.rightContent img {
-    width: 2.4rem;
-    height: 2.4rem;
-    display: block;
-}
-
-.footPhone {
-    border-top: 1px solid #999;
-    background: #333;
-    padding-left: 0.8rem;
-    padding-right: 0.8rem;
-    font-size: 0;
-    padding-top: 0.8rem;
-}
-
-.footPhone .logoFoot {
-    width: 2rem;
-    display: block;
-}
-
-.footPhone .service {
-    position: relative;
-}
-
-.footPhone .service:before {
-    content: '';
-    position: absolute;
-    width: 0.3rem;
-    height: 0.3rem;
-    background: url(/resources/images/index/footPhone.png);
-    background-size: 0.3rem 0.3rem;
-    left: -0.35rem;
-}
-
-.footPhone .cMail {
-    position: relative;
-}
-
-.footPhone .cMail:before {
-    content: '';
-    position: absolute;
-    width: 0.3rem;
-    height: 0.3rem;
-    background: url(/resources/images/index/footMail.png);
-    background-size: 0.3rem 0.3rem;
-    left: -0.35rem;
-}
-
-.footPhone .cAddress {
-    position: relative;
-}
-
-.footPhone .cAddress:before {
-    content: '';
-    position: absolute;
-    width: 0.3rem;
-    height: 0.3rem;
-    background: url(/resources/images/index/footAddress.png);
-    background-size: 0.3rem 0.3rem;
-    left: -0.35rem;
-    top: 0.01rem;
-}
-
-.footPhone div {
-    vertical-align: top;
-    display: inline-block;
-}
-
-.footPhone .footItem {
-    font-size: 0.32rem;
-    color: #d1d1d1;
-    padding-left: 0.4rem;
-    display: block;
-    margin-top: 0.35rem;
-    margin-bottom: 0.35rem;
-    line-height: 15px;
-}
-
-.footPhone .footItem div:nth-child(2) {
-    width: 4.6rem;
-}
-
-.footBottom {
-    width: 100%;
-    border-top: 1px dashed #999;
-    color: #999;
-    font-size: 0.34rem;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    line-height: 0.5rem;
-    text-align: center;
-}
-
+// /* 底部 */
+// .rightContent,
+// .leftContent {
+//     display: inline-block;
+//     vertical-align: top;
+// }
+// .rightContent {
+//     text-align: center;
+//     margin-left: 0.3rem;
+// }
+// .rightContent img {
+//     width: 2.4rem;
+//     height: 2.4rem;
+//     display: block;
+// }
+// .footPhone {
+//     border-top: 1px solid #999;
+//     background: #333;
+//     padding-left: 0.8rem;
+//     padding-right: 0.8rem;
+//     font-size: 0;
+//     padding-top: 0.8rem;
+// }
+// .footPhone .logoFoot {
+//     width: 2rem;
+//     display: block;
+// }
+// .footPhone .service {
+//     position: relative;
+// }
+// .footPhone .service:before {
+//     content: '';
+//     position: absolute;
+//     width: 0.3rem;
+//     height: 0.3rem;
+//     background: url(/resources/images/index/footPhone.png);
+//     background-size: 0.3rem 0.3rem;
+//     left: -0.35rem;
+// }
+// .footPhone .cMail {
+//     position: relative;
+// }
+// .footPhone .cMail:before {
+//     content: '';
+//     position: absolute;
+//     width: 0.3rem;
+//     height: 0.3rem;
+//     background: url(/resources/images/index/footMail.png);
+//     background-size: 0.3rem 0.3rem;
+//     left: -0.35rem;
+// }
+// .footPhone .cAddress {
+//     position: relative;
+// }
+// .footPhone .cAddress:before {
+//     content: '';
+//     position: absolute;
+//     width: 0.3rem;
+//     height: 0.3rem;
+//     background: url(/resources/images/index/footAddress.png);
+//     background-size: 0.3rem 0.3rem;
+//     left: -0.35rem;
+//     top: 0.01rem;
+// }
+// .footPhone div {
+//     vertical-align: top;
+//     display: inline-block;
+// }
+// .footPhone .footItem {
+//     font-size: 0.32rem;
+//     color: #d1d1d1;
+//     padding-left: 0.4rem;
+//     display: block;
+//     margin-top: 0.35rem;
+//     margin-bottom: 0.35rem;
+//     line-height: 15px;
+// }
+// .footPhone .footItem div:nth-child(2) {
+//     width: 4.6rem;
+// }
+// .footBottom {
+//     width: 100%;
+//     border-top: 1px dashed #999;
+//     color: #999;
+//     font-size: 0.34rem;
+//     padding-top: 10px;
+//     padding-bottom: 10px;
+//     line-height: 0.5rem;
+//     text-align: center;
+// }
 .phoneHeader {
     height: 1.5rem !important;
     a:nth-child(1) {
