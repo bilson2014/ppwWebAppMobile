@@ -2,6 +2,7 @@
 $().ready(function() {
 	setCardHeight();
 	videoPlay();
+	
 });
 
 function setCardHeight(){
@@ -11,8 +12,8 @@ function setCardHeight(){
 }
 
 function videoPlay(){
-	
-	$('#source').attr('src','http://www.apaipian.com/product/video/paipianwangMovie.mp4');
+
+	$('#source').attr('src','https://filed.apaipian.com/group1/M00/00/BB/CgpsbFqvYU6AS5iWAQUrxGsJZy8696.mp4');
 	$('#header3Video').load();
 	 $('.showVideo').on('click',function(){
 		  $('#header3Video').get(0).play();

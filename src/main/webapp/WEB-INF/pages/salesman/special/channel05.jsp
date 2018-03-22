@@ -20,6 +20,7 @@
 	<script src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
 	<link rel="stylesheet" href="/resources/lib/swiper/swiper.min.css">
 	<link rel="stylesheet" href="/resources/css/salesman/special/channel.css">
+	<link rel="stylesheet" href="/resources/css/salesman/special/index.css">
 
 
 	<!-- imgPath -->
@@ -35,8 +36,7 @@
 	     <a href="/"><img class="ppwLogo" src="${imgPath}/index/logoH.png" alt='logo'></a>
 	</div>
 	<jsp:include flush="true" page="../../menu.jsp"></jsp:include>
-	
-	
+
 	<div class="pagePhone">
 			
 		  <div class="setBanner">
@@ -48,9 +48,9 @@
 		       主题视频区
 		  </div>
 		  <div class="videoArea">
-		       <a href="https://m.apaipian.com/play/1112_5106.html">
+		       <a href="https://m.apaipian.com/play/1112_5106.html"> 
 		             <div class="videoCard">
-		                  <img class="videoBanner" alt='美莱-医疗美容医院' src="https://filec.apaipian.com/group1/M00/00/BB/CgpsbFqx_LGAPpy3AAGNzxGwq-E839.jpg">
+		                  <img class="videoBanner" alt='美莱-医疗美容医院' src="https://filed.apaipian.com/group1/M00/00/BB/CgpsbFqx_LGAPpy3AAGNzxGwq-E839.jpg">
 		                  <div class="modelG"></div>
 		                  <div class="cardTitle">美莱-医疗美容医院</div>
 		                  <div class="cardDes"></div>
@@ -268,12 +268,21 @@
 			<br>百度统计 站长统计
 		</div>
 	</div>
-	<div style="height: 1.5rem;background: #333;"></div>
-    
+	
+    </div>
 
     <script src="/resources/lib/jquery/jquery-2.0.3.min.js"></script>
     <script src="/resources/js/common.js"></script>	
     <script src="/resources/js/salesman/special/channel05.js"></script>
+    
+
+   <script src=" http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+    <script src="/resources/lib/jquery/plugins.js"></script>
+    <script src="/resources/lib/swiper/swiper.min.js"></script>
+    <script src="/resources/js/salesman/special/leftTime.js"></script>
+    <script src="/resources/lib/jquery/jquery.flexslider-min.js "></script>
+    <script src="/resources/lib/jquery/waypoints.min.js "></script>
+    
 
 </body>
 </html>

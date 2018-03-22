@@ -28,15 +28,14 @@
 
 
 <body>
-   
 	<div class="phoneHeader">
 	     <a id="openMenu"><img src="${imgPath }/index/toMenu.png"></a>
 	     <a href="/"><img class="ppwLogo" src="${imgPath}/index/logoH.png"></a>
 	</div>
 	<jsp:include flush="true" page="../../menu.jsp"></jsp:include>
-
+	
 	<div class='first'>
-		<div class="swiper-container">
+		 <div class="swiper-container"  style="height: auto;width: 100%;">
 			<div class="swiper-wrapper">
 	    		<div class="swiper-slide">
 		    		<a href='#'><img src="${imgPath}/salesMan/special/index/banner01.jpg" alt="互联网金融"/></a>  
@@ -47,19 +46,17 @@
 	        	<div class="swiper-slide">
 		    		<a href='#'><img src="${imgPath}/salesMan/special/index/banner03.jpg" alt="宣传片"/></a> 
 	        	</div>
-	           
 	    	</div>
-   		</div>
+   		</div> 
 	</div>
-	
-   	
+ 	
    	<div class='biao'>
    		<div class='hot'>热门频道</div>
-   		<a href='http://zhuanti.apaipian.com/indexs.html'>更多   <img src="${imgPath}/salesMan/special/index/more.png" alt="更多"/> </a>
+   		<a href='http://m.apaipian.com/special/indexs.html'>更多   <img src="${imgPath}/salesMan/special/index/more.png" alt="更多"/> </a>
    	</div>
    	
    	<div class='hots'>
-   		<div class="swiper-container">
+   		<div class="swiper-container"  style="height: auto;width: 100%;">
 			<div class="swiper-wrapper">
 	    		<div class="swiper-slide">
 		    		<a href='http://m.apaipian.com/special/channel01.html'><img src="${imgPath}/salesMan/special/index/page1.png" alt="区块链"/></a>  
@@ -89,8 +86,10 @@
    				<li><a href='https://m.apaipian.com/search?q=*&industry=TVC'>TVC</a></li>
    				<li><a href='https://m.apaipian.com/search?q=*&industry=%E7%97%85%E6%AF%92%E8%A7%86%E9%A2%91'>病毒视频</a></li>
    			</ul>
-   		</div>
+   		</div> 
    	</div>
+
+
 
    	<!-- <div class='biao' style="background: #1C1A34;">
    		<div class='hot'>专题精选</div>
@@ -236,7 +235,8 @@
 			<br>百度统计 站长统计
 		</div>
 	</div>
-    <div style="height: 1.5rem;background: #333;"></div>
+	
+    <!-- <div style="height: 1.5rem;background: #333;"></div> -->
 
     <script src="/resources/lib/jquery/jquery-2.0.3.min.js"></script>
  	<!-- <script src="/resources/lib/swiper/swiper.min.js"></script> -->
@@ -245,5 +245,11 @@
 	<script src="/resources/js/salesman/special/jquery.SuperSlide.2.1.1.js"></script> 
     <script src="/resources/js/salesman/special/index.js"></script>
 
+
+<!-- <script src="/resources/lib/jquery/waypoints.min.js"></script> 
+   <script src="/resources/lib/swiper/swiper.min.js"></script> 
+   <script src="/resources/lib/jquery/jquery.flexslider-min.js"></script> 
+   <script src="/resources/lib/jquery.json/jquery.json-2.4.min.js"></script> 
+   <script src="/resources/lib/jquery/jquery.flexslider-min.js "></script>  -->
 </body>
 </html>

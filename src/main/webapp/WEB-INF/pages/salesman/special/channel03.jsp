@@ -237,7 +237,7 @@
 	</div>
 	<div style="height: 1.5rem;background: #333;"></div>
     
-
+</div>
     <script src="/resources/lib/jquery/jquery-2.0.3.min.js"></script>
     <script src="/resources/js/common.js"></script>	
     <script src="/resources/js/salesman/special/channel03.js"></script>

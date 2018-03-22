@@ -34,15 +34,15 @@
 	     <a href="/"><img class="ppwLogo" src="${imgPath}/index/logoH.png" alt='logo'></a>
 	</div>
 	<jsp:include flush="true" page="../../menu.jsp"></jsp:include>
-
-	
-   	
   	<div class="pagePhone">
 		<div class="setBanner">
 		     <img src="${imgPath}/salesMan/special/channel01/banner.png" alt='区块链'>
-		<!--      <div class="product">产品详情</div>
-		     <div class="showVideo">观看视频</div> -->
+			 <a class="product" href='https://m.apaipian.com/product/EnterpriseMotionGraphics/main'>产品详情</a>
+		     <div class="showVideo">视频介绍</div> 
 		 </div>
+		 <video style="width:0px;opacity:0;position:absolute;" controls="" loop="" poster="/resources/images/banner/moreInfo.JPG" name="media" id="header3Video" class="active"> 
+			<source src="" id="source" type="video/mp4">
+		</video> 		 
 		 <div class="title">
 		       主题视频区
 		 </div>
@@ -342,9 +342,7 @@
 	</div>
 	<div style="height: 1.5rem;background: #333;"></div>
     
-    <!-- <video style="width:0px;opacity:0" controls="" loop="" poster="/resources/images/index/moreInfo.JPG" name="media" id="header3Video" class="active"> 
-		<source src="" id="source" type="video/mp4">
-	</video> -->
+   
 
     <script src="/resources/lib/jquery/jquery-2.0.3.min.js"></script>
     <script src="/resources/js/common.js"></script>	

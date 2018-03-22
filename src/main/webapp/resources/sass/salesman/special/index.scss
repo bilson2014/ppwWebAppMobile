@@ -107,6 +107,11 @@ area {
 
 /*------------------------------------HEAD-----------------------------------------*/
 
+body {
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+
 .logo {
     width: 100%;
     height: 1.5rem;
@@ -162,6 +167,10 @@ area {
     }
 }
 
+// .swiper-container {
+//     overflow: scroll;
+//     -webkit-overflow-scrolling: touch;
+// }
 .hots .swiper-slide {
     width: 88% !important;
     margin-left: 0.35rem;
