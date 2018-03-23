@@ -1,2 +1,7 @@
 /src/main/webapp/resources/.sass-cache/
 /target/
+.settings
+.classpath
+/build/
+*.scssc
+/logs/

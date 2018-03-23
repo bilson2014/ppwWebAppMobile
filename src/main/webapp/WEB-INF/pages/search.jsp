@@ -233,7 +233,7 @@
 		<jsp:include flush="true" page="foot.jsp"></jsp:include>
 
 	</div>
-	<script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+	<script src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
 	<script src="${jqueryJs}"></script>
 	<script src="${searchJs}"></script>
 	<script src="${commonJs}"></script>
