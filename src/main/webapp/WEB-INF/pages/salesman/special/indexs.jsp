@@ -36,6 +36,7 @@
 	</div>
 	<jsp:include flush="true" page="../../menu.jsp"></jsp:include>
 
+<div class="pagePhone">
     <div class='biao' style="margin-top: 1.5rem;background: #1C1A34;">
    		<div class='hot'>热门频道</div>
    	</div>
@@ -72,7 +73,9 @@
    			</div>
    		</a>	
    	</div>
-   	<jsp:include flush="true" page="../../foot.jsp"></jsp:include> 
+   	<jsp:include flush="true" page="../../foot.jsp"></jsp:include>
+ 
+ </div>  	 
    	
    
      <script src="/resources/lib/jquery/jquery-2.0.3.min.js"></script>

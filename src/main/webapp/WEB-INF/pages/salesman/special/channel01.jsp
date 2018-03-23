@@ -104,8 +104,6 @@
 		                  <div class="cardDes"> </div>
 		             </div>
 		       </a>
-		       
-		      
 		       <a href="https://m.apaipian.com/play/1910_28026.html">
 		             <div class="videoCard">
 		                  <img class="videoBanner" alt='以太坊 Ethereum(ETH)' src="https://fileb.apaipian.com/group1/M00/00/F4/Cgpw7FqxxvGADiEGAAFPcdlXyLo695.jpg">
