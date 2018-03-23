@@ -61,13 +61,13 @@
 				 <div class="swiper-container" id="firstSwiper"  style="height: auto;width: 100%;">
 					<div class="swiper-wrapper">
 			    		<div class="swiper-slide" >
-				    		<a href='#'><img src="${imgPath}/salesMan/special/index/banner01.jpg" alt="互联网金融"/></a>  
+				    		<a href='https://m.apaipian.com/special/channel02.html'><img src="${imgPath}/salesMan/special/index/banner01.jpg" alt="互联网金融"/></a>  
 			        	</div>
 			        	<div class="swiper-slide" >
-							<a href='#'><img src="${imgPath}/salesMan/special/index/banner02.jpg" alt="区块链项目"/></a>
+							<a href='https://m.apaipian.com/special/channel01.html'><img src="${imgPath}/salesMan/special/index/banner02.jpg" alt="区块链项目"/></a>
 			        	</div>
 			        	<div class="swiper-slide" >
-				    		<a href='#'><img src="${imgPath}/salesMan/special/index/banner03.jpg" alt="宣传片"/></a> 
+				    		<a href='https://m.apaipian.com/special/channel04.html'><img src="${imgPath}/salesMan/special/index/banner03.jpg" alt="宣传片"/></a> 
 			        	</div>
 			    	</div>
 		   		</div> 
@@ -91,7 +91,7 @@
 		    		<a href='https://m.apaipian.com/special/channel03.html'><img src="${imgPath}/salesMan/special/index/page3.png" alt="发布会"/></a>  
 	        	</div>
 	        	<div class="swiper-slide">
-					<a href='https://m.apaipian.com/special/channel04.html'><img src="${imgPath}/salesMan/special/index/page4.png" alt="投资"/></a>
+					<a href='https://m.apaipian.com/special/channel04.html'><img src="${imgPath}/salesMan/special/index/page4.png" alt="创业融资"/></a>
 	        	</div>
 	        	<div class="swiper-slide">
 		    		<a href='https://m.apaipian.com/special/channel05.html'><img src="${imgPath}/salesMan/special/index/page5.png" alt="医美"/></a>  
@@ -99,21 +99,6 @@
 	    	</div>
    		</div>
    		
-   		
-   		<!-- <div class='block' >
-   			<ul>
-   				<li><a href='https://m.apaipian.com/search?q=*&industry=%E4%BC%81%E4%B8%9A%E5%AE%A3%E4%BC%A0%E7%89%87'>企业宣传片</a></li>
-   				<li><a href='https://m.apaipian.com/search?q=*&industry=%E4%BA%A7%E5%93%81%E5%B9%BF%E5%91%8A'>产品广告</a></li>
-   				<li><a href='https://m.apaipian.com/search?q=*&production=MG%E5%8A%A8%E7%94%BB'>MG动画</a></li>
-   				<li><a href='https://m.apaipian.com/search?q=*&industry=%E8%B7%AF%E6%BC%94%E8%A7%86%E9%A2%91'>路演视频</a></li>
-   				<li><a href='https://m.apaipian.com/search?q=*&industry=%E5%BE%AE%E7%94%B5%E5%BD%B1'>微电影</a></li>
-   				<li><a href='https://m.apaipian.com/search?q=*&industry=TVC'>TVC</a></li>
-   				<li><a href='https://m.apaipian.com/search?q=*&industry=%E7%97%85%E6%AF%92%E8%A7%86%E9%A2%91'>病毒视频</a></li>
-   			</ul>
-   		</div> 
-   		<div></div><div></div>
-   		<div class='block' ></div>
-   		 -->
    		 <div class='block' >
    			<ul>
    				<li><a href='https://m.apaipian.com/search?q=*&industry=%E4%BC%81%E4%B8%9A%E5%AE%A3%E4%BC%A0%E7%89%87'>企业宣传片</a></li>
