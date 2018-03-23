@@ -212,7 +212,7 @@
    		
    	</div>
  -->
-	 <jsp:include flush="true" page="../../foot.jsp"></jsp:include> 
+	<jsp:include flush="true" page="../../foot.jsp"></jsp:include> 
 
     <script src="/resources/lib/jquery/jquery-2.0.3.min.js"></script>
  	 <script src="/resources/lib/swiper/swiper.min.js"></script> 
