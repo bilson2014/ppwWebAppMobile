@@ -311,5 +311,5 @@
 <script src="${flexsliderJs }"></script>
 <script src="${jsonJs }"></script>
 <script src="${portalJs }"></script>
-<script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+<script src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
 </html>

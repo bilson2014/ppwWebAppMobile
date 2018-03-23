@@ -27,7 +27,7 @@
 	
 	<link type="text/css" rel="stylesheet" href="${activityCss}" />
     <link type="text/css" rel="stylesheet" href="${swiperCss}" />
-    <script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+    <script src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
 </head>
 <body>
 

@@ -105,13 +105,13 @@ area {
 }
 
 
+
 /*------------------------------------HEAD-----------------------------------------*/
 
 body {
-    background: #333 !important;
-    overflow-y: scroll;
+    /* overflow-y: scroll;
     -webkit-overflow-scrolling: touch !important;
-    -webkit-overflow-scrolling: touch;
+    -webkit-overflow-scrolling: touch; */
     // -webkit-overflow-scrolling: touch;
 }
 
@@ -229,7 +229,6 @@ body {
 
 .selection {
     background: #1C1A34;
-    padding-bottom: 0.2rem;
 }
 
 .selection .models {

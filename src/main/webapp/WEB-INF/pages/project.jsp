@@ -61,7 +61,7 @@
 <script src="${commonJs }"></script>
 <script src="${customerInfoJs }"></script>
 <script src="${flowViewJs }"></script>
-<script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+<script src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
 <style type="text/css">
 /* 进行中样式控制 */
 body {

@@ -108,5 +108,5 @@
 <script src="${projectListJs}"></script>
 <script src="${lazyloadJs}"></script>
 <script src="${pCommon}"></script>
-<script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+<script src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
 </html>
