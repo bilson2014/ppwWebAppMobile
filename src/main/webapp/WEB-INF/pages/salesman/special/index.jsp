@@ -19,6 +19,7 @@
 	<![endif]-->
 	<script src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
 	<link rel="stylesheet" href="/resources/lib/swiper/swiper.min.css">
+	
 	<link rel="stylesheet" href="/resources/css/salesman/special/index.css">
 
 	<!-- imgPath -->
@@ -30,6 +31,7 @@
 <body>
 	<div class="phoneHeader">
 	     <a id="openMenu"><img src="${imgPath }/index/toMenu.png"></a>
+	     <a class='hide'><img src="${imgPath }/index/toSearch.png"></a>
 	     <a href="/"><img class="ppwLogo" src="${imgPath}/index/logoH.png"></a>
 	</div>
 	<jsp:include flush="true" page="../../menu.jsp"></jsp:include>
@@ -213,12 +215,12 @@
 	 <jsp:include flush="true" page="../../foot.jsp"></jsp:include> 
 
     <script src="/resources/lib/jquery/jquery-2.0.3.min.js"></script>
- 	<!-- <script src="/resources/lib/swiper/swiper.min.js"></script> -->
+ 	 <script src="/resources/lib/swiper/swiper.min.js"></script> 
     <script src="/resources/js/common.js"></script>	
-    <script src="/resources/js/salesman/special/swiper.min.js"></script> 
+  
 	<script src="/resources/js/salesman/special/jquery.SuperSlide.2.1.1.js"></script> 
     <script src="/resources/js/salesman/special/index.js"></script>
-
+<!--     <script src="/resources/lib/swiper/swiper.animate1.0.2.min.js"></script> -->
 
 
 </body>

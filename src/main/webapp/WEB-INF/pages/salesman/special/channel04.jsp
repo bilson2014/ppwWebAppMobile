@@ -30,6 +30,7 @@
    
 	<div class="phoneHeader">
 	     <a id="openMenu"><img src="${imgPath }/index/toMenu.png" alt='菜单'></a>	 
+	     <a class='hide'><img src="${imgPath }/index/toSearch.png"></a>
 	     <a href="/"><img class="ppwLogo" src="${imgPath}/index/logoH.png" alt='logo'></a>
 	</div>
 	<jsp:include flush="true" page="../../menu.jsp"></jsp:include>
