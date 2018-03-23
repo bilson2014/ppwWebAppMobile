@@ -1,0 +1,381 @@
+﻿/* CSS Document */
+
+@import "common";
+@import "buttons";
+@import "video";
+@import "model";
+@import "fontSize";
+@import "common_portal";
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    font-size: 14px;
+    color: #333;
+    background: #000;
+    font-family: "Microsoft Yahei";
+    height: 100%;
+    width: 100%;
+}
+
+ul li {
+    list-style: none;
+    vertical-align: bottom;
+}
+
+a,
+span {
+    text-decoration: none;
+    color: #000;
+    transition: all 0.5s ease-in-out 0s;
+    -moz-transition: all 0.5s ease-in-out 0s;
+    -webkit-transition: all 0.5s ease-in-out 0s;
+    -o-transition: all 0.5s ease-in-out 0s;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+img {
+    border: none;
+    vertical-align: middle;
+}
+
+table {
+    border: none;
+    padding: 0;
+    margin: 0;
+    border-collapse: collapse;
+    overflow: hidden;
+}
+
+table tr {
+    white-space: 0;
+}
+
+table tr td {
+    vertical-align: middle;
+}
+
+.clear {
+    clear: both;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    line-height: 100%;
+}
+
+:focus {
+    outline: none;
+}
+
+
+/* a,
+area {
+    blr: expression(this.onFocus=this.blur())
+} */
+
+.container {
+    width: 1200px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.clear {
+    clear: both;
+}
+
+.hide {
+    display: none;
+}
+
+
+
+/*------------------------------------HEAD-----------------------------------------*/
+
+body {
+    /* overflow-y: scroll;
+    -webkit-overflow-scrolling: touch !important;
+    -webkit-overflow-scrolling: touch; */
+    // -webkit-overflow-scrolling: touch;
+}
+
+.logo {
+    width: 100%;
+    height: 1.5rem;
+    background: #333;
+    display: block;
+    position: fixed;
+    z-index: 666;
+}
+
+.logo .back {
+    color: #fff;
+    font-size: 0.85rem;
+    margin-top: -1.15rem;
+    margin-left: 0.5rem;
+    width: 1rem;
+    height: 1rem;
+    display: block;
+}
+
+.logo img {
+    margin: 0 auto;
+    display: block;
+    padding-top: 0.5rem;
+}
+
+.biao {
+    height: 2.5rem;
+    background: #242330;
+}
+
+.biao .hot {
+    font-size: 0.5rem;
+    color: #fff;
+    text-align: center;
+    line-height: 2.5rem;
+}
+
+.first img {
+    width: 100%;
+}
+
+.biao a {
+    width: 15%;
+    font-size: 0.35rem;
+    color: #fff;
+    margin-top: -1.5rem;
+    display: block;
+    text-align: right;
+    margin-left: 82%;
+    img {
+        width: 0.3rem;
+        height: 0.4rem;
+    }
+}
+
+// .swiper-container {
+//     overflow: scroll;
+//     -webkit-overflow-scrolling: touch;
+// }
+.hots .swiper-slide {
+    width: 88% !important;
+    margin-left: 0.35rem;
+}
+
+.hots .swiper-slide:nth-child(5) {
+    margin-right: 0.35rem;
+}
+
+.hots img {
+    width: 100%;
+    border-radius: 2%;
+}
+
+.hots {
+    background: #242330;
+}
+
+.hots .block {
+    height: 2.5rem;
+    width: 100%;
+}
+
+.hots .block ul {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 6%;
+}
+
+.hots .block ul li {
+    color: #999;
+    display: inline-block;
+    border-radius: 0.48rem;
+    height: 0.6rem;
+    font-size: 0.36rem;
+    border: 0.02rem solid;
+    line-height: 0.6rem;
+    padding: 0 2%;
+    margin: 0 1%;
+    margin-bottom: 3%;
+}
+
+.hots .block ul li a {
+    color: #999;
+}
+
+.first {
+    padding-top: 1.5rem;
+}
+
+
+/* 专题精选 */
+
+.selection {
+    background: #1C1A34;
+}
+
+.selection .models {
+    display: block;
+    width: 96%;
+    margin-right: 2%;
+    margin-left: 2%;
+    border-top-right-radius: 2%;
+    border-top-left-radius: 2%;
+    margin-bottom: 4%;
+}
+
+.selection .models .eye {
+    width: 100%;
+    border-top-left-radius: 2%;
+    border-top-right-radius: 2%;
+}
+
+.selection .models .font {
+    height: 1.35rem;
+    background: #fff;
+    border-bottom-left-radius: 2% 12%;
+    border-bottom-right-radius: 2% 12%;
+}
+
+.selection .models .font span {
+    font-size: 0.44rem;
+    color: #333;
+    line-height: 0.6rem;
+    margin-left: 0.28rem;
+    padding-top: 0.34rem;
+    display: block;
+}
+
+.selection .models .font p {
+    font-size: 0.28rem;
+    color: #999;
+    line-height: 0.4rem;
+    margin-left: 0.28rem;
+    margin-top: 0.08rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 94%;
+}
+
+// /* 底部 */
+// .rightContent,
+// .leftContent {
+//     display: inline-block;
+//     vertical-align: top;
+// }
+// .rightContent {
+//     text-align: center;
+//     margin-left: 0.3rem;
+// }
+// .rightContent img {
+//     width: 2.4rem;
+//     height: 2.4rem;
+//     display: block;
+// }
+// .footPhone {
+//     border-top: 1px solid #999;
+//     background: #333;
+//     padding-left: 0.8rem;
+//     padding-right: 0.8rem;
+//     font-size: 0;
+//     padding-top: 0.8rem;
+// }
+// .footPhone .logoFoot {
+//     width: 2rem;
+//     display: block;
+// }
+// .footPhone .service {
+//     position: relative;
+// }
+// .footPhone .service:before {
+//     content: '';
+//     position: absolute;
+//     width: 0.3rem;
+//     height: 0.3rem;
+//     background: url(/resources/images/index/footPhone.png);
+//     background-size: 0.3rem 0.3rem;
+//     left: -0.35rem;
+// }
+// .footPhone .cMail {
+//     position: relative;
+// }
+// .footPhone .cMail:before {
+//     content: '';
+//     position: absolute;
+//     width: 0.3rem;
+//     height: 0.3rem;
+//     background: url(/resources/images/index/footMail.png);
+//     background-size: 0.3rem 0.3rem;
+//     left: -0.35rem;
+// }
+// .footPhone .cAddress {
+//     position: relative;
+// }
+// .footPhone .cAddress:before {
+//     content: '';
+//     position: absolute;
+//     width: 0.3rem;
+//     height: 0.3rem;
+//     background: url(/resources/images/index/footAddress.png);
+//     background-size: 0.3rem 0.3rem;
+//     left: -0.35rem;
+//     top: 0.01rem;
+// }
+// .footPhone div {
+//     vertical-align: top;
+//     display: inline-block;
+// }
+// .footPhone .footItem {
+//     font-size: 0.32rem;
+//     color: #d1d1d1;
+//     padding-left: 0.4rem;
+//     display: block;
+//     margin-top: 0.35rem;
+//     margin-bottom: 0.35rem;
+//     line-height: 15px;
+// }
+// .footPhone .footItem div:nth-child(2) {
+//     width: 4.6rem;
+// }
+// .footBottom {
+//     width: 100%;
+//     border-top: 1px dashed #999;
+//     color: #999;
+//     font-size: 0.34rem;
+//     padding-top: 10px;
+//     padding-bottom: 10px;
+//     line-height: 0.5rem;
+//     text-align: center;
+// }
+.phoneHeader {
+    height: 1.5rem !important;
+    a:nth-child(1) {
+        margin-top: 0 !important;
+    }
+    .ppwLogo {
+        top: 0 !important;
+    }
+    a:nth-child(2) {
+        position: relative !important;
+        right: 0 !important;
+        margin-top: 0 !important;
+    }
+}
