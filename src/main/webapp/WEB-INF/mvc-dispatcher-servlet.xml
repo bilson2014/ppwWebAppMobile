@@ -92,6 +92,7 @@
 	<mvc:view-controller path="/special/channel03.html" view-name="/salesman/special/channel03" /> 	
 	<mvc:view-controller path="/special/channel04.html" view-name="/salesman/special/channel04" /> 	
 	<mvc:view-controller path="/special/channel05.html" view-name="/salesman/special/channel05" />
+	<mvc:view-controller path="/special/page19.html" view-name="/salesman/special/page19" />
 	
 	 	
 	<!-- 产品线End -->

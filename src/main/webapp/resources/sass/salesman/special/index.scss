@@ -152,6 +152,10 @@ body {
     line-height: 2.5rem;
 }
 
+.first {
+    margin-top: 1.3rem;
+}
+
 .first img {
     width: 100%;
 }
@@ -192,18 +196,19 @@ body {
     background: #242330;
 }
 
-.hots .block {
+.block {
+    background: #242330;
     height: 2.5rem;
     width: 100%;
 }
 
-.hots .block ul {
+.block ul {
     width: 90%;
     margin: 0 auto;
     margin-top: 6%;
 }
 
-.hots .block ul li {
+.block ul li {
     color: #999;
     display: inline-block;
     border-radius: 0.48rem;
@@ -216,7 +221,7 @@ body {
     margin-bottom: 3%;
 }
 
-.hots .block ul li a {
+.block ul li a {
     color: #999;
 }
 
