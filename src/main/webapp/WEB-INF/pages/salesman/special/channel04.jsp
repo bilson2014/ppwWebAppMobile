@@ -24,7 +24,7 @@
 
 	<!-- imgPath -->
 	<spring:url value="/resources/images" var="imgPath" />
-	<spring:url value="file_locate_storage_path" var="image" />
+	<spring:url value="${file_locate_storage_path}" var="image" />
 	<link rel="shortcut icon" href="/resources/images/favicon.ico">
 </head>
 <body>
