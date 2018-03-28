@@ -122,109 +122,115 @@
    				<span>这世界，总有人偷偷爱着你</span>
    			</div>
    		</a>
-   		 	<!--<a class='models' href='#'>
-   			<img class='eye' src="special/images/hot2.jpg" alt="你，应当得到更多关注"/>
+   		<a class='models' href='https://m.apaipian.com/special/page18.html'>
+   			<img class='eye' src="${imgPath}/salesMan/special/index/page18.jpg" alt="一段故事 一座城"/>
+   			<div class='font'>
+   				<span>一段故事 一座城</span>
+   			</div>
+   		</a>
+   		<a class='models' href='https://m.apaipian.com/special/page17.html'>
+   			<img class='eye' src="${imgPath}/salesMan/special/index/page17.jpg" alt="你，应当得到更多关注"/>
    			<div class='font'>
    				<span>你，应当得到更多关注</span>
    			</div>
    		</a>
-   		<a class='models' href='#'>
-   			<img class='eye' src="special/images/hot3.png" alt="温暖到快融化 圣诞节广告合集"/>
+   		<a class='models' href='https://m.apaipian.com/special/page16.html'>
+   			<img class='eye' src="${imgPath}/salesMan/special/index/page16.png" alt="温暖到快融化 圣诞节广告合集"/>
    			<div class='font'>
    				<span>温暖到快融化 圣诞节广告合集</span>
    			</div>
    		</a>
-   		<a class='models' href='#'>
-   			<img class='eye' src="special/images/hot4.jpg" alt="执着的心 笑着流泪"/>
+   		<a class='models' href='https://m.apaipian.com/special/page15.html'>
+   			<img class='eye' src="${imgPath}/salesMan/special/index/page15.jpg" alt="执着的心 笑着流泪"/>
    			<div class='font'>
    				<span>执着的心 笑着流泪</span>
    			</div>
    		</a>
-   		<a class='models' href='#'>
-   			<img class='eye' src="special/images/hot5.jpg" alt="搞笑，我们是认真的"/>
+   		<a class='models' href='https://m.apaipian.com/special/page14.html'>
+   			<img class='eye' src="${imgPath}/salesMan/special/index/page14.jpg" alt="搞笑，我们是认真的"/>
    			<div class='font'>
    				<span>搞笑，我们是认真的</span>
    			</div>
    		</a>
-   		<a class='models' href='#'>
-   			<img class='eye' src="special/images/hot6.jpg" alt="小鲜肉PK老腊肉"/>
+   		<a class='models' href='https://m.apaipian.com/special/page13.html'>
+   			<img class='eye' src="${imgPath}/salesMan/special/index/page13.jpg" alt="小鲜肉PK老腊肉"/>
    			<div class='font'>
    				<span>小鲜肉PK老腊肉</span>
    			</div>
    		</a>
-   		<a class='models' href='#'>
-   			<img class='eye' src="special/images/hot7.jpg" alt="一镜到底 | 玩的是炫酷 要的是惊艳"/>
+   		<a class='models' href='https://m.apaipian.com/special/page12.html'>
+   			<img class='eye' src="${imgPath}/salesMan/special/index/page12.jpg" alt="一镜到底 | 玩的是炫酷 要的是惊艳"/>
    			<div class='font'>
    				<span>一镜到底 | 玩的是炫酷 要的是惊艳</span>
    			</div>
    		</a>
-   		<a class='models' href='#'>
-   			<img class='eye' src="special/images/hot8.jpg" alt="人生易老天难老 | 重阳节温情短片合集"/>
+   		<a class='models' href='https://m.apaipian.com/special/page11.html'>
+   			<img class='eye' src="${imgPath}/salesMan/special/index/page11.jpg" alt="人生易老天难老 | 重阳节温情短片合集"/>
    			<div class='font'>
    				<span>人生易老天难老 | 重阳节温情短片合集</span>
    			</div>
    		</a>
-   		<a class='models' href='#'>
-   			<img class='eye' src="special/images/hot9.jpg" alt="恐怖短片合集 够胆你就来"/>
+   		<a class='models' href='https://m.apaipian.com/special/page10.html'>
+   			<img class='eye' src="${imgPath}/salesMan/special/index/page10.jpg" alt="恐怖短片合集 够胆你就来"/>
    			<div class='font'>
    				<span>恐怖短片合集 够胆你就来</span>
    			</div>
    		</a>
-   		<a class='models' href='#'>
-   			<img class='eye' src="special/images/hot10.jpg" alt="有一种情怀叫NBA"/>
+   		<a class='models' href='https://m.apaipian.com/special/page09.html'>
+   			<img class='eye' src="${imgPath}/salesMan/special/index/page09.jpg" alt="有一种情怀叫NBA"/>
    			<div class='font'>
    				<span>有一种情怀叫NBA</span>
    			</div>
    		</a>
-   		<a class='models' href='#'>
-   			<img class='eye' src="special/images/hot11.jpg" alt="决战双十一 电商视频大合集"/>
+   		<a class='models' href='https://m.apaipian.com/special/page08.html'>
+   			<img class='eye' src="${imgPath}/salesMan/special/index/page08.jpg" alt="决战双十一 电商视频大合集"/>
    			<div class='font'>
    				<span>决战双十一 电商视频大合集</span>
    			</div>
    		</a>
-   		<a class='models' href='#'>
-   			<img class='eye' src="special/images/hot12.jpg" alt="月满中秋夜 温暖异乡人"/>
+   		<a class='models' href='https://m.apaipian.com/special/page07.html'>
+   			<img class='eye' src="${imgPath}/salesMan/special/index/page07.jpg" alt=""/>
    			<div class='font'>
    				<span>月满中秋夜 温暖异乡人</span>
    			</div>
    		</a>
-   		<a class='models' href='#'>
-   			<img class='eye' src="special/images/hot13.jpg" alt="居然还有这种操作"/>
+   		<a class='models' href='https://m.apaipian.com/special/page06.html'>
+   			<img class='eye' src="${imgPath}/salesMan/special/index/page06.jpg" alt="居然还有这种操作"/>
    			<div class='font'>
    				<span>居然还有这种操作</span>
    			</div>
    		</a>
-   		<a class='models' href='#'>
-   			<img class='eye' src="special/images/hot14.jpg" alt="那些开出天际的脑洞"/>
+   		<a class='models' href='https://m.apaipian.com/special/page05.html'>
+   			<img class='eye' src="${imgPath}/salesMan/special/index/page05.jpg" alt="那些开出天际的脑洞"/>
    			<div class='font'>
    				<span>那些开出天际的脑洞</span>
    			</div>
    		</a>
-   		<a class='model' href='#'>
-   			<img class='eye' src="special/images/hot15.jpg" alt="一千零一夜"/>
+   		<a class='models' href='https://m.apaipian.com/special/page04.html'>
+   			<img class='eye' src="${imgPath}/salesMan/special/index/page04.jpg" alt="一千零一夜"/>
    			<div class='font'>
    				<span>一千零一夜</span>
    			</div>
    		</a>
-   		<a class='models' href='#'>
-   			<img class='eye' src="special/images/hot16.jpg" alt="就按耍大牌 奢侈品广告视觉盛宴"/>
+   		<a class='models' href='https://m.apaipian.com/special/page03.html'>
+   			<img class='eye' src="${imgPath}/salesMan/special/index/page03.jpg" alt="就按耍大牌 奢侈品广告视觉盛宴"/>
    			<div class='font'>
    				<span>就按耍大牌 奢侈品广告视觉盛宴</span>
    			</div>
    		</a>
-   		<a class='models' href='#'>
-   			<img class='eye' src="special/images/hot17.jpg" alt="老司机 带带我 放肆开车撩起来"/>
+   		<a class='models' href='https://m.apaipian.com/special/page02.html'>
+   			<img class='eye' src="${imgPath}/salesMan/special/index/page02.jpg" alt="老司机 带带我 放肆开车撩起来"/>
    			<div class='font'>
    				<span>老司机 带带我 放肆开车撩起来</span>
    			</div>
    		</a>
-   		<a class='models' href='#'>
-   			<img class='eye' src="special/images/hot18.jpg" alt="差点就信了 满满的全是套路"/>
+   		<a class='models' href='https://m.apaipian.com/special/page01.html'>
+   			<img class='eye' src="${imgPath}/salesMan/special/index/page01.jpg" alt="差点就信了 满满的全是套路"/>
    			<div class='font'>
    				<span>差点就信了 满满的全是套路</span>
    			</div>
    		</a>
-   		-->
+   		
    	</div>
  
 

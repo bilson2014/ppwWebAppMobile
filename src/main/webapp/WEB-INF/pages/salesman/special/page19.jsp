@@ -24,6 +24,7 @@
 
 	<!-- imgPath -->
 	<spring:url value="/resources/images" var="imgPath" />
+	<spring:url value="file_locate_storage_path" var="image" />
 	<link rel="shortcut icon" href="/resources/images/favicon.ico">
 </head>
 
@@ -50,7 +51,7 @@
 		  <div class="videoArea">
 		       <a href="https://www.apaipian.com/play/1910_22194.html"> 
 		             <div class="videoCard">
-		                  <img class="videoBanner" alt='总有人偷偷爱着你' src="https://fileb.apaipian.com/group1/M00/00/F7/CgpmTlqzYeeARdNzAAGc6Y0V8B0096.jpg">
+		                  <img class="videoBanner" alt='总有人偷偷爱着你' src="${image}/group1/M00/00/F7/CgpmTlqzYeeARdNzAAGc6Y0V8B0096.jpg">
 		                  <div class="modelG"></div>
 		                  <div class="cardTitle">总有人偷偷爱着你</div>
 		                  <div class="cardDes"></div>
@@ -58,7 +59,7 @@
 		       </a>
 		       <a href="https://www.apaipian.com/play/1910_26876.html">
 		             <div class="videoCard">
-		                  <img class="videoBanner" alt='谢谢你陌生人-找房 ' src="https://fileb.apaipian.com/group1/M00/00/F4/Cgpw7FqzYzOAU78UAALt26BlEgc314.jpg">
+		                  <img class="videoBanner" alt='谢谢你陌生人-找房 ' src="${image}/group1/M00/00/F4/Cgpw7FqzYzOAU78UAALt26BlEgc314.jpg">
 		                   <div class="modelG"></div>
 		                  <div class="cardTitle">谢谢你陌生人-找房 </div>
 		                  <div class="cardDes"></div>
@@ -66,7 +67,7 @@
 		       </a>
 		       <a href="https://www.apaipian.com/play/1910_26914.html">
 		             <div class="videoCard">
-		                  <img class="videoBanner" alt='谢谢你陌生人-慧眼' src="https://filec.apaipian.com/group1/M00/00/F7/CgpmTlqzY_KAG1URAAM17YcxqsU393.jpg">
+		                  <img class="videoBanner" alt='谢谢你陌生人-慧眼' src="${image}/group1/M00/00/F7/CgpmTlqzY_KAG1URAAM17YcxqsU393.jpg">
 		                   <div class="modelG"></div>
 		                  <div class="cardTitle">谢谢你陌生人-慧眼</div>
 		                  <div class="cardDes"></div>
@@ -74,7 +75,7 @@
 		       </a>
 		        <a href="https://www.apaipian.com/play/1910_27251.html">
 		             <div class="videoCard">
-		                  <img class="videoBanner" alt='谢谢你陌生人-黑车' src="https://filec.apaipian.com/group1/M00/00/BD/CgptuFqzZEeAMEVGAANwqO4bXX4313.jpg">
+		                  <img class="videoBanner" alt='谢谢你陌生人-黑车' src="${image}/group1/M00/00/BD/CgptuFqzZEeAMEVGAANwqO4bXX4313.jpg">
 		                   <div class="modelG"></div>
 		                  <div class="cardTitle">谢谢你陌生人-黑车</div>
 		                  <div class="cardDes"></div>
@@ -82,7 +83,7 @@
 		       </a>
 		       <a href="https://www.apaipian.com/play/1910_27878.html">
 		             <div class="videoCard">
-		                  <img class="videoBanner" alt='谢谢你陌生人-练手' src="https://fileb.apaipian.com/group1/M00/00/BD/CgptuFqzZKyAEnUcAAG9ZrX_o44331.jpg">
+		                  <img class="videoBanner" alt='谢谢你陌生人-练手' src="${image}/group1/M00/00/BD/CgptuFqzZKyAEnUcAAG9ZrX_o44331.jpg">
 		                   <div class="modelG"></div>
 		                  <div class="cardTitle">谢谢你陌生人-练手</div>
 		                  <div class="cardDes"></div>
@@ -90,7 +91,7 @@
 		       </a>
 		       <a href="https://www.apaipian.com/play/1910_26862.html">
 		             <div class="videoCard">
-		                  <img class="videoBanner" alt='谢谢你陌生人-圣诞' src="https://filea.apaipian.com/group1/M00/00/F4/Cgpw7FqzZSqAL0rjAAIVFjcTLF8851.jpg">
+		                  <img class="videoBanner" alt='谢谢你陌生人-圣诞' src="${image}/group1/M00/00/F4/Cgpw7FqzZSqAL0rjAAIVFjcTLF8851.jpg">
 		                   <div class="modelG"></div>
 		                  <div class="cardTitle">谢谢你陌生人-圣诞</div>
 		                  <div class="cardDes"></div>
@@ -98,7 +99,7 @@
 		       </a>
 		       <a href="https://www.apaipian.com/play/1910_27632.html">
 		             <div class="videoCard">
-		                  <img class="videoBanner" alt='谢谢你陌生人-蹭车' src="https://filea.apaipian.com/group1/M00/00/F7/CgpmTlqzZmCAQ4DqAALJHXTPao0990.jpg">
+		                  <img class="videoBanner" alt='谢谢你陌生人-蹭车' src="${image}/group1/M00/00/F7/CgpmTlqzZmCAQ4DqAALJHXTPao0990.jpg">
 		                   <div class="modelG"></div>
 		                  <div class="cardTitle">谢谢你陌生人-蹭车</div>
 		                  <div class="cardDes"></div>
@@ -106,7 +107,7 @@
 		       </a>
 		       <a href="https://www.apaipian.com/play/1910_24590.html">
 		             <div class="videoCard">
-		                  <img class="videoBanner" alt='何必低调 你应该骄傲' src="https://filea.apaipian.com/group1/M00/00/A1/CgpsbFpFABCAZCm3AAGXd1qhnjw736.jpg">
+		                  <img class="videoBanner" alt='何必低调 你应该骄傲' src="${image}/group1/M00/00/A1/CgpsbFpFABCAZCm3AAGXd1qhnjw736.jpg">
 		                   <div class="modelG"></div>
 		                  <div class="cardTitle">何必低调 你应该骄傲</div>
 		                  <div class="cardDes"></div>
@@ -114,7 +115,7 @@
 		       </a>
 		       <a href="https://www.apaipian.com/play/1910_27898.html">
 		             <div class="videoCard">
-		                  <img class="videoBanner" alt='时光是最好的礼物' src="https://filec.apaipian.com/group1/M00/00/BC/CgpsbFqzZ8GAeEt_AANGwVJP_xs132.jpg">
+		                  <img class="videoBanner" alt='时光是最好的礼物' src="${image}/group1/M00/00/BC/CgpsbFqzZ8GAeEt_AANGwVJP_xs132.jpg">
 		                   <div class="modelG"></div>
 		                  <div class="cardTitle">时光是最好的礼物</div>
 		                  <div class="cardDes"></div>
@@ -122,7 +123,7 @@
 		       </a>
 		       <a href="https://www.apaipian.com/play/1910_23992.html">
 		             <div class="videoCard">
-		                  <img class="videoBanner" alt='十公里的温度' src="https://filea.apaipian.com/group1/M00/00/BD/CgptuFqzalyAfodbAALeuQzYvec125.jpg">
+		                  <img class="videoBanner" alt='十公里的温度' src="${image}/group1/M00/00/BD/CgptuFqzalyAfodbAALeuQzYvec125.jpg">
 		                   <div class="modelG"></div>
 		                  <div class="cardTitle">十公里的温度</div>
 		                  <div class="cardDes"></div>
@@ -130,7 +131,7 @@
 		       </a>
 		        <a href="https://www.apaipian.com/play/1910_24639.html">
 		             <div class="videoCard">
-		                  <img class="videoBanner" alt='城市再大，我送你回家' src="https://filed.apaipian.com/group1/M00/00/BC/CgpsbFqza4SAUIUaAAKPB2-UpHs706.jpg">
+		                  <img class="videoBanner" alt='城市再大，我送你回家' src="${image}/group1/M00/00/BC/CgpsbFqza4SAUIUaAAKPB2-UpHs706.jpg">
 		                   <div class="modelG"></div>
 		                  <div class="cardTitle">城市再大，我送你回家</div>
 		                  <div class="cardDes"></div>
@@ -138,7 +139,7 @@
 		       </a>
 		        <a href="https://www.apaipian.com/play/1910_27889.html">
 		             <div class="videoCard">
-		                  <img class="videoBanner" alt='最后一公里' src="https://filed.apaipian.com/group1/M00/00/F4/Cgpw7FqzbJOAQMstAAG6wGakGC8923.jpg">
+		                  <img class="videoBanner" alt='最后一公里' src="${image}/group1/M00/00/F4/Cgpw7FqzbJOAQMstAAG6wGakGC8923.jpg">
 		                   <div class="modelG"></div>
 		                  <div class="cardTitle">最后一公里</div>
 		                  <div class="cardDes"></div>
@@ -146,7 +147,7 @@
 		       </a>
 		        <a href="https://www.apaipian.com/play/1910_27415.html">
 		             <div class="videoCard">
-		                  <img class="videoBanner" alt='蹲下来，爱在相同高度' src="https://filed.apaipian.com/group1/M00/00/BD/CgptuFqzbWKAGZ6LAAFq_DL9hxE436.jpg">
+		                  <img class="videoBanner" alt='蹲下来，爱在相同高度' src="${image}/group1/M00/00/BD/CgptuFqzbWKAGZ6LAAFq_DL9hxE436.jpg">
 		                   <div class="modelG"></div>
 		                  <div class="cardTitle">蹲下来，爱在相同高度</div>
 		                  <div class="cardDes"></div>
@@ -154,7 +155,7 @@
 		       </a>
 		       <a href="https://www.apaipian.com/play/1910_24985.html">
 		             <div class="videoCard">
-		                  <img class="videoBanner" alt='让心声有回声' src="https://filed.apaipian.com/group1/M00/00/BC/CgpsbFqzbkGATrRXAAOIvK0b_bY644.jpg">
+		                  <img class="videoBanner" alt='让心声有回声' src="${image}/group1/M00/00/BC/CgpsbFqzbkGATrRXAAOIvK0b_bY644.jpg">
 		                   <div class="modelG"></div>
 		                  <div class="cardTitle">让心声有回声</div>
 		                  <div class="cardDes"></div>
@@ -162,7 +163,7 @@
 		       </a>
 		       <a href="https://www.apaipian.com/play/1910_22295.html">
 		             <div class="videoCard">
-		                  <img class="videoBanner" alt='假如我有三天光明' src="https://filec.apaipian.com/group1/M00/00/F4/Cgpw7FqzbvqAA8LzAAL5La3Sp4k127.jpg">
+		                  <img class="videoBanner" alt='假如我有三天光明' src="${image}/group1/M00/00/F4/Cgpw7FqzbvqAA8LzAAL5La3Sp4k127.jpg">
 		                   <div class="modelG"></div>
 		                  <div class="cardTitle">假如我有三天光明</div>
 		                  <div class="cardDes"></div>

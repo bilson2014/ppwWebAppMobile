@@ -24,6 +24,7 @@
 
 	<!-- imgPath -->
 	<spring:url value="/resources/images" var="imgPath" />
+	<spring:url value="file_locate_storage_path" var="image" />
 	<link rel="shortcut icon" href="/resources/images/favicon.ico">
 </head>
 
@@ -50,7 +51,7 @@
 		  <div class="videoArea">
 		       <a href="https://m.apaipian.com/play/1318_17436.html">
 		             <div class="videoCard">
-		                  <img class="videoBanner" alt='传祺GS8' src="https://filec.apaipian.com/group1/M00/00/F4/Cgpw7FqxuwyAa5K7AAJGbN9aN5o072.jpg">
+		                  <img class="videoBanner" alt='传祺GS8' src="${image}/group1/M00/00/F4/Cgpw7FqxuwyAa5K7AAJGbN9aN5o072.jpg">
 		                  <div class="modelG"></div>
 		                  <div class="cardTitle">传祺GS8</div>
 		                  <div class="cardDes"></div>
@@ -58,7 +59,7 @@
 		       </a>
 		       <a href="https://m.apaipian.com/play/1169_3510.html">
 		             <div class="videoCard">
-		                  <img class="videoBanner" alt='坚果G1家庭影院' src="https://fileb.apaipian.com/group1/M00/00/F4/Cgpw7FqxwcyAGHaTAAGfAQwJXBQ378.jpg">
+		                  <img class="videoBanner" alt='坚果G1家庭影院' src="${image}/group1/M00/00/F4/Cgpw7FqxwcyAGHaTAAGfAQwJXBQ378.jpg">
 		                   <div class="modelG"></div>
 		                  <div class="cardTitle">坚果G1家庭影院</div>
 		                  <div class="cardDes"></div>
@@ -66,7 +67,7 @@
 		       </a>
 		       <a href="https://m.apaipian.com/play/1151_19385.html">
 		             <div class="videoCard">
-		                  <img class="videoBanner" alt='OPPO-R11 红蓝之夜' src="https://filea.apaipian.com/group1/M00/00/F4/Cgpw7FqxwtqALO7CAAJfbHtodQE101.jpg">
+		                  <img class="videoBanner" alt='OPPO-R11 红蓝之夜' src="${image}/group1/M00/00/F4/Cgpw7FqxwtqALO7CAAJfbHtodQE101.jpg">
 		                   <div class="modelG"></div>
 		                  <div class="cardTitle">OPPO-R11 红蓝之夜</div>
 		                  <div class="cardDes"></div>
@@ -74,7 +75,7 @@
 		       </a>
 		        <a href="https://m.apaipian.com/play/1910_22582.html">
 		             <div class="videoCard">
-		                  <img class="videoBanner" alt='米娅新品颜料盒' src="https://filec.apaipian.com/group1/M00/00/C7/Cgpw7FoqXZWAYBQ3AAD9bma2v2M870.jpg">
+		                  <img class="videoBanner" alt='米娅新品颜料盒' src="${image}/group1/M00/00/C7/Cgpw7FoqXZWAYBQ3AAD9bma2v2M870.jpg">
 		                   <div class="modelG"></div>
 		                  <div class="cardTitle">米娅新品颜料盒</div>
 		                  <div class="cardDes"></div>
@@ -82,7 +83,7 @@
 		       </a>
 		       <a href="https://m.apaipian.com/play/1910_4522.html">
 		             <div class="videoCard">
-		                  <img class="videoBanner" alt='索尼 Sony - Made for Bond' src="https://filea.apaipian.com/group1/M00/00/F6/CgpmTlqxyFWAS5iFAAIhkPiowTU667.jpg">
+		                  <img class="videoBanner" alt='索尼 Sony - Made for Bond' src="${image}/group1/M00/00/F6/CgpmTlqxyFWAS5iFAAIhkPiowTU667.jpg">
 		                   <div class="modelG"></div>
 		                  <div class="cardTitle">索尼 Sony - Made for Bond</div>
 		                  <div class="cardDes"></div>
@@ -90,7 +91,7 @@
 		       </a>
 		       <a href="https://m.apaipian.com/play/1151_17953.html">
 		             <div class="videoCard">
-		                  <img class="videoBanner" alt='英特尔 Intel-众创加速 智胜未来' src="https://filea.apaipian.com/group1/M00/00/F4/Cgpw7FqxyiqAClGxAAIwSSOASv8652.jpg">
+		                  <img class="videoBanner" alt='英特尔 Intel-众创加速 智胜未来' src="${image}/group1/M00/00/F4/Cgpw7FqxyiqAClGxAAIwSSOASv8652.jpg">
 		                   <div class="modelG"></div>
 		                  <div class="cardTitle">英特尔 Intel-众创加速 智胜未来</div>
 		                  <div class="cardDes"></div>
@@ -98,7 +99,7 @@
 		       </a>
 		       <a href="https://m.apaipian.com/play/1910_23354.html">
 		             <div class="videoCard">
-		                  <img class="videoBanner" alt='中国黄金钻石' src="https://filed.apaipian.com/group1/M00/00/BC/CgptuFqxy42AeEBHAANZc4Y0MKk677.jpg">
+		                  <img class="videoBanner" alt='中国黄金钻石' src="${image}/group1/M00/00/BC/CgptuFqxy42AeEBHAANZc4Y0MKk677.jpg">
 		                   <div class="modelG"></div>
 		                  <div class="cardTitle">中国黄金钻石</div>
 		                  <div class="cardDes"></div>
@@ -106,7 +107,7 @@
 		       </a>
 		       <a href="https://m.apaipian.com/play/1910_23994.html">
 		             <div class="videoCard">
-		                  <img class="videoBanner" alt='昆山君磊电器' src="https://filed.apaipian.com/group1/M00/00/F4/Cgpw7FqxzKSARqfyAAHQ4ePOF6A037.jpg">
+		                  <img class="videoBanner" alt='昆山君磊电器' src="${image}/group1/M00/00/F4/Cgpw7FqxzKSARqfyAAHQ4ePOF6A037.jpg">
 		                   <div class="modelG"></div>
 		                  <div class="cardTitle">昆山君磊电器</div>
 		                  <div class="cardDes"></div>
@@ -114,7 +115,7 @@
 		       </a>
 		       <a href="https://m.apaipian.com/play/1113_9454.html">
 		             <div class="videoCard">
-		                  <img class="videoBanner" alt='welcomebank' src="https://filed.apaipian.com/group1/M00/00/BC/CgptuFqxzSKAOfswAAGsZB-Wvsk040.jpg">
+		                  <img class="videoBanner" alt='welcomebank' src="${image}/group1/M00/00/BC/CgptuFqxzSKAOfswAAGsZB-Wvsk040.jpg">
 		                   <div class="modelG"></div>
 		                  <div class="cardTitle">welcomebank</div>
 		                  <div class="cardDes"></div>
@@ -122,7 +123,7 @@
 		       </a>
 		       <a href="https://m.apaipian.com/play/1002_7604.html">
 		             <div class="videoCard">
-		                  <img class="videoBanner" alt='悟空保' src="https://filed.apaipian.com/group1/M00/00/BC/CgptuFqxzaeARCQ0AAGFXnP4NoU224.jpg">
+		                  <img class="videoBanner" alt='悟空保' src="${image}/group1/M00/00/BC/CgptuFqxzaeARCQ0AAGFXnP4NoU224.jpg">
 		                   <div class="modelG"></div>
 		                  <div class="cardTitle">悟空保</div>
 		                  <div class="cardDes"></div>
@@ -130,7 +131,7 @@
 		       </a>
 		        <a href="https://m.apaipian.com/play/948_13363.html">
 		             <div class="videoCard">
-		                  <img class="videoBanner" alt='土曼 TOMOON' src="https://filea.apaipian.com/group1/M00/00/BB/CgpsbFqxzh2AUfMzAAMlpitWfXs437.jpg">
+		                  <img class="videoBanner" alt='土曼 TOMOON' src="${image}/group1/M00/00/BB/CgpsbFqxzh2AUfMzAAMlpitWfXs437.jpg">
 		                   <div class="modelG"></div>
 		                  <div class="cardTitle">土曼 TOMOON</div>
 		                  <div class="cardDes"></div>
@@ -138,7 +139,7 @@
 		       </a>
 		        <a href="https://m.apaipian.com/play/1117_10667.html">
 		             <div class="videoCard">
-		                  <img class="videoBanner" alt='曼秀雷敦 Mentholatum' src="https://filea.apaipian.com/group1/M00/00/F6/CgpmTlqxzrGABEhhAAI1Ex5xqBg083.jpg">
+		                  <img class="videoBanner" alt='曼秀雷敦 Mentholatum' src="${image}/group1/M00/00/F6/CgpmTlqxzrGABEhhAAI1Ex5xqBg083.jpg">
 		                   <div class="modelG"></div>
 		                  <div class="cardTitle">曼秀雷敦 Mentholatum</div>
 		                  <div class="cardDes"></div>
@@ -146,7 +147,7 @@
 		       </a>
 		        <a href="https://m.apaipian.com/play/1910_22924.html">
 		             <div class="videoCard">
-		                  <img class="videoBanner" alt='大疆创新DJI-Crystal Sky' src="https://filed.apaipian.com/group1/M00/00/BC/CgptuFqxzwOAfgWXAALCfe3dSY0819.jpg">
+		                  <img class="videoBanner" alt='大疆创新DJI-Crystal Sky' src="${image}/group1/M00/00/BC/CgptuFqxzwOAfgWXAALCfe3dSY0819.jpg">
 		                   <div class="modelG"></div>
 		                  <div class="cardTitle">大疆创新DJI-Crystal Sky</div>
 		                  <div class="cardDes"></div>
@@ -154,7 +155,7 @@
 		       </a>
 		       <a href="https://m.apaipian.com/play/1910_26519.html">
 		             <div class="videoCard">
-		                  <img class="videoBanner" alt='飞宇科技-Vimble2' src="https://fileb.apaipian.com/group1/M00/00/BB/CgpsbFqxz2SAblFtAAGwOoDkztI292.jpg">
+		                  <img class="videoBanner" alt='飞宇科技-Vimble2' src="${image}/group1/M00/00/BB/CgpsbFqxz2SAblFtAAGwOoDkztI292.jpg">
 		                   <div class="modelG"></div>
 		                  <div class="cardTitle">飞宇科技-Vimble2</div>
 		                  <div class="cardDes"></div>
@@ -162,7 +163,7 @@
 		       </a>
 		       <a href="https://m.apaipian.com/play/1117_10066.html">
 		             <div class="videoCard">
-		                  <img class="videoBanner" alt='六神 - 清凉沐浴露' src="https://filed.apaipian.com/group1/M00/00/F6/CgpmTlqx0D2AUyfvAAI3gct03AU263.jpg">
+		                  <img class="videoBanner" alt='六神 - 清凉沐浴露' src="${image}/group1/M00/00/F6/CgpmTlqx0D2AUyfvAAI3gct03AU263.jpg">
 		                   <div class="modelG"></div>
 		                  <div class="cardTitle">六神 - 清凉沐浴露</div>
 		                  <div class="cardDes"></div>
@@ -170,7 +171,7 @@
 		       </a>
 		       <a href="https://m.apaipian.com/play/1324_13816.html">
 		             <div class="videoCard">
-		                  <img class="videoBanner" alt='京都念慈庵-润喉糖' src="https://fileb.apaipian.com/group1/M00/00/BC/CgptuFqx0J2APsjCAAK893a7IXQ718.jpg">
+		                  <img class="videoBanner" alt='京都念慈庵-润喉糖' src="${image}/group1/M00/00/BC/CgptuFqx0J2APsjCAAK893a7IXQ718.jpg">
 		                   <div class="modelG"></div>
 		                  <div class="cardTitle">京都念慈庵-润喉糖</div>
 		                  <div class="cardDes"></div>
@@ -178,7 +179,7 @@
 		       </a>
 		       <a href="https://m.apaipian.com/play/1201_13080.html">
 		             <div class="videoCard">
-		                  <img class="videoBanner" alt='长安CX70T' src="https://filed.apaipian.com/group1/M00/00/F4/Cgpw7Fqx0viAa56rAAJ2TqkqC64217.jpg">
+		                  <img class="videoBanner" alt='长安CX70T' src="${image}/group1/M00/00/F4/Cgpw7Fqx0viAa56rAAJ2TqkqC64217.jpg">
 		                   <div class="modelG"></div>
 		                  <div class="cardTitle">长安CX70T</div>
 		                  <div class="cardDes"></div>
@@ -186,7 +187,7 @@
 		       </a>
 		       <a href="https://m.apaipian.com/play/300_868.html">
 		             <div class="videoCard">
-		                  <img class="videoBanner" alt='东方微点 micropoint' src="https://filed.apaipian.com/group1/M00/00/BC/CgptuFqx09KAdF-uAAFyD4iXaVY634.jpg">
+		                  <img class="videoBanner" alt='东方微点 micropoint' src="${image}/group1/M00/00/BC/CgptuFqx09KAdF-uAAFyD4iXaVY634.jpg">
 		                   <div class="modelG"></div>
 		                  <div class="cardTitle">东方微点 micropoint</div>
 		                  <div class="cardDes"></div>
@@ -194,7 +195,7 @@
 		       </a>
 		        <a href="https://m.apaipian.com/play/1910_24854.html">
 		             <div class="videoCard">
-		                  <img class="videoBanner" alt='蔚来 NIO-ES8亮相' src="https://fileb.apaipian.com/group1/M00/00/BC/CgptuFqx1JOAF_0hAAFAPObjLm0621.jpg">
+		                  <img class="videoBanner" alt='蔚来 NIO-ES8亮相' src="${image}/group1/M00/00/BC/CgptuFqx1JOAF_0hAAFAPObjLm0621.jpg">
 		                   <div class="modelG"></div>
 		                  <div class="cardTitle">蔚来 NIO-ES8亮相</div>
 		                  <div class="cardDes"></div>
@@ -202,7 +203,7 @@
 		       </a>
 		        <a href="https://m.apaipian.com/play/1514_17502.html">
 		             <div class="videoCard">
-		                  <img class="videoBanner" alt='FFC新生力量' src="https://filec.apaipian.com/group1/M00/00/F6/CgpmTlqx1UyAaGJwAAHwLTiUyLQ677.jpg">
+		                  <img class="videoBanner" alt='FFC新生力量' src="${image}/group1/M00/00/F6/CgpmTlqx1UyAaGJwAAHwLTiUyLQ677.jpg">
 		                   <div class="modelG"></div>
 		                  <div class="cardTitle">FFC新生力量</div>
 		                  <div class="cardDes"></div>

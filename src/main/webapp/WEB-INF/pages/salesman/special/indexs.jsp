@@ -44,7 +44,7 @@
    	
    	<div class='selection'>
    		<a class='models' href='https://m.apaipian.com/special/channel01.html'>
-   			<img class='eye' src="${imgPath}/salesMan/special/index/p1.jpg" alt="三分钟说清区块链"/>
+   			<img class='eye' src="${imgPath}/salesMan/special/index/p1.png" alt="三分钟说清区块链"/>
    			<div class='font'>
    				<span>三分钟说清区块链 这样的视频正是你所需要的</span>
    			</div>
