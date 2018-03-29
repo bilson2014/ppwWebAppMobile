@@ -82,6 +82,38 @@
 		             </div>
 		       </a>
 		       <!--添加  -->
+		       <a href="https://m.apaipian.com/play/1379_28450.html">
+		             <div class="videoCard">
+		                  <img class="videoBanner" alt='夸克链 Quark(QRK)' src="${image}/group1/M00/00/C0/CgptuFq55ziAWCYnAAHcI4dH3Q8856.jpg">
+		                   <div class="modelG"></div>
+		                  <div class="cardTitle">夸克链 Quark(QRK)</div>
+		                  <div class="cardDes"> </div>
+		             </div>
+		       </a>
+		       <a href="http://m.apaipian.com/play/1379_28453.html">
+		             <div class="videoCard">
+		                  <img class="videoBanner" alt='BitGame 比特-中文版' src="${image}/group1/M00/00/F7/Cgpw7Fq56xyAHrauAAJOfSYUCm8201.jpg">
+		                   <div class="modelG"></div>
+		                  <div class="cardTitle">BitGame 比特-中文版</div>
+		                  <div class="cardDes"> </div>
+		             </div>
+		       </a>
+		       <a href="http://m.apaipian.com/play/1379_28452.html">
+		             <div class="videoCard">
+		                  <img class="videoBanner" alt='BitGame 比特-英文版' src="${image}/group1/M00/00/BE/CgpsbFq56sCALV-HAALwZ04oAU0784.jpg">
+		                   <div class="modelG"></div>
+		                  <div class="cardTitle">BitGame 比特-英文版</div>
+		                  <div class="cardDes"> </div>
+		             </div>
+		       </a>
+		       <a href="https://m.apaipian.com/play/18_28055.html">
+		             <div class="videoCard">
+		                  <img class="videoBanner" alt='智力收益价值链 IQ Benefit Chain(IQB-C)' src="${image}/group1/M00/00/F6/CgpmTlqx1I2AVVN6AAFTXhn-IJE490.jpg">
+		                   <div class="modelG"></div>
+		                  <div class="cardTitle">智力收益价值链 IQ Benefit Chain(IQB-C)</div>
+		                  <div class="cardDes"> </div>
+		             </div>
+		       </a>	
 		       <a href="https://m.apaipian.com/play/1379_27948.html">
 		             <div class="videoCard">
 		                  <img class="videoBanner" alt='新型网络 New Kind of Network(NKN)' src="${image}/group1/M00/00/F6/CgpmTlqxx6yANclRAAGN2rpf5iw544.jpg">
@@ -213,7 +245,7 @@
 		       </a>
 		      <a href="https://m.apaipian.com/play/1910_26504.html">
 		             <div class="videoCard">
-		                  <img class="videoBanner" src="${image}/group1/M00/00/BC/CgptuFqx0vyAAos5AAGqTizA-Is876.jpg">
+		                  <img class="videoBanner" alt='Bankera-发展历程' src="${image}/group1/M00/00/BC/CgptuFqx0vyAAos5AAGqTizA-Is876.jpg">
 		                   <div class="modelG"></div>
 		                  <div class="cardTitle">Bankera-发展历程</div>
 		                  <div class="cardDes"> </div>
@@ -221,7 +253,7 @@
 		       </a>
 		       <a href="https://m.apaipian.com/play/1910_26466.html">
 		             <div class="videoCard">
-		                  <img class="videoBanner" src="${image}/group1/M00/00/BB/CgpsbFqx0QSAYhz-AACznQJ5w88385.jpg">
+		                  <img class="videoBanner" alt='区块链介绍' src="${image}/group1/M00/00/BB/CgpsbFqx0QSAYhz-AACznQJ5w88385.jpg">
 		                   <div class="modelG"></div>
 		                  <div class="cardTitle">区块链介绍</div>
 		                  <div class="cardDes"> </div>
@@ -253,7 +285,7 @@
 		       </a>
 		        <a href="https://m.apaipian.com/play/1910_26513.html">
 		             <div class="videoCard">
-		                  <img class="videoBanner" src="${image}/group1/M00/00/F6/CgpmTlqx0ISAUMoPAAEMWLq0SiM947.jpg">
+		                  <img class="videoBanner"  alt='ICON-前景' src="${image}/group1/M00/00/F6/CgpmTlqx0ISAUMoPAAEMWLq0SiM947.jpg">
 		                   <div class="modelG"></div>
 		                  <div class="cardTitle">ICON-前景</div>
 		                  <div class="cardDes"> </div>
@@ -261,7 +293,7 @@
 		       </a>
 		        <a href="https://m.apaipian.com/play/1910_26505.html">
 		             <div class="videoCard">
-		                  <img class="videoBanner" src="${image}/group1/M00/00/F4/Cgpw7Fqx03CASP4MAAHuvf9SYyU746.jpg">
+		                  <img class="videoBanner" alt='IBM-blockchain汽车租赁' src="${image}/group1/M00/00/F4/Cgpw7Fqx03CASP4MAAHuvf9SYyU746.jpg">
 		                   <div class="modelG"></div>
 		                  <div class="cardTitle">IBM-blockchain汽车租赁</div>
 		                  <div class="cardDes"> </div>
@@ -269,7 +301,7 @@
 		       </a>
 		       <a href="https://m.apaipian.com/play/1910_26497.html">
 		             <div class="videoCard">
-		                  <img class="videoBanner" src="${image}/group1/M00/00/BB/CgpsbFqx07-ASv4QAAEYxVHoECs814.jpg">
+		                  <img class="videoBanner" alt='The Bitcoin and Blockchain' src="${image}/group1/M00/00/BB/CgpsbFqx07-ASv4QAAEYxVHoECs814.jpg">
 		                   <div class="modelG"></div>
 		                  <div class="cardTitle">The Bitcoin and Blockchain</div>
 		                  <div class="cardDes"> </div>
@@ -278,7 +310,7 @@
 	
 		       <a href="https://m.apaipian.com/play/683_26128.html">
 		             <div class="videoCard">
-		                  <img class="videoBanner" src="${image}/group1/M00/00/BB/CgpsbFqyICyARek_AAJP_UIlDVQ490.jpg">
+		                  <img class="videoBanner" alt='趣链科技-趣赢信任 链铸未来' src="${image}/group1/M00/00/BB/CgpsbFqyICyARek_AAJP_UIlDVQ490.jpg">
 		                   <div class="modelG"></div>
 		                  <div class="cardTitle">趣链科技-趣赢信任 链铸未来</div>
 		                  <div class="cardDes"> </div>
@@ -288,7 +320,7 @@
 		      
 		        <a href="https://m.apaipian.com/play/1910_26467.html">
 		             <div class="videoCard">
-		                  <img class="videoBanner" src="${image}/group1/M00/00/F4/Cgpw7Fqx0ZWAE234AAF05-kKCiw169.jpg">
+		                  <img class="videoBanner" alt='什么是区块链' src="${image}/group1/M00/00/F4/Cgpw7Fqx0ZWAE234AAF05-kKCiw169.jpg">
 		                   <div class="modelG"></div>
 		                  <div class="cardTitle">什么是区块链</div>
 		                  <div class="cardDes"> </div>
@@ -296,21 +328,22 @@
 		       </a>
 		        <a href="https://m.apaipian.com/play/683_26119.html">
 		             <div class="videoCard">
-		                  <img class="videoBanner" src="${image}/group1/M00/00/F6/CgpmTlqxz3CAJqHfAADaoSN7NWw365.jpg">
+		                  <img class="videoBanner" alt='AMD-The Trinity Foundation' src="${image}/group1/M00/00/F6/CgpmTlqxz3CAJqHfAADaoSN7NWw365.jpg">
 		                   <div class="modelG"></div>
 		                  <div class="cardTitle">AMD-The Trinity Foundation</div>
 		                  <div class="cardDes"> </div>
 		             </div>
 		       </a>
-		      
-		       <a href="https://m.apaipian.com/play/18_28055.html">
+		       <a href="http://m.apaipian.com/play/1910_27987.html">
 		             <div class="videoCard">
-		                  <img class="videoBanner" src="${image}/group1/M00/00/F6/CgpmTlqx1I2AVVN6AAFTXhn-IJE490.jpg">
+		                  <img class="videoBanner" alt='瑞波币 Ripple(XRP)' src="${image}/group1/M00/00/BC/CgptuFqvOouAS4P7AAElvZ0g9O8726.jpg">
 		                   <div class="modelG"></div>
-		                  <div class="cardTitle">智力收益价值链 IQ Benefit Chain(IQB-C)</div>
+		                  <div class="cardTitle">瑞波币 Ripple(XRP)</div>
 		                  <div class="cardDes"> </div>
 		             </div>
-		       </a>	    
+		       </a>
+		      
+		           
 		  </div>
 	<jsp:include flush="true" page="../../foot.jsp"></jsp:include> 
     
