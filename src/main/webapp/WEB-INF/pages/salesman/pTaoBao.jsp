@@ -22,7 +22,18 @@
 	<title>淘宝短视频拍摄-店铺主图视频-拍片网</title>
     <script src="${jqueryJs}"></script>
 	<script src="${commonJs}"></script>
-	<script src="${pTaoBaoJs}"></script>
+	<%-- <script src="${pTaoBaoJs}"></script> --%>
+	
+<!-- 	<script>
+  	alert(2);
+		 $('.pagePhone').on('touchstart ',function(e){
+		   	  e.preventDefault();
+		  
+			    	/*  var aniHeight = setVideoHeight;
+					  var nowPos = $('.pagePhone').scrollTop();*/
+		   	  $('#big').text('a');
+	    }); 
+	</script> -->
 		
 	<!--[if lt IE 9]>
 		<script>window.html5 || document.write('<script src="html5shivJs"><\/script>')</script>
