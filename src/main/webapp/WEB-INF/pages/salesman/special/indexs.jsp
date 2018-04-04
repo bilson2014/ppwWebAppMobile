@@ -72,6 +72,12 @@
    			<div class='font'>
    				<span>医美行业宣传片 绽放极致诱惑</span>
    			</div>
+   		</a>
+   		<a class='models' href='https://m.apaipian.com/special/channel06.html'>
+   			<img class='eye' src="${imgPath}/salesMan/special/index/p6.jpg" alt="发布会视频"/>
+   			<div class='font'>
+   				<span>发布会视频</span>
+   			</div>
    		</a>	
    	</div>
    	<jsp:include flush="true" page="../../foot.jsp"></jsp:include>
