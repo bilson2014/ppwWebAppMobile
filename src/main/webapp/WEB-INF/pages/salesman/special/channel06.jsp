@@ -42,8 +42,8 @@
 	<div class="pagePhone">			
 		  <div class="setBanner">
 		     <img src="${imgPath}/salesMan/special/channel06/banner.jpg" alt='互联网教育/网校'>
-		  <!--    <div class="product">产品详情</div>
-		     <div class="showVideo">观看视频</div> -->
+		   		<a href='http://m.apaipian.com/product/EnterprisePromotionalVideo/main'><div style="left: 3.6rem;bottom: 2.1rem;" class="product">产品详情</div></a>
+		     <!--   <div class="showVideo">观看视频</div> -->
 		  </div>
 		  <div class="title">
 		       主题视频区
@@ -59,7 +59,7 @@
 		       </a>
 		       <a href="http://m.apaipian.com/play/1387_15132.html"> 
 		             <div class="videoCard">
-		                  <img class="videoBanner" alt='找好老师 上跟谁学' src="${image}group1/M00/00/72/CgpmTljl6VCAEzzzAALbkH80RAw306.png">
+		                  <img class="videoBanner" alt='找好老师 上跟谁学' src="${image}group1/M00/00/FC/CgpmTlrEPMmAcWLpAAIBd4CMjsg535.jpg">
 		                  <div class="modelG"></div>
 		                  <div class="cardTitle">找好老师 上跟谁学</div>
 		                  <div class="cardDes"></div>
@@ -67,7 +67,7 @@
 		       </a>
 		       <a href="http://m.apaipian.com/play/1910_26423.html"> 
 		             <div class="videoCard">
-		                  <img class="videoBanner" alt='VIPKID-男教师版' src="${image}group1/M00/00/AD/CgpsbFphqQ2APzIqAAGbAwsh30k762.jpg">
+		                  <img class="videoBanner" alt='VIPKID-男教师版' src="${image}group1/M00/00/C3/CgptuFrEPCOAULq9AAMPVDRW2KM911.jpg">
 		                  <div class="modelG"></div>
 		                  <div class="cardTitle">VIPKID-男教师版</div>
 		                  <div class="cardDes"></div>
@@ -75,7 +75,7 @@
 		       </a>
 		       <a href="http://m.apaipian.com/play/1910_26421.html"> 
 		             <div class="videoCard">
-		                  <img class="videoBanner" alt='VIPKID-女教师版' src="${image}group1/M00/00/E6/Cgpw7FphmcOAZFXXAAF57fj2P48555.jpg">
+		                  <img class="videoBanner" alt='VIPKID-女教师版' src="${image}group1/M00/00/C1/CgpsbFrEO_uAU7tzAAJDIA4vTEw049.jpg">
 		                  <div class="modelG"></div>
 		                  <div class="cardTitle">VIPKID-女教师版</div>
 		                  <div class="cardDes"></div>
@@ -179,9 +179,9 @@
 		       </a>
 		       <a href="http://m.apaipian.com/play/1911_21438.html"> 
 		             <div class="videoCard">
-		                  <img class="videoBanner" alt='尚德的机构' src="${image}group1/M00/00/C1/CgpsbFrENmWADy_VAAJYG47ejvk143.jpg">
+		                  <img class="videoBanner" alt='尚德机构' src="${image}group1/M00/00/C1/CgpsbFrENmWADy_VAAJYG47ejvk143.jpg">
 		                  <div class="modelG"></div>
-		                  <div class="cardTitle">尚德的机构</div>
+		                  <div class="cardTitle">尚德机构</div>
 		                  <div class="cardDes"></div>
 		             </div>
 		       </a>
@@ -198,6 +198,14 @@
 		                  <img class="videoBanner" alt='嗨学网' src="${image}group1/M00/00/05/CgpmTlgZwlaAeT5pAAKVI7oAU3Q785.jpg">
 		                  <div class="modelG"></div>
 		                  <div class="cardTitle">嗨学网</div>
+		                  <div class="cardDes"></div>
+		             </div>
+		       </a>
+		       <a href="https://m.apaipian.com/play/1910_28096.html"> 
+		             <div class="videoCard">
+		                  <img class="videoBanner" alt='VIPABC-私人英语外教' src="${image}group1/M00/00/C3/CgptuFrEXgeAaM6kAAE_9wynMgg167.jpg">
+		                  <div class="modelG"></div>
+		                  <div class="cardTitle">VIPABC-私人英语外教</div>
 		                  <div class="cardDes"></div>
 		             </div>
 		       </a>
@@ -276,9 +284,9 @@
 		       </a>
 		       <a href="http://m.apaipian.com/play/1911_21414.html"> 
 		             <div class="videoCard">
-		                  <img class="videoBanner" alt='上元' src="${image}group1/M00/00/FC/CgpmTlrEP6KAOuP-AAESIslIcKg000.jpg">
+		                  <img class="videoBanner" alt='上元-2014年终盘点' src="${image}group1/M00/00/FC/CgpmTlrEP6KAOuP-AAESIslIcKg000.jpg">
 		                  <div class="modelG"></div>
-		                  <div class="cardTitle">上元</div>
+		                  <div class="cardTitle">上元-2014年终盘点</div>
 		                  <div class="cardDes"></div>
 		             </div>
 		       </a>
@@ -287,6 +295,14 @@
 		                  <img class="videoBanner" alt='作业帮一课' src="${image}group1/M00/00/C3/CgptuFrEP-KAdSBRAAFuuL8GIio710.jpg">
 		                  <div class="modelG"></div>
 		                  <div class="cardTitle">作业帮一课</div>
+		                  <div class="cardDes"></div>
+		             </div>
+		       </a>
+		       <a href="https://m.apaipian.com/play/1910_23255.html"> 
+		             <div class="videoCard">
+		                  <img class="videoBanner" alt='新东方' src="${image}group1/M00/00/C2/CgpsbFrElECAAawpAAHpS0Poiy8495.jpg">
+		                  <div class="modelG"></div>
+		                  <div class="cardTitle">新东方</div>
 		                  <div class="cardDes"></div>
 		             </div>
 		       </a>
