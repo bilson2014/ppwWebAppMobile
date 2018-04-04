@@ -1,32 +1,43 @@
 $().ready(function() {
-	  window.onresize = function() {
+	//alert(1);
+/*	initScroll();
+	 window.onresize = function() {
 	        initScroll();
 		};
 		$(window).load(function(){
 			initScroll();
-		});
-		initScroll();
+		});*/
+		
 });
 
 function initScroll(){
-	  var setVideoHeight = $('body').height();
-  
+	  var setVideoHeight = $('body').height();  
       
-      
-      $('.pagePhone').on('touchmove',function(e){
+	  $('#big').text('c');
+	   
+	  event.preventDefault();
+	  $('.pagePhone').on('touchstart ',function(e){
+    	  e.preventDefault();
 	    	/*  var aniHeight = setVideoHeight;
 			  var nowPos = $('.pagePhone').scrollTop();*/
-		
+    	  $('#big').text('a');
 		  });
-      
+/*	  
+      $('.pagePhone').on('touchmove',function(e){
+    	  e.preventDefault();
+	    	  var aniHeight = setVideoHeight;
+			  var nowPos = $('.pagePhone').scrollTop();
+    	  $('#big').text('a');
+	 });    
             
       $('#pagePhone').on('touchend',function(e) {
-    	    var _touch = e.originalEvent.targetTouches[0];
+    	    e.preventDefault();
+    	    $('#big').text('b');
     	    var logo1 = $('#logo1').offset().top;
     	    var logo2 = $('#logo2').offset().top;
     	    var logo3 = $('#logo3').offset().top;
     	    var logo4 = $('#logo4').offset().top;
-    	    
+    	    $('#big').text(logo1);
     		  if(logo1 >=setVideoHeight/3){
 				  $('#logo1').addClass('rightAni');
 			  }		
@@ -40,26 +51,16 @@ function initScroll(){
 				  $('#logo4').addClass('leftAni');
 			  }	
     	 
-    	});
+    	});*/
 
 
 
 	  
-/*	  $('.pagePhone').scroll(function(){
-		  var aniHeight = setVideoHeight;
-		  var nowPos = $('.pagePhone').scrollTop();
-		  if(nowPos - logo1 >=100){
-			  $('#logo1').addClass('rightAni');
-		  }		
-		  if(nowPos - logo2 >=100){
-			  $('#logo2').addClass('leftAni');
-		  }	
-		  if(nowPos - logo3 >=100){
-			  $('#logo3').addClass('rightAni');
-		  }	
-		  if(nowPos - logo4 >=100){
-			  $('#logo4').addClass('leftAni');
-		  }	
+	/*  $('.pagePhone').scroll(function(){
+		  $('#logo1').addClass('rightAni');
+		  $('#logo2').addClass('leftAni');
+		  $('#logo3').addClass('rightAni');
+		  $('#logo4').addClass('leftAni');
 		})*/
 }
 

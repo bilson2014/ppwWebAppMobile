@@ -11,8 +11,8 @@ body {
     background: #f5f5f5;
 }
 
-.pagePhone{
-	    overflow-x: hidden;
+.pagePhone {
+    overflow-x: hidden;
 }
 
 
@@ -44,7 +44,7 @@ body {
             font-size: .42rem !important;
         }
         .more {
-            top: 70% !important;
+            top: 66% !important;
             transform: translateY(-57%) !important;
         }
     }
@@ -57,7 +57,7 @@ body {
     .topLine {
         width: 100%;
         position: absolute;
-        top: -.9rem;
+        top: -1rem;
     }
     .downLine {
         width: 100%;
@@ -67,24 +67,27 @@ body {
     }
 
     .contentTwoItem {
-        text-align: center;
-        width: 100%;
-        padding-top: 1.5rem;
-        padding-bottom: .8rem;
-        font-size: 0;
+    text-align: center;
+    width: 100%;
+    padding-top: 1.2rem;
+    padding-bottom: .3rem;
+    font-size: 0;
+    position: relative;
+    z-index: 999999999999;
         img {
             width: 2.5rem;
         }
         div:nth-child(2) {
             color: #e6e6e6;
             font-size: .52rem;
-            margin-top: 0.3rem;
-            margin-bottom: .2rem;
+            margin-top: 0.5rem;
+            margin-bottom: .4rem;
         }
         div:nth-child(3) {
             color: #e6e6e6;
             font-size: .28rem;
             font-weight: 300;
+            letter-spacing: 2px;
         }
     }
 }
@@ -110,6 +113,11 @@ body {
     }
 }
 
+.bigTitle{
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+}
+
 .moreTiltleM {
     padding-top: 1rem !important;
     padding-bottom: .8rem !important;
@@ -132,17 +140,12 @@ body {
             width: 5.76rem;
         }
         img:nth-child(2) {
-            position: absolute;
-            right: -100%;
-            top: .3rem;
-            z-index: 10;
-            transition: all 1s;
-            -moz-transition: all 1s;
-            /* Firefox 4 */
-            -webkit-transition: all 1s;
-            /* Safari 和 Chrome */
-            -o-transition: all 1s;
-            /* Opera */
+		    position: absolute;
+		    right: 0%;
+		   top: .3rem;
+		   z-index: 10; 
+                	
+
         }
     }
     .itemLeft {
@@ -151,23 +154,19 @@ body {
         img {
             width: 5.76rem;
         }
-        img:nth-child(1){
-        	position: relative;
-        	 transition: all 1s;
-            -moz-transition: all 1s;
-            /* Firefox 4 */
-            -webkit-transition: all 1s;
-            /* Safari 和 Chrome */
-            -o-transition: all 1s;
-            /* Opera */
-              left: -100%;
+        img:nth-child(1) {
+            		position: relative;
+            /* 		transition: all 1s;
+                                -moz-transition: all 1s;
+                                -webkit-transition: all 1s;
+                                -o-transition: all 1s;
+                                left: -100%;  */
         }
         img:nth-child(2) {
             position: absolute;
-            right:0;
+            right: 0;
             top: .3rem;
             z-index: -1;
-           
         }
     }
 }
@@ -198,7 +197,7 @@ body {
         width: 1.2rem;
     }
     .bottomItem {
-        width: 75%;
+        width: 80%;
     }
     img,
     .bottomItem {
