@@ -74,9 +74,9 @@
    			</div>
    		</a>
    		<a class='models' href='https://m.apaipian.com/special/channel06.html'>
-   			<img class='eye' src="${imgPath}/salesMan/special/index/p6.jpg" alt="发布会视频"/>
+   			<img class='eye' src="${imgPath}/salesMan/special/index/p6.jpg" alt="互联网教育/网校"/>
    			<div class='font'>
-   				<span>发布会视频</span>
+   				<span>互联网教育/网校</span>
    			</div>
    		</a>	
    	</div>
