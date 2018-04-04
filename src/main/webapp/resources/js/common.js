@@ -21,9 +21,9 @@ var phoneUrl = "localhost:8084/project/phone/";
 
 $().ready(function(){
 	windowChange(); 
-//	window.onresize = function(){
-//		windowChange(); 
-//	}
+	window.onresize = function(){
+		windowChange(); 
+	}
 	
 	// 弹出电话预约界面
 	$('.common-icons-tele-client').click(function(){
