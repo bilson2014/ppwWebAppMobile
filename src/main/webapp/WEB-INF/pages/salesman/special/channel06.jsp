@@ -41,7 +41,7 @@
 
 	<div class="pagePhone">			
 		  <div class="setBanner">
-		     <img src="${imgPath}/salesMan/special/channel06/banner.jpg" alt='发布会视频'>
+		     <img src="${imgPath}/salesMan/special/channel06/banner.jpg" alt='互联网教育/网校'>
 		  <!--    <div class="product">产品详情</div>
 		     <div class="showVideo">观看视频</div> -->
 		  </div>
