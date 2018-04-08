@@ -108,9 +108,9 @@
 		       <!--添加  -->
 		       <a href="https://m.apaipian.com/play/1379_28450.html">
 		             <div class="videoCard">
-		                  <img class="videoBanner" alt='夸克链 (QRK)' src="${image}/group1/M00/00/C0/CgptuFq55ziAWCYnAAHcI4dH3Q8856.jpg">
+		                  <img class="videoBanner" alt='夸克链 (QKC)' src="${image}/group1/M00/00/C0/CgptuFq55ziAWCYnAAHcI4dH3Q8856.jpg">
 		                   <div class="modelG"></div>
-		                  <div class="cardTitle">夸克链 (QRK)</div>
+		                  <div class="cardTitle">夸克链 (QKC)</div>
 		                  <div class="cardDes"> </div>
 		             </div>
 		       </a>

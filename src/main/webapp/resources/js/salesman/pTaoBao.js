@@ -1,4 +1,5 @@
 $().ready(function() {
+//	alert('bbb');
 	//alert(1);
 /*	initScroll();
 	 window.onresize = function() {

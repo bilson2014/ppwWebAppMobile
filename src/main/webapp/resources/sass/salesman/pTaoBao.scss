@@ -141,9 +141,13 @@ body {
         }
         img:nth-child(2) {
 		    position: absolute;
-		    right: 0%;
+		    right: -100%;
 		   top: .3rem;
 		   z-index: 10; 
+		   transition: all 1s;
+                                -moz-transition: all 1s;
+                                -webkit-transition: all 1s;
+                                -o-transition: all 1s;
                 	
 
         }
@@ -156,11 +160,11 @@ body {
         }
         img:nth-child(1) {
             		position: relative;
-            /* 		transition: all 1s;
+          		transition: all 1s;
                                 -moz-transition: all 1s;
                                 -webkit-transition: all 1s;
                                 -o-transition: all 1s;
-                                left: -100%;  */
+                                left: -100%;  
         }
         img:nth-child(2) {
             position: absolute;

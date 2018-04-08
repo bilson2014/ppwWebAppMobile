@@ -24,17 +24,6 @@
 	<script src="${commonJs}"></script>
 	<%-- <script src="${pTaoBaoJs}"></script> --%>
 	
-<!-- 	<script>
-  	alert(2);
-		 $('.pagePhone').on('touchstart ',function(e){
-		   	  e.preventDefault();
-		  
-			    	/*  var aniHeight = setVideoHeight;
-					  var nowPos = $('.pagePhone').scrollTop();*/
-		   	  $('#big').text('a');
-	    }); 
-	</script> -->
-		
 	<!--[if lt IE 9]>
 		<script>window.html5 || document.write('<script src="html5shivJs"><\/script>')</script>
 	<![endif]-->
@@ -198,5 +187,53 @@
    <a class="joinUs" href="https://v.taobao.com/v/home/?userId=164833310">进入店铺</a>
    
 </body>
+
+
+	<script>
+
+/* 	 var setVideoHeight = $('body').height(); 
+    $('.pagePhone').on('touchstart ',function(e){
+
+  	    var logo1 = $('#logo1').offset().top;
+	    var logo2 = $('#logo2').offset().top;
+	    var logo3 = $('#logo3').offset().top;
+	    var logo4 = $('#logo4').offset().top;
+	    $('#big').text(logo1);
+		  if(logo1 <=setVideoHeight + 100){
+			  $('#logo1').addClass('rightAni');
+		  }		
+		  if(logo2 <=setVideoHeight + 100){
+			  $('#logo2').addClass('leftAni');
+		  }	
+		  if(logo3 <=setVideoHeight + 100){
+			  $('#logo3').addClass('rightAni');
+		  }	
+		  if(logo4 <=setVideoHeight + 100){
+			  $('#logo4').addClass('leftAni');
+		  }	
+    }); */
+    var setVideoHeight = $('body').height();
+    $('.pagePhone').scroll(function(){
+    	  var logo1 = $('#logo1').offset().top;
+  	    var logo2 = $('#logo2').offset().top;
+  	    var logo3 = $('#logo3').offset().top;
+  	    var logo4 = $('#logo4').offset().top;
+  		  if(logo1 <=setVideoHeight + 100){
+  			  $('#logo1').addClass('rightAni');
+  		  }		
+  		  if(logo2 <=setVideoHeight + 100){
+  			  $('#logo2').addClass('leftAni');
+  		  }	
+  		  if(logo3 <=setVideoHeight + 100){
+  			  $('#logo3').addClass('rightAni');
+  		  }	
+  		  if(logo4 <=setVideoHeight + 100){
+  			  $('#logo4').addClass('leftAni');
+  		  }	
+		})
+    
+    
+	</script> 
+		
 
 </html>
