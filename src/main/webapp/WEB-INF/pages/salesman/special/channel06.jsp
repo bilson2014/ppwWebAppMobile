@@ -49,7 +49,7 @@
 		       主题视频区
 		  </div>
 		  <div class="videoArea">
-		       <a href="http://m.apaipian.com/play/1910_28421.html"> 
+		       <a href="https://m.apaipian.com/play/1910_28421.html"> 
 		             <div class="videoCard">
 		                  <img class="videoBanner" alt='三好网' src="${image}group1/M00/00/C0/CgpsbFq-FyGAeEi-AAGfc6Vv60Q083.jpg">
 		                  <div class="modelG"></div>
@@ -57,7 +57,7 @@
 		                  <div class="cardDes"></div>
 		             </div>
 		       </a>
-		       <a href="http://m.apaipian.com/play/1387_15132.html"> 
+		       <a href="https://m.apaipian.com/play/1387_15132.html"> 
 		             <div class="videoCard">
 		                  <img class="videoBanner" alt='找好老师 上跟谁学' src="${image}group1/M00/00/FC/CgpmTlrEPMmAcWLpAAIBd4CMjsg535.jpg">
 		                  <div class="modelG"></div>
@@ -65,7 +65,7 @@
 		                  <div class="cardDes"></div>
 		             </div>
 		       </a>
-		       <a href="http://m.apaipian.com/play/1910_26423.html"> 
+		       <a href="https://m.apaipian.com/play/1910_26423.html"> 
 		             <div class="videoCard">
 		                  <img class="videoBanner" alt='VIPKID-男教师版' src="${image}group1/M00/00/C3/CgptuFrEPCOAULq9AAMPVDRW2KM911.jpg">
 		                  <div class="modelG"></div>
@@ -73,7 +73,7 @@
 		                  <div class="cardDes"></div>
 		             </div>
 		       </a>
-		       <a href="http://m.apaipian.com/play/1910_26421.html"> 
+		       <a href="https://m.apaipian.com/play/1910_26421.html"> 
 		             <div class="videoCard">
 		                  <img class="videoBanner" alt='VIPKID-女教师版' src="${image}group1/M00/00/C1/CgpsbFrEO_uAU7tzAAJDIA4vTEw049.jpg">
 		                  <div class="modelG"></div>
@@ -81,7 +81,7 @@
 		                  <div class="cardDes"></div>
 		             </div>
 		       </a>
-		       <a href="http://m.apaipian.com/play/1910_26415.html"> 
+		       <a href="https://m.apaipian.com/play/1910_26415.html"> 
 		             <div class="videoCard">
 		                  <img class="videoBanner" alt='ABCmouse-特别快递' src="${image}group1/M00/00/C3/CgptuFrEOZKALxW1AAGp8jS5WTA047.jpg">
 		                  <div class="modelG"></div>
@@ -89,7 +89,7 @@
 		                  <div class="cardDes"></div>
 		             </div>
 		       </a>
-		       <a href="http://m.apaipian.com/play/1910_26418.html"> 
+		       <a href="https://m.apaipian.com/play/1910_26418.html"> 
 		             <div class="videoCard">
 		                  <img class="videoBanner" alt='ABCmouse-未来的教师' src="${image}group1/M00/00/FA/Cgpw7FrEOgmAWXfZAAH3PlW_SB8376.jpg">
 		                  <div class="modelG"></div>
@@ -97,7 +97,7 @@
 		                  <div class="cardDes"></div>
 		             </div>
 		       </a>
-		       <a href="http://m.apaipian.com/play/1910_26422.html"> 
+		       <a href="https://m.apaipian.com/play/1910_26422.html"> 
 		             <div class="videoCard">
 		                  <img class="videoBanner" alt='ABCmouse-A to Infinity' src="${image}group1/M00/00/FA/Cgpw7FrEOiuAF_UMAAFxTwi4feg429.jpg">
 		                  <div class="modelG"></div>
@@ -105,7 +105,7 @@
 		                  <div class="cardDes"></div>
 		             </div>
 		       </a>
-		       <a href="http://m.apaipian.com/play/1910_26416.html"> 
+		       <a href="https://m.apaipian.com/play/1910_26416.html"> 
 		             <div class="videoCard">
 		                  <img class="videoBanner" alt='ABCmouse-字母的交响乐' src="${image}group1/M00/00/C1/CgpsbFrEObWAanM8AAKrNveOopI215.jpg">
 		                  <div class="modelG"></div>
@@ -113,7 +113,7 @@
 		                  <div class="cardDes"></div>
 		             </div>
 		       </a>
-		       <a href="http://m.apaipian.com/play/1910_26414.html"> 
+		       <a href="https://m.apaipian.com/play/1910_26414.html"> 
 		             <div class="videoCard">
 		                  <img class="videoBanner" alt='ABCmouse-ABC Easy as 123' src="${image}group1/M00/00/C3/CgptuFrEOXCAdVUxAAH2hBwGvaU601.jpg">
 		                  <div class="modelG"></div>
@@ -121,7 +121,7 @@
 		                  <div class="cardDes"></div>
 		             </div>
 		       </a>
-		       <a href="http://m.apaipian.com/play/1910_26417.html"> 
+		       <a href="https://m.apaipian.com/play/1910_26417.html"> 
 		             <div class="videoCard">
 		                  <img class="videoBanner" alt='ABCmouse-海洋生物学家' src="${image}group1/M00/00/C1/CgpsbFrEOeqAX17UAAJBYxCWycE657.jpg">
 		                  <div class="modelG"></div>
@@ -129,7 +129,7 @@
 		                  <div class="cardDes"></div>
 		             </div>
 		       </a>
-		       <a href="http://m.apaipian.com/play/1910_22437.html"> 
+		       <a href="https://m.apaipian.com/play/1910_22437.html"> 
 		             <div class="videoCard">
 		                  <img class="videoBanner" alt='邢帅教育' src="${image}group1/M00/00/FC/CgpmTlrEOROAJPptAAI0tNzSz_c826.jpg">
 		                  <div class="modelG"></div>
@@ -137,7 +137,7 @@
 		                  <div class="cardDes"></div>
 		             </div>
 		       </a>
-		       <a href="http://m.apaipian.com/play/1151_19567.html"> 
+		       <a href="https://m.apaipian.com/play/1151_19567.html"> 
 		             <div class="videoCard">
 		                  <img class="videoBanner" alt='百度教育' src="${image}group1/M00/00/C1/CgpsbFrEOISADPS6AAJigAhm8uc274.jpg">
 		                  <div class="modelG"></div>
@@ -145,7 +145,7 @@
 		                  <div class="cardDes"></div>
 		             </div>
 		       </a>
-		       <a href="http://m.apaipian.com/play/1910_20922.html"> 
+		       <a href="https://m.apaipian.com/play/1910_20922.html"> 
 		             <div class="videoCard">
 		                  <img class="videoBanner" alt='简单学习网' src="${image}group1/M00/00/FC/CgpmTlrEOD6ARTYFAAMUnW_XIZw102.jpg">
 		                  <div class="modelG"></div>
@@ -153,7 +153,7 @@
 		                  <div class="cardDes"></div>
 		             </div>
 		       </a>
-		       <a href="http://m.apaipian.com/play/1028_2565.html"> 
+		       <a href="https://m.apaipian.com/play/1028_2565.html"> 
 		             <div class="videoCard">
 		                  <img class="videoBanner" alt='学而思' src="${image}group1/M00/00/FA/Cgpw7FrEN1uAK8EyAALy9SVkO9g788.jpg">
 		                  <div class="modelG"></div>
@@ -161,7 +161,7 @@
 		                  <div class="cardDes"></div>
 		             </div>
 		       </a>
-		       <a href="http://m.apaipian.com/play/1910_28180.html"> 
+		       <a href="https://m.apaipian.com/play/1910_28180.html"> 
 		             <div class="videoCard">
 		                  <img class="videoBanner" alt='高顿网校' src="${image}group1/M00/00/C1/CgpsbFrENyaAbbXjAAG5GYKCMSU986.jpg">
 		                  <div class="modelG"></div>
@@ -169,7 +169,7 @@
 		                  <div class="cardDes"></div>
 		             </div>
 		       </a>
-		       <a href="http://m.apaipian.com/play/1911_21527.html"> 
+		       <a href="https://m.apaipian.com/play/1911_21527.html"> 
 		             <div class="videoCard">
 		                  <img class="videoBanner" alt='新东方在线' src="${image}group1/M00/00/FA/Cgpw7FrENqGAYJ_jAAGtU4CtGAs224.jpg">
 		                  <div class="modelG"></div>
@@ -177,15 +177,15 @@
 		                  <div class="cardDes"></div>
 		             </div>
 		       </a>
-		       <a href="http://m.apaipian.com/play/1911_21438.html"> 
+		       <a href="https://www.apaipian.com/play/1993_25331.html"> 
 		             <div class="videoCard">
-		                  <img class="videoBanner" alt='尚德机构' src="${image}group1/M00/00/C1/CgpsbFrENmWADy_VAAJYG47ejvk143.jpg">
+		                  <img class="videoBanner" alt='尚德机构' src="${image}group1/M00/00/C4/CgptuFrJydmAfh0zAAKvnVABUmk902.jpg">
 		                  <div class="modelG"></div>
 		                  <div class="cardTitle">尚德机构</div>
 		                  <div class="cardDes"></div>
 		             </div>
 		       </a>
-		       <a href="http://m.apaipian.com/play/1116_9307.html"> 
+		       <a href="https://m.apaipian.com/play/1116_9307.html"> 
 		             <div class="videoCard">
 		                  <img class="videoBanner" alt='哒哒英语' src="${image}group1/M00/00/C1/CgpsbFrENg-AfJUuAAMEf8JkXOo334.jpg">
 		                  <div class="modelG"></div>
@@ -193,7 +193,7 @@
 		                  <div class="cardDes"></div>
 		             </div>
 		       </a>
-		       <a href="http://m.apaipian.com/play/1167_101.html"> 
+		       <a href="https://m.apaipian.com/play/1167_101.html"> 
 		             <div class="videoCard">
 		                  <img class="videoBanner" alt='嗨学网' src="${image}group1/M00/00/05/CgpmTlgZwlaAeT5pAAKVI7oAU3Q785.jpg">
 		                  <div class="modelG"></div>

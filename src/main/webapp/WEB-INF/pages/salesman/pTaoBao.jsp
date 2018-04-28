@@ -109,20 +109,20 @@
 	    
 	    <div class="contentThree">
 	            <div class="itemRight">
-	                <img src="/resources/images/salesMan/bao/b1.jpg">
-	                <img id="logo1" src="/resources/images/salesMan/bao/b2.jpg">
+	                <img id="logo1"src="/resources/images/salesMan/bao/b1.jpg">
+	                <img id="logo2" src="/resources/images/salesMan/bao/b2.jpg">
 	            </div>
 	            <div class="itemLeft">
-	                <img id="logo2" src="/resources/images/salesMan/bao/b3.jpg">
-	                <img src="/resources/images/salesMan/bao/b4.jpg">
+	                <img id="logo3" src="/resources/images/salesMan/bao/b3.jpg">
+	                <img id="logo4" src="/resources/images/salesMan/bao/b4.jpg">
 	            </div>
 	            <div class="itemRight">
-	                <img src="/resources/images/salesMan/bao/b5.jpg">
-	                <img  id="logo3" src="/resources/images/salesMan/bao/b6.jpg">
+	                <img id="logo5" src="/resources/images/salesMan/bao/b5.jpg">
+	                <img id="logo6" src="/resources/images/salesMan/bao/b6.jpg">
 	            </div>
 	            <div class="itemLeft">
-	                <img id="logo4" src="/resources/images/salesMan/bao/b7.jpg">
-	                <img src="/resources/images/salesMan/bao/b8.jpg">
+	                <img id="logo7" src="/resources/images/salesMan/bao/b7.jpg">
+	                <img id="logo8" src="/resources/images/salesMan/bao/b8.jpg">
 	            </div>
 	     </div>
 	     
@@ -219,16 +219,20 @@
   	    var logo3 = $('#logo3').offset().top;
   	    var logo4 = $('#logo4').offset().top;
   		  if(logo1 <=setVideoHeight + 100){
-  			  $('#logo1').addClass('rightAni');
+  			  $('#logo1').addClass('leftAni');
+  			  $('#logo2').addClass('rightAni');
   		  }		
   		  if(logo2 <=setVideoHeight + 100){
-  			  $('#logo2').addClass('leftAni');
+  			  $('#logo3').addClass('leftAni');
+  			  $('#logo4').addClass('rightAni');
   		  }	
   		  if(logo3 <=setVideoHeight + 100){
-  			  $('#logo3').addClass('rightAni');
+  			  $('#logo5').addClass('leftAni');
+  			  $('#logo6').addClass('rightAni');
   		  }	
   		  if(logo4 <=setVideoHeight + 100){
-  			  $('#logo4').addClass('leftAni');
+  			  $('#logo7').addClass('leftAni');
+  			  $('#logo8').addClass('rightAni');
   		  }	
 		})
     
