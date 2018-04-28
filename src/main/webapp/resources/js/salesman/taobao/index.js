@@ -51,9 +51,9 @@ function initSwiper(){
 
 function initVideo(){
 	
-	var w = document.documentElement.clientWidth;
+/*	var w = document.documentElement.clientWidth;
 	var videoH = w/16*9;
-	$('video').css('height',videoH);
+	$('video').css('height',videoH);*/
 	$('video').off('click').on('click',function(){
 		document.getElementById('video').play();
 	});

@@ -22,7 +22,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
 	<!-- iphone 手机默认全屏 -->
 	<meta name="apple-mobile-web-app-capable" content="yes" />
-	<title>主图短视频-拼团</title>
+	<title>拼团半价抢淘宝主图短视频</title>
 	<meta name="keywords" content="淘宝主图视频,电商短视频,淘宝短视频官方拍摄基地">
 	<meta name="description" content="淘宝短视频官方拍摄基地致力于主图视频、电商短视频精工制作，增加店铺流量，提升转化率，瓜分内容营销红利。主图短视频制作，上拍片网拼团更便宜。">
 	
@@ -49,7 +49,7 @@
                       <img src="${imgPath}/salesMan/taobao/index1down.png">
             </div>
             <div class="swiper-slide" style="overflow: hidden;">
-					<video id="video" src="https://filed.apaipian.com/group1/M01/00/CB/CgpsbFrkRLaAJVTBABw50gvamk8910.mp4" controls="controls" poster="${imgPath}/salesMan/taobao/videoBanner.jpg"></video>
+					<video id="video" src="https://filec.apaipian.com/group1/M00/00/CD/CgptuFrkU-SAAbibABwWV1aeolI289.mp4" controls="controls" poster="${imgPath}/salesMan/taobao/videoBanner.jpg"></video>
 					<div class="price">
 					     <div class="setPrice">
 					             <div class="realPrice">￥   2588</div>
@@ -286,7 +286,7 @@
     <div class="orderBtn leftBtn hide">
                              ￥5188<br><span>原价</span>
     </div>
-    <a class="orderBtn rightBtn hide" href="salesman/taobao/message/${uniqueId}">
+    <a class="orderBtn rightBtn hide" href="/salesman/taobao/message/${uniqueId}">
 	                             ￥2588<br><span>20人团 (未成团退款)  </span>
     </a>
     

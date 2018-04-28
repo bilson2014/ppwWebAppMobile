@@ -24,12 +24,13 @@ video {
 
 .swiper-slide {
     font-size: 0;
+    overflow: hidden;
     /* Center slide text vertically */
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    -webkit-justify-content: center;
-    justify-content: center;
-    -webkit-box-align: center;
+/*     -webkit-box-pack: center;
+-ms-flex-pack: center;
+-webkit-justify-content: center;
+justify-content: center;
+-webkit-box-align: center; */
     position: relative;
 }
 
@@ -172,7 +173,7 @@ video {
 
 
 .leftBtn {
-    background: $border-line;
+    background: #bdbdbd;
     left: 0;
     span {
         font-size: .36rem !important;
