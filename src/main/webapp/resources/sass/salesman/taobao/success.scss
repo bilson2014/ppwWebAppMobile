@@ -1,0 +1,101 @@
+﻿@import "common";
+@import "buttons";
+@import "video";
+@import "model";
+@import "fontSize";
+@import "common_portal";
+body {
+    background: #fff !important;
+}
+
+.phoneHeader {
+    background: #fff !important;
+    border-bottom: 0.01rem solid #ccc;
+    a {
+        img {
+            width: 0.38rem !important;
+        }
+    }
+    span {
+        font-size: 0.42rem;
+        color: #666;
+        line-height: 1.3rem;
+        display: block;
+    }
+}
+
+.colorline {
+    height: 0.2rem;
+    background: #F6F6F6;
+    margin-top: 1.3rem;
+}
+
+.messageboxs {
+    background: #fff;
+    div {
+        margin: 0 0.45rem;
+        border-bottom: 0.01rem solid #E0E0E0;
+    }
+    .main {
+        img {
+            display: block;
+            width: 1.2rem;
+            height: 1.2rem;
+            margin: 0 auto;
+            margin-top: 1rem;
+        }
+        span {
+            font-size: 0.42rem;
+            display: block;
+            text-align: center;
+            margin-top: 0.42rem;
+            padding-bottom: 1rem;
+            color: #666;
+        }
+    }
+    .contact {
+        span {
+            font-size: 0.36rem;
+            color: #666;
+            display: block;
+            text-align: center;
+            line-height: 0.53rem;
+        }
+        span:nth-child(1) {
+            margin-top: 1.2rem;
+        }
+        img {
+            width: 3rem;
+            height: 3rem;
+            display: block;
+            margin: 0 auto;
+            margin-top: 0.98rem;
+        }
+        p {
+            font-size: 0.3rem;
+            color: #999;
+            line-height: 0.45rem;
+            text-align: center;
+        }
+        .day {
+            margin-top: 0.99rem;
+            font-size: 0.36rem;
+        }
+        .phone {
+            font-size: 0.36rem;
+            padding-bottom: 1.14rem;
+        }
+    }
+    .share {
+        border-bottom: none;
+        span {
+            font-size: 0.36rem;
+            color: #999;
+            line-height: 0.54rem;
+            text-align: center;
+            display: block;
+            margin-top: 0.7rem;
+            padding-bottom: 0.5rem;
+        }
+    }
+}

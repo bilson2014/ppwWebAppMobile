@@ -109,3 +109,20 @@ body {
 .pagePhone {
     padding-top: 1.3rem;
 }
+
+.floating {
+    position: absolute;
+    background: yellow;
+    height: 20%;
+    width: 80%;
+    top: 20%;
+    z-index: 23;
+    left: 10%;
+    div {
+        display: inline-block;
+        width: 30%;
+    }
+    .two {
+        background: pink;
+    }
+}

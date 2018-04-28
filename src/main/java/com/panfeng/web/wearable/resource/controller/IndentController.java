@@ -377,11 +377,24 @@ public class IndentController extends BaseController {
 		 * @throws UnsupportedEncodingException
 		 */
 		@RequestMapping(value = "/salesman", method = RequestMethod.POST, produces = "application/json; charset=UTF-8")
-		public Result withoutCode(final PmsIndent indent, final HttpServletRequest request) throws UnsupportedEncodingException{
+		public Result withoutCode(final PmsIndent indent,final Long count, final HttpServletRequest request) throws UnsupportedEncodingException{
 
 			final HttpSession session = request.getSession();
 			
 			request.setCharacterEncoding("UTF-8");
-			return indentService.saveIndent(indent, session);
+			Long indentCount=count;
+			Result result=null;
+			do {
+				result=indentService.saveIndent(indent, session);
+				if(!result.isRet()) {
+					//立即返回
+					return result;
+				}
+				if(indentCount!=null) {
+					indentCount--;
+				}
+			} while (indentCount!=null && indentCount>0);
+			
+			return result;
 		}
 }
