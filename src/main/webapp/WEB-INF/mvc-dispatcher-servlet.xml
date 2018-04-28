@@ -100,7 +100,9 @@
 	<mvc:view-controller path="/pLogin" view-name="/loginChoose/proPhoneLogin" />
     <mvc:view-controller path="/userInfo" view-name="/customer/userInfo" />
     <mvc:view-controller path="/cost/cal" view-name="/cost/phoneCost" />
-
+	<!--淘宝  -->
+	<mvc:view-controller path="/salesman/taobao/message" view-name="/salesman/taobao/message" />
+	<mvc:view-controller path="/salesman/taobao/success" view-name="/salesman/taobao/success" /> 
     
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver"
 		p:prefix="/WEB-INF/pages/" p:suffix=".jsp" />

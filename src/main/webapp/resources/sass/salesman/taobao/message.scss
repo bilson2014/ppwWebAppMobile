@@ -1,0 +1,156 @@
+﻿@import "common";
+@import "buttons";
+@import "video";
+@import "model";
+@import "fontSize";
+@import "common_portal";
+body {
+    background: #fff !important;
+}
+
+.phoneHeader {
+    background: #fff !important;
+    border-bottom: 0.01rem solid #ccc;
+    a {
+        img {
+            width: 0.38rem !important;
+        }
+    }
+    span {
+        font-size: 0.42rem;
+        color: #666;
+        line-height: 1.3rem;
+        display: block;
+        font-weight: 900;
+    }
+}
+
+.colorline {
+    height: 0.2rem;
+    background: #F6F6F6;
+    margin-top: 1.3rem;
+}
+
+.messageboxs {
+    background: #fff;
+    font-size: 0.36rem;
+    color: #333333;
+    .textboxs {
+        margin: 0 0.45rem;
+        .line {
+            height: 1.26rem;
+            border-bottom: 1px dotted #e5e5e5;
+            position: relative;
+            font-size: 0.36rem;
+            span {
+                margin-top: 0.59rem;
+                display: inline-block;
+            }
+            input {
+                position: absolute;
+                right: 0;
+                top: 0.59rem;
+                background-color: transparent;
+                text-align: right;
+                border: none;
+                color: #B3B3B3 !important;
+                outline: none;
+            }
+            /*Webkit browsers*/
+             ::-webkit-input-placeholder {
+                color: #B3B3B3;
+            }
+            /*Mozilla Firefox 4 to 18*/
+             :-moz-placeholder {
+                color: #B3B3B3;
+            }
+            /*Mozilla Firefox 19 +*/
+             ::-moz-placeholder {
+                color: #B3B3B3;
+            }
+            /*Internet Explorer 10 +*/
+             :-ms-input-placeholder {
+                color: #B3B3B3;
+            }
+        }
+        .line:nth-child(1) {
+            margin-top: 0.72rem;
+        }
+        .line:nth-child(6) {
+            height: 1.69rem;
+            div {
+                display: inline-block;
+                width: 0.72rem;
+                border: 1px solid #ccc;
+                line-height: 0.68rem;
+                text-align: center;
+                top: 0.42rem;
+            }
+            .subtract {
+                position: absolute;
+                right: 1.71rem;
+                border-right: none;
+                border-top-left-radius: 0.1rem;
+                border-bottom-left-radius: 0.1rem;
+            }
+            .plus {
+                position: absolute;
+                right: 0;
+                border-top-right-radius: 0.1rem;
+                border-bottom-right-radius: 0.1rem;
+                border-left: none;
+            }
+            .number {
+                position: absolute;
+                width: 0.98rem;
+                right: 0.73rem;
+            }
+        }
+        .line:nth-child(7) {
+            border-bottom: none;
+            .total {
+                display: inline-block;
+                color: #FE5453;
+                font-size: 0.48rem;
+                position: absolute;
+                right: 0;
+                top: 0.59rem;
+            }
+        }
+        .but {
+            height: 1.2rem;
+            background: #FE5453 100%;
+            color: #fff;
+            border-radius: 0.08rem;
+            font-size: 0.48rem;
+            line-height: 1.2rem;
+            text-align: center;
+            margin-top: 1.2rem;
+        }
+        .mask {
+            height: 3.3rem;
+            width: 6rem;
+            background: #000;
+            opacity: 0.5;
+            border-radius: 0.2rem;
+            position: absolute;
+            top: 6.21rem;
+            left: 2.5rem;
+            img {
+                width: 0.8rem;
+                height: 1.54rem;
+                margin: 0 auto;
+                display: block;
+                padding-top: 0.74rem;
+            }
+            span {
+                color: #fff;
+                font-size: 0.42rem;
+                text-align: center;
+                display: block;
+                margin-top: 0.35rem;
+                line-height: 0.59rem;
+            }
+        }
+    }
+}

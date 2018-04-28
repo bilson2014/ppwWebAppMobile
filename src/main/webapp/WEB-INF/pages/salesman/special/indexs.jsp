@@ -43,6 +43,13 @@
    	</div>
    	
    	<div class='selection'>
+   	
+   		<a class='models' href='https://m.apaipian.com/special/channel07.html'>
+   			<img class='eye' src="${imgPath}/salesMan/special/index/p7.jpg" alt="电商视频"/>
+   			<div class='font'>
+   				<span>电商视频引爆内容流量 作品品质遥遥领先</span>
+   			</div>
+   		</a>
    		<a class='models' href='https://m.apaipian.com/special/channel01.html'>
    			<img class='eye' src="${imgPath}/salesMan/special/index/p1.png" alt="三分钟说清区块链"/>
    			<div class='font'>
