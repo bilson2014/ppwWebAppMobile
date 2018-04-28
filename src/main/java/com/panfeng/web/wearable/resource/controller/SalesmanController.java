@@ -1,42 +1,36 @@
 package com.panfeng.web.wearable.resource.controller;
 
 import java.io.UnsupportedEncodingException;
+import java.util.Base64;
+import java.util.Date;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import javax.servlet.http.HttpServletRequest;
 
-import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.paipianwang.pat.common.config.PublicConfig;
 import com.paipianwang.pat.common.constant.PmsConstant;
+import com.paipianwang.pat.common.entity.PmsResult;
+import com.paipianwang.pat.common.entity.SessionInfo;
 import com.paipianwang.pat.common.util.DateUtils;
 import com.paipianwang.pat.common.util.ValidateUtil;
 import com.paipianwang.pat.facade.indent.entity.PmsIndent;
 import com.paipianwang.pat.facade.product.entity.PmsProduct;
-import com.paipianwang.pat.facade.product.entity.PmsService;
 import com.paipianwang.pat.facade.product.service.PmsProductFacade;
-import com.paipianwang.pat.facade.product.service.PmsServiceFacade;
 import com.paipianwang.pat.facade.sales.entity.PmsSalesman;
 import com.paipianwang.pat.facade.sales.service.PmsSalesmanFacade;
 import com.paipianwang.pat.facade.team.entity.PmsTeam;
 import com.paipianwang.pat.facade.team.service.PmsTeamFacade;
-import com.panfeng.web.wearable.domain.Result;
-import com.panfeng.web.wearable.mq.service.SmsMQService;
-import com.panfeng.web.wearable.security.AESUtil;
-import com.panfeng.web.wearable.service.IndentService;
 import com.panfeng.web.wearable.util.IndentUtil;
-import com.panfeng.web.wearable.util.JsonUtil;
 
 @RestController
 public class SalesmanController extends BaseController {
@@ -286,5 +280,99 @@ public class SalesmanController extends BaseController {
 
 		return new ModelAndView("/salesman/mgActive", model);
 
+	}
+	
+	//---------------分销-团购--------------------
+	/**
+	 * 发起分销团购 -- 还不使用
+	 * @param request
+	 * @param old
+	 * @return
+	 */
+	/*@RequestMapping("/salesman/start")
+	public PmsResult createSales(final HttpServletRequest request,PmsSalesman old) {
+		SessionInfo session=getCurrentInfo(request);
+		//生成分销id
+		String uniqueId="";
+		if(session!=null) {
+			//登录
+			if(PmsConstant.ROLE_CUSTOMER.equals(session.getSessionType())) {
+				uniqueId="c";
+			}else if(PmsConstant.ROLE_EMPLOYEE.equals(session.getSessionType())) {
+				uniqueId="e";
+			}else if(PmsConstant.ROLE_PROVIDER.equals(session.getSessionType())) {
+				uniqueId="t";
+			}		
+			uniqueId=uniqueId+"_"+session.getRealName()+"_";	
+		}
+		
+		uniqueId+=new Date().getTime();
+		
+		//编码
+		Base64.Encoder encoder=Base64.getEncoder();
+		byte[] textByte;
+		try {
+			textByte = uniqueId.getBytes("UTF-8");
+			uniqueId=encoder.encodeToString(textByte);
+		} catch (UnsupportedEncodingException e) {
+			e.printStackTrace();
+		}
+		
+		
+		PmsResult result=new PmsResult();
+		
+		//插入分销信息  一个总的分销，传salesmanId 
+		List<PmsSalesman> salesmans=pmsSalesmanFacade.findSalesmanByUniqueId(old.getUniqueId(), PmsSalesman.TYPE_MOBILE);//移动
+		if(!ValidateUtil.isValid(salesmans)) {
+			result.setResult(false);
+			result.setMsg("分销活动不存在");
+			return result;
+		}
+		
+		PmsSalesman salesman=new PmsSalesman();
+		salesman.setSalesmanName(salesmans.get(0).getSalesmanName()+(session==null?"":"_"+session.getRealName()));//名称
+		salesman.setBelongs(salesmans.get(0).getBelongs());
+		salesman.setPlatform(salesmans.get(0).getPlatform());
+		salesman.setUniqueId(salesmans.get(0).getUniqueId()+uniqueId);//唯一标记
+		salesman.setType(salesmans.get(0).getType());
+		
+		salesman.setAccessurl(salesmans.get(0).getAccessurl());
+		salesman.setOrderUrl(salesmans.get(0).getOrderUrl());
+		salesman.setIndentSource(salesmans.get(0).getIndentSource());
+			
+		salesman.setSalesmanDescription(salesmans.get(0).getSalesmanDescription()+"  分销人：");//描述
+		
+		pmsSalesmanFacade.save(salesman);
+		
+		//分销地址：
+		result.setMsg("https://m.apaipian.com"+salesman.getAccessurl().replace("{uniqueId}", salesman.getUniqueId()));
+		
+		return result;
+	}*/
+	
+	/**
+	 * 根据分销活动及标记查询分销页面
+	 * @param salesName
+	 * @param uniqueId
+	 * @param model
+	 * @param request
+	 * @return
+	 */
+	@RequestMapping("/salesman/{salesName}/{pageName}/{uniqueId}")
+	public ModelAndView page(@PathVariable("salesName") final String salesName,@PathVariable("pageName") final String pageName,@PathVariable("uniqueId") final String uniqueId, final ModelMap model,
+			final HttpServletRequest request) {
+
+		// 判断uniqueId是否合法
+		final PmsSalesman salesman = new PmsSalesman();
+		salesman.setUniqueId(uniqueId);
+		if (isValid(uniqueId)) {
+
+			model.addAttribute("uniqueId", uniqueId);
+			//分销参数
+			return new ModelAndView("/salesman/"+salesName+"/"+pageName);
+		}
+
+		// 跳转至分销人的错误页面上来
+		return new ModelAndView("/salesman/error");
 	}
 }
