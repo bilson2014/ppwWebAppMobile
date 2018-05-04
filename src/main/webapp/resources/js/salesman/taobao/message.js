@@ -89,7 +89,7 @@ function submitbut(){
 				indent_recomment:'商品名称:'+commodity,
 				wechat:wechat,//微信
 				userCompany:shop,//店铺名称
-				indentPrice:total,//总价
+				indentPrice:'2588',//总价
 				count:num,//购买数量					
 			  });
 		}

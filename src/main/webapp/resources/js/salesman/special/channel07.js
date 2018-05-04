@@ -1,41 +1,128 @@
 
 $().ready(function() {
-	setCardHeight();
-	videoPlay();
+	
 	floating();
+	showbox();
+	setCardHeight();
 });
-
 function setCardHeight(){
-		 var screenWidth = document.documentElement.clientWidth;
-		 var setHeight= screenWidth/16*9;
-		 $('.videoCard').css('height',setHeight + "px");
+	 var screenWidth = document.documentElement.clientWidth;
+	 var setHeight= screenWidth/16*9;
+	 $('.videoCard').css('height',setHeight + "px");
 }
-
-function videoPlay(){
-	
-	$('#source').attr('src','http://www.apaipian.com/product/video/paipianwangMovie.mp4');
-	$('#header3Video').load();
-	 $('.showVideo').on('click',function(){
-		  $('#header3Video').get(0).play();
-	 });
-	
+function showbox(){
+	$('.showtime').on('click',function(){		
+		if($('.showtime').text()=='分类'){
+			$('.boxs').addClass('boxadd');
+			$('.showtime').text('收起');
+			$('.boxs').removeClass('boxadds');
+		}else {
+			$('.boxs').addClass('boxadds');
+			$('.showtime').text('分类');
+			$('.boxs').removeClass('boxadd');
+		}
+	})
+}
+//function scrollWindow()
+//{
+//window.scrollTo(100,500)
+//}
+function showcommon(){	
+	$('.boxs').addClass('boxadds');
+	$('.showtime').text('分类');
+	$('.boxs').removeClass('boxadd');
+	$('.pagePhone').scrollTop(380);	
 }
 function floating(){
-	$('.one').on('click',function(){
-		$('#one').show();
-		$('#two').hide();
-		$('#three').hide();
-	});
-	$('.two').on('click',function(){
-		$('#one').hide();
-		$('#two').show();
-		$('#three').hide();
-	});
-	$('.three').on('click',function(){
-		$('#one').hide();
-		$('#two').hide();
-		$('#three').show();
+	$('.all').addClass('add');
+	$('.all').on('click',function(){
+		$('#live').show();	
+		$('#skin').show();
+		$('#cosmetics').show();
+		$('#electronic').show();
+		$('#parent').show();
+		$('#car').show();
+		$('#ele').show();
+		$(this).addClass("add").siblings().removeClass("add");
+		showcommon();
 	});
 	
+	$('.live').on('click',function(){
+		$('#live').show();
+		$('#skin').hide();
+		$('#cosmetics').hide();
+		$('#electronic').hide();
+		$('#parent').hide();
+		$('#car').hide();
+		$('#ele').hide();
+		$(this).addClass("add").siblings().removeClass("add");
+		showcommon();
+	});
+	$('.skin').on('click',function(){
+		$('#live').hide();	
+		$('#skin').show();
+		$('#cosmetics').hide();
+		$('#electronic').hide();
+		$('#parent').hide();
+		$('#car').hide();
+		$('#ele').hide();
+		$(this).addClass("add").siblings().removeClass("add");
+		showcommon();
+	});
+	$('.cosmetics').on('click',function(){
+		$('#live').hide();	
+		$('#skin').hide();
+		$('#cosmetics').show();
+		$('#electronic').hide();
+		$('#parent').hide();
+		$('#car').hide();
+		$('#ele').hide();
+		$(this).addClass("add").siblings().removeClass("add");
+		showcommon();
+	});
+	$('.electronic').on('click',function(){
+		$('#live').hide();	
+		$('#skin').hide();
+		$('#cosmetics').hide();
+		$('#electronic').show();
+		$('#parent').hide();
+		$('#car').hide();
+		$('#ele').hide();
+		$(this).addClass("add").siblings().removeClass("add");
+		showcommon();
+	});
+	$('.parent').on('click',function(){
+		$('#live').hide();	
+		$('#skin').hide();
+		$('#cosmetics').hide();
+		$('#electronic').hide();
+		$('#parent').show();
+		$('#car').hide();
+		$('#ele').hide();
+		$(this).addClass("add").siblings().removeClass("add");
+		showcommon();
+	});
+	$('.car').on('click',function(){
+		$('#live').hide();	
+		$('#skin').hide();
+		$('#cosmetics').hide();
+		$('#electronic').hide();
+		$('#parent').hide();
+		$('#car').show();
+		$('#ele').hide();
+		$(this).addClass("add").siblings().removeClass("add");
+		showcommon();
+	});
+	$('.ele').on('click',function(){
+		$('#live').hide();	
+		$('#skin').hide();
+		$('#cosmetics').hide();
+		$('#electronic').hide();
+		$('#parent').hide();
+		$('#car').hide();
+		$('#ele').show();
+		$(this).addClass("add").siblings().removeClass("add");
+		showcommon();
+	});
 }
 

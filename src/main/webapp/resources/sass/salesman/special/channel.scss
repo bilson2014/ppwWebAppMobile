@@ -110,19 +110,150 @@ body {
     padding-top: 1.3rem;
 }
 
-.floating {
-    position: absolute;
-    background: yellow;
-    height: 20%;
-    width: 80%;
-    top: 20%;
+.boxadd {
+    right: 0% !important;
+    animation: myfirst 0.8s;
+    -moz-animation: myfirst 0.8s;
+    /* Firefox */
+    -webkit-animation: myfirst 0.8s;
+    /* Safari 和 Chrome */
+    -o-animation: myfirst 0.8s;
+    /* Opera */
+}
+
+.boxadds {
+    right: 0%;
+    animation: myfirsts 0.8s;
+    -moz-animation: myfirsts 0.8s;
+    /* Firefox */
+    -webkit-animation: myfirsts 0.8s;
+    /* Safari 和 Chrome */
+    -o-animation: myfirsts 0.8s;
+    /* Opera */
+}
+
+@keyframes myfirst {
+    from {
+        right: -56%;
+    }
+    to {
+        right: 0%;
+    }
+}
+
+@-moz-keyframes myfirst {
+    from {
+        right: -56%;
+    }
+    to {
+        right: 0%;
+    }
+}
+
+@-webkit-keyframes myfirst {
+    from {
+        right: -56%;
+    }
+    to {
+        right: 0%;
+    }
+}
+
+@-o-keyframes myfirst {
+    from {
+        right: -56%;
+    }
+    to {
+        right: 0%;
+    }
+}
+
+@keyframes myfirsts {
+    from {
+        right: 0%;
+    }
+    to {
+        right: -56%;
+    }
+}
+
+@-moz-keyframes myfirsts {
+    from {
+        right: 0%;
+    }
+    to {
+        right: -56%;
+    }
+}
+
+@-webkit-keyframes myfirsts {
+    from {
+        right: 0%;
+    }
+    to {
+        right: -56%;
+    }
+}
+
+@-o-keyframes myfirsts {
+    from {
+        right: 0%;
+    }
+    to {
+        right: -56%;
+    }
+}
+
+.boxs {
+    position: fixed;
     z-index: 23;
-    left: 10%;
-    div {
+    font-size: 0.46rem;
+    right: -56%;
+    bottom: 13%;
+    width: 70%;
+    .showtime {
+        background: #fe5453;
+        border-radius: 0.1rem;
+        color: #fff;
+        width: 20%;
+        height: 0.6rem;
+        float: left;
         display: inline-block;
-        width: 30%;
+        text-align: center;
+        height: 1.2rem;
+        line-height: 1.2rem;
+        margin-top: 21%;
     }
-    .two {
-        background: pink;
+    .floating {
+        background: #fff;
+        width: 80%;
+        display: inline-block;
+        border: 0;
+        margin: 0;
+        border-radius: 0.1rem;
+        float: left;
+        a {
+            display: inline-block;
+            width: 25%;
+            float: left;
+            line-height: 1.5rem;
+            text-align: center;
+            list-style: none;
+            border-radius: 0.1rem;
+        }
+        div {
+            display: inline-block;
+            width: 25%;
+            float: left;
+            line-height: 1.5rem;
+            text-align: center;
+            list-style: none;
+            border-radius: 0.1rem;
+        }
     }
+}
+
+.add {
+    // background: #fe5453;
+    color: #fe5453;
 }
