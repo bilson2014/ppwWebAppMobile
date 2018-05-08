@@ -66,7 +66,7 @@
 					        </div>
 					        <div class="proDes">
 					                <div>
-						                                                               产品类型：数码<br>
+						                                                               产品类型：数码类产品<br>
 												1、展示外观与内部结构展示<br>
 												2、主要功能与亮点讲解并且试用<br>
 												3、同类商品或者同款商品中不同色号之间对比<br>
@@ -233,7 +233,7 @@
                                              <div>时 &nbsp &nbsp &nbsp &nbsp &nbsp长：  <span>30秒 五个卖点展示</span></div>
                                       </div>
                                       <div class="item">
-                                             <div>实 拍 影 棚：   <span>五选二</span></div>
+                                             <div>实 拍 影 棚：   <span>十选二</span></div>
                                       </div>
                                       <div class="item">
                                              <div>推 荐 比 例：   <span> 1:1 或  16:9  （二选一）</span></div>
@@ -250,7 +250,6 @@
                                        <div class="item">
                                              <div>字 &nbsp &nbsp &nbsp &nbsp &nbsp体：     <span>免费版权</span></div>
                                       </div>
-                                     
                                  </div>
                           </div>
                           

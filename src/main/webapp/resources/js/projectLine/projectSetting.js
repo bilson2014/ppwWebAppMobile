@@ -169,7 +169,8 @@ function buildCar1(obj){
 	}
 	$('#CConfigId').val(obj.chanpinconfigurationId);
 	$('#normal').attr('data-id',obj.chanpinconfigurationId);
-	$('#normal_prive').text(obj.basePrice);
+	$('#normal_prive').text(obj.initiatePrice);
+	$('#normal_prive').attr('data-value',obj.basePrice);
 	$('#normal').find('.info').text(obj.chanpinconfigurationName);
 	var html1 = [
 	             '<div class="cardItem normal" data-id="'+obj.chanpinconfigurationId+'">',
@@ -196,7 +197,8 @@ function buildCar2(obj){
 		}
 	}
 	$('#k2').attr('data-id',obj.chanpinconfigurationId);
-	$('#k2_prive').text(obj.basePrice);
+	$('#k2_prive').text(obj.initiatePrice);
+	$('#k2_prive').attr('data-value',obj.basePrice);
 	$('#k2').find('.info').text(obj.chanpinconfigurationName);
 	var html1 = [
 	             '<div class="cardItem k2" data-id="'+obj.chanpinconfigurationId+'">',
@@ -223,7 +225,8 @@ function buildCar3(obj){
 		}
 	}
 	$('#k4').attr('data-id',obj.chanpinconfigurationId);
-	$('#k4_prive').text(obj.basePrice);
+	$('#k4_prive').text(obj.initiatePrice);
+	$('#k4_prive').attr('data-value',obj.basePrice);
 	$('#k4').find('.info').text(obj.chanpinconfigurationName);
 	var html1 = [
 	             '<div class="cardItem k4">',
@@ -347,7 +350,7 @@ function createSubjoinMod(obj){
 
 function createTime(obj,num){
 	var card = $(".typeMod div.active");
-	var cardPrice = $(card).find('span').text();
+	var cardPrice = $(card).find('span').attr('data-value');
 	var setArray = new Array;
 	setArray.push(cardPrice);
 	if(obj.computeType == 0){
