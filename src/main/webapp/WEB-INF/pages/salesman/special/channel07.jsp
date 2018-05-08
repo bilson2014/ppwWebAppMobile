@@ -46,7 +46,7 @@
 			<div class='cosmetics'>彩妆</div>
 			<div class='electronic'>数码</div>
 			<div class='parent'>亲子</div>
-			<div class='car'>车品</div>
+			<!-- <div class='car'>车品</div> -->
 			<div class='ele'>电器</div>
 	
 		</div>
@@ -62,19 +62,35 @@
 		  </div>
 		  <!--生活  -->
 		  <div class="videoArea" id='live'>
+		  		<a href="http://m.apaipian.com/play/9_29731.html"> 
+		             <div class="videoCard">
+		                  <img class="videoBanner" alt='美的 Midea B3除螨仪-功能讲解' src="${image}group1/M01/01/04/CgpmTlre6vOADBeuAAFL48xaCSk898.jpg">
+		                  <div class="modelG"></div>
+		                  <div class="cardTitle">美的 Midea B3除螨仪-功能讲解</div>
+		                  <div class="cardDes"></div>
+		             </div>
+		       </a>
+		       <a href="http://m.apaipian.com/play/9_29732.html"> 
+		             <div class="videoCard">
+		                  <img class="videoBanner" alt='美的 Midea B5除螨仪-功能讲解' src="${image}group1/M01/00/CA/CgpsbFre6vmARxR1AAGN9YgiwAA272.jpg">
+		                  <div class="modelG"></div>
+		                  <div class="cardTitle">美的 Midea B5除螨仪-功能讲解</div>
+		                  <div class="cardDes"></div>
+		             </div>
+		       </a>
 		       <a href="http://m.apaipian.com/play/1910_29748.html"> 
 		             <div class="videoCard">
-		                  <img class="videoBanner" alt='苍山 Cangshan-评测教学' src="${image}group1/M00/00/CD/CgptuFrpneyAE6zBAAGD43_4XRQ641.jpg">
+		                  <img class="videoBanner" alt='苍山 Cangshan-功能讲解' src="${image}group1/M00/00/CD/CgptuFrpneyAE6zBAAGD43_4XRQ641.jpg">
 		                  <div class="modelG"></div>
-		                  <div class="cardTitle">苍山 Cangshan-评测教学</div>
+		                  <div class="cardTitle">苍山 Cangshan-功能讲解</div>
 		                  <div class="cardDes"></div>
 		             </div>
 		       </a>
 		       <a href="http://m.apaipian.com/play/1910_29797.html"> 
 		             <div class="videoCard">
-		                  <img class="videoBanner" alt='Teabox 茶壶-评测教学' src="${image}group1/M01/01/06/CgpmTlrqjqGAWLYIAADzDmS44gs253.jpg">
+		                  <img class="videoBanner" alt='Teabox 茶壶-功能讲解' src="${image}group1/M01/01/06/CgpmTlrqjqGAWLYIAADzDmS44gs253.jpg">
 		                  <div class="modelG"></div>
-		                  <div class="cardTitle">Teabox 茶壶-评测教学</div>
+		                  <div class="cardTitle">Teabox 茶壶-功能讲解</div>
 		                  <div class="cardDes"></div>
 		             </div>
 		       </a>
@@ -86,22 +102,7 @@
 		                  <div class="cardDes"></div>
 		             </div>
 		       </a>
-		       <a href="http://m.apaipian.com/play/9_29731.html"> 
-		             <div class="videoCard">
-		                  <img class="videoBanner" alt='美的  Midea B3除螨仪-外观与工艺' src="${image}group1/M01/01/04/CgpmTlre6vOADBeuAAFL48xaCSk898.jpg">
-		                  <div class="modelG"></div>
-		                  <div class="cardTitle">美的  Midea B3除螨仪-外观与工艺</div>
-		                  <div class="cardDes"></div>
-		             </div>
-		       </a>
-		       <a href="http://m.apaipian.com/play/9_29732.html"> 
-		             <div class="videoCard">
-		                  <img class="videoBanner" alt='美的  Midea B5除螨仪-外观与工艺' src="${image}group1/M01/00/CA/CgpsbFre6vmARxR1AAGN9YgiwAA272.jpg">
-		                  <div class="modelG"></div>
-		                  <div class="cardTitle">美的  Midea B5除螨仪-外观与工艺</div>
-		                  <div class="cardDes"></div>
-		             </div>
-		       </a>
+		       
 		       <a href="https://m.apaipian.com/play/1910_29795.html"> 
 		             <div class="videoCard">
 		                  <img class="videoBanner" alt='OXO 储物罐-功能讲解' src="${image}group1/M01/00/CD/CgptuFrqj6iAD_enAAKzx7A_1fQ577.jpg">
@@ -112,17 +113,17 @@
 		       </a>
 		       <a href="https://m.apaipian.com/play/1910_29791.html"> 
 		             <div class="videoCard">
-		                  <img class="videoBanner" alt='VARIDESK 地垫-评测教学' src="${image}group1/M00/00/CD/CgptuFrqkQaAK_Z3AAEn6-VGnY0542.jpg">
+		                  <img class="videoBanner" alt='VARIDESK 地垫-功能讲解' src="${image}group1/M00/00/CD/CgptuFrqkQaAK_Z3AAEn6-VGnY0542.jpg">
 		                  <div class="modelG"></div>
-		                  <div class="cardTitle">VARIDESK 地垫-评测教学</div>
+		                  <div class="cardTitle">VARIDESK 地垫-功能讲解</div>
 		                  <div class="cardDes"></div>
 		             </div>
 		       </a>
 		       <a href="https://m.apaipian.com/play/1910_29789.html"> 
 		             <div class="videoCard">
-		                  <img class="videoBanner" alt='Chefman 电茶壶-外观与工艺' src="${image}group1/M01/01/06/CgpmTlrqkcmAQAu-AAGGmcyex5I921.jpg">
+		                  <img class="videoBanner" alt='Chefman 电茶壶-功能讲解' src="${image}group1/M01/01/06/CgpmTlrqkcmAQAu-AAGGmcyex5I921.jpg">
 		                  <div class="modelG"></div>
-		                  <div class="cardTitle">Chefman 电茶壶-外观与工艺</div>
+		                  <div class="cardTitle">Chefman 电茶壶-功能讲解</div>
 		                  <div class="cardDes"></div>
 		             </div>
 		       </a>
@@ -144,17 +145,17 @@
 		       </a>
 		       <a href="https://m.apaipian.com/play/1910_29763.html"> 
 		             <div class="videoCard">
-		                  <img class="videoBanner" alt='Behmor-外观与工艺' src="${image}group1/M00/00/CB/CgpsbFrprA2ADGi1AAGEjZ5gMEg743.jpg">
+		                  <img class="videoBanner" alt='Behmor-功能讲解' src="${image}group1/M00/00/CB/CgpsbFrprA2ADGi1AAGEjZ5gMEg743.jpg">
 		                  <div class="modelG"></div>
-		                  <div class="cardTitle">Behmor-外观与工艺</div>
+		                  <div class="cardTitle">Behmor-功能讲解</div>
 		                  <div class="cardDes"></div>
 		             </div>
 		       </a>
 		       <a href="https://m.apaipian.com/play/1910_29765.html"> 
 		             <div class="videoCard">
-		                  <img class="videoBanner" alt='Comfee-外观与工艺' src="${image}group1/M01/01/06/CgpmTlrprZyAFZZHAAFwNxrX-GE735.jpg">
+		                  <img class="videoBanner" alt='Comfee-功能讲解' src="${image}group1/M01/01/06/CgpmTlrprZyAFZZHAAFwNxrX-GE735.jpg">
 		                  <div class="modelG"></div>
-		                  <div class="cardTitle">Comfee-外观与工艺</div>
+		                  <div class="cardTitle">Comfee-功能讲解</div>
 		                  <div class="cardDes"></div>
 		             </div>
 		       </a>
@@ -168,9 +169,9 @@
 		       </a>
 		       <a href="https://m.apaipian.com/play/1910_29752.html"> 
 		             <div class="videoCard">
-		                  <img class="videoBanner" alt='NutriBullet-评测教学' src="${image}group1/M01/01/04/Cgpw7FrpomyAQ80RAAHHSt5KsEc797.jpg">
+		                  <img class="videoBanner" alt='NutriBullet-功能讲解' src="${image}group1/M01/01/04/Cgpw7FrpomyAQ80RAAHHSt5KsEc797.jpg">
 		                  <div class="modelG"></div>
-		                  <div class="cardTitle">NutriBullet-评测教学</div>
+		                  <div class="cardTitle">NutriBullet-功能讲解</div>
 		                  <div class="cardDes"></div>
 		             </div>
 		       </a>
@@ -184,9 +185,9 @@
 		       </a>
 		       <a href="https://m.apaipian.com/play/1910_29756.html"> 
 		             <div class="videoCard">
-		                  <img class="videoBanner" alt='完美烘烤 Perfect Bake 智能秤-评测教学' src="${image}group1/M00/00/CD/CgptuFrppnCAXcvvAAIaDwYpf7M109.jpg">
+		                  <img class="videoBanner" alt='完美烘烤 Perfect Bake 智能秤-功能讲解' src="${image}group1/M00/00/CD/CgptuFrppnCAXcvvAAIaDwYpf7M109.jpg">
 		                  <div class="modelG"></div>
-		                  <div class="cardTitle">完美烘烤 Perfect Bake 智能秤-评测教学</div>
+		                  <div class="cardTitle">完美烘烤 Perfect Bake 智能秤-功能讲解</div>
 		                  <div class="cardDes"></div>
 		             </div>
 		       </a>
@@ -196,17 +197,17 @@
 		  <div class="videoArea" id='skin'>
 		       <a href="http://m.apaipian.com/play/1910_29775.html"> 
 		             <div class="videoCard">
-		                  <img class="videoBanner" alt='薇姿 Vichy-评测教学' src="${image}group1/M00/00/CB/CgpsbFrqi4-ASqUuAAD_yG4uI3I432.jpg">
+		                  <img class="videoBanner" alt='薇姿 Vichy 套组-功能讲解' src="${image}group1/M00/00/CB/CgpsbFrqi4-ASqUuAAD_yG4uI3I432.jpg">
 		                  <div class="modelG"></div>
-		                  <div class="cardTitle">薇姿 Vichy-评测教学</div>
+		                  <div class="cardTitle">薇姿 Vichy 套组-功能讲解</div>
 		                  <div class="cardDes"></div>
 		             </div>
 		       </a>
 		       <a href="http://m.apaipian.com/play/1910_29777.html"> 
 		             <div class="videoCard">
-		                  <img class="videoBanner" alt='薇姿 Vichy-功能讲解' src="${image}group1/M01/01/06/CgpmTlrqjH-AcVyFAAGYMZl4s-A247.jpg">
+		                  <img class="videoBanner" alt='薇姿 Vichy 爽肤水-功能讲解' src="${image}group1/M01/01/06/CgpmTlrqjH-AcVyFAAGYMZl4s-A247.jpg">
 		                  <div class="modelG"></div>
-		                  <div class="cardTitle">薇姿 Vichy-功能讲解</div>
+		                  <div class="cardTitle">薇姿 Vichy 爽肤水-功能讲解</div>
 		                  <div class="cardDes"></div>
 		             </div>
 		       </a>
@@ -220,9 +221,9 @@
 		       </a>
 		       <a href="http://m.apaipian.com/play/1910_29771.html"> 
 		             <div class="videoCard">
-		                  <img class="videoBanner" alt='理肤泉 La Roche 防嗮霜-功能讲解' src="${image}group1/M01/00/CD/CgptuFrpsquANun2AAFj9KiMShA288.jpg">
+		                  <img class="videoBanner" alt='理肤泉 La Roche 防嗮霜-评测教学' src="${image}group1/M01/00/CD/CgptuFrpsquANun2AAFj9KiMShA288.jpg">
 		                  <div class="modelG"></div>
-		                  <div class="cardTitle">理肤泉 La Roche 防嗮霜-功能讲解</div>
+		                  <div class="cardTitle">理肤泉 La Roche 防嗮霜-评测教学</div>
 		                  <div class="cardDes"></div>
 		             </div>
 		       </a>
@@ -268,9 +269,9 @@
 		  <div class="videoArea" id='electronic'>
 		       <a href="http://m.apaipian.com/play/9_29726.html"> 
 		             <div class="videoCard">
-		                  <img class="videoBanner" alt='明基 BenQ 投影仪-功能讲解' src="${image}group1/M01/00/CA/CgpsbFrdiSiAWhmKAAE4pvn92H0971.jpg">
+		                  <img class="videoBanner" alt='明基 BenQ 投影仪-外观与工艺' src="${image}group1/M01/00/CA/CgpsbFrdiSiAWhmKAAE4pvn92H0971.jpg">
 		                  <div class="modelG"></div>
-		                  <div class="cardTitle">明基 BenQ 投影仪-功能讲解</div>
+		                  <div class="cardTitle">明基 BenQ 投影仪-外观与工艺</div>
 		                  <div class="cardDes"></div>
 		             </div>
 		       </a>
@@ -284,25 +285,25 @@
 		       </a>
 		       <a href="http://m.apaipian.com/play/1910_29852.html"> 
 		             <div class="videoCard">
-		                  <img class="videoBanner" alt='三星 Samsung-Galaxy Tab S3-功能讲解' src="${image}group1/M01/01/04/Cgpw7FrqzPuAZNUvAADmGT3oErk393.jpg">
+		                  <img class="videoBanner" alt='三星 Samsung Galaxy Tab S3-外观与工艺' src="${image}group1/M01/01/04/Cgpw7FrqzPuAZNUvAADmGT3oErk393.jpg">
 		                  <div class="modelG"></div>
-		                  <div class="cardTitle">三星 Samsung-Galaxy Tab S3-功能讲解</div>
+		                  <div class="cardTitle">三星 Samsung Galaxy Tab S3-外观与工艺</div>
 		                  <div class="cardDes"></div>
 		             </div>
 		       </a>
 		       <a href="http://m.apaipian.com/play/1910_29853.html"> 
 		             <div class="videoCard">
-		                  <img class="videoBanner" alt='华硕 ASUS-评测教学' src="${image}group1/M01/00/CB/CgpsbFrqzj6AbdqKAAFczrAPMsA183.jpg">
+		                  <img class="videoBanner" alt='华硕 ASUS-功能讲解' src="${image}group1/M01/00/CB/CgpsbFrqzj6AbdqKAAFczrAPMsA183.jpg">
 		                  <div class="modelG"></div>
-		                  <div class="cardTitle">华硕 ASUS-评测教学</div>
+		                  <div class="cardTitle">华硕 ASUS-功能讲解</div>
 		                  <div class="cardDes"></div>
 		             </div>
 		       </a>
 		       <a href="http://m.apaipian.com/play/1910_29854.html"> 
 		             <div class="videoCard">
-		                  <img class="videoBanner" alt='华硕 ASUS-外观与工艺' src="${image}group1/M01/01/06/CgpmTlrqz0SALfRRAAIelivp6Z0670.jpg">
+		                  <img class="videoBanner" alt='华硕 ASUS-评测教学' src="${image}group1/M01/01/06/CgpmTlrqz0SALfRRAAIelivp6Z0670.jpg">
 		                  <div class="modelG"></div>
-		                  <div class="cardTitle">华硕 ASUS-外观与工艺</div>
+		                  <div class="cardTitle">华硕 ASUS-评测教学</div>
 		                  <div class="cardDes"></div>
 		             </div>
 		       </a>
@@ -316,9 +317,9 @@
 		       </a>
 		       <a href="http://m.apaipian.com/play/1910_29857.html"> 
 		             <div class="videoCard">
-		                  <img class="videoBanner" alt='佳能 Canon MX492-评测教学' src="${image}group1/M00/00/CB/CgpsbFrq0U2ACfzUAADlA7dw0vs853.jpg">
+		                  <img class="videoBanner" alt='佳能 Canon MX492-功能讲解说明书' src="${image}group1/M00/00/CB/CgpsbFrq0U2ACfzUAADlA7dw0vs853.jpg">
 		                  <div class="modelG"></div>
-		                  <div class="cardTitle">佳能 Canon MX492-评测教学</div>
+		                  <div class="cardTitle">佳能 Canon MX492-功能讲解说明书</div>
 		                  <div class="cardDes"></div>
 		             </div>
 		       </a>
@@ -369,7 +370,7 @@
 		     
 		  </div>
 		  <!--车品  -->
-		  <div class="videoArea" id='car'>
+		 <%--  <div class="videoArea" id='car'>
 		       <a href="http://m.apaipian.com/play/1910_29815.html"> 
 		             <div class="videoCard">
 		                  <img class="videoBanner" alt='Mpow 车载支架-评测教学' src="${image}group1/M01/01/04/Cgpw7FrqpPGAArFCAAGvqshOZco150.jpg">
@@ -403,30 +404,30 @@
 		             </div>
 		       </a>
 		     
-		  </div>
+		  </div> --%>
 		  <!--电器  -->
 		  <div class="videoArea" id='ele'>
 		       <a href="http://m.apaipian.com/play/1910_29743.html"> 
 		             <div class="videoCard">
-		                  <img class="videoBanner" alt='肯莫尔 Kenmore-功能讲解' src="${image}group1/M00/00/CB/CgpsbFrpl2iAQVlyAAFwp_GwC0U235.jpg">
+		                  <img class="videoBanner" alt='肯莫尔 Kenmore 冰箱-功能讲解' src="${image}group1/M00/00/CB/CgpsbFrpl2iAQVlyAAFwp_GwC0U235.jpg">
 		                  <div class="modelG"></div>
-		                  <div class="cardTitle">肯莫尔 Kenmore-功能讲解</div>
+		                  <div class="cardTitle">肯莫尔 Kenmore 冰箱-功能讲解</div>
 		                  <div class="cardDes"></div>
 		             </div>
 		       </a>
 		       <a href="http://m.apaipian.com/play/1910_29762.html"> 
 		             <div class="videoCard">
-		                  <img class="videoBanner" alt='霍尼韦尔 Honeywell 空气净化扇-外观与工艺' src="${image}group1/M01/01/04/Cgpw7Frpq5aANUSZAAHO0c0GcvY132.jpg">
+		                  <img class="videoBanner" alt='霍尼韦尔 Honeywell 空气净化扇-功能讲解' src="${image}group1/M01/01/04/Cgpw7Frpq5aANUSZAAHO0c0GcvY132.jpg">
 		                  <div class="modelG"></div>
-		                  <div class="cardTitle">霍尼韦尔 Honeywell 空气净化扇-外观与工艺</div>
+		                  <div class="cardTitle">霍尼韦尔 Honeywell 空气净化扇-功能讲解</div>
 		                  <div class="cardDes"></div>
 		             </div>
 		       </a>
 		       <a href="http://m.apaipian.com/play/1910_29749.html"> 
 		             <div class="videoCard">
-		                  <img class="videoBanner" alt='肯莫尔 Kenmore-外观与工艺' src="${image}group1/M00/01/04/Cgpw7FrpnqWAA3csAAHxnLD1LA4014.jpg">
+		                  <img class="videoBanner" alt='肯莫尔 Kenmore 洗衣机-功能讲解' src="${image}group1/M00/01/04/Cgpw7FrpnqWAA3csAAHxnLD1LA4014.jpg">
 		                  <div class="modelG"></div>
-		                  <div class="cardTitle">肯莫尔 Kenmore-外观与工艺</div>
+		                  <div class="cardTitle">肯莫尔 Kenmore 洗衣机-功能讲解</div>
 		                  <div class="cardDes"></div>
 		             </div>
 		       </a>

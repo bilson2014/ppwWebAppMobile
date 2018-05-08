@@ -51,7 +51,7 @@
 		  <div class="videoArea">
 		       <a href="https://m.apaipian.com/play/1167_74.html"> 
 		             <div class="videoCard">
-		                  <img class="videoBanner" alt='晚安北京' src="${image}/group1/M00/00/04/Cgpw7FgZwiiALK1GAAIAPGwi8Uw323.jpg">
+		                  <img class="videoBanner" alt='晚安北京' src="${image}group1/M00/01/03/Cgpw7FrgBPqARPSaAAHG1lJrouE236.jpg">
 		                  <div class="modelG"></div>
 		                  <div class="cardTitle">晚安北京</div>
 		                  <div class="cardDes"></div>
@@ -59,7 +59,7 @@
 		       </a>
 		       <a href="https://m.apaipian.com/play/1115_5741.html">
 		       		<div class="videoCard">
-		       			<img class="videoBanner" alt='成都' src="${image}/group1/M00/00/F7/Cgpw7Fq4mviAJCfYAAHhikfSdpw162.jpg">
+		       			<img class="videoBanner" alt='成都' src="${image}group1/M00/00/F7/Cgpw7Fq4mviAJCfYAAHhikfSdpw162.jpg">
 		                <div class="modelG"></div>
 		                <div class="cardTitle">成都</div>
 		                <div class="cardDes"></div>
@@ -67,7 +67,7 @@
 		       </a>
 		       <a href="https://m.apaipian.com/play/1323_13928.html">
 		       		<div class="videoCard">
-		       			<img class="videoBanner" alt='扬州' src="${image}/group1/M00/00/BF/CgptuFq4m_OAY1r3AAHp4IVdHtU989.jpg">
+		       			<img class="videoBanner" alt='扬州' src="${image}group1/M00/00/BF/CgptuFq4m_OAY1r3AAHp4IVdHtU989.jpg">
 		                <div class="modelG"></div>
 		                <div class="cardTitle">扬州</div>
 		                <div class="cardDes"></div>
@@ -75,7 +75,7 @@
 		       </a>
 		       <a href="https://m.apaipian.com/play/233_666.html">
 		       		<div class="videoCard">
-		       			<img class="videoBanner" alt='宁波' src="${image}/group1/M00/00/F9/CgpmTlq4nF2AfmHmAAEbBxULGwA265.jpg">
+		       			<img class="videoBanner" alt='宁波' src="${image}group1/M00/00/F9/CgpmTlq4nF2AfmHmAAEbBxULGwA265.jpg">
 		                <div class="modelG"></div>
 		                <div class="cardTitle">宁波</div>
 		                <div class="cardDes"></div>
@@ -83,7 +83,7 @@
 		       </a>
 		       <a href="https://m.apaipian.com/play/606_1305.html">
 		       		<div class="videoCard">
-		       			<img class="videoBanner" alt='沧海青城' src="${image}/group1/M00/00/BE/CgpsbFq4nNyAKa8aAAFW96-tyro563.jpg">
+		       			<img class="videoBanner" alt='沧海青城' src="${image}group1/M00/00/BE/CgpsbFq4nNyAKa8aAAFW96-tyro563.jpg">
 		                <div class="modelG"></div>
 		                <div class="cardTitle">沧海青城</div>
 		                <div class="cardDes"></div>
@@ -91,7 +91,7 @@
 		       </a>
 		       <a href="https://m.apaipian.com/play/1115_6881.html">
 		       		<div class="videoCard">
-		       			<img class="videoBanner" alt='小城大坡' src="${image}/group1/M00/00/F9/CgpmTlq4nVeAJwypAAFs3eV4wZk475.jpg">
+		       			<img class="videoBanner" alt='小城大坡' src="${image}group1/M00/00/F9/CgpmTlq4nVeAJwypAAFs3eV4wZk475.jpg">
 		                <div class="modelG"></div>
 		                <div class="cardTitle">小城大坡</div>
 		                <div class="cardDes"></div>
@@ -99,7 +99,7 @@
 		       </a>
 		       <a href="https://m.apaipian.com/play/1815_20199.html">
 		       		<div class="videoCard">
-		       			<img class="videoBanner" alt='重庆' src="${image}/group1/M00/00/BE/CgpsbFq4nkSAAfdiAAN4opwNBSw368.jpg">
+		       			<img class="videoBanner" alt='重庆' src="${image}group1/M00/00/BE/CgpsbFq4nkSAAfdiAAN4opwNBSw368.jpg">
 		                <div class="modelG"></div>
 		                <div class="cardTitle">重庆</div>
 		                <div class="cardDes"></div>
@@ -107,7 +107,7 @@
 		       </a>
 		       <a href="https://m.apaipian.com/play/1910_21269.html">
 		       		<div class="videoCard">
-		       			<img class="videoBanner" alt='张家口' src="${image}/group1/M00/00/F9/CgpmTlq4nseAebaJAAJPG1Z3XpQ724.jpg">
+		       			<img class="videoBanner" alt='张家口' src="${image}group1/M00/00/F9/CgpmTlq4nseAebaJAAJPG1Z3XpQ724.jpg">
 		                <div class="modelG"></div>
 		                <div class="cardTitle">张家口</div>
 		                <div class="cardDes"></div>
@@ -115,7 +115,7 @@
 		       </a>
 		       <a href="https://m.apaipian.com/play/1910_21289.html">
 		       		<div class="videoCard">
-		       			<img class="videoBanner" alt='遇见嵊州' src="${image}/group1/M00/00/F7/Cgpw7Fq4nyqALQTuAAHOIqZ7K0Y482.jpg">
+		       			<img class="videoBanner" alt='遇见嵊州' src="${image}group1/M00/00/F7/Cgpw7Fq4nyqALQTuAAHOIqZ7K0Y482.jpg">
 		                <div class="modelG"></div>
 		                <div class="cardTitle">遇见嵊州</div>
 		                <div class="cardDes"></div>
@@ -123,7 +123,7 @@
 		       </a>
 		       <a href="https://m.apaipian.com/play/1115_5717.html">
 		       		<div class="videoCard">
-		       			<img class="videoBanner" alt='江苏' src="${image}/group1/M00/00/F7/Cgpw7Fq4n86AeaD-AAHkpr7l2mE317.jpg">
+		       			<img class="videoBanner" alt='江苏' src="${image}group1/M00/00/F7/Cgpw7Fq4n86AeaD-AAHkpr7l2mE317.jpg">
 		                <div class="modelG"></div>
 		                <div class="cardTitle">江苏</div>
 		                <div class="cardDes"></div>
@@ -131,7 +131,7 @@
 		       </a>
 		       <a href="https://m.apaipian.com/play/1323_14080.html">
 		       		<div class="videoCard">
-		       			<img class="videoBanner" alt='启东' src="${image}/group1/M00/00/BE/CgpsbFq4oNqAOIsyAAEPpTFEbGM437.jpg">
+		       			<img class="videoBanner" alt='启东' src="${image}group1/M00/00/BE/CgpsbFq4oNqAOIsyAAEPpTFEbGM437.jpg">
 		                <div class="modelG"></div>
 		                <div class="cardTitle">启东</div>
 		                <div class="cardDes"></div>
@@ -139,7 +139,7 @@
 		       </a>
 		       <a href="https://m.apaipian.com/play/401_1367.html">
 		       		<div class="videoCard">
-		       			<img class="videoBanner" alt='盘锦' src="${image}/group1/M00/00/BF/CgptuFq4oR6AfYpZAAGq5thykbI584.jpg">
+		       			<img class="videoBanner" alt='盘锦' src="${image}group1/M00/00/BF/CgptuFq4oR6AfYpZAAGq5thykbI584.jpg">
 		                <div class="modelG"></div>
 		                <div class="cardTitle">盘锦</div>
 		                <div class="cardDes"></div>
@@ -147,7 +147,7 @@
 		       </a>
 		       <a href="https://m.apaipian.com/play/1115_4449.html">
 		       		<div class="videoCard">
-		       			<img class="videoBanner" alt='徽州' src="${image}/group1/M00/00/BE/CgpsbFq4oVyAI6vWAAGYg_p4G9U833.jpg">
+		       			<img class="videoBanner" alt='徽州' src="${image}group1/M00/00/BE/CgpsbFq4oVyAI6vWAAGYg_p4G9U833.jpg">
 		                <div class="modelG"></div>
 		                <div class="cardTitle">徽州</div>
 		                <div class="cardDes"></div>
@@ -155,7 +155,7 @@
 		       </a>
 		       <a href="https://m.apaipian.com/play/1115_5278.html">
 		       		<div class="videoCard">
-		       			<img class="videoBanner" alt='香格里拉' src="${image}/group1/M00/00/F7/Cgpw7Fq4oZyAfP6qAAFpHfTIAjo600.jpg">
+		       			<img class="videoBanner" alt='香格里拉' src="${image}group1/M00/00/F7/Cgpw7Fq4oZyAfP6qAAFpHfTIAjo600.jpg">
 		                <div class="modelG"></div>
 		                <div class="cardTitle">香格里拉</div>
 		                <div class="cardDes"></div>
@@ -163,7 +163,7 @@
 		       </a>
 		       <a href="https://m.apaipian.com/play/1114_6590.html">
 		       		<div class="videoCard">
-		       			<img class="videoBanner" alt='新昌' src="${image}/group1/M00/00/F7/Cgpw7Fq4ohKAdoyiAANWcB1CSUQ913.jpg">
+		       			<img class="videoBanner" alt='新昌' src="${image}group1/M00/00/F7/Cgpw7Fq4ohKAdoyiAANWcB1CSUQ913.jpg">
 		                <div class="modelG"></div>
 		                <div class="cardTitle">新昌</div>
 		                <div class="cardDes"></div>
