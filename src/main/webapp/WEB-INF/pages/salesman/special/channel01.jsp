@@ -46,7 +46,7 @@
 			<source src="" id="source" type="video/mp4">
 		</video> 		 
 		 <div class="title" >
-		       你的项目距成功只差一部好视频！
+		       你的项目距成功只差一部好视频
 		 </div>
 		 <div class="videoArea">
 		 	<a href="https://m.apaipian.com/play/1379_27269.html">
