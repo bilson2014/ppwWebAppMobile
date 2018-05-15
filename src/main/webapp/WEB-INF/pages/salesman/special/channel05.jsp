@@ -46,7 +46,7 @@
 		     <div class="showVideo">观看视频</div> -->
 		  </div>
 		  <div class="title">
-		       主题视频区
+		       宣传片为您注入全新竞争元素
 		  </div>
 		  <div class="videoArea">
 		       <a href="https://m.apaipian.com/play/1112_5106.html"> 

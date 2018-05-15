@@ -46,7 +46,7 @@
 		     <div class="showVideo">观看视频</div> -->
 		  </div>
 		  <div class="title">
-		       主题视频区
+		      新品发布就应该光彩夺目
 		  </div>
 		  <div class="videoArea">
 		       <a href="https://m.apaipian.com/play/1318_17436.html">

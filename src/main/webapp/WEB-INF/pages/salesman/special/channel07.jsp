@@ -54,11 +54,12 @@
 	<div class="pagePhone">			
 		  <div class="setBanner">
 		     <img src="${imgPath}/salesMan/special/channel07/banner.jpg" alt='电商视频'>
+		     <a href='http://m.apaipian.com/product/EnterprisePromotionalVideo/main'><div style="left: 2.2rem;bottom: 34%;width: 6.4rem;" class="product">产品详情</div></a>
 		   	<!-- <a href='http://m.apaipian.com/product/EnterprisePromotionalVideo/main'><div style="left: 3.6rem;bottom: 2.1rem;" class="product">产品详情</div></a> -->
 		     <!--   <div class="showVideo">观看视频</div> -->
 		  </div>
 		  <div class="title" id='title'>
-		       主题视频区
+		        电商内容化时代已到来
 		  </div>
 		  <!--生活  -->
 		  <div class="videoArea" id='live'>

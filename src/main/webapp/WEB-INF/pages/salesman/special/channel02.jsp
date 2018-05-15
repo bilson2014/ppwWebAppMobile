@@ -44,7 +44,7 @@
 		     <div class="showVideo">观看视频</div> -->
 		  </div>
 		  <div class="title">
-		       主题视频区
+		       预期收益“看得见”
 		  </div>
 		  <div class="videoArea">
 		       <a href="https://m.apaipian.com/play/1911_21384.html">

@@ -61,13 +61,16 @@
 				 <div class="swiper-container" id="firstSwiper"  style="height: auto;width: 100%;">
 					<div class="swiper-wrapper">
 			    		<div class="swiper-slide" >
+				    		<a href='https://m.apaipian.com/special/channel04.html'><img src="${imgPath}/salesMan/special/index/banner03.jpg" alt="宣传片"/></a>  
+			        	</div>
+			        	<div class="swiper-slide" >
+							<a href='https://m.apaipian.com/special/channel07.html'><img src="${imgPath}/salesMan/special/index/banner04.jpg" alt="电商视频"/></a>
+			        	</div>
+			        	<div class="swiper-slide" >
+				    		<a href='https://m.apaipian.com/special/channel01.html'><img src="${imgPath}/salesMan/special/index/banner02.jpg" alt="区块链项目 "/></a> 
+			        	</div>
+			        	<div class="swiper-slide" >
 				    		<a href='https://m.apaipian.com/special/channel02.html'><img src="${imgPath}/salesMan/special/index/banner01.jpg" alt="互联网金融"/></a>  
-			        	</div>
-			        	<div class="swiper-slide" >
-							<a href='https://m.apaipian.com/special/channel01.html'><img src="${imgPath}/salesMan/special/index/banner02.jpg" alt="区块链项目"/></a>
-			        	</div>
-			        	<div class="swiper-slide" >
-				    		<a href='https://m.apaipian.com/special/channel04.html'><img src="${imgPath}/salesMan/special/index/banner03.jpg" alt="宣传片"/></a> 
 			        	</div>
 			    	</div>
 		   		</div> 
@@ -81,6 +84,9 @@
    	<div class='hots'>
    		<div class="swiper-container" id="secondSwiper"  style="height: auto;width: 100%;">
 			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+		    		<a href='https://m.apaipian.com/special/channel07.html'><img src="${imgPath}/salesMan/special/index/page7.jpg" alt="电商视频"/></a>  
+	        	</div>
 	    		<div class="swiper-slide">
 		    		<a href='https://m.apaipian.com/special/channel01.html'><img src="${imgPath}/salesMan/special/index/page1.png" alt="区块链"/></a>  
 	        	</div>

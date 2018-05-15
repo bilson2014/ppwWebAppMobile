@@ -46,7 +46,7 @@
 		     <!--   <div class="showVideo">观看视频</div> -->
 		  </div>
 		  <div class="title">
-		       主题视频区
+		     塑造品牌形象 获取更多信赖
 		  </div>
 		  <div class="videoArea">
 		       <a href="https://m.apaipian.com/play/1910_28421.html"> 

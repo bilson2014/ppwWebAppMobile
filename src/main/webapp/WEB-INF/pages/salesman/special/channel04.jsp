@@ -43,7 +43,7 @@
 		     <div class="showVideo">观看视频</div> -->
 		  </div>
 		  <div class="title">
-		       主题视频区
+		       视频让世界更懂你的梦想
 		  </div>
 		  <div class="videoArea">
 		       <a href="https://m.apaipian.com/play/275_18462.html">
