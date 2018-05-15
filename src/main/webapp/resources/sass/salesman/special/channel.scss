@@ -13,6 +13,10 @@
     display: flex;
 }
 
+.menuActive {
+    z-index: 99;
+}
+
 .product {
     width: 3.8rem;
     height: 1rem;
