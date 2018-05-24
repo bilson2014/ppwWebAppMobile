@@ -23,10 +23,7 @@ function showbox(){
 		}
 	})
 }
-//function scrollWindow()
-//{
-//window.scrollTo(100,500)
-//}
+
 function showcommon(){	
 	$('.boxs').addClass('boxadds');
 	$('.showtime').text('分类');
@@ -42,11 +39,13 @@ function floating(){
 		$('#electronic').show();
 		$('#parent').show();
 		$('#ele').show();
-		$('#food').show();
-		$('#car').show();
-		$('#dog').show();
-		$('#costume').show();
-		$('#game').show();
+		$('#sports').show();
+		$('#make').show();
+		$('#culture').show();
+		$('#build').show();
+		$('#travel').show();
+		$('#comic').show();
+		$('#other').show();
 		$(this).addClass("add").siblings().removeClass("add");
 		showcommon();
 	});
@@ -58,11 +57,13 @@ function floating(){
 		$('#electronic').hide();
 		$('#parent').hide();
 		$('#ele').hide();
-		$('#food').hide();
-		$('#car').hide();
-		$('#dog').hide();
-		$('#costume').hide();
-		$('#game').hide();
+		$('#make').hide();
+		$('#culture').hide();
+		$('#build').hide();
+		$('#travel').hide();
+		$('#comic').hide();
+		$('#sports').hide();
+		$('#other').hide();
 		$(this).addClass("add").siblings().removeClass("add");
 		showcommon();
 	});
@@ -73,11 +74,14 @@ function floating(){
 		$('#electronic').hide();
 		$('#parent').hide();
 		$('#ele').hide();
-		$('#food').hide();
-		$('#car').hide();
-		$('#dog').hide();
-		$('#costume').hide();
-		$('#game').hide();
+
+		$('#make').hide();
+		$('#culture').hide();
+		$('#build').hide();
+		$('#travel').hide();
+		$('#sports').hide();
+		$('#comic').hide();
+		$('#other').hide();
 		$(this).addClass("add").siblings().removeClass("add");
 		showcommon();
 	});
@@ -88,11 +92,15 @@ function floating(){
 		$('#electronic').hide();
 		$('#parent').hide();
 		$('#ele').hide();
-		$('#food').hide();
-		$('#car').hide();
-		$('#dog').hide();
-		$('#costume').hide();
-		$('#game').hide();
+
+		$('#make').hide();
+		$('#culture').hide();
+		$('#sports').hide();
+		$('#build').hide();
+		$('#travel').hide();
+		$('#comic').hide();
+		$('#other').hide();
+
 		$(this).addClass("add").siblings().removeClass("add");
 		showcommon();
 	});
@@ -102,12 +110,16 @@ function floating(){
 		$('#cosmetics').hide();
 		$('#electronic').show();
 		$('#parent').hide();
-		$('#ele').hide();
-		$('#food').hide();
+
 		$('#car').hide();
-		$('#dog').hide();
-		$('#costume').hide();
-		$('#game').hide();
+		$('#sports').hide();
+		$('#ele').hide();
+		$('#make').hide();
+		$('#culture').hide();
+		$('#build').hide();
+		$('#travel').hide();
+		$('#comic').hide();
+		$('#other').hide();
 		$(this).addClass("add").siblings().removeClass("add");
 		showcommon();
 	});
@@ -149,12 +161,14 @@ function floating(){
 		$('#electronic').hide();
 		$('#parent').hide();
 		$('#car').hide();
+		$('#sports').hide();
 		$('#ele').hide();
-		$('#food').show();
-		$('#car').hide();
-		$('#dog').hide();
-		$('#costume').hide();
-		$('#game').hide();
+		$('#make').hide();
+		$('#culture').hide();
+		$('#build').hide();
+		$('#travel').hide();
+		$('#comic').hide();
+		$('#other').hide();
 		$(this).addClass("add").siblings().removeClass("add");
 		showcommon();
 	});
@@ -195,11 +209,14 @@ function floating(){
 		$('#electronic').hide();
 		$('#parent').hide();
 		$('#ele').hide();
-		$('#food').hide();
-		$('#car').hide();
-		$('#dog').hide();
-		$('#costume').show();
-		$('#game').hide();
+
+		$('#make').hide();
+		$('#culture').hide();
+		$('#sports').hide();
+		$('#build').hide();
+		$('#travel').hide();
+		$('#comic').hide();
+		$('#other').hide();
 		$(this).addClass("add").siblings().removeClass("add");
 		showcommon();
 	});
@@ -210,14 +227,144 @@ function floating(){
 		$('#electronic').hide();
 		$('#parent').hide();
 		$('#car').hide();
-		$('#ele').hide();
-		$('#food').hide();
-		$('#car').hide();
-		$('#dog').hide();
-		$('#costume').hide();
-		$('#game').show();
+
+		$('#sports').hide();
+		$('#ele').show();
+		$('#make').hide();
+		$('#culture').hide();
+		$('#build').hide();
+		$('#travel').hide();
+		$('#comic').hide();
+		$('#other').hide();
 		$(this).addClass("add").siblings().removeClass("add");
 		showcommon();
 	});
+	$('.make').on('click',function(){
+		$('#live').hide();	
+		$('#skin').hide();
+		$('#cosmetics').hide();
+		$('#electronic').hide();
+		$('#parent').hide();
+		$('#car').hide();
+		$('#ele').hide();
+		$('#sports').hide();
+		$('#make').show();
+		$('#culture').hide();
+		$('#build').hide();
+		$('#travel').hide();
+		$('#comic').hide();
+		$('#other').hide();
+		$(this).addClass("add").siblings().removeClass("add");
+		showcommon();
+	});
+	$('.culture').on('click',function(){
+		$('#live').hide();	
+		$('#skin').hide();
+		$('#cosmetics').hide();
+		$('#electronic').hide();
+		$('#sports').hide();
+		$('#parent').hide();
+		$('#car').hide();
+		$('#ele').hide();
+		$('#make').hide();
+		$('#culture').show();
+		$('#build').hide();
+		$('#travel').hide();
+		$('#comic').hide();
+		$('#other').hide();
+		$(this).addClass("add").siblings().removeClass("add");
+		showcommon();
+	});
+	$('.build').on('click',function(){
+		$('#live').hide();	
+		$('#skin').hide();
+		$('#cosmetics').hide();
+		$('#electronic').hide();
+		$('#parent').hide();
+		$('#car').hide();
+		$('#ele').hide();
+		$('#make').hide();
+		$('#culture').hide();
+		$('#sports').hide();
+		$('#build').show();
+		$('#travel').hide();
+		$('#comic').hide();
+		$('#other').hide();
+		$(this).addClass("add").siblings().removeClass("add");
+		showcommon();
+	});
+	$('.travel').on('click',function(){
+		$('#live').hide();	
+		$('#skin').hide();
+		$('#cosmetics').hide();
+		$('#electronic').hide();
+		$('#parent').hide();
+		$('#car').hide();
+		$('#ele').hide();
+		$('#make').hide();
+		$('#sports').hide();
+		$('#culture').hide();
+		$('#build').hide();
+		$('#travel').show();
+		$('#comic').hide();
+		$('#other').hide();
+		$(this).addClass("add").siblings().removeClass("add");
+		showcommon();
+	});
+	$('.comic').on('click',function(){
+		$('#live').hide();	
+		$('#skin').hide();
+		$('#cosmetics').hide();
+		$('#electronic').hide();
+		$('#parent').hide();
+		$('#car').hide();
+		$('#sports').hide();
+		$('#ele').hide();
+		$('#make').hide();
+		$('#culture').hide();
+		$('#build').hide();
+		$('#travel').hide();
+		$('#comic').show();
+		$('#other').hide();
+		$(this).addClass("add").siblings().removeClass("add");
+		showcommon();
+	});
+	$('.other').on('click',function(){
+		$('#live').hide();	
+		$('#skin').hide();
+		$('#cosmetics').hide();
+		$('#electronic').hide();
+		$('#parent').hide();
+		$('#car').hide();
+		$('#ele').hide();
+		$('#sports').hide();
+		$('#make').hide();
+		$('#culture').hide();
+		$('#build').hide();
+		$('#travel').hide();
+		$('#comic').hide();
+		$('#other').show();
+		$(this).addClass("add").siblings().removeClass("add");
+		showcommon();
+	});
+	$('.sports').on('click',function(){
+		$('#live').hide();	
+		$('#skin').hide();
+		$('#cosmetics').hide();
+		$('#electronic').hide();
+		$('#parent').hide();
+		$('#car').hide();
+		$('#ele').hide();
+		$('#sports').show();
+		$('#make').hide();
+		$('#culture').hide();
+		$('#build').hide();
+		$('#travel').hide();
+		$('#comic').hide();
+		$('#other').hide();
+		$(this).addClass("add").siblings().removeClass("add");
+		showcommon();
+	});
+	
 }
 
