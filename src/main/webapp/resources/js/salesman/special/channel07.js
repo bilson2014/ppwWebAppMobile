@@ -1,6 +1,4 @@
-
-$().ready(function() {
-	
+$().ready(function() {	
 	floating();
 	showbox();
 	setCardHeight();
@@ -74,7 +72,6 @@ function floating(){
 		$('#electronic').hide();
 		$('#parent').hide();
 		$('#ele').hide();
-
 		$('#make').hide();
 		$('#culture').hide();
 		$('#build').hide();
@@ -92,7 +89,6 @@ function floating(){
 		$('#electronic').hide();
 		$('#parent').hide();
 		$('#ele').hide();
-
 		$('#make').hide();
 		$('#culture').hide();
 		$('#sports').hide();
@@ -100,7 +96,6 @@ function floating(){
 		$('#travel').hide();
 		$('#comic').hide();
 		$('#other').hide();
-
 		$(this).addClass("add").siblings().removeClass("add");
 		showcommon();
 	});
@@ -110,7 +105,6 @@ function floating(){
 		$('#cosmetics').hide();
 		$('#electronic').show();
 		$('#parent').hide();
-
 		$('#car').hide();
 		$('#sports').hide();
 		$('#ele').hide();
@@ -208,8 +202,7 @@ function floating(){
 		$('#cosmetics').hide();
 		$('#electronic').hide();
 		$('#parent').hide();
-		$('#ele').hide();
-
+		$('#ele').hide(); 
 		$('#make').hide();
 		$('#culture').hide();
 		$('#sports').hide();
@@ -227,7 +220,6 @@ function floating(){
 		$('#electronic').hide();
 		$('#parent').hide();
 		$('#car').hide();
-
 		$('#sports').hide();
 		$('#ele').show();
 		$('#make').hide();

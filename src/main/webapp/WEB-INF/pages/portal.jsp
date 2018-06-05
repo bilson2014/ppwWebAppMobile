@@ -131,9 +131,9 @@
 		<div class="swiper-container">
 	        <div class="swiper-wrapper">
 	            <div class="swiper-slide">
-		            <video style="width:0px;opacity:0" controls="" loop="" poster="/resources/images/index/moreInfo.JPG" name="media" id="header3Video" class="active"> 
-			         <!--  <source src="/resources/video/test.mov" id="source" type="video/mp4"> -->
-			         <source src="" id="source" type="video/mp4">
+		            <video style="width:0px;opacity:0" controls="" loop="" poster="${file_locate_storage_path }group1/M00/01/11/Cgpw7FsWRt2AH4clAALpDWuNqCY424.jpg" name="media" id="header3Video" class="active"> 
+			         <source src="${file_locate_storage_path }group1/M01/00/D9/CgptuFsWRt2AU1RRAPnYloRLI28085.mp4" id="source" type="video/mp4">
+			         <%-- <video id="setVideo" controls poster="${file_locate_storage_path }group1/M00/01/11/Cgpw7FsWRt2AH4clAALpDWuNqCY424.jpg" src="${file_locate_storage_path }group1/M01/00/D9/CgptuFsWRt2AU1RRAPnYloRLI28085.mp4" ></video> --%>
 			        </video>
 	                 <ul>
 		                  <li class="title">专业商业视频服务</li>

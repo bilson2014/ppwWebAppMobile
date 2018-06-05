@@ -45,9 +45,9 @@
 		<script>window.html5 || document.write('<script src="html5shivJs"><\/script>')</script>
 	<![endif]-->
 
+
 </head>
 <body>
-
     <div class="phoneHeader">
 	     <a id="openMenu"><img src="${imgPath }/index/toMenu.png"></a>
 	     <a class='hide'><img src="${imgPath }/index/toSearch.png"></a>
@@ -122,6 +122,12 @@
    	</div> 
    	
    <div class='selection'>
+   		<a class='models' href='https://m.apaipian.com/special/page20.html'>
+   			<img class='eye' src="${imgPath}/salesMan/special/index/page20.jpg" alt="世界杯短片集锦 满满激情与回忆"/>
+   			<div class='font'>
+   				<span>世界杯短片集锦 满满激情与回忆</span>
+   			</div>
+   		</a>
    		<a class='models' href='https://m.apaipian.com/special/page19.html'>
    			<img class='eye' src="${imgPath}/salesMan/special/index/page19.jpg" alt="这世界，总有人偷偷爱着你"/>
    			<div class='font'>
