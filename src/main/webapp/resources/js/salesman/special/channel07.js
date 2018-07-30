@@ -1,6 +1,4 @@
-
-$().ready(function() {
-	
+$().ready(function() {	
 	floating();
 	showbox();
 	setCardHeight();
@@ -23,10 +21,7 @@ function showbox(){
 		}
 	})
 }
-//function scrollWindow()
-//{
-//window.scrollTo(100,500)
-//}
+
 function showcommon(){	
 	$('.boxs').addClass('boxadds');
 	$('.showtime').text('分类');
@@ -41,7 +36,6 @@ function floating(){
 		$('#cosmetics').show();
 		$('#electronic').show();
 		$('#parent').show();
-		$('#car').show();
 		$('#ele').show();
 		$('#sports').show();
 		$('#make').show();
@@ -60,7 +54,6 @@ function floating(){
 		$('#cosmetics').hide();
 		$('#electronic').hide();
 		$('#parent').hide();
-		$('#car').hide();
 		$('#ele').hide();
 		$('#make').hide();
 		$('#culture').hide();
@@ -78,7 +71,6 @@ function floating(){
 		$('#cosmetics').hide();
 		$('#electronic').hide();
 		$('#parent').hide();
-		$('#car').hide();
 		$('#ele').hide();
 		$('#make').hide();
 		$('#culture').hide();
@@ -96,7 +88,6 @@ function floating(){
 		$('#cosmetics').show();
 		$('#electronic').hide();
 		$('#parent').hide();
-		$('#car').hide();
 		$('#ele').hide();
 		$('#make').hide();
 		$('#culture').hide();
@@ -132,6 +123,37 @@ function floating(){
 		$('#cosmetics').hide();
 		$('#electronic').hide();
 		$('#parent').show();
+		$('#ele').hide();
+		$('#food').hide();
+		$('#car').hide();
+		$('#dog').hide();
+		$('#costume').hide();
+		$('#game').hide();
+		$(this).addClass("add").siblings().removeClass("add");
+		showcommon();
+	});
+
+	$('.ele').on('click',function(){
+		$('#live').hide();	
+		$('#skin').hide();
+		$('#cosmetics').hide();
+		$('#electronic').hide();
+		$('#parent').hide();
+		$('#ele').show();
+		$('#food').hide();
+		$('#car').hide();
+		$('#dog').hide();
+		$('#costume').hide();
+		$('#game').hide();
+		$(this).addClass("add").siblings().removeClass("add");
+		showcommon();
+	});
+	$('.food').on('click',function(){
+		$('#live').hide();	
+		$('#skin').hide();
+		$('#cosmetics').hide();
+		$('#electronic').hide();
+		$('#parent').hide();
 		$('#car').hide();
 		$('#sports').hide();
 		$('#ele').hide();
@@ -150,8 +172,37 @@ function floating(){
 		$('#cosmetics').hide();
 		$('#electronic').hide();
 		$('#parent').hide();
-		$('#car').show();
 		$('#ele').hide();
+		$('#food').hide();
+		$('#car').show();
+		$('#dog').hide();
+		$('#costume').hide();
+		$('#game').hide();
+		$(this).addClass("add").siblings().removeClass("add");
+		showcommon();
+	});
+	$('.dog').on('click',function(){
+		$('#live').hide();	
+		$('#skin').hide();
+		$('#cosmetics').hide();
+		$('#electronic').hide();
+		$('#parent').hide();
+		$('#ele').hide();
+		$('#food').hide();
+		$('#car').hide();
+		$('#dog').show();
+		$('#costume').hide();
+		$('#game').hide();
+		$(this).addClass("add").siblings().removeClass("add");
+		showcommon();
+	});
+	$('.costume').on('click',function(){
+		$('#live').hide();	
+		$('#skin').hide();
+		$('#cosmetics').hide();
+		$('#electronic').hide();
+		$('#parent').hide();
+		$('#ele').hide(); 
 		$('#make').hide();
 		$('#culture').hide();
 		$('#sports').hide();
@@ -162,7 +213,7 @@ function floating(){
 		$(this).addClass("add").siblings().removeClass("add");
 		showcommon();
 	});
-	$('.ele').on('click',function(){
+	$('.game').on('click',function(){
 		$('#live').hide();	
 		$('#skin').hide();
 		$('#cosmetics').hide();

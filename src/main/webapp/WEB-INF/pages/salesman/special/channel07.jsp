@@ -46,7 +46,6 @@
 			<div class='cosmetics'>彩妆</div>
 			<div class='electronic'>数码</div>
 			<div class='parent'>亲子</div>
-			<!-- <div class='car'>车品</div> -->
 			<div class='ele'>电器</div>
 			<div class='make'>手作</div>
 			<div class='culture'>文化</div>
@@ -67,9 +66,9 @@
 		  <div class="title" id='title'>
 		        电商内容化时代已到来
 		  </div>
-		   <!--生活  -->
+		  <!--家居  -->
 		  <div class="videoArea" id='live'>
-		  		
+
 		       <a href="http://m.apaipian.com/play/1910_29748.html"> 
 		             <div class="videoCard">
 		                  <img class="videoBanner" alt='苍山 Cangshan-刀具' src="${image}group1/M00/00/CD/CgptuFrpneyAE6zBAAGD43_4XRQ641.jpg">
@@ -94,7 +93,6 @@
 		                  <div class="cardDes"></div>
 		             </div>
 		       </a>
-		       
 		       <a href="https://m.apaipian.com/play/1910_29795.html"> 
 		             <div class="videoCard">
 		                  <img class="videoBanner" alt='OXO-储物罐' src="${image}group1/M01/00/CD/CgptuFrqj6iAD_enAAKzx7A_1fQ577.jpg">
@@ -111,7 +109,7 @@
 		                  <div class="cardDes"></div>
 		             </div>
 		       </a>
-		     
+
 		       <a href="https://m.apaipian.com/play/1910_29753.html"> 
 		             <div class="videoCard">
 		                  <img class="videoBanner" alt='Zestkit-饭盒' src="${image}group1/M01/00/CB/CgpsbFrpo06AXglLAAH-vMHndGg370.jpg">
@@ -120,7 +118,7 @@
 		                  <div class="cardDes"></div>
 		             </div>
 		       </a>
-		     
+
 		       <a href="https://m.apaipian.com/play/1910_29766.html"> 
 		             <div class="videoCard">
 		                  <img class="videoBanner" alt='Sterline-蔬菜切片机' src="${image}group1/M00/00/CD/CgptuFrprjmAQmV0AAEyIZAsEAQ765.jpg">
@@ -129,7 +127,9 @@
 		                  <div class="cardDes"></div>
 		             </div>
 		       </a>
-		        <a href="https://m.apaipian.com/play/1910_29784.html"> 
+
+		       <a href="https://m.apaipian.com/play/1910_29784.html"> 
+
 		             <div class="videoCard">
 		                  <img class="videoBanner" alt='simplehuman-纸巾架' src="${image}group1/M01/01/04/Cgpw7Frqk_qAE9I9AADDuhqAHKA951.jpg">
 		                  <div class="modelG"></div>
@@ -137,8 +137,7 @@
 		                  <div class="cardDes"></div>
 		             </div>
 		       </a>
-		      
-		     
+
 		  </div>
 		  <!--护肤  -->
 		  <div class="videoArea" id='skin'>
@@ -174,7 +173,6 @@
 		                  <div class="cardDes"></div>
 		             </div>
 		       </a>
-		     
 		  </div>
 		  <!--彩妆  -->
 		  <div class="videoArea" id='cosmetics'>
@@ -210,7 +208,6 @@
 		                  <div class="cardDes"></div>
 		             </div>
 		       </a>
-		     
 		  </div>
 		  <!--数码  -->
 		  <div class="videoArea" id='electronic'>
@@ -278,7 +275,6 @@
 		                  <div class="cardDes"></div>
 		             </div>
 		       </a>
-		     
 		  </div>
 		  <!--亲子  -->
 		  <div class="videoArea" id='parent'>
@@ -314,44 +310,77 @@
 		                  <div class="cardDes"></div>
 		             </div>
 		       </a>
+		  </div>
+		
+		  <!--电器  -->
+		  <div class="videoArea" id='ele'>
+		  		<a href="http://m.apaipian.com/play/9_29731.html"> 
+		             <div class="videoCard">
+		                  <img class="videoBanner" alt='美的 Midea-B3除螨仪' src="${image}group1/M01/01/04/CgpmTlre6vOADBeuAAFL48xaCSk898.jpg">
+		                  <div class="modelG"></div>
+		                  <div class="cardTitle">美的 Midea-B3除螨仪</div>
+		                  <div class="cardDes"></div>
+		             </div>
+		       </a>
+		       <a href="http://m.apaipian.com/play/9_29732.html"> 
+		             <div class="videoCard">
+		                  <img class="videoBanner" alt='美的 Midea-B5除螨仪' src="${image}group1/M01/00/CA/CgpsbFre6vmARxR1AAGN9YgiwAA272.jpg">
+		                  <div class="modelG"></div>
+		                  <div class="cardTitle">美的 Midea-B5除螨仪</div>
+		                  <div class="cardDes"></div>
+		             </div>
+		       </a>
+		       <a href="https://m.apaipian.com/play/1910_29789.html"> 
+		             <div class="videoCard">
+		                  <img class="videoBanner" alt='Chefman-电茶壶' src="${image}group1/M01/01/06/CgpmTlrqkcmAQAu-AAGGmcyex5I921.jpg">
+		                  <div class="modelG"></div>
+		                  <div class="cardTitle">Chefman-电茶壶</div>
+		                  <div class="cardDes"></div>
+		             </div>
+		       </a>
+		       <a href="https://m.apaipian.com/play/1910_29751.html"> 
+		             <div class="videoCard">
+		                  <img class="videoBanner" alt='Zojirushi-电压力锅' src="${image}group1/M01/00/CD/CgptuFrpoROAexYSAAHllTsayIU063.jpg">
+		                  <div class="modelG"></div>
+		                  <div class="cardTitle">Zojirushi-电压力锅</div>
+		                  <div class="cardDes"></div>
+		             </div>
+		       </a>
+		       <a href="https://m.apaipian.com/play/1910_29763.html"> 
+		             <div class="videoCard">
+		                  <img class="videoBanner" alt='Behmor-咖啡机' src="${image}group1/M00/00/CB/CgpsbFrprA2ADGi1AAGEjZ5gMEg743.jpg">
+		                  <div class="modelG"></div>
+		                  <div class="cardTitle">Behmor-咖啡机</div>
+		                  <div class="cardDes"></div>
+		             </div>
+		       </a>
+		       <a href="https://m.apaipian.com/play/1910_29765.html"> 
+		             <div class="videoCard">
+		                  <img class="videoBanner" alt='Comfee-电水壶' src="${image}group1/M01/01/06/CgpmTlrprZyAFZZHAAFwNxrX-GE735.jpg">
+		                  <div class="modelG"></div>
+		                  <div class="cardTitle">Comfee-电水壶</div>
+		                  <div class="cardDes"></div>
+		             </div>
+		       </a>
+		       <a href="https://m.apaipian.com/play/1910_29752.html"> 
+		             <div class="videoCard">
+		                  <img class="videoBanner" alt='NutriBullet-料理机' src="${image}group1/M01/01/04/Cgpw7FrpomyAQ80RAAHHSt5KsEc797.jpg">
+		                  <div class="modelG"></div>
+		                  <div class="cardTitle">NutriBullet-料理机</div>
+		                  <div class="cardDes"></div>
+		             </div>
+		       </a>
+		       <a href="https://m.apaipian.com/play/1910_29756.html"> 
+		             <div class="videoCard">
+		                  <img class="videoBanner" alt='完美烘烤 Perfect Bake-智能厨房秤' src="${image}group1/M00/00/CD/CgptuFrppnCAXcvvAAIaDwYpf7M109.jpg">
+		                  <div class="modelG"></div>
+		                  <div class="cardTitle">完美烘烤 Perfect Bake-智能厨房秤</div>
+		                  <div class="cardDes"></div>
+		             </div>
+		       </a>
+
 		     
 		  </div>
-		  <!--车品  -->
-		 <%--  <div class="videoArea" id='car'>
-		       <a href="http://m.apaipian.com/play/1910_29815.html"> 
-		             <div class="videoCard">
-		                  <img class="videoBanner" alt='Mpow 车载支架-评测教学' src="${image}group1/M01/01/04/Cgpw7FrqpPGAArFCAAGvqshOZco150.jpg">
-		                  <div class="modelG"></div>
-		                  <div class="cardTitle">Mpow 车载支架-评测教学</div>
-		                  <div class="cardDes"></div>
-		             </div>
-		       </a>
-		       <a href="http://m.apaipian.com/play/1910_29812.html"> 
-		             <div class="videoCard">
-		                  <img class="videoBanner" alt='VicTsing 车载发射器-评测教学' src="${image}group1/M00/01/06/CgpmTlrqpXaAa-6QAAHhGcI-vf4442.jpg">
-		                  <div class="modelG"></div>
-		                  <div class="cardTitle">VicTsing 车载发射器-评测教学</div>
-		                  <div class="cardDes"></div>
-		             </div>
-		       </a>
-		       <a href="http://m.apaipian.com/play/1910_29811.html"> 
-		             <div class="videoCard">
-		                  <img class="videoBanner" alt='VicTsing 车载发射器-功能讲解' src="${image}group1/M00/00/CD/CgptuFrqpoiAWuXTAAFZTjgH5Ug782.jpg">
-		                  <div class="modelG"></div>
-		                  <div class="cardTitle">VicTsing 车载发射器-功能讲解</div>
-		                  <div class="cardDes"></div>
-		             </div>
-		       </a>
-		       <a href="http://m.apaipian.com/play/1910_29810.html"> 
-		             <div class="videoCard">
-		                  <img class="videoBanner" alt='WizGear 车载支架-外观与工艺' src="${image}group1/M00/01/04/Cgpw7Frqp3WAPlqFAAF6EwVNfCM091.jpg">
-		                  <div class="modelG"></div>
-		                  <div class="cardTitle">WizGear 车载支架-外观与工艺</div>
-		                  <div class="cardDes"></div>
-		             </div>
-		       </a>
-		     
-		  </div> --%>
 		  <!--电器  -->
 		  <div class="videoArea" id='ele'>
 		       <a href="http://m.apaipian.com/play/9_29731.html"> 
@@ -418,6 +447,7 @@
 		                  <div class="cardDes"></div>
 		             </div>
 		       </a>
+
 		       <a href="http://m.apaipian.com/play/1910_29743.html"> 
 		             <div class="videoCard">
 		                  <img class="videoBanner" alt='肯莫尔 Kenmore-冰箱' src="${image}group1/M00/00/CB/CgpsbFrpl2iAQVlyAAFwp_GwC0U235.jpg">
@@ -450,8 +480,8 @@
 		                  <div class="cardDes"></div>
 		             </div>
 		       </a>
-		     
 		  </div>
+
 		  
 		  <!--手作 -->
 		  <div class="videoArea" id='make'>
@@ -516,11 +546,13 @@
 		                  <img class="videoBanner" alt='Guitar Man-手工吉他' src="${image}group1/M01/01/0B/Cgpw7Fr-reCAHi8XAAIIkMfL9-c589.jpg">
 		                  <div class="modelG"></div>
 		                  <div class="cardTitle">Guitar Man-手工吉他</div>
+
 		                  <div class="cardDes"></div>
 		             </div>
 		       </a>
 		  </div>
 		  
+
 		   <!--文化 -->
 		  <div class="videoArea" id='culture'>
 		       <a href="https://www.apaipian.com/play/9_29798.html"> 
@@ -588,6 +620,7 @@
 		             </div>
 		       </a>
 		  </div>
+
 		  
 		  <!--匠人 -->
 		  <div class="videoArea" id='build'>
@@ -775,12 +808,6 @@
 					             </div>
 			</a>  
 		  </div>
-		  
-		  
-  
-  
-
-  
     <jsp:include flush="true" page="../../foot.jsp"></jsp:include> 
     <div style="height: 1.5rem;"></div>
     <script src="/resources/lib/jquery/jquery-2.0.3.min.js"></script>

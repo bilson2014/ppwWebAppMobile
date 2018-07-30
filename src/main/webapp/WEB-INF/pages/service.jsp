@@ -48,8 +48,9 @@
 
 </head>
 <body>
-	<input type="hidden" id="storage_node"
-		value="${file_locate_storage_path }" />
+<input type="hidden" id="storage_node" value="${file_locate_storage_path }" />
+
+
 	<div class="phoneHeader">
 	     <a id="openMenu"><img src="${imgPath }/index/toMenu.png"></a>
 	     <a href="/list.html">  
@@ -61,8 +62,8 @@
 	<jsp:include flush="true" page="menu.jsp"></jsp:include>
 		
 	<div class="pagePhone">
-	
 		<video id="setVideo" controls poster="/resources/images/banner/moreInfo.JPG" src="http://www.apaipian.com/product/video/paipianwangMovie.mp4" ></video>
+		<%-- <video id="setVideo" controls poster="${file_locate_storage_path }group1/M00/01/11/Cgpw7FsWRt2AH4clAALpDWuNqCY424.jpg" src="${file_locate_storage_path }group1/M01/00/D9/CgptuFsWRt2AU1RRAPnYloRLI28085.mp4" ></video> --%>
 		<img class="stepImg" src="${imgPath }/company/step.png">
 		
     <jsp:include flush="true" page="foot.jsp"></jsp:include> 
