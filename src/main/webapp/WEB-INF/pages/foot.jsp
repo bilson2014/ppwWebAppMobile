@@ -17,7 +17,7 @@
 		              </div>
 		               <div class="footItem">
 		                 <div class="cAddress">公司地址  : </div>
-		                 <div class="differentItem">北京市朝阳区国贸建外SOHO东区6号楼25层</div>
+		                 <div class="differentItem">北京市朝阳区国贸建外SOHO东区7号楼1803</div>
 		              </div>
 		         </div>
 		         <div class="rightContent">

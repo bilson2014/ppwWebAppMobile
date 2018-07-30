@@ -49,6 +49,38 @@
 		       你的项目距成功只差一部好视频
 		 </div>
 		 <div class="videoArea">
+		    <a href="https://m.apaipian.com/play/1379_29880.html">
+		    	<div class="videoCard">
+		        	<img class="videoBanner" alt='Nova-英文版' src="${image}/group1/M01/01/04/Cgpw7FrxZmOALbcnAAGzEUDgoCg931.jpg">
+		            <div class="modelG"></div>
+		            <div class="cardTitle">Nova-英文版</div>
+		            <div class="cardDes"> </div>
+		        </div>
+		  	</a>
+		    <a href="https://m.apaipian.com/play/1379_27269.html">
+		    	<div class="videoCard">
+		        	<img class="videoBanner" alt='本源链 (ORS)-赛事竞猜' src="${image}/group1/M00/00/D3/CgpsbFsHvWmAV1LCAAGklP50So0001.jpg">
+		            <div class="modelG"></div>
+		            <div class="cardTitle">本源链 (ORS)-赛事竞猜</div>
+		            <div class="cardDes"> </div>
+		        </div>
+		  	</a>
+		  	 <a href="https://m.apaipian.com/play/1379_29929.html">
+		    	<div class="videoCard">
+		        	<img class="videoBanner" alt='Nova-葡语版' src="${image}/group1/M01/01/07/CgpmTlr0NXaAFtL9AAHQ8LaEOkY675.jpg">
+		            <div class="modelG"></div>
+		            <div class="cardTitle">Nova-葡语版</div>
+		            <div class="cardDes"> </div>
+		        </div>
+		  	</a>
+		    <a href="https://m.apaipian.com/play/683_30835.htm">
+		    	<div class="videoCard">
+		        	<img class="videoBanner" alt='飞尔科' src="${image}/group1/M01/00/D2/CgpsbFsCMc6ALYRxAAHr0EE9mKM817.jpg">
+		            <div class="modelG"></div>
+		            <div class="cardTitle">飞尔科</div>
+		            <div class="cardDes"> </div>
+		        </div>
+		  	</a>
 		 	<a href="https://m.apaipian.com/play/1379_27269.html">
 		    	<div class="videoCard">
 		        	<img class="videoBanner" alt='医美链(BeautyBloc)' src="${image}/group1/M00/00/F4/Cgpw7Fqxwh-AEGtBAAJR1LSiNo0648.jpg">
@@ -180,11 +212,11 @@
 		                  <div class="cardDes"> </div>
 		             </div>
 		       </a>
-		       <a href="https://m.apaipian.com/play/1910_28008.html">
+		        <a href="https://m.apaipian.com/play/683_26119.html">
 		             <div class="videoCard">
-		                  <img class="videoBanner" alt='比特币(BCH)' src="${image}/group1/M00/00/F6/CgpmTlqxy5-ALpiTAADZRoXPS58518.jpg">
-		                  <div class="modelG"></div>
-		                  <div class="cardTitle">比特币(BCH)</div>
+		                  <img class="videoBanner" alt='Trinity介绍' src="${image}/group1/M00/00/F6/CgpmTlqxz3CAJqHfAADaoSN7NWw365.jpg">
+		                   <div class="modelG"></div>
+		                  <div class="cardTitle">Trinity介绍</div>
 		                  <div class="cardDes"> </div>
 		             </div>
 		       </a>
@@ -271,19 +303,19 @@
 		                  <div class="cardDes"> </div>
 		             </div>
 		       </a>
-		       <a href="https://m.apaipian.com/play/1910_26467.html">
+		       <a href="https://m.apaipian.com/play/1910_28008.html">
 		             <div class="videoCard">
-		                  <img class="videoBanner" alt='什么是区块链' src="${image}/group1/M00/00/F4/Cgpw7Fqx0ZWAE234AAF05-kKCiw169.jpg">
-		                   <div class="modelG"></div>
-		                  <div class="cardTitle">什么是区块链</div>
+		                  <img class="videoBanner" alt='比特币(BCH)' src="${image}/group1/M00/00/F6/CgpmTlqxy5-ALpiTAADZRoXPS58518.jpg">
+		                  <div class="modelG"></div>
+		                  <div class="cardTitle">比特币(BCH)</div>
 		                  <div class="cardDes"> </div>
 		             </div>
 		       </a>
-		       <a href="https://m.apaipian.com/play/683_26119.html">
+		       <a href="https://m.apaipian.com/play/1910_27266.html">
 		             <div class="videoCard">
-		                  <img class="videoBanner" alt='Trinity介绍' src="${image}/group1/M00/00/F6/CgpmTlqxz3CAJqHfAADaoSN7NWw365.jpg">
+		                  <img class="videoBanner" alt='亦来云 Elastos-首发开场片' src="${image}/group1/M00/00/ED/Cgpw7FqeB0mAZ8V0AAQZ4KkAsxo983.jpg">
 		                   <div class="modelG"></div>
-		                  <div class="cardTitle">Trinity介绍</div>
+		                  <div class="cardTitle">亦来云 Elastos-首发开场片</div>
 		                  <div class="cardDes"> </div>
 		             </div>
 		       </a>

@@ -9,6 +9,7 @@
 <spring:url value="/resources/js/common.js" var="commonJs"/>
 <spring:url value="/resources/js/salesman/taobao/index.js" var="indexJs"/>
 
+
 <!-- imgPath -->
 <spring:url value="/resources/images" var="imgPath"/>
 <!DOCTYPE html>
@@ -22,7 +23,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
 	<!-- iphone 手机默认全屏 -->
 	<meta name="apple-mobile-web-app-capable" content="yes" />
-	<title>拼团半价抢淘宝主图短视频</title>
+	<title>主图视频 团购</title>
 	<meta name="keywords" content="淘宝主图视频,电商短视频,淘宝短视频官方拍摄基地">
 	<meta name="description" content="淘宝短视频官方拍摄基地致力于主图视频、电商短视频精工制作，增加店铺流量，提升转化率，瓜分内容营销红利。主图短视频制作，上拍片网拼团更便宜。">
 	
@@ -38,6 +39,27 @@
 	<script src="${commonJs }"></script>
 	<script src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
 	<script src="/resources/lib/swiper/swiper.min.js"></script>
+	
+<style>
+	
+	.ju1{
+	text-align: justify; width:1.5rem; display: inline-block ;
+	}
+	
+	.ju1:after{
+	display: inline-block ; content: ''; padding-left: 100%;
+	}
+	
+	.ju2{
+	    display: inline-block ;
+	    color:#666;
+	        vertical-align: top;
+	}
+	.item789{
+	height:0.6rem}
+</style>
+	
+
 </head>
 <body>
 	
@@ -52,17 +74,17 @@
 					<video id="video" src="https://filec.apaipian.com/group1/M00/00/CD/CgptuFrkU-SAAbibABwWV1aeolI289.mp4" controls="controls" poster="${imgPath}/salesMan/taobao/videoBanner.jpg"></video>
 					<div class="price">
 					     <div class="setPrice">
-					             <div class="realPrice">￥   2588</div>
+					             <div class="realPrice">￥   4669</div>
 					             <div class="oldPrice">￥5188</div>
 					     </div>
-					     <div class="lastDay">剩余 <span id="time">3</span></div>
+					     <div class="lastDay hide">剩余 <span id="time">3</span></div>
 					</div>
 					
 					<div class="describe">
 					        <img src="${imgPath}/salesMan/taobao/logo.png">
-					        <div class="newTitle">淘宝短视频官方拍摄基地 </div>
+					        <div class="newTitle">拍片网-淘宝短视频官方拍摄基地 </div>
 					        <div class="desTitle">
-					                   <div> 类型说明：功能讲解类</div>
+					                   <div> 主图视频-团购活动</div>
 					        </div>
 					        <div class="proDes">
 					                <div>
@@ -77,8 +99,13 @@
 					  <div class="line"></div>
 					  
 			          <div class="btnDes">
-			                   <div class="btnItem">
+			                  <%--  <div class="btnItem">
 			                         <div class="title" id="openWay">拼团玩法</div>
+			                         <img src="${imgPath}/salesMan/taobao/right.png">
+			                         <div class="bottomLine"></div>
+			                   </div> --%>
+			                   <div class="btnItem">
+			                         <div class="title" id="openWay">团购说明</div>
 			                         <img src="${imgPath}/salesMan/taobao/right.png">
 			                         <div class="bottomLine"></div>
 			                   </div>
@@ -117,13 +144,13 @@
 			                         	 <div class="areaOne">
 				                                 <div class="content">
 				                                      <div class="item" style="line-height: 0.7rem;">
-				                                             <div>1. 清晰度  >  720 * 480 建议: <span>1024x1024 / 1920 x 1080 / 810 x 1080 </span></div>
+				                                             <div>1.清晰度 > 1280x720  <!-- 建议: <span>1024x1024 / 1920 x 1080 / 810 x 1080 </span></div> -->
 				                                      </div>
 				                                      <div class="item">
-				                                             <div>2.   画面比例： <span>1:1   or   16:9   or 3:4</span></div>
+				                                             <div>2.建议： <span>1024x1024 (1:1) / 1920 x 1080 (4:3) <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 810 x 1080 (3:4)</span></div>
 				                                      </div>
 				                                      <div class="item">
-				                                             <div>3.   无黑边、无二维码、无水印、非幻灯片视频、无片头</div>
+				                                             <div>3.无黑边、无二维码、无水印、非幻灯片视频、无片头</div>
 				                                      </div>
 				                                 </div>
 				                          </div>
@@ -140,6 +167,7 @@
 				                          </div>
 			                </div>			          
 			          </div>
+			   </div>       
 			          
 			          <div class="modelType" id="orderOur"  >
 			                <div class="setContent">
@@ -157,10 +185,10 @@
 			          
 			          
 			           <div class="modelType" id="orderWay"  >
-			                <div class="setContent">
+			                <div class="setContent" style="height:14rem">
 			                       <div class="topContent">
 				                        <div class="contentTitle">
-				                                                                             拼团玩法			                        
+				                                                                             团购说明			                        
 				                             <div class="closeBtn"></div>
 				                        </div>
 				                   </div> 
@@ -169,25 +197,31 @@
 				                        <div class="playItem">
 				                            <div class="redLine"></div>
 				                            <div class="itemWord">
-				                                   <span>团长：</span> 团长是指该团第一位支付成功的人。
+				                                   <span>1.</span> 用户在拍片网浏览团购商品/服务的团购信息时，应当仔细阅读团购信息中包含的全部内容，包括但不限于团购商品/服务的名称、种类、数量、质量、价格、有效期、预约时间、商家地址、营业时间、配送方式、退换货方式、退款条件、售后服务等内容，其中用户应特别注意团购商品/服务的有效期、预约时间及退款条件等内容，用户完全接受团购信息中包含的全部内容后方可点击购买
 				                            </div>
 				                        </div>
 				                        
 				                        <div class="playItem">
 				                            <div class="redLine"></div>
 				                            <div class="itemWord">
-				                                   <span>开团：</span> 团长购买拼团商品，完成支付后，团即可开启。
+				                                   <span>2.</span> 如用户已实际使用团购商品/服务，又要求退款。拍片网有权拒绝。
 				                            </div>
 				                        </div>
 				                        
 				                         <div class="playItem">
 				                            <div class="redLine"></div>
 				                            <div class="itemWord">
-				                                 <span>  邀请好友参团：</span> 团长开团后可以将团链接分享给好友，购买该商品的好友视为参团成员占用该团的参团名额（需支付成功），参团成员也可以分享团链接邀请更多的成员参加。
+				                                 <span>3.</span>退款规则 ：用户支付团购价款成功后，需要进行退款的，按照如下规则进行：
+                                                 <br>发生以下情形之一的，用户有权要求进行退款：
+										       <br>1.因购买不足起拍数量，当次团购活动被取消的。
+										      <br> 2.用户付款成功后，因不可抗力原因，导致拍片网无法
+										          向用户提供团购商品/服务，经拍片网核实后属实的。
+										     <br>  3.用户付款成功后，因确属情况变化导致商家需要变更团购
+										          合同内容，用户不接受变更后内容的。
 				                            </div>
 				                        </div>
 				                        
-				                        <div class="playItem">
+				                      <!--   <div class="playItem">
 				                            <div class="redLine"></div>
 				                            <div class="itemWord">
 				                                <span>   取消订单：</span> 拼团订单未支付时，若其参与的团已拼团成功或失败，则该订单自动取消。拼团订单支付成功后不支持取消订单；拼团失败时该团所有订单自动取消。
@@ -206,7 +240,7 @@
 				                            <div class="itemWord">
 				                             <span> 拼团失败：</span> 开团至活动截止时间为能找到相应人数的好友参团，该团失败，系统自动退款。拼团成功后若出现团圆订单全部取消的情况，团长连带取消。
 				                            </div>
-				                        </div>
+				                        </div> -->
 				                   
 				                   </div>
 					              
@@ -226,42 +260,46 @@
                           </div>
                           <div class="areaOne">
                                  <div class="content">
-                                      <div class="item">
-                                             <div>视 频 类 型：<span>功能展示类</span></div>
+                                      <div class="item item789">
+                                             <div><div class="ju1">视频类型</div><div class="ju2"> ：功 能 展示类</div></div>
                                       </div>
-                                      <div class="item">
-                                             <div>时 &nbsp &nbsp &nbsp &nbsp &nbsp长：  <span>30秒 五个卖点展示</span></div>
+                                      <div class="item item789">
+                                             <div><div class="ju1">时长</div><div class="ju2"> ：30秒 5-7个镜头，3-4个卖点</div></div>
                                       </div>
-                                      <div class="item">
-                                             <div>实 拍 影 棚：   <span>十选二</span></div>
+                                      <div class="item item789">
+                                             <div><div class="ju1">实拍影棚 </div><div class="ju2"> ：十选二</div></div>
                                       </div>
-                                      <div class="item">
-                                             <div>推 荐 比 例：   <span> 1:1 或  16:9  （二选一）</span></div>
+                                      <div class="item item789">
+                                             <div><div class="ju1">推荐比例</div><div class="ju2"> ：1024x1024 (1:1) / 1920 x 1080 (4:3) </div></div>
                                       </div>
-                                      <div class="item">
+                                       <div class="item item789" style="margin-top: -0.3rem;">
+                                             <div><div class="ju1"></div><div class="ju2">&nbsp;&nbsp;&nbsp;&nbsp;810 x 1080 (3:4)</div></div>
+                                      </div>
+                                     <!--  <div class="item">
                                              <div>分辨率推荐：  <span> 1024*1024 或  1920*1080 （二选一）</span></div>
+                                      </div> -->
+                                      <div class="item item789">
+                                             <div><div class="ju1">道具</div><div class="ju2"> ：普通配饰</div></div>
                                       </div>
-                                      <div class="item">
-                                             <div>道 &nbsp &nbsp &nbsp &nbsp &nbsp具：   <span>普通配饰</span></div>
+                                      <div class="item item789">
+                                             <div><div class="ju1">音乐</div><div class="ju2"> ：免费版权</div></div>
                                       </div>
-                                      <div class="item">
-                                             <div>音 &nbsp &nbsp &nbsp &nbsp &nbsp乐：     <span>免费版权</span></div>
-                                      </div>
-                                       <div class="item">
-                                             <div>字 &nbsp &nbsp &nbsp &nbsp &nbsp体：     <span>免费版权</span></div>
+                                       <div class="item item789">
+                                             <div><div class="ju1">字体</div><div class="ju2"> ：免费版权</div></div>
                                       </div>
                                  </div>
                           </div>
                           
                            <div class="slide3Title">
                                   <div></div>
-                                  <div>服务说明</div>
+                                  <div>官方优选拍摄基地</div>
                                   <div></div>
                           </div>
                           
                           <div class="areaOne">
-                              <div class="centerContent">
-                                     	下单后，请尽快通过二维码与客服取得联系。
+                              <div class="centerContent" >
+                                     	  价格透明   响应及时  下单便捷  合作放心
+                                     	<!-- 下单后，请尽快通过二维码与客服取得联系。 -->
                               </div>
                           </div>
                           
@@ -286,7 +324,7 @@
                              ￥5188<br><span>原价</span>
     </div>
     <a class="orderBtn rightBtn hide" href="/salesman/taobao/message/${uniqueId}">
-	                             ￥2588<br><span>20人团 (未成团退款)  </span>
+	                             ￥4669<br><span>5条起团</span>
     </a>
     
     

@@ -1,4 +1,4 @@
-
+var total = 62440;
 $().ready(function() {
 	number();
 	submitbut();
@@ -8,13 +8,16 @@ function number(){
 	$('.subtract').off('click').on('click',function(){
 		var num=$('.number').text();
 		var total=$('.total').text();
-		if (num==1){
-			$('.number').text(1);
-			$('.total').text('￥'+2588);
+		if (num<=5){
+			$('.number').text(5);
+			$('.total').text('￥'+getValue(5));
+			total = getValue(5);
+			$('#show').text(9);
 		}else {
 			num--;
 			$('.number').text(num);
-			$('.total').text('￥'+num*2588);
+			$('.total').text('￥'+getValue(num));
+			total = getValue(num);
 		}	
 	});
 	$('.plus').off('click').on('click',function(){
@@ -22,9 +25,28 @@ function number(){
 		var total=$('.total').text();
 		num++;
 		$('.number').text(num);
-		$('.total').text('￥'+num*2588);
+		$('.total').text('￥'+getValue(num));
+		total = getValue(num);
 	})
 }
+
+function getValue(num){
+	if(num >=20){
+		$('#show').text(6);
+		return Math.round(num*(5188*0.6));
+	}
+	if(num >=10){
+		$('#show').text(8);
+		return Math.round(num*(5188*0.8));
+	}
+	if(num >=5){
+		$('#show').text(9);
+		return Math.round(num*(5188*0.9));
+	}
+	$('#show').text(9);
+	return Math.round(num*5188);
+}
+
 
 function submitbut(){
 	$('.but').off('click').on('click',function(){
@@ -60,7 +82,7 @@ function submitbut(){
 				$('.mask').hide();
 			},3000);
 			return;
-		}else if (shop=='' || shop==null || shop==undefined){
+		}/*else if (shop=='' || shop==null || shop==undefined){
 			$('.mask').show();
 			$('.mask span').text('请输入店铺名称');
 			$('#shop').focus();
@@ -68,7 +90,7 @@ function submitbut(){
 				$('.mask').hide();
 			},3000);
 			return;
-		}else if (commodity=='' || commodity==null || commodity==undefined){
+		}*/else if (commodity=='' || commodity==null || commodity==undefined){
 			$('.mask').show();
 			$('.mask span').text('请输入商品名称');
 			$('#commodity').focus();
@@ -86,11 +108,10 @@ function submitbut(){
 				user_name:name,//联系人
 				indent_tele:phone,//联系电话
 				indentName:commodity,//商品名称
-				indent_recomment:'商品名称:'+commodity,
+				indent_recomment:'商品名称:'+commodity+';下单数量:'+num,
 				wechat:wechat,//微信
 				userCompany:shop,//店铺名称
-				indentPrice:'2588',//总价
-				count:num,//购买数量					
+				indentPrice:total,//总价						
 			  });
 		}
 	})

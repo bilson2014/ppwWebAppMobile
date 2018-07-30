@@ -42,27 +42,28 @@
 				<span>联系电话:</span>
 				<input type='' placeholder='请输入' id='phone'>
 			</div>
-			<div class='line'>
+			<div class='line hide'>
 				<span>微信:</span>
 				<input type='' placeholder='请输入' id='wechat'>
 			</div>
-			<div class='line'>
+			<div class='line hide'>
 				<span>店铺名称:</span>
 				<input type='' placeholder='请输入' id='shop'>
 			</div>
 			<div class='line'>
-				<span>商品名称:</span>
+				<span>商品名称/店铺名称：</span>
 				<input type='' placeholder='请输入' id='commodity'>
 			</div>
 			<div class='line'>
 				<span>购买数量:</span>
 				<div class='subtract'>-</div>
-				<div class='number'>1</div>
+				<div class='number'>5</div>
 				<div class='plus'>+</div>
 			</div>
 			<div class='line'>
 				<span>总价:</span>
-				<div class='total'>￥2588</div>
+				<div class='total'>￥23346</div>
+				<div style="position: absolute;right:0;bottom:-0.3rem;">已优惠 : <span id="show">9</span> 折</div>
 			</div>
 			<div class='but'>提交订单</div>
 			<div class='mask'>
