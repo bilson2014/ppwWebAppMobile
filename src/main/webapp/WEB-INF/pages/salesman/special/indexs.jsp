@@ -44,6 +44,12 @@
    	
    	<div class='selection'>
    	
+   		<a class='models' href='https://m.apaipian.com/special/channel08.html'>
+   			<img class='eye' src="${imgPath}/salesMan/special/index/p8.jpg" alt="校园招聘"/>
+   			<div class='font'>
+   				<span>千万曝光量 校招从此水到渠成</span>
+   			</div>
+   		</a>
    		<a class='models' href='https://m.apaipian.com/special/channel07.html'>
    			<img class='eye' src="${imgPath}/salesMan/special/index/p7.jpg" alt="电商视频"/>
    			<div class='font'>

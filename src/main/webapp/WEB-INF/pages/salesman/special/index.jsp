@@ -84,6 +84,9 @@
    	<div class='hots'>
    		<div class="swiper-container" id="secondSwiper"  style="height: auto;width: 100%;">
 			<div class="swiper-wrapper">
+			    <div class="swiper-slide">
+		    		<a href='https://m.apaipian.com/special/channel08.html'><img src="${imgPath}/salesMan/special/index/page8.jpg" alt="小圆招聘"/></a>  
+	        	</div>
 				<div class="swiper-slide">
 		    		<a href='https://m.apaipian.com/special/channel07.html'><img src="${imgPath}/salesMan/special/index/page7.jpg" alt="电商视频"/></a>  
 	        	</div>
