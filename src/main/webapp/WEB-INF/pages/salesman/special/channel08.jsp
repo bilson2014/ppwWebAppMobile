@@ -10,10 +10,10 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=9,chrome=1">
 	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0, user-scalable=no" name="viewport" />
-	<meta name="keywords" content="网校宣传片,互联网教育品牌宣传片,教学APP广告片,在线教育宣传片">
-	<meta name="description" content="致力于互联网教育品牌宣传片的策划与拍摄，将互联网教育企业的教学模式与品牌理念用视频的形式更加直观的展现给用户群体。网校宣传片制作、教学APP广告片、在线教育宣传片，上拍片网，一站搞定。">
+	<meta name="keywords" content="校招视频拍摄,校招宣传视频,招聘视频制作,校园招聘视频">
+	<meta name="description" content="校园招聘视频，千万曝光量轻松实现足不出户即可搞定校招，企业校招利器。校招宣传视频拍摄，招聘视频制作，就选拍片网。阿里官方视频拍摄基地，低预算拍大片，拍片就上拍片网">
 	<meta name="baidu-site-verification" content="dMz6jZpIwd" />
-	<title>网校宣传片-互联网教育品牌宣传片-教学APP广告片-在线教育宣传片-拍片网</title>
+	<title>校招视频拍摄-校招宣传视频-招聘视频制作-校园招聘视频-拍片网</title>
 	<!--[if lt IE 9]>
 		<script>window.html5 || document.write('<script src="html5shivJs"><\/script>')</script>
 	<![endif]-->
