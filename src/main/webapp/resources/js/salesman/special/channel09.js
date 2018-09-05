@@ -607,6 +607,8 @@ function floating(){
 			caseAll();
 		}
 		
+		$('.boxs').removeClass('boxadd');
+		
 	});
 	 
 	
