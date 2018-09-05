@@ -56,7 +56,7 @@
 	</div>
 	<div class="pagePhone">			
 		  <div class="setBanner">
-		     <img src="${imgPath}/salesMan/special/channel07/banner.jpg" alt='电商视频'>
+		     <img src="${imgPath}/salesMan/special/channel09/banner.jpg" alt='汽车行业'>
 		     <a href='https://m.apaipian.com/product/EcommerceProductVideo/main'><div style="left: 2.2rem;bottom: 34%;width: 6.4rem;" class="product">产品详情</div></a>
 		   	<!-- <a href='http://m.apaipian.com/product/EnterprisePromotionalVideo/main'><div style="left: 3.6rem;bottom: 2.1rem;" class="product">产品详情</div></a> -->
 		     <!--   <div class="showVideo">观看视频</div> -->
