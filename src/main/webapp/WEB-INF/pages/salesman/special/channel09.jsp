@@ -10,10 +10,10 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=9,chrome=1">
 	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0, user-scalable=no" name="viewport" />
-	<meta name="keywords" content="淘宝视频制作,淘宝视频拍摄,淘宝主图视频,淘宝主图视频制作,产品主图视频,电商视频拍摄,淘宝短视频制作,淘宝视频官方拍摄基地">
-	<meta name="description" content="拍片网于2018年3月被淘宝指定为官方拍摄基地，视频制作服务覆盖98%类目，品质遥遥领先。淘宝主图视频制作，电商产品视频拍摄，官方授权，价格公道，极速出片。淘宝短视频制作就上拍片网！">
+	<meta name="keywords" content="汽车宣传片制作,汽车广告片拍摄,新车发布会视频">
+	<meta name="description" content="汽车宣传片制作，就上拍片网。对于汽车行业而言图文时代逐渐老去，低品质UGC视频让受众烦透了不走心的态度，制作的宣传片才是一款好车的标配。拍摄汽车广告片、新车发布会视频，我们更专业。">
 	<meta name="baidu-site-verification" content="dMz6jZpIwd" />
-	<title>淘宝短视频制作-产品主图视频-电商视频拍摄-淘宝视频官方拍摄基地-拍片网</title>
+	<title>汽车宣传片制作-汽车广告片拍摄-新车发布会视频-拍片网</title>
 	<!--[if lt IE 9]>
 		<script>window.html5 || document.write('<script src="html5shivJs"><\/script>')</script>
 	<![endif]-->
@@ -57,12 +57,12 @@
 	<div class="pagePhone">			
 		  <div class="setBanner">
 		     <img src="${imgPath}/salesMan/special/channel09/banner.jpg" alt='汽车行业'>
-		     <a href='https://m.apaipian.com/product/EcommerceProductVideo/main'><div style="left: 2.2rem;bottom: 34%;width: 6.4rem;" class="product">产品详情</div></a>
+		     <!-- <a href='https://m.apaipian.com/product/EcommerceProductVideo/main'><div style="left: 2.2rem;bottom: 34%;width: 6.4rem;" class="product">产品详情</div></a> -->
 		   	<!-- <a href='http://m.apaipian.com/product/EnterprisePromotionalVideo/main'><div style="left: 3.6rem;bottom: 2.1rem;" class="product">产品详情</div></a> -->
 		     <!--   <div class="showVideo">观看视频</div> -->
 		  </div>
 		  <div class="title" id='title'>
-		        电商内容化时代已到来
+		        汽车内容“人格化”将重塑品牌形象
 		  </div>
 		  <!--家居  -->
 		  <div class="videoArea" id='live'>
