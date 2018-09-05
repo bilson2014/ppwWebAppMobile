@@ -76,7 +76,27 @@ $().ready(function(){
 	getDefImg();
 	initShare();
 	
+	/* orient();
+	 $(window).bind( 'orientationchange', function(e){
+	        orient();
+	  }); 
+	*/
 });
+
+
+
+function orient() {
+        if (window.orientation == 0 || window.orientation == 180) {
+        	alert("竖屏 ");
+        	//可针对横竖屏改变用js动态改变css样式
+            return true;
+        }
+        else if (window.orientation == 90 || window.orientation == -90) {
+        	alert("横屏 ");
+            return false;
+        }
+}
+   
 
 function getUrlDo(){
 	return UrlDo;

@@ -21,12 +21,12 @@
 	<link rel="stylesheet" href="/resources/lib/swiper/swiper.min.css">
 	<link rel="stylesheet" href="/resources/css/salesman/special/channel.css">
 
-
 	<!-- imgPath -->
 	<spring:url value="/resources/images" var="imgPath" />
 	<spring:url value="${file_locate_storage_path}" var="image" />
 	<link rel="shortcut icon" href="/resources/images/favicon.ico">
 </head>
+
 
 
 <body>

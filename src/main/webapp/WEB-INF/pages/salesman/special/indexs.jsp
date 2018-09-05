@@ -44,6 +44,12 @@
    	
    	<div class='selection'>
    	
+   	    <a class='models' href='https://m.apaipian.com/special/channel09.html'>
+   			<img class='eye' src="${imgPath}/salesMan/special/index/p9.jpg" alt="汽车行业"/>
+   			<div class='font'>
+   				<span>汽车行业 创意视频服务商</span>
+   			</div>
+   		</a>
    		<a class='models' href='https://m.apaipian.com/special/channel08.html'>
    			<img class='eye' src="${imgPath}/salesMan/special/index/p8.jpg" alt="校园招聘"/>
    			<div class='font'>
