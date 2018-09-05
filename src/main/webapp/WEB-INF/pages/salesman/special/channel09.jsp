@@ -31,8 +31,8 @@
 
 <body>
 
-<%-- <input id="imgPath" type="hidden" value="${file_locate_storage_path}"> --%>
-<input id="imgPath" type="hidden" value="http://resource.apaipian.com/resource/">
+ <input id="imgPath" type="hidden" value="${file_locate_storage_path}"> 
+<!-- <input id="imgPath" type="hidden" value="http://resource.apaipian.com/resource/"> -->
    
 	<div class="phoneHeader">
 	     <a id="openMenu"><img src="${imgPath }/index/toMenu.png" alt='菜单'></a>
