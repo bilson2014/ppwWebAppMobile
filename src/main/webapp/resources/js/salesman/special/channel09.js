@@ -644,7 +644,7 @@ function CreateHtml(item){
     formBody+='  <div class="videoCard">'
     formBody+='     <img class="videoBanner" alt="'+item.title+'" src="'+path+''+item.url+'">'
     formBody+='     <div class="modelG"></div>'
-    formBody+='    <div class="cardTitle">'+item.title+'壶</div>'
+    formBody+='    <div class="cardTitle">'+item.title+'</div>'
     formBody+='      <div class="cardDes"></div>'
     formBody+=' </div>'
     formBody+=' </a>';
