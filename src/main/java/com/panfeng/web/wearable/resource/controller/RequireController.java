@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.paipianwang.pat.common.entity.BaseEntity;
 import com.paipianwang.pat.common.entity.DataGrid;
 import com.paipianwang.pat.common.entity.PageParam;
 import com.paipianwang.pat.common.util.ValidateUtil;
@@ -39,7 +40,7 @@ public class RequireController extends BaseController {
 		return dataGrid;
 	}
 
-	@RequestMapping("/require/save")
+	/*@RequestMapping("/require/save")
 	public BaseMsg save(final PmsRequire require) {
 		BaseMsg baseMsg = new BaseMsg();
 		baseMsg.setErrorCode(BaseMsg.ERROR);
@@ -56,6 +57,37 @@ public class RequireController extends BaseController {
 			baseMsg.setErrorMsg("保存失败！");
 		} else {
 			baseMsg.setErrorMsg("表单信息错误！");
+		}
+		return baseMsg;
+	}*/
+	@RequestMapping("/require/save")
+	public BaseMsg save(final PmsRequire require, Long indentId) {
+		BaseMsg baseMsg = new BaseMsg();
+		baseMsg.setErrorCode(BaseMsg.ERROR);
+		if (ValidateUtil.isValid(indentId)) {
+			PmsIndent indent = pmsIndentFacade.findIndentById(indentId);
+			if (indent != null) {
+				if (require != null) {
+					Map<String, Object> save = pmsRequireFacade.save(require);
+					if (save != null) {
+						Object object = save.get(BaseEntity.SAVE_MAP_ROWS);
+						if (object != null && Integer.valueOf(object.toString()) > 0) {
+							Long requireId = Long.valueOf(save.get(BaseEntity.SAVE_MAP_ID).toString());
+							indent.setRequireId(requireId);
+							pmsIndentFacade.update(indent);
+							baseMsg.setErrorCode(BaseMsg.NORMAL);
+							baseMsg.setErrorMsg("保存成功！");
+							return baseMsg;
+						}
+					}
+					baseMsg.setErrorMsg("保存失败！");
+				} else {
+					baseMsg.setErrorMsg("表单信息错误！");
+				}
+			}
+			baseMsg.setErrorMsg("订单信息不正确！");
+		} else {
+			baseMsg.setErrorMsg("订单信息不能为空！");
 		}
 		return baseMsg;
 	}
