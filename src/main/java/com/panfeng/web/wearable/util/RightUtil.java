@@ -32,7 +32,7 @@ public class RightUtil {
 		
 		for(String right:rights.keySet()){
 			if(right.contains("{paramName}")){
-				if(url.matches(right.replaceAll("\\{paramName\\}", "[A-Za-z0-9]+"))){
+				if(url.matches(right.replaceAll("\\{paramName\\}", "[A-Za-z0-9/-]+"))){
 					return rights.get(right);
 				}
 			/*}else{
