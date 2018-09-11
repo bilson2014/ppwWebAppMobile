@@ -53,5 +53,20 @@
 	<!--消息通知服务接口 -->
 	<dubbo:reference interface="com.paipianwang.pat.facade.information.service.PmsMailFacade" id="pmsMailFacade" check="false" timeout="5000"/>
 	<dubbo:reference interface="com.paipianwang.pat.facade.information.service.PmsNewsFacade" id="pmsNewsFacade" check="false" timeout="5000"/>
+	
+	<!-- Activiti接口 -->	
+	<dubbo:reference interface="com.paipianwang.pat.workflow.facade.PmsProjectFlowFacade" id="pmsProjectFlowFacade" retries="1" check="false" timeout="5000" />
+	
+	<dubbo:reference interface="com.paipianwang.pat.workflow.facade.PmsScheduleFacade" id="pmsScheduleFacade" retries="1" check="false" timeout="5000" />
+	
+	<dubbo:reference interface="com.paipianwang.pat.workflow.facade.PmsQuotationFacade" id="pmsQuotationFacade" retries="1" check="false" timeout="5000" />
+	<dubbo:reference interface="com.paipianwang.pat.workflow.facade.PmsQuotationTypeFacade" id="pmsQuotationTypeFacade" retries="1" check="false" timeout="5000" />
+	<!-- 分镜脚本 -->
+	<dubbo:reference interface="com.paipianwang.pat.workflow.facade.PmsContinuityFacade" id="pmsContinuityFacade" retries="1" check="false" timeout="5000" />
+	
+	<!-- 制片工具 -->
+	<dubbo:reference interface="com.paipianwang.pat.workflow.facade.PmsProductionInfoFacade" id="pmsProductionInfoFacade" check="false" timeout="5000" />
+	
+	
 </beans>  
 
