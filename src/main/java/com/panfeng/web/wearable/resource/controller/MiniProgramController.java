@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.paipianwang.pat.common.config.PublicConfig;
 import com.paipianwang.pat.common.entity.DataGrid;
 import com.paipianwang.pat.common.entity.KeyValue;
 import com.paipianwang.pat.common.util.ValidateUtil;
@@ -62,7 +63,7 @@ public class MiniProgramController {
 	 */
 	@RequestMapping(value = "/project/info")
 	public BaseMsg getProjectInfo(@RequestBody final ProjectInfo project, final HttpServletRequest request) {
-		
+		BaseMsg msg = new BaseMsg();
 		List<String> metaData=new ArrayList<>();
 		metaData.add("projectId");
 		metaData.add("productId");
@@ -71,15 +72,32 @@ public class MiniProgramController {
 		metaData.add("projectStage");
 		PmsProjectFlow flow = pmsProjectFlowFacade.getProjectFlowByProjectId(metaData, project.getProjectId());
 		
+		if(flow==null) {
+			msg.setCode(BaseMsg.ERROR);
+			msg.setResult("数据已过期");
+			return msg;
+		}
+		
 		ProjectInfo info = new ProjectInfo();
 		
 		info.setProjectId(flow.getProjectId());
 		info.setProjectName(flow.getProjectName());
 		info.setProductId(flow.getProductId());
 		
+		if(flow.getProductId().equals(0)) {
+			info.setProductName("非标准化产品");
+		}else {
+			PmsChanPin chanpin=pmsChanPinFacade.getChanPinInfo(flow.getProductId());
+			if(chanpin!=null) {
+				info.setProductName(chanpin.getChanpinName());
+			}
+		}
+		
+		
 		PmsSchedule schedule = pmsScheduleFacade.getByProjectId(project.getProjectId());
-		if (schedule != null) {
-//			info.setDeliveryDate(null);//交付日期
+		//TODO 修改获取项目交付日期（维护排期表后保存最终时间为项目交付日期）
+		if (schedule != null && ValidateUtil.isValid(schedule.getItems())) {
+			info.setDeliveryDate(schedule.getItems().get(schedule.getItems().size()-1).getStart());//交付日期
 		}
 		PmsQuotation pmsQuotation = pmsQuotationFacade.getByProjectId(project.getProjectId());
 		if (pmsQuotation!=null) {
@@ -101,11 +119,16 @@ public class MiniProgramController {
 			info.setHasProduction(1);
 		}	
 
-		BaseMsg msg = new BaseMsg();
+		
 		msg.setResult(info);
 		return msg;
 	}
 
+	@RequestMapping(value = "/resource_path")
+	public BaseMsg getResourcePath(final HttpServletRequest request) {
+		
+		return new BaseMsg(BaseMsg.NORMAL, PublicConfig.FDFS_URL);
+	}
 	/**
 	 * 所有产品(数据字典)
 	 * 			+非标准化产品
@@ -222,7 +245,7 @@ public class MiniProgramController {
 		PmsProductionInfo production = pmsProductionInfoFacade.getByProjectId(project.getProjectId());
 		
 		if (production != null) {
-			editQuotationTypeName(production);
+			//editQuotationTypeName(production);
 			for (PmsProductionInfo.ProductionResource resource : production.getResources()) {
 				resource.setPicScale(ProductionResource.getEnum(resource.getType()).getPicScale());
 			}
@@ -233,10 +256,16 @@ public class MiniProgramController {
 		}
 		return msg;
 	}
-	private void editQuotationTypeName(PmsProductionInfo info) {
+	/*private void editQuotationTypeName(PmsProductionInfo info) {
 		if (!ValidateUtil.isValid(info.getResources())) {
 			return;
 		}
+		
+		List<PmsQuotationType> types=new ArrayList<>();
+		for(Long quotationId:ProductionResource.device.getQuotationType()) {
+			types.addAll(pmsQuotationTypeFacade.findByParent(quotationId));
+		}
+		
 		List<PmsQuotationType> types = pmsQuotationTypeFacade.findAll();
 		for (PmsQuotationType type : types) {
 			if(type.getParentId()==null) {
@@ -257,8 +286,8 @@ public class MiniProgramController {
 					resource.setTypeName(type.getTypeName());
 					resource.setCategory(type.getParent().getParent().getTypeName());
 					resource.setCategoryId(type.getParent().getParent().getTypeId());
-					/*resource.setSubType(type.getParent().getTypeName());
-					resource.setSubTypeId(type.getParentId());*/
+					resource.setSubType(type.getParent().getTypeName());
+					resource.setSubTypeId(type.getParentId());
 
 					if (ProductionResource.device.getKey().equals(resource.getType())) {
 						resource.setMainPhoto(type.getPhoto());
@@ -268,7 +297,7 @@ public class MiniProgramController {
 				}
 			}
 		}
-	}
+	}*/
 	
 	/**
 	 * 根据projectId获取分镜头脚本

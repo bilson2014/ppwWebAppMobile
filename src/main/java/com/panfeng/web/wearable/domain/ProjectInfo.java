@@ -20,7 +20,7 @@ public class ProjectInfo implements Serializable{
 	private Integer productId;
 
 	/** 产品线名称 **/
-//	private String productName;
+	private String productName;
 	
 	/** 交付日期：排期表最后一天 -- 维护进项目中（开始时间、交付时间、时长） **/
 	private String deliveryDate;
@@ -39,6 +39,7 @@ public class ProjectInfo implements Serializable{
 	
 	/** 是否有分镜脚本 **/
 	private Integer hasContinuity;
+
 
 	public String getProjectId() {
 		return projectId;
@@ -110,6 +111,14 @@ public class ProjectInfo implements Serializable{
 
 	public void setHasContinuity(Integer hasContinuity) {
 		this.hasContinuity = hasContinuity;
+	}
+
+	public String getProductName() {
+		return productName;
+	}
+
+	public void setProductName(String productName) {
+		this.productName = productName;
 	}
 	
 	
