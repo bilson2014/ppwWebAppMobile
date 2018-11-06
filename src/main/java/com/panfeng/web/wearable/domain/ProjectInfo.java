@@ -39,6 +39,12 @@ public class ProjectInfo implements Serializable{
 	
 	/** 是否有分镜脚本 **/
 	private Integer hasContinuity;
+	
+	/** 项目负责人 **/
+	private String principalName;
+	private String principalPhone;
+	private String principalImg;
+	private String principalEmail;
 
 
 	public String getProjectId() {
@@ -119,6 +125,38 @@ public class ProjectInfo implements Serializable{
 
 	public void setProductName(String productName) {
 		this.productName = productName;
+	}
+
+	public String getPrincipalName() {
+		return principalName;
+	}
+
+	public void setPrincipalName(String principalName) {
+		this.principalName = principalName;
+	}
+
+	public String getPrincipalPhone() {
+		return principalPhone;
+	}
+
+	public void setPrincipalPhone(String principalPhone) {
+		this.principalPhone = principalPhone;
+	}
+
+	public String getPrincipalImg() {
+		return principalImg;
+	}
+
+	public void setPrincipalImg(String principalImg) {
+		this.principalImg = principalImg;
+	}
+
+	public String getPrincipalEmail() {
+		return principalEmail;
+	}
+
+	public void setPrincipalEmail(String principalEmail) {
+		this.principalEmail = principalEmail;
 	}
 	
 	

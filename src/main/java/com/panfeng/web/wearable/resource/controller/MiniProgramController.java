@@ -1,30 +1,44 @@
 package com.panfeng.web.wearable.resource.controller;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.paipianwang.pat.common.config.PublicConfig;
+import com.paipianwang.pat.common.entity.BaseProductionEntity;
 import com.paipianwang.pat.common.entity.DataGrid;
 import com.paipianwang.pat.common.entity.KeyValue;
 import com.paipianwang.pat.common.util.ValidateUtil;
 import com.paipianwang.pat.facade.product.entity.PmsChanPin;
 import com.paipianwang.pat.facade.product.service.PmsChanPinFacade;
+import com.paipianwang.pat.facade.right.entity.PmsEmployee;
+import com.paipianwang.pat.facade.right.service.PmsEmployeeFacade;
+import com.paipianwang.pat.facade.team.entity.PmsCity;
+import com.paipianwang.pat.facade.team.service.PmsCityFacade;
 import com.paipianwang.pat.workflow.entity.PmsContinuity;
 import com.paipianwang.pat.workflow.entity.PmsProductionInfo;
 import com.paipianwang.pat.workflow.entity.PmsProjectFlow;
 import com.paipianwang.pat.workflow.entity.PmsQuotation;
-import com.paipianwang.pat.workflow.entity.PmsQuotationType;
 import com.paipianwang.pat.workflow.entity.PmsSchedule;
 import com.paipianwang.pat.workflow.enums.ProductionResource;
 import com.paipianwang.pat.workflow.facade.PmsContinuityFacade;
+import com.paipianwang.pat.workflow.facade.PmsProductionActorFacade;
+import com.paipianwang.pat.workflow.facade.PmsProductionCameramanFacade;
+import com.paipianwang.pat.workflow.facade.PmsProductionCostumeFacade;
+import com.paipianwang.pat.workflow.facade.PmsProductionDeviceFacade;
+import com.paipianwang.pat.workflow.facade.PmsProductionDirectorFacade;
 import com.paipianwang.pat.workflow.facade.PmsProductionInfoFacade;
+import com.paipianwang.pat.workflow.facade.PmsProductionPersonnelFacade;
+import com.paipianwang.pat.workflow.facade.PmsProductionStudioFacade;
 import com.paipianwang.pat.workflow.facade.PmsProjectFlowFacade;
 import com.paipianwang.pat.workflow.facade.PmsQuotationFacade;
 import com.paipianwang.pat.workflow.facade.PmsQuotationTypeFacade;
@@ -54,6 +68,25 @@ public class MiniProgramController {
 	private PmsChanPinFacade pmsChanPinFacade;
 	@Autowired
 	private PmsQuotationTypeFacade pmsQuotationTypeFacade;
+	@Autowired
+	private PmsEmployeeFacade pmsEmployeeFacade;
+	@Autowired
+	private PmsProductionActorFacade pmsProductionActorFacade;
+	@Autowired
+	private PmsProductionDirectorFacade pmsProductionDirectorFacade;
+	@Autowired
+	private PmsProductionCameramanFacade pmsProductionCameramanFacade;
+	@Autowired
+	private PmsProductionDeviceFacade pmsProductionDeviceFacade;
+	@Autowired
+	private PmsProductionStudioFacade pmsProductionStudioFacade;
+	@Autowired
+	private PmsProductionPersonnelFacade pmsProductionPersonnelFacade;
+	@Autowired
+	private PmsProductionCostumeFacade pmsProductionCostumeFacade;
+	@Autowired
+	private PmsCityFacade pmsCityFacade;
+	
 
 	/**
 	 * 根据projectId获取项目信息
@@ -70,6 +103,8 @@ public class MiniProgramController {
 		metaData.add("projectBudget");
 		metaData.add("projectName");
 		metaData.add("projectStage");
+		metaData.add("principal");
+		metaData.add("filmDestPath");
 		PmsProjectFlow flow = pmsProjectFlowFacade.getProjectFlowByProjectId(metaData, project.getProjectId());
 		
 		if(flow==null) {
@@ -100,7 +135,7 @@ public class MiniProgramController {
 			info.setDeliveryDate(schedule.getItems().get(schedule.getItems().size()-1).getStart());//交付日期
 		}
 		PmsQuotation pmsQuotation = pmsQuotationFacade.getByProjectId(project.getProjectId());
-		if (pmsQuotation!=null) {
+		if (pmsQuotation!=null && ValidateUtil.isValid(pmsQuotation.getTotal())) {
 			info.setQuotation(pmsQuotation.getTotal());
 		}		
 		info.setProjectStage(flow.getProjectStage());
@@ -118,6 +153,17 @@ public class MiniProgramController {
 		if (count > 0) {
 			info.setHasProduction(1);
 		}	
+		
+		//项目负责人信息
+		Integer principal=flow.getPrincipal();
+		if(principal!=null) {
+			PmsEmployee employee=pmsEmployeeFacade.findEmployeeById(principal);
+			info.setPrincipalEmail(employee.getEmail());
+			info.setPrincipalImg(employee.getEmployeeImg());
+			info.setPrincipalName(employee.getEmployeeRealName());
+			info.setPrincipalPhone(employee.getPhoneNumber());
+		}
+		
 
 		
 		msg.setResult(info);
@@ -337,5 +383,71 @@ public class MiniProgramController {
 	 * getFilmDestPath(@RequestBody final ProjectInfoView project,final
 	 * HttpServletRequest request) { BaseMsg msg=new BaseMsg(); return msg; }
 	 */
-
+	@RequestMapping(value = "/production/{type}/{id}")
+	public BaseMsg getProductionDetail(@PathVariable("type") final String type, @PathVariable("id") final Long id,final HttpServletRequest request) {
+		BaseMsg msg = new BaseMsg();
+		
+		BaseProductionEntity production=null;
+		
+		switch (type) {
+		case "actor":
+			// 演员
+			production=pmsProductionActorFacade.getById(id);		
+			break;
+		case "director":
+			// 导演
+			production=pmsProductionDirectorFacade.getById(id);
+			break;
+		case "cameraman":
+			//摄影师
+			production=pmsProductionCameramanFacade.getById(id);
+			break;
+		case "device":
+			// 设备	
+			production=pmsProductionDeviceFacade.getById(id);
+			break;
+		case "studio":
+			// 场地
+			production=pmsProductionStudioFacade.getById(id);
+			break;
+		case "clothing":
+			//服装
+		case "props":
+			//道具
+			production=pmsProductionCostumeFacade.getById(id);
+			break;
+		default:
+			//人员
+			List<ProductionResource> peoples=ProductionResource.getByType("people");
+			for(ProductionResource people:peoples) {
+				if(people.getKey().equals(type)) {
+					production=pmsProductionPersonnelFacade.getById(id);
+					break;
+				}
+			}
+			break;
+		}
+		
+		if(production!=null) {
+			Map<String,Object> map=new HashMap<>();
+			map.put("remark", production.getRemark());
+			map.put("typeName", ProductionResource.getEnum(type).getName());
+			if(ValidateUtil.isValid(production.getCity())) {
+				List<PmsCity> cities=pmsCityFacade.getAll();
+				for(PmsCity city:cities) {
+					if(production.getCity().equals(city.getCityID())) {
+						map.put("city",city.getCity());
+						break;
+					}
+				}
+			}
+			
+			msg.setResult(map);
+		}else {
+			msg.setCode(BaseMsg.ERROR);
+		}
+			
+		return msg;
+	}
+	
 }

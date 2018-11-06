@@ -22,6 +22,7 @@
 		class="ch.qos.logback.core.rolling.RollingFileAppender">
 		<file>logs/pat_info.log</file>
 		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>logs/pat_info.%d{yyyy-MM-dd}.log</fileNamePattern>
 			<maxHistory>31</maxHistory>
 		</rollingPolicy>
 		<encoder>

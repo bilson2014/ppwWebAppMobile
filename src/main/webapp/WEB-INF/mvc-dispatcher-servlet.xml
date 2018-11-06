@@ -11,6 +11,7 @@
 	<mvc:resources location="/resources/" mapping="/resources/**" />
 	<mvc:resources location="/" mapping="/robots.txt" />
 	<mvc:resources location="/" mapping="/sitemap.xml" />
+	<mvc:resources location="/" mapping="/QWuv8izYOK.txt" />
 	
 	<context:component-scan base-package="com.panfeng.web.wearable.resource.controller" />
 
