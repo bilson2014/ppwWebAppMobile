@@ -2,19 +2,19 @@ var InterValObj; // timer变量，控制时间
 var PopInterValObj, oTimer, successIntervalObj;
 
 //绑定域名
-//var UrlDo = "apaipian.com";
-var UrlDo = "localhost";
-//var UrlDo = "test.apaipian.com";
+var UrlDo = window.location.host;
 //绑定域名流程
-var Url = "http://localhost:8080/";
-//var Url = "test.apaipian.com";
-//var Url = "apaipian.com";
+//var Url = "http://localhost:8080/";
+////var Url = "test.apaipian.com";
+////var Url = "apaipian.com";
 //绑定域名流程phone
-//var phoneUrl = "test.apaipian.com:7070/project/phone/";
-//var httpsUrl ="https://test.apaipian.com:8088/project/phone/";
-//var phoneUrl = "http://m.apaipian.com:8087/project/phone/";
-//var httpsUrl ="https://m.apaipian.com:7070/project/phone/";
-var phoneUrl = "localhost:8084/project/phone/";
+//test
+//var phoneUrl = "http://"+window.location.host+":7070/project/phone/";
+//var httpsUrl ="https://"+window.location.host+":8088/project/phone/";
+//main
+var phoneUrl = "http://"+window.location.host+":8087/project/phone/";
+var httpsUrl ="https://"+window.location.host+":7070/project/phone/";
+
 
 $().ready(function(){
 	windowChange(); 
@@ -96,12 +96,13 @@ function orient() {
    
 
 function getUrlDo(){
-	return UrlDo;
+	var domain= UrlDo.match(/((?:\w+\.){1}(?:cn|top|com\.cn|com\.tw|com))/);
+	return domain[0];
 }
 
-function getUrl(){
-	return Url;
-}
+//function getUrl(){
+//	return Url;
+//}
 
 function getphoneUrl(){
 	
@@ -209,6 +210,7 @@ function initShare(){
 		});
 	}
 }
+//无用
 function getUrl(){
 	var url = window.location.href;
 	if(url != null && url != '' && url != undefined){
